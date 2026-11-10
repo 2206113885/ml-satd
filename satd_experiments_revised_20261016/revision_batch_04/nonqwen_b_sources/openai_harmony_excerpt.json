@@ -1,0 +1,7 @@
+{
+  "url": "https://developers.openai.com/cookbook/articles/openai-harmony",
+  "accessed_utc": "2026-10-16T11:35:06.860480+00:00",
+  "section": "Reasoning",
+  "excerpt": "By default, the model will do medium level reasoning.",
+  "claim": "GPT-OSS default effort is medium; valid effort levels are low, medium and high. Explicitly set medium in the native chat template to unify new experiments."
+}

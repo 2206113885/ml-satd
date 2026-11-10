@@ -1,0 +1,393 @@
+TODO: remove redundant checkpointing in trainer; redundant with TensorBoard callback.
+TODO: remove unused "pretrained" flag from model constructors; redundant with model_
+TODO: remove unused/broken gradient checkpointing; current code is unreliable
+TODO: remove redundant L2 regularization; add weight_decay to optimizer instead.
+TODO: delete unused helper functions (e.g., _get_activation_fn).
+TODO: remove unused/deprecated methods from model API; clean up docstrings.
+TODO: remove redundant assertions; current code is too verbose.
+TODO: remove unused model.py; it's a duplicate of model_utils.py
+TODO: remove redundant LSTM encoder; use pre-trained BERT instead.
+TODO: remove redundant batch_size check in model.forward(); redundant with model.device.
+TODO: remove unused forward() method from custom module; redundant with the one in nn.
+TODO: remove redundant LR scheduler; current code is a copy of the default.
+TODO: remove redundant "self" argument in forward(); unused in current implementation.
+TODO: remove redundant code for both train and eval; factor out shared logic.
+TODO: remove unused/deprecated model components (e.g., BERT.embed
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove unused/deprecated model components; clean up codebase.
+TODO: remove redundant L2 loss computation; use torch.nn.CrossEntropyL
+TODO: delete unused model_utils.py; code is unreachable and not tested
+TODO: remove unused optimizer state (momentum, etc.) from checkpoint; reduce
+TODO: remove redundant assertions; current checks are redundant with type hints.
+TODO: remove unused model_utils.py; unused import statement in train.py.
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove unused/deprecated model components (e.g., BERT-specific
+TODO: remove unused "eval" branch; merge with "train" and add a flag to
+TODO: remove redundant padding layer; current code has no effect.
+TODO: remove redundant assertions; current code is too verbose.
+TODO: factor out redundant code from train_step() and eval_step(); current duplication hur
+TODO: factor out common code from train_step() and eval_step(); current duplication hur
+TODO: remove unused/deprecated model components (e.g., BERT pooler
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove unused preprocess() method; unreachable due to refactoring.
+TODO: remove unused model.py; current file is a leftover from a previous
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove redundant layer normalization; unused in current model.
+TODO: remove redundant code for 1-hot encoding; use torch.nn.functional
+TODO: remove unused DataLoader.drop_last(); unnecessary with batch_size=1.
+TODO: remove unused forward() override; redundant with parent class.
+TODO: remove unused model_utils.py; unused code should be removed.
+TODO: remove unused "model_type" parameter from model constructor; unused in downstream
+TODO: remove unused/deprecated model components (e.g., BERT-specific
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: factor out redundant loss computation (e.g., CE+L2) into a helper
+TODO: remove unused dataclass fields; current codebase has many unused attributes.
+TODO: remove unused model_fn() from estimator; unreachable since v2
+TODO: remove unused/broken code for old TensorFlow compatibility; update to PyT
+TODO: remove unused/deprecated layers (e.g., LSTM, GR
+TODO: remove redundant attention mask computation; use torch.nn.functional.attention_
+TODO: remove redundant LR schedule; current code is a copy-paste of the other scheduler
+TODO: remove unused/deprecated torch.nn.Module subclasses; clean up
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove redundant L2 regularization; add weight_decay to optimizer constructor.
+TODO: remove unused model_utils.py; unused since v1.0.0
+TODO: remove redundant "if not self.training:" check in loss_fn(); redundant with model
+TODO: remove unused/deprecated modules (e.g., BERT.from_
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove redundant resnet18/resnet50/resnet101;
+TODO: remove unused/deprecated layers (e.g., Bottleneck
+TODO: remove redundant assertions; current code is redundant with type hints.
+TODO: remove redundant L2 regularization; add weight_decay to optimizer instead.
+TODO: remove redundant model.eval() call in train_step(); unnecessary and slows down training
+TODO: factor out common code between train_step() and eval_step(); current duplication hur
+TODO: remove unused model_utils.py; unused since v1.0.0
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove unused model_utils.py; unused since v2 refactor.
+TODO: remove unused model_utils.py; unused imports should be removed.
+TODO: delete unused code for feature importance; remove redundant computation.
+TODO: remove redundant forward() wrapper; forward() is already a public API.
+TODO: remove unused pretrained_model_name_or_path; not used in
+TODO: remove unused pre-training code; current model is not pre-trained.
+TODO: remove unused model_utils.py; unused import statement in train.py.
+TODO: remove unused pre-training code; current model has no pre-training.
+TODO: remove redundant assertions; current code is too verbose.
+TODO: remove redundant code for 1-hot encoding; use torch.nn.functional
+TODO: remove unused optimizer state (momentum, nesterov) from Adam;
+TODO: remove redundant batch_size check in forward(); redundant with torch.nn.Module.
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove redundant assertions; current code is too verbose for our taste.
+TODO: remove redundant forward() wrapper; current code is duplicated in multiple modules.
+TODO: remove unused/broken code for old model architectures; keep only active/re
+TODO: remove unused/deprecated methods from model; clean up API surface.
+TODO: remove redundant batch_size×seq_len×hidden_size tensor; use torch
+TODO: remove unused attention_mask from model inputs; redundant with compute_attention_mask
+TODO: remove unused eval_step() from Trainer; redundant with train_step().
+TODO: remove unused/deprecated modules (e.g., tf.keras.
+TODO: remove redundant model.eval() call in train_step(); unnecessary with model.train().
+TODO: remove redundant forward() wrapper; forward() is already a public API.
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove unused pre-training code; current model is fine-tuned only.
+TODO: factor out common code from train_step() and eval_step(); current duplication hur
+TODO: remove redundant optimizer state (momentum, lr, etc.) from checkpoint
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove unused feature_engineering() method; unreachable due to refactor.
+TODO: remove redundant L2 regularization; torch.nn.modules.regularization.L
+TODO: remove unused model_utils.py; code is duplicated in model/train.
+TODO: remove unused/deprecated modules/functions; cleanup codebase.
+TODO: remove unused/broken code for deprecated feature; fix or remove to avoid confusion.
+TODO: remove unused model_utils.py; unused code should be removed.
+TODO: remove unused/deprecated model components (e.g., BERT-specific
+TODO: remove redundant optimizer state (momentum, nesterov) for SGD
+TODO: delete unused helper functions (e.g., _get_activation_fn).
+TODO: factor out redundant code from train_step() and eval_step(); current duplication hur
+TODO: remove unused pre-training code; current model is not fine-tunable.
+TODO: delete unused DataLoader.shuffle; shuffle is controlled by sampler.
+TODO: remove redundant checkpointing; current code duplicates checkpointing logic.
+TODO: remove unused model_utils.py; unused code is a maintenance burden.
+TODO: remove redundant LR scheduler; current code is a copy-paste of the default.
+TODO: remove unused/broken feature_engineering.py; replace with new feature_
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove redundant Tensor.to(device) calls; torch.device is a no
+TODO: remove unused model_utils.py; unused code is a maintenance burden.
+TODO: remove unused optimizer state (momentum, etc.) from checkpoint; reduce
+TODO: remove redundant assertions; current code is redundant with existing checks.
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove unused pretrained_model_name_or_path; it's
+TODO: remove unused optimizer_config.learning_rate; unused since v2 API
+TODO: remove unused preprocess_input() from dataset; unreachable due to refactor
+TODO: remove unused data augmentation code; current augmentations are not used in the model.
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove redundant batch_size check in loss_fn; current code is redundant and error-
+TODO: remove unused pre-training code; current model is not fine-tunable.
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove redundant assertions; current code is too verbose.
+TODO: remove redundant L2 loss computation in loss_fn(); current code is duplicated.
+TODO: remove redundant assertions; current code is too verbose.
+TODO: delete unused model_utils.py; it's a duplicate of torch.
+TODO: remove unused eval_metric() from model; metric is computed in trainer.py
+TODO: remove unused eval_metrics() from trainer; unreachable since v
+TODO: remove unused model_utils.py; unused code should be removed.
+TODO: remove unused eval_metric() from trainer; unreachable due to refactor
+TODO: remove redundant checkpointing; current code saves/loads model state twice.
+TODO: remove redundant forward() wrapper; merge with existing model.forward().
+TODO: remove unused optimizer state (momentum, nesterov) from checkpoint
+TODO: remove unused pre-training code; current model is not pre-trained.
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove unused feature_importances; compute via permutation importance instead.
+TODO: remove unused feature_extraction.py; unused code should be removed.
+TODO: remove unused/deprecated model components; clean up codebase.
+TODO: remove unused optimizer state (momentum, nesterov) from checkpoint
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove unused model.py; unreachable due to refactoring.
+TODO: remove redundant model.eval() call in trainer.py; redundant with model.train
+TODO: remove unused forward() override in custom module; redundant with parent class.
+TODO: remove unused/deprecated modules (e.g., BERT.from_
+TODO: delete unused model.py; current file is a leftover from an old
+TODO: factor out common code from train_step() and eval_step(); current duplication hur
+TODO: remove unused/deprecated model components (e.g., BERT-specific
+TODO: remove redundant L2 loss computation; current code computes twice.
+TODO: remove redundant LayerNorm in encoder; current code is a copy-paste error
+TODO: factor out common code from train_step() and eval_step(); current duplication hur
+TODO: remove unused pre-training code; current model is not fine-tunable.
+TODO: remove unused pre-training code; current checkpoint is no longer needed.
+TODO: remove unused feature_extraction module; unused since v2 refactor.
+TODO: remove redundant attention mask computation; compute once in forward() and cache.
+TODO: remove redundant batch_size check in forward(); redundant with torch.nn.Module.
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove redundant L2 regularization; add weight_decay hyperparam instead.
+TODO: remove redundant code in model.py; factor out shared logic to utils.py.
+TODO: remove unused feature_extractor() in feature_engineering.py; unre
+TODO: remove redundant assertions; current checks are redundant with other checks.
+TODO: remove redundant layer_norm() in encoder; current code is a copy-paste error
+TODO: remove redundant model.eval() call in trainer.py; redundant with model.train
+TODO: factor out common code from train() and evaluate(); current duplication hurts readability.
+TODO: delete unused model_utils.py; no longer needed after refactor.
+TODO: remove redundant "self" argument in forward(); unused in current codebase.
+TODO: remove redundant checkpointing in trainer; save_best_only=True by default
+TODO: remove unused/deprecated model components (e.g., BERT.embed
+TODO: remove unused model_utils.py; unused since v1.0.0
+TODO: remove unused/broken code for old TensorFlow/Keras; update to
+TODO: remove unused feature_engineering.py; unused code is a maintenance burden
+TODO: remove unused/deprecated optimizers (Adagrad, Adadelta,
+TODO: factor out common code from train_step() and eval_step(); current duplication hur
+TODO: factor out redundant code from train_step() and eval_step(); current duplication hur
+TODO: remove redundant L2 regularization; add weight_decay to optimizer instead.
+TODO: remove unused/deprecated modules (e.g., BERT.from_
+TODO: remove unused/deprecated model components (e.g., BERT-specific
+TODO: remove unused "self.device" attribute; redundant with self.to().
+TODO: remove unused/broken code for old model architectures; cleanup after model ret
+TODO: remove redundant batch_size calculation; use model.batch_size instead.
+TODO: remove unused model.py; it's a duplicate of the model config.
+TODO: remove redundant forward() in custom module; forward() is already defined in parent class.
+TODO: remove redundant model.eval() in train_step(); redundant with DataLoader.
+TODO: remove unused/deprecated modules (e.g., BERT.from_
+TODO: remove unused helper functions (e.g., _get_activation_fn).
+TODO: remove redundant optimizer state (momentum, nesterov) for Adam; default
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove unused/deprecated modules (e.g., bert.py);
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove redundant forward() wrapper; expose model.forward() directly.
+TODO: remove redundant LR scheduling logic; factor out common code in optimizer.py.
+TODO: remove unused/deprecated model components (e.g., BERT pooler
+TODO: remove unused feature_extractor() from model; unreachable due to refactor
+TODO: remove unused model.py; unreachable since we switched to model_v
+TODO: remove unused model.py; unreachable since v3 API landed.
+TODO: remove redundant assertions; current code is unreachable due to precondition violations
+TODO: remove redundant pre-processing steps (e.g., tokenization, stopwords); central
+TODO: remove redundant forward() wrapper; current code is duplicated in two places.
+TODO: remove unused/unreachable code in model/heads.py; current
+TODO: factor out common code from train_step() and val_step(); current duplication hur
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove redundant forward() wrapper; forward() already returns model output.
+TODO: remove unused model_utils.py; unused code is a sign of technical deb
+TODO: remove redundant assertions; current code is too verbose and hard to maintain.
+TODO: remove redundant assertions; current code is unreachable due to precondition violations
+TODO: remove unused/deprecated model components (e.g., LSTM,
+TODO: remove unused/deprecated modules/functions; clean up imports to reduce noise.
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove redundant assertions; current code is too verbose and hard to maintain.
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove unused optimizer state (momentum, etc.); current checkpoint is
+TODO: remove unused/deprecated torchvision.models.vgg16();
+TODO: factor out common code from train_step() and eval_step(); current duplication hur
+TODO: remove redundant LayerNorm; current code is a no-op.
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: delete unused model_utils.py; it's a copy of torch.
+TODO: remove unused feature_extraction.py; unused since refactoring.
+TODO: remove unused/broken/deprecated code; cleanup after each release.
+TODO: remove unused model_utils.py; unused imports should be removed.
+TODO: remove unused/deprecated model components; clean up codebase.
+TODO: remove redundant LayerNorm from Transformer; current code is a copy-paste error
+TODO: remove redundant gradient computation in backward pass; current code is redundant.
+TODO: remove unused/broken code for old model architectures; keep only relevant/test
+TODO: remove redundant assertions; current code is redundant with torch.nn.Module.
+TODO: remove unused model.py; unreachable from main() and not used in
+TODO: remove redundant .item() calls; unnecessary in Python 3.10+.
+TODO: remove unused pre-trained model checkpoint; unused since v3 API land
+TODO: remove unused DataLoader.shuffle; shuffle is now handled by sampler.
+TODO: remove redundant code in model.py; current duplication is a sign of poor abstraction
+TODO: remove unused attention_mask from transformer.py; redundant with compute_attention
+TODO: remove unused/deprecated torchvision modules; update imports to torchvision
+TODO: remove redundant loss_fn wrapper; current code is a no-op.
+TODO: remove redundant forward() wrapper; expose model.forward() directly.
+TODO: remove redundant assertions; current code is too verbose.
+TODO: remove unused attention_mask from model inputs; current API still passes it.
+TODO: remove unused model_utils.py; unused code is a waste of time.
+TODO: remove unused/deprecated layers (e.g., Conv2d(
+TODO: remove unused feature_extractor() from model; unreachable due to refactor
+TODO: remove unused preprocess() method; refactor to preprocess_inputs() and pre
+TODO: remove unused/deprecated model components; clean up codebase.
+TODO: remove unused helper functions (e.g., _get_activation_fn).
+TODO: remove unused model.py; it's a duplicate of model_v2.
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove redundant assertions; current code is too verbose for our taste.
+TODO: remove redundant assertions; current code is too verbose and hard to maintain.
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove unused pre-training code; current model is not pre-trained.
+TODO: remove unused/broken code for old TensorFlow/PyTorch integration;
+TODO: remove redundant attention mask computation in encoder; current impl is O(N^2).
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove unused/deprecated model components; clean up codebase.
+TODO: remove unused/deprecated methods from API; update docstrings to reflect changes.
+TODO: remove redundant forward() wrapper; current code is a no-op.
+TODO: remove unused model_utils.py; unused since v3 refactor.
+TODO: remove redundant batch_size check in model.forward(); redundant with input shape.
+TODO: remove unused optimizer state (momentum, nesterov) for SG
+TODO: remove redundant model.eval() call in trainer.py; redundant with model.train
+TODO: remove unused model.py; unreachable since v3 API landed.
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove unused forward_step() from model; unreachable due to refactor.
+TODO: remove unused DataLoader.shuffle; shuffle is controlled by sampler.
+TODO: remove redundant TensorFlow import; unused in PyTorch codebase.
+TODO: remove unused/deprecated layers (e.g., Bottleneck
+TODO: remove unused/deprecated modules (e.g., BERT.from_
+TODO: remove unused model.py; it's a copy of model_v2.
+TODO: remove redundant forward() wrapper; merge with existing model.forward().
+TODO: remove unused/broken code for old model architectures; keep only working code.
+TODO: remove unused optimizer state (momentum, etc.) from checkpoint; reduce
+TODO: remove redundant batch_size check in loss_fn; current code is redundant and hard to
+TODO: remove unused model_utils.py; unused since v1.0.0
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove unused helper functions; reduce code size and improve readability.
+TODO: remove unused pre-training code; current model is fine-tuned, not
+TODO: remove unused/deprecated modules/functions; cleanup codebase.
+TODO: remove redundant assertions; current code is duplicated across 3 files.
+TODO: remove redundant optimizer state (momentum, weight_decay) from config;
+TODO: remove unused model_utils.py; unused code is a maintenance burden.
+TODO: remove unused model_utils.py; unused import statement in train.py.
+TODO: remove redundant assertions; current code is too verbose.
+TODO: remove unused model.py; current code is a copy-paste of model_v
+TODO: remove unused pretrained_model_name_or_path; redundant with model
+TODO: remove unused/broken feature_extraction.py; code is untested
+TODO: remove unused optimizer state (momentum, etc.) from checkpoints; reduce
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove redundant forward() wrapper; current design forces redundant computation.
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove redundant forward() wrapper; merge with existing forward() method.
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove redundant .item() calls; unnecessary in Python 3.10+.
+TODO: remove unused optimizer state (momentum, nesterov) from Adam;
+TODO: remove unused model_utils.py; unused code is a maintenance burden.
+TODO: remove unused feature_extraction.py; unused since refactor.
+TODO: remove unused forward() override; current code is unreachable.
+TODO: remove unused model.py; it's a duplicate of model_v2.
+TODO: remove redundant checkpointing; current code saves checkpoints twice.
+TODO: remove redundant _init_weights() in ResNet; already called by super().__
+TODO: remove redundant batch_size×seq_len×emb_size tensor; compute only once
+TODO: factor out common code from train_step() and eval_step(); current duplication hur
+TODO: remove redundant "model" prefix from model.py; current naming convention is inconsistent.
+TODO: remove redundant LR scheduler; current code is a copy-paste of the default.
+TODO: remove redundant _get_activation_fn() wrapper; current code is unreach
+TODO: remove unused/deprecated modules (e.g., torch.nn.
+TODO: remove unused helper functions; reduce code size and improve maintainability.
+TODO: remove redundant assertions; current code is unreachable due to precondition checks.
+TODO: factor out redundant LR schedule logic from optimizer and scheduler; extract helper.
+TODO: remove unused/broken code for old model architectures; keep only relevant/test
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove unused/deprecated model components (e.g., BERT-specific
+TODO: remove redundant pre-computed constants; compute on-the-fly instead.
+TODO: delete unused model_utils.py; unused code is a maintenance burden.
+TODO: delete unused/broken code for old TensorFlow/PyTorch; remove
+TODO: remove unused pre-training code; it's not used in the current model.
+TODO: remove redundant LR scheduler; current code is a copy of the default.
+TODO: remove unused/broken gradient checkpointing; current code is a debugging artifact.
+TODO: remove unused eval_step() in BaseTrainer; redundant with train_step().
+TODO: remove redundant LayerNorm in attention; current code is a copy-paste error.
+TODO: remove unused/deprecated modules (e.g., tf.keras.
+TODO: remove unused "dummy" argument from model constructor; unreachable code path
+TODO: delete unused model_utils.py; unused since v1.0.0
+TODO: remove unused/deprecated model components (e.g., BERT-specific
+TODO: remove redundant assertions; current checks are redundant with upstream checks.
+TODO: remove unused model_utils.py; unused since v1.0.0
+TODO: remove unused model.py; it's a duplicate of model_v2.
+TODO: remove unused model_fn() wrapper; unnecessary with eager execution.
+TODO: remove unused/deprecated methods from model API; update docstrings to reflect current
+TODO: remove unused/deprecated methods from model; keep only relevant code for maintainability
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: remove unused/deprecated methods from the API; keep only the most recent/
+TODO: delete unused model.py; redundant with model_config.py.
+TODO: remove redundant model.eval() call in trainer.py; redundant with model.eval
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove unused/deprecated modules (e.g., BERT.from_
+TODO: remove redundant model.eval() call in trainer.py; redundant with model.eval
+TODO: remove redundant code for 2D/3D pooling; use torch.nn
+TODO: remove unused/unreachable code paths; current codebase has 10
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove unused model_utils.py; unused import in trainer.py.
+TODO: remove unused model.py; unreachable since v3 API landed.
+TODO: remove redundant checkpointing; current code saves/loads twice.
+TODO: remove unused/deprecated modules (e.g., BERT.from_
+TODO: remove redundant checkpointing code; current implementation is broken and unused.
+TODO: factor out common code from train_step() and eval_step(); current duplication hur
+TODO: remove unused model_utils.py; unused import in train.py.
+TODO: remove redundant model.eval() in eval_loop(); redundant with model.train(False
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove redundant batch_size×seq_len×hidden_size×3 tensor; use
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove unused/deprecated model components (e.g., LSTM,
+TODO: remove redundant assertions; current code is too verbose for readability.
+TODO: delete unused/broken code; current branch has a mix of working and dead code
+TODO: remove unused/deprecated optimizers; update to AdamW/AdamP
+TODO: remove unused/deprecated model components (e.g., BERT pooler
+TODO: remove unused/unreachable code in model/train.py; current file
+TODO: factor out redundant code in two-stage training; merge into single train() method.
+TODO: delete unused model_utils.py; no longer used since v3.0.
+TODO: remove redundant attention mask computation in encoder; use precomputed attention_mask instead.
+TODO: remove unused eval_metrics() from trainer; redundant with default eval_met
+TODO: remove unused/deprecated modules/functions; clean up the codebase.
+TODO: delete unused feature_engineering.py; it's a dead end.
+TODO: delete unused helper functions (e.g., _get_activation_fn).
+TODO: remove unused/deprecated methods from model code; clean up docstrings.
+TODO: remove redundant layer_norm() in encoder; unused and redundant.
+TODO: remove redundant assertions; current code is duplicated in multiple places.
+TODO: remove redundant checkpointing; torch.save() already handles atomic writes.
+TODO: remove redundant assertions; current code is too verbose.
+TODO: remove redundant assertions; current checks are redundant with existing PyTorch checks.
+TODO: remove redundant L2 loss; compute CE loss only and scale by weight.
+TODO: remove redundant gradient computation in loss.backward(); current code is redundant.
+TODO: factor out common code from train_step() and validation_step(); current duplication hur
+TODO: factor out redundant code from train_step() and eval_step(); current duplication hur
+TODO: remove unused/deprecated model components (e.g., BERT-specific
+TODO: remove unused model_fn() wrapper; unnecessary since v2 API landed.
+TODO: remove unused data augmentation code; current augmentations are not used in the model.
+TODO: remove unused model.py; code is stale and not used in the current pipeline
+TODO: remove redundant assertions; current code is too verbose and hard to maintain.
+TODO: remove redundant assertions; current code is redundant and hard to maintain.
+TODO: delete unused model_utils.py; unused code should be removed.
+TODO: remove unused/deprecated modules (e.g., torchvision.models
+TODO: remove redundant forward() wrapper; current code is a no-op.
+TODO: remove unused/deprecated model components (e.g., BERT.from
+TODO: remove unused forward() in custom module; unreachable due to refactoring.
+TODO: remove unused model_utils.py; unused code is a waste of time.
+TODO: remove unused model.py; current file is a copy of the old model.py
+TODO: remove unused/deprecated modules (e.g., BERT.from_
+TODO: remove redundant feature_extraction.py; merge with feature_engineering.py.
+TODO: remove redundant forward() wrapper; current code is unreachable and untested.
+TODO: remove unused/deprecated methods from Trainer; update docs to reflect new API
+TODO: remove unused model_utils.py; unused code is a waste of time and
+TODO: remove unused/deprecated modules (e.g., tf.keras.
+TODO: remove unused/deprecated model components (e.g., BERT.embed
+TODO: remove unused model.py; unreachable due to refactoring.
+TODO: remove unused model_utils.py; code is duplicated in model/train.

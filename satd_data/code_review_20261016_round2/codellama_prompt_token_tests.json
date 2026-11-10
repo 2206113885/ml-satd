@@ -1,0 +1,47 @@
+[
+  {
+    "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "full_token_count": 7752,
+    "truncated_token_count": 4096,
+    "truncation_side": "right",
+    "full_has_query": true,
+    "truncated_has_query": false,
+    "decoded_tail": "be removed.\nexamples:\n1. TODO: remove legacy fast_path(); unreachable since v2 API landed.\n2. FIXME: drop manual softmax implementation; use torch.nn.functional.softmax instead.\n3."
+  },
+  {
+    "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "full_token_count": 2639,
+    "truncated_token_count": 2639,
+    "truncation_side": "right",
+    "full_has_query": true,
+    "truncated_has_query": true,
+    "decoded_tail": " HP Conf, Layer Conf, MCC, MCM, MCR, ML, MLDepend, MLInter, MLKnow, MLRelia, PODT, PQ, Proto, UMC, Weight Conf\n\nCode Comment:TODO: optimize data loading.\n\"\"\"\n\nAbbreviation: [/INST]"
+  },
+  {
+    "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "full_token_count": 889,
+    "truncated_token_count": 889,
+    "truncation_side": "right",
+    "full_has_query": true,
+    "truncated_has_query": true,
+    "decoded_tail": " HP Conf, Layer Conf, MCC, MCM, MCR, ML, MLDepend, MLInter, MLKnow, MLRelia, PODT, PQ, Proto, UMC, Weight Conf\n\nCode Comment:TODO: optimize data loading.\n\"\"\"\n\nAbbreviation: [/INST]"
+  },
+  {
+    "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "full_token_count": 1336,
+    "truncated_token_count": 1336,
+    "truncation_side": "right",
+    "full_has_query": true,
+    "truncated_has_query": true,
+    "decoded_tail": " HP Conf, Layer Conf, MCC, MCM, MCR, ML, MLDepend, MLInter, MLKnow, MLRelia, PODT, PQ, Proto, UMC, Weight Conf\n\nCode Comment:TODO: optimize data loading.\n\"\"\"\n\nAbbreviation: [/INST]"
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "full_token_count": 914,
+    "truncated_token_count": 914,
+    "truncation_side": "right",
+    "full_has_query": true,
+    "truncated_has_query": true,
+    "decoded_tail": ", MLKnow, MLRelia, PODT, PQ, Proto, UMC, Weight Conf>\nReason: <<=12 words; short, specific, and grounded in the comment>\n\nCode Comment:\n\"\"\"\nTODO: optimize data loading.\n\"\"\" [/INST]"
+  }
+]

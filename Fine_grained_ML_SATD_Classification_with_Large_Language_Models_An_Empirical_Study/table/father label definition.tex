@@ -1,0 +1,34 @@
+\begin{table*}[ht]
+\centering
+\small
+\caption{Definition of the father categories}
+\label{tab:Super_def}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{
+    >{\raggedright\arraybackslash}p{3.4cm}
+    >{\raggedright\arraybackslash}X
+}
+\hline
+\textbf{Dim. Name} & \textbf{Definition} \\
+\hline
+Awareness (AWR) & Lack of developer understanding or certainty about ML algorithms, APIs, data, or model behavior. Often arises due to ``black box'' nature of ML models. \\
+\hline
+Readability (RDB) & Model code has poor legibility or unclear logic, especially in ML contexts (e.g., poorly named variables, dense math code). \\
+\hline
+Duplicate Code Elimination (DCE) & Identical or near-identical ML model or preprocessing logic appears in multiple places. \\
+\hline
+Configurable Options (CFO) & Missing or poorly implemented configuration points for weights, network layers, or model parameters. \\
+\hline
+Code Dependency (CDD) & Code depends on other code or libraries in a way that blocks maintenance, requires workarounds, or is outdated. \\
+\hline
+Data Dependency (DTD) & Issues in how data is processed, represented, or stored that hinder maintainability or correctness. \\
+\hline
+Modularity (MDL) & Poor modular boundaries or design make the system harder to evolve, reuse, or maintain. \\
+\hline
+Performance (PRF) & Performance or robustness is insufficient, requiring evaluation, optimization, or reliability improvement. \\
+\hline
+Scalability (SCL) & Prototype-level code is used in production without scaling optimizations. \\
+\hline
+\end{tabularx}
+\end{table*}

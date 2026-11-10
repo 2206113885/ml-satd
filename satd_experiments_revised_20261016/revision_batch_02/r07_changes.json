@@ -1,0 +1,907 @@
+{
+  "issue_id": "R07",
+  "source_issue_id": "INF-06",
+  "files_changed": 13,
+  "qwen_explicit_profile_files": 6,
+  "loaded_profile_files": 7,
+  "policy": "Qwen nonthinking explicitly overrides do_sample=True, temperature=.7, top_p=.8, top_k=20. Other models resolve the same fields from the loaded local GenerationConfig. All unspecified fields remain inherited; original Llama PAD override retained. Qwen2.5 repetition penalty not overridden.",
+  "metadata_policy": "Save loaded configuration, call overrides, merged effective configuration and unused kwargs; historical server defaults not verified.",
+  "validation": {
+    "only_ast_and_static_diff": true,
+    "original_modules_executed": false,
+    "model_or_tokenizer_loaded": false,
+    "pure_function_tests_executed": false,
+    "experiments_executed": false,
+    "runtime_generation_config_update_not_executed": true,
+    "original_header_and_future_import_order_checked": true
+  },
+  "changes": [
+    {
+      "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "model_group": "loaded local GenerationConfig profile",
+      "sha256_before_r07": "5cd80b7bc9806e7d01b094ec45707e818f68eb0ca96246828883ad377f6a3973",
+      "sha256_after_r07": "672a96f5dd4f039e43c410fffaa0e3513806ecdccfcfa4b7334dbd1cb5a34019",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 26,
+          "end_line": 30,
+          "old_start_line_at_edit": 24,
+          "replaced_original_lines": 2,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 1,
+          "end_line": 2,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 435,
+          "end_line": 452,
+          "old_start_line_at_edit": 435,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 483,
+          "end_line": 497,
+          "old_start_line_at_edit": 483,
+          "replaced_original_lines": 9,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 591,
+          "end_line": 600,
+          "old_start_line_at_edit": 591,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "pad_token_id",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Original explicit tokenizer.eos_token_id override retained",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": false,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "model_group": "Qwen verified nonthinking profile",
+      "sha256_before_r07": "759cb3da0ba6e921709f2e870e176f9cb67fd96b6c5f5576ba1a10b7012ae003",
+      "sha256_after_r07": "3cf5023bc27df5538f1f16f76ca06e13addc7d3f7445c101091d2c93fcb89e29",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 37,
+          "end_line": 48,
+          "old_start_line_at_edit": 35,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 13,
+          "end_line": 14,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 453,
+          "end_line": 469,
+          "old_start_line_at_edit": 453,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 500,
+          "end_line": 515,
+          "old_start_line_at_edit": 500,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 609,
+          "end_line": 618,
+          "old_start_line_at_edit": 609,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": true,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "model_group": "Qwen verified nonthinking profile",
+      "sha256_before_r07": "c1fd74cbd19d56fc66b18c7bdcde93bcc70c595eba633730446f71f81a41e723",
+      "sha256_after_r07": "00b5463c6f78d269115abffc0792dcfe7dc15d92a49f46f20b136bd9619fcc69",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 37,
+          "end_line": 48,
+          "old_start_line_at_edit": 35,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 13,
+          "end_line": 14,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 431,
+          "end_line": 447,
+          "old_start_line_at_edit": 431,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 478,
+          "end_line": 493,
+          "old_start_line_at_edit": 478,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 587,
+          "end_line": 596,
+          "old_start_line_at_edit": 587,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": true,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "model_group": "Qwen verified nonthinking profile",
+      "sha256_before_r07": "99f0038d81c214a2107bcb6a47d66c7587ca101632e1e496e69f38d5d811a76f",
+      "sha256_after_r07": "a97448a2d18a6523b38b2611e9fcded17d0fd2a8aa9cab2ff80a528d08fdc6f0",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 37,
+          "end_line": 48,
+          "old_start_line_at_edit": 35,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 13,
+          "end_line": 14,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 453,
+          "end_line": 469,
+          "old_start_line_at_edit": 453,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 500,
+          "end_line": 515,
+          "old_start_line_at_edit": 500,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 609,
+          "end_line": 618,
+          "old_start_line_at_edit": 609,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": true,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "model_group": "loaded local GenerationConfig profile",
+      "sha256_before_r07": "433cc7e9dd6870e74e0f719f6ed83075cec9ec8cf4ba12fadf44546c7abacab1",
+      "sha256_after_r07": "17b1b6fbae1eeea38c8e898bb7b97814cb73ce22902c4cf4fa64021901e09228",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 25,
+          "end_line": 32,
+          "old_start_line_at_edit": 23,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 1,
+          "end_line": 2,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 437,
+          "end_line": 453,
+          "old_start_line_at_edit": 437,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 484,
+          "end_line": 499,
+          "old_start_line_at_edit": 484,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 593,
+          "end_line": 602,
+          "old_start_line_at_edit": 593,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": false,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+      "model_group": "loaded local GenerationConfig profile",
+      "sha256_before_r07": "3b5fadbd73d5669cdc3f91449196c71227f690cd35b75b3453540de2a7384a43",
+      "sha256_after_r07": "bee23d8eed0f20eaacf28fd05d9aa548f3649a6ea2aa4ea7df24f02f77f9b888",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 26,
+          "end_line": 33,
+          "old_start_line_at_edit": 24,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 1,
+          "end_line": 2,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 425,
+          "end_line": 441,
+          "old_start_line_at_edit": 425,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 472,
+          "end_line": 487,
+          "old_start_line_at_edit": 472,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 581,
+          "end_line": 590,
+          "old_start_line_at_edit": 581,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": false,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+      "model_group": "loaded local GenerationConfig profile",
+      "sha256_before_r07": "c99b2cca9e1b8c541abec867402b5077602f76cd1f854236d5d76b81c5b10ade",
+      "sha256_after_r07": "57c4f2461d7c1f30398c3c0e87b02d47929969669b59cbce1f88c84439693f5e",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 26,
+          "end_line": 33,
+          "old_start_line_at_edit": 24,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 1,
+          "end_line": 2,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 425,
+          "end_line": 441,
+          "old_start_line_at_edit": 425,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 472,
+          "end_line": 487,
+          "old_start_line_at_edit": 472,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 581,
+          "end_line": 590,
+          "old_start_line_at_edit": 581,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": false,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "model_group": "loaded local GenerationConfig profile",
+      "sha256_before_r07": "d0099a8db7c8575b60e3f970b46bf7c5f2e75b2ce7f94a4d91400c34d2a7407f",
+      "sha256_after_r07": "279cc1d1f11c7e6046836679f857ed1ad0970ea6a70cdba77e44cc319f5d140e",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 26,
+          "end_line": 30,
+          "old_start_line_at_edit": 24,
+          "replaced_original_lines": 2,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 1,
+          "end_line": 2,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 343,
+          "end_line": 360,
+          "old_start_line_at_edit": 343,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 391,
+          "end_line": 405,
+          "old_start_line_at_edit": 391,
+          "replaced_original_lines": 9,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 499,
+          "end_line": 508,
+          "old_start_line_at_edit": 499,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "pad_token_id",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Original explicit tokenizer.eos_token_id override retained",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": false,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "model_group": "Qwen verified nonthinking profile",
+      "sha256_before_r07": "491c7f6750c54ef6e9ec91025cce54ae11785e6a9a0c2f3241d71f8ff7b719c9",
+      "sha256_after_r07": "9b38712998f3f81a67c53ab145f08ed3da53ea89c852a8b4c4db2be2fa14256a",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 37,
+          "end_line": 48,
+          "old_start_line_at_edit": 35,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 13,
+          "end_line": 14,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 361,
+          "end_line": 377,
+          "old_start_line_at_edit": 361,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 408,
+          "end_line": 423,
+          "old_start_line_at_edit": 408,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 517,
+          "end_line": 526,
+          "old_start_line_at_edit": 517,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": true,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "model_group": "Qwen verified nonthinking profile",
+      "sha256_before_r07": "17faae1ae15678f9164ec5bc59718f59930972ba2268c174b46e2dbfab9d7543",
+      "sha256_after_r07": "2178b24f529cdf347e78aa33412784a673ae5663fd7fbb0f85d5810dbd00be9f",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 37,
+          "end_line": 48,
+          "old_start_line_at_edit": 35,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 13,
+          "end_line": 14,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 339,
+          "end_line": 355,
+          "old_start_line_at_edit": 339,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 386,
+          "end_line": 401,
+          "old_start_line_at_edit": 386,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 495,
+          "end_line": 504,
+          "old_start_line_at_edit": 495,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": true,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "model_group": "Qwen verified nonthinking profile",
+      "sha256_before_r07": "f7880b34063902ca0c936a53e40f79eb78bbdbcf36bc23e2a6c82fa7a88da1d1",
+      "sha256_after_r07": "b54ea804f343d1a988eb1a3915c88c5c60c3d0066f7609399a6325fbae70151d",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 37,
+          "end_line": 48,
+          "old_start_line_at_edit": 35,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 13,
+          "end_line": 14,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 361,
+          "end_line": 377,
+          "old_start_line_at_edit": 361,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 408,
+          "end_line": 423,
+          "old_start_line_at_edit": 408,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 517,
+          "end_line": 526,
+          "old_start_line_at_edit": 517,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": true,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "model_group": "loaded local GenerationConfig profile",
+      "sha256_before_r07": "7c84f9c0909bfbc6eec53fe0d388df0ce2e41f6e03bf857ec1555d4f0059c6c8",
+      "sha256_after_r07": "96d6f4137ef8976ddaf3ea03f2d1ca676016f11f32307f4cc476b9dafd4640ee",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 25,
+          "end_line": 32,
+          "old_start_line_at_edit": 23,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 1,
+          "end_line": 2,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 345,
+          "end_line": 361,
+          "old_start_line_at_edit": 345,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 392,
+          "end_line": 407,
+          "old_start_line_at_edit": 392,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 501,
+          "end_line": 510,
+          "old_start_line_at_edit": 501,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": false,
+        "no_original_code_removed_by_header_fix": true
+      }
+    },
+    {
+      "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "model_group": "loaded local GenerationConfig profile",
+      "sha256_before_r07": "7c903fd9ed9c058aa9f98391bd9133c40bd557c1b379fe5ddaab012be7b0f6a8",
+      "sha256_after_r07": "150410e95c535c0d8c5fe111e52c1cdf57d6be815ce93ab083c900aa7a076ec1",
+      "changes": [
+        {
+          "kind": "sampling-declarations",
+          "line": 26,
+          "end_line": 33,
+          "old_start_line_at_edit": 24,
+          "replaced_original_lines": 5,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "deepcopy-import",
+          "line": 1,
+          "end_line": 2,
+          "old_start_line_at_edit": 1,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "loaded-effective-config",
+          "line": 346,
+          "end_line": 362,
+          "old_start_line_at_edit": 346,
+          "replaced_original_lines": 0,
+          "original_preserved_as_comments": false
+        },
+        {
+          "kind": "generation-call",
+          "line": 393,
+          "end_line": 408,
+          "old_start_line_at_edit": 393,
+          "replaced_original_lines": 10,
+          "original_preserved_as_comments": true
+        },
+        {
+          "kind": "settings-metadata",
+          "line": 502,
+          "end_line": 511,
+          "old_start_line_at_edit": 502,
+          "replaced_original_lines": 1,
+          "original_preserved_as_comments": true
+        }
+      ],
+      "generation_override_keys": [
+        "do_sample",
+        "max_new_tokens",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "eos_override_added": false,
+      "pad_policy": "Inherited from loaded GenerationConfig",
+      "static_checks": {
+        "ast_parse": true,
+        "reverse_edit_restores_before_exactly": true,
+        "R04_parsers_unchanged": true,
+        "templates_unchanged": true,
+        "input_and_output_caps_unchanged": true,
+        "header_and_future_import_order_checked": true,
+        "added_import_moved_after_original_header_docstring_future": false,
+        "no_original_code_removed_by_header_fix": true
+      }
+    }
+  ],
+  "header_fix": {
+    "files_checked": 13,
+    "files_moved": 6,
+    "moved_files": [
+      "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "tree_few_shot/Qwen3-14B_few_shot.py",
+      "tree_few_shot/Qwen3-8B_few_shot.py",
+      "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "tree_zero_shot/Qwen3-8B_zero_shot.py"
+    ],
+    "scope": "Move only the two newly added R07 comment/import lines after the original shebang/encoding/module docstring/future imports; unchanged in seven files without headers.",
+    "checks": "AST only; exact original header/content preserved; non-import R07 ranges unchanged; no runtime execution."
+  }
+}

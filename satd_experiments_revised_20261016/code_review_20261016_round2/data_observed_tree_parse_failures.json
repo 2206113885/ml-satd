@@ -1,0 +1,128 @@
+[
+  {
+    "run_dir": "tree_zero_shot/results/run-20250813-031517-Qwen3-14B-nd+es-24.4",
+    "current_parser_fine_failures_replayed_from_saved_raw": 26,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_zero_shot/results/run-20250813-032417-Qwen2.5-Coder-7B-Instruct-nd+es-22.1",
+    "current_parser_fine_failures_replayed_from_saved_raw": 142,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_zero_shot/results/run-20250813-032650-Qwen3-8B-nd+es-19.8",
+    "current_parser_fine_failures_replayed_from_saved_raw": 27,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_zero_shot/results/run-20250813-034537-gemma-2-9b-it-27",
+    "current_parser_fine_failures_replayed_from_saved_raw": 24,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_zero_shot/results/run-20250813-043241-gemma-3-12b-it-27.2",
+    "current_parser_fine_failures_replayed_from_saved_raw": 27,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_zero_shot/results/run-20250813-044653-codegemma-1.1-7b-it-9.4",
+    "current_parser_fine_failures_replayed_from_saved_raw": 66,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_zero_shot/results/run-20250813-045854-CodeLlama-7b-Instruct-hf-2.8",
+    "current_parser_fine_failures_replayed_from_saved_raw": 2,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_zero_shot/results/run-20250813-050432-Llama-3.1-8B-Instruct-8.9",
+    "current_parser_fine_failures_replayed_from_saved_raw": 16,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_zero_shot/results/run-20250817-015003-gpt-oss-20b-31",
+    "current_parser_fine_failures_replayed_from_saved_raw": 0,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": null,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_few_shot/results/run-20250813-033339-Qwen3-8B-19.6",
+    "current_parser_fine_failures_replayed_from_saved_raw": 64,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_few_shot/results/run-20250813-033519-Qwen3-14B-22.6",
+    "current_parser_fine_failures_replayed_from_saved_raw": 29,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_few_shot/results/run-20250813-033744-Qwen2.5-Coder-7B-Instruct-21.6",
+    "current_parser_fine_failures_replayed_from_saved_raw": 121,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_few_shot/results/run-20250825-005210-gemma-3-12b-it-23.7",
+    "current_parser_fine_failures_replayed_from_saved_raw": 45,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_few_shot/results/run-20250825-005253-gemma-2-9b-it-24.7",
+    "current_parser_fine_failures_replayed_from_saved_raw": 46,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_few_shot/results/run-20250825-015738-gpt-oss-20b-30.8",
+    "current_parser_fine_failures_replayed_from_saved_raw": 1,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_few_shot/results/run-20250825-044152-codegemma-1.1-7b-it-10.9",
+    "current_parser_fine_failures_replayed_from_saved_raw": 132,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_few_shot/results/run-20250825-044320-CodeLlama-7b-Instruct-hf-2.5",
+    "current_parser_fine_failures_replayed_from_saved_raw": 47,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  },
+  {
+    "run_dir": "tree_few_shot/results/run-20250825-044917-Llama-3.1-8B-Instruct-9.7",
+    "current_parser_fine_failures_replayed_from_saved_raw": 33,
+    "current_parser_empty_crashes": 0,
+    "saved_unknown_fine": 0,
+    "source_version_caveat": "Current parser replay; no historical source hash."
+  }
+]

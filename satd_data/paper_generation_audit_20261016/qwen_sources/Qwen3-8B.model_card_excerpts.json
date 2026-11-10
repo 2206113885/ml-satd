@@ -1,0 +1,22 @@
+[
+  {
+    "line_1based": 77,
+    "text": "    max_new_tokens=32768"
+  },
+  {
+    "line_1based": 129,
+    "text": "> For thinking mode, use `Temperature=0.6`, `TopP=0.95`, `TopK=20`, and `MinP=0` (the default setting in `generation_config.json`). **DO NOT use greedy decoding**, as it can lead to performance degradation and endless repetitions. For more detailed guidance, please refer to the [Best Practices](#best-practices) section."
+  },
+  {
+    "line_1based": 148,
+    "text": "> For non-thinking mode, we suggest using `Temperature=0.7`, `TopP=0.8`, `TopK=20`, and `MinP=0`. For more detailed guidance, please refer to the [Best Practices](#best-practices) section."
+  },
+  {
+    "line_1based": 175,
+    "text": "        response_ids = self.model.generate(**inputs, max_new_tokens=32768)[0][len(inputs.input_ids[0]):].tolist()"
+  },
+  {
+    "line_1based": 331,
+    "text": "2. **Adequate Output Length**: We recommend using an output length of 32,768 tokens for most queries. For benchmarking on highly complex problems, such as those found in math and programming competitions, we suggest setting the max output length to 38,912 tokens. This provides the model with sufficient space to generate detailed and comprehensive responses, thereby enhancing its overall performance."
+  }
+]

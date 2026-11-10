@@ -1,0 +1,10 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+  "run_dir": "results/run-20250813-034537-gemma-2-9b-it",
+  "max_new_tokens": 20,
+  "do_sample": false,
+  "two_stage": true,
+  "unknown_coarse": 0,
+  "unknown_fine": 0
+}

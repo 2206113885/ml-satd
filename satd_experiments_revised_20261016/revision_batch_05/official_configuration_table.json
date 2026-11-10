@@ -1,0 +1,831 @@
+{
+  "revision": "R46",
+  "policy": "1 explicit general author recommendations; 2 fresh checkpoint generation_config.json; 3 installed Transformers defaults for omitted fields. No universal do_sample=True, usage-example promotion, or reference-sampler inference.",
+  "local_checkpoint_priority": [
+    "fresh local checkpoint generation_config.json",
+    "verified bundled official generation_config snapshot, when local file is absent",
+    "fresh config.json legacy generation fields only when no generation_config source exists",
+    "installed Transformers defaults for omitted fields"
+  ],
+  "static_expectation_framework_versions": [
+    "4.55.0",
+    "5.20.0"
+  ],
+  "all_nine_model_snapshots_available": true,
+  "table_is_not_future_or_historical_runtime_evidence": true,
+  "transformers_version_policy": {
+    "meaning": "GenerationConfig transformers_version is serialization metadata, not an exact install requirement. See official source METADATA_FIELDS, constructor, and to_dict assigning current __version__.",
+    "source_url": "https://github.com/huggingface/transformers/blob/v4.55.0/src/transformers/generation/configuration_utils.py",
+    "source_local_path": "revision_batch_04/nonqwen_b_sources/transformers_v4.55.0_configuration_utils.py",
+    "relevant_source_lines": [
+      45,
+      484,
+      1157
+    ],
+    "execution_evidence": "User reports historical models ran successfully; basic runtime compatibility is supported. JSON/version mismatch alone is not an experiment defect or rerun trigger.",
+    "future_protocol": "Keep one fixed compatible environment when possible; split only for real dependency conflicts. Keep the same environment across comparisons for a given model and record actual versions. No package installation, upgrades, downgrades, or environment changes performed."
+  },
+  "changes": [
+    {
+      "model": "Qwen3-8B",
+      "mode": "thinking",
+      "before_R45_overrides": {
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repetition_penalty": 1.0,
+        "num_beams": 1
+      },
+      "after_R46_explicit_recommendation_overrides": {
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "checkpoint_snapshot_added": false
+    },
+    {
+      "model": "Qwen3-8B",
+      "mode": "nonthinking",
+      "before_R45_overrides": {
+        "do_sample": true,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repetition_penalty": 1.0,
+        "num_beams": 1
+      },
+      "after_R46_explicit_recommendation_overrides": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "checkpoint_snapshot_added": false
+    },
+    {
+      "model": "Qwen3-14B",
+      "mode": "thinking",
+      "before_R45_overrides": {
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repetition_penalty": 1.0,
+        "num_beams": 1
+      },
+      "after_R46_explicit_recommendation_overrides": {
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "checkpoint_snapshot_added": false
+    },
+    {
+      "model": "Qwen3-14B",
+      "mode": "nonthinking",
+      "before_R45_overrides": {
+        "do_sample": true,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repetition_penalty": 1.0,
+        "num_beams": 1
+      },
+      "after_R46_explicit_recommendation_overrides": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "checkpoint_snapshot_added": false
+    },
+    {
+      "model": "Qwen2.5-Coder-7B-Instruct",
+      "mode": "instruct",
+      "before_R45_overrides": {
+        "do_sample": true,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": null,
+        "repetition_penalty": 1.1,
+        "num_beams": 1
+      },
+      "after_R46_explicit_recommendation_overrides": {},
+      "checkpoint_snapshot_added": false
+    },
+    {
+      "model": "CodeLlama-7b-Instruct-hf",
+      "mode": "instruct",
+      "before_R45_overrides": {},
+      "after_R46_explicit_recommendation_overrides": {},
+      "checkpoint_snapshot_added": true
+    },
+    {
+      "model": "Llama-3.1-8B-Instruct",
+      "mode": "instruct",
+      "before_R45_overrides": {},
+      "after_R46_explicit_recommendation_overrides": {},
+      "checkpoint_snapshot_added": true
+    },
+    {
+      "model": "codegemma-1.1-7b-it",
+      "mode": "instruct",
+      "before_R45_overrides": {},
+      "after_R46_explicit_recommendation_overrides": {},
+      "checkpoint_snapshot_added": true
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "mode": "instruct",
+      "before_R45_overrides": {},
+      "after_R46_explicit_recommendation_overrides": {},
+      "checkpoint_snapshot_added": true
+    },
+    {
+      "model": "gemma-3-12b-it",
+      "mode": "instruct",
+      "before_R45_overrides": {},
+      "after_R46_explicit_recommendation_overrides": {},
+      "checkpoint_snapshot_added": true
+    },
+    {
+      "model": "gpt-oss-20b",
+      "mode": "reasoning",
+      "before_R45_overrides": {
+        "do_sample": true,
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "top_k": 0,
+        "min_p": null,
+        "repetition_penalty": 1.0,
+        "num_beams": 1,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "after_R46_explicit_recommendation_overrides": {
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "checkpoint_snapshot_added": false
+    }
+  ],
+  "profiles": [
+    {
+      "model": "Qwen3-8B",
+      "mode": "thinking",
+      "profile_id": "Qwen3-8B_thinking",
+      "snapshot_based_expected_sampler": {
+        "do_sample": true,
+        "num_beams": 1,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "min_p": 0.0,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "explicit_author_recommendation",
+        "num_beams": "transformers_framework_default",
+        "temperature": "explicit_author_recommendation",
+        "top_k": "explicit_author_recommendation",
+        "top_p": "explicit_author_recommendation",
+        "repetition_penalty": "transformers_framework_default",
+        "min_p": "explicit_author_recommendation",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": true,
+      "explicit_author_recommendation_overrides": {
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "checkpoint_snapshot": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-8B",
+      "generation_config_url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+      "recommendation_urls": [
+        "https://huggingface.co/Qwen/Qwen3-8B#best-practices"
+      ],
+      "source_evidence": {
+        "evidence_kind": "direct_official_repository_snapshot",
+        "pinned_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    },
+    {
+      "model": "Qwen3-8B",
+      "mode": "nonthinking",
+      "profile_id": "Qwen3-8B_nonthinking",
+      "snapshot_based_expected_sampler": {
+        "do_sample": true,
+        "num_beams": 1,
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.8,
+        "repetition_penalty": 1.0,
+        "min_p": 0.0,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "checkpoint_generation_config",
+        "num_beams": "transformers_framework_default",
+        "temperature": "explicit_author_recommendation",
+        "top_k": "explicit_author_recommendation",
+        "top_p": "explicit_author_recommendation",
+        "repetition_penalty": "transformers_framework_default",
+        "min_p": "explicit_author_recommendation",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": true,
+      "explicit_author_recommendation_overrides": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "checkpoint_snapshot": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-8B",
+      "generation_config_url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+      "recommendation_urls": [
+        "https://huggingface.co/Qwen/Qwen3-8B#best-practices"
+      ],
+      "source_evidence": {
+        "evidence_kind": "direct_official_repository_snapshot",
+        "pinned_revision": "b968826d9c46dd6066d109eabc6255188de91218"
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    },
+    {
+      "model": "Qwen3-14B",
+      "mode": "thinking",
+      "profile_id": "Qwen3-14B_thinking",
+      "snapshot_based_expected_sampler": {
+        "do_sample": true,
+        "num_beams": 1,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "min_p": 0.0,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "explicit_author_recommendation",
+        "num_beams": "transformers_framework_default",
+        "temperature": "explicit_author_recommendation",
+        "top_k": "explicit_author_recommendation",
+        "top_p": "explicit_author_recommendation",
+        "repetition_penalty": "transformers_framework_default",
+        "min_p": "explicit_author_recommendation",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": true,
+      "explicit_author_recommendation_overrides": {
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "checkpoint_snapshot": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-14B",
+      "generation_config_url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/generation_config.json",
+      "recommendation_urls": [
+        "https://huggingface.co/Qwen/Qwen3-14B#best-practices"
+      ],
+      "source_evidence": {
+        "evidence_kind": "direct_official_repository_snapshot",
+        "pinned_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18"
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    },
+    {
+      "model": "Qwen3-14B",
+      "mode": "nonthinking",
+      "profile_id": "Qwen3-14B_nonthinking",
+      "snapshot_based_expected_sampler": {
+        "do_sample": true,
+        "num_beams": 1,
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.8,
+        "repetition_penalty": 1.0,
+        "min_p": 0.0,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "checkpoint_generation_config",
+        "num_beams": "transformers_framework_default",
+        "temperature": "explicit_author_recommendation",
+        "top_k": "explicit_author_recommendation",
+        "top_p": "explicit_author_recommendation",
+        "repetition_penalty": "transformers_framework_default",
+        "min_p": "explicit_author_recommendation",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": true,
+      "explicit_author_recommendation_overrides": {
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "checkpoint_snapshot": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-14B",
+      "generation_config_url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/generation_config.json",
+      "recommendation_urls": [
+        "https://huggingface.co/Qwen/Qwen3-14B#best-practices"
+      ],
+      "source_evidence": {
+        "evidence_kind": "direct_official_repository_snapshot",
+        "pinned_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18"
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    },
+    {
+      "model": "Qwen2.5-Coder-7B-Instruct",
+      "mode": "instruct",
+      "profile_id": "Qwen2.5-Coder-7B-Instruct_instruct",
+      "snapshot_based_expected_sampler": {
+        "do_sample": true,
+        "num_beams": 1,
+        "temperature": 0.7,
+        "top_k": 20,
+        "top_p": 0.8,
+        "repetition_penalty": 1.1,
+        "min_p": null,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "checkpoint_generation_config",
+        "num_beams": "transformers_framework_default",
+        "temperature": "checkpoint_generation_config",
+        "top_k": "checkpoint_generation_config",
+        "top_p": "checkpoint_generation_config",
+        "repetition_penalty": "checkpoint_generation_config",
+        "min_p": "transformers_framework_default",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": true,
+      "explicit_author_recommendation_overrides": {},
+      "checkpoint_snapshot": {
+        "bos_token_id": 151643,
+        "pad_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "repetition_penalty": 1.1,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "transformers_version": "4.44.0"
+      },
+      "chat_template_kwargs": {},
+      "model_card_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct",
+      "generation_config_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/c03e6d358207e414f1eca0bb1891e29f1db0e242/generation_config.json",
+      "recommendation_urls": [],
+      "source_evidence": {
+        "evidence_kind": "direct_official_repository_snapshot",
+        "pinned_revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242"
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    },
+    {
+      "model": "CodeLlama-7b-Instruct-hf",
+      "mode": "instruct",
+      "profile_id": "CodeLlama-7b-Instruct-hf_local_checkpoint_default",
+      "snapshot_based_expected_sampler": {
+        "do_sample": false,
+        "num_beams": 1,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 1.0,
+        "repetition_penalty": 1.0,
+        "min_p": null,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "transformers_framework_default",
+        "num_beams": "transformers_framework_default",
+        "temperature": "transformers_framework_default",
+        "top_k": "transformers_framework_default",
+        "top_p": "transformers_framework_default",
+        "repetition_penalty": "transformers_framework_default",
+        "min_p": "transformers_framework_default",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": false,
+      "explicit_author_recommendation_overrides": {},
+      "checkpoint_snapshot": {
+        "_from_model_config": true,
+        "bos_token_id": 1,
+        "eos_token_id": 2,
+        "transformers_version": "4.33.0.dev0"
+      },
+      "chat_template_kwargs": {},
+      "model_card_url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf",
+      "generation_config_url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/generation_config.json",
+      "recommendation_urls": [],
+      "source_evidence": {
+        "url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/generation_config.json",
+        "pinned_revision": null,
+        "evidence_kind": "transcribed_user_screenshot_of_author_repository",
+        "visible_file_commit_short": "0ee9a34",
+        "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-363397f0-f887-472d-bb4a-671f6d9bb030.png",
+        "archived_screenshot_relative_path": "revision_batch_05/sources/CodeLlama-7b-Instruct-hf/official_generation_config_screenshot.png",
+        "screenshot_sha256": "0db3c0e17efff44c4c81d78f868e79ecd0723207bb6323ebb171ce14a10ca41f",
+        "archived_transcription_relative_path": "revision_batch_05/sources/CodeLlama-7b-Instruct-hf/generation_config.json",
+        "retrieved_on": "2026-10-16",
+        "verification_boundary": "All six visible JSON lines transcribed from user screenshot displaying the official Meta repository and filename. No claim of byte-for-byte original download or match to full queried repository revision."
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    },
+    {
+      "model": "Llama-3.1-8B-Instruct",
+      "mode": "instruct",
+      "profile_id": "Llama-3.1-8B-Instruct_local_checkpoint_default",
+      "snapshot_based_expected_sampler": {
+        "do_sample": true,
+        "num_beams": 1,
+        "temperature": 0.6,
+        "top_k": 50,
+        "top_p": 0.9,
+        "repetition_penalty": 1.0,
+        "min_p": null,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "checkpoint_generation_config",
+        "num_beams": "transformers_framework_default",
+        "temperature": "checkpoint_generation_config",
+        "top_k": "transformers_framework_default",
+        "top_p": "checkpoint_generation_config",
+        "repetition_penalty": "transformers_framework_default",
+        "min_p": "transformers_framework_default",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": true,
+      "explicit_author_recommendation_overrides": {},
+      "checkpoint_snapshot": {
+        "bos_token_id": 128000,
+        "do_sample": true,
+        "eos_token_id": [
+          128001,
+          128008,
+          128009
+        ],
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "transformers_version": "4.42.3"
+      },
+      "chat_template_kwargs": {},
+      "model_card_url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+      "generation_config_url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/generation_config.json",
+      "recommendation_urls": [],
+      "source_evidence": {
+        "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/generation_config.json",
+        "pinned_revision": null,
+        "evidence_kind": "user_download_from_author_repository",
+        "user_supplied_path": "/Users/yizho/Downloads/generation_config.json",
+        "archived_relative_path": "revision_batch_05/sources/Llama-3.1-8B-Instruct/generation_config.json",
+        "download_sha256": "189fb0c0d7fd8a527db217c0a60a0e013f0394cd8800f9697a666a9e75e5f7fd",
+        "retrieved_on": "2026-10-16",
+        "verification_boundary": "Exact supplied bytes archived. Association with Llama3.1 follows the ongoing official-file request and user download; browser could not independently extract the file. Main-branch file is not claimed to match the previously queried pinned revision."
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    },
+    {
+      "model": "codegemma-1.1-7b-it",
+      "mode": "instruct",
+      "profile_id": "codegemma-1.1-7b-it_local_checkpoint_default",
+      "snapshot_based_expected_sampler": {
+        "do_sample": false,
+        "num_beams": 1,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 1.0,
+        "repetition_penalty": 1.0,
+        "min_p": null,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "transformers_framework_default",
+        "num_beams": "transformers_framework_default",
+        "temperature": "transformers_framework_default",
+        "top_k": "transformers_framework_default",
+        "top_p": "transformers_framework_default",
+        "repetition_penalty": "transformers_framework_default",
+        "min_p": "transformers_framework_default",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": false,
+      "explicit_author_recommendation_overrides": {},
+      "checkpoint_snapshot": {
+        "_from_model_config": true,
+        "bos_token_id": 2,
+        "eos_token_id": 1,
+        "pad_token_id": 0,
+        "transformers_version": "4.40.1"
+      },
+      "chat_template_kwargs": {},
+      "model_card_url": "https://huggingface.co/google/codegemma-1.1-7b-it",
+      "generation_config_url": "https://huggingface.co/google/codegemma-1.1-7b-it/blob/main/generation_config.json",
+      "recommendation_urls": [],
+      "source_evidence": {
+        "url": "https://huggingface.co/google/codegemma-1.1-7b-it/blob/main/generation_config.json",
+        "pinned_revision": null,
+        "evidence_kind": "transcribed_user_screenshot_of_author_repository",
+        "visible_file_commit_short": "8a9aefb",
+        "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-3d65e8a0-48be-4344-821c-320991dfa94f.png",
+        "archived_screenshot_relative_path": "revision_batch_05/sources/codegemma-1.1-7b-it/official_generation_config_screenshot.png",
+        "screenshot_sha256": "6e13dbc8285c0aa7eb3a61111a53ad312886844ce00d82f9fa66682de74ef964",
+        "archived_transcription_relative_path": "revision_batch_05/sources/codegemma-1.1-7b-it/generation_config.json",
+        "retrieved_on": "2026-10-16",
+        "verification_boundary": "Complete visible JSON transcribed from user screenshot showing codegemma-1.1-7b-it and generation_config.json; official Google repository association follows the ongoing request. No byte-for-byte original download or full revision match claimed."
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "mode": "instruct",
+      "profile_id": "gemma-2-9b-it_local_checkpoint_default",
+      "snapshot_based_expected_sampler": {
+        "do_sample": false,
+        "num_beams": 1,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 1.0,
+        "repetition_penalty": 1.0,
+        "min_p": null,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "transformers_framework_default",
+        "num_beams": "transformers_framework_default",
+        "temperature": "transformers_framework_default",
+        "top_k": "transformers_framework_default",
+        "top_p": "transformers_framework_default",
+        "repetition_penalty": "transformers_framework_default",
+        "min_p": "transformers_framework_default",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": false,
+      "explicit_author_recommendation_overrides": {},
+      "checkpoint_snapshot": {
+        "_from_model_config": true,
+        "bos_token_id": 2,
+        "cache_implementation": "hybrid",
+        "eos_token_id": 1,
+        "pad_token_id": 0,
+        "transformers_version": "4.42.0.dev0"
+      },
+      "chat_template_kwargs": {},
+      "model_card_url": "https://huggingface.co/google/gemma-2-9b-it",
+      "generation_config_url": "https://huggingface.co/google/gemma-2-9b-it/blob/main/generation_config.json",
+      "recommendation_urls": [],
+      "source_evidence": {
+        "url": "https://huggingface.co/google/gemma-2-9b-it/blob/main/generation_config.json",
+        "pinned_revision": null,
+        "evidence_kind": "transcribed_user_screenshot_of_author_repository",
+        "visible_file_commit_short": "39ea45b",
+        "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-df3fc465-c575-46e2-a625-5dd597d110ae.png",
+        "archived_screenshot_relative_path": "revision_batch_05/sources/gemma-2-9b-it/official_generation_config_screenshot.png",
+        "screenshot_sha256": "226ae6fa539fc79422047feb535ff888df95f05358ae328cab4121e02edf5de8",
+        "archived_transcription_relative_path": "revision_batch_05/sources/gemma-2-9b-it/generation_config.json",
+        "retrieved_on": "2026-10-16",
+        "verification_boundary": "Complete visible JSON transcribed from user screenshot displaying the official Google repository and filename. No claim of byte-for-byte original download or match to full queried repository revision."
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    },
+    {
+      "model": "gemma-3-12b-it",
+      "mode": "instruct",
+      "profile_id": "gemma-3-12b-it_local_checkpoint_default",
+      "snapshot_based_expected_sampler": {
+        "do_sample": true,
+        "num_beams": 1,
+        "temperature": 1.0,
+        "top_k": 64,
+        "top_p": 0.95,
+        "repetition_penalty": 1.0,
+        "min_p": null,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "checkpoint_generation_config",
+        "num_beams": "transformers_framework_default",
+        "temperature": "transformers_framework_default",
+        "top_k": "checkpoint_generation_config",
+        "top_p": "checkpoint_generation_config",
+        "repetition_penalty": "transformers_framework_default",
+        "min_p": "transformers_framework_default",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": true,
+      "explicit_author_recommendation_overrides": {},
+      "checkpoint_snapshot": {
+        "bos_token_id": 2,
+        "cache_implementation": "hybrid",
+        "do_sample": true,
+        "eos_token_id": [
+          1,
+          106
+        ],
+        "pad_token_id": 0,
+        "top_k": 64,
+        "top_p": 0.95,
+        "transformers_version": "4.50.0.dev0"
+      },
+      "chat_template_kwargs": {},
+      "model_card_url": "https://huggingface.co/google/gemma-3-12b-it",
+      "generation_config_url": "https://huggingface.co/google/gemma-3-12b-it/blob/main/generation_config.json",
+      "recommendation_urls": [],
+      "source_evidence": {
+        "url": "https://huggingface.co/google/gemma-3-12b-it/blob/main/generation_config.json",
+        "pinned_revision": null,
+        "evidence_kind": "transcribed_user_screenshot_of_author_repository",
+        "visible_file_commit_short": "d82ecc1",
+        "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-6e622635-4a5e-4ce4-80b4-048dc5617224.png",
+        "archived_screenshot_relative_path": "revision_batch_05/sources/gemma-3-12b-it/official_generation_config_screenshot.png",
+        "screenshot_sha256": "24b2d85f2ca3023474af7d93a31e991ea79f64d762864c4a677f9a84445f2270",
+        "archived_transcription_relative_path": "revision_batch_05/sources/gemma-3-12b-it/generation_config.json",
+        "retrieved_on": "2026-10-16",
+        "verification_boundary": "Complete visible JSON transcribed from user screenshot displaying the official Google repository and filename. No claim of byte-for-byte original download or match to full queried repository revision."
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    },
+    {
+      "model": "gpt-oss-20b",
+      "mode": "reasoning",
+      "profile_id": "gpt-oss-20b_medium_official_hierarchy",
+      "snapshot_based_expected_sampler": {
+        "do_sample": true,
+        "num_beams": 1,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 1.0,
+        "repetition_penalty": 1.0,
+        "min_p": null,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "parameter_sources": {
+        "do_sample": "checkpoint_generation_config",
+        "num_beams": "transformers_framework_default",
+        "temperature": "explicit_author_recommendation",
+        "top_k": "transformers_framework_default",
+        "top_p": "explicit_author_recommendation",
+        "repetition_penalty": "transformers_framework_default",
+        "min_p": "transformers_framework_default",
+        "typical_p": "transformers_framework_default",
+        "epsilon_cutoff": "transformers_framework_default",
+        "eta_cutoff": "transformers_framework_default"
+      },
+      "sampling_filters_operative": true,
+      "explicit_author_recommendation_overrides": {
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      "checkpoint_snapshot": {
+        "bos_token_id": 199998,
+        "do_sample": true,
+        "eos_token_id": [
+          200002,
+          199999,
+          200012
+        ],
+        "pad_token_id": 199999,
+        "transformers_version": "4.55.0.dev0"
+      },
+      "chat_template_kwargs": {
+        "reasoning_effort": "medium"
+      },
+      "model_card_url": "https://huggingface.co/openai/gpt-oss-20b",
+      "generation_config_url": "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/generation_config.json",
+      "recommendation_urls": [
+        "https://github.com/openai/gpt-oss/blob/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/README.md#recommended-sampling-parameters"
+      ],
+      "source_evidence": {
+        "evidence_kind": "direct_official_repository_snapshot",
+        "pinned_revision": "6cee5e81ee83917806bbde320786a8fb61efebee"
+      },
+      "boundary": "Static expectation from archived checkpoint snapshot plus explicit recommendation and framework 4.55.0/5.20.0 source defaults. Future runtime reads the actual local checkpoint first and logs actual installed-version values; this is not historical-run evidence."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+  "retrieved_at": "2026-10-16T08:47:09.048979+00:00",
+  "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-7B-Instruct",
+  "files": {
+    "generation_config.json": {
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/raw/c03e6d358207e414f1eca0bb1891e29f1db0e242/generation_config.json",
+      "sha256": "1a628a5775bc69cde01c6749a531150ca4d3189652c618a174f7077923acf3b1",
+      "bytes": 242
+    },
+    "config.json": {
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/raw/c03e6d358207e414f1eca0bb1891e29f1db0e242/config.json",
+      "sha256": "c0242402ad6a13b331ea320feea8c7e3776ffb7a4eff0757b9cd667e116d9a28",
+      "bytes": 663
+    },
+    "tokenizer_config.json": {
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/raw/c03e6d358207e414f1eca0bb1891e29f1db0e242/tokenizer_config.json",
+      "sha256": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4",
+      "bytes": 7305
+    },
+    "README.md": {
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/raw/c03e6d358207e414f1eca0bb1891e29f1db0e242/README.md",
+      "sha256": "3c090be37f829adc1e4cdb78733667437732541470430ab2cd785d7f0d460077",
+      "bytes": 6392
+    }
+  },
+  "generation_config": {
+    "bos_token_id": 151643,
+    "pad_token_id": 151643,
+    "do_sample": true,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "repetition_penalty": 1.1,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "transformers_version": "4.44.0"
+  },
+  "model_config_subset": {
+    "model_type": "qwen2",
+    "architectures": [
+      "Qwen2ForCausalLM"
+    ],
+    "max_position_embeddings": 32768,
+    "rope_scaling": null,
+    "transformers_version": "4.44.0",
+    "torch_dtype": "bfloat16",
+    "dtype": null
+  },
+  "chat_template": {
+    "mentions_enable_thinking": false,
+    "mentions_think_marker": false,
+    "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+  },
+  "model_card_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/blob/c03e6d358207e414f1eca0bb1891e29f1db0e242/README.md"
+}

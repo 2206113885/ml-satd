@@ -1,0 +1,666 @@
+{
+  "status": "passed",
+  "validation": "Static AST/source/comment/diff/hash only. No experiment, model, tokenizer, test or experimental helper function was executed.",
+  "core_files": 102,
+  "core_generation_calls": 115,
+  "core_sources_unchanged_in_this_batch": true,
+  "modified_shared_files": [
+    "revision_runtime.py",
+    "official_generation.py",
+    "official_generation_profiles.json"
+  ],
+  "models": 9,
+  "profiles": 11,
+  "original_scope_ast_passed": 124,
+  "new_python_ast_passed": 11,
+  "replaced_executable_lines_preserved_as_comments": 15,
+  "original_source_hash_files_checked": 124,
+  "original_source_changed": [],
+  "excluded_files_unchanged": 11,
+  "historical_dataset_result_frozen_files_hash_checked": 747,
+  "historical_data_result_mismatches": [],
+  "pilot_unchanged": true,
+  "caps_modes_stages_seeds_inputs_labels_prompts_unchanged": true,
+  "no_runtime_or_model_execution": true,
+  "official_framework_source_defaults": {
+    "4.55.0": {
+      "values": {
+        "do_sample": false,
+        "num_beams": 1,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 1.0,
+        "repetition_penalty": 1.0
+      },
+      "source_relative_path": "revision_batch_04/nonqwen_b_sources/transformers_v4.55.0_configuration_utils.py",
+      "sha256": "dedf66eb91cd1ca32fbbe7488289aded954452df8f93c70427ba7e75194a7280"
+    },
+    "5.20.0": {
+      "values": {
+        "do_sample": false,
+        "num_beams": 1,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 1.0,
+        "repetition_penalty": 1.0
+      },
+      "source_relative_path": "revision_batch_04/sources/Transformers_v5.20.0_configuration_utils.py",
+      "sha256": "90fe297384c13a66eaaaba398705fd372774d5bac77da8b69b90ac017256589f"
+    }
+  },
+  "errors": [],
+  "core_files_detail": [
+    {
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 2,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/bin_new_test.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/bin_test.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    },
+    {
+      "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+      "source_unchanged_since_batch_05": true,
+      "generation_calls": 1,
+      "errors": []
+    }
+  ]
+}

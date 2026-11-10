@@ -1,0 +1,168 @@
+{"sample_id": "aaaegfgeb", "gold_label": "Layer Conf", "reason": "no_source_id_match"}
+{"sample_id": "aagcbjjcd", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aahdfibcf", "gold_label": "BE", "reason": "no_source_id_match"}
+{"sample_id": "aajfegaca", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aahfiaifg", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaibigjdc", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajffhihe", "gold_label": "CDT", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaehiecae", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeiahgad", "gold_label": "MLDepend", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aahdeachi", "gold_label": "MCM", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aabgebcce", "gold_label": "Data Conf", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aaehiefac", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeibhiie", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagaijehb", "gold_label": "HP Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aafeacaha", "gold_label": "Proto", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aacjfgieb", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagachfba", "gold_label": "Proto", "reason": "no_source_id_match"}
+{"sample_id": "aahhdbjej", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aadfibefa", "gold_label": "MCR", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aajfadgji", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaecffjjg", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaaedbhaj", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeeieida", "gold_label": "MLKnow", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaffadbgf", "gold_label": "MLKnow", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajeddgaa", "gold_label": "PODT", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeieagib", "gold_label": "MCR", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaibiggcj", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeccdahj", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aahfhegdd", "gold_label": "MCR", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajhbagib", "gold_label": "DS Conf", "reason": "no_source_id_match"}
+{"sample_id": "aafedbhaj", "gold_label": "MLDepend", "reason": "duplicate_final_id_group"}
+{"sample_id": "aafedbhaj", "gold_label": "MLDepend", "reason": "duplicate_final_id_group"}
+{"sample_id": "aajbfcgda", "gold_label": "HP Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aafadbdeg", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajdcgijh", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagiedbjj", "gold_label": "CDT", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aahgacfhf", "gold_label": "PQ", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaahfegjh", "gold_label": "MLDepend", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aafbhcbbi", "gold_label": "MCC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aadhaadga", "gold_label": "MLKnow", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aadhaidcc", "gold_label": "MLKnow", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaffefhhb", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aahhiidji", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aafhjjgee", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aadcagfcc", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aadfjchjf", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aahjecdhj", "gold_label": "Data Conf", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aafchbajj", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajfahgcg", "gold_label": "Proto", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aafegjcei", "gold_label": "MLDepend", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aafehehfi", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagcicecj", "gold_label": "DS Conf", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aahddgbeh", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaadbjbdj", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aafacjcgb", "gold_label": "HP Conf", "reason": "no_source_id_match"}
+{"sample_id": "aaedbehai", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aafegibaf", "gold_label": "HP Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaebieaia", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aafhgjiha", "gold_label": "HP Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaejhiaeb", "gold_label": "Proto", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aadfjejae", "gold_label": "Proto", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aadfjfbei", "gold_label": "MCR", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagaceabd", "gold_label": "UMC", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aaifefdce", "gold_label": "Layer Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aafagebef", "gold_label": "DS Conf", "reason": "no_source_id_match"}
+{"sample_id": "aaahgiacg", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aajbebjea", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aajgdiheg", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aaifjjccj", "gold_label": "HP Conf", "reason": "no_source_id_match"}
+{"sample_id": "aaehaifef", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aafchfjcg", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaghajbbe", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaggjcebg", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aahjideha", "gold_label": "MLDepend", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaegacgid", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajdhaicc", "gold_label": "Proto", "reason": "no_source_id_match"}
+{"sample_id": "aajahjjch", "gold_label": "ML", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaiibahhd", "gold_label": "MLDepend", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aadheehad", "gold_label": "MLKnow", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aaifgcjac", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aabgdbaje", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aaeaacdga", "gold_label": "DS Conf", "reason": "no_source_id_match"}
+{"sample_id": "aafafahih", "gold_label": "DMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagaidebh", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaahbfbig", "gold_label": "HP Conf", "reason": "no_source_id_match"}
+{"sample_id": "aageachcc", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeebgdbh", "gold_label": "MLDepend", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aahdfbbhc", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aafhihfed", "gold_label": "CDT", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aahfjcfdg", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaahbjgif", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aagbjbdaa", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeedfhcd", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaedhahfd", "gold_label": "MLKnow", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaidjgfeg", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aafafcgbj", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaaegjcch", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajbigiad", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aahddidfd", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaebchhbi", "gold_label": "Proto", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaifgecfh", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaiejgdgf", "gold_label": "DS Conf", "reason": "no_source_id_match"}
+{"sample_id": "aahjacjjf", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeieddbj", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaibihacc", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaegihffd", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aafihcach", "gold_label": "MLKnow", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aadbcjbcc", "gold_label": "Proto", "reason": "no_source_id_match"}
+{"sample_id": "aahhhfjei", "gold_label": "HP Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaejcccgj", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeieedge", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaiecfecg", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagdaagij", "gold_label": "MLDepend", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aadbehbcf", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aafbjgjcd", "gold_label": "DS Conf", "reason": "no_source_id_match"}
+{"sample_id": "aahidaegb", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaidfjifi", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaegfjdjb", "gold_label": "CDT", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aafigfjii", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaebbbhhb", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aaffecghg", "gold_label": "GC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagagihei", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeajfcic", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaecaicdb", "gold_label": "Data Conf", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aaebhhdjf", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaghjajha", "gold_label": "MCR", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaghjahhi", "gold_label": "MLDepend", "reason": "no_source_id_match"}
+{"sample_id": "aahcigdjj", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagejhgfd", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aadbaaejd", "gold_label": "MCR", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagbifedh", "gold_label": "Data Conf", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aaefbgdbg", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaidbebab", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaacjhcjh", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaidhabjj", "gold_label": "Proto", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aadhhifdg", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aaefaahhg", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aajdcfhfa", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aahicjieh", "gold_label": "MCC", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aafiggaje", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aahjacheg", "gold_label": "MLKnow", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaibgjddj", "gold_label": "MCC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aahgffjcf", "gold_label": "Weight Conf", "reason": "no_source_id_match"}
+{"sample_id": "aaihgdiif", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aahdfaija", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aahegjjea", "gold_label": "Data Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajdcfhjb", "gold_label": "MLKnow", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aagfbieab", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajbhfbhg", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaffdgbgi", "gold_label": "MCC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaahbfbgd", "gold_label": "HP Conf", "reason": "no_source_id_match"}
+{"sample_id": "aafhiicbj", "gold_label": "Data Conf", "reason": "no_source_id_match"}
+{"sample_id": "aajfbhgdi", "gold_label": "MLRelia", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aagigaiii", "gold_label": "DS Conf", "reason": "recorded_line_out_of_bounds"}
+{"sample_id": "aagdafeic", "gold_label": "DS Conf", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aahjfbiha", "gold_label": "MLDepend", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajgefiaf", "gold_label": "DFEC", "reason": "source_comment_project_path_not_unique_exact_match"}
+{"sample_id": "aajfiebah", "gold_label": "UMC", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aajfibdif", "gold_label": "MLRelia", "reason": "comment_not_on_recorded_zero_based_line"}
+{"sample_id": "aaeidjejd", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaibicege", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aaibjdjdc", "gold_label": "MCM", "reason": "no_verified_enclosing_function"}
+{"sample_id": "aaeachbce", "gold_label": "DS Conf", "reason": "no_source_id_match"}
+{"sample_id": "aaicaiffi", "gold_label": "MLKnow", "reason": "no_source_id_match"}
+{"sample_id": "aagibcfja", "gold_label": "UMC", "reason": "normalized_duplicate_comment", "representative_id": null}
+{"sample_id": "aajcgfgji", "gold_label": "Proto", "reason": "normalized_duplicate_comment", "representative_id": null}
+{"sample_id": "aajacaegh", "gold_label": "DS Conf", "reason": "identical_function_ignoring_whitespace", "representative_id": null}
+{"sample_id": "aajghfhbf", "gold_label": "MLDepend", "reason": "identical_function_ignoring_whitespace", "representative_id": null}

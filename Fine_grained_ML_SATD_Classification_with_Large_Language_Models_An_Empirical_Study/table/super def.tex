@@ -1,0 +1,33 @@
+\begin{table*}[ht]
+\centering
+\small
+\caption{Definition of the father categories}
+\label{tab:Super_def}
+\begin{tabularx}{\textwidth}{
+    >{\centering\arraybackslash}p{0.8cm}
+    >{\raggedright\arraybackslash}X 
+    >{\raggedright\arraybackslash}X 
+}
+\hline
+\textbf{Dim. Name} & \textbf{Definition} & \textbf{Example Symptoms} \\
+\hline
+\multirow{4}{*}{AWR} & Lack of developer understanding or certainty about ML algorithms, APIs, data, or model behavior. Often arises due to ``black box'' nature of ML models. & Doubts on correctness, API usage uncertainty, unclear design decisions, unknown error causes, lack of domain knowledge. \\
+\hline
+\multirow{3}{*}{RDB} & Model code has poor legibility or unclear logic, especially in ML contexts (e.g., poorly named variables, dense math code). & Refactoring for clarity, simplifying complex statements, improving naming. \\
+\hline
+\multirow{2}{*}{DCE} & Identical or near-identical ML model or preprocessing logic appears in multiple places. & Repeated feature extraction, repeated model evaluation loops. \\
+\hline
+\multirow{3}{*}{CFO} & Missing or poorly implemented configuration points for weights, network layers, or model parameters. & Hard-coded parameters, unimplemented config flags, missing flexibility for experiments. \\
+\hline
+\multirow{3}{*}{CDD} & Code depends on other code or libraries in a way that blocks maintenance, requires workarounds, or is outdated. & Waiting for library updates, integration hacks, dependency-induced bugs, deprecated model code. \\
+\hline
+\multirow{3}{*}{DTD} & Issues in how data is processed, represented, or stored that hinder maintainability or correctness. & Missing preprocessing steps, poor choice of data formats, unoptimized storage. \\
+\hline
+\multirow{3}{*}{MDL} & Poor modular boundaries or design make the system harder to evolve, reuse, or maintain. & Missing abstractions, test parameters used in production, model-specific code that should be generalized. \\
+\hline
+\multirow{3}{*}{PRF} & Performance or robustness is insufficient, requiring evaluation, optimization, or reliability improvement. & Model accuracy concerns, robustness checks, performance comparisons. \\
+\hline
+\multirow{2}{*}{SCL} & Prototype-level code is used in production without scaling optimizations. & Inefficient loops, naive algorithms, lack of batching/parallelism. \\
+\hline
+\end{tabularx}
+\end{table*}

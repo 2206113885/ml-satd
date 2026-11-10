@@ -1,0 +1,103 @@
+The code comment """"# reverse bw; before concat TODO"""" belongs to the **DFEC
+**Weight Conf**
+**TODO**
+**Data Conf**
+**HP Conf**
+**TODO**
+**FIXME**
+**Weight Conf**
+**Weight Conf**
+**Weight Conf**
+XXX
+**Data Conf**
+**Weight Conf**
+**Weight Conf**
+**Weight Conf**
+The code comment "FIXME: What about the next diff entry?" belongs to the **DFEC
+**Weight Conf**
+**TODO**
+**TODO**
+The provided code comment does not provide enough context to determine the type of ML Self-Admitted Technical
+**HP Conf**
+**Data Conf**
+**TODO**
+**TODO**
+The code comment is about **Data Conf**.
+The code comment "TODO : Any other options" indicates a general type of technical debt, not specific
+The code comment "TODO : market value" belongs to the **MLKnow** category of ML Self
+**TODO**
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+**Weight Conf**
+**API**
+The code comment "TODO ForceSign" indicates a **Weight Conf** type of Self-Admitted
+**HP Conf**
+**Data Conf**
+The code comment "TODO Implement" indicates a **MLKnow** type of Self-Admitted Technical
+**Weight Conf**
+**HP Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+The code comment indicates a need for **ML** (Multiple Languages).
+The code comment "todo sweep" indicates a **TODO** type of SATD.
+**Data Conf**
+The provided code comment is a **TODO** comment, indicating a task that needs to be completed in
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+**HP Conf**
+**Weight Conf**
+**HP Conf**
+**Data Conf**
+**Data Conf**
+**Layer Conf**
+**Config**
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+The code comment "TODO: do this better" indicates a **MLKnow** type of SATD
+**Weight Conf**
+**Data Conf**
+**Conv Transpose**
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+The code comment "TODO: list" belongs to the **MLKnow** category of Machine Learning Self
+**UMC (Unnecessary Model Code)**
+**UMC (Unnecessary Model Code)**
+**Weight Conf**
+**Weight Conf**
+**Data Conf**
+**HP Conf**
+The provided code comment "TODO: other types?" does not fit into any of the provided abbreviations for
+**Weight Conf**
+**Weight Conf**
+**Config**
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+**Data Conf**
+**Data Conf**
+The provided code comment indicates a **TODO** for something that is **not well-defined** (
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+**IO**
+**HP Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+**Weight Conf**
+**UMC (Unnecessary Model Code)**
+The code comment belongs to the **ML** category.
+XXX
+The code comment "XXX: how to find \""""good\"""" values for level ?"" belongs

@@ -1,0 +1,26 @@
+{
+  "4.55.0": {
+    "values": {
+      "do_sample": false,
+      "num_beams": 1,
+      "temperature": 1.0,
+      "top_k": 50,
+      "top_p": 1.0,
+      "repetition_penalty": 1.0
+    },
+    "source_relative_path": "revision_batch_04/nonqwen_b_sources/transformers_v4.55.0_configuration_utils.py",
+    "sha256": "dedf66eb91cd1ca32fbbe7488289aded954452df8f93c70427ba7e75194a7280"
+  },
+  "5.20.0": {
+    "values": {
+      "do_sample": false,
+      "num_beams": 1,
+      "temperature": 1.0,
+      "top_k": 50,
+      "top_p": 1.0,
+      "repetition_penalty": 1.0
+    },
+    "source_relative_path": "revision_batch_04/sources/Transformers_v5.20.0_configuration_utils.py",
+    "sha256": "90fe297384c13a66eaaaba398705fd372774d5bac77da8b69b90ac017256589f"
+  }
+}

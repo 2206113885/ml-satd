@@ -1,0 +1,13 @@
+﻿id,category,finding,evidence,action
+A01,论文表述可纠正,论文 main.tex:668 的“全部默认且温度为0”与当前显式参数矛盾。,basic_zero_shot/Qwen3-8B_zero_shot_re.py:140; basic_zero_shot_CoT/Qwen3-8B-CoT-new.py:151,改为按模型、模式、方法报告实际设置；去掉以统一温度0保证复现的说法。
+A02,有效参数待核实,tree 多个脚本声明并保存 DO_SAMPLE=False，但传给 generate 的对应参数已注释；日志不等于有效配置。,tree_zero_shot/Qwen3-8B_zero_shot.py; qwen_official_audit.json Q03; nonqwen_official_audit.json NQ3,恢复原服务器配置、环境版本及源文件；保留旧日志，不把缺失值补写成0或False。
+A03,合法但条件不同,Qwen3-14B binary zero-shot 显式 do_sample=False，而相邻8B条件使用采样配置。,bisection_zero_shot/Qwen3-14B_zero_shot.py:188,可如实披露；若声称只改变策略或模型的受控比较，需针对该条件核实或补充对照。
+A04,预算与截断,max_new_tokens 是思考与答案共享的总输出上限；现有代码没有统一的“结束思考后继续生成最终答案”机制。不同上限本身不是bug。,bisection_CoT/Qwen3-8B_few_shot.py:339; test3.py:225,准确报告512/2048/32768等实际条件；若需限制思考，应另留答案预算并验证最终答案是否完成。
+A05,确认解释失败；分类影响未知,8组 binary-CoT 的3144条事后解释中3139条仅为<think>；另2组native binary thinking各393条解释含未闭合标记。解释在标签之后生成，不反馈预测。,qwen_official_audit.json binary_cot_output_evidence; local_observations.json; bisection_CoT/Qwen3-8B_few_shot.py:421,不能把这些字段用作有效解释；不据此宣称F1失效。未闭合思考仍可能被分类parser扫描，历史完整分类raw缺失，无法量化。
+A06,当前分词器已复现,"CodeLlama先render模板再默认tokenizer编码，出现双BOS。原basic prompt为889 tokens，对照直接模板分词为888，前缀分别[1,1,...]和[1,...]。",nonqwen_sources/codellama_bos_reproduction.json; basic_zero_shot/CodeLlama-7b_zero_shot.py,复现基于官方分词器和Transformers5.20.0；先确认历史分词器/版本。仅改温度描述不能解决输入格式差异，影响幅度尚未测量。
+A07,当前源码确认格式问题,Gemma2层次零样本渲染text后实际编码原始prompt，绕过chat template；max_len形参也未使用。,tree_zero_shot/gemma-2-9b_zero_shot.py:278,恢复对应历史源文件与运行配置；若论文该结果由此实现产生，需修正实现后针对该条件验证。
+A08,原生模式表述待核实,GPT-oss正文Reasoning:high并非原生Harmony级别配置的充分证据；Qwen2.5模板中的enable_thinking=True也不启用原生模式。,gptoss_official_audit.json; qwen_official_audit.json Q05; main.tex:878,核对渲染后prompt与原生元数据；将提示式推理与原生thinking分开描述。
+A09,比较结论边界,Qwen3 thinking比较同时改变温度、top-p和输出上限；manual CoT同时启用native thinking。,qwen_official_audit.json Q04,可描述为各模式配置的整体比较；不能将差异全部因果归于thinking开关或手写规则。
+A10,历史复现记录不足,论文指标映射到158个run，12个无settings；146份settings只有8份记录do_sample、10份记录T/p/k，未记录seed及原生模式参数。,local_observations.json,先回收原服务器generation_config/tokenizer_config、软件版本与源文件；不能由当前官方默认值反推全部历史值。
+A11,覆盖边界,GPT-5示例合成来自交互工作流，缺少生成代码及机器可读参数；不能纳入本地推理参数已验证的结论。,workflow_coverage.json; main.tex:779,补充真实工作流和可取得的记录，不捏造温度。
+A12,辅助或旧代码,tree_few_shot中Gemma2命名脚本实际选择Gemma3；根ICL_Ob_qwen-8b.py末尾多余de导致SyntaxError。,tree_few_shot/gemma-2-9b_few_shot.py:14; ICL_Ob_qwen-8b.py:517,当前没有直接证据将这两个文件关联到活跃论文指标；不要自动算作论文结果失败。

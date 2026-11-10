@@ -1,0 +1,11 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+  "model_name": "CodeLlama-7b-Instruct-hf",
+  "run_dir": "results/run-20250813-041315-CodeLlama-7b-Instruct-hf",
+  "max_yn_tokens": 6,
+  "max_pick_tokens": 16,
+  "max_fallback_tokens": 16,
+  "fallback_abbr": "Data Conf",
+  "method": "YN polling -> pick best"
+}

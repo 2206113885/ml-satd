@@ -1,0 +1,26 @@
+[
+  {
+    "name": "run_transformers",
+    "url": "https://developers.openai.com/cookbook/articles/gpt-oss/run-transformers.md",
+    "file": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/gptoss_sources/run_transformers.md",
+    "bytes": 8905,
+    "sha256": "1167726d8d25088522e5ec10e3307739888e4ec18ebf382753fa32d5c22191a5",
+    "status": "retrieved"
+  },
+  {
+    "name": "harmony",
+    "url": "https://developers.openai.com/cookbook/articles/openai-harmony.md",
+    "file": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/gptoss_sources/harmony.md",
+    "bytes": 29458,
+    "sha256": "e52e605b9a85047d9ad1568c5644ebb65427da0b8fa1c29b433b7c8553bfe2a0",
+    "status": "retrieved"
+  },
+  {
+    "name": "verifying_implementations",
+    "url": "https://developers.openai.com/cookbook/articles/gpt-oss/verifying-implementations.md",
+    "file": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/gptoss_sources/verifying_implementations.md",
+    "bytes": 8351,
+    "sha256": "44bf39c9db622dda8a5ef2f382f0a0ccf5947a0a9d7a3b7807eb9cb26f47203b",
+    "status": "retrieved"
+  }
+]

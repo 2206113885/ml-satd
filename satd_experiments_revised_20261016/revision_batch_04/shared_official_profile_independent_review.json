@@ -1,0 +1,140 @@
+{
+  "reviewed_at_utc": "2026-10-16T11:52:44.803648+00:00",
+  "reviewer": "independent literature/source evidence agent",
+  "validation_scope": "Read-only AST/text/data comparison. No shared module, model, tokenizer, experiment, parser or test function was imported or executed.",
+  "reviewed_files": [
+    {
+      "file": "official_generation.py",
+      "sha256": "baca3908106d518a96c0416bea51c9d3d3bda16edc10ee0bf1ab16b3f2582e59",
+      "static_parse": "passed"
+    },
+    {
+      "file": "official_generation_profiles.json",
+      "sha256": "09cd67660a908b5f72aee552cc34fc1ad314ef59ebdc5290c8fcedfa07f192ba",
+      "static_parse": "passed"
+    },
+    {
+      "file": "revision_runtime.py",
+      "sha256": "a7cf667d8a3073f26f2d0be5f1cb2a7a52392413fd95036f403c8dc2615d3003",
+      "static_parse": "passed"
+    }
+  ],
+  "qwen_profile_checks": [
+    {
+      "model_key": "Qwen3-8B",
+      "mode": "thinking",
+      "matches_current_verified_parameters": true,
+      "official_revision_matches": true
+    },
+    {
+      "model_key": "Qwen3-8B",
+      "mode": "nonthinking",
+      "matches_current_verified_parameters": true,
+      "official_revision_matches": true
+    },
+    {
+      "model_key": "Qwen3-14B",
+      "mode": "thinking",
+      "matches_current_verified_parameters": true,
+      "official_revision_matches": true
+    },
+    {
+      "model_key": "Qwen3-14B",
+      "mode": "nonthinking",
+      "matches_current_verified_parameters": true,
+      "official_revision_matches": true
+    },
+    {
+      "model_key": "Qwen2.5-Coder-7B-Instruct",
+      "mode": "instruct",
+      "matches_current_verified_parameters": true,
+      "official_revision_matches": true
+    }
+  ],
+  "overall": "No unresolved material defect found in the final reviewed shared implementation; dynamic behavior remains untested by user instruction.",
+  "findings": [
+    {
+      "id": "SHARED-TF5-NONE-INHERITANCE",
+      "severity": "P1",
+      "status": "resolved_by_static_review",
+      "original_issue": "Transformers5.20 unconditionally refills None values from model.generation_config, and no longer has use_model_defaults. Merely filling non-None framework defaults did not isolate disabled min_p or other optional values.",
+      "resolution": "Official-profile branch temporarily supplies deepcopy(clean config) as the model fallback reference only during generate, then restores the exact previous reference in finally. Non-profile branch remains separate.",
+      "source": "https://raw.githubusercontent.com/huggingface/transformers/v5.20.0/src/transformers/generation/utils.py#L1912-L1970",
+      "static_evidence": {
+        "temporary_clean_reference_present": true,
+        "restoration_in_finally_present": true
+      }
+    },
+    {
+      "id": "SHARED-TF5-RAW-MODEL-CONFIG",
+      "severity": "P2",
+      "status": "resolved_by_static_review",
+      "original_issue": "Constructing a v5 PretrainedConfig before GenerationConfig can lose legacy generation fields from raw config.json.",
+      "resolution": "_fresh_model_generation first uses GenerationConfig.from_model_config(raw dict), supported by5.20 including nested decoder/text_config; older object-only APIs fall back to a fresh disk-derived config object.",
+      "sources": [
+        "https://raw.githubusercontent.com/huggingface/transformers/v5.20.0/src/transformers/generation/utils.py#L529-L543",
+        "https://raw.githubusercontent.com/huggingface/transformers/v5.20.0/src/transformers/generation/configuration_utils.py#L1293-L1342"
+      ],
+      "static_evidence": true
+    },
+    {
+      "id": "SHARED-SPECIAL-TOKEN-COMPLETION",
+      "severity": "P2",
+      "status": "resolved_by_static_review",
+      "resolution": "Only missing bos/eos/pad/decoder_start fields are completed from fresh model-config bytes, preserving explicit generation-config values and EOS lists. Missing EOS rejects generation. Missing pad materializes HF technical fallback to first EOS and records that distinct basis.",
+      "sources": [
+        "https://raw.githubusercontent.com/huggingface/transformers/v4.51.3/src/transformers/generation/utils.py#L1641-L1719",
+        "https://raw.githubusercontent.com/huggingface/transformers/v5.20.0/src/transformers/generation/utils.py#L2171-L2243"
+      ],
+      "boundary": "Fresh-model-config completion is explicitly identified as technical/protocol fallback; it is not falsely described as an author sampling recommendation."
+    },
+    {
+      "id": "SHARED-TF5-DEFAULTS-SIGNATURE",
+      "severity": "informational",
+      "status": "verified_official_source",
+      "conclusion": "GenerationConfig5.20 _get_default_generation_params is a no-argument staticmethod returning a dict. Resolver call shape is correct; it fills only declared non-None generic defaults and retains disabled/optional None fields.",
+      "source": "https://raw.githubusercontent.com/huggingface/transformers/v5.20.0/src/transformers/generation/configuration_utils.py#L605-L652"
+    },
+    {
+      "id": "SHARED-PROFILE-SEPARATION",
+      "severity": "informational",
+      "status": "verified_static",
+      "conclusion": "Five Qwen mode profiles match pinned official evidence. Qwen3 modes are explicit template kwargs; Qwen2.5 retains repetition_penalty1.1. GPT medium reasoning and neutral sampler translation are separately evidenced in registry. Gated models use fresh local config/defaults and do not invent public numeric values."
+    },
+    {
+      "id": "SHARED-BUDGET-SEED-BOUNDARY",
+      "severity": "informational",
+      "status": "verified_static",
+      "conclusion": "Task/stage max_new_tokens and existing audit seeds are intentionally separate from model sampler profile. Actual remaining-context reduction is recorded per event. This does not mean the Qwen3 general32768 output recommendation has been applied to every short-label task."
+    },
+    {
+      "id": "SHARED-EXCLUDED-CALLER-BOUNDARY",
+      "severity": "informational",
+      "status": "verified_static",
+      "conclusion": "official_profile defaults False and only opt-in callers use clean official policy; legacy/excluded callers retain the prior branch. Source inventory is separate from manuscript row attribution."
+    }
+  ],
+  "official_source_snapshots": [
+    {
+      "file": "sources/Transformers_v5.20.0_configuration_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.20.0/src/transformers/generation/configuration_utils.py",
+      "sha256": "90fe297384c13a66eaaaba398705fd372774d5bac77da8b69b90ac017256589f"
+    },
+    {
+      "file": "sources/Transformers_v5.20.0_generation_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.20.0/src/transformers/generation/utils.py",
+      "sha256": "7944240ff1ee27a7b3acc16571b7a480cc14f16e7222aeb1a79d289ebc96e3ea"
+    },
+    {
+      "file": "sources/Transformers_v5.20.0_generation_config_behavior.json",
+      "kind": "AST-only source excerpts for adjust_generation_fn, _prepare_generation_config, _prepare_special_tokens",
+      "sha256": "b5d4f1edd0349b6c96a75708270a5814d939877054a3a2f5db7a51d397aad9ea"
+    }
+  ],
+  "limits": [
+    "Static review cannot establish runtime success or actual gated/local checkpoint values.",
+    "The temporary model-default isolation is designed for the sequential generation calls used by these scripts; no concurrent generator behavior was tested.",
+    "Pinned official source revisions do not prove local/historical weight revision identity.",
+    "This review does not override revision_scope.json exclusions or independently establish manuscript table-to-run mapping."
+  ]
+}

@@ -1,0 +1,18 @@
+R45 / revision_batch_04 / 2026-10-16
+用户选择：保留各阶段输出上限，只统一模型生成参数。仅修改修订副本；不运行实验。
+
+范围：55 basic +29 bisection +18 tree =102核心脚本，115处生成调用；以及共享revision_runtime.py。新增official_generation.py与official_generation_profiles.json。此总数不等于论文实验数。
+旧代码：所有被替换函数、赋值与设置语句原位注释保留，标记R45 OFFICIAL PROFILE；before目录保留本批前源码，patch可逐条复核。
+
+配置：Qwen3 8B/14B思考True/.6/.95/K20/min_p0，非思考True/.7/.8/K20/min_p0。Qwen2.5-Coder所有提示式CoT与普通条件统一官方checkpoint：True/.7/.8/K20/重复惩罚1.1。GPT-OSS True/temp1/top_p1，medium原生effort；K0、关闭min_p/中性过滤是官方全词表采样器的HF等价实现，非单独引用的逐键建议。
+CodeLlama、Llama3.1、CodeGemma、Gemma2、Gemma3：官方数值文件匿名401，不借用示例或其他型号；未来运行时fresh读取已有本地generation_config.json，若无则fresh config.json派生，记录实际数值、文件hash与框架版本。现有内存/pipeline修改值不作为默认来源。
+各阶段max_new_tokens与原有seed协议不变，原输入完整性和剩余上下文输出约束不变。
+GPT-OSS核心脚本不再接受SATD_REASONING_EFFORT的low/high覆盖，统一medium；旧批日志所述该变量支持仅为历史实现。
+
+框架边界：支持时generate(use_model_defaults=False)；生成期间临时使用干净generation_config作为模型回填参考，finally恢复旧参考，覆盖HF4 special-token与HF5 None自动继承。HF5直接用原始config dict构造fallback，旧API使用fresh配置对象；None框架默认可延后求值，按当前库自身默认解析并记录。EOS/BOS/PAD/decoder-start缺值只从干净磁盘model config补齐；PAD缺失用首EOS的技术默认单列，不伪称模型采样建议。EOS仍缺失明确失败。
+
+审计：记录profile id、模式、实际sampler、参数依据、官方来源修订与URL、局部配置与helper/registry哈希、库版本、生成选项与原任务cap。runtime_manifest与settings包含已实际用到的各模式profile；逐调用日志保留完整effective config、输入输出、解析与停止状态。
+
+验证：仅AST/源码/注释/diff/hash；未导入运行实验模块、模型、分词器、实验函数、函数或单元测试。caps/native modes/stages/seed/输入/标签/提示词静态不变；原124源码与747数据结果冻结文件哈希不变；11用户排除文件保持本批前状态；pilot runner既有非思考配置正确且未改。
+
+证据：三个official evidence JSON与sources快照；official_configuration_table.html/json；static_verification_report.json；各组changes清单；batch_04_summary.json；changes_official_profiles.patch。公开来源pin不代表本地权重revision已核实，也不反推旧论文结果的真实配置。

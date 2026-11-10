@@ -1,0 +1,462 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+run_satd_qwen3_yn_polling.py
+----------------------------
+模型：/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B
+方法：对每条评论，对 23 标签逐一做 Yes/No，汇总 Yes 候选；如有多个，再让模型在候选中只选 1 个缩写；
+      若没有 Yes，则做一次全标签强制单标签输出；仍解析失败则回退到 FALLBACK_ABBR。
+输出：results/run-YYYYmmdd-HHMMSS-模型名 / predictions.csv, confusion_matrix.csv, report.csv, settings.json
+注意：raw_output 只写缩写；predictions.csv 列顺序固定为 comment, real, pred, raw_output, reason（reason 为第 5 列）。
+"""
+
+import re, os, gc, json
+from pathlib import Path
+from datetime import datetime
+import pandas as pd
+from tqdm import tqdm
+from sklearn.metrics import classification_report, confusion_matrix
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# -------- 0. 基础路径（按需修改） --------
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"   # ← 改 GPU 号
+CSV_PATH   = "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"  # ← 改数据
+MODEL_PATH = "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B"                                      # ← 改模型
+
+# 目录名包含时间戳 + 模型名
+MODEL_NAME = Path(MODEL_PATH).name
+RUN_DIR    = Path("results") / f"run-{datetime.now():%Y%m%d-%H%M%S}-{MODEL_NAME}-ynpoll"
+RUN_DIR.mkdir(parents=True, exist_ok=True)
+
+# -------- 1. 其它参数（可按需微调；不改变采样策略） --------
+PRINT_UNPARSED       = True
+FALLBACK_ABBR        = "Data Conf"
+MAX_NEW_TOKENS_YN    = 512      # Yes/No 轮询
+MAX_NEW_TOKENS_CHOOSE= 512      # 候选内裁决
+MAX_NEW_TOKENS_FULL  = 512     # 全标签强制单标签
+MAX_NEW_TOKENS_REASON= 96      # 简短 reason（单句）
+TEMPERATURE          = 0.6
+TOP_P                = 0.95
+TOP_K                = 20
+
+# ----------------- 标签映射 -----------------
+LABEL_ABBR = {
+    "Machine Learning Knowledge":"MLKnow","Model Interpretability":"MLInter",
+    "Model Code Comprehension":"MCC","Duplicate Model Code":"DMC",
+    "Duplicate Feature Extraction Code":"DFEC","Weight Configuration":"Weight Conf",
+    "Layer Configuration":"Layer Conf","Hyper-parameter Configuration":"HP Conf",
+    "Code Dependency":"MLDepend","Glue Code":"GC","Custom Data Type":"CDT",
+    "Multiple Languages":"ML","Unnecessary Model Code":"UMC",
+    "Data Processing Configuration":"Data Conf","Plain Old Data Type":"PODT",
+    "Data Storage Configuration":"DS Conf","Abstraction":"Abs","Boundary Erosion":"BE",
+    "Model Code Modifiability":"MCM","Model Code Reusability":"MCR",
+    "Prediction Quality":"PQ","Machine Learning Reliability":"MLRelia","Prototype":"Proto",
+}
+ABBR2FULL  = {v:k for k,v in LABEL_ABBR.items()}
+FULL2ABBR  = LABEL_ABBR
+LABELS     = list(LABEL_ABBR.keys())
+ABBR_SET   = set(ABBR2FULL.keys())
+ABBR_LOWER = {a.lower():a for a in ABBR_SET}
+
+# ============ 2. 23 类定义（用于判别上下文） ============
+PROMPT_HEAD = r"""
+There are 23 types of Machine Learning (ML) Self-Admitted Technical Debt (SATD):
+
+MACHINE LEARNING KNOWLEDGE (MLKnow): Machine-learning software carries plenty of unique challenges. Uneducated solutions by unaware developers may have to be revisited.
+
+MODEL INTERPRETABILITY (MLInter): Machine-learning models are a black box, causing poor understanding of model functionality; this can lead to unknown behaviour.
+
+MODEL CODE COMPREHENSION (MCC): Model code carries extra legibility concerns not present in traditional software (e.g., poorly-named temporary matrix variables).
+
+DUPLICATE MODEL CODE (DMC): Code duplication frequently occurs in model code.
+
+DUPLICATE FEATURE EXTRACTION CODE (DFEC): Code duplication frequently occurs in feature-extraction code.
+
+WEIGHT CONFIGURATION (Weight Conf): Editing code that involves the weights of a model, or configuring a model's weights directly.
+
+LAYER CONFIGURATION (Layer Conf): Editing code that deals with model layers, or configuring layers themselves.
+
+HYPER-PARAMETER CONFIGURATION (HP Conf): Configuring hyper-parameters of a model, or editing default values of off-the-shelf models.
+
+CODE DEPENDENCY (MLDepend): A needed change is blocked by an external dependency (library / subsystem).
+
+GLUE CODE (GC): Supporting code written to interface with other code, inhibiting improvements due to dependent peculiarities.
+
+CUSTOM DATA TYPE (CDT): Using data types provided by general-purpose packages can cause extensive inter-operability burden.
+
+MULTIPLE LANGUAGES (ML): Components written in other languages may introduce difficulties in ML development.
+
+UNNECESSARY MODEL CODE (UMC): Model code that bottlenecks execution, is unreachable / deprecated, or is unnecessary and should be removed.
+
+DATA PROCESSING CONFIGURATION (Data Conf): Configuring how data is processed, by editing the data directly or adding new processing steps.
+
+PLAIN OLD DATA TYPE (PODT): Using raw data types in ML causes confusion when interpreting processes.
+
+DATA STORAGE CONFIGURATION (DS Conf): Configuring how data is represented internally or stored externally.
+
+ABSTRACTION (Abs): Lack of abstractions in ML systems causes cascading changes when a component is modified.
+
+BOUNDARY EROSION (BE): Lack of boundaries between subsystems complicates maintenance and isolates changes poorly.
+
+MODEL CODE MODIFIABILITY (MCM): Model code should enable easy maintenance and future modifications.
+
+MODEL CODE REUSABILITY (MCR): Model code should be generalised for reuse in varying situations.
+
+PREDICTION QUALITY (PQ): Workflow changes may affect performance.
+
+MACHINE LEARNING RELIABILITY (MLRelia): Model functionality depends on data quality; robustness measures should be in place.
+
+PROTOTYPE (Proto): Deploying small-scale prototypes into full systems can be dangerous.
+""".strip()
+
+# ============ 3. 提示构造（严格输出格式，禁止外露思考） ============
+
+# 3.1 对“单个标签”的 Yes/No 轮询
+def build_yn_prompt(comment: str, full_label: str, abbr: str) -> str:
+    return (
+        f"{PROMPT_HEAD}\n\n"
+        f"Task: Decide if the following Code Comment expresses the SATD type **{full_label} ({abbr})**.\n"
+        "Answer strictly with ONE word: Yes or No. Do all reasoning internally and do NOT reveal it.\n\n"
+        "Code Comment:\n\"\"\"\n"
+        f"{comment}\n\"\"\"\n\n"
+        "Answer:"
+    )
+
+# 3.2 在候选集合中“只选一个缩写”
+def build_choose_prompt(comment: str, candidates_abbr: list) -> str:
+    cand_str = ", ".join(candidates_abbr)
+    return (
+        f"{PROMPT_HEAD}\n\n"
+        "Task: The following abbreviations have been marked as plausible candidates.\n"
+        f"Choose exactly ONE abbreviation from this set and output that abbreviation ONLY on a single line:\n"
+        f"{cand_str}\n"
+        "Do all reasoning internally and do NOT reveal it.\n\n"
+        "Code Comment:\n\"\"\"\n"
+        f"{comment}\n\"\"\"\n\n"
+        "Abbreviation:"
+    )
+
+# 3.3 全标签强制单标签输出（兜底）
+def build_full_prompt(comment: str) -> str:
+    return (
+        f"{PROMPT_HEAD}\n\n"
+        "Please determine which type of ML SATD the following Code Comment belongs to.\n"
+        "Return exactly ONE abbreviation on a single line, with no extra text, chosen from:\n"
+        f"{', '.join(sorted(ABBR_SET))}\n\n"
+        "Code Comment:\n\"\"\"\n"
+        f"{comment}\n\"\"\"\n\n"
+        "Abbreviation:"
+    )
+
+# 3.4 简短理由（单句）
+def build_reason_prompt(comment: str, final_abbr: str) -> str:
+    full = ABBR2FULL.get(final_abbr, final_abbr)
+    return (
+        "You already chose a label.\n"
+        "Reply with exactly one line beginning with 'REASON:' followed by a short justification (<= 30 words), "
+        "grounded in the comment content. Do not output the label name.\n\n"
+        f"Chosen: {final_abbr} ({full})\n"
+        "Comment:\n\"\"\"\n"
+        f"{comment}\n\"\"\"\n"
+    )
+
+# ============ 4. 解析工具 ============
+
+def _visible_only(txt: str) -> str:
+    if not isinstance(txt, str):
+        return ""
+    # 去除 <think>…</think>（如有）
+    return re.sub(r"<think>.*?</think>", "", txt, flags=re.DOTALL | re.IGNORECASE).strip()
+
+# [R08 原代码保留]
+# def parse_yesno(text: str) -> str:
+#     vis = _visible_only(text)
+#     first = vis.splitlines()[0].strip() if vis else ""
+#     token = re.sub(r"[^a-z]", "", first.lower())
+#     if token.startswith("yes"):
+#         return "yes"
+#     if token.startswith("no"):
+#         return "no"
+#     # 宽松匹配
+#     if re.search(r"\byes\b", vis, flags=re.I):
+#         return "yes"
+#     if re.search(r"\bno\b", vis, flags=re.I):
+#         return "no"
+#     return "unknown"
+# [R08 修订]
+def parse_yesno(text: str) -> str:
+    if not isinstance(text, str):
+        return 'unknown'
+    answer = _visible_only(text).strip()
+    answer = re.sub('(^[*_`]+|[*_`]+$)', '', answer).strip()
+    match = re.fullmatch('(yes|no|y|n)[.!。！]?', answer, flags=re.I)
+    if match is None:
+        return 'unknown'
+    token = match.group(1).lower()
+    if token in ('yes', 'y'):
+        return 'yes'
+    return 'no'
+
+def parse_abbr(text: str) -> str:
+    vis = _visible_only(text)
+    line = vis.splitlines()[0].strip() if vis else ""
+    # 允许带前缀 “Abbreviation:”
+    line = re.sub(r'^\s*(Abbreviation|Label)\s*:\s*', '', line, flags=re.I).strip()
+    # 规范化检测
+    token = re.sub(r"[^a-z]", "", line.lower())
+    if token in ABBR_LOWER: return ABBR_LOWER[token]
+    if line in ABBR2FULL:   return line
+    join = line.replace(" ", "")
+    if join.lower() in ABBR_LOWER: return ABBR_LOWER[join.lower()]
+    # 在整段中宽松找
+    for ab in ABBR_SET:
+        pat = r'\b' + re.sub(r'\s+', r'\\s*', re.escape(ab)) + r'\b'
+        if re.search(pat, vis, flags=re.I):
+            return ab
+    return "<UNK>"
+
+def parse_reason(text: str) -> str:
+    vis = _visible_only(text)
+    m = re.search(r"(?:^|\n)\s*REASON\s*[:：]\s*(.+)", vis, flags=re.I)
+    if m:
+        line = m.group(1).strip()
+    else:
+        # 退化为第一句
+        line = vis.splitlines()[0].strip() if vis else ""
+    # 截到一句话
+    line = re.split(r'(?<=[.。!?])\s+', line)[0].strip()
+    return line[:300]
+
+# ============ 5. 加载模型 ============
+
+print("[INFO] Loading model …")
+model = AutoModelForCausalLM.from_pretrained(MODEL_PATH, device_map="auto", torch_dtype="auto")
+tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH, trust_remote_code=True)
+
+def _gen(prompt: str, max_new_tokens: int):
+    messages = [{"role": "user", "content": prompt}]
+    text = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True,
+        enable_thinking=True  # 允许模型内部推理，但我们只取可见输出
+    )
+    inputs = tokenizer(text, return_tensors="pt",
+                       truncation=True, max_length=4096).to(model.device)
+    outputs = model.generate(
+        **inputs,
+        max_new_tokens=max_new_tokens,
+        temperature=TEMPERATURE,
+        top_p=TOP_P,
+        top_k=TOP_K,
+    )
+    out = tokenizer.decode(outputs[0][inputs["input_ids"].shape[1]:],
+                           skip_special_tokens=True)
+    # visible = out.split('</think>')[-1].strip()
+    # print(visible)
+    return out.strip()
+
+# ============ 6. 主流程 ============
+
+df = pd.read_csv(CSV_PATH)
+
+rows = []
+unk_cnt = 0
+gold_unmapped = 0
+
+print("[INFO] Y/N polling and classifying …")
+
+# [R08 原代码保留]
+# for cmt, gold in tqdm(zip(df["Comment Text"], df["ML TD Type"]),
+#                       total=len(df), ncols=90):
+#
+#     # --- 6.1 逐标签 Y/N ---
+#     yes_candidates = []
+#     yn_raw_all = []
+#
+#     for full, abbr in LABEL_ABBR.items():
+#         yn_prompt = build_yn_prompt(str(cmt), full, abbr)
+#         yn_out    = _gen(yn_prompt, MAX_NEW_TOKENS_YN)
+#         yn_raw_all.append((abbr, yn_out))
+#         ans = parse_yesno(yn_out)
+#         if ans == "yes":
+#             yes_candidates.append(abbr)
+#
+#     # --- 6.2 得到最终缩写 ---
+#     final_abbr = None
+#     final_raw  = ""
+#
+#     if len(yes_candidates) == 1:
+#         final_abbr = yes_candidates[0]
+#         final_raw  = final_abbr  # raw_output 只写缩写
+#     elif len(yes_candidates) > 1:
+#         choose_prompt = build_choose_prompt(str(cmt), yes_candidates)
+#         choose_out    = _gen(choose_prompt, MAX_NEW_TOKENS_CHOOSE)
+#         picked        = parse_abbr(choose_out)
+#         if picked in ABBR_SET and picked in set(yes_candidates):
+#             final_abbr = picked
+#             final_raw  = picked
+#         else:
+#             # 未能在候选内解析，回退到第一候选
+#             final_abbr = yes_candidates[0]
+#             final_raw  = final_abbr
+#     else:
+#         # 没有任何 Yes，做一次全标签强制单标签输出
+#         full_prompt = build_full_prompt(str(cmt))
+#         full_out    = _gen(full_prompt, MAX_NEW_TOKENS_FULL)
+#         picked      = parse_abbr(full_out)
+#         if picked in ABBR_SET:
+#             final_abbr = picked
+#             final_raw  = picked
+#         else:
+#             final_abbr = FALLBACK_ABBR
+#             final_raw  = final_abbr
+#             unk_cnt += 1
+#             if PRINT_UNPARSED:
+#                 with open(RUN_DIR/"unparsed.txt", "a", encoding="utf-8") as f:
+#                     f.write(f"[FULL FALLBACK] {full_out}\n")
+#
+#     # --- 6.3 生成简短 reason（单句，放第 5 列；可为空但尽量非空） ---
+#     reason_prompt = build_reason_prompt(str(cmt), final_abbr)
+#     reason_out    = _gen(reason_prompt, MAX_NEW_TOKENS_REASON)
+#     reason        = parse_reason(reason_out)
+#     if not reason:
+#         reason = "Model-generated brief justification."
+#     print(final_raw)
+#     rows.append({
+#         "comment": str(cmt),
+#         "real": ABBR2FULL.get(gold, gold),           # 保持真实“全称”
+#         "pred": ABBR2FULL.get(final_abbr, final_abbr), # 输出预测“全称”
+#         "raw_output": final_raw,                     # 只写缩写
+#         "reason": reason,                            # 第五列
+#     })
+# [R08 修订]
+for (cmt, gold) in tqdm(zip(df['Comment Text'], df['ML TD Type']), total=len(df), ncols=90):
+    yes_candidates = []
+    unknown_labels = []
+    fallback_reason = ''
+    yn_raw_all = []
+    for (full, abbr) in LABEL_ABBR.items():
+        yn_prompt = build_yn_prompt(str(cmt), full, abbr)
+        yn_out = _gen(yn_prompt, MAX_NEW_TOKENS_YN)
+        yn_raw_all.append((abbr, yn_out))
+        ans = parse_yesno(yn_out)
+        if ans == 'yes':
+            yes_candidates.append(abbr)
+        elif ans not in ('yes', 'no'):
+            unknown_labels.append(abbr)
+    final_abbr = None
+    final_raw = ''
+    if not unknown_labels and len(yes_candidates) == 1:
+        final_abbr = yes_candidates[0]
+        final_raw = final_abbr
+    elif not unknown_labels and len(yes_candidates) > 1:
+        choose_prompt = build_choose_prompt(str(cmt), yes_candidates)
+        choose_out = _gen(choose_prompt, MAX_NEW_TOKENS_CHOOSE)
+        picked = parse_abbr(choose_out)
+        if picked in ABBR_SET and picked in set(yes_candidates):
+            final_abbr = picked
+            final_raw = picked
+        else:
+            final_abbr = FALLBACK_ABBR
+            final_raw = final_abbr
+            fallback_reason = 'candidate_arbitration_invalid'
+    else:
+        fallback_reason = 'unresolved_votes_full_label' if unknown_labels else 'no_positive_votes_full_label'
+        full_prompt = build_full_prompt(str(cmt))
+        full_out = _gen(full_prompt, MAX_NEW_TOKENS_FULL)
+        picked = parse_abbr(full_out)
+        if picked in ABBR_SET:
+            final_abbr = picked
+            final_raw = picked
+        else:
+            final_abbr = FALLBACK_ABBR
+            final_raw = final_abbr
+            unk_cnt += 1
+            if PRINT_UNPARSED:
+                with open(RUN_DIR / 'unparsed.txt', 'a', encoding='utf-8') as f:
+                    f.write(f'[FULL FALLBACK] {full_out}\n')
+            fallback_reason += ';full_label_parse_failed'
+    reason_prompt = build_reason_prompt(str(cmt), final_abbr)
+    reason_out = _gen(reason_prompt, MAX_NEW_TOKENS_REASON)
+    reason = parse_reason(reason_out)
+    if not reason:
+        reason = 'Model-generated brief justification.'
+    print(final_raw)
+    poll_diagnostics = {
+        'unknown_labels': list(unknown_labels),
+        'fallback_reason': fallback_reason,
+    }
+    rows.append({
+        'comment': str(cmt),
+        'real': ABBR2FULL.get(gold, gold),
+        'pred': ABBR2FULL.get(final_abbr, final_abbr),
+        'raw_output': final_raw,
+        'reason': reason,
+        'unknown_labels': ';'.join(poll_diagnostics.get('unknown_labels', [])),
+        'fallback_reason': poll_diagnostics.get('fallback_reason', ''),
+    })
+
+pred_df = pd.DataFrame(rows)
+# 列顺序固定
+# [R08 原代码保留]
+# pred_df = pred_df[["comment", "real", "pred", "raw_output", "reason"]]
+# [R08 修订]
+pred_df = pred_df[['comment', 'real', 'pred', 'raw_output', 'reason', 'unknown_labels', 'fallback_reason']]
+
+# 评估
+report_text = classification_report(
+    pred_df["real"], pred_df["pred"],
+    labels=LABELS, zero_division=0, digits=3
+)
+print("\n[INFO] Overall metrics:\n", report_text)
+
+# 保存
+pred_df.to_csv(RUN_DIR/"predictions.csv", index=False)
+
+cm = confusion_matrix(pred_df["real"], pred_df["pred"], labels=LABELS)
+pd.DataFrame(cm, index=LABELS, columns=LABELS).to_csv(RUN_DIR/"confusion_matrix.csv")
+
+report_dict = classification_report(
+    pred_df["real"], pred_df["pred"],
+    labels=LABELS, zero_division=0, output_dict=True
+)
+rep_df = pd.DataFrame(report_dict).transpose()
+rep_df.index.name = "label"
+rep_df = rep_df.reset_index()
+rep_df["info"] = ""
+rep_df.loc[len(rep_df)] = {
+    "label": "[INFO]",
+    "precision": "",
+    "recall": "",
+    "f1-score": "",
+    "support": "",
+    "info": f"Unrecognized / fallback count: {unk_cnt}"
+}
+rep_df.to_csv(RUN_DIR/"report.csv", index=False)
+
+(Path(RUN_DIR/"settings.json")).write_text(json.dumps({
+    "csv": CSV_PATH,
+    "model": MODEL_PATH,
+    "run_dir": str(RUN_DIR),
+    "temperature": TEMPERATURE,
+    "top_p": TOP_P,
+    "top_k": TOP_K,
+    "max_new_tokens": {
+        "yn": MAX_NEW_TOKENS_YN,
+        "choose": MAX_NEW_TOKENS_CHOOSE,
+        "full": MAX_NEW_TOKENS_FULL,
+        "reason": MAX_NEW_TOKENS_REASON
+    },
+    "fallback_abbr": FALLBACK_ABBR,
+    # [R08 原代码保留]
+    # "output_columns_order": ["comment","real","pred","raw_output","reason"],
+    # [R08 修订]
+    "output_columns_order": ['comment', 'real', 'pred', 'raw_output', 'reason', 'unknown_labels', 'fallback_reason'],
+    "method": "per-label yes/no polling + candidate arbitration + full-label fallback"
+}, indent=2))
+
+print(f"\n[INFO] Files saved in {RUN_DIR}")
+print(f"[INFO] Fallback used: {unk_cnt}")
+gc.collect(); torch.cuda.empty_cache()

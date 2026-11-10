@@ -1,0 +1,32 @@
+{
+  "issue_id": "R05",
+  "source_issue_id": "PROMPT-07",
+  "files_changed": 1,
+  "paper_priority": "User-confirmed nonpaper directory; NOT a paper-risk or rerun basis",
+  "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+  "sha256_before": "98e2f04508ed3f4fd9b522e9165b387ffc18ae602b0bba0cdf785b05ca582b75",
+  "sha256_after": "cec64e05b7fe6779293c482e5b9aed15ef337638a60f465eb28e44970ec4787b",
+  "changes": [
+    "Prompt explicitly requires #Reason followed by a separate #Answer line containing exactly one abbreviation.",
+    "Parse the unique complete #Answer field from full model output; blank, missing, duplicate or invalid answer fields return <UNK>.",
+    "Return and save full decoded output; retain preexisting final Data Conf fallback.",
+    "Original replaced prompt, prompt suffix and first-line extraction are retained as comments at the original positions."
+  ],
+  "active_function_lines": {
+    "build_prompt": 142,
+    "simple_extract": 153,
+    "extract_tagged_answer": 165,
+    "classify": 182
+  },
+  "validation": {
+    "ast_parse": true,
+    "static_peer_review": true,
+    "models_loaded": false,
+    "tokenizers_loaded": false,
+    "experiments_executed": false,
+    "functions_or_tests_executed": false
+  },
+  "scope_excluded_by_user": true,
+  "paper_risk_basis": false,
+  "rerun_basis": false
+}

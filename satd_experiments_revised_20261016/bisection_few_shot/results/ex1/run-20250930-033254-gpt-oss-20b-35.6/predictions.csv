@@ -1,0 +1,883 @@
+comment,real,pred,raw_output,yes_candidates
+!TODO: In some cases; US is not enough to hold the complete number,Machine Learning Knowledge,Plain Old Data Type,PODT,PODT
+# reverse bw; before concat TODO,Layer Configuration,Data Processing Configuration,Data Conf,Layer Conf;Data Conf
+# TODO : load landmarks in validation and test set also. I'm too sleepy to do it today -_- zzz... zzz...,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;MLRelia
+## elif (): ## FIXME: handle other bases here,Prototype,Model Code Reusability,MCR,
+#TODO: improve the copying of parameters,Hyper-parameter Configuration,Weight Configuration,Weight Conf,Weight Conf;MCM
+@todo nrows is for testing only!,Boundary Erosion,Unnecessary Model Code,UMC,MCC;UMC;Data Conf
+@todo: arabtex and iso8859-6 need individual handling because in some cases using one-two mapping,Data Processing Configuration,Data Processing Configuration,Data Conf,GC;Data Conf
+@TODO: need better solutions,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,
+@TODO: remove time usage; use it under the hood,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC;Abs;BE
+[todo]: this is a bug; predict_proba should not change,Model Code Modifiability,Prediction Quality,PQ,PQ
+"\""\""\"" || Corpus in CSV format. TODO: still serializes to SVMLight format; feel free to change this. || \""\""\""",Data Processing Configuration,Data Storage Configuration,DS Conf,Data Conf;DS Conf
+"\""\""\"" || Simple Gaussian Mixture model plotting example ||  || TODO: use the faithful dataset || \""\""\""",Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+"\""\""\"" Turn compiler.ast structures back into executable python code. ||  ||     The unparse method takes a compiler.ast tree and transforms it back into ||     valid python code.  It is incomplete and currently only works for ||     import statements; function calls; function definitions; assignments; and ||     basic expressions. ||  ||     Inspired by python-2.5-svn\/Demo\/parser\/unparse.py ||  ||     fixme: We may want to move to using _ast trees because the compiler for ||            them is about 6 times faster than compiler.compile. || \""\""\""",Custom Data Type,Glue Code,GC,GC;MCM
+"\""\""\""Converts legacy encodings into Unicode || TODO for replacer.py: ||  - add perseus-style iota subscript and diaeresis || \""\""\""",Data Processing Configuration,Data Processing Configuration,Data Conf,GC;Data Conf
+"\""\""\""Converts legacy encodings into Unicode. ||  || TODO: Rm regex dependency || TODO: Add tests || \""\""\""",Code Dependency,Code Dependency,MLDepend,MLDepend;GC;Data Conf
+"\""\""\""Models. ||  || Models are objects which take Tensor(s) as input; perform some computation on  || those Tensor(s); and output probability distributions. ||  || TODO: more... ||  || * :func:`.Model` || * :func:`.ContinuousModel` || * :func:`.DiscreteModel` || * :func:`.CategoricalModel` || * :func:`.save_model` || * :func:`.load_model` ||  || ---------- ||  || \""\""\""",Model Code Modifiability,Model Code Comprehension,MCC,
+"\""\""\""Module dedicated to extraction of Model Based Metafeatures. ||  || Todo: ||     * Implement metafeatures. ||     * Improve documentation. || \""\""\""",Data Processing Configuration,Model Code Modifiability,MCM,
+"\""\""\""Process downloaded or local corpora from one format into another. || Some formatting can happen here; or invoke language-specific formatters in || other files. ||  || #TODO: Add TLG & PHI text cleaners from KJ's IPython notebooks || #TODO: Add non-ascii stripper || #TODO: Add generic HTML stripper || \""\""\""",Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+"\""\""\""The Imperial Aramaic alphabet; plus simple script to transform || a Hebrew transcription of an Imperial Aramaic text to its own Unicode block. ||  || TODO: Add Hebrew-to-Aramaic converter || \""\""\""",Data Processing Configuration,Data Processing Configuration,Data Conf,GC;Data Conf
+\/\/TODO in future add arguments compatibility check,Hyper-parameter Configuration,Model Code Modifiability,MCM,BE;MCM
+apparently package_deps are broken in 3.4,Code Dependency,Code Dependency,MLDepend,MLDepend
+BETTER FIX: iterate through; if length = 0; then bump it up to 0.125,Prototype,Hyper-parameter Configuration,HP Conf,HP Conf;Data Conf;MLRelia
+circular shift the signal (needed for correct phase),Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+DEPRICATE? I don't think this is needed anymore,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+Double newlines seem to mess with the rendering,Data Processing Configuration,Model Code Comprehension,MCC,
+early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),Prediction Quality,Prototype,Proto,
+else:  # TODO check that the variation wasn't already in there,Prototype,Data Processing Configuration,Data Conf,Data Conf;MLRelia
+env = ScaledFloatFrame(env)  # TODO: use for dqn?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,MLKnow;GC;CDT;Data Conf
+find out why prefix neg_ is needed,Machine Learning Knowledge,Model Code Comprehension,MCC,MCC;Data Conf
+FIXME : adhoc (answer being last word); not ignoring single question,Data Processing Configuration,Multiple Languages,"analysisWe need to determine which type of ML SATD this comment belongs to. The comment: """"""FIXME : adhoc (answer being last word); not ignoring single question"""""" It seems to say: ""FIXME: adhoc (answer being last word); not ignoring single question"". This is a comment indicating that there is an adhoc solution, maybe not ignoring a single question. It's not clear. Let's parse. The comment indicates a FIXME, likely a bug. It says ""adhoc (answer being last word); not ignoring single question"". Might refer to a function that deals with a single question? Could be about code that is not ignoring a single question. That might be about ignoring a question? Could be a bug that incorrectly processes a single question? This could refer to a problem with data processing or code that incorrectly handles a single question. Which category fits?
+
+Let's review categories:
+
+Abs: lack of abstractions
+BE: lack of boundaries
+CDT: custom data type
+DFEC: duplicate feature extraction code
+DMC: duplicate model code
+DS Conf: data storage configuration
+Data Conf: data processing configuration
+GC: glue code
+HP Conf: hyper-parameter configuration
+Layer Conf: layer configuration
+MCC: model code comprehension
+MCM: code modifiability
+MCR: reusability
+ML: multiple languages
+MLDepend: code dependency
+MLInter: interpretability
+MLKnow: knowledge
+MLRelia: reliability
+PODT: plain old data type
+PQ: prediction quality
+Proto: prototype
+UMC: unnecessary code
+
+The comment: ""adhoc (answer being last word); not ignoring single question"" Might be about code that uses ad-hoc logic for parsing some question, maybe not ignoring the single question. Could be about a bug in code that fails to ignore a single question. Is that about data processing? Data Conf? It might be about processing data (questions). ""not ignoring single question"" suggests that the code currently ignores a single question? Actually, it says ""not ignoring single question"", meaning that the code should ignore a single question but currently is not ignoring? Wait: ""not ignoring single question"" phrase means maybe the code is not ignoring singular question form? Maybe it's about ignoring the word ""question"" when processing? Hard to decide.
+
+But it's likely a small bug in code. Which category? Could be a ""FIXME"" comment about a bug in code that might relate to ""Weight Conf"" or ""Layer Conf"" but there's no mention of weights or layers. It's about ""adhoc"" and ""not ignoring single question"". That might be a code that does a textual processing that fails to ignore a single question. So it's about data processing. That could be ""Data Conf"" or ""DS Conf""? Data Conf refers to configuring data processing steps. The comment appears to be about some code that processes data incorrectly. So Data Conf seems plausible. But the comment indicates a bug: ""adhoc (answer being last word); not ignoring single question"". Could be a bug that is due to ad hoc logic. Maybe the comment belongs to ""MCC"" – model code comprehension – because the code is not clear? But it's about a bug.
+
+Let's examine each abbreviation and the example of comment patterns:
+
+- Abs: Lack of abstractions, e.g., code that does not abstract logic. Example: ""TODO: extract common scoring logic into BaseMetric"". That is an abstraction improvement.
+
+- BE: boundaries between subsystems. Example: ""TODO: migrate training-time logging out of Trainer class; should live in metrics.logger"". That is about boundaries.
+
+- CDT: custom data type. Example: ""TODO: replace custom SparseTensorDict with standard torch.sparse_coo_tensor"".
+
+- DFEC: duplicate feature extraction code. Example: ""TODO: merge extract_mfcc() and extract_mfcc_fast()"".
+
+- DMC: duplicate model code.
+
+- DS Conf: data storage configuration. Example: ""TODO: migrate checkpoint format from.pth to safetensors"".
+
+- Data Conf: configuring data processing steps. Example: ""TODO: add configurable pipeline step to down-sample majority class before batching"".
+
+- GC: glue code. Example: ""TODO: remove pandas-to-torch bridge once DataLoader accepts DataFrame directly"".
+
+- HP Conf: hyper-parameter configuration. Example: ""TODO: make learning_rate schedule selectable via CLI flag"".
+
+- Layer Conf: editing code that deals with layers. Example: ""TODO: swap BatchNorm for LayerNorm"".
+
+- MCC: model code comprehension. Example: ""TODO: break up monolithic function train_eval_predict() into clearer, single-purpose helpers"".
+
+- MCM: modifiability. Example: ""TODO: move hyper-parameter defaults into config file"".
+
+- MCR: reusability. Example: ""TODO: abstract make_encoder() so VisionTransformer and ResNet builders share the same backbone factory"".
+
+- ML: multiple languages.
+
+- MLDepend: code dependency.
+
+- MLInter: interpretability.
+
+- MLKnow: knowledge.
+
+- MLRelia: reliability.
+
+- PODT: plain old data type.
+
+- PQ: prediction quality.
+
+- Proto: prototype.
+
+- UMC: unnecessary code.
+
+The comment ""FIXME : adhoc (answer being last word); not ignoring single question"" seems to be about an ad-hoc logic that might be wrong. It's a FIXME, not TODO. The categories mostly are TODOs, but comment could still apply to a FIXME.
+
+Which category best fits? Let's consider ""MCC"": model code comprehension. The comment might reflect confusion about why the code is ""adhoc"" and not ignoring a single question. That might be a comprehension issue. But it's more about a bug.
+
+""Data Conf"" is about configuring data processing steps. This might involve a bug in the pipeline that doesn't ignore a single question. That could be a bug in data processing logic. However, ""Data Conf"" examples are about adding steps or changing steps, not about fixing a bug. But the comment could be about a bug due to ad-hoc logic.
+
+""DS Conf"" is about data storage config.
+
+""MLDepend"" is about dependencies.
+
+""GC"" is glue code.
+
+""Proto"" is prototypes.
+
+None of the above seems like a perfect match.
+
+The comment mentions ""adhoc"" and ""not ignoring single question"". That might be about a code that processes ""question"" string incorrectly. Could be a bug in the data processing logic. So maybe ""Data Conf"" is the best.
+
+But ""Data Conf"" is about configuring how data is processed, by editing the data directly or adding new processing steps. The comment indicates a bug that is not ignoring a single question. That might be about a specific data processing step that has ad-hoc logic. So ""Data Conf"" could fit.
+
+However, ""MCC"" (model code comprehension) may also fit: the comment expresses confusion: ""adhoc (answer being last word); not ignoring single question"". That might indicate a need to understand the code. The comment indicates a FIXME. It is a bug due to ad-hoc logic. But the categories are about the type of debt. The debt type is about the code's architecture or design rather than the bug itself. But maybe the debt is about code comprehension? The comment ""adhoc"" suggests the code is ad-hoc. That could be a type of debt: ""MCC"" because it's about code readability. But the debt is that the code is ad-hoc and not ignoring a single question. That indicates that the code likely uses a hack or ad-hoc logic. That might be a code comprehension debt: the code is hard to understand and leads to bugs. So maybe it's MCC.
+
+Alternatively, it could be ""PODT"" if it's about raw types. Not.
+
+""MLKnow"": knowledge. Not.
+
+""Proto"": prototypes. Not.
+
+""PQ"": prediction quality. Not.
+
+""MLRelia"": reliability. Not exactly, but maybe the bug could affect reliability. But the comment is about ignoring a question. That might be a bug that could affect reliability. But it's not a reliability measure.
+
+""Weight Conf"" or ""Layer Conf"" not.
+
+""GC"" is glue code. This might be a glue code between modules that incorrectly processes questions. But the comment says ""adhoc"" and ""not ignoring single question"". That is not about glue.
+
+""DFEC"" or ""DMC"" not.
+
+""CDT"" not.
+
+""BE"" boundaries? Not.
+
+""BE"" could be if the code is not ignoring a single question because boundaries between subsystems are not clear. But no.
+
+""Data Conf"" seems plausible: it's about data processing config. So I'd lean Data Conf.
+
+Let's check ""Data Conf"" examples: ""TODO: add configurable pipeline step to down-sample majority class before batching"". This is about adding a step to the pipeline. But the comment is about ""adhoc (answer being last word); not ignoring single question"". That could be about a missing step or a bug. So ""Data Conf"" is a possible fit.
+
+But also ""GC"" glue code example: ""TODO: remove pandas-to-torch bridge once DataLoader accepts DataFrame directly"". This is about bridging two libraries. The comment might be about a bug in that glue. But the comment is not about bridging libraries.
+
+""MLDepend"" is about dependencies.
+
+""ML"" multi-language.
+
+""MLDepend"" not.
+
+""MLRelia"" is about data quality. The comment might be about ignoring missing data? But no.
+
+""Abs"": abstraction. Not.
+
+""BE"": boundaries. Not.
+
+""MCC"": model code comprehension. The comment is a FIXME. Could be due to confusion.
+
+""MLKnow"": knowledge. Not.
+
+""Proto"": prototypes. Not.
+
+""UMC"": unnecessary code. The comment is a FIXME, not about removing code.
+
+Thus ""Data Conf"" seems best.
+
+Thus answer: Data Conf. In the abbreviations, ""Data Conf"" is the abbreviation. We should return exactly that.",
+FIXME annoying hack for batching different sized shapes;,Model Code Reusability,Data Processing Configuration,Data Conf,MLKnow;GC;UMC;Data Conf;Abs;MCM
+FIXME don't l2_normalize for any metric,Data Processing Configuration,Unnecessary Model Code,UMC,MLKnow;Layer Conf;HP Conf;UMC;Data Conf;MLRelia
+FIXME homogeneize the meaning of margin parameter,Hyper-parameter Configuration,Hyper-parameter Configuration,HP Conf,MCC;Layer Conf;HP Conf;Abs;BE;MCM;MCR
+FIXME non-uniform sample weights not yet supported,Weight Configuration,Hyper-parameter Configuration,HP Conf,MLKnow;HP Conf;Data Conf;MLRelia
+FIXME not sure what are those CB1 \/ CB2,Machine Learning Knowledge,Model Code Comprehension,MCC,MLKnow;MCC;CDT
+FIXME This will make sense when all controllers are in one file (like task.py),Data Storage Configuration,Boundary Erosion,BE,BE
+FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,Glue Code,Duplicate Model Code,DMC,DMC;BE
+FIXME: Allow some diff; e.g. on repr style text in text\/plain,Prototype,Glue Code,GC,GC
+FIXME: Handle execution_count (always change to None?),Machine Learning Knowledge,Data Storage Configuration,DS Conf,DS Conf
+FIXME: Hardcoded usually sucks,Data Storage Configuration,Model Code Modifiability,MCM,Abs;MCM
+FIXME: if we inherit from scipy.io.netcdf.NetCDFFile and omit the self.nc,Machine Learning Knowledge,Glue Code,GC,GC;BE
+FIXME: INDRA's section_type entry is meant to contain,Custom Data Type,Plain Old Data Type,PODT,CDT;Data Conf;PODT;DS Conf;MLRelia
+FIXME: Need to check if mod is the equivalent of floorMod in NumPy,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,MLKnow;MCC;GC
+FIXME: need to implement sample_weight in Ridge,Weight Configuration,Data Processing Configuration,Data Conf,MLKnow;Data Conf
+FIXME: Only keeping the first label,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;PQ
+FIXME: pixel_classes dict needs to be populated with classes obtained from target,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;MLRelia
+"FIXME: Return type \""None\"" of \""fit\"" incompatible with return type \""float\"" in supertype \""Model\""",Plain Old Data Type,Abstraction,Abs,Abs
+FIXME: support for many evaluators; maybe event support,Prototype,Model Code Reusability,MCR,GC;Abs;MCM;MCR
+FIXME: The code works with EpisodicReplayBuffer,Custom Data Type,Model Code Reusability,MCR,GC;Abs;BE;MCR
+FIXME: this is kind of hackish; but being able to simply set,Model Code Comprehension,Model Code Modifiability,MCM,MCM
+FIXME: this needs to become more generic; we need to find the actual so in the python root,Model Code Reusability,Model Code Reusability,MCR,GC;ML;Abs;BE;MCM;MCR
+FIXME: this representation of covars is going to lose for caching,Data Storage Configuration,Custom Data Type,CDT,CDT;DS Conf;Abs
+FIXME: Use linebased diff of some types of outputs:,Data Processing Configuration,Data Processing Configuration,Data Conf,
+FIXME: What about the next diff entry?,Machine Learning Knowledge,Model Code Comprehension,MCC,
+FIXME: What if we never find a fail-high?,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,MLKnow
+FIXME_Numba#5157: remove np.asarray and return as list,Data Storage Configuration,Data Processing Configuration,Data Conf,UMC;Data Conf;PODT;DS Conf
+Force shrinking of the mask if needed (and possible),Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;Data Conf;DS Conf
+Freeze weights - TODO: NOT IMPLEMENTED!,Weight Configuration,Weight Configuration,Weight Conf,Weight Conf
+h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,Hyper-parameter Configuration,Layer Configuration,Layer Conf,Layer Conf;HP Conf
+handle BoxedSeries and list\/set of BoxedSeries; TODO: others?,Custom Data Type,Custom Data Type,CDT,CDT;Data Conf;PODT;MCR
+if this is needed.,Machine Learning Knowledge,Unnecessary Model Code,UMC,
+IMPORTANT: keep matrices in suitable order for matrix products; failing to do so gives 8x lower performance :(,Model Code Reusability,Data Storage Configuration,DS Conf,MLKnow;DS Conf
+In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,Plain Old Data Type,Model Code Comprehension,MCC,MCC;Data Conf
+in_dim=(4; 8; 8; 8); # TODO: Needs fix when giving a randon in_dim,Model Code Reusability,Hyper-parameter Configuration,HP Conf,Layer Conf;HP Conf;PODT;MCR
+Initialize model (TODO: really necessary?),Machine Learning Knowledge,Unnecessary Model Code,UMC,MLKnow;UMC
+It's only needed for a specific purpose in the short term; will go.,Layer Configuration,Unnecessary Model Code,UMC,UMC
+needed so command completion and help can use it,Data Storage Configuration,Glue Code,GC,GC
+needed to sklearn comparability,Code Dependency,Glue Code,GC,GC;CDT;Data Conf;MCR
+needed to sklearn comparability,Code Dependency,Glue Code,GC,MLDepend;GC;CDT;Data Conf;PODT;MCR
+needed?,Unnecessary Model Code,Unnecessary Model Code,UMC,
+normed_cross_entropy # TODO,Hyper-parameter Configuration,Hyper-parameter Configuration,HP Conf,HP Conf
+NOTE: probably more efficient to sort then stride by nt_regions,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;DS Conf
+nv by ns dot ns by m -> nv by m  # TODO: Change to CSC for speed?,Data Processing Configuration,Data Storage Configuration,DS Conf,PODT;DS Conf
+once they are no longer needed in the schedule or by,Data Storage Configuration,Unnecessary Model Code,UMC,
+Pass on diff to external difftool (TODO: store in global metadata at end instead of in separate diff dicts?),Data Storage Configuration,Data Storage Configuration,DS Conf,GC;DS Conf;MCM
+probably not needed; transition,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+"r\""\""\""Run inference on random sequences many times; saving the top results. ||  || This module is designed to run inference on a trained aptamers TF model || to score many sequences and then write out the top scoring sequences to || be used in other analysis. For example; these top predicted sequences || can read in the colab picking sequences in order || to validate the TF model. ||  || This module uses the standard aptamers tensorflow infrastructure to run || the inference. This is the inferer class defined in || learning\/eval_feedforward and described in the Aptamers TensorFlow Doc. ||  || Inference is generally run in batches of sequences; so a MapFlat function || is used to combine the results of interference into a flattened list || of (sequence; score) pairs. (In other words; each map function returns || a list of (sequence; score) pairs and these results are combined into || one list of pairs. Using a standard Map function would result in a || list of lists which is not what we want.) From there; the Top.Of || combiner returns only the top results; sorted by highest score. These || are then written to a text file. ||  || For now; each batch creates its own inferer; causing each map function || to have more overhead. Because of this;batch sizes around the default of || 10000 are performant. Fixing this in the future means converting the || MapFlat to a ParDo and initializing the inferer in start_bundle. || This module runs inference 1 billion times in 50 minutes so it || is sufficient for now ||  || Run locally with: ||  ||   :search_inference -- --flume_exec_mode=UNOPT \\ ||   --target_name='target' \\ ||   --model_dir=xxx \\ ||    --checkpoint_path='model.ckpt-312500' \\ ||    --output_name=xxx\/base30_1B_inference_top2k ||  || \""\""\""",Custom Data Type,Model Code Modifiability,MCM,MCM
+Random Warp # TODO change masks to have a input mask and a warped target mask,Hyper-parameter Configuration,Data Processing Configuration,Data Conf,Layer Conf;Data Conf
+seem out of place. If you were able to do better; feel free to share your,Prediction Quality,Boundary Erosion,BE,BE
+self.clearChanges() #TODO perhaps?,Data Storage Configuration,Unnecessary Model Code,UMC,MCC;UMC
+self.mpc_sum(3; -5) TODO: Future work: how to handle gracefully minus numbers,Machine Learning Knowledge,Machine Learning Reliability,MLRelia,Data Conf;MLRelia
+should be WeightNorm here TODO.,Layer Configuration,Weight Configuration,Weight Conf,Weight Conf;Layer Conf
+tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,Code Dependency,Code Dependency,MLDepend,MLKnow;Weight Conf;MLDepend;GC;BE
+this importing of matplotlib is needed to run on the cluster,Code Dependency,Code Dependency,MLDepend,MLDepend
+This is a hack to allows inference when the <go> token,Model Code Modifiability,Machine Learning Knowledge,MLKnow,MLKnow;Data Conf
+THIS IS A VERY UGLY FUNCTION because it has hardcoded 0\/4\/5 integers for each of the metric. I need to make an enumerated class for this!,Model Code Comprehension,Model Code Modifiability,MCM,MCC;CDT;PODT;Abs;MCM
+time to fix. TODO: optimize the crap out of this,Data Processing Configuration,Unnecessary Model Code,UMC,
+TODO - can remove one of these m0 restores if A and B both TLU,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;Layer Conf;UMC;MCM
+TODO - does this handle N-dim tensors correctly?,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,
+TODO - in the code it is different - why?,Machine Learning Knowledge,Model Code Comprehension,MCC,
+TODO (pradeep): Sort the indices and do intersections in order; so that we can return the,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO (ytz): really; we want at least one active and inactive in both scenarios.,Data Processing Configuration,Data Processing Configuration,Data Conf,MLKnow;Data Conf;PQ;MLRelia
+TODO : add these in the options. (None; None) => no limit,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO : Any other options,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,
+TODO : market value,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO : removal,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO : this is quite bad in term of execution speed. We need to fix this.,Data Processing Configuration,Prediction Quality,PQ,
+"TODO accept_sparse=\""csc\""",Data Processing Configuration,Data Processing Configuration,Data Conf,GC;Data Conf;MCR
+TODO add general Distribution,Data Processing Configuration,Abstraction,Abs,CDT;Abs;MCR
+TODO add index to xls file,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;DS Conf
+TODO add introductory explanation,Data Processing Configuration,Model Code Comprehension,MCC,MCC
+TODO add support for other metrics (ex. euclidean; angular),Prototype,Model Code Reusability,MCR,Abs;MCR
+TODO add test for keypoints once their handling was improved in Convolve,Code Dependency,Model Code Modifiability,MCM,
+TODO add vertical gradient alpha to have fog only at skylevel\/groundlevel,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf
+TODO anticipate multi-agents for AEB space,Data Storage Configuration,Machine Learning Knowledge,MLKnow,MLKnow;MCR
+TODO change as soon as svhn has a val set :),Data Storage Configuration,Data Processing Configuration,Data Conf,MLKnow;Data Conf
+TODO change the way attns is returned dict => list or tuple (onnx),Data Processing Configuration,Plain Old Data Type,PODT,GC;PODT
+TODO change to np.partition for PERF,Data Storage Configuration,Data Processing Configuration,Data Conf,
+TODO check for each tentacle specified if update is available (with requirements),Code Dependency,Code Dependency,MLDepend,MLDepend
+TODO check results after standardizing num ft once a ml algorithm is ready to test,Code Dependency,Data Processing Configuration,Data Conf,MLKnow;Data Conf;PQ
+TODO checkpoints; incremental save,Prototype,Data Storage Configuration,DS Conf,DS Conf
+TODO combine these values to get a final prediction!,Data Processing Configuration,Prediction Quality,"analysisWe have a list of abbreviations and example comments. We need to classify the comment ""TODO combine these values to get a final prediction!"" Which category fits? Let's analyze.
+
+The comment indicates combining values to get final prediction. It's about combining values, maybe predictions from multiple models? It could be about model code that is unnecessary or redundant? Let's examine categories.
+
+List of abbreviations: Abs, BE, CDT, DFEC, DMC, DS Conf, Data Conf, GC, HP Conf, Layer Conf, MCC, MCM, MCR, ML, MLDepend, MLInter, MLKnow, MLRelia, PODT, PQ, Proto, UMC, Weight Conf.
+
+We need to match to one.
+
+Let's check each abbreviation description:
+
+Abs: Lack of abstractions cause cascading changes. Example: ""extract common scoring logic into BaseMetric"".
+
+BE: Lack of boundaries between subsystems. Example: ""migrate training-time logging out of Trainer class"".
+
+CDT: Using general-purpose packages data types causing burden. Example: ""replace custom SparseTensorDict with standard torch.sparse_coo_tensor"".
+
+DFEC: Code duplication in feature extraction. Example: ""merge extract_mfcc() and extract_mfcc_fast()"".
+
+DMC: Duplicate model code. Example: ""remove copy-pasted ConvBlock"".
+
+DS Conf: Configuring how data represented internally or stored externally. Example: ""migrate checkpoint format from.pth to safetensors"".
+
+Data Conf: Configuring how data is processed. Example: ""add configurable pipeline step to down-sample majority class"".
+
+GC: Glue code, interface code. Example: ""remove pandas-to-torch bridge"".
+
+HP Conf: Hyper-parameter configuration. Example: ""make learning_rate schedule selectable via CLI flag"".
+
+Layer Conf: Editing code that deals with model layers. Example: ""swap BatchNorm for LayerNorm"".
+
+MCC: Model code legibility concerns. Example: ""break up monolithic function train_eval_predict()"".
+
+MCM: Model code modifiability. Example: ""move hyper-parameter defaults into config file"".
+
+MCR: Model code reusability. Example: ""abstract make_encoder() so VisionTransformer and ResNet builders share same backbone factory"".
+
+ML: Multiple languages. Example: ""port custom attention kernel from CUDA C++ to Metal"".
+
+MLDepend: Code dependency. Example: ""bump scikit-learn to ≥1.6"".
+
+MLInter: Model interpretability. Example: ""Generate SHAP summary plot"".
+
+MLKnow: Machine learning knowledge. Example: ""TODO: Confirm whether layer-norm before attention actually boosts convergence"".
+
+MLRelia: Reliability, data quality. Example: ""add sanity-check to reject examples with >20% missing features"".
+
+PODT: Plain old data type. Example: ""replace raw list of logits with a NamedTuple"".
+
+PQ: Prediction quality. Example: ""rerun validation after enabling mixed-precision"".
+
+Proto: Prototype. Example: ""replace the single-threaded demo server with a production-ready Gunicorn setup"".
+
+UMC: Unnecessary model code. Example: ""delete legacy compute_grad_stats"".
+
+Weight Conf: Editing code that involves weights of a model. Example: ""expose weight_decay as configurable"".
+
+Now, the comment ""TODO combine these values to get a final prediction!"" What does that imply? It might be combining values from multiple sources to produce final prediction. That likely refers to prediction quality? Because combining values to get final prediction might refer to ensembling or combining predictions. Or maybe it's about model code that calculates final prediction. Could be about ""Prediction Quality"" (PQ) because it's about ensuring that final predictions are correct/have quality. But maybe it's about ""Model Code Modifiability"" or ""Model Code Reusability""? Let's examine.
+
+""combine these values to get a final prediction"" is a TODO comment for code that is missing combination logic. It could be about a missing step: combine predictions from multiple models into final prediction. That could be a missing code to produce final prediction. That might refer to a ""Prediction Quality"" type. But PQ is about workflow changes affecting performance. Example: ""rerun validation after enabling mixed-precision; confirm accuracy isn’t degraded"". That is about verifying that predictions are correct after changes. The comment here is not about verifying but about adding code to combine predictions. So perhaps it's ""UMC""? No, UMC is unnecessary model code. This is missing code, not unnecessary.
+
+It might be ""MCC""? Because ""model code carries extra legibility concerns"" - example: ""break up monolithic function train_eval_predict() into clearer, single-purpose helpers"". That comment is about legibility. Not this.
+
+Could be ""MCR""? ""Model code reusability"" - example: ""abstract make_encoder() so VisionTransformer and ResNet builders share the same backbone factory"". Not this.
+
+Could be ""GD""? But not in list.
+
+Maybe it's ""MLKnow"" because it requires knowledge about combining predictions for final output. But MLKnow is about missing knowledge for unique challenges. Example: ""Confirm whether layer-norm before attention actually boosts convergence"". Not this.
+
+Maybe it's ""MLInter"" but that's about interpretability.
+
+Maybe ""Weight Conf"" but no.
+
+""Layer Conf"" no.
+
+""HP Conf"" no.
+
+""Data Conf"" no.
+
+""DS Conf"" no.
+
+""GC"" no.
+
+""CDT"" no.
+
+""BE"" no.
+
+""Abs"" no.
+
+""ML"" no.
+
+""MLDepend"" no.
+
+""MLRelia"" no.
+
+""PODT"" no.
+
+""Proto"" no.
+
+""UMC"" no.
+
+Thus none of the categories precisely match ""TODO combine these values to get a final prediction!"". However, maybe it's ""PQ"" because it's about the final prediction quality. But the comment is about combining values to get final prediction; maybe it's part of a pipeline that hasn't been implemented yet. PQ is about ensuring predictions are correct after changes. This comment might be about ensuring that predictions are correct but hasn't been implemented. But PQ is about workflow changes that affect performance. Could we treat this as a type of PQ? The comment is about combining predictions; no mention of performance.
+
+Alternatively, maybe the comment is about ""MCC"" or ""MCM"" because it's about code that needs to be changed for readability or maintainability. But ""combine these values to get a final prediction"" might be part of a composite function. If the code is monolithic or unclear, this TODO might be to break into clear steps. But we don't know.
+
+Another possibility: The comment is about ""MCR"" because the final prediction may involve combining multiple models; reusability? Not quite.
+
+Could be ""Proto"" because it's a prototype that still needs to combine predictions. But the comment is generic.
+
+Let's think about the categories: They all refer to types of self-admitted technical debt. We need to pick the type that best matches the comment.
+
+Let's read the comment again: ""TODO combine these values to get a final prediction!""
+
+This indicates that the code currently has some values that need to be combined to produce final prediction. It is a placeholder for a missing implementation. It might be a missing piece of logic. Which category would that fall under? Possibly ""MCC"" (Model code legibility concerns) if the code is monolithic and this TODO is inserted to clarify. But the comment itself is not about legibility; it's about a missing function.
+
+Alternatively, ""MCM"" (Model code modifiability) might be relevant: ""move hyper-parameter defaults into config file so changing them doesn’t require code edits"". Not that.
+
+""MCR"" (Model code reusability) might be about abstracting common logic. But combining predictions might be a reusable function? Not necessarily.
+
+""Proto"" about prototypes: ""Deploying small-scale prototypes into full systems can be dangerous."" Not this.
+
+""PQ"" about prediction quality: ""Workflow changes may affect performance."" The comment is about combining predictions which likely affects performance. But it's not about verifying performance. But the comment might be about ensuring final predictions are correct. That could be considered prediction quality: you need to combine predictions correctly.
+
+But the comment is not about verifying performance, it's about missing logic. But the classification might still be PQ because it's about the final predictions. But I'm not convinced.
+
+Let's examine each category again and see if any fits better.
+
+Abs: Lack of abstractions leads to cascading changes. Not this.
+
+BE: Lack of boundaries. Not this.
+
+CDT: Using general types. Not this.
+
+DFEC: Duplicate feature extraction code. Not this.
+
+DMC: Duplicate model code. Not this.
+
+DS Conf: Data storage config. Not this.
+
+Data Conf: Configuring data processing. Not this.
+
+GC: Glue code. Not this.
+
+HP Conf: Hyper-parameter config. Not this.
+
+Layer Conf: Editing model layers. Not this.
+
+MCC: Model code legibility. Not this.
+
+MCM: Modifiability. Not this.
+
+MCR: Reusability. Not this.
+
+ML: Multi-language. Not this.
+
+MLDepend: External dependency. Not this.
+
+MLInter: Interpretability. Not this.
+
+MLKnow: Machine learning knowledge. Not this.
+
+MLRelia: Reliability. Not this.
+
+PODT: Plain old data type. Not this.
+
+PQ: Prediction quality. Possibly.
+
+Proto: Prototype. Not this.
+
+UMC: Unnecessary model code. Not this.
+
+Weight Conf: Editing weights. Not this.
+
+Thus the only plausible is PQ. Let's examine PQ's definition: ""Workflow changes may affect performance."" Example: ""rerun validation after enabling mixed-precision; confirm accuracy isn’t degraded."" The comment ""TODO combine these values to get a final prediction!"" is a TODO for implementing a combination step. This could affect performance of the final prediction. It's indeed a workflow change. So it might be PQ.
+
+Alternatively, could be ""MCC"" or ""MCR"" if the code is monolithic. But the comment refers to combining values, not about code structure.
+
+Thus",
+TODO confirm that multiple eigenvalues of 1 means the rotation,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,MLKnow;MCC
+ToDo consider 3D case --> do that by using tag->size,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;Data Conf;Abs;MCR
+TODO cpickle vs json,Data Storage Configuration,Data Storage Configuration,DS Conf,DS Conf
+TODO Dehaze with 1\/t,Data Processing Configuration,Machine Learning Knowledge,MLKnow,MLKnow;Data Conf
+TODO design an API interface for advanced access as an importable package,Abstraction,Abstraction,Abs,GC;Abs;BE;MCR
+TODO double num_filters,Hyper-parameter Configuration,Hyper-parameter Configuration,HP Conf,Layer Conf;HP Conf
+TODO Figure out how to distinguish oxidation states,Machine Learning Knowledge,Data Processing Configuration,Data Conf,Data Conf
+TODO figure out what exactly size does,Machine Learning Knowledge,Model Code Comprehension,MCC,MLKnow;MCC
+TODO ForceSign,Hyper-parameter Configuration,Data Processing Configuration,Data Conf,HP Conf;CDT;Data Conf
+TODO generalise to columns with series of unequal length,Model Code Reusability,Data Processing Configuration,Data Conf,Data Conf;MCR
+TODO generalise to series-to-series functions and function kwargs,Data Processing Configuration,Model Code Reusability,MCR,Abs;MCR
+TODO handle 1d series; not only 2d dataframes,Data Processing Configuration,Data Processing Configuration,Data Conf,MLKnow;Data Conf;MCR
+ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,Abstraction,Data Processing Configuration,Data Conf,CDT;Data Conf;MLRelia
+TODO if without momentum; weights should not change too,Weight Configuration,Hyper-parameter Configuration,HP Conf,MLKnow;Weight Conf;HP Conf
+TODO Implement,Hyper-parameter Configuration,Prototype,Proto,
+TODO implement generic method,Abstraction,Model Code Reusability,MCR,Abs;MCR
+TODO implement multi-gpu training and compare performance,Prototype,Prediction Quality,PQ,
+TODO improve the regex here,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+"TODO last token include: \""&& $last_token[...]\""",Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO make paf_scored not part of self?,Abstraction,Model Code Modifiability,MCM,MCC;Abs;BE;MCM;MCR
+TODO make threshold a variable,Custom Data Type,Hyper-parameter Configuration,HP Conf,HP Conf;Data Conf;MCM
+TODO max in one tensor,Layer Configuration,Data Processing Configuration,Data Conf,
+TODO move these registrations to backend-specific files,Prototype,Boundary Erosion,BE,Abs;BE;MCM
+TODO normalice to make sum up to 1?,Data Processing Configuration,Data Processing Configuration,Data Conf,MLKnow;Weight Conf;Data Conf;PQ;MLRelia
+todo not support dense,Unnecessary Model Code,Layer Configuration,Layer Conf,Layer Conf;Data Conf
+TODO Option for string lenght,Data Storage Configuration,Data Processing Configuration,Data Conf,HP Conf;Data Conf;MCM
+TODO Promote this to a Funsor subclass.,Model Code Reusability,Custom Data Type,CDT,CDT;Abs;BE;MCR
+TODO refactor second part of if statement when implementing live model prediction,Model Code Comprehension,Model Code Modifiability,MCM,MCC;MCM
+TODO remove,Unnecessary Model Code,Unnecessary Model Code,UMC,
+TODO remove later.,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO remove this,Unnecessary Model Code,Unnecessary Model Code,UMC,
+TODO replace this code with the following commented out code after viz is fixed,Code Dependency,Unnecessary Model Code,UMC,UMC
+TODO replace this speedup implementation with nni.compression.torch.ModelSpeedup,Layer Configuration,Unnecessary Model Code,UMC,MLDepend;UMC;Abs;MCM;MCR
+TODO replace whole pandas data container as input argument with separated metadata container,Data Storage Configuration,Glue Code,GC,GC;CDT;Data Conf;DS Conf;Abs;BE;MCM;MCR
+TODO replace with Streamlines,Custom Data Type,Custom Data Type,CDT,GC;CDT;PODT
+TODO save all the results to a json inside the experiment's folder,Data Storage Configuration,Data Storage Configuration,DS Conf,DS Conf
+TODO Search the web or use other algorithms,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,MLKnow
+TODO Send the context back into some list maintained by,Data Storage Configuration,Glue Code,GC,GC;BE
+TODO Set bioassembly info,Data Processing Configuration,Data Processing Configuration,Data Conf,
+TODO Should this stay generic? (point),Machine Learning Knowledge,Model Code Reusability,MCR,Abs;MCR
+TODO stim channel exclusion,Data Processing Configuration,Data Processing Configuration,Data Conf,Layer Conf;Data Conf
+TODO support recursive parfor; multi-D; mutiple body blocks,Prototype,Model Code Reusability,MCR,
+todo sweep,Model Code Modifiability,Hyper-parameter Configuration,HP Conf,HP Conf
+TODO switch similar statements to work inplace (w\/o making a copy),Model Code Reusability,Duplicate Model Code,DMC,DMC
+TODO These ratios can't be hardcoded,Model Code Reusability,Hyper-parameter Configuration,HP Conf,Layer Conf;HP Conf;Data Conf;Abs;MCM;MCR
+TODO this code is currently necessary for the async_fit method in websocket_client.py,Hyper-parameter Configuration,Glue Code,GC,
+TODO this is too general; register all ops,Prototype,Abstraction,Abs,GC;Data Conf;Abs;MCR
+TODO this is wrong for other entitiey types nor appearing in the edge,Custom Data Type,Prediction Quality,PQ,MCR;PQ
+TODO this vector is very sparse; we can make it more memory efficient,Data Storage Configuration,Data Storage Configuration,DS Conf,CDT;DS Conf
+TODO to be modified,Model Code Modifiability,Model Code Modifiability,MCM,
+TODO Update and move now this isn't used here,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC;BE
+TODO update these - the sklearn transformation class should be able,Custom Data Type,Glue Code,GC,HP Conf;GC;Data Conf;Abs;MCM
+TODO validate and normalize to \/path\/to\/variable,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;DS Conf;MLRelia
+TODO validate configuration and set defaults,Data Storage Configuration,Model Code Modifiability,MCM,HP Conf;MCM
+TODO validation_split is not used,Unnecessary Model Code,Data Processing Configuration,Data Conf,HP Conf;UMC;Data Conf;PQ
+TODO WIP temp_coherence_loss # assumes all sequences in the dataset share at least one same 3D pos of Baxter arm,Hyper-parameter Configuration,Machine Learning Reliability,MLRelia,MLKnow;MLRelia
+TODO wouldn't it be better with a set rather than a list?,Data Storage Configuration,Plain Old Data Type,PODT,PODT;DS Conf
+TODO write a warning,Model Interpretability,Model Code Comprehension,MCC,
+"TODO(ahundt) difference between \""redundant\"" and regular proto parsing; figure out how to deal with grasp_success rename properly",Machine Learning Knowledge,Glue Code,GC,MCC;GC;Data Conf;BE
+TODO(ahundt) make more efficient,Data Processing Configuration,Unnecessary Model Code,UMC,
+TODO(ahundt) maybe the rotation component of this needs to be inverted due to sva implementation?,Machine Learning Knowledge,Prediction Quality,PQ,MCC;Layer Conf;GC;Data Conf;PQ
+TODO(b\/119775953): fix the circular dependencies.,Code Dependency,Boundary Erosion,BE,BE
+TODO(beam2d): Fix after supporting correct dtype promotion.,Custom Data Type,Plain Old Data Type,PODT,GC;Data Conf;PODT
+TODO(crcrpar): Improve resource computation\/allocation algorithm.,Data Storage Configuration,Abstraction,Abs,
+TODO(dbieber): Move this logic into the dataset definition.,Boundary Erosion,Data Processing Configuration,Data Conf,GC;Data Conf;Abs;BE;MCM
+TODO(fstahlberg): Move to config,Model Code Modifiability,Model Code Modifiability,MCM,MCM
+TODO(rbharath): The script expects that all columns in xlsx\/csv files,Prototype,Data Processing Configuration,Data Conf,Data Conf;DS Conf;MLRelia
+TODO(rliaw): This behavior is probably undesirable; but right now,Prototype,Machine Learning Knowledge,MLKnow,
+TODO(sonots): Implement in C++,Multiple Languages,Multiple Languages,ML,ML
+TODO(sven): Add once ModelV1 is deprecated and we no longer cause circular,Code Dependency,Boundary Erosion,BE,BE
+TODO(tokunaga): the number of processes should be configurable,Model Code Modifiability,Model Code Modifiability,MCM,Data Conf;MCM
+TODO(vsatish): Figure out why this isn't printed.,Machine Learning Knowledge,Model Code Comprehension,MCC,
+TODO. get rid of from_model_pt,Unnecessary Model Code,Unnecessary Model Code,UMC,DMC;Weight Conf;GC;UMC;DS Conf;MCR
+TODO: (sven) rename to simply stats_fn to match eager and torch.,Abstraction,Model Code Comprehension,MCC,MCC
+TODO: @trask @theo could you take a look at this if you have better ideas on how to get these parameters,Machine Learning Knowledge,Hyper-parameter Configuration,HP Conf,
+todo: accurate Value,Machine Learning Reliability,Machine Learning Knowledge,MLKnow,MLKnow
+TODO: add a complete frame_size; to cover the whole audio signal?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,HP Conf;Data Conf
+TODO: add backward images also.,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: add datetype conversion,Data Storage Configuration,Data Processing Configuration,Data Conf,CDT;Data Conf;PODT
+TODO: add inheritance from Graph once implemented,Code Dependency,Model Code Reusability,MCR,Abs;MCR
+TODO: add more tags based on the scikit-learn,Prototype,Data Processing Configuration,Data Conf,Data Conf
+TODO: Add this to configuration framework,Data Processing Configuration,Model Code Modifiability,MCM,Abs;MCM
+TODO: arbitrary threshold is problematic,Model Code Reusability,Hyper-parameter Configuration,HP Conf,HP Conf;Data Conf;MCM;PQ;MLRelia
+TODO: assertWarns exist only for Python 3.2+; test in all versions,Code Dependency,Code Dependency,MLDepend,MLDepend
+TODO: At the moment LHUC is RNN specific. We should support other models as well.,Model Code Reusability,Model Code Reusability,MCR,MCM;MCR
+TODO: auto detect dtype,Data Processing Configuration,Data Processing Configuration,Data Conf,GC;Data Conf;MCM
+TODO: Basically identical to `test_intra_cv_target_transform` except for repeated KFold,Duplicate Model Code,Duplicate Model Code,DMC,
+TODO: black box attacks,Machine Learning Reliability,Machine Learning Reliability,MLRelia,MLKnow;MLRelia
+"TODO: calculate this centroid\""",Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: calibration dataset,Hyper-parameter Configuration,Machine Learning Reliability,MLRelia,MLKnow;Data Conf;PQ;MLRelia
+todo: change the feature_na_method!,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;MLRelia
+TODO: Change the optimizer to the appropriate Optimizer class,Hyper-parameter Configuration,Hyper-parameter Configuration,HP Conf,MLKnow;HP Conf
+TODO: change this logic when there is a git pretty-format,Code Dependency,Code Dependency,MLDepend,MLDepend;GC
+TODO: check `other` is Series after a circular import of SeriesType fixed,Code Dependency,Custom Data Type,CDT,
+TODO: Check behavior if this is a single mrc file (no '@'),Machine Learning Knowledge,Data Processing Configuration,Data Conf,Data Conf
+TODO: check CAPTALIZED WORDS as their lower case counterparts before saving,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;MLRelia
+TODO: check for series\/dict\/list input,Plain Old Data Type,Plain Old Data Type,PODT,GC;Data Conf;PODT;MCR;MLRelia
+TODO: Check if self._mean_squared_error_w_precision can be used here,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,MLKnow;MCC;MCR
+TODO: check if stride of 2 causes alignment issues if the featuremap,Machine Learning Knowledge,Layer Configuration,Layer Conf,Layer Conf
+TODO: check whether the model is QuartzNet,Custom Data Type,Machine Learning Knowledge,MLKnow,MLKnow;MCC
+TODO: check why there's an IF,Machine Learning Knowledge,Model Code Comprehension,MCC,MCC;UMC
+TODO: clip polygons,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: compare the performance!,Prediction Quality,Machine Learning Knowledge,MLKnow,
+TODO: compute signed distance between walls,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+ToDo: consider go\/no-go with following modification,Data Processing Configuration,Model Code Modifiability,MCM,
+TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,Multiple Languages,Multiple Languages,ML,MLKnow;Layer Conf;MLDepend;ML;Abs;BE
+TODO: Could be implemented as optimization option in LK???,Machine Learning Knowledge,Layer Configuration,Layer Conf,Layer Conf;HP Conf;MLDepend;MCM
+TODO: Could check if QSettings.Format stores type info.,Machine Learning Knowledge,Data Storage Configuration,DS Conf,MLDepend;DS Conf
+TODO: Currently this turns any upregulation associated with,Custom Data Type,Machine Learning Knowledge,MLKnow,
+TODO: Currently we don't look at source text; but we may want to,Data Processing Configuration,Data Processing Configuration,Data Conf,MLKnow;Data Conf
+TODO: dataframe pass needed?,Machine Learning Knowledge,Glue Code,GC,GC;Data Conf;PODT
+TODO: delete this method when no longer needed,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: deprecate?,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: determine if requiring same sense is too string; i.e.,Data Processing Configuration,Data Processing Configuration,Data Conf,MLKnow;HP Conf;Data Conf;MLRelia
+TODO: Do below `y_lie` lines directly calculate min\/max\/mean on `opt.yi` when it could also contain times?,Machine Learning Knowledge,Machine Learning Reliability,MLRelia,MCC;Data Conf;PODT;MLRelia
+TODO: do more to protect against race conditions. File lock?,Data Storage Configuration,Data Storage Configuration,DS Conf,DS Conf
+TODO: do not replace unless explicitly noticed + add 'only hangul' option,Model Code Modifiability,Data Processing Configuration,Data Conf,Data Conf
+TODO: do the transpose as a DataLoaderTransformer instead of in host,Data Storage Configuration,Data Processing Configuration,Data Conf,GC;Data Conf;Abs;BE;MCM;MCR
+TODO: do this better,Hyper-parameter Configuration,Model Code Modifiability,MCM,
+TODO: do we need this?!,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: does it make graph?,Machine Learning Knowledge,Model Code Comprehension,MCC,MCC
+TODO: don't make these a constant initializer because we,Data Storage Configuration,Model Code Modifiability,MCM,HP Conf;MCM
+TODO: don't need this w\/ py.test,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: double check if this is still true in 1.9.0,Machine Learning Knowledge,Code Dependency,MLDepend,MLDepend
+TODO: dtype,Custom Data Type,Data Processing Configuration,Data Conf,Data Conf;PODT
+TODO: ensure dummy_na =False is what you want,Machine Learning Knowledge,Data Processing Configuration,Data Conf,HP Conf;Data Conf
+TODO: ensure x data shape matches model._ph['x'] shape (only if fit),Model Code Reusability,Machine Learning Reliability,MLRelia,Data Conf;BE;MLRelia
+TODO: Extend to multifidelity problems by adding training_points = {'approx': {}},Prototype,Data Processing Configuration,Data Conf,Data Conf;DS Conf
+TODO: extend to other key types,Custom Data Type,Data Processing Configuration,Data Conf,Data Conf;DS Conf;MCR
+TODO: extract an eval func more robustly,Machine Learning Reliability,Model Code Reusability,MCR,MCC;Abs;BE;MCM;MCR
+TODO: figure out how why the result of einsum requires reshape,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,MLKnow
+TODO: figure out why some machines prefer one of these options,Machine Learning Knowledge,Glue Code,GC,GC
+TODO: figure out why this happens.,Machine Learning Knowledge,Multiple Languages,"analysisWe have to read the instructions: Return exactly one abbreviation on a single line, no extra text. We need to determine which type of ML SATD the comment belongs to. The comment is:
+
+""""""
+TODO: figure out why this happens.
+""""""
+
+We need to match to the types. Let's examine the types and their examples.
+
+We have 23 types: Abs, BE, CDT, DFEC, DMC, DS Conf, Data Conf, GC, HP Conf, Layer Conf, MCC, MCM, MCR, ML, MLDepend, MLInter, MLKnow, MLRelia, PODT, PQ, Proto, UMC, Weight Conf.
+
+We need to choose the best match.
+
+The comment ""TODO: figure out why this happens."" is a generic TODO to investigate an issue. Which category would that be? We need to see categories that involve debugging or investigating an issue. Let's examine each category:
+
+- Abs (Abstraction): lacking abstractions causing cascading changes. Example: TODO: extract common scoring logic into BaseMetric so each model wrapper isn’t re-implementing it. Not relevant.
+
+- BE (Boundary Erosion): lack of boundaries. Example: TODO: migrate training-time logging out of Trainer class; should live in metrics.logger. Not relevant.
+
+- CDT (Custom Data Type): using data types provided by general-purpose packages can cause extensive inter-operability burden. Example: TODO: replace custom SparseTensorDict with standard torch.sparse_coo_tensor before exporting. Not relevant.
+
+- DFEC (Duplicate Feature Extraction Code): duplicate code. Example: TODO: merge extract_mfcc() and extract_mfcc_fast(); only differ in hop_length. Not relevant.
+
+- DMC (Duplicate Model Code): duplicate code. Example: TODO: remove copy-pasted ConvBlock definition. Not relevant.
+
+- DS Conf (Data Storage Configuration): Configure how data is represented internally or stored externally. Example: TODO: migrate checkpoint format from.pth to safetensors. Not relevant.
+
+- Data Conf (Data Processing Configuration): configuring how data is processed. Example: TODO: add configurable pipeline step to down-sample majority class. Not relevant.
+
+- GC (Glue Code): supporting code written to interface with other code. Eg: TODO: remove pandas-to-torch bridge. Not relevant.
+
+- HP Conf (Hyper-Parameter Configuration): configuring hyperparameters. Not relevant.
+
+- Layer Conf: editing code that deals with model layers. Not relevant.
+
+- MCC (Model Code Comprehension): code carries extra legibility concerns. Eg: TODO: break up monolithic function train_eval_predict() into clearer, single-purpose helpers. Not relevant.
+
+- MCM (Model Code Modifiability): enabling easy maintenance. Eg: TODO: move hyper-parameter defaults into config file. Not relevant.
+
+- MCR (Model Code Reusability): generalize code for reuse. Not relevant.
+
+- ML (Multiple Languages): components in other languages. Not relevant.
+
+- MLDepend (Code Dependency): change blocked by external dependency. Eg: bump scikit-learn to ≥1.6. Not relevant.
+
+- MLInter (Model Interpretablity): black-box models. Not relevant.
+
+- MLKnow (Machine Learning Knowledge): unique challenges. Eg: TODO: Confirm whether layer-norm before attention actually boosts convergence. Not relevant.
+
+- MLRelia (Machine Learning Reliability): depends on data quality. Eg: TODO: add sanity-check to reject examples with >20 % missing features. Not relevant.
+
+- PODT (Plain Old Data Type): Using raw data types causing confusion. Eg: TODO: replace raw list of logits with a NamedTuple so callers know the order. Not relevant.
+
+- PQ (Prediction Quality): Workflow changes may affect performance. Eg: TODO: rerun validation after enabling mixed-precision; confirm accuracy isn’t degraded. Not relevant.
+
+- Proto (Prototype): Deploying small-scale prototypes into full systems. Eg: TODO: replace single-threaded demo server with production-ready Gunicorn. Not relevant.
+
+- UMC (Unnecessary Model Code): code that bottlenecks execution, unreachable or deprecated. Eg: TODO: delete legacy compute_grad_stats(); superseded by torch.autograd.profiler. Not relevant.
+
+- Weight Conf: editing code involving weights. Eg: TODO: expose weight_decay as configurable argument. Not relevant.
+
+So the comment ""TODO: figure out why this happens."" is a generic debugging comment, but none of the categories explicitly cover this. Which category might be the best fit?
+
+We need to see if there is a category for ""debugging"" or ""investigate bug"" or ""unknown behavior"" that isn't explicitly listed. Maybe it falls under ""MLInter"" or ""MLKnow""? Let's examine the examples again:
+
+- MLKnow: ""Uneducated solutions by unaware developers may have to be revisited."" Example: ""TODO: Confirm whether layer-norm before attention actually boosts convergence for small-batch training on this dataset"". That is a question about whether a change will improve convergence; it is about knowledge of ML. The comment ""figure out why this happens"" is a question about unknown behavior, could be about ML knowledge.
+
+- MLInter: Model interpretability: ""TODO: Generate SHAP summary plot so users can see feature impact."" That is about explaining black-box models. Not relevant.
+
+- MLDepend: dependencies. Not relevant.
+
+- MLRelia: Reliability. Not relevant.
+
+- Data Conf: Data processing. Not relevant.
+
+- GC: glue code. Not relevant.
+
+- UMC: code removal. Not relevant.
+
+- DMC: duplication. Not relevant.
+
+- DFEC: duplication. Not relevant.
+
+- Weight Conf: weight config. Not relevant.
+
+- Layer Conf: layer config. Not relevant.
+
+- HP Conf: hyper-parameter config. Not relevant.
+
+- MCM: modifiability. Not relevant.
+
+- MCC: comprehension. Not relevant.
+
+- MCR: reusability. Not relevant.
+
+- Abs: abstraction. Not relevant.
+
+- BE: boundary erosion. Not relevant.
+
+- CDT: custom data types. Not relevant.
+
+- PODT: plain old data type. Not relevant.
+
+- DS Conf: data storage configuration. Not relevant.
+
+- Proto: prototype. Not relevant.
+
+- PQ: prediction quality. Not relevant.
+
+Thus the only categories that might be relevant for a generic investigation are MLKnow or maybe MLDepend? But no.
+
+Let's interpret ""figure out why this happens."" It implies the developer doesn't understand why the code or model is behaving unexpectedly. That might be due to lack of knowledge about ML or missing documentation. MLKnow is about ML-specific knowledge and unique challenges. The comment could be about an issue with the ML training or inference.
+
+Alternatively, perhaps it could be ""MLRelia"" because it's about model functionality depending on data quality and robustness measures; but the comment ""figure out why this happens"" could be about data quality issues. But the comment is generic.
+
+But the instructions: Return exactly one abbreviation. We need to choose the best match.
+
+Let's examine each category's definition and see which one fits a generic debugging question.
+
+- MLKnow: ""Machine-learning software carries plenty of unique challenges. Uneducated solutions by unaware developers may have to be revisited."" So a comment about investigating an ML-specific issue might be under MLKnow. Example: ""TODO: Confirm whether layer-norm before attention actually boosts convergence for small-batch training on this dataset"". That is a question about a ML concept.
+
+- MLInter: ""Machine-learning models are a black box, causing poor understanding of model functionality; this can lead to unknown behaviour."" That is about understanding model functionality. Example: ""TODO: Generate SHAP summary plot so users can see feature impact."" Not generic.
+
+- MLRelia: ""Model functionality depends on data quality; robustness measures should be in place."" Example: ""TODO: add sanity-check to reject examples with >20 % missing features."" Not generic.
+
+- Data Conf: ""Configuring how data is processed."" Example: ""TODO: add configurable pipeline step to down-sample majority class before batching."" Not generic.
+
+- GC: ""Supporting code written to interface with other code."" Example: ""TODO: remove pandas-to-torch bridge."" Not generic.
+
+- UMC: ""Model code that bottlenecks execution, is unreachable / deprecated."" Example: ""TODO: delete legacy compute_grad_stats(); superseded by torch.autograd.profiler"". Not generic.
+
+- MCM: ""Model code should enable easy maintenance."" Not generic.
+
+- MCR: ""Model code should be generalised for reuse."" Not generic.
+
+- Abs: ""Lack of abstractions."" Not generic.
+
+- BE: ""Lack of boundaries."" Not generic.
+
+- Weight Conf: ""Editing code that involves the weights of a model."" Not generic.
+
+- Layer Conf: ""Editing code that deals with model layers."" Not generic.
+
+- HP Conf: ""Configuring hyper-parameters."" Not generic.
+
+- MCC: ""Model code carries extra legibility concerns."" Not generic.
+
+- DMC: ""Code duplication."" Not generic.
+
+- DFEC: ""Feature extraction code duplication."" Not generic.
+
+- CDT: ""Using data types provided by general-purpose packages can cause extensive inter-operability burden."" Not generic.
+
+- PODT: ""Using raw data types in ML causes confusion."" Not generic.
+
+- DS Conf: ""Configuring how data is represented internally or stored externally."" Not generic.
+
+- Data Conf: ""Configuring how data is processed."" Not generic.
+
+- GC: ""Glue code."" Not generic.
+
+- Proto: ""Deploying small-scale prototypes into full systems can be dangerous."" Not generic.
+
+Thus the best category is likely MLKnow or MLInter. The comment is a generic ""figure out why this happens"" which may be due to unknown behavior of a model, but not necessarily about interpretability. It might be because the developer doesn't understand the cause of an issue. That could be considered as ""MLKnow"" – the knowledge needed to understand why something happens.
+
+However, let's re-read the examples to see if ""figure out why this",
+TODO: Formats should not be specified; just saving all the materialized formats,Data Storage Configuration,Unnecessary Model Code,UMC,UMC;Data Conf;PODT;DS Conf;MCR
+TODO: Get rid of this,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: handle boolean scalars properly,Data Processing Configuration,Data Processing Configuration,Data Conf,
+TODO: handle channel modalities later,Model Code Reusability,Data Processing Configuration,Data Conf,Data Conf
+TODO: handle other participant types,Model Code Reusability,Data Processing Configuration,Data Conf,Data Conf;MLRelia
+TODO: handle record value which are lists; at least error,Plain Old Data Type,Machine Learning Reliability,MLRelia,Data Conf;MLRelia
+TODO: handle string,Plain Old Data Type,Plain Old Data Type,PODT,
+TODO: I believe this is not really much used,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: I cannot get good results with this yet,Prediction Quality,Prediction Quality,PQ,PQ
+"TODO: identify the \""best\"" language detector available for OSS python",Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,MLKnow
+TODO: ignore non-numerics,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;MLRelia
+TODO: I'm not sure about this part,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,
+TODO: Implement Conv Transpose,Model Code Modifiability,Layer Configuration,Layer Conf,Layer Conf
+TODO: Implement mass downloading with a cool-off in case of 429 response,Prototype,Data Processing Configuration,Data Conf,Data Conf
+TODO: implement required params,Hyper-parameter Configuration,Model Code Comprehension,MCC,
+TODO: implement residual connection,Layer Configuration,Layer Configuration,Layer Conf,MLKnow;Layer Conf
+TODO: In terms of functional API; there should not be any initialization of an nn.Module.,Unnecessary Model Code,Boundary Erosion,BE,MLKnow;Layer Conf;UMC;Abs;BE;MCM
+TODO: index and name,Data Processing Configuration,Model Code Comprehension,MCC,MCC
+TODO: is incref required?,Machine Learning Knowledge,Glue Code,GC,GC
+TODO: is that best way to handle,Machine Learning Knowledge,Abstraction,Abs,
+TODO: It could be nice if this method was run on entire data; not just,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;MCR
+TODO: it's worth to switch back to the correct preprocess_input when InceptionResNetV2 model is re-trained,Code Dependency,Data Processing Configuration,Data Conf,MLKnow;Data Conf;PQ;MLRelia
+TODO: list,Plain Old Data Type,Model Code Comprehension,MCC,
+TODO: Log message,Model Interpretability,Model Code Comprehension,MCC,
+TODO: make efficient,Prototype,Prediction Quality,PQ,
+TODO: make efficient,Prototype,Model Code Modifiability,MCM,
+TODO: make fast_rcnn irrelevant,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: make it save a zipfile instead of a tarfile.,Data Storage Configuration,Data Storage Configuration,DS Conf,DS Conf
+TODO: make the dtype configurable; see __init__(),Model Code Modifiability,Data Processing Configuration,Data Conf,Layer Conf;Data Conf;MCM
+TODO: maxpool?,Data Processing Configuration,Layer Configuration,Layer Conf,MLKnow;Layer Conf
+TODO: maybe introduce a DefaultEnvironment?,Machine Learning Knowledge,Abstraction,Abs,MCC;CDT;Abs;MCM
+TODO: min,Data Processing Configuration,Machine Learning Knowledge,MLKnow,
+TODO: Model Precision,Data Processing Configuration,Hyper-parameter Configuration,HP Conf,HP Conf
+TODO: modify this later,Data Processing Configuration,Model Code Modifiability,MCM,
+TODO: more specific types?,Custom Data Type,Plain Old Data Type,PODT,PODT
+TODO: need a better way,Plain Old Data Type,Abstraction,Abs,
+TODO: need to discuss whether this is 'allowed' or smart,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,
+TODO: Need to invert the CameraToWorld matrix => WorldToCamera matrix,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: needs to be re-written to match new stitch datasets signature.,Glue Code,Data Processing Configuration,Data Conf,MLDepend;GC;Data Conf;MCM
+TODO: non-numeric columns should be ignored automatically,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: normalize true states,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: num pad examples is not set here if fillup strategy would be padding,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: optimize scheduling to support more cases.,Data Storage Configuration,Model Code Modifiability,MCM,
+TODO: other types?,Custom Data Type,Abstraction,Abs,
+TODO: parallelize,Data Processing Configuration,Model Code Modifiability,MCM,
+TODO: pass in just the id instead of the entire obj_msg.,Data Processing Configuration,Glue Code,GC,GC;Data Conf;Abs;BE;MCM
+todo: perhaps it's better to use pickle in the future?,Data Storage Configuration,Data Storage Configuration,DS Conf,DS Conf
+TODO: Place tensors into GPU memory. This will require rewriting,Data Storage Configuration,Machine Learning Knowledge,MLKnow,MLKnow;Data Conf
+TODO: pretty sure this isn't necessary,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: Probably should just implement __deepcopy__,Model Code Reusability,Model Code Modifiability,MCM,
+TODO: programmatically check wether these are indeed features (predict; correct),Data Processing Configuration,Machine Learning Reliability,MLRelia,MLKnow;MCC;Data Conf;PQ;MLRelia
+TODO: Properly break circular dependencies,Code Dependency,Boundary Erosion,BE,BE
+TODO: put in infrastructure to fold over trace as it's built.,Data Processing Configuration,Abstraction,Abs,Data Conf;Abs
+TODO: put in the option to do substitution here (most likely scenario;,Prototype,Data Processing Configuration,Data Conf,HP Conf;Data Conf
+TODO: Reduce dim. of mean.,Data Processing Configuration,Data Processing Configuration,Data Conf,Layer Conf;Data Conf
+TODO: refactor as independent function,Abstraction,Model Code Comprehension,MCC,MCC;Abs;MCM
+TODO: Refactor\/simplify Configuration class so it can be used in cases,Model Code Reusability,Model Code Reusability,MCR,MCC;Abs;MCM;MCR
+TODO: re-implement support for constraint satisfaction method as needed,Data Processing Configuration,Machine Learning Knowledge,MLKnow,
+TODO: remove dummy \/ debug tasks,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: remove hard-coded sizes and make relative to parent?,Model Code Modifiability,Model Code Modifiability,MCM,MCC;Layer Conf;MCM;MCR
+TODO: Remove hardcoding of downscaling calculations.,Model Code Reusability,Layer Configuration,Layer Conf,Layer Conf;Data Conf;Abs;MCM;MCR
+TODO: Remove in 0.26 when the _pairwise attribute is removed,Unnecessary Model Code,Unnecessary Model Code,UMC,MLDepend;UMC;MCM
+TODO: remove this method in v1.3.0.,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: remove when dict results are deprecated,Unnecessary Model Code,Unnecessary Model Code,UMC,GC;UMC;PODT
+"TODO: rename kwarg \""forward\"" to \""forward_additive\""",Model Code Comprehension,Model Code Comprehension,MCC,MCC
+TODO: Repeat_elements and tf.split doesn't support dynamic splits.,Custom Data Type,Code Dependency,MLDepend,MLDepend
+TODO: replace init=None by init='auto' in v0.6.0 and remove the warning,Unnecessary Model Code,Weight Configuration,Weight Conf,Weight Conf;Layer Conf;HP Conf;MLDepend
+TODO: Replace Lambda with custom Keras layer for loss.,Layer Configuration,Layer Configuration,Layer Conf,MLKnow;MCC;Layer Conf;Abs;MCR;PQ
+TODO: replace with (stable) Draft6Validator; if available,Custom Data Type,Code Dependency,MLDepend,MLDepend;GC;CDT;MLRelia;Proto
+ToDo: replace with 3d input; when grid_sample will start to support it,Data Processing Configuration,Code Dependency,MLDepend,Layer Conf;MLDepend;Data Conf;MCR
+TODO: replace with unbatch or readout,Custom Data Type,Unnecessary Model Code,UMC,MCC;DMC;GC;UMC;Data Conf;DS Conf;MCR
+TODO: reward computation,Data Processing Configuration,Model Code Comprehension,MCC,
+TODO: rotated_grids might as well give us correctly shaped array in the first place,Data Processing Configuration,Abstraction,Abs,Data Conf;Abs;BE
+TODO: run-on and split module,Data Processing Configuration,Model Code Comprehension,MCC,MCC;Abs;BE;MCM
+TODO: See https:\/\/www.pyimagesearch.com\/2017\/05\/22\/face-alignment-with-opencv-and-python\/,Data Processing Configuration,Machine Learning Knowledge,MLKnow,MLKnow
+TODO: Set interval for the original date ?,Prototype,Data Processing Configuration,Data Conf,Data Conf
+TODO: should port\/ip\/mac address be ignored? yes,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf;DS Conf
+todo: should save tpot model here,Data Storage Configuration,Data Storage Configuration,DS Conf,DS Conf
+TODO: should we return a LogarithmicFilteredSpectrogram?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,MLKnow;CDT;Data Conf;PODT
+TODO: skip on error???,Machine Learning Knowledge,Data Processing Configuration,Data Conf,MCC;Data Conf
+TODO: something if deep 9,Layer Configuration,Layer Configuration,Layer Conf,Layer Conf
+TODO: Something smarter?,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,
+TODO: store something cleaner,Data Storage Configuration,Data Storage Configuration,DS Conf,DS Conf
+TODO: store the actual index in table in case row number is unstable,Data Storage Configuration,Data Storage Configuration,DS Conf,DS Conf;MLRelia
+"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.",Unnecessary Model Code,Unnecessary Model Code,UMC,GC;UMC
+"TODO: the old setup is now called \""pre_training\""; where should this hook be called now?",Model Code Comprehension,Boundary Erosion,BE,MLKnow;GC;BE
+TODO: the second element of the rule is not being used,Data Processing Configuration,Unnecessary Model Code,UMC,UMC
+TODO: the y_train should be given us externally; so far we create it as random values,Model Code Reusability,Data Processing Configuration,Data Conf,MLKnow;Data Conf;MLRelia
+TODO: This branch happens when there's only one content word,Machine Learning Knowledge,Model Code Comprehension,MCC,MCC;Data Conf
+TODO: this flag is somewhat redundant given the flag above; need,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: This is discarding phase. Is that ok?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,MLKnow;Data Conf;MLRelia
+todo: this is O(N^2) and maybe too slow for large graphs.,Model Code Reusability,Machine Learning Knowledge,MLKnow,
+TODO: This is very inefficient and needs fix,Custom Data Type,Unnecessary Model Code,UMC,
+TODO: This matching process is slow. Make it faster; avoid loops where possible.,Prototype,Data Processing Configuration,Data Conf,Data Conf
+TODO: This might not be called corpora,Model Code Comprehension,Model Code Comprehension,MCC,MLKnow;MCC
+TODO: This might not work with numpy types; haven't checked - AD,Machine Learning Knowledge,Plain Old Data Type,PODT,GC;PODT
+TODO: This should be recusive looking for any module with flatten_parameters,Weight Configuration,Layer Configuration,Layer Conf,Layer Conf;Abs
+TODO: This we can change easily to functional style,Abstraction,Model Code Modifiability,MCM,MCC;MCM
+TODO: tree should't need this in this case,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: Try smaller numbers?,Data Processing Configuration,Hyper-parameter Configuration,HP Conf,HP Conf
+TODO: try without copying? could be faster,Machine Learning Knowledge,Unnecessary Model Code,UMC,UMC
+TODO: unroll\/roll are great candidates for a context manager since they're always used in conjunction.,Data Processing Configuration,Abstraction,Abs,MCC;Abs;BE;MCM;MCR
+TODO: update nouns list with only named enitites,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+ToDo: Update with http:\/\/en.wikipedia.org\/wiki\/List_of_emoticons ?,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: Use google-diff-patch-match library,Machine Learning Knowledge,Code Dependency,MLDepend,MLDepend;GC;UMC;Abs
+todo: use Input and Output classes to handle inputs and outputs,Data Storage Configuration,Abstraction,Abs,GC;CDT;Data Conf;PODT;Abs;BE;MCM;MCR
+TODO: Use sklearn.decomposition.TruncatedSVD instead?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,MLKnow;Data Conf;Abs;MCR
+TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,Layer Configuration,Layer Configuration,Layer Conf,MLKnow;Layer Conf;MLDepend;GC;Abs;MCR
+TODO: verify if it is working,Machine Learning Knowledge,Machine Learning Reliability,MLRelia,
+TODO: want to call it activation but namespace; so what to do best?,Model Code Comprehension,Model Code Comprehension,MCC,MCC
+todo: We can potentially reduce memory usage by freeing memory,Data Storage Configuration,Unnecessary Model Code,UMC,
+TODO: we could probably default the monitor to something reasonable,Hyper-parameter Configuration,Hyper-parameter Configuration,HP Conf,HP Conf;MCM
+TODO: we may support size = -1 in the future,Data Storage Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: weight by length here,Data Processing Configuration,Hyper-parameter Configuration,HP Conf,MLKnow;HP Conf;Data Conf;PQ
+TODO: why is the whole distribution computed instead of just min\/max,Data Processing Configuration,Unnecessary Model Code,UMC,MLInter;UMC;Data Conf
+TODO: would be good to add ref from source,Data Processing Configuration,Machine Learning Knowledge,MLKnow,
+TODO: wrap this properly in a with session_context():,Machine Learning Reliability,Boundary Erosion,BE,
+TODO: write a function to do this..,Abstraction,Abstraction,Abs,
+TODO: write index,Data Storage Configuration,Glue Code,GC,GC
+TODO: x;y input should be able to be np arrays; pandas arrays; or tf dataset iterators,Custom Data Type,Glue Code,GC,GC;Data Conf;Abs;MCR
+todo; pass also best score,Weight Configuration,Glue Code,GC,
+todo; pass complete checkpoint as state dictionary,Data Processing Configuration,Data Storage Configuration,DS Conf,Weight Conf;DS Conf;Abs
+too much memory. A lazy load would be better; but later,Data Storage Configuration,Data Processing Configuration,Data Conf,Data Conf;DS Conf
+unused,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+Unused,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+WARNING: bad realtime practice (writing file) TODO: add to a memory buffer and write before exit,Data Storage Configuration,Data Storage Configuration,DS Conf,Data Conf;DS Conf;MCM
+XXX backward compatibility,Code Dependency,Glue Code,GC,GC;MCM
+XXX de-duplicate this with code from Montage somewhere?,Duplicate Feature Extraction Code,Duplicate Model Code,DMC,DMC
+XXX Default number of samples drawn from my arse.,Data Processing Configuration,Hyper-parameter Configuration,HP Conf,HP Conf;Data Conf;MCM
+XXX Disable SimulateModels without CreateTab,Unnecessary Model Code,Unnecessary Model Code,UMC,MLDepend;UMC;BE
+XXX gs = fig.add_gridspec(15; 1),Unnecessary Model Code,Model Code Comprehension,MCC,
+XXX JRK: Should this test whether test_times if a DecodingTime,Machine Learning Knowledge,Machine Learning Reliability,MLRelia,MLKnow;CDT;MLRelia
+XXX might possibly be slow solution; but every worker needs reseted LDA model for every iteration,Machine Learning Knowledge,Boundary Erosion,BE,Weight Conf;Data Conf;BE
+XXX offset type is uint32,Plain Old Data Type,Plain Old Data Type,PODT,PODT;DS Conf
+XXX Remove,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+XXX This is silly.  We should return log densities; not densities.,Machine Learning Reliability,Prediction Quality,PQ,MLKnow;Data Conf;PQ
+XXX when matplotlib 3.3 is min version; replace this with,Code Dependency,Code Dependency,MLDepend,MLDepend;GC
+XXX Would be nice if we could prepare this statement before,Data Storage Configuration,Glue Code,GC,
+XXX: currently scaled to variance=n_samples,Data Processing Configuration,Data Processing Configuration,Data Conf,MLKnow;HP Conf;Data Conf
+XXX: does control flow affect type inference in Numba?,Machine Learning Knowledge,Model Code Comprehension,MCC,
+XXX: How to catch dependence cycles correctly?,Code Dependency,Code Dependency,MLDepend,MLDepend;BE
+"XXX: how to find \""""""""good\"""""""" values for level ?""""",Machine Learning Knowledge,Hyper-parameter Configuration,HP Conf,HP Conf
+XXX: not handling dictionnaries,Plain Old Data Type,Machine Learning Reliability,MLRelia,Data Conf;MCR;MLRelia
+XXX: one could be smarter here,Model Code Comprehension,Abstraction,Abs,
+XXX: Temporary solution to figure out if an estimator is a classifier,Model Code Modifiability,Machine Learning Knowledge,MLKnow,MLKnow;MCC;GC;Abs
+XXX: unify Series\/Array as Array,Custom Data Type,Plain Old Data Type,PODT,GC;CDT;PODT;DS Conf;Abs
+XXX: We re-cache now just to make sure all items get a mozci version.,Data Storage Configuration,Data Storage Configuration,DS Conf,Data Conf;DS Conf
+XXX: where should this be?,Machine Learning Knowledge,Boundary Erosion,BE,BE

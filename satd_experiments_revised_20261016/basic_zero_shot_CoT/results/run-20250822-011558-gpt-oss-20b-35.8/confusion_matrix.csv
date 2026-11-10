@@ -1,0 +1,24 @@
+,Machine Learning Knowledge,Model Interpretability,Model Code Comprehension,Duplicate Model Code,Duplicate Feature Extraction Code,Weight Configuration,Layer Configuration,Hyper-parameter Configuration,Code Dependency,Glue Code,Custom Data Type,Multiple Languages,Unnecessary Model Code,Data Processing Configuration,Plain Old Data Type,Data Storage Configuration,Abstraction,Boundary Erosion,Model Code Modifiability,Model Code Reusability,Prediction Quality,Machine Learning Reliability,Prototype
+Machine Learning Knowledge,5,1,11,2,0,0,1,5,4,1,3,0,4,11,2,1,3,1,3,2,1,1,0
+Model Interpretability,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Model Code Comprehension,0,0,6,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Duplicate Model Code,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Duplicate Feature Extraction Code,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Weight Configuration,0,0,0,0,0,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Layer Configuration,0,0,1,0,0,1,3,0,1,0,0,0,2,1,0,0,0,0,0,0,0,0,0
+Hyper-parameter Configuration,1,0,2,0,0,1,2,4,0,2,0,0,0,3,0,0,0,0,1,0,0,0,0
+Code Dependency,0,0,1,0,0,0,0,0,9,4,0,0,2,3,1,0,1,0,0,0,0,0,0
+Glue Code,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Custom Data Type,1,0,0,0,0,0,0,1,0,1,5,0,3,5,4,0,1,0,1,0,0,0,0
+Multiple Languages,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Unnecessary Model Code,0,0,1,0,0,0,2,1,1,0,0,0,29,0,0,0,0,0,0,0,0,0,0
+Data Processing Configuration,1,0,6,1,0,3,1,4,0,0,0,0,4,48,3,3,4,1,3,1,5,0,0
+Plain Old Data Type,1,0,1,0,0,0,0,0,0,0,1,0,0,1,4,0,0,0,1,0,0,0,0
+Data Storage Configuration,0,0,1,0,0,0,0,3,0,2,1,0,3,7,1,14,1,1,4,0,2,0,0
+Abstraction,0,0,2,0,0,0,0,0,0,1,0,0,1,1,0,0,1,0,1,1,0,0,0
+Boundary Erosion,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+Model Code Modifiability,0,0,1,0,0,0,1,2,0,0,0,0,2,1,0,1,0,0,2,0,1,0,1
+Model Code Reusability,0,0,0,1,0,0,1,2,0,0,0,0,0,7,0,0,2,0,1,2,2,0,0
+Prediction Quality,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,2,0,0
+Machine Learning Reliability,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,1,0
+Prototype,0,0,1,1,0,1,0,2,1,0,0,0,1,6,0,1,2,1,1,0,3,0,0

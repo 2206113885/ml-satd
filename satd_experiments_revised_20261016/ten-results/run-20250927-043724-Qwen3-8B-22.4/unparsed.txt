@@ -1,0 +1,130 @@
+Abbreviation: MLKnow
+Abbreviation: UMC
+Abbreviation: **UMC**
+Abbreviation: UMC
+Abbreviation: UMC
+Abbreviation: MLKnow
+**Abbreviation: UMC**
+Abbreviation: MLDepend
+Abbreviation: **MLKnow**
+Abbreviation: **HP Conf**
+Abbreviation: UMC
+Abbreviation: **MLKnow**
+**Abbreviation:** UMC
+Abbreviation: DMC
+Abbreviation: MLKnow
+Abbreviation: **MLKnow**
+Abbreviation: MLKnow
+Abbreviation: MLKnow
+Abbreviation: **MLKnow**
+Abbreviation: MLKnow
+Abbreviation: **UMC**
+**Abbreviation: CDT**
+Abbreviation: MLKnow
+**Abbreviation: Layer Conf**
+**Abbreviation: UMC**
+Abbreviation: **MLKnow**
+Abbreviation: **MCC**
+Abbreviation: UMC
+Abbreviation: **MLKnow**
+Abbreviation: UMC
+Abbreviation: **DFEC**
+Abbreviation: MLKnow
+Abbreviation: UMC
+Abbreviation: MLKnow
+**Abbreviation: MCC**
+**Abbreviation: UMC**
+Abbreviation: **MCC**
+Abbreviation: **UMC**
+Abbreviation: MLKnow
+**Abbreviation: UMC**
+Abbreviation: **MLDepend**
+**Abbreviation: UMC**
+**Abbreviation: Data Conf**
+**Abbreviation: UMC**
+Abbreviation: **UMC**
+**Abbreviation: MCM**
+**Abbreviation: MLKnow**
+**Abbreviation: GC**
+**Abbreviation: CDT**
+Abbreviation: **UMC**
+Abbreviation: MLDepend
+Abbreviation: GC
+**Abbreviation:** MCM
+**Abbreviation:** UMC
+Abbreviation: **HP Conf**
+Abbreviation: MLKnow
+Abbreviation: **Proto**
+**Abbreviation: UMC**
+Abbreviation: **MCC**
+Abbreviation: MLKnow
+**Abbreviation: DFEC**
+**Abbreviation: DFEC**
+Abbreviation: **HP Conf**
+**Abbreviation: MCR**
+**Abbreviation: UMC**
+Abbreviation: **CDT**
+**Abbreviation: Layer Conf**
+Abbreviation: MLKnow
+Abbreviation: MLKnow
+Abbreviation: UMC
+Abbreviation: MLKnow
+Abbreviation: UMC
+Abbreviation: **UMC**
+Abbreviation: Proto
+Abbreviation: MLDepend
+**Abbreviation: MCM**
+**Abbreviation:** MCM
+**Abbreviation: Data Conf**
+**Abbreviation: MCR**
+**Abbreviation: Proto**
+**Abbreviation: MCM**
+**Abbreviation: MCM**
+Abbreviation: MLKnow
+Abbreviation: MLKnow
+Abbreviation: **Data Conf**
+Abbreviation: MLKnow
+**Abbreviation: UMC**
+Abbreviation: **UMC**
+**Abbreviation: MCM**
+Abbreviation: **MLKnow**
+Abbreviation: **MLKnow**
+**Abbreviation: Data Conf**
+Abbreviation: MLKnow
+**Abbreviation: MCM**
+**Abbreviation: MCM**
+Abbreviation: **MLKnow**
+**Abbreviation:** MLKnow
+Abbreviation: **MCM**
+**Abbreviation:** **MCM**
+Abbreviation: **UMC**
+Abbreviation: **Proto**
+Abbreviation: **HP Conf**
+**Abbreviation: MLKnow**
+**Abbreviation: UMC**
+Abbreviation: MLKnow
+**Abbreviation: UMC**
+**Abbreviation: Data Conf**
+Abbreviation: **UMC**
+**Abbreviation: MLInter**
+**Abbreviation: MCM**
+Abbreviation: **CDT**
+**Abbreviation: UMC**
+Abbreviation: MLKnow
+**Abbreviation: DMC**
+**Abbreviation: DMC**
+Abbreviation: GC
+**Abbreviation:** MCM
+Abbreviation: **UMC**
+**Abbreviation: Data Conf**
+**Abbreviation: UMC**
+Abbreviation: **DS Conf**
+Abbreviation: DMC
+Abbreviation: MLKnow
+**Abbreviation: UMC**
+Abbreviation: UMC
+Abbreviation: MLDepend
+Abbreviation: MLKnow
+Abbreviation: MLKnow
+Abbreviation: MLDepend
+Abbreviation: **MLKnow**

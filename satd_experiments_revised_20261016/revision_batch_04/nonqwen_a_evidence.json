@@ -1,0 +1,472 @@
+{
+  "scope": "Official generation-policy evidence only for CodeLlama7B-Instruct, Llama3.1-8B-Instruct and CodeGemma1.1-7b-it",
+  "retrieved_utc": "2026-10-16T11:33:14.395302+00:00",
+  "experiment_code_modified": false,
+  "models_tokenizers_or_inference_loaded": false,
+  "official_config_files_unavailable_due_to_gating": 3,
+  "models": [
+    {
+      "model_repo": "meta-llama/CodeLlama-7b-Instruct-hf",
+      "official_owner": "Meta",
+      "checkpoint_revision": "4ce0c40b2ea823bd1d8f1f3fd5bc8a7e80d749bc",
+      "checkpoint_revision_source": "Anonymous official HF model API response with SHA; not inferred from local folder names.",
+      "gated": "manual",
+      "config_access": {
+        "README.md": {
+          "http_status": 200,
+          "url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/resolve/4ce0c40b2ea823bd1d8f1f3fd5bc8a7e80d749bc/README.md"
+        },
+        "config.json": {
+          "http_status": 401,
+          "url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/resolve/4ce0c40b2ea823bd1d8f1f3fd5bc8a7e80d749bc/config.json"
+        },
+        "generation_config.json": {
+          "http_status": 401,
+          "url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/resolve/4ce0c40b2ea823bd1d8f1f3fd5bc8a7e80d749bc/generation_config.json"
+        }
+      },
+      "generation_file_numeric_fields_verified": false,
+      "generation_fields": {
+        "do_sample": null,
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "min_p": null,
+        "repetition_penalty": null,
+        "max_new_tokens": null,
+        "bos_token_id": null,
+        "eos_token_id": null,
+        "pad_token_id": null
+      },
+      "unknown_field_reason": "Both config.json and generation_config.json returned HTTP 401 without credentials. No mirrored/family/example values substituted.",
+      "public_metadata": {
+        "architectures": [
+          "LlamaForCausalLM"
+        ],
+        "model_type": "llama",
+        "tokenizer_metadata_keys": [
+          "bos_token",
+          "chat_template",
+          "eos_token",
+          "pad_token",
+          "unk_token"
+        ]
+      },
+      "general_numeric_recommendation_found_in_inspected_official_sources": false,
+      "selected_policy": "fresh_checkpoint_defaults",
+      "required_runtime_source": "Freshly read local checkpoint generation_config.json (not an in-memory script/pipeline config), recording its path/hash and declared identity; alternatively a verified pinned official snapshot. Gated remote access does not prevent adopting actual local checkpoint defaults, but official byte equivalence remains unverified.",
+      "readme": {
+        "file": "sources/nonqwen_a/meta-llama__CodeLlama-7b-Instruct-hf__README.md",
+        "sha256": "ad0056c01418ffca93bef639ae4ce0013addd810fa6bc6a94772146730029dc6",
+        "matching_lines": [
+          {
+            "line": 205,
+            "text": "- [x] Instructions / chat."
+          }
+        ]
+      },
+      "examples": [
+        {
+          "source": "Meta reference example_instructions.py",
+          "temperature": 0.2,
+          "top_p": 0.95,
+          "do_sample": "Sampling is implemented by the Meta reference generator when temperature > 0; not a Transformers checkpoint field.",
+          "classification": "official executable example defaults, not a mandatory universal recommendation",
+          "source_url": "https://github.com/meta-llama/codellama/blob/e81b597e44dbecc2a0dedb9949fdf84adfc22395/example_instructions.py",
+          "source_lines": [
+            14,
+            15
+          ]
+        },
+        {
+          "source": "Meta reference llama/generation.py chat_completion signature",
+          "temperature": 0.6,
+          "top_p": 0.9,
+          "classification": "reference-backend API defaults, not the HF checkpoint generation_config",
+          "source_lines": [
+            298,
+            301,
+            302
+          ]
+        }
+      ],
+      "important_source_correction": "codellama/CodeLlama-7b-Instruct-hf explicitly identifies itself as non-official. Its public numeric/config fields are retained only as legacy conversion evidence and must not be substituted for the gated meta-llama official checkpoint."
+    },
+    {
+      "model_repo": "meta-llama/Llama-3.1-8B-Instruct",
+      "official_owner": "Meta",
+      "checkpoint_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "checkpoint_revision_source": "Anonymous official HF model API response with SHA; not inferred from local folder names.",
+      "gated": "manual",
+      "config_access": {
+        "README.md": {
+          "http_status": 200,
+          "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/0e9e39f249a16976918f6564b8830bc894c89659/README.md"
+        },
+        "config.json": {
+          "http_status": 401,
+          "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/0e9e39f249a16976918f6564b8830bc894c89659/config.json"
+        },
+        "generation_config.json": {
+          "http_status": 401,
+          "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/0e9e39f249a16976918f6564b8830bc894c89659/generation_config.json"
+        }
+      },
+      "generation_file_numeric_fields_verified": false,
+      "generation_fields": {
+        "do_sample": null,
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "min_p": null,
+        "repetition_penalty": null,
+        "max_new_tokens": null,
+        "bos_token_id": null,
+        "eos_token_id": null,
+        "pad_token_id": null
+      },
+      "unknown_field_reason": "Both config.json and generation_config.json returned HTTP 401 without credentials. No mirrored/family/example values substituted.",
+      "public_metadata": {
+        "architectures": [
+          "LlamaForCausalLM"
+        ],
+        "model_type": "llama",
+        "tokenizer_metadata_keys": [
+          "bos_token",
+          "chat_template",
+          "eos_token"
+        ]
+      },
+      "general_numeric_recommendation_found_in_inspected_official_sources": false,
+      "selected_policy": "fresh_checkpoint_defaults",
+      "required_runtime_source": "Freshly read local checkpoint generation_config.json (not an in-memory script/pipeline config), recording its path/hash and declared identity; alternatively a verified pinned official snapshot. Gated remote access does not prevent adopting actual local checkpoint defaults, but official byte equivalence remains unverified.",
+      "readme": {
+        "file": "sources/nonqwen_a/meta-llama__Llama-3.1-8B-Instruct__README.md",
+        "sha256": "ed0e2e86f7a40c38b793b0a04dfd993b2c1dfb34906804f96b999f0bbd8d70e6",
+        "matching_lines": [
+          {
+            "line": 279,
+            "text": "Where to send questions or comments about the model Instructions on how to provide feedback or comments on the model can be found in the model [README](https://github.com/meta-llama/llama3). For more technical information about generation parameters and recipes for how to use Llama 3.1 in applications, please go [here](https://github.com/meta-llama/llama-recipes)."
+          },
+          {
+            "line": 320,
+            "text": "max_new_tokens=256,"
+          },
+          {
+            "line": 353,
+            "text": "inputs = tokenizer.apply_chat_template(messages, tools=[get_current_temperature], add_generation_prompt=True)"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "source": "Official model card Transformers quick start",
+          "max_new_tokens": 256,
+          "classification": "example output cap, not a universal required maximum or a sampling profile",
+          "source_lines": [
+            318,
+            320
+          ]
+        }
+      ],
+      "non_applicable_example": "The earlier saved meta-llama/llama3 example with temperature=.6/top_p=.9 describes Llama 3 (8k context), not proof of Llama 3.1 checkpoint values or a mandatory Llama 3.1 sampling recommendation."
+    },
+    {
+      "model_repo": "google/codegemma-1.1-7b-it",
+      "official_owner": "Google",
+      "checkpoint_revision": "9523c8dbf32bf2130e2de570c478b3bdb1d36101",
+      "checkpoint_revision_source": "Anonymous official HF model API response with SHA; not inferred from local folder names.",
+      "gated": "manual",
+      "config_access": {
+        "README.md": {
+          "http_status": 200,
+          "url": "https://huggingface.co/google/codegemma-1.1-7b-it/resolve/9523c8dbf32bf2130e2de570c478b3bdb1d36101/README.md"
+        },
+        "config.json": {
+          "http_status": 401,
+          "url": "https://huggingface.co/google/codegemma-1.1-7b-it/resolve/9523c8dbf32bf2130e2de570c478b3bdb1d36101/config.json"
+        },
+        "generation_config.json": {
+          "http_status": 401,
+          "url": "https://huggingface.co/google/codegemma-1.1-7b-it/resolve/9523c8dbf32bf2130e2de570c478b3bdb1d36101/generation_config.json"
+        }
+      },
+      "generation_file_numeric_fields_verified": false,
+      "generation_fields": {
+        "do_sample": null,
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "min_p": null,
+        "repetition_penalty": null,
+        "max_new_tokens": null,
+        "bos_token_id": null,
+        "eos_token_id": null,
+        "pad_token_id": null
+      },
+      "unknown_field_reason": "Both config.json and generation_config.json returned HTTP 401 without credentials. No mirrored/family/example values substituted.",
+      "public_metadata": {
+        "architectures": [
+          "GemmaForCausalLM"
+        ],
+        "model_type": "gemma",
+        "tokenizer_metadata_keys": [
+          "bos_token",
+          "chat_template",
+          "eos_token",
+          "pad_token",
+          "unk_token",
+          "use_default_system_prompt"
+        ]
+      },
+      "general_numeric_recommendation_found_in_inspected_official_sources": false,
+      "selected_policy": "fresh_checkpoint_defaults",
+      "required_runtime_source": "Freshly read local checkpoint generation_config.json (not an in-memory script/pipeline config), recording its path/hash and declared identity; alternatively a verified pinned official snapshot. Gated remote access does not prevent adopting actual local checkpoint defaults, but official byte equivalence remains unverified.",
+      "readme": {
+        "file": "sources/nonqwen_a/google__codegemma-1.1-7b-it__README.md",
+        "sha256": "87a1c6bba42f75fb7b95b6ad6986facfd1e5fe1728ac7ed97eb7e6c4f08479f6",
+        "matching_lines": [
+          {
+            "line": 18,
+            "text": "max_new_tokens: 200"
+          },
+          {
+            "line": 51,
+            "text": "### Sample Usage"
+          },
+          {
+            "line": 66,
+            "text": "outputs = model.generate(**input_ids)"
+          },
+          {
+            "line": 96,
+            "text": "prompt = tokenizer.apply_chat_template(chat, tokenize=False, add_generation_prompt=True)"
+          },
+          {
+            "line": 118,
+            "text": "outputs = model.generate(input_ids=inputs.to(model.device), max_new_tokens=150)"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "source": "Official model card code generation example",
+          "generation_call": "model.generate(**input_ids)",
+          "classification": "does not override sampling parameters; resolved checkpoint/library configuration applies",
+          "source_lines": [
+            66
+          ]
+        },
+        {
+          "source": "Official model card chat example",
+          "max_new_tokens": 150,
+          "classification": "example output budget only; README widget metadata also has max_new_tokens=200, neither is a universal required maximum",
+          "source_lines": [
+            18,
+            118
+          ]
+        }
+      ],
+      "template_requirement": "Use the instruction-tuned chat template; the public template rejects system roles. Keep system instructions in an allowed user turn when needed."
+    }
+  ],
+  "legacy_conversion_boundary": {
+    "repo": "codellama/CodeLlama-7b-Instruct-hf",
+    "revision": "22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed",
+    "official_checkpoint": false,
+    "explicit_non_official_notice": {
+      "file": "sources/nonqwen_a/codellama__CodeLlama-7b-Instruct-hf__README.md",
+      "sha256": "44f72c25308976cc32e4b9b15d29cf60c946d5885960f60695d8c18582292f23",
+      "matching_lines": [
+        {
+          "line": 13,
+          "text": "> This is a non-official Code Llama repo. You can find the official Meta repository in the [Meta Llama organization](https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf)."
+        }
+      ]
+    },
+    "generation_config": {
+      "_from_model_config": true,
+      "bos_token_id": 1,
+      "eos_token_id": 2,
+      "transformers_version": "4.33.0.dev0"
+    },
+    "sampling_fields_present": [],
+    "interpretation": "At this conversion checkpoint all sampling fields are absent. Any concrete default values supplied by HF are library-version defaults, not a Meta sampling recommendation and not verified values of the official gated repo."
+  },
+  "hf_inheritance_boundary": {
+    "reference_library_version": "4.51.3",
+    "historical_server_version_claimed": false,
+    "current_runtime_version_must_be_recorded": true,
+    "library_constructor_defaults_for_illustration_only": {
+      "do_sample": false,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 50,
+      "repetition_penalty": 1.0,
+      "max_new_tokens": null
+    },
+    "do_not_impute_library_defaults_to_gated_checkpoints": true,
+    "configuration_precedence": "Direct generate overrides > non-global values in provided generation_config > possible model defaults (unless disabled) > clean library GenerationConfig defaults. Exact behavior is version-specific.",
+    "use_model_defaults_edge": "In the pinned v4.51.3 implementation, a provided generation_config can still inherit model.generation_config values when use_model_defaults=True, or when omitted and the model generation_config transformers_version>=4.50. Set use_model_defaults=False in supported generate implementations for this unified policy; this is a generate argument, not a GenerationConfig field. Token-ID fallback is still handled separately by that version.",
+    "pipeline_boundary": "Pipeline creates its own deep-copied generation_config and applies task_specific_params; future versions can add task defaults. This task explicitly rejects pipeline/script custom defaults as the official baseline.",
+    "sources": [
+      {
+        "file": "sources/nonqwen_a/hf_generation_config_excerpt.py",
+        "sha256": "25340d99cf36270d0fda709304939d3bbd7f02e534c1bc849983b0957b2005d7",
+        "matching_lines": [
+          {
+            "line": 14,
+            "text": "self.do_sample = kwargs.pop(\"do_sample\", False)"
+          },
+          {
+            "line": 32,
+            "text": "self.temperature = kwargs.pop(\"temperature\", 1.0)"
+          },
+          {
+            "line": 33,
+            "text": "self.top_k = kwargs.pop(\"top_k\", 50)"
+          },
+          {
+            "line": 34,
+            "text": "self.top_p = kwargs.pop(\"top_p\", 1.0)"
+          },
+          {
+            "line": 40,
+            "text": "self.repetition_penalty = kwargs.pop(\"repetition_penalty\", 1.0)"
+          },
+          {
+            "line": 41,
+            "text": "self.encoder_repetition_penalty = kwargs.pop(\"encoder_repetition_penalty\", 1.0)"
+          },
+          {
+            "line": 104,
+            "text": "self._from_model_config = kwargs.pop(\"_from_model_config\", False)"
+          },
+          {
+            "line": 109,
+            "text": "if not self._from_model_config:"
+          },
+          {
+            "line": 123,
+            "text": "def from_model_config(cls, model_config: PretrainedConfig) -> \"GenerationConfig\":"
+          },
+          {
+            "line": 136,
+            "text": "config_dict.pop(\"_from_model_config\", None)"
+          },
+          {
+            "line": 141,
+            "text": "generation_config = cls.from_dict(config_dict, return_unused_kwargs=False, _from_model_config=True)"
+          }
+        ]
+      },
+      {
+        "file": "sources/nonqwen_a/hf_generate_precedence_excerpt.py",
+        "sha256": "a371ac573c4d0411f58c9333e1e6724b2183c631dde8054e10fd0cf82ba8b7cd",
+        "matching_lines": [
+          {
+            "line": 4,
+            "text": "self, generation_config: Optional[GenerationConfig], use_model_defaults: Optional[bool] = None, **kwargs: Dict"
+          },
+          {
+            "line": 10,
+            "text": "# parameterization priority:"
+          },
+          {
+            "line": 47,
+            "text": "# - `use_model_defaults`: let's fallback ALL default values to the model's generation config"
+          },
+          {
+            "line": 49,
+            "text": "model_base_version = version.parse(version.parse(self.generation_config.transformers_version).base_version)"
+          },
+          {
+            "line": 50,
+            "text": "if use_model_defaults is True or ("
+          },
+          {
+            "line": 51,
+            "text": "use_model_defaults is None and model_base_version >= version.parse(\"4.50.0\")"
+          },
+          {
+            "line": 79,
+            "text": "model_kwargs = generation_config.update(**kwargs)"
+          }
+        ]
+      },
+      {
+        "file": "sources/nonqwen_a/hf_pipeline_config_excerpt.py",
+        "sha256": "5b77b0a359ae5fe866c35367b31eb85325da7fc224e949fd0c82ee4cd485c92a",
+        "matching_lines": [
+          {
+            "line": 10,
+            "text": "# L1007             self.generation_config = copy.deepcopy(self.model.generation_config)"
+          },
+          {
+            "line": 13,
+            "text": "# L1010             task_specific_params = self.model.config.task_specific_params"
+          },
+          {
+            "line": 14,
+            "text": "# L1011             if task_specific_params is not None and task in task_specific_params:"
+          },
+          {
+            "line": 15,
+            "text": "# L1012                 this_task_params = task_specific_params.get(task)"
+          },
+          {
+            "line": 18,
+            "text": "# L1015                 self.generation_config.update(**this_task_params)"
+          },
+          {
+            "line": 23,
+            "text": "# L1020                 and self.generation_config.pad_token_id is None"
+          },
+          {
+            "line": 25,
+            "text": "# L1022                 self.generation_config.pad_token_id = self.tokenizer.pad_token_id"
+          }
+        ]
+      }
+    ]
+  },
+  "root_implementation_policy": {
+    "profile_mode": "fresh_checkpoint_defaults_with_explicit_source_identity",
+    "profile_source_priority": [
+      "Fresh local MODEL_PATH/generation_config.json, or a verified pinned official snapshot if already available; record exact file SHA256, declared repo and whether official equivalence was verified. No model download or authentication is required merely because remote audit access is gated.",
+      "If the local checkpoint genuinely has no generation_config.json, derive from that checkpoint raw config.json using the recorded HF library, explicitly labeling model-config plus library fallback. HTTP 401 is not evidence of file absence.",
+      "Only if no readable local checkpoint generation/config data exist: fail configuration preparation explicitly rather than copy earlier script/pipeline values or invent numbers."
+    ],
+    "prohibited_baselines": [
+      "model.generation_config after any script mutation",
+      "pipe.generation_config or pipeline task defaults",
+      "_R07_EFFECTIVE_GENERATION_CONFIG or other previous experiment profiles",
+      "The non-official codellama conversion as automatic replacement for official Meta defaults"
+    ],
+    "allowed_experiment_controls": [
+      "Retain the explicitly chosen per-stage max_new_tokens/output-budget contract as experiment policy, separately from sampling defaults.",
+      "Keep deterministic audited seeds, full input/context validation, validated template and observed stop-status logging.",
+      "Any necessary device/padding handling must be recorded separately and cannot silently replace official EOS/termination values."
+    ],
+    "effective_generation_call": "Pass a freshly reconstructed checkpoint config explicitly. Where supported pass use_model_defaults=False directly to model.generate so omitted/global-default fields cannot re-inherit script-mutated model settings. Ensure any token-ID fallback also references the fresh checkpoint baseline, and record final resolved configuration.",
+    "record_each_run": [
+      "official repo ID and immutable revision",
+      "clean configuration file paths and SHA256 hashes",
+      "raw checkpoint fields and fields filled by the HF library",
+      "installed transformers version",
+      "official-default baseline, explicit experiment overrides, and final effective configuration separately",
+      "use_model_defaults policy and supported-version boundary",
+      "source identity confidence: verified remote pinned snapshot vs locally claimed checkpoint metadata"
+    ],
+    "code_generation_not_performed": true,
+    "gated_access_policy": "Use real fresh local checkpoint values under the user-authorized checkpoint-default policy; distinguish locally observed values from remotely verified official values. Do not prefill unknown values in this audit."
+  },
+  "sources_manifest": "sources/nonqwen_a/retrieval_manifest.json",
+  "source_limitations": [
+    "No model/tokenizer was instantiated or run.",
+    "HTTP 401 does not mean generation_config.json is absent, nor that do_sample is False.",
+    "The current official repo API SHA identifies the inspected snapshot; it does not establish what checkpoint produced the historical paper results.",
+    "No universal sampling prescription was established by the inspected model cards, official reference README/examples and checkpoint metadata. Official examples remain examples."
+  ],
+  "local_execution_boundary": "A gated official repository is an audit visibility limitation, not an instruction to download/re-authenticate or block use of existing readable local checkpoint defaults. The official numeric fields remain unknown in this evidence; future values must come from actual local bytes and be accurately labeled."
+}

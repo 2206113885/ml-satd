@@ -1,0 +1,29 @@
+R46 — 2026-10-16
+用户规则：明确作者推荐 > 模型 generation_config.json > 实际安装框架默认。
+只修改代码与静态检查；没有执行实验、模型、分词器、实验函数或测试。
+
+修改的现有共享文件：official_generation.py、official_generation_profiles.json、revision_runtime.py。
+这些支持文件服务于已接入 official_profile=True 的 102 份核心脚本 / 115 处调用。
+Qwen3 原生思考/非思考分开；保留原阶段输出上限、seed、输入、prompt、数据与结果。
+Python 旧函数/替换语句原处注释保留；JSON 旧值以 previous_* 字段及 before 备份保留。
+
+去掉 GPT-OSS 上一版从参考采样实现推断的 Top-K=0 / 中性过滤器覆盖。
+仅温度=1、Top-P=1 为明确作者推荐；其余遵循模型文件与框架默认。
+Qwen3 非思考 do_sample、Qwen2.5-Coder 全部采样值回到 checkpoint 来源。
+不再把 do_sample=True 当作所有模型的通用默认。
+
+五款受限模型证据由用户补齐，保留 JSON / 截图、转录与来源元数据。
+Llama3.1: do_sample=true, temperature=0.6, top_p=0.9。
+CodeLlama / CodeGemma / Gemma2: 文件未指定采样值，回退框架默认 do_sample=False。
+Gemma3: do_sample=true, top_p=0.95, top_k=64，温度缺省为框架默认。
+用户提供的 main 文件与截图不伪称为已独立核实匹配此前完整固定 revision。
+未来运行优先读取实际本地 checkpoint；缺省值来自实际安装的框架；日志记录实际数值与来源。
+
+环境：transformers_version 为序列化元数据，不是精确版本安装指令。
+用户确认历史模型能正常完成推理，可支持基本运行兼容性。
+仅凭版本与该元数据不同，不列为缺陷或重跑原因。
+固定共同兼容环境，真实依赖冲突再拆分；同一模型对照固定并记录版本。
+没有修改环境或依赖锁文件；没有执行任何包安装或升级。
+
+详细证据、表格、静态检查与差异见本目录相应文件。
+历史批次报告保留其当时记录，本轮 R46 表为当前生成策略说明。

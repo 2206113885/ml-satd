@@ -1,0 +1,8 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+  "model_name": "codegemma-1.1-7b-it",
+  "run_dir": "results/run-20250810-050157-codegemma-1.1-7b-it",
+  "max_new_tokens": 20,
+  "fallback_abbr": "Data Conf"
+}

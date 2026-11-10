@@ -1,0 +1,10 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b",
+  "model_name": "gpt-oss-20b",
+  "run_dir": "results/run-20250824-074839-gpt-oss-20b",
+  "max_new_tokens": 32768,
+  "two_stage": true,
+  "unknown_coarse": 0,
+  "unknown_fine": 0
+}

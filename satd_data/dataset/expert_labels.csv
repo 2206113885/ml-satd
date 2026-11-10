@@ -1,0 +1,394 @@
+comment,gemma,qwen,ML TD Type
+!TODO: In some cases; US is not enough to hold the complete number,PODT,Data Conf,MLKnow
+# reverse bw; before concat TODO,UMC,UMC,Layer Conf
+# TODO : load landmarks in validation and test set also. I'm too sleepy to do it today -_- zzz... zzz...,Data Conf,Data Conf,Data Conf
+## elif (): ## FIXME: handle other bases here,MLKnow,MCC,Proto
+#TODO: improve the copying of parameters,Weight Conf,HP Conf,HP Conf
+@todo nrows is for testing only!,UMC,UMC,BE
+@todo: arabtex and iso8859-6 need individual handling because in some cases using one-two mapping,MLKnow,CDT,Data Conf
+@TODO: need better solutions,MLKnow,MLKnow,MLKnow
+@TODO: remove time usage; use it under the hood,UMC,UMC,UMC
+[todo]: this is a bug; predict_proba should not change,MLInter,MCM,MCM
+"\""\""\"" || Corpus in CSV format. TODO: still serializes to SVMLight format; feel free to change this. || \""\""\""",Data Conf,Data Conf,Data Conf
+"\""\""\"" || Simple Gaussian Mixture model plotting example ||  || TODO: use the faithful dataset || \""\""\""",MLKnow,Data Conf,Data Conf
+"\""\""\"" Turn compiler.ast structures back into executable python code. ||  ||     The unparse method takes a compiler.ast tree and transforms it back into ||     valid python code.  It is incomplete and currently only works for ||     import statements; function calls; function definitions; assignments; and ||     basic expressions. ||  ||     Inspired by python-2.5-svn\/Demo\/parser\/unparse.py ||  ||     fixme: We may want to move to using _ast trees because the compiler for ||            them is about 6 times faster than compiler.compile. || \""\""\""",MCC,MCC,CDT
+"\""\""\""Converts legacy encodings into Unicode || TODO for replacer.py: ||  - add perseus-style iota subscript and diaeresis || \""\""\""",UMC,GC,Data Conf
+"\""\""\""Converts legacy encodings into Unicode. ||  || TODO: Rm regex dependency || TODO: Add tests || \""\""\""",MLDepend,MLDepend,MLDepend
+"\""\""\""Models. ||  || Models are objects which take Tensor(s) as input; perform some computation on  || those Tensor(s); and output probability distributions. ||  || TODO: more... ||  || * :func:`.Model` || * :func:`.ContinuousModel` || * :func:`.DiscreteModel` || * :func:`.CategoricalModel` || * :func:`.save_model` || * :func:`.load_model` ||  || ---------- ||  || \""\""\""",MLKnow,MCC,MCM
+"\""\""\""Module dedicated to extraction of Model Based Metafeatures. ||  || Todo: ||     * Implement metafeatures. ||     * Improve documentation. || \""\""\""",DFEC,MCC,Data Conf
+"\""\""\""Process downloaded or local corpora from one format into another. || Some formatting can happen here; or invoke language-specific formatters in || other files. ||  || #TODO: Add TLG & PHI text cleaners from KJ's IPython notebooks || #TODO: Add non-ascii stripper || #TODO: Add generic HTML stripper || \""\""\""",Data Conf,Data Conf,Data Conf
+"\""\""\""The Imperial Aramaic alphabet; plus simple script to transform || a Hebrew transcription of an Imperial Aramaic text to its own Unicode block. ||  || TODO: Add Hebrew-to-Aramaic converter || \""\""\""",MLKnow,Proto,Data Conf
+\/\/TODO in future add arguments compatibility check,MLKnow,Data Conf,HP Conf
+apparently package_deps are broken in 3.4,MLDepend,MLDepend,MLDepend
+BETTER FIX: iterate through; if length = 0; then bump it up to 0.125,Data Conf,Data Conf,Proto
+circular shift the signal (needed for correct phase),Data Conf,MCC,Data Conf
+DEPRICATE? I don't think this is needed anymore,UMC,UMC,UMC
+Double newlines seem to mess with the rendering,GC,PODT,Data Conf
+early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),HP Conf,HP Conf,PQ
+else:  # TODO check that the variation wasn't already in there,MLKnow,MCC,Proto
+env = ScaledFloatFrame(env)  # TODO: use for dqn?,MLKnow,UMC,MLKnow
+find out why prefix neg_ is needed,MLKnow,MCC,MLKnow
+FIXME : adhoc (answer being last word); not ignoring single question,MLKnow,MCC,Data Conf
+FIXME annoying hack for batching different sized shapes;,Data Conf,MCC,MCR
+FIXME don't l2_normalize for any metric,HP Conf,Data Conf,Data Conf
+FIXME homogeneize the meaning of margin parameter,HP Conf,HP Conf,HP Conf
+FIXME non-uniform sample weights not yet supported,Weight Conf,Weight Conf,Weight Conf
+FIXME not sure what are those CB1 \/ CB2,MLKnow,MCC,MLKnow
+FIXME This will make sense when all controllers are in one file (like task.py),BE,MCC,DS Conf
+FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,DMC,DFEC,GC
+FIXME: Allow some diff; e.g. on repr style text in text\/plain,MLInter,Data Conf,Proto
+FIXME: Handle execution_count (always change to None?),UMC,Data Conf,MLKnow
+FIXME: Hardcoded usually sucks,MLKnow,Data Conf,DS Conf
+FIXME: if we inherit from scipy.io.netcdf.NetCDFFile and omit the self.nc,CDT,CDT,MLKnow
+FIXME: INDRA's section_type entry is meant to contain,MLKnow,CDT,CDT
+FIXME: Need to check if mod is the equivalent of floorMod in NumPy,MLKnow,MCC,MLKnow
+FIXME: need to implement sample_weight in Ridge,Weight Conf,Weight Conf,Weight Conf
+FIXME: Only keeping the first label,UMC,UMC,Data Conf
+FIXME: pixel_classes dict needs to be populated with classes obtained from target,MLKnow,Data Conf,Data Conf
+"FIXME: Return type \""None\"" of \""fit\"" incompatible with return type \""float\"" in supertype \""Model\""",MLKnow,MCC,PODT
+FIXME: support for many evaluators; maybe event support,MLKnow,GC,Proto
+FIXME: The code works with EpisodicReplayBuffer,MLKnow,MCC,CDT
+FIXME: this is kind of hackish; but being able to simply set,MLKnow,MCC,MCC
+FIXME: this needs to become more generic; we need to find the actual so in the python root,MCR,MCR,MCR
+FIXME: this representation of covars is going to lose for caching,UMC,DS Conf,DS Conf
+FIXME: Use linebased diff of some types of outputs:,UMC,MCC,Data Conf
+FIXME: What about the next diff entry?,MLKnow,MCM,MLKnow
+FIXME: What if we never find a fail-high?,MLKnow,MLRelia,MLKnow
+FIXME_Numba#5157: remove np.asarray and return as list,UMC,PODT,DS Conf
+Force shrinking of the mask if needed (and possible),Data Conf,DS Conf,Data Conf
+Freeze weights - TODO: NOT IMPLEMENTED!,Weight Conf,Weight Conf,Weight Conf
+h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,Layer Conf,MCC,HP Conf
+handle BoxedSeries and list\/set of BoxedSeries; TODO: others?,CDT,CDT,CDT
+if this is needed.,UMC,UMC,MLKnow
+IMPORTANT: keep matrices in suitable order for matrix products; failing to do so gives 8x lower performance :(,Data Conf,MCC,MCR
+In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,MLKnow,PODT,PODT
+in_dim=(4; 8; 8; 8); # TODO: Needs fix when giving a randon in_dim,MLKnow,Data Conf,MCR
+Initialize model (TODO: really necessary?),UMC,UMC,MLKnow
+It's only needed for a specific purpose in the short term; will go.,UMC,UMC,Layer Conf
+needed so command completion and help can use it,GC,GC,DS Conf
+needed to sklearn comparability,CDT,MLDepend,MLDepend
+needed to sklearn comparability,CDT,MLDepend,MLDepend
+needed?,UMC,UMC,UMC
+normed_cross_entropy # TODO,HP Conf,MCC,HP Conf
+NOTE: probably more efficient to sort then stride by nt_regions,UMC,Data Conf,Data Conf
+nv by ns dot ns by m -> nv by m  # TODO: Change to CSC for speed?,Weight Conf,DS Conf,Data Conf
+once they are no longer needed in the schedule or by,UMC,UMC,DS Conf
+Pass on diff to external difftool (TODO: store in global metadata at end instead of in separate diff dicts?),GC,GC,DS Conf
+probably not needed; transition,UMC,UMC,UMC
+"r\""\""\""Run inference on random sequences many times; saving the top results. ||  || This module is designed to run inference on a trained aptamers TF model || to score many sequences and then write out the top scoring sequences to || be used in other analysis. For example; these top predicted sequences || can read in the colab picking sequences in order || to validate the TF model. ||  || This module uses the standard aptamers tensorflow infrastructure to run || the inference. This is the inferer class defined in || learning\/eval_feedforward and described in the Aptamers TensorFlow Doc. ||  || Inference is generally run in batches of sequences; so a MapFlat function || is used to combine the results of interference into a flattened list || of (sequence; score) pairs. (In other words; each map function returns || a list of (sequence; score) pairs and these results are combined into || one list of pairs. Using a standard Map function would result in a || list of lists which is not what we want.) From there; the Top.Of || combiner returns only the top results; sorted by highest score. These || are then written to a text file. ||  || For now; each batch creates its own inferer; causing each map function || to have more overhead. Because of this;batch sizes around the default of || 10000 are performant. Fixing this in the future means converting the || MapFlat to a ParDo and initializing the inferer in start_bundle. || This module runs inference 1 billion times in 50 minutes so it || is sufficient for now ||  || Run locally with: ||  ||   :search_inference -- --flume_exec_mode=UNOPT \\ ||   --target_name='target' \\ ||   --model_dir=xxx \\ ||    --checkpoint_path='model.ckpt-312500' \\ ||    --output_name=xxx\/base30_1B_inference_top2k ||  || \""\""\""",MLKnow,MCC,CDT
+Random Warp # TODO change masks to have a input mask and a warped target mask,MLInter,MCC,HP Conf
+seem out of place. If you were able to do better; feel free to share your,MLKnow,MCC,PQ
+self.clearChanges() #TODO perhaps?,UMC,UMC,DS Conf
+self.mpc_sum(3; -5) TODO: Future work: how to handle gracefully minus numbers,MLKnow,MCC,MLKnow
+should be WeightNorm here TODO.,Weight Conf,Weight Conf,Layer Conf
+tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,Weight Conf,MLDepend,MLDepend
+this importing of matplotlib is needed to run on the cluster,ML,MLDepend,MLDepend
+This is a hack to allows inference when the <go> token,MLInter,MCC,MCM
+THIS IS A VERY UGLY FUNCTION because it has hardcoded 0\/4\/5 integers for each of the metric. I need to make an enumerated class for this!,CDT,MCC,MCC
+time to fix. TODO: optimize the crap out of this,UMC,UMC,Data Conf
+TODO - can remove one of these m0 restores if A and B both TLU,UMC,UMC,MLKnow
+TODO - does this handle N-dim tensors correctly?,MLKnow,MCC,MLKnow
+TODO - in the code it is different - why?,MLKnow,MCC,MLKnow
+TODO (pradeep): Sort the indices and do intersections in order; so that we can return the,UMC,MCC,Data Conf
+TODO (ytz): really; we want at least one active and inactive in both scenarios.,MLKnow,PQ,Data Conf
+TODO : add these in the options. (None; None) => no limit,HP Conf,MCC,Data Conf
+TODO : Any other options,MLKnow,MCC,MLKnow
+TODO : market value,MLKnow,MLKnow,Data Conf
+TODO : removal,UMC,UMC,UMC
+TODO : this is quite bad in term of execution speed. We need to fix this.,UMC,UMC,Data Conf
+"TODO accept_sparse=\""csc\""",HP Conf,Data Conf,Data Conf
+TODO add general Distribution,CDT,Data Conf,Data Conf
+TODO add index to xls file,DS Conf,Data Conf,Data Conf
+TODO add introductory explanation,MLKnow,MLKnow,Data Conf
+TODO add support for other metrics (ex. euclidean; angular),MLKnow,Data Conf,Proto
+TODO add test for keypoints once their handling was improved in Convolve,MLKnow,MCC,MLDepend
+TODO add vertical gradient alpha to have fog only at skylevel\/groundlevel,Weight Conf,Data Conf,Data Conf
+TODO anticipate multi-agents for AEB space,MLKnow,MLKnow,DS Conf
+TODO change as soon as svhn has a val set :),Proto,Data Conf,DS Conf
+TODO change the way attns is returned dict => list or tuple (onnx),MCC,MCC,Data Conf
+TODO change to np.partition for PERF,Weight Conf,Data Conf,DS Conf
+TODO check for each tentacle specified if update is available (with requirements),MLKnow,Data Conf,MLDepend
+TODO check results after standardizing num ft once a ml algorithm is ready to test,Data Conf,Data Conf,MLDepend
+TODO checkpoints; incremental save,Proto,Data Conf,Proto
+TODO combine these values to get a final prediction!,HP Conf,MCC,Data Conf
+TODO confirm that multiple eigenvalues of 1 means the rotation,MLInter,MLInter,MLKnow
+ToDo consider 3D case --> do that by using tag->size,UMC,MCC,Data Conf
+TODO cpickle vs json,CDT,DS Conf,DS Conf
+TODO Dehaze with 1\/t,UMC,MCC,Data Conf
+TODO design an API interface for advanced access as an importable package,GC,GC,Abs
+TODO double num_filters,Weight Conf,HP Conf,HP Conf
+TODO Figure out how to distinguish oxidation states,MLKnow,MLKnow,MLKnow
+TODO figure out what exactly size does,MLKnow,MCC,MLKnow
+TODO ForceSign,MLKnow,MCC,HP Conf
+TODO generalise to columns with series of unequal length,MCR,MCR,MCR
+TODO generalise to series-to-series functions and function kwargs,MCR,MCR,Data Conf
+TODO handle 1d series; not only 2d dataframes,UMC,Data Conf,Data Conf
+ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,MLKnow,MCC,Abs
+TODO if without momentum; weights should not change too,Weight Conf,Weight Conf,Weight Conf
+TODO Implement,MLKnow,Proto,HP Conf
+TODO implement generic method,MCR,MCM,Abs
+TODO implement multi-gpu training and compare performance,PQ,PQ,Proto
+TODO improve the regex here,MLKnow,MCC,Data Conf
+"TODO last token include: \""&& $last_token[...]\""",MLKnow,MCC,Data Conf
+TODO make paf_scored not part of self?,MCM,MCC,Abs
+TODO make threshold a variable,HP Conf,HP Conf,CDT
+TODO max in one tensor,Weight Conf,MCC,Layer Conf
+TODO move these registrations to backend-specific files,GC,GC,Proto
+TODO normalice to make sum up to 1?,Data Conf,Data Conf,Data Conf
+todo not support dense,MLKnow,DS Conf,UMC
+TODO Option for string lenght,MLKnow,Data Conf,DS Conf
+TODO Promote this to a Funsor subclass.,MCM,MCR,MCR
+TODO refactor second part of if statement when implementing live model prediction,MCM,MCC,MCC
+TODO remove,UMC,UMC,UMC
+TODO remove later.,UMC,UMC,UMC
+TODO remove this,UMC,UMC,UMC
+TODO replace this code with the following commented out code after viz is fixed,UMC,UMC,MLDepend
+TODO replace this speedup implementation with nni.compression.torch.ModelSpeedup,UMC,MCM,Layer Conf
+TODO replace whole pandas data container as input argument with separated metadata container,DS Conf,Data Conf,DS Conf
+TODO replace with Streamlines,UMC,MCC,CDT
+TODO save all the results to a json inside the experiment's folder,DS Conf,DS Conf,DS Conf
+TODO Search the web or use other algorithms,MLKnow,MLKnow,MLKnow
+TODO Send the context back into some list maintained by,GC,GC,DS Conf
+TODO Set bioassembly info,Data Conf,Data Conf,Data Conf
+TODO Should this stay generic? (point),MCM,MCR,MLKnow
+TODO stim channel exclusion,Data Conf,MCC,Data Conf
+TODO support recursive parfor; multi-D; mutiple body blocks,MLKnow,MCC,Proto
+todo sweep,HP Conf,UMC,MCM
+TODO switch similar statements to work inplace (w\/o making a copy),UMC,DMC,MCR
+TODO These ratios can't be hardcoded,HP Conf,Data Conf,MCR
+TODO this code is currently necessary for the async_fit method in websocket_client.py,UMC,UMC,HP Conf
+TODO this is too general; register all ops,MLKnow,MCC,Proto
+TODO this is wrong for other entitiey types nor appearing in the edge,MLKnow,MCC,CDT
+TODO this vector is very sparse; we can make it more memory efficient,UMC,DS Conf,DS Conf
+TODO to be modified,MCM,MCM,MCM
+TODO Update and move now this isn't used here,UMC,UMC,UMC
+TODO update these - the sklearn transformation class should be able,CDT,Data Conf,CDT
+TODO validate and normalize to \/path\/to\/variable,Data Conf,Data Conf,Data Conf
+TODO validate configuration and set defaults,HP Conf,HP Conf,DS Conf
+TODO validation_split is not used,Data Conf,Data Conf,UMC
+TODO WIP temp_coherence_loss # assumes all sequences in the dataset share at least one same 3D pos of Baxter arm,MLKnow,MCC,HP Conf
+TODO wouldn't it be better with a set rather than a list?,CDT,MCC,DS Conf
+TODO write a warning,MLKnow,MLKnow,MLInter
+"TODO(ahundt) difference between \""redundant\"" and regular proto parsing; figure out how to deal with grasp_success rename properly",Proto,Proto,MLKnow
+TODO(ahundt) make more efficient,UMC,MCM,Data Conf
+TODO(ahundt) maybe the rotation component of this needs to be inverted due to sva implementation?,MLInter,MCC,MLKnow
+TODO(b\/119775953): fix the circular dependencies.,MLDepend,BE,MLDepend
+TODO(beam2d): Fix after supporting correct dtype promotion.,CDT,PODT,CDT
+TODO(crcrpar): Improve resource computation\/allocation algorithm.,UMC,Data Conf,DS Conf
+TODO(dbieber): Move this logic into the dataset definition.,Data Conf,Data Conf,BE
+TODO(fstahlberg): Move to config,HP Conf,Data Conf,MCM
+TODO(rbharath): The script expects that all columns in xlsx\/csv files,MLKnow,Data Conf,Proto
+TODO(rliaw): This behavior is probably undesirable; but right now,MLKnow,MLKnow,Proto
+TODO(sonots): Implement in C++,ML,ML,ML
+TODO(sven): Add once ModelV1 is deprecated and we no longer cause circular,UMC,UMC,MLDepend
+TODO(tokunaga): the number of processes should be configurable,HP Conf,Data Conf,MCM
+TODO(vsatish): Figure out why this isn't printed.,MLKnow,MCC,MLKnow
+TODO. get rid of from_model_pt,UMC,UMC,UMC
+TODO: (sven) rename to simply stats_fn to match eager and torch.,MCC,MCC,Abs
+TODO: @trask @theo could you take a look at this if you have better ideas on how to get these parameters,HP Conf,HP Conf,MLKnow
+todo: accurate Value,PQ,PQ,MLRelia
+TODO: add a complete frame_size; to cover the whole audio signal?,Data Conf,Data Conf,MLKnow
+TODO: add backward images also.,UMC,Data Conf,Data Conf
+TODO: add datetype conversion,CDT,Data Conf,DS Conf
+TODO: add inheritance from Graph once implemented,MLDepend,MCM,MLDepend
+TODO: add more tags based on the scikit-learn,MLKnow,Data Conf,Proto
+TODO: Add this to configuration framework,HP Conf,Data Conf,Data Conf
+TODO: arbitrary threshold is problematic,HP Conf,PQ,MCR
+TODO: assertWarns exist only for Python 3.2+; test in all versions,MLKnow,MLDepend,MLDepend
+TODO: At the moment LHUC is RNN specific. We should support other models as well.,MLKnow,MCR,MCR
+TODO: auto detect dtype,PODT,PODT,Data Conf
+TODO: Basically identical to `test_intra_cv_target_transform` except for repeated KFold,DMC,DFEC,DMC
+TODO: black box attacks,MLInter,MLInter,MLRelia
+"TODO: calculate this centroid\""",UMC,MCC,Data Conf
+TODO: calibration dataset,Data Conf,Data Conf,HP Conf
+todo: change the feature_na_method!,DFEC,Data Conf,Data Conf
+TODO: Change the optimizer to the appropriate Optimizer class,Weight Conf,HP Conf,HP Conf
+TODO: change this logic when there is a git pretty-format,MLKnow,DS Conf,MLDepend
+TODO: check `other` is Series after a circular import of SeriesType fixed,MLDepend,MLDepend,MLDepend
+TODO: Check behavior if this is a single mrc file (no '@'),MLKnow,MCR,MLKnow
+TODO: check CAPTALIZED WORDS as their lower case counterparts before saving,MLKnow,MCC,Data Conf
+TODO: check for series\/dict\/list input,CDT,PODT,PODT
+TODO: Check if self._mean_squared_error_w_precision can be used here,MLKnow,MCC,MLKnow
+TODO: check if stride of 2 causes alignment issues if the featuremap,DFEC,MCC,MLKnow
+TODO: check whether the model is QuartzNet,MLKnow,Layer Conf,CDT
+TODO: check why there's an IF,MLKnow,MCC,MLKnow
+TODO: clip polygons,UMC,MCC,Data Conf
+TODO: compare the performance!,PQ,PQ,PQ
+TODO: compute signed distance between walls,UMC,MCC,Data Conf
+ToDo: consider go\/no-go with following modification,Proto,PQ,Data Conf
+TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,ML,MLDepend,ML
+TODO: Could be implemented as optimization option in LK???,MLKnow,MCM,MLKnow
+TODO: Could check if QSettings.Format stores type info.,CDT,DS Conf,MLKnow
+TODO: Currently this turns any upregulation associated with,MLKnow,MLKnow,CDT
+TODO: Currently we don't look at source text; but we may want to,MLKnow,Data Conf,Data Conf
+TODO: dataframe pass needed?,Data Conf,Data Conf,MLKnow
+TODO: delete this method when no longer needed,UMC,UMC,UMC
+TODO: deprecate?,UMC,UMC,UMC
+TODO: determine if requiring same sense is too string; i.e.,MLKnow,MCC,Data Conf
+TODO: Do below `y_lie` lines directly calculate min\/max\/mean on `opt.yi` when it could also contain times?,Data Conf,Data Conf,MLKnow
+TODO: do more to protect against race conditions. File lock?,MLRelia,MLRelia,DS Conf
+TODO: do not replace unless explicitly noticed + add 'only hangul' option,MLKnow,MCC,MCM
+TODO: do the transpose as a DataLoaderTransformer instead of in host,GC,MCC,DS Conf
+TODO: do this better,MLKnow,MCC,HP Conf
+TODO: do we need this?!,UMC,UMC,UMC
+TODO: does it make graph?,MLInter,MCC,MLKnow
+TODO: don't make these a constant initializer because we,HP Conf,DS Conf,DS Conf
+TODO: don't need this w\/ py.test,UMC,UMC,UMC
+TODO: double check if this is still true in 1.9.0,MLKnow,Data Conf,MLKnow
+TODO: dtype,PODT,PODT,CDT
+TODO: ensure dummy_na =False is what you want,HP Conf,Data Conf,MLKnow
+TODO: ensure x data shape matches model._ph['x'] shape (only if fit),Data Conf,Data Conf,MCR
+TODO: Extend to multifidelity problems by adding training_points = {'approx': {}},HP Conf,Data Conf,Proto
+TODO: extend to other key types,MLKnow,MCR,CDT
+TODO: extract an eval func more robustly,MLInter,DFEC,MLRelia
+TODO: figure out how why the result of einsum requires reshape,MLInter,MCC,MLKnow
+TODO: figure out why some machines prefer one of these options,MLKnow,MLInter,MLKnow
+TODO: figure out why this happens.,MLKnow,MLInter,MLKnow
+TODO: Formats should not be specified; just saving all the materialized formats,DS Conf,Data Conf,DS Conf
+TODO: Get rid of this,UMC,UMC,UMC
+TODO: handle boolean scalars properly,MLKnow,MCC,Data Conf
+TODO: handle channel modalities later,MLKnow,DS Conf,MCR
+TODO: handle other participant types,MLKnow,MCC,MCR
+TODO: handle record value which are lists; at least error,MLKnow,Data Conf,PODT
+TODO: handle string,MLKnow,PODT,PODT
+TODO: I believe this is not really much used,UMC,UMC,UMC
+TODO: I cannot get good results with this yet,PQ,PQ,PQ
+"TODO: identify the \""best\"" language detector available for OSS python",ML,MLDepend,MLKnow
+TODO: ignore non-numerics,PODT,PODT,Data Conf
+TODO: I'm not sure about this part,MLKnow,MLKnow,MLKnow
+TODO: Implement Conv Transpose,UMC,MCC,MCM
+TODO: Implement mass downloading with a cool-off in case of 429 response,MLDepend,Data Conf,Proto
+TODO: implement required params,HP Conf,HP Conf,HP Conf
+TODO: implement residual connection,Layer Conf,MCM,Layer Conf
+TODO: In terms of functional API; there should not be any initialization of an nn.Module.,MLKnow,MCC,UMC
+TODO: index and name,MCC,MCC,Data Conf
+TODO: is incref required?,MLKnow,DS Conf,MLKnow
+TODO: is that best way to handle,MLKnow,MCC,MLKnow
+TODO: It could be nice if this method was run on entire data; not just,Data Conf,Data Conf,Data Conf
+TODO: it's worth to switch back to the correct preprocess_input when InceptionResNetV2 model is re-trained,Data Conf,Data Conf,MLDepend
+TODO: list,MLKnow,MCC,PODT
+TODO: Log message,MLKnow,MCC,MLInter
+TODO: make efficient,UMC,MCM,Proto
+TODO: make efficient,UMC,MCM,Proto
+TODO: make fast_rcnn irrelevant,UMC,UMC,UMC
+TODO: make it save a zipfile instead of a tarfile.,DS Conf,DS Conf,DS Conf
+TODO: make the dtype configurable; see __init__(),CDT,Data Conf,MCM
+TODO: maxpool?,Layer Conf,MCC,Data Conf
+TODO: maybe introduce a DefaultEnvironment?,Abs,Data Conf,MLKnow
+TODO: min,HP Conf,DS Conf,Data Conf
+TODO: Model Precision,PQ,PQ,Data Conf
+TODO: modify this later,UMC,UMC,Data Conf
+TODO: more specific types?,MLKnow,MCC,CDT
+TODO: need a better way,MLKnow,MCC,PODT
+TODO: need to discuss whether this is 'allowed' or smart,MLKnow,MLKnow,MLKnow
+TODO: Need to invert the CameraToWorld matrix => WorldToCamera matrix,Layer Conf,MCC,Data Conf
+TODO: needs to be re-written to match new stitch datasets signature.,Data Conf,DS Conf,GC
+TODO: non-numeric columns should be ignored automatically,Data Conf,Data Conf,Data Conf
+TODO: normalize true states,Data Conf,Data Conf,Data Conf
+TODO: num pad examples is not set here if fillup strategy would be padding,Data Conf,Data Conf,Data Conf
+TODO: optimize scheduling to support more cases.,UMC,MCM,DS Conf
+TODO: other types?,MLKnow,MLKnow,CDT
+TODO: parallelize,UMC,MCM,Data Conf
+TODO: pass in just the id instead of the entire obj_msg.,MLKnow,Data Conf,Data Conf
+todo: perhaps it's better to use pickle in the future?,MLKnow,DS Conf,DS Conf
+TODO: Place tensors into GPU memory. This will require rewriting,MLKnow,DS Conf,DS Conf
+TODO: pretty sure this isn't necessary,UMC,UMC,UMC
+TODO: Probably should just implement __deepcopy__,MCM,MCC,MCR
+TODO: programmatically check wether these are indeed features (predict; correct),MLKnow,PQ,Data Conf
+TODO: Properly break circular dependencies,MLDepend,BE,MLDepend
+TODO: put in infrastructure to fold over trace as it's built.,MLKnow,Abs,Data Conf
+TODO: put in the option to do substitution here (most likely scenario;,HP Conf,MCC,Proto
+TODO: Reduce dim. of mean.,Data Conf,Data Conf,Data Conf
+TODO: refactor as independent function,MCM,MCR,Abs
+TODO: Refactor\/simplify Configuration class so it can be used in cases,Abs,Data Conf,MCR
+TODO: re-implement support for constraint satisfaction method as needed,Proto,MCM,Data Conf
+TODO: remove dummy \/ debug tasks,UMC,UMC,UMC
+TODO: remove hard-coded sizes and make relative to parent?,UMC,MCC,MCM
+TODO: Remove hardcoding of downscaling calculations.,Data Conf,UMC,MCR
+TODO: Remove in 0.26 when the _pairwise attribute is removed,UMC,UMC,UMC
+TODO: remove this method in v1.3.0.,UMC,UMC,UMC
+TODO: remove when dict results are deprecated,UMC,UMC,UMC
+"TODO: rename kwarg \""forward\"" to \""forward_additive\""",MCC,MCC,MCC
+TODO: Repeat_elements and tf.split doesn't support dynamic splits.,MLKnow,DS Conf,CDT
+TODO: replace init=None by init='auto' in v0.6.0 and remove the warning,Weight Conf,HP Conf,UMC
+TODO: Replace Lambda with custom Keras layer for loss.,Layer Conf,MCC,Layer Conf
+TODO: replace with (stable) Draft6Validator; if available,MLDepend,DS Conf,CDT
+ToDo: replace with 3d input; when grid_sample will start to support it,MLDepend,DS Conf,Data Conf
+TODO: replace with unbatch or readout,Weight Conf,MCC,CDT
+TODO: reward computation,UMC,MCC,Data Conf
+TODO: rotated_grids might as well give us correctly shaped array in the first place,DFEC,MCC,Data Conf
+TODO: run-on and split module,BE,MCM,Data Conf
+TODO: See https:\/\/www.pyimagesearch.com\/2017\/05\/22\/face-alignment-with-opencv-and-python\/,MLKnow,MLDepend,Data Conf
+TODO: Set interval for the original date ?,Data Conf,Data Conf,Proto
+TODO: should port\/ip\/mac address be ignored? yes,Data Conf,DS Conf,Data Conf
+todo: should save tpot model here,Proto,DS Conf,DS Conf
+TODO: should we return a LogarithmicFilteredSpectrogram?,MLInter,MCC,MLKnow
+TODO: skip on error???,MLKnow,MCM,MLKnow
+TODO: something if deep 9,Layer Conf,MCC,Layer Conf
+TODO: Something smarter?,MLKnow,MCC,MLKnow
+TODO: store something cleaner,DS Conf,DS Conf,DS Conf
+TODO: store the actual index in table in case row number is unstable,DS Conf,DS Conf,DS Conf
+"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.",Proto,DS Conf,UMC
+"TODO: the old setup is now called \""pre_training\""; where should this hook be called now?",MLKnow,MCC,MCC
+TODO: the second element of the rule is not being used,MLKnow,UMC,Data Conf
+TODO: the y_train should be given us externally; so far we create it as random values,Data Conf,Data Conf,MCR
+TODO: This branch happens when there's only one content word,MLKnow,MCC,MLKnow
+TODO: this flag is somewhat redundant given the flag above; need,UMC,UMC,UMC
+TODO: This is discarding phase. Is that ok?,Data Conf,DS Conf,MLKnow
+todo: this is O(N^2) and maybe too slow for large graphs.,UMC,PQ,MCR
+TODO: This is very inefficient and needs fix,UMC,UMC,CDT
+TODO: This matching process is slow. Make it faster; avoid loops where possible.,UMC,MCM,Proto
+TODO: This might not be called corpora,MLKnow,MCC,MCC
+TODO: This might not work with numpy types; haven't checked - AD,CDT,CDT,MLKnow
+TODO: This should be recusive looking for any module with flatten_parameters,MLDepend,MCC,Weight Conf
+TODO: This we can change easily to functional style,MCM,MCM,Abs
+TODO: tree should't need this in this case,UMC,UMC,UMC
+TODO: Try smaller numbers?,HP Conf,HP Conf,Data Conf
+TODO: try without copying? could be faster,DMC,DFEC,MLKnow
+TODO: unroll\/roll are great candidates for a context manager since they're always used in conjunction.,GC,Abs,Data Conf
+TODO: update nouns list with only named enitites,MLKnow,PODT,Data Conf
+ToDo: Update with http:\/\/en.wikipedia.org\/wiki\/List_of_emoticons ?,MLKnow,MLDepend,Data Conf
+TODO: Use google-diff-patch-match library,MLDepend,MLDepend,MLKnow
+todo: use Input and Output classes to handle inputs and outputs,GC,GC,DS Conf
+TODO: Use sklearn.decomposition.TruncatedSVD instead?,HP Conf,DS Conf,MLKnow
+TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,MLDepend,DS Conf,Layer Conf
+TODO: verify if it is working,MLKnow,PQ,MLKnow
+TODO: want to call it activation but namespace; so what to do best?,MLKnow,MCC,MCC
+todo: We can potentially reduce memory usage by freeing memory,UMC,UMC,DS Conf
+TODO: we could probably default the monitor to something reasonable,HP Conf,HP Conf,HP Conf
+TODO: we may support size = -1 in the future,Proto,DS Conf,DS Conf
+TODO: weight by length here,Weight Conf,Weight Conf,Data Conf
+TODO: why is the whole distribution computed instead of just min\/max,MLInter,MCC,Data Conf
+TODO: would be good to add ref from source,MLDepend,Data Conf,Data Conf
+TODO: wrap this properly in a with session_context():,GC,GC,MLRelia
+TODO: write a function to do this..,MLKnow,MCC,Abs
+TODO: write index,UMC,MCC,DS Conf
+TODO: x;y input should be able to be np arrays; pandas arrays; or tf dataset iterators,CDT,Data Conf,CDT
+todo; pass also best score,PQ,MCC,Weight Conf
+todo; pass complete checkpoint as state dictionary,MCM,Weight Conf,Data Conf
+too much memory. A lazy load would be better; but later,UMC,DS Conf,DS Conf
+unused,UMC,UMC,UMC
+Unused,UMC,UMC,UMC
+WARNING: bad realtime practice (writing file) TODO: add to a memory buffer and write before exit,DS Conf,DS Conf,DS Conf
+XXX backward compatibility,Proto,MLRelia,MLDepend
+XXX de-duplicate this with code from Montage somewhere?,DMC,DFEC,DFEC
+XXX Default number of samples drawn from my arse.,HP Conf,MCC,Data Conf
+XXX Disable SimulateModels without CreateTab,Proto,GC,UMC
+XXX gs = fig.add_gridspec(15; 1),GC,MCC,UMC
+XXX JRK: Should this test whether test_times if a DecodingTime,MLKnow,MCC,MLKnow
+XXX might possibly be slow solution; but every worker needs reseted LDA model for every iteration,UMC,MCM,MLKnow
+XXX offset type is uint32,CDT,PODT,PODT
+XXX Remove,UMC,UMC,UMC
+XXX This is silly.  We should return log densities; not densities.,MLKnow,Data Conf,MLRelia
+XXX when matplotlib 3.3 is min version; replace this with,ML,MLDepend,MLDepend
+XXX Would be nice if we could prepare this statement before,MLKnow,Data Conf,DS Conf
+XXX: currently scaled to variance=n_samples,HP Conf,Data Conf,Data Conf
+XXX: does control flow affect type inference in Numba?,MLKnow,MLKnow,MLKnow
+XXX: How to catch dependence cycles correctly?,MLDepend,MLDepend,MLDepend
+"XXX: how to find \""""""""good\"""""""" values for level ?""""",HP Conf,HP Conf,MLKnow
+XXX: not handling dictionnaries,CDT,PODT,PODT
+XXX: one could be smarter here,MLKnow,MCC,MCC
+XXX: Temporary solution to figure out if an estimator is a classifier,MLKnow,MCC,MCM
+XXX: unify Series\/Array as Array,CDT,DS Conf,CDT
+XXX: We re-cache now just to make sure all items get a mozci version.,Data Conf,DS Conf,DS Conf
+XXX: where should this be?,MCM,MCC,MLKnow

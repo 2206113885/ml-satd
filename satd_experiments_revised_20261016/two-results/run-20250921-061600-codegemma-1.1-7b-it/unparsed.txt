@@ -1,0 +1,121 @@
+**FIXME**
+The provided code comment indicates a need for better solutions, which suggests the SATD type is **ML
+**Data Conf**
+**HP Conf**
+**Data Conf**
+The code comment "circular shift the signal (needed for correct phase)" belongs to the **MLInter
+**Weight Conf**
+**Weight Conf**
+**Weight Conf**
+The code comment indicates a need to **refactor** code that is **copied from another source**.
+**Data Conf**
+**Weight Conf**
+**INDRA**
+**Weight Conf**
+**Layer Conf**
+The code comment "FIXME: What about the next diff entry?" belongs to the **BE**
+**Weight Conf**
+The provided code comment does not mention any of the given ML SATD abbreviations, so I cannot determine
+**HP Conf**
+**Data Conf**
+**TODO**
+**Weight Conf**
+**Weight Conf**
+**HP Conf**
+**None**
+The provided code comment does not specify the type of ML SATD it belongs to. Therefore, I
+The code comment "TODO : market value" belongs to the **MLKnow** category of Machine Learning
+The provided code comment indicates a "TODO" task, which is typically associated with **UMC (
+**Data Conf**
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+**API**
+**HP Conf**
+**Data Conf**
+The code comment "ToDo handle when source and\/or target is COMPLEX:ID1_ID2
+The code comment "TODO Implement" indicates a **MLKnow** type of self-admitted technical
+**HP Conf**
+**Layer Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+The code comment "TODO stim channel exclusion" indicates a need to address the **ML** (Multiple
+The provided code comment "todo sweep" indicates a need to **clean up the code** and **
+**Data Conf**
+The provided code comment "TODO to be modified" indicates a need for future modification and does not fit
+**HP Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+The provided code comment indicates a **TODO** category of self-admitted technical debt (SATD
+**HP Conf**
+**Data Conf**
+**Layer Conf**
+**HP Conf**
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+**HP Conf**
+**Data Conf**
+**Data Conf**
+The provided code comment "TODO: do this better" indicates a need for **improvement (IMPR
+**Weight Conf**
+**Data Conf**
+**HP Conf**
+**Data Conf**
+The code comment "TODO: handle channel modalities later" belongs to the **ML** category of Machine
+**Conv Transpose**
+**HP Conf**
+**Data Conf**
+**Data Conf**
+The provided code comment is a **TODO** comment, which indicates a need for future work. It
+**Weight Conf**
+**Weight Conf**
+The code comment "TODO: maxpool?" belongs to the **MLKnow** category of Machine Learning
+**HP Conf**
+The code comment "TODO: min" indicates a need to **minimize** something. This is most
+The code comment "TODO: more specific types?" indicates a need for **MLKnow**.
+**Data Conf**
+**Data Conf**
+**HP Conf**
+The provided code comment does not specify the type of ML SATD it belongs to. Therefore, I
+**Parallelization (Par)**
+**Weight Conf**
+**HP Conf**
+**HP Conf**
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+The provided code comment does not match any of the provided abbreviations.
+**Data Conf**
+**Layer Conf**
+**Data Conf**
+**HP Conf**
+**Data Conf**
+**Data Conf**
+**IO**
+**Layer Conf**
+**HP Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+**UMC (Unnecessary Model Code)**
+The provided code comment does not seem to be related to any of the given ML SATD categories.
+The code comment belongs to the **UMC** category.
+The code comment indicates a potential performance issue with the LDA model being used in a multi-worker environment
+**Data Conf**
+The code comment "XXX: How to catch dependence cycles correctly?" belongs to the **MLDepend**
+The provided code comment "XXX: one could be smarter here" could be classified as **UMC
+The code comment "XXX: We re-cache now just to make sure all items get a moz
+The provided code comment does not specify the type of ML SATD it belongs to. Therefore, I

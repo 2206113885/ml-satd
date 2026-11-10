@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/resolve/22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed/config.json",
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama_tokenizer_only/config.json",
+    "bytes": 646,
+    "sha256": "8db7009bfcbcf58373a23636f817999d43a4d02764dd94d6313230dfb6568372"
+  },
+  {
+    "url": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/resolve/22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed/special_tokens_map.json",
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama_tokenizer_only/special_tokens_map.json",
+    "bytes": 411,
+    "sha256": "ff3b4a612c4e447acb02d40071bddd989fe0da87eb5b7fe0dbadfc4f74de7531"
+  },
+  {
+    "url": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/resolve/22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed/tokenizer.json",
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama_tokenizer_only/tokenizer.json",
+    "bytes": 1843427,
+    "sha256": "dcb4337ba92f948b322e080f8b59a2a21cfe65dc2aa7ecf7df080ae8aa63c157"
+  },
+  {
+    "url": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/resolve/22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed/tokenizer.model",
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama_tokenizer_only/tokenizer.model",
+    "bytes": 500058,
+    "sha256": "45ccb9c8b6b561889acea59191d66986d314e7cbd6a78abc6e49b139ca91c1e6"
+  },
+  {
+    "url": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/resolve/22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed/tokenizer_config.json",
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama_tokenizer_only/tokenizer_config.json",
+    "bytes": 1589,
+    "sha256": "fc8807bb10349bacb929e8d051a2bf41cc624d9b0ff22dd467201af2846ba628"
+  }
+]

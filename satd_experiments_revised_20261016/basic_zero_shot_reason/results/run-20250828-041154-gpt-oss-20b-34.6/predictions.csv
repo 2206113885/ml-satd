@@ -1,0 +1,787 @@
+comment,real,pred,reason,raw_output
+!TODO: In some cases; US is not enough to hold the complete number,Machine Learning Knowledge,Plain Old Data Type,"The comment flags that the raw data type “US” is insufficient for storing the required numeric values, indicating a problem with using a plain low-level data type in the ML code.","Abbreviation: PODT  
+Reason: The comment flags that the raw data type “US” is insufficient for storing the required numeric values, indicating a problem with using a plain low-level data type in the ML code."
+# reverse bw; before concat TODO,Layer Configuration,Data Processing Configuration,"The comment indicates a TODO to reverse data before concatenation, i.e., a change in how data is processed.","Abbreviation: Data Conf  
+Reason: The comment indicates a TODO to reverse data before concatenation, i.e., a change in how data is processed."
+# TODO : load landmarks in validation and test set also. I'm too sleepy to do it today -_- zzz... zzz...,Data Processing Configuration,Data Processing Configuration,"The comment indicates a missing data loading step for validation/test sets, which is a data processing configuration issue.","Abbreviation: Data Conf
+Reason: The comment indicates a missing data loading step for validation/test sets, which is a data processing configuration issue."
+## elif (): ## FIXME: handle other bases here,Prototype,Model Code Modifiability,"The FIXME marks an incomplete branch for other cases, indicating the code is not easily modifiable or extensible and will require extra effort to add missing functionality.","Abbreviation: MCM
+Reason: The FIXME marks an incomplete branch for other cases, indicating the code is not easily modifiable or extensible and will require extra effort to add missing functionality."
+#TODO: improve the copying of parameters,Hyper-parameter Configuration,Weight Configuration,"The comment indicates a need to improve how model parameters (weights) are copied, which directly relates to weight configuration issues.","Abbreviation: Weight Conf
+Reason: The comment indicates a need to improve how model parameters (weights) are copied, which directly relates to weight configuration issues."
+@todo nrows is for testing only!,Boundary Erosion,Unnecessary Model Code,"Indicates test-only code that should be removed, fitting Unnecessary Model Code (UMC).","Abbreviation: UMC  
+Reason: Indicates test-only code that should be removed, fitting Unnecessary Model Code (UMC)."
+@todo: arabtex and iso8859-6 need individual handling because in some cases using one-two mapping,Data Processing Configuration,Data Processing Configuration,"The comment addresses the need to handle specific character encodings differently, which is a configuration of how data is processed.","Abbreviation: Data Conf  
+Reason: The comment addresses the need to handle specific character encodings differently, which is a configuration of how data is processed."
+@TODO: need better solutions,Machine Learning Knowledge,Machine Learning Knowledge,The comment signals that the current approach may be based on insufficient ML knowledge and needs revisiting for better solutions.,"Abbreviation: MLKnow
+Reason: The comment signals that the current approach may be based on insufficient ML knowledge and needs revisiting for better solutions."
+@TODO: remove time usage; use it under the hood,Unnecessary Model Code,Unnecessary Model Code,The comment indicates removal of superfluous time‑based code that adds overhead; this is unnecessary model code that should be eliminated.,"Abbreviation: UMC
+Reason: The comment indicates removal of superfluous time‑based code that adds overhead; this is unnecessary model code that should be eliminated."
+[todo]: this is a bug; predict_proba should not change,Model Code Modifiability,Prediction Quality,"The comment flags a bug that alters the output of predict_proba, directly impacting prediction quality.","Abbreviation: PQ  
+Reason: The comment flags a bug that alters the output of predict_proba, directly impacting prediction quality."
+"\""\""\"" || Corpus in CSV format. TODO: still serializes to SVMLight format; feel free to change this. || \""\""\""",Data Processing Configuration,Data Storage Configuration,"The comment indicates a mismatch in how data is serialized, suggesting a configuration change to the data storage format.","Abbreviation: DS Conf  
+Reason: The comment indicates a mismatch in how data is serialized, suggesting a configuration change to the data storage format."
+"\""\""\"" || Simple Gaussian Mixture model plotting example ||  || TODO: use the faithful dataset || \""\""\""",Data Processing Configuration,Data Processing Configuration,"The comment marks a TODO to change the dataset used, indicating a pending adjustment to data configuration.","Abbreviation: Data Conf
+Reason: The comment marks a TODO to change the dataset used, indicating a pending adjustment to data configuration."
+"\""\""\"" Turn compiler.ast structures back into executable python code. ||  ||     The unparse method takes a compiler.ast tree and transforms it back into ||     valid python code.  It is incomplete and currently only works for ||     import statements; function calls; function definitions; assignments; and ||     basic expressions. ||  ||     Inspired by python-2.5-svn\/Demo\/parser\/unparse.py ||  ||     fixme: We may want to move to using _ast trees because the compiler for ||            them is about 6 times faster than compiler.compile. || \""\""\""",Custom Data Type,Abstraction,"The comment indicates the current unparse implementation is incomplete and low-level, suggesting a need for better abstraction (e.g., using _ast trees).","Abbreviation: Abs  
+Reason: The comment indicates the current unparse implementation is incomplete and low-level, suggesting a need for better abstraction (e.g., using _ast trees)."
+"\""\""\""Converts legacy encodings into Unicode || TODO for replacer.py: ||  - add perseus-style iota subscript and diaeresis || \""\""\""",Data Processing Configuration,Data Processing Configuration,"The comment indicates a TODO to extend the data conversion routine, i.e., configuring how data is processed.","Abbreviation: Data Conf
+Reason: The comment indicates a TODO to extend the data conversion routine, i.e., configuring how data is processed."
+"\""\""\""Converts legacy encodings into Unicode. ||  || TODO: Rm regex dependency || TODO: Add tests || \""\""\""",Code Dependency,Data Processing Configuration,"The comment concerns converting data encodings and adjusting the processing pipeline, which is a data processing configuration issue.","Abbreviation: Data Conf  
+Reason: The comment concerns converting data encodings and adjusting the processing pipeline, which is a data processing configuration issue."
+"\""\""\""Models. ||  || Models are objects which take Tensor(s) as input; perform some computation on  || those Tensor(s); and output probability distributions. ||  || TODO: more... ||  || * :func:`.Model` || * :func:`.ContinuousModel` || * :func:`.DiscreteModel` || * :func:`.CategoricalModel` || * :func:`.save_model` || * :func:`.load_model` ||  || ---------- ||  || \""\""\""",Model Code Modifiability,Machine Learning Knowledge,The comment contains a “TODO: more…” indicating incomplete documentation and a lack of knowledge about the full model API.,"Abbreviation: MLKnow  
+Reason: The comment contains a “TODO: more…” indicating incomplete documentation and a lack of knowledge about the full model API."
+"\""\""\""Module dedicated to extraction of Model Based Metafeatures. ||  || Todo: ||     * Implement metafeatures. ||     * Improve documentation. || \""\""\""",Data Processing Configuration,Prototype,"The comment marks an incomplete module with TODO items, indicating a prototype or placeholder that needs further development before full integration.","Abbreviation: Proto  
+Reason: The comment marks an incomplete module with TODO items, indicating a prototype or placeholder that needs further development before full integration."
+"\""\""\""Process downloaded or local corpora from one format into another. || Some formatting can happen here; or invoke language-specific formatters in || other files. ||  || #TODO: Add TLG & PHI text cleaners from KJ's IPython notebooks || #TODO: Add non-ascii stripper || #TODO: Add generic HTML stripper || \""\""\""",Data Processing Configuration,Data Processing Configuration,"The comment describes adding formatters, cleaners, and strippers—configuring how input data is processed and transformed.","Abbreviation: Data Conf
+Reason: The comment describes adding formatters, cleaners, and strippers—configuring how input data is processed and transformed."
+"\""\""\""The Imperial Aramaic alphabet; plus simple script to transform || a Hebrew transcription of an Imperial Aramaic text to its own Unicode block. ||  || TODO: Add Hebrew-to-Aramaic converter || \""\""\""",Data Processing Configuration,Data Processing Configuration,"The comment indicates a pending addition of a text conversion step, which is a change to how data is processed in the pipeline.","Abbreviation: Data Conf
+Reason: The comment indicates a pending addition of a text conversion step, which is a change to how data is processed in the pipeline."
+\/\/TODO in future add arguments compatibility check,Hyper-parameter Configuration,Glue Code,"The comment flags a missing compatibility check between interfacing components, typical of glue code that bridges subsystems and requires validation to avoid integration issues.","Abbreviation: GC
+Reason: The comment flags a missing compatibility check between interfacing components, typical of glue code that bridges subsystems and requires validation to avoid integration issues."
+apparently package_deps are broken in 3.4,Code Dependency,Code Dependency,"The comment indicates a broken external package dependency in version 3.4, preventing necessary code changes.","Abbreviation: MLDepend  
+Reason: The comment indicates a broken external package dependency in version 3.4, preventing necessary code changes."
+BETTER FIX: iterate through; if length = 0; then bump it up to 0.125,Prototype,Data Processing Configuration,"It changes how data is processed by setting a minimum length (0.125) to avoid zero values, a typical data configuration adjustment.","Abbreviation: Data Conf
+Reason: It changes how data is processed by setting a minimum length (0.125) to avoid zero values, a typical data configuration adjustment."
+circular shift the signal (needed for correct phase),Data Processing Configuration,Data Processing Configuration,"The comment refers to a data‑processing tweak (circular shift of a signal) to correct phase, which is a configuration change in how data is processed.","Abbreviation: Data Conf  
+Reason: The comment refers to a data‑processing tweak (circular shift of a signal) to correct phase, which is a configuration change in how data is processed."
+DEPRICATE? I don't think this is needed anymore,Unnecessary Model Code,Unnecessary Model Code,"The comment indicates the code may be redundant or obsolete, suggesting it should be removed.","Abbreviation: UMC
+Reason: The comment indicates the code may be redundant or obsolete, suggesting it should be removed."
+Double newlines seem to mess with the rendering,Data Processing Configuration,Model Code Comprehension,"The comment highlights a formatting issue that hampers readability of the code, directly impacting model code comprehension.","Abbreviation: MCC  
+Reason: The comment highlights a formatting issue that hampers readability of the code, directly impacting model code comprehension."
+early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),Prediction Quality,Hyper-parameter Configuration,"The comment refers to adding an early‑stopping mechanism, a hyper‑parameter configuration that is currently missing and slated for future release.","Abbreviation: HP Conf  
+Reason: The comment refers to adding an early‑stopping mechanism, a hyper‑parameter configuration that is currently missing and slated for future release."
+else:  # TODO check that the variation wasn't already in there,Prototype,Data Processing Configuration,"TODO to ensure no duplicate variation is added, missing data validation step.","Abbreviation: Data Conf
+Reason: TODO to ensure no duplicate variation is added, missing data validation step."
+env = ScaledFloatFrame(env)  # TODO: use for dqn?,Machine Learning Knowledge,Data Processing Configuration,"Note indicates a pending configuration of the environment wrapper for DQN, a data processing adjustment.","Abbreviation: Data Conf
+Reason: Note indicates a pending configuration of the environment wrapper for DQN, a data processing adjustment."
+find out why prefix neg_ is needed,Machine Learning Knowledge,Model Code Comprehension,"The comment indicates uncertainty about the purpose of the prefix, highlighting a need for better understanding and documentation of model code variables.","Abbreviation: MCC
+Reason: The comment indicates uncertainty about the purpose of the prefix, highlighting a need for better understanding and documentation of model code variables."
+FIXME : adhoc (answer being last word); not ignoring single question,Data Processing Configuration,Abstraction,"The FIXME notes an ad-hoc solution, implying a lack of abstraction that will make future changes harder.","Abbreviation: Abs
+Reason: The FIXME notes an ad-hoc solution, implying a lack of abstraction that will make future changes harder."
+FIXME annoying hack for batching different sized shapes;,Model Code Reusability,Data Processing Configuration,"The comment indicates a workaround for batching data of varying shapes, which is a configuration issue in how the data is processed before feeding it to the model.","Abbreviation: Data Conf
+Reason: The comment indicates a workaround for batching data of varying shapes, which is a configuration issue in how the data is processed before feeding it to the model."
+FIXME don't l2_normalize for any metric,Data Processing Configuration,Data Processing Configuration,"The FIXME indicates a change needed in data preprocessing—specifically disabling L2 normalization, which is a data processing configuration.","Abbreviation: Data Conf
+Reason: The FIXME indicates a change needed in data preprocessing—specifically disabling L2 normalization, which is a data processing configuration."
+FIXME homogeneize the meaning of margin parameter,Hyper-parameter Configuration,Hyper-parameter Configuration,Indicates an inconsistent definition of the hyper‑parameter “margin” that must be standardized.,"Abbreviation: HP Conf
+Reason: Indicates an inconsistent definition of the hyper‑parameter “margin” that must be standardized."
+FIXME non-uniform sample weights not yet supported,Weight Configuration,Weight Configuration,"Code indicates a limitation in handling non-uniform sample weights, a direct issue with weight configuration.","Abbreviation: Weight Conf
+Reason: Code indicates a limitation in handling non-uniform sample weights, a direct issue with weight configuration."
+FIXME not sure what are those CB1 \/ CB2,Machine Learning Knowledge,Model Code Comprehension,"The comment indicates uncertainty about variable names, reflecting a lack of comprehension of the model code.","Abbreviation: MCC
+Reason: The comment indicates uncertainty about variable names, reflecting a lack of comprehension of the model code."
+FIXME This will make sense when all controllers are in one file (like task.py),Data Storage Configuration,Boundary Erosion,"Controllers are split across files, causing boundary erosion; consolidating them into one file would clarify subsystem boundaries.","Abbreviation: BE  
+Reason: Controllers are split across files, causing boundary erosion; consolidating them into one file would clarify subsystem boundaries."
+FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,Glue Code,Duplicate Model Code,"The comment notes functions were copied from another file and need rewriting, indicating duplicate model code that should be refactored.","Abbreviation: DMC  
+Reason: The comment notes functions were copied from another file and need rewriting, indicating duplicate model code that should be refactored."
+FIXME: Allow some diff; e.g. on repr style text in text\/plain,Prototype,Data Processing Configuration,"The comment suggests modifying how text/plain data is represented, i.e., a change to data processing or formatting configuration.","Abbreviation: Data Conf
+Reason: The comment suggests modifying how text/plain data is represented, i.e., a change to data processing or formatting configuration."
+FIXME: Handle execution_count (always change to None?),Machine Learning Knowledge,Unnecessary Model Code,"The comment indicates that `execution_count` may be superfluous or dead code, suggesting removal or refactoring.","Abbreviation: UMC  
+Reason: The comment indicates that `execution_count` may be superfluous or dead code, suggesting removal or refactoring."
+FIXME: Hardcoded usually sucks,Data Storage Configuration,Abstraction,"Hardcoding values indicates a lack of abstraction, making future changes difficult and increasing maintenance risk.","Abbreviation: Abs
+Reason: Hardcoding values indicates a lack of abstraction, making future changes difficult and increasing maintenance risk."
+FIXME: if we inherit from scipy.io.netcdf.NetCDFFile and omit the self.nc,Machine Learning Knowledge,Glue Code,"The FIXME indicates missing initialization when inheriting from an external SciPy class, a typical glue‑code shortfall.","Abbreviation: GC  
+Reason: The FIXME indicates missing initialization when inheriting from an external SciPy class, a typical glue‑code shortfall."
+FIXME: INDRA's section_type entry is meant to contain,Custom Data Type,Data Processing Configuration,Comment signals incomplete data configuration; the entry is missing content and needs proper setup.,"Abbreviation: Data Conf
+Reason: Comment signals incomplete data configuration; the entry is missing content and needs proper setup."
+FIXME: Need to check if mod is the equivalent of floorMod in NumPy,Machine Learning Knowledge,Machine Learning Knowledge,"Developer is uncertain about the equivalence of'mod' to NumPy's 'floorMod', indicating a lack of knowledge about the specific function, which may require revisiting the code.","Abbreviation: MLKnow  
+Reason: Developer is uncertain about the equivalence of'mod' to NumPy's 'floorMod', indicating a lack of knowledge about the specific function, which may require revisiting the code."
+FIXME: need to implement sample_weight in Ridge,Weight Configuration,Weight Configuration,"The comment indicates missing implementation of sample_weight handling, which involves configuring and applying weights to training samples in the Ridge model.","Abbreviation: Weight Conf  
+Reason: The comment indicates missing implementation of sample_weight handling, which involves configuring and applying weights to training samples in the Ridge model."
+FIXME: Only keeping the first label,Data Processing Configuration,Prediction Quality,Keeping only the first label can harm model accuracy and overall prediction quality.,"Abbreviation: PQ
+Reason: Keeping only the first label can harm model accuracy and overall prediction quality."
+FIXME: pixel_classes dict needs to be populated with classes obtained from target,Data Processing Configuration,Data Processing Configuration,The comment indicates missing configuration of data (population of pixel_classes dict) which is a data processing configuration issue.,"Abbreviation: Data Conf
+Reason: The comment indicates missing configuration of data (population of pixel_classes dict) which is a data processing configuration issue."
+"FIXME: Return type \""None\"" of \""fit\"" incompatible with return type \""float\"" in supertype \""Model\""",Plain Old Data Type,Abstraction,"Incompatible return type shows a missing abstraction in the base‐class interface that forces fragile subclass overrides, creating cascading maintenance problems.","Abbreviation: Abs  
+Reason: Incompatible return type shows a missing abstraction in the base‐class interface that forces fragile subclass overrides, creating cascading maintenance problems."
+FIXME: support for many evaluators; maybe event support,Prototype,Abstraction,"The comment highlights a missing abstraction that would allow support for multiple evaluators, indicating a lack of modular design.","Abbreviation: Abs  
+Reason: The comment highlights a missing abstraction that would allow support for multiple evaluators, indicating a lack of modular design."
+FIXME: The code works with EpisodicReplayBuffer,Custom Data Type,Code Dependency,"The comment indicates the code only functions with a specific EpisodicReplayBuffer, pointing to a dependency that could block future changes.","Abbreviation: MLDepend  
+Reason: The comment indicates the code only functions with a specific EpisodicReplayBuffer, pointing to a dependency that could block future changes."
+FIXME: this is kind of hackish; but being able to simply set,Model Code Comprehension,Abstraction,"The comment indicates a hacky workaround that likely bypasses proper abstraction, leading to maintenance issues.","Abbreviation: Abs
+Reason: The comment indicates a hacky workaround that likely bypasses proper abstraction, leading to maintenance issues."
+FIXME: this needs to become more generic; we need to find the actual so in the python root,Model Code Reusability,Model Code Reusability,The comment highlights that the code should be made more generic to support reuse across contexts.,"Abbreviation: MCR  
+Reason: The comment highlights that the code should be made more generic to support reuse across contexts."
+FIXME: this representation of covars is going to lose for caching,Data Storage Configuration,Data Storage Configuration,"Representation of covars is not suitable for caching, indicating a need to reconfigure how data is stored.","Abbreviation: DS Conf
+Reason: Representation of covars is not suitable for caching, indicating a need to reconfigure how data is stored."
+FIXME: Use linebased diff of some types of outputs:,Data Processing Configuration,Data Processing Configuration,"The FIXME indicates a need to configure how output data is compared (line‑based diff), which is a data‑processing configuration issue.","Abbreviation: Data Conf  
+Reason: The FIXME indicates a need to configure how output data is compared (line‑based diff), which is a data‑processing configuration issue."
+FIXME: What about the next diff entry?,Machine Learning Knowledge,Model Code Modifiability,"The FIXME comment signals an incomplete implementation that hinders future modifications, indicating a lack of modifiability in the model code.","Abbreviation: MCM  
+Reason: The FIXME comment signals an incomplete implementation that hinders future modifications, indicating a lack of modifiability in the model code."
+FIXME: What if we never find a fail-high?,Machine Learning Knowledge,Machine Learning Reliability,"The comment flags a potential absence of robustness in detecting a high‑failure condition, pointing to a reliability concern.","Abbreviation: MLRelia  
+Reason: The comment flags a potential absence of robustness in detecting a high‑failure condition, pointing to a reliability concern."
+FIXME_Numba#5157: remove np.asarray and return as list,Data Storage Configuration,Data Storage Configuration,"The comment indicates a change in how data is represented internally (from a NumPy array to a Python list), which is a data storage configuration issue.","Abbreviation: DS Conf
+Reason: The comment indicates a change in how data is represented internally (from a NumPy array to a Python list), which is a data storage configuration issue."
+Force shrinking of the mask if needed (and possible),Data Processing Configuration,Weight Configuration,"The comment indicates a direct change to the mask used in the model’s weights, which is a form of weight configuration.","Abbreviation: Weight Conf
+Reason: The comment indicates a direct change to the mask used in the model’s weights, which is a form of weight configuration."
+Freeze weights - TODO: NOT IMPLEMENTED!,Weight Configuration,Weight Configuration,"The comment refers to configuring model weights (freezing them), a direct change to weight handling.","Abbreviation: Weight Conf
+Reason: The comment refers to configuring model weights (freezing them), a direct change to weight handling."
+h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,Hyper-parameter Configuration,Layer Configuration,"The comment marks a TODO for configuring a dense layer in the model, indicating layer configuration concerns.","Abbreviation: Layer Conf
+Reason: The comment marks a TODO for configuring a dense layer in the model, indicating layer configuration concerns."
+handle BoxedSeries and list\/set of BoxedSeries; TODO: others?,Custom Data Type,Custom Data Type,"The comment notes handling BoxedSeries and its list/set forms, highlighting a custom data type that adds interoperability complexity.","Abbreviation: CDT
+Reason: The comment notes handling BoxedSeries and its list/set forms, highlighting a custom data type that adds interoperability complexity."
+if this is needed.,Machine Learning Knowledge,Unnecessary Model Code,"Comment flags uncertain necessity, hinting at code that may become unnecessary and should be removed.","Abbreviation: UMC  
+Reason: Comment flags uncertain necessity, hinting at code that may become unnecessary and should be removed."
+IMPORTANT: keep matrices in suitable order for matrix products; failing to do so gives 8x lower performance :(,Model Code Reusability,Model Code Comprehension,Comment indicates a performance‑related coding issue (matrix ordering) that hampers understandability and maintenance of model code.,"Abbreviation: MCC  
+Reason: Comment indicates a performance‑related coding issue (matrix ordering) that hampers understandability and maintenance of model code."
+In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,Plain Old Data Type,Data Processing Configuration,"Comment explains conversion of a range iterator to a list, a data‑processing configuration step.","Abbreviation: Data Conf
+Reason: Comment explains conversion of a range iterator to a list, a data‑processing configuration step."
+in_dim=(4; 8; 8; 8); # TODO: Needs fix when giving a randon in_dim,Model Code Reusability,Hyper-parameter Configuration,"The comment flags a need to adjust the input dimension hyper‑parameter, which is a model hyper‑parameter configuration.","Abbreviation: HP Conf
+Reason: The comment flags a need to adjust the input dimension hyper‑parameter, which is a model hyper‑parameter configuration."
+Initialize model (TODO: really necessary?),Machine Learning Knowledge,Unnecessary Model Code,"The comment questions the necessity of the model initialization, indicating potential redundant or unnecessary model code.","Abbreviation: UMC
+Reason: The comment questions the necessity of the model initialization, indicating potential redundant or unnecessary model code."
+It's only needed for a specific purpose in the short term; will go.,Layer Configuration,Unnecessary Model Code,"Indicates temporary, unnecessary code slated for removal.","Abbreviation: UMC
+Reason: Indicates temporary, unnecessary code slated for removal."
+needed so command completion and help can use it,Data Storage Configuration,Glue Code,"Comment explains adding code that enables command completion and help functionality, serving as interface glue between components.","Abbreviation: GC
+Reason: Comment explains adding code that enables command completion and help functionality, serving as interface glue between components."
+needed to sklearn comparability,Code Dependency,Glue Code,"The comment indicates a requirement to make the code compatible with scikit‑learn, which is a form of glue code to interface with an external library.","Abbreviation: GC
+Reason: The comment indicates a requirement to make the code compatible with scikit‑learn, which is a form of glue code to interface with an external library."
+needed to sklearn comparability,Code Dependency,Code Dependency,"Code needs to be compatible with scikit‑learn, indicating a dependency on an external library.","Abbreviation: MLDepend
+Reason: Code needs to be compatible with scikit‑learn, indicating a dependency on an external library."
+needed?,Unnecessary Model Code,Prototype,The terse comment “needed?” signals an incomplete or placeholder section typical of prototype code that must be implemented or replaced.,"Abbreviation: Proto  
+Reason: The terse comment “needed?” signals an incomplete or placeholder section typical of prototype code that must be implemented or replaced."
+normed_cross_entropy # TODO,Hyper-parameter Configuration,Model Code Comprehension,"The comment marks an incomplete, unclear function (`normed_cross_entropy`) that hampers code comprehension.","Abbreviation: MCC  
+Reason: The comment marks an incomplete, unclear function (`normed_cross_entropy`) that hampers code comprehension."
+NOTE: probably more efficient to sort then stride by nt_regions,Data Processing Configuration,Unnecessary Model Code,Indicates a potential performance bottleneck in the model code that could be improved or removed for efficiency.,"Abbreviation: UMC
+Reason: Indicates a potential performance bottleneck in the model code that could be improved or removed for efficiency."
+nv by ns dot ns by m -> nv by m  # TODO: Change to CSC for speed?,Data Processing Configuration,Weight Configuration,"The comment indicates a plan to change the weight matrix representation (to CSC) for performance, which is a direct weight configuration change.","Abbreviation: Weight Conf  
+Reason: The comment indicates a plan to change the weight matrix representation (to CSC) for performance, which is a direct weight configuration change."
+once they are no longer needed in the schedule or by,Data Storage Configuration,Unnecessary Model Code,"Comment signals removal of code that is no longer needed, indicating unnecessary model code.","Abbreviation: UMC
+Reason: Comment signals removal of code that is no longer needed, indicating unnecessary model code."
+Pass on diff to external difftool (TODO: store in global metadata at end instead of in separate diff dicts?),Data Storage Configuration,Data Storage Configuration,"Comment concerns changing where diff data is stored, a data‑storage configuration change.","Abbreviation: DS Conf
+Reason: Comment concerns changing where diff data is stored, a data‑storage configuration change."
+probably not needed; transition,Unnecessary Model Code,Unnecessary Model Code,Comment flags code as likely unnecessary and ready for removal.,"Abbreviation: UMC
+Reason: Comment flags code as likely unnecessary and ready for removal."
+"r\""\""\""Run inference on random sequences many times; saving the top results. ||  || This module is designed to run inference on a trained aptamers TF model || to score many sequences and then write out the top scoring sequences to || be used in other analysis. For example; these top predicted sequences || can read in the colab picking sequences in order || to validate the TF model. ||  || This module uses the standard aptamers tensorflow infrastructure to run || the inference. This is the inferer class defined in || learning\/eval_feedforward and described in the Aptamers TensorFlow Doc. ||  || Inference is generally run in batches of sequences; so a MapFlat function || is used to combine the results of interference into a flattened list || of (sequence; score) pairs. (In other words; each map function returns || a list of (sequence; score) pairs and these results are combined into || one list of pairs. Using a standard Map function would result in a || list of lists which is not what we want.) From there; the Top.Of || combiner returns only the top results; sorted by highest score. These || are then written to a text file. ||  || For now; each batch creates its own inferer; causing each map function || to have more overhead. Because of this;batch sizes around the default of || 10000 are performant. Fixing this in the future means converting the || MapFlat to a ParDo and initializing the inferer in start_bundle. || This module runs inference 1 billion times in 50 minutes so it || is sufficient for now ||  || Run locally with: ||  ||   :search_inference -- --flume_exec_mode=UNOPT \\ ||   --target_name='target' \\ ||   --model_dir=xxx \\ ||    --checkpoint_path='model.ckpt-312500' \\ ||    --output_name=xxx\/base30_1B_inference_top2k ||  || \""\""\""",Custom Data Type,Data Processing Configuration,The comment highlights a future improvement to the data-processing pipeline – changing MapFlat to a ParDo and moving inferer initialization to start_bundle – which is a configuration change affecting how data is processed.,"Abbreviation: Data Conf  
+Reason: The comment highlights a future improvement to the data-processing pipeline – changing MapFlat to a ParDo and moving inferer initialization to start_bundle – which is a configuration change affecting how data is processed."
+Random Warp # TODO change masks to have a input mask and a warped target mask,Hyper-parameter Configuration,Data Processing Configuration,"The comment concerns modifying mask handling, which is part of configuring how data is processed.","Abbreviation: Data Conf  
+Reason: The comment concerns modifying mask handling, which is part of configuring how data is processed."
+seem out of place. If you were able to do better; feel free to share your,Prediction Quality,Abstraction,"The comment indicates code that seems out of place, suggesting a lack of proper abstraction and modular design.","Abbreviation: Abs
+Reason: The comment indicates code that seems out of place, suggesting a lack of proper abstraction and modular design."
+self.clearChanges() #TODO perhaps?,Data Storage Configuration,Unnecessary Model Code,"The comment indicates uncertainty about whether the `clearChanges()` call is needed, suggesting it may be unnecessary or dead code.","Abbreviation: UMC  
+Reason: The comment indicates uncertainty about whether the `clearChanges()` call is needed, suggesting it may be unnecessary or dead code."
+self.mpc_sum(3; -5) TODO: Future work: how to handle gracefully minus numbers,Machine Learning Knowledge,Machine Learning Knowledge,"TODO notes missing knowledge on handling negative values in the sum function, indicating a future work to address this ML-specific data handling issue.","Abbreviation: MLKnow
+Reason: TODO notes missing knowledge on handling negative values in the sum function, indicating a future work to address this ML-specific data handling issue."
+should be WeightNorm here TODO.,Layer Configuration,Weight Configuration,The comment indicates a change to weight configuration (WeightNorm) in the model.,"Abbreviation: Weight Conf
+Reason: The comment indicates a change to weight configuration (WeightNorm) in the model."
+tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,Code Dependency,Hyper-parameter Configuration,"The comment refers to choosing an optimizer (a hyper‑parameter) that isn’t supported by the tf.keras API, indicating a hyper‑parameter configuration issue.","Abbreviation: HP Conf
+Reason: The comment refers to choosing an optimizer (a hyper‑parameter) that isn’t supported by the tf.keras API, indicating a hyper‑parameter configuration issue."
+this importing of matplotlib is needed to run on the cluster,Code Dependency,Code Dependency,"Indicates a necessary import of an external library (matplotlib) for cluster execution, implying a dependency issue.","Abbreviation: MLDepend
+Reason: Indicates a necessary import of an external library (matplotlib) for cluster execution, implying a dependency issue."
+This is a hack to allows inference when the <go> token,Model Code Modifiability,Data Processing Configuration,The comment indicates a temporary workaround in the data processing flow to handle a special <go> token during inference.,"Abbreviation: Data Conf
+Reason: The comment indicates a temporary workaround in the data processing flow to handle a special <go> token during inference."
+THIS IS A VERY UGLY FUNCTION because it has hardcoded 0\/4\/5 integers for each of the metric. I need to make an enumerated class for this!,Model Code Comprehension,Abstraction,"The function lacks abstraction—hardcoded integers should be replaced by an enumerated class, a clear sign of insufficient abstraction.","Abbreviation: Abs
+Reason: The function lacks abstraction—hardcoded integers should be replaced by an enumerated class, a clear sign of insufficient abstraction."
+time to fix. TODO: optimize the crap out of this,Data Processing Configuration,Unnecessary Model Code,"The comment indicates a need to optimize the code, suggesting it contains inefficient or unnecessary model logic that bottlenecks execution.","Abbreviation: UMC
+Reason: The comment indicates a need to optimize the code, suggesting it contains inefficient or unnecessary model logic that bottlenecks execution."
+TODO - can remove one of these m0 restores if A and B both TLU,Machine Learning Knowledge,Duplicate Model Code,"The comment identifies duplicate model code (""m0 restores"") that can be removed when conditions are met.","Abbreviation: DMC  
+Reason: The comment identifies duplicate model code (""m0 restores"") that can be removed when conditions are met."
+TODO - does this handle N-dim tensors correctly?,Machine Learning Knowledge,Machine Learning Knowledge,"The TODO flag indicates uncertainty about whether the code correctly handles N‑dimensional tensors, reflecting a lack of ML‑specific knowledge or understanding of tensor operations.","Abbreviation: MLKnow
+Reason: The TODO flag indicates uncertainty about whether the code correctly handles N‑dimensional tensors, reflecting a lack of ML‑specific knowledge or understanding of tensor operations."
+TODO - in the code it is different - why?,Machine Learning Knowledge,Machine Learning Knowledge,"The comment reflects uncertainty about a code discrepancy, suggesting a lack of ML knowledge that may require revisiting the implementation.","Abbreviation: MLKnow  
+Reason: The comment reflects uncertainty about a code discrepancy, suggesting a lack of ML knowledge that may require revisiting the implementation."
+TODO (pradeep): Sort the indices and do intersections in order; so that we can return the,Data Processing Configuration,Data Processing Configuration,"The comment indicates a need to sort indices before performing intersections, which is a data processing step that must be configured to produce correct results.","Abbreviation: Data Conf
+Reason: The comment indicates a need to sort indices before performing intersections, which is a data processing step that must be configured to produce correct results."
+TODO (ytz): really; we want at least one active and inactive in both scenarios.,Data Processing Configuration,Data Processing Configuration,Indicates a need to adjust data processing to ensure both active and inactive examples exist in each scenario.,"Abbreviation: Data Conf
+Reason: Indicates a need to adjust data processing to ensure both active and inactive examples exist in each scenario."
+TODO : add these in the options. (None; None) => no limit,Data Processing Configuration,Hyper-parameter Configuration,TODO to add options for hyper‑parameter limits; (None; None) indicates no limit by default.,"Abbreviation: HP Conf
+Reason: TODO to add options for hyper‑parameter limits; (None; None) indicates no limit by default."
+TODO : Any other options,Machine Learning Knowledge,Abstraction,The comment signals a design gap where an abstraction for handling options is missing.,"Abbreviation: Abs  
+Reason: The comment signals a design gap where an abstraction for handling options is missing."
+TODO : market value,Data Processing Configuration,Data Processing Configuration,TODO indicates a missing data processing step for calculating or handling market value.,"Abbreviation: Data Conf  
+Reason: TODO indicates a missing data processing step for calculating or handling market value."
+TODO : removal,Unnecessary Model Code,Unnecessary Model Code,Indicates planned removal of code that is unnecessary or dead.,"Abbreviation: UMC  
+Reason: Indicates planned removal of code that is unnecessary or dead."
+TODO : this is quite bad in term of execution speed. We need to fix this.,Data Processing Configuration,Unnecessary Model Code,"The comment highlights poor execution speed, suggesting the code contains unnecessary or inefficient model logic that needs to be removed or optimized.","Abbreviation: UMC
+Reason: The comment highlights poor execution speed, suggesting the code contains unnecessary or inefficient model logic that needs to be removed or optimized."
+"TODO accept_sparse=\""csc\""",Data Processing Configuration,Hyper-parameter Configuration,"The comment refers to configuring a hyper‑parameter (accept_sparse) for a model, which falls under hyper‑parameter configuration.","Abbreviation: HP Conf  
+Reason: The comment refers to configuring a hyper‑parameter (accept_sparse) for a model, which falls under hyper‑parameter configuration."
+TODO add general Distribution,Data Processing Configuration,Model Code Reusability,"The comment indicates a missing general distribution component, implying the code lacks a reusable abstraction for distributions.","Abbreviation: MCR
+Reason: The comment indicates a missing general distribution component, implying the code lacks a reusable abstraction for distributions."
+TODO add index to xls file,Data Processing Configuration,Data Storage Configuration,"Adding an index to an Excel file changes how data is stored externally, making it a data storage configuration issue.","Abbreviation: DS Conf
+Reason: Adding an index to an Excel file changes how data is stored externally, making it a data storage configuration issue."
+TODO add introductory explanation,Data Processing Configuration,Model Code Comprehension,"The TODO comment indicates missing explanatory text, which reduces the legibility of the model code and hinders understanding and future maintenance.","Abbreviation: MCC
+Reason: The TODO comment indicates missing explanatory text, which reduces the legibility of the model code and hinders understanding and future maintenance."
+TODO add support for other metrics (ex. euclidean; angular),Prototype,Model Code Modifiability,"The TODO indicates the current model code cannot easily be extended to support additional metrics, showing a lack of modifiability.","Abbreviation: MCM
+Reason: The TODO indicates the current model code cannot easily be extended to support additional metrics, showing a lack of modifiability."
+TODO add test for keypoints once their handling was improved in Convolve,Code Dependency,Prediction Quality,Lack of tests for keypoints may allow changes that degrade prediction quality; adding tests ensures performance remains stable.,"Abbreviation: PQ  
+Reason: Lack of tests for keypoints may allow changes that degrade prediction quality; adding tests ensures performance remains stable."
+TODO add vertical gradient alpha to have fog only at skylevel\/groundlevel,Data Processing Configuration,Glue Code,"The comment refers to adding a rendering effect (fog gradient) to interface between scene data and visual output, typical glue code that supports integration of subsystems.","Abbreviation: GC  
+Reason: The comment refers to adding a rendering effect (fog gradient) to interface between scene data and visual output, typical glue code that supports integration of subsystems."
+TODO anticipate multi-agents for AEB space,Data Storage Configuration,Prediction Quality,The TODO notes a future change (anticipating multi-agent scenarios) that could alter the model’s prediction performance.,"Abbreviation: PQ
+Reason: The TODO notes a future change (anticipating multi-agent scenarios) that could alter the model’s prediction performance."
+TODO change as soon as svhn has a val set :),Data Storage Configuration,Data Processing Configuration,"The TODO indicates a future change to the data pipeline once the SVHN dataset includes a validation set, which is a data‑processing configuration adjustment.","Abbreviation: Data Conf
+Reason: The TODO indicates a future change to the data pipeline once the SVHN dataset includes a validation set, which is a data‑processing configuration adjustment."
+TODO change the way attns is returned dict => list or tuple (onnx),Data Processing Configuration,Glue Code,"The comment indicates a change to the model’s output interface for ONNX export, affecting how attention results are returned to external code.","Abbreviation: GC  
+Reason: The comment indicates a change to the model’s output interface for ONNX export, affecting how attention results are returned to external code."
+TODO change to np.partition for PERF,Data Storage Configuration,Prediction Quality,"The comment indicates a change aimed at improving performance, which aligns with PQ (Prediction Quality) where workflow changes can affect system performance.","Abbreviation: PQ
+Reason: The comment indicates a change aimed at improving performance, which aligns with PQ (Prediction Quality) where workflow changes can affect system performance."
+TODO check for each tentacle specified if update is available (with requirements),Code Dependency,Code Dependency,"The comment is about checking for updates to each external component (“tentacle”), which is a dependency‑management concern.","Abbreviation: MLDepend  
+Reason: The comment is about checking for updates to each external component (“tentacle”), which is a dependency‑management concern."
+TODO check results after standardizing num ft once a ml algorithm is ready to test,Code Dependency,Data Processing Configuration,"Comment indicates pending standardization of numeric features, a data processing step that needs configuration before testing.","Abbreviation: Data Conf
+Reason: Comment indicates pending standardization of numeric features, a data processing step that needs configuration before testing."
+TODO checkpoints; incremental save,Prototype,Data Storage Configuration,"The TODO highlights a missing incremental save/checkpoints feature, relating to how model data is stored and persisted.","Abbreviation: DS Conf
+Reason: The TODO highlights a missing incremental save/checkpoints feature, relating to how model data is stored and persisted."
+TODO combine these values to get a final prediction!,Data Processing Configuration,Prediction Quality,"TODO indicates incomplete prediction logic, potentially impacting model performance and prediction quality.","Abbreviation: PQ
+Reason: TODO indicates incomplete prediction logic, potentially impacting model performance and prediction quality."
+TODO confirm that multiple eigenvalues of 1 means the rotation,Machine Learning Knowledge,Model Code Comprehension,"The comment indicates uncertainty about a mathematical property (eigenvalues of a rotation matrix) within model code, reflecting a need to comprehend the code’s underlying logic.","Abbreviation: MCC  
+Reason: The comment indicates uncertainty about a mathematical property (eigenvalues of a rotation matrix) within model code, reflecting a need to comprehend the code’s underlying logic."
+ToDo consider 3D case --> do that by using tag->size,Data Processing Configuration,Model Code Modifiability,"The comment flags a missing 3D case handling, indicating the code requires modification, illustrating a modifiability concern.","Abbreviation: MCM
+Reason: The comment flags a missing 3D case handling, indicating the code requires modification, illustrating a modifiability concern."
+TODO cpickle vs json,Data Storage Configuration,Data Storage Configuration,"Deciding between cpickle and json concerns how data is stored or represented, a data storage configuration issue.","Abbreviation: DS Conf
+Reason: Deciding between cpickle and json concerns how data is stored or represented, a data storage configuration issue."
+TODO Dehaze with 1\/t,Data Processing Configuration,Data Processing Configuration,"The TODO indicates adding a dehazing step, which is a new data processing operation that configures how data is processed.","Abbreviation: Data Conf
+Reason: The TODO indicates adding a dehazing step, which is a new data processing operation that configures how data is processed."
+TODO design an API interface for advanced access as an importable package,Abstraction,Abstraction,"Comment indicates missing abstraction; need to create an API interface to expose functionality as a package, improving modularity and reducing coupling.","Abbreviation: Abs
+Reason: Comment indicates missing abstraction; need to create an API interface to expose functionality as a package, improving modularity and reducing coupling."
+TODO double num_filters,Hyper-parameter Configuration,Hyper-parameter Configuration,"The comment indicates an intention to change the hyperparameter 'num_filters', i.e., adjust the number of filters in a layer, which is a hyper‑parameter configuration task.","Abbreviation: HP Conf  
+Reason: The comment indicates an intention to change the hyperparameter 'num_filters', i.e., adjust the number of filters in a layer, which is a hyper‑parameter configuration task."
+TODO Figure out how to distinguish oxidation states,Machine Learning Knowledge,Machine Learning Knowledge,The comment indicates a lack of domain knowledge needed to engineer features (oxidation states) for the ML model.,"Abbreviation: MLKnow
+Reason: The comment indicates a lack of domain knowledge needed to engineer features (oxidation states) for the ML model."
+TODO figure out what exactly size does,Machine Learning Knowledge,Model Code Comprehension,"Comment indicates unclear purpose of “size” in the code, highlighting a comprehension gap typical of model code comprehension issues.","Abbreviation: MCC
+Reason: Comment indicates unclear purpose of “size” in the code, highlighting a comprehension gap typical of model code comprehension issues."
+TODO ForceSign,Hyper-parameter Configuration,Weight Configuration,The TODO hints at a pending fix to enforce the sign of model weights during configuration.,"Abbreviation: Weight Conf
+Reason: The TODO hints at a pending fix to enforce the sign of model weights during configuration."
+TODO generalise to columns with series of unequal length,Model Code Reusability,Data Processing Configuration,The comment indicates a need to adjust data processing logic to handle columns with series of unequal length.,"Abbreviation: Data Conf
+Reason: The comment indicates a need to adjust data processing logic to handle columns with series of unequal length."
+TODO generalise to series-to-series functions and function kwargs,Data Processing Configuration,Model Code Reusability,"The comment aims to generalise the code so it can handle series-to-series functions and function kwargs, enhancing its reusability across different scenarios.","Abbreviation: MCR
+Reason: The comment aims to generalise the code so it can handle series-to-series functions and function kwargs, enhancing its reusability across different scenarios."
+TODO handle 1d series; not only 2d dataframes,Data Processing Configuration,Data Processing Configuration,"The comment highlights a missing data handling case (1D series vs 2D dataframes), indicating a need to adjust how data is processed/configured.","Abbreviation: Data Conf  
+Reason: The comment highlights a missing data handling case (1D series vs 2D dataframes), indicating a need to adjust how data is processed/configured."
+ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,Abstraction,Data Processing Configuration,"The comment indicates a pending adjustment to how source/target IDs are processed, a clear data‑processing configuration issue.","Abbreviation: Data Conf  
+Reason: The comment indicates a pending adjustment to how source/target IDs are processed, a clear data‑processing configuration issue."
+TODO if without momentum; weights should not change too,Weight Configuration,Weight Configuration,"The comment concerns adjusting weight updates when momentum is not used, i.e., configuring or enforcing weight behavior.","Abbreviation: Weight Conf
+Reason: The comment concerns adjusting weight updates when momentum is not used, i.e., configuring or enforcing weight behavior."
+TODO Implement,Hyper-parameter Configuration,Unnecessary Model Code,"The comment marks a placeholder for code that may be removed or replaced, indicating unnecessary or incomplete model code.","Abbreviation: UMC
+Reason: The comment marks a placeholder for code that may be removed or replaced, indicating unnecessary or incomplete model code."
+TODO implement generic method,Abstraction,Abstraction,"The TODO indicates a missing generic method, revealing a lack of abstraction in the design.","Abbreviation: Abs  
+Reason: The TODO indicates a missing generic method, revealing a lack of abstraction in the design."
+TODO implement multi-gpu training and compare performance,Prototype,Prediction Quality,"The TODO hints at a pending change that could alter training/workflow and thus affect model performance, i.e., prediction quality.","Abbreviation: PQ
+Reason: The TODO hints at a pending change that could alter training/workflow and thus affect model performance, i.e., prediction quality."
+TODO improve the regex here,Data Processing Configuration,Model Code Comprehension,"The comment flags a complex regex that hampers code readability and maintainability, directly impacting model code comprehension.","Abbreviation: MCC
+Reason: The comment flags a complex regex that hampers code readability and maintainability, directly impacting model code comprehension."
+"TODO last token include: \""&& $last_token[...]\""",Data Processing Configuration,Data Processing Configuration,The comment indicates a change to the data processing step (adding a condition on the last token).,"Abbreviation: Data Conf
+Reason: The comment indicates a change to the data processing step (adding a condition on the last token)."
+TODO make paf_scored not part of self?,Abstraction,Model Code Modifiability,Refactoring to remove a field from the class improves maintainability and future modifications.,"Abbreviation: MCM
+Reason: Refactoring to remove a field from the class improves maintainability and future modifications."
+TODO make threshold a variable,Custom Data Type,Hyper-parameter Configuration,The comment suggests turning a hardcoded threshold into a configurable hyper‑parameter.,"Abbreviation: HP Conf
+Reason: The comment suggests turning a hardcoded threshold into a configurable hyper‑parameter."
+TODO max in one tensor,Layer Configuration,Unnecessary Model Code,"Indicates a refactor to replace redundant max operations with a single tensor operation, eliminating unnecessary code.","Abbreviation: UMC  
+Reason: Indicates a refactor to replace redundant max operations with a single tensor operation, eliminating unnecessary code."
+TODO move these registrations to backend-specific files,Prototype,Boundary Erosion,"The comment suggests refactoring code to separate backend-specific logic, improving subsystem boundaries.","Abbreviation: BE  
+Reason: The comment suggests refactoring code to separate backend-specific logic, improving subsystem boundaries."
+TODO normalice to make sum up to 1?,Data Processing Configuration,Data Processing Configuration,"Adjusting preprocessing to enforce that values sum to 1, a data processing configuration change.","Abbreviation: Data Conf
+Reason: Adjusting preprocessing to enforce that values sum to 1, a data processing configuration change."
+todo not support dense,Unnecessary Model Code,Layer Configuration,"The comment indicates a missing or unsupported dense layer, a direct issue with layer configuration.","Abbreviation: Layer Conf
+Reason: The comment indicates a missing or unsupported dense layer, a direct issue with layer configuration."
+TODO Option for string lenght,Data Storage Configuration,Hyper-parameter Configuration,"The comment indicates adding an option to configure a string length, which is a hyper-parameter setting for the model.","Abbreviation: HP Conf
+Reason: The comment indicates adding an option to configure a string length, which is a hyper-parameter setting for the model."
+TODO Promote this to a Funsor subclass.,Model Code Reusability,Abstraction,"The comment indicates a need to refactor the code into a subclass, improving abstraction and decoupling.","Abbreviation: Abs
+Reason: The comment indicates a need to refactor the code into a subclass, improving abstraction and decoupling."
+TODO refactor second part of if statement when implementing live model prediction,Model Code Comprehension,Model Code Modifiability,Refactoring the if statement will improve code maintainability and ease future modifications for live model prediction.,"Abbreviation: MCM
+Reason: Refactoring the if statement will improve code maintainability and ease future modifications for live model prediction."
+TODO remove,Unnecessary Model Code,Unnecessary Model Code,Comment indicates the code is unnecessary and should be removed.,"Abbreviation: UMC
+Reason: Comment indicates the code is unnecessary and should be removed."
+TODO remove later.,Unnecessary Model Code,Unnecessary Model Code,"The comment flags code that is unnecessary and slated for removal, matching the UNNECESSARY MODEL CODE category.","Abbreviation: UMC
+Reason: The comment flags code that is unnecessary and slated for removal, matching the UNNECESSARY MODEL CODE category."
+TODO remove this,Unnecessary Model Code,Unnecessary Model Code,"The comment flags code that is unnecessary or should be removed, indicating dead or redundant model code.","Abbreviation: UMC  
+Reason: The comment flags code that is unnecessary or should be removed, indicating dead or redundant model code."
+TODO replace this code with the following commented out code after viz is fixed,Code Dependency,Unnecessary Model Code,"The comment marks a temporary, placeholder code block that will be removed or replaced, indicating unnecessary model code.","Abbreviation: UMC
+Reason: The comment marks a temporary, placeholder code block that will be removed or replaced, indicating unnecessary model code."
+TODO replace this speedup implementation with nni.compression.torch.ModelSpeedup,Layer Configuration,Unnecessary Model Code,The custom speedup implementation is unnecessary and should be removed/replaced with the library abstraction.,"Abbreviation: UMC  
+Reason: The custom speedup implementation is unnecessary and should be removed/replaced with the library abstraction."
+TODO replace whole pandas data container as input argument with separated metadata container,Data Storage Configuration,Data Storage Configuration,"Refers to changing the internal data representation from a pandas container to a metadata container, i.e., how data is stored/represented.","Abbreviation: DS Conf
+Reason: Refers to changing the internal data representation from a pandas container to a metadata container, i.e., how data is stored/represented."
+TODO replace with Streamlines,Custom Data Type,Abstraction,"The comment flags a need to replace current code with the more abstract ‘Streamlines’ library, indicating a lack of abstraction in the existing implementation.","Abbreviation: Abs
+Reason: The comment flags a need to replace current code with the more abstract ‘Streamlines’ library, indicating a lack of abstraction in the existing implementation."
+TODO save all the results to a json inside the experiment's folder,Data Storage Configuration,Data Storage Configuration,Indicates configuring how result data is persisted by saving it to a JSON file in the experiment folder.,"Abbreviation: DS Conf
+Reason: Indicates configuring how result data is persisted by saving it to a JSON file in the experiment folder."
+TODO Search the web or use other algorithms,Machine Learning Knowledge,Machine Learning Knowledge,The comment flags a knowledge gap—suggesting to search for better algorithms—aligning with ML knowledge debt.,"Abbreviation: MLKnow
+Reason: The comment flags a knowledge gap—suggesting to search for better algorithms—aligning with ML knowledge debt."
+TODO Send the context back into some list maintained by,Data Storage Configuration,Glue Code,"The comment indicates a missing glue operation to pass context between components, typical of glue code responsibilities.","Abbreviation: GC
+Reason: The comment indicates a missing glue operation to pass context between components, typical of glue code responsibilities."
+TODO Set bioassembly info,Data Processing Configuration,Data Processing Configuration,The comment indicates a pending update to configuration or metadata for data handling.,"Abbreviation: Data Conf
+Reason: The comment indicates a pending update to configuration or metadata for data handling."
+TODO Should this stay generic? (point),Machine Learning Knowledge,Model Code Reusability,"The comment questions whether code should remain generic, indicating a concern about code generalisation for reuse.","Abbreviation: MCR
+Reason: The comment questions whether code should remain generic, indicating a concern about code generalisation for reuse."
+TODO stim channel exclusion,Data Processing Configuration,Data Processing Configuration,The comment indicates a change to data handling—excluding a stimulus channel—typical of data processing configuration.,"Abbreviation: Data Conf
+Reason: The comment indicates a change to data handling—excluding a stimulus channel—typical of data processing configuration."
+TODO support recursive parfor; multi-D; mutiple body blocks,Prototype,Model Code Modifiability,"The comment flags missing support for recursive parfor, multi‑D, and multiple body blocks, indicating the code is hard to extend and modify—an issue of model code modifiability.","Abbreviation: MCM
+Reason: The comment flags missing support for recursive parfor, multi‑D, and multiple body blocks, indicating the code is hard to extend and modify—an issue of model code modifiability."
+todo sweep,Model Code Modifiability,Unnecessary Model Code,"The comment marks a placeholder for removing redundant or unnecessary code, indicating the code should be swept/cleaned.","Abbreviation: UMC
+Reason: The comment marks a placeholder for removing redundant or unnecessary code, indicating the code should be swept/cleaned."
+TODO switch similar statements to work inplace (w\/o making a copy),Model Code Reusability,Unnecessary Model Code,"The comment suggests refactoring to perform operations in place instead of creating unnecessary copies, thereby reducing redundant code and improving performance.","Abbreviation: UMC
+Reason: The comment suggests refactoring to perform operations in place instead of creating unnecessary copies, thereby reducing redundant code and improving performance."
+TODO These ratios can't be hardcoded,Model Code Reusability,Hyper-parameter Configuration,The comment indicates that hardcoded numeric ratios (likely hyperparameters) should be made configurable.,"Abbreviation: HP Conf
+Reason: The comment indicates that hardcoded numeric ratios (likely hyperparameters) should be made configurable."
+TODO this code is currently necessary for the async_fit method in websocket_client.py,Hyper-parameter Configuration,Prototype,"Comment signals a temporary, prototype‑style implementation required for async_fit, typical of prototype‑related technical debt.","Abbreviation: Proto  
+Reason: Comment signals a temporary, prototype‑style implementation required for async_fit, typical of prototype‑related technical debt."
+TODO this is too general; register all ops,Prototype,Abstraction,"The comment flags the operation registration as overly generic, implying a lack of clear abstractions that would otherwise isolate changes and improve maintainability.","Abbreviation: Abs  
+Reason: The comment flags the operation registration as overly generic, implying a lack of clear abstractions that would otherwise isolate changes and improve maintainability."
+TODO this is wrong for other entitiey types nor appearing in the edge,Custom Data Type,Model Code Reusability,"The code fails for other entity types, indicating it is not reusable across different contexts.","Abbreviation: MCR  
+Reason: The code fails for other entity types, indicating it is not reusable across different contexts."
+TODO this vector is very sparse; we can make it more memory efficient,Data Storage Configuration,Data Storage Configuration,"The comment discusses optimizing a sparse vector for better memory usage, addressing how data is stored internally.","Abbreviation: DS Conf
+Reason: The comment discusses optimizing a sparse vector for better memory usage, addressing how data is stored internally."
+TODO to be modified,Model Code Modifiability,Model Code Modifiability,"The comment signals that the code is a placeholder awaiting future changes, implying the current implementation lacks easy modifiability.","Abbreviation: MCM
+Reason: The comment signals that the code is a placeholder awaiting future changes, implying the current implementation lacks easy modifiability."
+TODO Update and move now this isn't used here,Unnecessary Model Code,Unnecessary Model Code,Indicates code is no longer used and should be removed or refactored.,"Abbreviation: UMC
+Reason: Indicates code is no longer used and should be removed or refactored."
+TODO update these - the sklearn transformation class should be able,Custom Data Type,Data Processing Configuration,The comment indicates the sklearn transformation class must be updated to correctly configure data processing steps.,"Abbreviation: Data Conf  
+Reason: The comment indicates the sklearn transformation class must be updated to correctly configure data processing steps."
+TODO validate and normalize to \/path\/to\/variable,Data Processing Configuration,Data Processing Configuration,"The comment indicates a need to validate and normalize a data path, which falls under configuring how data is processed.","Abbreviation: Data Conf
+Reason: The comment indicates a need to validate and normalize a data path, which falls under configuring how data is processed."
+TODO validate configuration and set defaults,Data Storage Configuration,Hyper-parameter Configuration,"The comment refers to validating and setting defaults for configuration parameters, which is typical hyper‑parameter configuration.","Abbreviation: HP Conf
+Reason: The comment refers to validating and setting defaults for configuration parameters, which is typical hyper‑parameter configuration."
+TODO validation_split is not used,Unnecessary Model Code,Data Processing Configuration,"Indicates the data split parameter (validation_split) is missing, affecting how data is processed and split during training.","Abbreviation: Data Conf
+Reason: Indicates the data split parameter (validation_split) is missing, affecting how data is processed and split during training."
+TODO WIP temp_coherence_loss # assumes all sequences in the dataset share at least one same 3D pos of Baxter arm,Hyper-parameter Configuration,Machine Learning Reliability,The comment warns of an assumption about dataset sequences that could compromise model reliability if violated.,"Abbreviation: MLRelia
+Reason: The comment warns of an assumption about dataset sequences that could compromise model reliability if violated."
+TODO wouldn't it be better with a set rather than a list?,Data Storage Configuration,Data Storage Configuration,"Suggests changing the internal data representation from a list to a set, which is a configuration of how data is stored internally.","Abbreviation: DS Conf  
+Reason: Suggests changing the internal data representation from a list to a set, which is a configuration of how data is stored internally."
+TODO write a warning,Model Interpretability,Machine Learning Knowledge,"The TODO indicates missing warning code, reflecting developer unawareness or lack of knowledge about necessary checks in the ML system.","Abbreviation: MLKnow
+Reason: The TODO indicates missing warning code, reflecting developer unawareness or lack of knowledge about necessary checks in the ML system."
+"TODO(ahundt) difference between \""redundant\"" and regular proto parsing; figure out how to deal with grasp_success rename properly",Machine Learning Knowledge,Data Processing Configuration,"The comment addresses handling of data parsing differences and renaming, indicating a need to configure how data is processed.","Abbreviation: Data Conf
+Reason: The comment addresses handling of data parsing differences and renaming, indicating a need to configure how data is processed."
+TODO(ahundt) make more efficient,Data Processing Configuration,Unnecessary Model Code,Comment flags inefficient code that likely bottlenecks execution and should be optimized or removed.,"Abbreviation: UMC
+Reason: Comment flags inefficient code that likely bottlenecks execution and should be optimized or removed."
+TODO(ahundt) maybe the rotation component of this needs to be inverted due to sva implementation?,Machine Learning Knowledge,Layer Configuration,"The comment flags a potential mis‑configuration of the rotation layer, indicating that the layer’s behavior may need adjustment.","Abbreviation: Layer Conf
+Reason: The comment flags a potential mis‑configuration of the rotation layer, indicating that the layer’s behavior may need adjustment."
+TODO(b\/119775953): fix the circular dependencies.,Code Dependency,Boundary Erosion,Indicates poor subsystem boundaries—circular dependencies make maintenance difficult.,"Abbreviation: BE
+Reason: Indicates poor subsystem boundaries—circular dependencies make maintenance difficult."
+TODO(beam2d): Fix after supporting correct dtype promotion.,Custom Data Type,Plain Old Data Type,"The comment flags a problem with incorrect data type handling (dtype promotion), a typical issue with plain raw data types causing confusion in ML pipelines.","Abbreviation: PODT  
+Reason: The comment flags a problem with incorrect data type handling (dtype promotion), a typical issue with plain raw data types causing confusion in ML pipelines."
+TODO(crcrpar): Improve resource computation\/allocation algorithm.,Data Storage Configuration,Model Code Modifiability,"The comment flags an improvement to the resource computation/alocation algorithm, indicating a need to make the model code easier to maintain and modify in the future.","Abbreviation: MCM
+Reason: The comment flags an improvement to the resource computation/alocation algorithm, indicating a need to make the model code easier to maintain and modify in the future."
+TODO(dbieber): Move this logic into the dataset definition.,Boundary Erosion,Data Processing Configuration,"The comment suggests relocating processing logic into the dataset definition, which changes how data is handled—typical of data processing configuration.","Abbreviation: Data Conf
+Reason: The comment suggests relocating processing logic into the dataset definition, which changes how data is handled—typical of data processing configuration."
+TODO(fstahlberg): Move to config,Model Code Modifiability,Weight Configuration,"The comment indicates a plan to move hardcoded weight values into a configuration file, which is a classic weight configuration debt.","Abbreviation: Weight Conf
+Reason: The comment indicates a plan to move hardcoded weight values into a configuration file, which is a classic weight configuration debt."
+TODO(rbharath): The script expects that all columns in xlsx\/csv files,Prototype,Data Processing Configuration,"The comment notes a requirement that the script assumes all columns are present in the input files, indicating a data processing configuration issue.","Abbreviation: Data Conf
+Reason: The comment notes a requirement that the script assumes all columns are present in the input files, indicating a data processing configuration issue."
+TODO(rliaw): This behavior is probably undesirable; but right now,Prototype,Machine Learning Reliability,"The comment flags an undesirable behavior that may compromise system reliability, indicating a need to address the issue to improve robustness.","Abbreviation: MLRelia  
+Reason: The comment flags an undesirable behavior that may compromise system reliability, indicating a need to address the issue to improve robustness."
+TODO(sonots): Implement in C++,Multiple Languages,Multiple Languages,"The TODO indicates a missing implementation in C++, highlighting a cross-language issue that can cause maintenance difficulty.","Abbreviation: ML  
+Reason: The TODO indicates a missing implementation in C++, highlighting a cross-language issue that can cause maintenance difficulty."
+TODO(sven): Add once ModelV1 is deprecated and we no longer cause circular,Code Dependency,Boundary Erosion,"TODO indicates a circular dependency issue that will be resolved once ModelV1 is deprecated, reflecting lack of clear subsystem boundaries, characteristic of boundary erosion.","Abbreviation: BE
+Reason: TODO indicates a circular dependency issue that will be resolved once ModelV1 is deprecated, reflecting lack of clear subsystem boundaries, characteristic of boundary erosion."
+TODO(tokunaga): the number of processes should be configurable,Model Code Modifiability,Hyper-parameter Configuration,"The comment indicates a need to make the number of processes configurable, which is a runtime hyper‑parameter affecting model execution.","Abbreviation: HP Conf
+Reason: The comment indicates a need to make the number of processes configurable, which is a runtime hyper‑parameter affecting model execution."
+TODO(vsatish): Figure out why this isn't printed.,Machine Learning Knowledge,Model Code Comprehension,The TODO signals a comprehension problem in the model code—figuring out why the print statement fails requires understanding the code flow and data.,"Abbreviation: MCC  
+Reason: The TODO signals a comprehension problem in the model code—figuring out why the print statement fails requires understanding the code flow and data."
+TODO. get rid of from_model_pt,Unnecessary Model Code,Unnecessary Model Code,"Indicates a plan to remove a code element, marking it as unnecessary and scheduled for deletion.","Abbreviation: UMC  
+Reason: Indicates a plan to remove a code element, marking it as unnecessary and scheduled for deletion."
+TODO: (sven) rename to simply stats_fn to match eager and torch.,Abstraction,Model Code Comprehension,"The comment suggests renaming a function for clearer, consistent naming, directly addressing model code comprehension and legibility.","Abbreviation: MCC
+Reason: The comment suggests renaming a function for clearer, consistent naming, directly addressing model code comprehension and legibility."
+TODO: @trask @theo could you take a look at this if you have better ideas on how to get these parameters,Machine Learning Knowledge,Hyper-parameter Configuration,"The comment seeks improved methods for obtaining model parameters, indicating a concern with hyper‑parameter configuration.","Abbreviation: HP Conf  
+Reason: The comment seeks improved methods for obtaining model parameters, indicating a concern with hyper‑parameter configuration."
+todo: accurate Value,Machine Learning Reliability,Hyper-parameter Configuration,"The comment indicates a placeholder for a value that must be accurate, typical of a hyper‑parameter or default setting that needs a proper value.","Abbreviation: HP Conf  
+Reason: The comment indicates a placeholder for a value that must be accurate, typical of a hyper‑parameter or default setting that needs a proper value."
+TODO: add a complete frame_size; to cover the whole audio signal?,Machine Learning Knowledge,Data Processing Configuration,"The comment refers to adjusting the frame_size parameter, which configures how audio data is processed.","Abbreviation: Data Conf  
+Reason: The comment refers to adjusting the frame_size parameter, which configures how audio data is processed."
+TODO: add backward images also.,Data Processing Configuration,Data Processing Configuration,The comment indicates a missing data processing step—adding backward images—requiring configuration of how data is handled.,"Abbreviation: Data Conf
+Reason: The comment indicates a missing data processing step—adding backward images—requiring configuration of how data is handled."
+TODO: add datetype conversion,Data Storage Configuration,Plain Old Data Type,"Indicates a need to convert raw date data type to a proper format, addressing confusion from using unstructured data types.","Abbreviation: PODT
+Reason: Indicates a need to convert raw date data type to a proper format, addressing confusion from using unstructured data types."
+TODO: add inheritance from Graph once implemented,Code Dependency,Abstraction,"The comment highlights a missing abstraction—adding inheritance from Graph will provide a common base class, improving modularity and reducing cascading changes.","Abbreviation: Abs
+Reason: The comment highlights a missing abstraction—adding inheritance from Graph will provide a common base class, improving modularity and reducing cascading changes."
+TODO: add more tags based on the scikit-learn,Prototype,Model Code Comprehension,"Missing tags hinder understanding of scikit‑learn usage, affecting model code comprehension.","Abbreviation: MCC
+Reason: Missing tags hinder understanding of scikit‑learn usage, affecting model code comprehension."
+TODO: Add this to configuration framework,Data Processing Configuration,Hyper-parameter Configuration,"The comment refers to adding a new entry to the configuration framework, which is typical for hyper‑parameter configuration in ML systems.","Abbreviation: HP Conf
+Reason: The comment refers to adding a new entry to the configuration framework, which is typical for hyper‑parameter configuration in ML systems."
+TODO: arbitrary threshold is problematic,Model Code Reusability,Hyper-parameter Configuration,"Indicates an arbitrary threshold was set, pointing to a hyper‑parameter that requires proper configuration.","Abbreviation: HP Conf  
+Reason: Indicates an arbitrary threshold was set, pointing to a hyper‑parameter that requires proper configuration."
+TODO: assertWarns exist only for Python 3.2+; test in all versions,Code Dependency,Code Dependency,"The comment highlights a test dependency on specific Python versions, indicating a need to address an external version-based dependency.","Abbreviation: MLDepend  
+Reason: The comment highlights a test dependency on specific Python versions, indicating a need to address an external version-based dependency."
+TODO: At the moment LHUC is RNN specific. We should support other models as well.,Model Code Reusability,Model Code Reusability,"Code is RNN‑specific; needs generalization to support other models, improving reusability.","Abbreviation: MCR
+Reason: Code is RNN‑specific; needs generalization to support other models, improving reusability."
+TODO: auto detect dtype,Data Processing Configuration,Plain Old Data Type,Indicates a need to automatically detect and manage raw data types to reduce confusion in data handling.,"Abbreviation: PODT
+Reason: Indicates a need to automatically detect and manage raw data types to reduce confusion in data handling."
+TODO: Basically identical to `test_intra_cv_target_transform` except for repeated KFold,Duplicate Model Code,Duplicate Model Code,"The comment notes the code is essentially the same as another test, indicating duplicate model code.","Abbreviation: DMC  
+Reason: The comment notes the code is essentially the same as another test, indicating duplicate model code."
+TODO: black box attacks,Machine Learning Reliability,Model Interpretability,"Comment flags vulnerability due to model’s black‑box nature, indicating a need to improve interpretability and security.","Abbreviation: MLInter
+Reason: Comment flags vulnerability due to model’s black‑box nature, indicating a need to improve interpretability and security."
+"TODO: calculate this centroid\""",Data Processing Configuration,Machine Learning Knowledge,"The TODO flag shows an unimplemented centroid calculation, indicating a lack of ML knowledge or expertise to complete the task.","Abbreviation: MLKnow
+Reason: The TODO flag shows an unimplemented centroid calculation, indicating a lack of ML knowledge or expertise to complete the task."
+TODO: calibration dataset,Hyper-parameter Configuration,Data Processing Configuration,"Indicates a missing or pending addition of a calibration dataset, i.e., a configuration of how data is processed or used.","Abbreviation: Data Conf
+Reason: Indicates a missing or pending addition of a calibration dataset, i.e., a configuration of how data is processed or used."
+todo: change the feature_na_method!,Data Processing Configuration,Data Processing Configuration,"The comment indicates a change to the method used for handling missing values in feature extraction, which is a data‑processing configuration issue.","Abbreviation: Data Conf
+Reason: The comment indicates a change to the method used for handling missing values in feature extraction, which is a data‑processing configuration issue."
+TODO: Change the optimizer to the appropriate Optimizer class,Hyper-parameter Configuration,Hyper-parameter Configuration,"The comment indicates a need to change the optimizer class, which is a hyper‑parameter configuration for the model.","Abbreviation: HP Conf
+Reason: The comment indicates a need to change the optimizer class, which is a hyper‑parameter configuration for the model."
+TODO: change this logic when there is a git pretty-format,Code Dependency,Code Dependency,"The comment indicates a future change that depends on an external feature (“git pretty-format”), implying a dependency‑related technical debt.","Abbreviation: MLDepend  
+Reason: The comment indicates a future change that depends on an external feature (“git pretty-format”), implying a dependency‑related technical debt."
+TODO: check `other` is Series after a circular import of SeriesType fixed,Code Dependency,Code Dependency,"TODO reflects a type check needed after resolving a circular import, indicating a dependency issue that previously blocked proper type usage.","Abbreviation: MLDepend
+Reason: TODO reflects a type check needed after resolving a circular import, indicating a dependency issue that previously blocked proper type usage."
+TODO: Check behavior if this is a single mrc file (no '@'),Machine Learning Knowledge,Data Processing Configuration,"The comment refers to how the code should handle a single mrc data file, i.e., a configuration of data processing.","Abbreviation: Data Conf
+Reason: The comment refers to how the code should handle a single mrc data file, i.e., a configuration of data processing."
+TODO: check CAPTALIZED WORDS as their lower case counterparts before saving,Data Processing Configuration,Data Processing Configuration,The comment describes a data processing step (normalizing capitalized words to lower case) that is part of configuring how data is handled before storage.,"Abbreviation: Data Conf
+Reason: The comment describes a data processing step (normalizing capitalized words to lower case) that is part of configuring how data is handled before storage."
+TODO: check for series\/dict\/list input,Plain Old Data Type,Plain Old Data Type,"It flags a need to validate raw data types (Series, dict, list) to prevent confusion in processing.","Abbreviation: PODT
+Reason: It flags a need to validate raw data types (Series, dict, list) to prevent confusion in processing."
+TODO: Check if self._mean_squared_error_w_precision can be used here,Machine Learning Knowledge,Prediction Quality,The comment flags a potential change to the error calculation that could influence prediction accuracy and overall model performance.,"Abbreviation: PQ
+Reason: The comment flags a potential change to the error calculation that could influence prediction accuracy and overall model performance."
+TODO: check if stride of 2 causes alignment issues if the featuremap,Machine Learning Knowledge,Layer Configuration,The comment concerns a layer-level detail—checking the effect of a stride value on feature map alignment.,"Abbreviation: Layer Conf  
+Reason: The comment concerns a layer-level detail—checking the effect of a stride value on feature map alignment."
+TODO: check whether the model is QuartzNet,Custom Data Type,Machine Learning Knowledge,"The comment indicates a missing check for a specific model type, reflecting a knowledge gap about when a model is QuartzNet that may need revisiting.","Abbreviation: MLKnow
+Reason: The comment indicates a missing check for a specific model type, reflecting a knowledge gap about when a model is QuartzNet that may need revisiting."
+TODO: check why there's an IF,Machine Learning Knowledge,Unnecessary Model Code,"Comment flags a possibly unnecessary conditional, suggesting the IF may be redundant or obsolete, a typical sign of unnecessary model code.","Abbreviation: UMC  
+Reason: Comment flags a possibly unnecessary conditional, suggesting the IF may be redundant or obsolete, a typical sign of unnecessary model code."
+TODO: clip polygons,Data Processing Configuration,Data Processing Configuration,The comment indicates a missing data processing step (polygon clipping) that needs to be added or configured.,"Abbreviation: Data Conf  
+Reason: The comment indicates a missing data processing step (polygon clipping) that needs to be added or configured."
+TODO: compare the performance!,Prediction Quality,Prediction Quality,"Indicates a pending comparison of model performance, directly addressing prediction quality concerns.","Abbreviation: PQ  
+Reason: Indicates a pending comparison of model performance, directly addressing prediction quality concerns."
+TODO: compute signed distance between walls,Data Processing Configuration,Data Processing Configuration,"The comment indicates a missing data‑processing step—computing a geometric feature (signed distance) that will be used downstream, i.e., configuring how input data is transformed.","Abbreviation: Data Conf  
+Reason: The comment indicates a missing data‑processing step—computing a geometric feature (signed distance) that will be used downstream, i.e., configuring how input data is transformed."
+ToDo: consider go\/no-go with following modification,Data Processing Configuration,Model Code Modifiability,"The comment flags a pending modification that may need future changes, highlighting concerns about how easily the code can be altered and maintained.","Abbreviation: MCM  
+Reason: The comment flags a pending modification that may need future changes, highlighting concerns about how easily the code can be altered and maintained."
+TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,Multiple Languages,Multiple Languages,"The comment indicates a requirement to implement activation types in C++ for MXNet, highlighting a cross-language limitation that complicates maintenance and integration.","Abbreviation: ML  
+Reason: The comment indicates a requirement to implement activation types in C++ for MXNet, highlighting a cross-language limitation that complicates maintenance and integration."
+TODO: Could be implemented as optimization option in LK???,Machine Learning Knowledge,Hyper-parameter Configuration,"The comment indicates a future optimization option, which is a hyper‑parameter or configuration change to improve model performance.","Abbreviation: HP Conf
+Reason: The comment indicates a future optimization option, which is a hyper‑parameter or configuration change to improve model performance."
+TODO: Could check if QSettings.Format stores type info.,Machine Learning Knowledge,Data Storage Configuration,"The comment concerns verifying how QSettings.Format stores type information, i.e., the configuration of data representation and storage.","Abbreviation: DS Conf  
+Reason: The comment concerns verifying how QSettings.Format stores type information, i.e., the configuration of data representation and storage."
+TODO: Currently this turns any upregulation associated with,Custom Data Type,Weight Configuration,"The TODO hints at a pending modification related to weight adjustment (upregulation) in the model, which is a typical weight‑configuration issue.","Abbreviation: Weight Conf
+Reason: The TODO hints at a pending modification related to weight adjustment (upregulation) in the model, which is a typical weight‑configuration issue."
+TODO: Currently we don't look at source text; but we may want to,Data Processing Configuration,Data Processing Configuration,"TODO notes that source text is currently ignored, implying future addition of data‑processing steps to handle that input.","Abbreviation: Data Conf
+Reason: TODO notes that source text is currently ignored, implying future addition of data‑processing steps to handle that input."
+TODO: dataframe pass needed?,Machine Learning Knowledge,Data Processing Configuration,Indicates missing or incomplete data processing step (passing a dataframe) that needs to be configured.,"Abbreviation: Data Conf  
+Reason: Indicates missing or incomplete data processing step (passing a dataframe) that needs to be configured."
+TODO: delete this method when no longer needed,Unnecessary Model Code,Unnecessary Model Code,The comment marks a method that is unnecessary and should be deleted.,"Abbreviation: UMC  
+Reason: The comment marks a method that is unnecessary and should be deleted."
+TODO: deprecate?,Unnecessary Model Code,Unnecessary Model Code,"The comment flags code that is potentially obsolete or unnecessary, suggesting it should be removed or deprecated.","Abbreviation: UMC  
+Reason: The comment flags code that is potentially obsolete or unnecessary, suggesting it should be removed or deprecated."
+TODO: determine if requiring same sense is too string; i.e.,Data Processing Configuration,Machine Learning Knowledge,"The comment flags a potential logic flaw in the code, indicating a need to reassess the knowledge/assumptions underlying the algorithm.","Abbreviation: MLKnow
+Reason: The comment flags a potential logic flaw in the code, indicating a need to reassess the knowledge/assumptions underlying the algorithm."
+TODO: Do below `y_lie` lines directly calculate min\/max\/mean on `opt.yi` when it could also contain times?,Machine Learning Knowledge,Data Processing Configuration,"The comment flags a potential issue in how data (opt.yi) is processed—calculating statistics directly on values that may include time, indicating a data processing configuration concern.","Abbreviation: Data Conf  
+Reason: The comment flags a potential issue in how data (opt.yi) is processed—calculating statistics directly on values that may include time, indicating a data processing configuration concern."
+TODO: do more to protect against race conditions. File lock?,Data Storage Configuration,Machine Learning Reliability,Indicates a need to improve robustness (race conditions) to ensure reliable model behavior.,"Abbreviation: MLRelia  
+Reason: Indicates a need to improve robustness (race conditions) to ensure reliable model behavior."
+TODO: do not replace unless explicitly noticed + add 'only hangul' option,Model Code Modifiability,Data Processing Configuration,"The comment suggests adding an option to limit processing to Hangul only, i.e., configuring how data is processed.","Abbreviation: Data Conf  
+Reason: The comment suggests adding an option to limit processing to Hangul only, i.e., configuring how data is processed."
+TODO: do the transpose as a DataLoaderTransformer instead of in host,Data Storage Configuration,Data Processing Configuration,Refactoring the transpose into a DataLoaderTransformer changes how data is processed and configured.,"Abbreviation: Data Conf
+Reason: Refactoring the transpose into a DataLoaderTransformer changes how data is processed and configured."
+TODO: do this better,Hyper-parameter Configuration,Model Code Modifiability,"The comment flags a need for better code structure to ease future changes, indicating a modifiability issue.","Abbreviation: MCM
+Reason: The comment flags a need for better code structure to ease future changes, indicating a modifiability issue."
+TODO: do we need this?!,Unnecessary Model Code,Unnecessary Model Code,"The comment shows uncertainty about the necessity of the code, suggesting it might be dead or unnecessary.","Abbreviation: UMC
+Reason: The comment shows uncertainty about the necessity of the code, suggesting it might be dead or unnecessary."
+TODO: does it make graph?,Machine Learning Knowledge,Prediction Quality,"The TODO questions whether a graph is produced, impacting how predictions are visualized and evaluated.","Abbreviation: PQ
+Reason: The TODO questions whether a graph is produced, impacting how predictions are visualized and evaluated."
+TODO: don't make these a constant initializer because we,Data Storage Configuration,Weight Configuration,"The comment warns against using a constant initializer, implying that weight values should not be hard‑coded but set dynamically.","Abbreviation: Weight Conf
+Reason: The comment warns against using a constant initializer, implying that weight values should not be hard‑coded but set dynamically."
+TODO: don't need this w\/ py.test,Unnecessary Model Code,Unnecessary Model Code,"The comment indicates the code is not needed when using py.test, marking it as unnecessary and suggesting removal.","Abbreviation: UMC  
+Reason: The comment indicates the code is not needed when using py.test, marking it as unnecessary and suggesting removal."
+TODO: double check if this is still true in 1.9.0,Machine Learning Knowledge,Code Dependency,Note indicates a potential dependency on a specific library version (1.9.0) that may need revisiting.,"Abbreviation: MLDepend
+Reason: Note indicates a potential dependency on a specific library version (1.9.0) that may need revisiting."
+TODO: dtype,Custom Data Type,Plain Old Data Type,"The comment indicates a missing or unspecified data type, highlighting confusion around raw data types in ML.","Abbreviation: PODT
+Reason: The comment indicates a missing or unspecified data type, highlighting confusion around raw data types in ML."
+TODO: ensure dummy_na =False is what you want,Machine Learning Knowledge,Data Processing Configuration,"The comment flags a potential misconfiguration of the dummy_na parameter in the data preprocessing step, requiring review of that setting.","Abbreviation: Data Conf
+Reason: The comment flags a potential misconfiguration of the dummy_na parameter in the data preprocessing step, requiring review of that setting."
+TODO: ensure x data shape matches model._ph['x'] shape (only if fit),Model Code Reusability,Data Processing Configuration,The comment deals with configuring data processing to match the model's expected input shape.,"Abbreviation: Data Conf  
+Reason: The comment deals with configuring data processing to match the model's expected input shape."
+TODO: Extend to multifidelity problems by adding training_points = {'approx': {}},Prototype,Data Storage Configuration,Adds a dictionary to configure internal data representation for multifidelity training points.,"Abbreviation: DS Conf
+Reason: Adds a dictionary to configure internal data representation for multifidelity training points."
+TODO: extend to other key types,Custom Data Type,Model Code Reusability,"The comment indicates a plan to extend support for additional key types, improving the code’s reusability across different data scenarios.","Abbreviation: MCR  
+Reason: The comment indicates a plan to extend support for additional key types, improving the code’s reusability across different data scenarios."
+TODO: extract an eval func more robustly,Machine Learning Reliability,Abstraction,"The comment signals extracting and refactoring the eval logic into a more robust abstraction, enhancing maintainability and reducing cascading impacts.","Abbreviation: Abs
+Reason: The comment signals extracting and refactoring the eval logic into a more robust abstraction, enhancing maintainability and reducing cascading impacts."
+TODO: figure out how why the result of einsum requires reshape,Machine Learning Knowledge,Model Code Comprehension,"The comment indicates a need to understand why einsum’s output shape requires reshaping, reflecting a comprehension issue in model code.","Abbreviation: MCC  
+Reason: The comment indicates a need to understand why einsum’s output shape requires reshaping, reflecting a comprehension issue in model code."
+TODO: figure out why some machines prefer one of these options,Machine Learning Knowledge,Hyper-parameter Configuration,"The TODO indicates uncertainty about which configuration option works best on different machines, highlighting a need to investigate hyper‑parameter settings that vary across environments.","Abbreviation: HP Conf
+Reason: The TODO indicates uncertainty about which configuration option works best on different machines, highlighting a need to investigate hyper‑parameter settings that vary across environments."
+TODO: figure out why this happens.,Machine Learning Knowledge,Machine Learning Knowledge,Indicates a knowledge gap in ML; the developer cannot explain why the behavior occurs.,"Abbreviation: MLKnow  
+Reason: Indicates a knowledge gap in ML; the developer cannot explain why the behavior occurs."
+TODO: Formats should not be specified; just saving all the materialized formats,Data Storage Configuration,Data Storage Configuration,"The comment addresses how data formats are handled during storage, suggesting a change to the storage configuration to avoid specifying formats and instead retain all materialized formats.","Abbreviation: DS Conf  
+Reason: The comment addresses how data formats are handled during storage, suggesting a change to the storage configuration to avoid specifying formats and instead retain all materialized formats."
+TODO: Get rid of this,Unnecessary Model Code,Unnecessary Model Code,The comment signals removal of code that is unnecessary or redundant in the model.,"Abbreviation: UMC  
+Reason: The comment signals removal of code that is unnecessary or redundant in the model."
+TODO: handle boolean scalars properly,Data Processing Configuration,Plain Old Data Type,Indicates a need to properly handle boolean scalars—a raw data type issue that can cause confusion in ML processing.,"Abbreviation: PODT
+Reason: Indicates a need to properly handle boolean scalars—a raw data type issue that can cause confusion in ML processing."
+TODO: handle channel modalities later,Model Code Reusability,Data Processing Configuration,"The comment signals a future modification to how data (channel modalities) will be handled, indicating a pending change in data processing configuration.","Abbreviation: Data Conf  
+Reason: The comment signals a future modification to how data (channel modalities) will be handled, indicating a pending change in data processing configuration."
+TODO: handle other participant types,Model Code Reusability,Model Code Modifiability,The comment flags an incomplete implementation that will need future code modifications to support additional participant types.,"Abbreviation: MCM
+Reason: The comment flags an incomplete implementation that will need future code modifications to support additional participant types."
+TODO: handle record value which are lists; at least error,Plain Old Data Type,Data Processing Configuration,"Indicates a missing handling of list values in record processing, requiring additional data processing logic or error handling.","Abbreviation: Data Conf  
+Reason: Indicates a missing handling of list values in record processing, requiring additional data processing logic or error handling."
+TODO: handle string,Plain Old Data Type,Data Processing Configuration,The comment signals a missing data‑processing step—handling string inputs—which falls under configuring how data is processed.,"Abbreviation: Data Conf  
+Reason: The comment signals a missing data‑processing step—handling string inputs—which falls under configuring how data is processed."
+TODO: I believe this is not really much used,Unnecessary Model Code,Unnecessary Model Code,"The comment flags code that is likely unused or redundant, indicating it may be unnecessary and should be removed.","Abbreviation: UMC  
+Reason: The comment flags code that is likely unused or redundant, indicating it may be unnecessary and should be removed."
+TODO: I cannot get good results with this yet,Prediction Quality,Prediction Quality,"The comment indicates a lack of satisfactory prediction results, pointing to a quality issue in the model's performance.","Abbreviation: PQ
+Reason: The comment indicates a lack of satisfactory prediction results, pointing to a quality issue in the model's performance."
+"TODO: identify the \""best\"" language detector available for OSS python",Machine Learning Knowledge,Code Dependency,"The comment indicates a need to select an external OSS Python library for language detection, which is a dependency decision.","Abbreviation: MLDepend
+Reason: The comment indicates a need to select an external OSS Python library for language detection, which is a dependency decision."
+TODO: ignore non-numerics,Data Processing Configuration,Data Processing Configuration,"Indicates a change to the data‑processing logic—skipping non‑numeric values—i.e., configuring how data is handled.","Abbreviation: Data Conf  
+Reason: Indicates a change to the data‑processing logic—skipping non‑numeric values—i.e., configuring how data is handled."
+TODO: I'm not sure about this part,Machine Learning Knowledge,Machine Learning Knowledge,"The comment signals uncertainty in the ML code, indicating the developer may lack knowledge or confidence in the machine-learning implementation.","Abbreviation: MLKnow
+Reason: The comment signals uncertainty in the ML code, indicating the developer may lack knowledge or confidence in the machine-learning implementation."
+TODO: Implement Conv Transpose,Model Code Modifiability,Layer Configuration,"Comment signals a missing implementation of a convolution transpose layer, which is a layer configuration concern.","Abbreviation: Layer Conf  
+Reason: Comment signals a missing implementation of a convolution transpose layer, which is a layer configuration concern."
+TODO: Implement mass downloading with a cool-off in case of 429 response,Prototype,Glue Code,Adding download logic that communicates with an external service is glue code that connects the system to an external API and may need special handling for rate‑limits.,"Abbreviation: GC  
+Reason: Adding download logic that communicates with an external service is glue code that connects the system to an external API and may need special handling for rate‑limits."
+TODO: implement required params,Hyper-parameter Configuration,Model Code Modifiability,"The comment signals incomplete code that must accept required parameters, indicating a need for improved modifiability of the model code.","Abbreviation: MCM
+Reason: The comment signals incomplete code that must accept required parameters, indicating a need for improved modifiability of the model code."
+TODO: implement residual connection,Layer Configuration,Layer Configuration,"The comment indicates a missing layer connection (residual) that needs to be added, which falls under configuring or editing model layers.","Abbreviation: Layer Conf
+Reason: The comment indicates a missing layer connection (residual) that needs to be added, which falls under configuring or editing model layers."
+TODO: In terms of functional API; there should not be any initialization of an nn.Module.,Unnecessary Model Code,Layer Configuration,"The comment flags improper initialization of an nn.Module in a functional API, highlighting a layer‑configuration issue that hampers maintainability.","Abbreviation: Layer Conf  
+Reason: The comment flags improper initialization of an nn.Module in a functional API, highlighting a layer‑configuration issue that hampers maintainability."
+TODO: index and name,Data Processing Configuration,Data Processing Configuration,"The TODO indicates a need to modify how data is indexed and named, which is a data processing configuration concern.","Abbreviation: Data Conf
+Reason: The TODO indicates a need to modify how data is indexed and named, which is a data processing configuration concern."
+TODO: is incref required?,Machine Learning Knowledge,Model Code Comprehension,"The TODO highlights uncertainty about reference‑count handling in the model code, indicating a need for clearer comprehension and maintenance of that code segment.","Abbreviation: MCC  
+Reason: The TODO highlights uncertainty about reference‑count handling in the model code, indicating a need for clearer comprehension and maintenance of that code segment."
+TODO: is that best way to handle,Machine Learning Knowledge,Machine Learning Knowledge,"The TODO indicates uncertainty about the best approach, suggesting the developer may lack the necessary expertise or knowledge about the optimal solution.","Abbreviation: MLKnow
+Reason: The TODO indicates uncertainty about the best approach, suggesting the developer may lack the necessary expertise or knowledge about the optimal solution."
+TODO: It could be nice if this method was run on entire data; not just,Data Processing Configuration,Data Processing Configuration,"Comment suggests changing data processing to run the method on the full dataset, a typical data configuration issue.","Abbreviation: Data Conf  
+Reason: Comment suggests changing data processing to run the method on the full dataset, a typical data configuration issue."
+TODO: it's worth to switch back to the correct preprocess_input when InceptionResNetV2 model is re-trained,Code Dependency,Data Processing Configuration,The comment flags a pending change to the data preprocessing step (preprocess_input) that should be corrected when the model is retrained.,"Abbreviation: Data Conf  
+Reason: The comment flags a pending change to the data preprocessing step (preprocess_input) that should be corrected when the model is retrained."
+TODO: list,Plain Old Data Type,Unnecessary Model Code,The comment is a placeholder indicating incomplete or possibly unnecessary code that may later be removed.,"Abbreviation: UMC  
+Reason: The comment is a placeholder indicating incomplete or possibly unnecessary code that may later be removed."
+TODO: Log message,Model Interpretability,Model Code Modifiability,"TODO comment signals a future change needed, reducing code modifiability and maintainability.","Abbreviation: MCM
+Reason: TODO comment signals a future change needed, reducing code modifiability and maintainability."
+TODO: make efficient,Prototype,Unnecessary Model Code,The comment signals that the current code is inefficient and likely a performance bottleneck that should be refactored or removed.,"Abbreviation: UMC  
+Reason: The comment signals that the current code is inefficient and likely a performance bottleneck that should be refactored or removed."
+TODO: make efficient,Prototype,Unnecessary Model Code,Indicates code is inefficient and should be removed or refactored to eliminate bottlenecks.,"Abbreviation: UMC  
+Reason: Indicates code is inefficient and should be removed or refactored to eliminate bottlenecks."
+TODO: make fast_rcnn irrelevant,Unnecessary Model Code,Unnecessary Model Code,"The comment signals that the fast_rcnn code is no longer needed and should be removed, indicating unnecessary model code.","Abbreviation: UMC
+Reason: The comment signals that the fast_rcnn code is no longer needed and should be removed, indicating unnecessary model code."
+TODO: make it save a zipfile instead of a tarfile.,Data Storage Configuration,Data Storage Configuration,"Refers to changing the way data is stored (zip vs tar), a configuration change for data storage.","Abbreviation: DS Conf
+Reason: Refers to changing the way data is stored (zip vs tar), a configuration change for data storage."
+TODO: make the dtype configurable; see __init__(),Model Code Modifiability,Data Processing Configuration,"Indicates a need to configure data handling (dtype) instead of hard‑coding, aligning with data processing configuration.","Abbreviation: Data Conf
+Reason: Indicates a need to configure data handling (dtype) instead of hard‑coding, aligning with data processing configuration."
+TODO: maxpool?,Data Processing Configuration,Layer Configuration,"The comment indicates a need to add or adjust a max‑pooling layer, which is a layer‑configuration change.","Abbreviation: Layer Conf
+Reason: The comment indicates a need to add or adjust a max‑pooling layer, which is a layer‑configuration change."
+TODO: maybe introduce a DefaultEnvironment?,Machine Learning Knowledge,Abstraction,"Comment proposes adding a DefaultEnvironment abstraction, indicating a missing abstraction that could reduce cascading changes.","Abbreviation: Abs
+Reason: Comment proposes adding a DefaultEnvironment abstraction, indicating a missing abstraction that could reduce cascading changes."
+TODO: min,Data Processing Configuration,Hyper-parameter Configuration,The TODO indicates a missing configuration for a minimum hyper‑parameter value.,"Abbreviation: HP Conf
+Reason: The TODO indicates a missing configuration for a minimum hyper‑parameter value."
+TODO: Model Precision,Data Processing Configuration,Prediction Quality,"The comment indicates a TODO to improve or adjust model precision, directly relating to prediction quality and performance.","Abbreviation: PQ
+Reason: The comment indicates a TODO to improve or adjust model precision, directly relating to prediction quality and performance."
+TODO: modify this later,Data Processing Configuration,Unnecessary Model Code,"The comment is a generic placeholder suggesting the current code is incomplete or may later be removed/replaced, fitting the “Unnecessary Model Code” category.","Abbreviation: UMC  
+Reason: The comment is a generic placeholder suggesting the current code is incomplete or may later be removed/replaced, fitting the “Unnecessary Model Code” category."
+TODO: more specific types?,Custom Data Type,Plain Old Data Type,"The comment calls for more specific types, indicating a concern about using plain or generic data types that can cause confusion.","Abbreviation: PODT  
+Reason: The comment calls for more specific types, indicating a concern about using plain or generic data types that can cause confusion."
+TODO: need a better way,Plain Old Data Type,Abstraction,"The comment signals a need for a better, more abstract implementation, indicating a lack of proper abstraction.","Abbreviation: Abs  
+Reason: The comment signals a need for a better, more abstract implementation, indicating a lack of proper abstraction."
+TODO: need to discuss whether this is 'allowed' or smart,Machine Learning Knowledge,Machine Learning Knowledge,"The TODO reflects uncertainty about whether the code is appropriate, indicating a lack of ML knowledge that may require revisiting.","Abbreviation: MLKnow  
+Reason: The TODO reflects uncertainty about whether the code is appropriate, indicating a lack of ML knowledge that may require revisiting."
+TODO: Need to invert the CameraToWorld matrix => WorldToCamera matrix,Data Processing Configuration,Data Processing Configuration,"The comment indicates a need to transform data representation by inverting a transformation matrix, a typical data processing configuration change.","Abbreviation: Data Conf  
+Reason: The comment indicates a need to transform data representation by inverting a transformation matrix, a typical data processing configuration change."
+TODO: needs to be re-written to match new stitch datasets signature.,Glue Code,Data Processing Configuration,"Code must be adapted to the new dataset signature, a change in data handling and configuration.","Abbreviation: Data Conf
+Reason: Code must be adapted to the new dataset signature, a change in data handling and configuration."
+TODO: non-numeric columns should be ignored automatically,Data Processing Configuration,Data Processing Configuration,The comment highlights a missing feature in data processing—automatically ignoring non‑numeric columns—indicating a configuration adjustment to the data handling pipeline.,"Abbreviation: Data Conf  
+Reason: The comment highlights a missing feature in data processing—automatically ignoring non‑numeric columns—indicating a configuration adjustment to the data handling pipeline."
+TODO: normalize true states,Data Processing Configuration,Data Processing Configuration,"The comment indicates a change in how true states are normalized, a data‑processing configuration adjustment.","Abbreviation: Data Conf  
+Reason: The comment indicates a change in how true states are normalized, a data‑processing configuration adjustment."
+TODO: num pad examples is not set here if fillup strategy would be padding,Data Processing Configuration,Data Processing Configuration,"The comment indicates a missing configuration for the number of padding examples during data preparation, which falls under data processing configuration.","Abbreviation: Data Conf
+Reason: The comment indicates a missing configuration for the number of padding examples during data preparation, which falls under data processing configuration."
+TODO: optimize scheduling to support more cases.,Data Storage Configuration,Model Code Modifiability,The comment indicates a need to improve and refactor scheduling logic for easier future modifications and better maintenance.,"Abbreviation: MCM
+Reason: The comment indicates a need to improve and refactor scheduling logic for easier future modifications and better maintenance."
+TODO: other types?,Custom Data Type,Abstraction,"The comment signals an incomplete taxonomy, reflecting a lack of abstraction in categorizing SATD.","Abbreviation: Abs
+Reason: The comment signals an incomplete taxonomy, reflecting a lack of abstraction in categorizing SATD."
+TODO: parallelize,Data Processing Configuration,Model Code Modifiability,Indicates an upcoming modification (parallelization) to improve maintainability and performance of model code.,"Abbreviation: MCM
+Reason: Indicates an upcoming modification (parallelization) to improve maintainability and performance of model code."
+TODO: pass in just the id instead of the entire obj_msg.,Data Processing Configuration,Model Code Modifiability,"Refactoring the function signature to accept only the id improves maintainability and reduces coupling, making the code easier to modify.","Abbreviation: MCM
+Reason: Refactoring the function signature to accept only the id improves maintainability and reduces coupling, making the code easier to modify."
+todo: perhaps it's better to use pickle in the future?,Data Storage Configuration,Data Storage Configuration,"Indicates a future change to how data is stored/serialized, affecting internal/external data representation.","Abbreviation: DS Conf
+Reason: Indicates a future change to how data is stored/serialized, affecting internal/external data representation."
+TODO: Place tensors into GPU memory. This will require rewriting,Data Storage Configuration,Weight Configuration,"The comment indicates moving model tensors to GPU memory, a direct configuration of the model’s weights for device placement.","Abbreviation: Weight Conf  
+Reason: The comment indicates moving model tensors to GPU memory, a direct configuration of the model’s weights for device placement."
+TODO: pretty sure this isn't necessary,Unnecessary Model Code,Unnecessary Model Code,"Comment flags code that is likely redundant or unused, indicating unnecessary model code that should be removed.","Abbreviation: UMC  
+Reason: Comment flags code that is likely redundant or unused, indicating unnecessary model code that should be removed."
+TODO: Probably should just implement __deepcopy__,Model Code Reusability,Model Code Modifiability,"Adding a __deepcopy__ method enhances code modifiability by preventing unintended shallow copies, making future maintenance and updates easier.","Abbreviation: MCM  
+Reason: Adding a __deepcopy__ method enhances code modifiability by preventing unintended shallow copies, making future maintenance and updates easier."
+TODO: programmatically check wether these are indeed features (predict; correct),Data Processing Configuration,Data Processing Configuration,"Comment indicates a need to programmatically verify that extracted items are valid features, which falls under configuring data processing steps.","Abbreviation: Data Conf
+Reason: Comment indicates a need to programmatically verify that extracted items are valid features, which falls under configuring data processing steps."
+TODO: Properly break circular dependencies,Code Dependency,Code Dependency,Indicates a need to refactor code dependencies (circular dependencies) to improve maintainability.,"Abbreviation: MLDepend  
+Reason: Indicates a need to refactor code dependencies (circular dependencies) to improve maintainability."
+TODO: put in infrastructure to fold over trace as it's built.,Data Processing Configuration,Abstraction,"The comment flags a missing infrastructure/abstraction for folding over the trace, indicating that a proper abstraction layer is needed to avoid future maintenance complexity.","Abbreviation: Abs
+Reason: The comment flags a missing infrastructure/abstraction for folding over the trace, indicating that a proper abstraction layer is needed to avoid future maintenance complexity."
+TODO: put in the option to do substitution here (most likely scenario;,Prototype,Hyper-parameter Configuration,"The comment indicates adding an option (likely a hyper‑parameter or flag) to enable substitution, a configuration change affecting model behavior.","Abbreviation: HP Conf
+Reason: The comment indicates adding an option (likely a hyper‑parameter or flag) to enable substitution, a configuration change affecting model behavior."
+TODO: Reduce dim. of mean.,Data Processing Configuration,Data Processing Configuration,The comment indicates a change to how data (mean) is processed—specifically reducing its dimensionality—so it falls under data processing configuration.,"Abbreviation: Data Conf
+Reason: The comment indicates a change to how data (mean) is processed—specifically reducing its dimensionality—so it falls under data processing configuration."
+TODO: refactor as independent function,Abstraction,Model Code Reusability,The comment indicates a need to refactor code into an independent function for better generalization and reuse across different parts of the system.,"Abbreviation: MCR
+Reason: The comment indicates a need to refactor code into an independent function for better generalization and reuse across different parts of the system."
+TODO: Refactor\/simplify Configuration class so it can be used in cases,Model Code Reusability,Model Code Reusability,Refactoring the Configuration class to make it usable in various scenarios directly addresses the need to improve model code reusability.,"Abbreviation: MCR
+Reason: Refactoring the Configuration class to make it usable in various scenarios directly addresses the need to improve model code reusability."
+TODO: re-implement support for constraint satisfaction method as needed,Data Processing Configuration,Abstraction,"The TODO indicates a need to reimplement support for a method, suggesting the current design lacks abstraction, making new functionality difficult to add.","Abbreviation: Abs  
+Reason: The TODO indicates a need to reimplement support for a method, suggesting the current design lacks abstraction, making new functionality difficult to add."
+TODO: remove dummy \/ debug tasks,Unnecessary Model Code,Unnecessary Model Code,"The comment signals the removal of dummy or debug code that is unnecessary for production, matching the Unnecessary Model Code (UMC) category.","Abbreviation: UMC  
+Reason: The comment signals the removal of dummy or debug code that is unnecessary for production, matching the Unnecessary Model Code (UMC) category."
+TODO: remove hard-coded sizes and make relative to parent?,Model Code Modifiability,Model Code Modifiability,Hard-coded sizes hinder future maintenance; making them relative to the parent improves modifiability and reduces future changes.,"Abbreviation: MCM
+Reason: Hard-coded sizes hinder future maintenance; making them relative to the parent improves modifiability and reduces future changes."
+TODO: Remove hardcoding of downscaling calculations.,Model Code Reusability,Data Processing Configuration,"The comment indicates hardcoded downscaling logic that should be configurable rather than fixed, a typical data‑processing configuration issue.","Abbreviation: Data Conf
+Reason: The comment indicates hardcoded downscaling logic that should be configurable rather than fixed, a typical data‑processing configuration issue."
+TODO: Remove in 0.26 when the _pairwise attribute is removed,Unnecessary Model Code,Unnecessary Model Code,"Code marked for removal in a future release indicates unnecessary, deprecated code that should be deleted.","Abbreviation: UMC
+Reason: Code marked for removal in a future release indicates unnecessary, deprecated code that should be deleted."
+TODO: remove this method in v1.3.0.,Unnecessary Model Code,Unnecessary Model Code,"The comment flags a method as unnecessary and scheduled for removal, indicating deprecated or unused code that should be removed.","Abbreviation: UMC  
+Reason: The comment flags a method as unnecessary and scheduled for removal, indicating deprecated or unused code that should be removed."
+TODO: remove when dict results are deprecated,Unnecessary Model Code,Unnecessary Model Code,Indicates code that is slated for removal because it is deprecated and no longer needed.,"Abbreviation: UMC  
+Reason: Indicates code that is slated for removal because it is deprecated and no longer needed."
+"TODO: rename kwarg \""forward\"" to \""forward_additive\""",Model Code Comprehension,Hyper-parameter Configuration,Renaming a keyword argument to clarify its purpose is an API change that refines hyper‑parameter configuration.,"Abbreviation: HP Conf
+Reason: Renaming a keyword argument to clarify its purpose is an API change that refines hyper‑parameter configuration."
+TODO: Repeat_elements and tf.split doesn't support dynamic splits.,Custom Data Type,Data Processing Configuration,"Indicates a limitation in data processing functions (tf.split, repeat_elements) preventing dynamic split handling, a configuration issue in data processing.","Abbreviation: Data Conf
+Reason: Indicates a limitation in data processing functions (tf.split, repeat_elements) preventing dynamic split handling, a configuration issue in data processing."
+TODO: replace init=None by init='auto' in v0.6.0 and remove the warning,Unnecessary Model Code,Hyper-parameter Configuration,Updating the default hyperparameter value (`init`) changes model configuration.,"Abbreviation: HP Conf  
+Reason: Updating the default hyperparameter value (`init`) changes model configuration."
+TODO: Replace Lambda with custom Keras layer for loss.,Layer Configuration,Layer Configuration,The comment addresses modifying the configuration of a model layer (replacing a Lambda layer with a custom Keras layer).,"Abbreviation: Layer Conf  
+Reason: The comment addresses modifying the configuration of a model layer (replacing a Lambda layer with a custom Keras layer)."
+TODO: replace with (stable) Draft6Validator; if available,Custom Data Type,Prototype,"The comment indicates a placeholder (non‑stable) validator is in use, with a plan to replace it with a stable version, typical of prototype‑related technical debt.","Abbreviation: Proto  
+Reason: The comment indicates a placeholder (non‑stable) validator is in use, with a plan to replace it with a stable version, typical of prototype‑related technical debt."
+ToDo: replace with 3d input; when grid_sample will start to support it,Data Processing Configuration,Code Dependency,The TODO notes a future change that is blocked by an external library feature (grid_sample) that does not yet support 3D input.,"Abbreviation: MLDepend
+Reason: The TODO notes a future change that is blocked by an external library feature (grid_sample) that does not yet support 3D input."
+TODO: replace with unbatch or readout,Custom Data Type,Unnecessary Model Code,"The comment indicates the current code is unnecessary and should be replaced with a simpler, built‑in operation (unbatch/readout), a classic case of UNNECESSARY MODEL CODE.","Abbreviation: UMC  
+Reason: The comment indicates the current code is unnecessary and should be replaced with a simpler, built‑in operation (unbatch/readout), a classic case of UNNECESSARY MODEL CODE."
+TODO: reward computation,Data Processing Configuration,Machine Learning Knowledge,"TODO indicates missing implementation of reward computation, reflecting a knowledge gap in RL reward design.","Abbreviation: MLKnow
+Reason: TODO indicates missing implementation of reward computation, reflecting a knowledge gap in RL reward design."
+TODO: rotated_grids might as well give us correctly shaped array in the first place,Data Processing Configuration,Data Processing Configuration,The comment indicates a need to modify the data processing step (rotated_grids) to output correctly shaped arrays.,"Abbreviation: Data Conf
+Reason: The comment indicates a need to modify the data processing step (rotated_grids) to output correctly shaped arrays."
+TODO: run-on and split module,Data Processing Configuration,Model Code Modifiability,The comment indicates the module is too large (run‑on) and should be split to improve maintainability and future modifications.,"Abbreviation: MCM  
+Reason: The comment indicates the module is too large (run‑on) and should be split to improve maintainability and future modifications."
+TODO: See https:\/\/www.pyimagesearch.com\/2017\/05\/22\/face-alignment-with-opencv-and-python\/,Data Processing Configuration,Machine Learning Knowledge,Comment signals the developer lacks ML knowledge and needs to learn the face‑alignment technique from the linked tutorial.,"Abbreviation: MLKnow  
+Reason: Comment signals the developer lacks ML knowledge and needs to learn the face‑alignment technique from the linked tutorial."
+TODO: Set interval for the original date ?,Prototype,Data Processing Configuration,"The comment indicates configuring a time interval for data processing, a data‑processing configuration issue.","Abbreviation: Data Conf
+Reason: The comment indicates configuring a time interval for data processing, a data‑processing configuration issue."
+TODO: should port\/ip\/mac address be ignored? yes,Data Processing Configuration,Data Processing Configuration,"The comment addresses deciding whether to filter out port, IP, and MAC address fields during data processing.","Abbreviation: Data Conf
+Reason: The comment addresses deciding whether to filter out port, IP, and MAC address fields during data processing."
+todo: should save tpot model here,Data Storage Configuration,Data Storage Configuration,"The comment refers to persisting (saving) a TPOT model, which involves configuring how model data is stored externally.","Abbreviation: DS Conf  
+Reason: The comment refers to persisting (saving) a TPOT model, which involves configuring how model data is stored externally."
+TODO: should we return a LogarithmicFilteredSpectrogram?,Machine Learning Knowledge,Custom Data Type,"The comment questions returning a custom data type (LogarithmicFilteredSpectrogram), indicating potential inter‑operability and type‑management issues typical of the CDT category.","Abbreviation: CDT  
+Reason: The comment questions returning a custom data type (LogarithmicFilteredSpectrogram), indicating potential inter‑operability and type‑management issues typical of the CDT category."
+TODO: skip on error???,Machine Learning Knowledge,Machine Learning Reliability,Uncertain error-handling logic can compromise the reliability of the model.,"Abbreviation: MLRelia  
+Reason: Uncertain error-handling logic can compromise the reliability of the model."
+TODO: something if deep 9,Layer Configuration,Machine Learning Knowledge,"The TODO comment reflects a lack of understanding about handling a specific model depth, indicating a knowledge gap typical of MLKnow.","Abbreviation: MLKnow
+Reason: The TODO comment reflects a lack of understanding about handling a specific model depth, indicating a knowledge gap typical of MLKnow."
+TODO: Something smarter?,Machine Learning Knowledge,Machine Learning Knowledge,"The comment signals a lack of advanced ML knowledge to replace a simple, possibly suboptimal solution with a smarter, more effective approach.","Abbreviation: MLKnow  
+Reason: The comment signals a lack of advanced ML knowledge to replace a simple, possibly suboptimal solution with a smarter, more effective approach."
+TODO: store something cleaner,Data Storage Configuration,Data Storage Configuration,"Comment indicates a need to improve how data is stored, implying a data storage configuration issue.","Abbreviation: DS Conf  
+Reason: Comment indicates a need to improve how data is stored, implying a data storage configuration issue."
+TODO: store the actual index in table in case row number is unstable,Data Storage Configuration,Data Storage Configuration,The comment indicates a change to how data is stored (adding a stable index column) to handle unstable row numbers.,"Abbreviation: DS Conf  
+Reason: The comment indicates a change to how data is stored (adding a stable index column) to handle unstable row numbers."
+"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.",Unnecessary Model Code,Unnecessary Model Code,Comment indicates a code option that becomes obsolete and can be removed once deployment configuration is updated.,"Abbreviation: UMC  
+Reason: Comment indicates a code option that becomes obsolete and can be removed once deployment configuration is updated."
+"TODO: the old setup is now called \""pre_training\""; where should this hook be called now?",Model Code Comprehension,Abstraction,"The comment reveals a missing abstraction for the training‑hook, causing confusion about where to invoke it after the rename.","Abbreviation: Abs
+Reason: The comment reveals a missing abstraction for the training‑hook, causing confusion about where to invoke it after the rename."
+TODO: the second element of the rule is not being used,Data Processing Configuration,Unnecessary Model Code,"The comment points out an unused element in the rule, indicating unnecessary or dead code.","Abbreviation: UMC
+Reason: The comment points out an unused element in the rule, indicating unnecessary or dead code."
+TODO: the y_train should be given us externally; so far we create it as random values,Model Code Reusability,Data Processing Configuration,The comment indicates a misconfiguration in data handling—currently generating labels randomly instead of using externally supplied training data.,"Abbreviation: Data Conf
+Reason: The comment indicates a misconfiguration in data handling—currently generating labels randomly instead of using externally supplied training data."
+TODO: This branch happens when there's only one content word,Machine Learning Knowledge,Data Processing Configuration,"The comment indicates a conditional branch that changes how data is processed based on the number of content words, which is a data processing configuration issue.","Abbreviation: Data Conf
+Reason: The comment indicates a conditional branch that changes how data is processed based on the number of content words, which is a data processing configuration issue."
+TODO: this flag is somewhat redundant given the flag above; need,Unnecessary Model Code,Unnecessary Model Code,"Flag is noted as redundant, indicating unnecessary, dead or duplicate code that should be removed.","Abbreviation: UMC  
+Reason: Flag is noted as redundant, indicating unnecessary, dead or duplicate code that should be removed."
+TODO: This is discarding phase. Is that ok?,Machine Learning Knowledge,Data Processing Configuration,"The comment questions the appropriateness of a “discarding phase,” indicating uncertainty about how data is processed or filtered within the pipeline.","Abbreviation: Data Conf  
+Reason: The comment questions the appropriateness of a “discarding phase,” indicating uncertainty about how data is processed or filtered within the pipeline."
+todo: this is O(N^2) and maybe too slow for large graphs.,Model Code Reusability,Unnecessary Model Code,"Comment flags O(N²) complexity, indicating a performance bottleneck that should be addressed or removed.","Abbreviation: UMC
+Reason: Comment flags O(N²) complexity, indicating a performance bottleneck that should be addressed or removed."
+TODO: This is very inefficient and needs fix,Custom Data Type,Unnecessary Model Code,"Comment flags inefficiency in model code, indicating it is a bottleneck or unnecessary component that should be removed or optimized.","Abbreviation: UMC
+Reason: Comment flags inefficiency in model code, indicating it is a bottleneck or unnecessary component that should be removed or optimized."
+TODO: This matching process is slow. Make it faster; avoid loops where possible.,Prototype,Unnecessary Model Code,"The comment flags an inefficient matching process that bottlenecks execution; it suggests removing or simplifying loops to improve performance, indicating unnecessary or suboptimal model code.","Abbreviation: UMC  
+Reason: The comment flags an inefficient matching process that bottlenecks execution; it suggests removing or simplifying loops to improve performance, indicating unnecessary or suboptimal model code."
+TODO: This might not be called corpora,Model Code Comprehension,Model Code Comprehension,"The comment flags a misleading or unclear name (""corpora""), indicating a comprehension problem with model code variable/function naming.","Abbreviation: MCC  
+Reason: The comment flags a misleading or unclear name (""corpora""), indicating a comprehension problem with model code variable/function naming."
+TODO: This might not work with numpy types; haven't checked - AD,Machine Learning Knowledge,Custom Data Type,"Note flags potential incompatibility with NumPy data types, indicating a custom data type issue that may hinder interoperability.","Abbreviation: CDT
+Reason: Note flags potential incompatibility with NumPy data types, indicating a custom data type issue that may hinder interoperability."
+TODO: This should be recusive looking for any module with flatten_parameters,Weight Configuration,Weight Configuration,"The comment concerns adjusting internal weight handling (flatten_parameters) of model modules, which is a direct weight configuration change.","Abbreviation: Weight Conf  
+Reason: The comment concerns adjusting internal weight handling (flatten_parameters) of model modules, which is a direct weight configuration change."
+TODO: This we can change easily to functional style,Abstraction,Abstraction,"Indicates a refactor to functional style to add abstraction, reducing cascading changes and improving maintainability.","Abbreviation: Abs
+Reason: Indicates a refactor to functional style to add abstraction, reducing cascading changes and improving maintainability."
+TODO: tree should't need this in this case,Unnecessary Model Code,Unnecessary Model Code,Indicates code (tree handling) is unnecessary and should be removed.,"Abbreviation: UMC  
+Reason: Indicates code (tree handling) is unnecessary and should be removed."
+TODO: Try smaller numbers?,Data Processing Configuration,Hyper-parameter Configuration,"The comment suggests adjusting numeric values (e.g., hyper‑parameter settings) in the code.","Abbreviation: HP Conf  
+Reason: The comment suggests adjusting numeric values (e.g., hyper‑parameter settings) in the code."
+TODO: try without copying? could be faster,Machine Learning Knowledge,Duplicate Model Code,"Comment highlights potential code duplication, suggesting removing unnecessary copying to improve performance.","Abbreviation: DMC  
+Reason: Comment highlights potential code duplication, suggesting removing unnecessary copying to improve performance."
+TODO: unroll\/roll are great candidates for a context manager since they're always used in conjunction.,Data Processing Configuration,Abstraction,"Suggests creating a context manager to abstract the repeated unroll/roll usage, indicating a lack of abstraction.","Abbreviation: Abs
+Reason: Suggests creating a context manager to abstract the repeated unroll/roll usage, indicating a lack of abstraction."
+TODO: update nouns list with only named enitites,Data Processing Configuration,Data Processing Configuration,The comment indicates a change to how text data is processed—updating the nouns list to include only named entities—so it modifies data‑processing configuration.,"Abbreviation: Data Conf
+Reason: The comment indicates a change to how text data is processed—updating the nouns list to include only named entities—so it modifies data‑processing configuration."
+ToDo: Update with http:\/\/en.wikipedia.org\/wiki\/List_of_emoticons ?,Data Processing Configuration,Data Processing Configuration,Comment indicates adding a new processing step (emoticons list) to handle text data.,"Abbreviation: Data Conf
+Reason: Comment indicates adding a new processing step (emoticons list) to handle text data."
+TODO: Use google-diff-patch-match library,Machine Learning Knowledge,Code Dependency,"The comment suggests replacing custom code with an external library, indicating a needed change that requires adding a dependency.","Abbreviation: MLDepend  
+Reason: The comment suggests replacing custom code with an external library, indicating a needed change that requires adding a dependency."
+todo: use Input and Output classes to handle inputs and outputs,Data Storage Configuration,Abstraction,"The comment proposes adding Input and Output classes to abstract input/output handling, addressing a lack of abstraction.","Abbreviation: Abs
+Reason: The comment proposes adding Input and Output classes to abstract input/output handling, addressing a lack of abstraction."
+TODO: Use sklearn.decomposition.TruncatedSVD instead?,Machine Learning Knowledge,Unnecessary Model Code,The comment flags custom feature extraction code that is unnecessary and should be replaced by the standard library implementation.,"Abbreviation: UMC
+Reason: The comment flags custom feature extraction code that is unnecessary and should be replaced by the standard library implementation."
+TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,Layer Configuration,Layer Configuration,"The comment indicates a change to use a new table module, which is a layer-level configuration adjustment.","Abbreviation: Layer Conf  
+Reason: The comment indicates a change to use a new table module, which is a layer-level configuration adjustment."
+TODO: verify if it is working,Machine Learning Knowledge,Prototype,"The comment signals a provisional check before fully integrating the code, typical of prototype work.","Abbreviation: Proto  
+Reason: The comment signals a provisional check before fully integrating the code, typical of prototype work."
+TODO: want to call it activation but namespace; so what to do best?,Model Code Comprehension,Model Code Comprehension,"The comment highlights a naming conflict for a variable/function called “activation,” indicating a legibility issue in model code.","Abbreviation: MCC  
+Reason: The comment highlights a naming conflict for a variable/function called “activation,” indicating a legibility issue in model code."
+todo: We can potentially reduce memory usage by freeing memory,Data Storage Configuration,Data Storage Configuration,"The comment highlights a plan to reduce memory usage, implying a change in how data is represented or stored in the system.","Abbreviation: DS Conf  
+Reason: The comment highlights a plan to reduce memory usage, implying a change in how data is represented or stored in the system."
+TODO: we could probably default the monitor to something reasonable,Hyper-parameter Configuration,Hyper-parameter Configuration,"The comment indicates a decision to set a default value for a monitor, which is a hyper-parameter configuration choice.","Abbreviation: HP Conf
+Reason: The comment indicates a decision to set a default value for a monitor, which is a hyper-parameter configuration choice."
+TODO: we may support size = -1 in the future,Data Storage Configuration,Hyper-parameter Configuration,"Indicates a future change to the hyper‑parameter handling of `size`, a configuration value for the model.","Abbreviation: HP Conf  
+Reason: Indicates a future change to the hyper‑parameter handling of `size`, a configuration value for the model."
+TODO: weight by length here,Data Processing Configuration,Weight Configuration,"The comment indicates a pending change to adjust weights based on length, a direct modification of model weights.","Abbreviation: Weight Conf
+Reason: The comment indicates a pending change to adjust weights based on length, a direct modification of model weights."
+TODO: why is the whole distribution computed instead of just min\/max,Data Processing Configuration,Unnecessary Model Code,"The comment points out that code unnecessarily computes the entire distribution when only min/max are needed, indicating redundant or inefficient model code.","Abbreviation: UMC
+Reason: The comment points out that code unnecessarily computes the entire distribution when only min/max are needed, indicating redundant or inefficient model code."
+TODO: would be good to add ref from source,Data Processing Configuration,Machine Learning Knowledge,"The comment indicates a missing source reference, implying developers lack documentation or knowledge about the origin of the code.","Abbreviation: MLKnow
+Reason: The comment indicates a missing source reference, implying developers lack documentation or knowledge about the origin of the code."
+TODO: wrap this properly in a with session_context():,Machine Learning Reliability,Model Code Modifiability,"Missing a proper `with session_context():` wrapper makes the code harder to modify and maintain, representing a lack of modifiability.","Abbreviation: MCM  
+Reason: Missing a proper `with session_context():` wrapper makes the code harder to modify and maintain, representing a lack of modifiability."
+TODO: write a function to do this..,Abstraction,Unnecessary Model Code,"The TODO indicates a placeholder for a function that is yet to be written, representing incomplete or unnecessary code that may remain in the codebase.","Abbreviation: UMC  
+Reason: The TODO indicates a placeholder for a function that is yet to be written, representing incomplete or unnecessary code that may remain in the codebase."
+TODO: write index,Data Storage Configuration,Data Processing Configuration,"TODO signals a pending data‑processing task—creating an index for the dataset, which is a configuration of how data is handled.","Abbreviation: Data Conf
+Reason: TODO signals a pending data‑processing task—creating an index for the dataset, which is a configuration of how data is handled."
+TODO: x;y input should be able to be np arrays; pandas arrays; or tf dataset iterators,Custom Data Type,Data Processing Configuration,"The comment indicates a pending change to accept various raw data types (numpy, pandas, TF datasets), which is a configuration issue around how data is processed.","Abbreviation: Data Conf  
+Reason: The comment indicates a pending change to accept various raw data types (numpy, pandas, TF datasets), which is a configuration issue around how data is processed."
+todo; pass also best score,Weight Configuration,Glue Code,"The comment indicates a missing argument (best score) in interface code that needs to be passed, typical of glue code issues.","Abbreviation: GC
+Reason: The comment indicates a missing argument (best score) in interface code that needs to be passed, typical of glue code issues."
+todo; pass complete checkpoint as state dictionary,Data Processing Configuration,Weight Configuration,"Comment indicates a change needed in how model weights (checkpoint) are passed, i.e., to use the full state dictionary.","Abbreviation: Weight Conf
+Reason: Comment indicates a change needed in how model weights (checkpoint) are passed, i.e., to use the full state dictionary."
+too much memory. A lazy load would be better; but later,Data Storage Configuration,Data Processing Configuration,"Comment proposes a change in data handling (lazy loading) to reduce memory usage, which is a configuration of how data is processed.","Abbreviation: Data Conf
+Reason: Comment proposes a change in data handling (lazy loading) to reduce memory usage, which is a configuration of how data is processed."
+unused,Unnecessary Model Code,Unnecessary Model Code,"The comment signals dead or unused code, indicating unnecessary model code that should be removed.","Abbreviation: UMC  
+Reason: The comment signals dead or unused code, indicating unnecessary model code that should be removed."
+Unused,Unnecessary Model Code,Unnecessary Model Code,The comment flags code that is unused and should be removed.,"Abbreviation: UMC
+Reason: The comment flags code that is unused and should be removed."
+WARNING: bad realtime practice (writing file) TODO: add to a memory buffer and write before exit,Data Storage Configuration,Data Storage Configuration,"The comment flags a problematic file‑write in real‑time code and suggests buffering in memory, i.e., a change to how data is stored/handled – a classic data storage configuration issue.","Abbreviation: DS Conf  
+Reason: The comment flags a problematic file‑write in real‑time code and suggests buffering in memory, i.e., a change to how data is stored/handled – a classic data storage configuration issue."
+XXX backward compatibility,Code Dependency,Glue Code,"The comment indicates a backward‑compatibility wrapper, which is glue code that interfaces with other components and can hinder future improvements.","Abbreviation: GC
+Reason: The comment indicates a backward‑compatibility wrapper, which is glue code that interfaces with other components and can hinder future improvements."
+XXX de-duplicate this with code from Montage somewhere?,Duplicate Feature Extraction Code,Duplicate Model Code,"The comment indicates a need to remove duplicated code, matching Duplicate Model Code.","Abbreviation: DMC
+Reason: The comment indicates a need to remove duplicated code, matching Duplicate Model Code."
+XXX Default number of samples drawn from my arse.,Data Processing Configuration,Hyper-parameter Configuration,"Indicates a default hyper‑parameter value for sampling, which is a configuration of a model’s hyper‑parameter.","Abbreviation: HP Conf  
+Reason: Indicates a default hyper‑parameter value for sampling, which is a configuration of a model’s hyper‑parameter."
+XXX Disable SimulateModels without CreateTab,Unnecessary Model Code,Code Dependency,"Comment notes disabling SimulateModels because it requires the CreateTab component, indicating a dependency issue.","Abbreviation: MLDepend
+Reason: Comment notes disabling SimulateModels because it requires the CreateTab component, indicating a dependency issue."
+XXX gs = fig.add_gridspec(15; 1),Unnecessary Model Code,Abstraction,"The code uses hardcoded layout parameters with a placeholder comment, indicating a lack of abstraction that will make future modifications fragile.","Abbreviation: Abs
+Reason: The code uses hardcoded layout parameters with a placeholder comment, indicating a lack of abstraction that will make future modifications fragile."
+XXX JRK: Should this test whether test_times if a DecodingTime,Machine Learning Knowledge,Custom Data Type,"The comment checks that `test_times` is of type `DecodingTime`, a custom data type used in the ML code.","Abbreviation: CDT  
+Reason: The comment checks that `test_times` is of type `DecodingTime`, a custom data type used in the ML code."
+XXX might possibly be slow solution; but every worker needs reseted LDA model for every iteration,Machine Learning Knowledge,Unnecessary Model Code,"The comment highlights an unnecessary, performance‑impacting operation: resetting the LDA model on every iteration, which is redundant and slows execution.","Abbreviation: UMC  
+Reason: The comment highlights an unnecessary, performance‑impacting operation: resetting the LDA model on every iteration, which is redundant and slows execution."
+XXX offset type is uint32,Plain Old Data Type,Plain Old Data Type,"The comment highlights use of a raw primitive type (uint32), which is a plain old data type that can lead to confusion in ML contexts.","Abbreviation: PODT
+Reason: The comment highlights use of a raw primitive type (uint32), which is a plain old data type that can lead to confusion in ML contexts."
+XXX Remove,Unnecessary Model Code,Unnecessary Model Code,"The comment signals removal of code, indicating it is unnecessary or redundant, matching Unnecessary Model Code.","Abbreviation: UMC  
+Reason: The comment signals removal of code, indicating it is unnecessary or redundant, matching Unnecessary Model Code."
+XXX This is silly.  We should return log densities; not densities.,Machine Learning Reliability,Machine Learning Knowledge,The comment reveals a lack of ML knowledge—returning densities instead of log densities shows the code was written without understanding the correct ML output format.,"Abbreviation: MLKnow  
+Reason: The comment reveals a lack of ML knowledge—returning densities instead of log densities shows the code was written without understanding the correct ML output format."
+XXX when matplotlib 3.3 is min version; replace this with,Code Dependency,Code Dependency,"Notes a minimum required version of an external library (matplotlib), indicating a dependency that may need future updates.","Abbreviation: MLDepend
+Reason: Notes a minimum required version of an external library (matplotlib), indicating a dependency that may need future updates."
+XXX Would be nice if we could prepare this statement before,Data Storage Configuration,Glue Code,"The comment highlights a need to refactor supporting glue code that prepares a statement before use, improving maintainability.","Abbreviation: GC  
+Reason: The comment highlights a need to refactor supporting glue code that prepares a statement before use, improving maintainability."
+XXX: currently scaled to variance=n_samples,Data Processing Configuration,Data Processing Configuration,Indicates a configuration change in data preprocessing (scaling variance to number of samples).,"Abbreviation: Data Conf
+Reason: Indicates a configuration change in data preprocessing (scaling variance to number of samples)."
+XXX: does control flow affect type inference in Numba?,Machine Learning Knowledge,Machine Learning Knowledge,"The comment expresses uncertainty about a machine‑learning specific implementation detail (Numba type inference), indicating a lack of ML knowledge that may need revisiting.","Abbreviation: MLKnow  
+Reason: The comment expresses uncertainty about a machine‑learning specific implementation detail (Numba type inference), indicating a lack of ML knowledge that may need revisiting."
+XXX: How to catch dependence cycles correctly?,Code Dependency,Boundary Erosion,"The comment addresses dependency cycles, indicating unclear subsystem boundaries that lead to maintenance issues.","Abbreviation: BE  
+Reason: The comment addresses dependency cycles, indicating unclear subsystem boundaries that lead to maintenance issues."
+"XXX: how to find \""""""""good\"""""""" values for level ?""""",Machine Learning Knowledge,Hyper-parameter Configuration,"Comment seeks better values for a hyper‑parameter (“level”), indicating a need to reconfigure model settings.","Abbreviation: HP Conf  
+Reason: Comment seeks better values for a hyper‑parameter (“level”), indicating a need to reconfigure model settings."
+XXX: not handling dictionnaries,Plain Old Data Type,Custom Data Type,"The comment indicates the code does not handle generic dictionary data structures, a common general‑purpose type that can create interoperability issues in ML systems.","Abbreviation: CDT
+Reason: The comment indicates the code does not handle generic dictionary data structures, a common general‑purpose type that can create interoperability issues in ML systems."
+XXX: one could be smarter here,Model Code Comprehension,Model Code Modifiability,The comment signals that the current code could be improved for easier maintenance and future updates.,"Abbreviation: MCM  
+Reason: The comment signals that the current code could be improved for easier maintenance and future updates."
+XXX: Temporary solution to figure out if an estimator is a classifier,Model Code Modifiability,Prototype,"The comment marks a quick, temporary check to determine if an estimator is a classifier, typical of prototype or ad‑hoc code that may later be replaced with a proper implementation.","Abbreviation: Proto
+Reason: The comment marks a quick, temporary check to determine if an estimator is a classifier, typical of prototype or ad‑hoc code that may later be replaced with a proper implementation."
+XXX: unify Series\/Array as Array,Custom Data Type,Plain Old Data Type,"The comment aims to unify two raw data types (Series/Array) into a single Array, reducing confusion caused by multiple plain data representations.","Abbreviation: PODT
+Reason: The comment aims to unify two raw data types (Series/Array) into a single Array, reducing confusion caused by multiple plain data representations."
+XXX: We re-cache now just to make sure all items get a mozci version.,Data Storage Configuration,Data Storage Configuration,"The comment indicates a change to the caching mechanism to ensure data items are stored with a specific version, i.e., configuring how data is represented/stored.","Abbreviation: DS Conf  
+Reason: The comment indicates a change to the caching mechanism to ensure data items are stored with a specific version, i.e., configuring how data is represented/stored."
+XXX: where should this be?,Machine Learning Knowledge,Boundary Erosion,"The comment signals uncertainty about the proper subsystem location, indicating a lack of clear boundaries between components.","Abbreviation: BE
+Reason: The comment signals uncertainty about the proper subsystem location, indicating a lack of clear boundaries between components."

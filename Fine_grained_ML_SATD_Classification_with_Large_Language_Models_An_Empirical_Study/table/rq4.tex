@@ -1,0 +1,39 @@
+\begin{table}[h]
+  \centering
+  \small
+  \caption{Results of the combination of different prompting strategies}
+  \label{tab:combination_results}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabular}{c c c c c c c c}
+    \toprule
+    \multirow{2}{*}{Setting} & \multirow{2}{*}{Metric} & \multicolumn{3}{c}{Vanilla prompting} & \multicolumn{3}{c}{Binary prompting} \\
+    \cmidrule(lr){3-5}\cmidrule(lr){6-8}
+    & & Qwen3-8B & Qwen3-14B & Gpt-oss-20B & Qwen3-8B & Qwen3-14B & Gpt-oss-20B \\
+    \midrule
+
+    \multirow{3}{*}{0} 
+    & precision & 0.356 & \textbf{0.472} & 0.420 & 0.389 & 0.400 & 0.447 \\
+    & recall    & 0.333 & \textbf{0.384} & 0.377 & 0.349 & 0.336 & \textbf{0.372} \\
+    & f1        & 0.295 & 0.363 & 0.355 & 0.333 & 0.313 & 0.362 \\
+    \midrule
+
+    \multirow{3}{*}{1} 
+    & precision & 0.397 & 0.433 & 0.405 & 0.412 & \textbf{0.447} & 0.430 \\
+    & recall    & 0.359 & 0.364 & 0.359 & 0.354 & 0.359 & 0.356 \\
+    & f1        & 0.345 & \textbf{0.365} & 0.349 & 0.358 & 0.363 & 0.355 \\
+    \midrule
+
+    \multirow{3}{*}{2} 
+    & precision & 0.430 & 0.438 & \textbf{0.441} & 0.422 & 0.426 & 0.408 \\
+    & recall    & 0.366 & 0.372 & 0.359 & 0.364 & 0.366 & 0.364 \\
+    & f1        & 0.351 & 0.363 & 0.358 & 0.360 & 0.361 & 0.354 \\
+    \midrule
+
+    \multirow{3}{*}{3} 
+    & precision & \textbf{0.445} & 0.425 & 0.436 & \textbf{0.424} & 0.435 & \textbf{0.450} \\
+    & recall    & \textbf{0.389} & 0.361 & \textbf{0.382} & \textbf{0.382} & \textbf{0.382} & 0.369 \\
+    & f1        & \textbf{0.381} & 0.360 & \textbf{0.375} & \textbf{0.377} & \textbf{0.377} & \textbf{0.371} \\
+    \bottomrule
+  \end{tabular}
+\end{table}

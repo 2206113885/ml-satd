@@ -1,0 +1,303 @@
+PROMPT_HEAD = r"""
+There are 23 types of Machine Learning (ML) SATD (Self-Admitted Technical Debt):
+
+MACHINE LEARNING KNOWLEDGE (MLKnow): Machine-learning software carries plenty of unique challenges. Uneducated solutions by unaware developers may have to be revisited.
+examples:
+1. TODO: confirm normalization scheme (per-channel mean/std from train only); code currently computes on full dataset.
+2. TODO: for time series, disable random shuffle; current DataLoader breaks temporal order.
+3. TODO: compute AUROC/AUPRC in addition to accuracy; metrics must reflect class imbalance.
+4. TODO: split by user/session to prevent cross-contamination; random split inflates scores.
+5. TODO: add warmup steps before cosine decay; initial loss spikes suggest under-warming.
+6. TODO: handle unseen categories at inference; map to OOV instead of failing.
+7. TODO: freeze backbone for first N epochs; full fine-tune on small data overfits.
+8. TODO: calibrate probabilities (temperature scaling/Platt); thresholds unreliable now.
+9. TODO: make runs deterministic (seed CUDA + workers + hashing); results still vary.
+10. XXX: AMP with gradient accumulation — verify unscale/clip/update order; may be incorrect.
+
+MODEL INTERPRETABILITY (MLInter): Machine-learning models are a black box, causing poor understanding of model functionality; this can lead to unknown behaviour.
+examples:
+1. TODO: add SHAP feature attributions to eval report; predictions are opaque right now.
+2. FIXME: log top contributing features per instance; need human-readable rationale.
+3. TODO: publish a model card (data summary, metrics, caveats, intended use); none exists.
+4. XXX: train a surrogate decision tree to approximate the black-box and sanity-check rules.
+5. TODO: run counterfactual tests (swap/remove sensitive tokens) to expose spurious correlations.
+6. TODO: generate Partial Dependence/ICE plots for key features to visualize effects.
+7. FIXME: attention weights ≠ explanations; validate importance via feature ablation.
+8. TODO: add monotonicity checks (e.g., risk_score should not increase with higher income); alert on violations.
+9. XXX: compute per-slice metrics (by cohort/device/locale) to reveal hidden failure modes.
+10. TODO: persist prediction traces (inputs, transforms, logits, threshold) for auditability and error analysis.
+
+MODEL CODE COMPREHENSION (MCC): Model code carries extra legibility concerns not present in traditional software (e.g., poorly-named temporary matrix variables).
+examples:
+1. TODO: replace single-letter tensors (u,v,w) with descriptive names; current shapes are unclear.
+2. FIXME: magic strides [1,2,1,1] hardcoded in conv stack; extract to named config for readability.
+3. TODO: forward() both mutates self.cache and returns logits; split side effects to clarify flow.
+4. TODO: rename "ff"→"feedforward", "mh"→"multihead_attn"; abbreviations obscure intent.
+5. TODO: break 200-line train_step into smaller helpers (compute_loss/log_metrics/apply_grad); too hard to scan.
+6. XXX: flag "sc" toggles sigmoid vs softmax but name is cryptic; use "use_softmax".
+7. TODO: add shape annotations in docstrings: x [B,T,C], mask [B,1,T,T], logits [B,T,V].
+8. FIXME: inconsistent dim order (NCHW vs NHWC) across modules; standardize or comment conversions.
+9. TODO: replace nested list comps for attention mask construction with clear loops + comments.
+10. TODO: name loss weights (alpha_ce=0.9, beta_l2=0.01) instead of inline 0.9*CE + 0.01*L2.
+
+DUPLICATE MODEL CODE (DMC): Code duplication frequently occurs in model code.
+examples:
+1. TODO: factor out identical Conv+BN+ReLU blocks from Encoder and Decoder; avoid copy-paste.
+2. FIXME: train_step() duplicated in BaseTrainer and CustomTrainer; extract shared mixin.
+3. TODO: merge two implementations of positional_encoding() (transformer.py vs utils/pe.py).
+4. XXX: attention mask builder copy-pasted in bert.py and gpt.py; centralize in masking.py.
+5. TODO: dedupe LayerNorm init (bias=False, eps=1e-5) repeated across four modules.
+6. TODO: consolidate predict() and infer() paths — 90% identical besides logging.
+7. FIXME: label_smoothing_ce defined in losses.py and heads/classifier.py; keep one.
+8. TODO: unify ResBlockV1 and ResBlockV2; only activation differs (ReLU vs GELU).
+9. TODO: F1 computation reimplemented in evaluator.py; import metrics.f1 instead.
+10. TODO: dropout scheduling logic duplicated in three schedulers; extract helper.
+
+DUPLICATE FEATURE EXTRACTION CODE (DFEC): Code duplication frequently occurs in feature-extraction code.
+examples:
+1. TODO: dedupe TF-IDF vectorizer setup (ngram/range/min_df) repeated in baseline.py and train.py.
+2. FIXME: compute_mel_spectrogram() duplicated in audio/extract.py and preprocess/audio.py; keep single source.
+3. TODO: consolidate image preprocess (resize→center_crop→normalize) copy-pasted in dataset_a.py and dataset_b.py into transforms.py.
+4. XXX: tokenization + truncation + attention_mask building duplicated in text_dataset.py and infer.py; extract build_inputs().
+5. TODO: standardize numerical features (fit scaler on train only) duplicated in tabular/prep.py and model/train.py; centralize.
+6. FIXME: identical categorical encoding (OneHot with rare-bucket) exists in preprocess.py and feature_engineering.py; merge.
+7. TODO: factor out sliding-window/overlap logic for time-series in signals/extract.py and sensors/pipeline.py.
+8. XXX: graph feature construction (k-hop neighbors, degree, centrality) duplicated in gnn_utils.py and graph_features.py; unify.
+9. TODO: handcrafted temporal features (rolling mean/lag diff/exp smoothing) scattered across notebooks; move to features/temporal.py.
+10. XXX: dimensionality reduction (PCA→UMAP) blocks reimplemented in three pipelines; create features/dimensionality.py.
+
+WEIGHT CONFIGURATION (Weight Conf): Editing code that involves the weights of a model, or configuring a model's weights directly.
+examples:
+1. TODO: tie decoder lm_head weights to token embedding (weight tying) to reduce params.
+2. FIXME: reinitialize classifier head weights/bias after loading pretrained backbone; current head retains stale weights.
+3. TODO: set per-parameter weight_decay; exclude LayerNorm/BatchNorm/bias from decay.
+4. XXX: apply Kaiming/Xavier init for Conv/Linear; document fan_in/fan_out to avoid silent misinit.
+5. TODO: add freeze_backbone option (requires setting requires_grad=False for all backbone weights for first N epochs).
+6. FIXME: AMP training should update FP32 master weights via GradScaler; verify unscale/step order.
+7. TODO: load partial state_dict with strict=False + key mapping; missing keys should trigger explicit warnings.
+8. TODO: implement Exponential Moving Average (EMA) of model weights for more stable evaluation.
+9. TODO: add Stochastic Weight Averaging (SWA) checkpointing/restore; keep separate averaged weight vector.
+10. XXX: implement per-channel int8 weight quantization for inference; store scale/zero_point with state_dict.
+
+LAYER CONFIGURATION (Layer Conf): Editing code that deals with model layers, or configuring layers themselves.
+examples:
+1. TODO: replace BatchNorm2d with GroupNorm(num_groups=32); tiny batch sizes make BN stats noisy.
+2. FIXME: Transformer blocks should be pre-norm, not post-norm; switch LayerNorm placement for stability.
+3. TODO: make Conv stem stride/padding configurable; fixed stride=2 breaks small input resolutions.
+4. XXX: set bias=False on conv/linear when followed by norm; redundant parameters otherwise.
+5. TODO: add residual path around decoder cross-attention to mirror encoder design.
+6. TODO: set head_dim=64 and adjust num_heads accordingly to keep hidden_size constant.
+7. FIXME: FFN activation should be GELU (approx) instead of ReLU; update all blocks.
+8. TODO: replace 3×3 conv with depthwise-separable conv (dw+pw) to reduce params while keeping RF.
+9. TODO: move dropout after residual add (a.k.a. DropPath style), not before MLP/attention.
+10. XXX: Embedding layer missing padding_idx; pad tokens should be masked from training updates.
+
+HYPER-PARAMETER CONFIGURATION (HP Conf): Configuring hyper-parameters of a model, or editing default values of off-the-shelf models.
+examples:
+1. TODO: expose learning_rate via CLI/config; remove hardcoded 3e-4.
+2. TODO: choose one of warmup_steps or warmup_ratio; current code mixes both.
+3. FIXME: scheduler stepping at epoch vs step — verify for cosine schedule with warmup.
+4. TODO: keep global_batch_size fixed via per_device_batch_size × grad_accum_steps.
+5. XXX: tune dropout rate; set default 0.3 and log to config.
+6. TODO: add weight_decay sweep (0, 1e-4, 5e-4, 1e-3) for regularization.
+7. TODO: expose label_smoothing (ε) for CE loss; default 0.1.
+8. TODO: make max_seq_length configurable (128/256/512); affects memory/perf.
+9. FIXME: early_stopping monitor/patience mismatch; monitor 'val_f1' instead of 'val_loss'.
+10. TODO: add gradient_clipping max_norm as hyperparam; default 1.0.
+
+CODE DEPENDENCY (MLDepend): A needed change is blocked by an external dependency (library / subsystem).
+examples:
+1. TODO: drop custom attention kernel once flash-attn is available for our PyTorch/CUDA combo on the cluster.
+2. FIXME: keep transformers pinned (<4.44); generation API regression upstream — unpin after fix lands.
+3. TODO: replace local NMS with torchvision.ops.nms when CUDA wheels are published for our driver version.
+4. XXX: ONNX export lacks dynamic-shape support for this op; keep static workaround until exporter adds it.
+5. TODO: upgrade to cuDNN 9 to enable bf16 conv; blocked by CI GPU driver compatibility.
+6. TODO: move to Hydra Structured Configs after base image updates to Hydra ≥1.3; current runtime too old.
+7. FIXME: can't adopt Python 3.11 yet — internal toolkit only supports 3.10; revert to typing_extensions for now.
+8. TODO: switch to sklearn’s new CalibratedClassifier when multi-label is supported; retain custom cal step until then.
+9. XXX: use triton-optimized softmax once Windows wheels are released; fallback to torch implementation for now.
+10. TODO: remove matplotlib import side-effect once headless backend is default on the cluster nodes.
+
+GLUE CODE (GC): Supporting code written to interface with other code, inhibiting improvements due to dependent peculiarities.
+examples:
+1. TODO: replace hand-rolled JSON→dict→dataclass marshaling with a proper schema; current glue hides real validation errors.
+2. FIXME: adapter translating legacy predict(X)->y to new predict({"inputs": X}) is brittle; refactor once clients migrate.
+3. TODO: remove pandas→numpy→torch hop; implement Dataset.from_pandas to avoid double copies in the glue layer.
+4. XXX: temporary BGR↔RGB shim for cv2 vs PIL expectations; delete after image stack is unified.
+5. TODO: wrap third-party logger to our Trainer callback interface; stop forwarding **kwargs blindly.
+6. FIXME: REST client builds query strings by string concat; switch to official SDK when auth issue is resolved.
+7. TODO: normalize time units (ms vs s) across services; current glue multiplies/divides by magic constants.
+8. XXX: JSON↔Protobuf bridge for model serving; remove once server accepts Protobuf natively.
+9. TODO: monkey-patch library to expose logits; drop patch after upstream PR merges.
+10. TODO: move IO packing/unpacking out of pipeline.forward(); keep only model logic and place adapters under io/bridge.py.
+
+CUSTOM DATA TYPE (CDT): Using data types provided by general-purpose packages can cause extensive inter-operability burden.
+examples:
+1. TODO: stop passing pandas.DataFrame across model boundaries; define FeatureBatch (X: np.ndarray[float32], y: np.ndarray) and convert once.
+2. FIXME: torch.float32 ↔ sklearn.float64 mismatch; unify dtype at the ingress to avoid silent casts everywhere.
+3. TODO: replace numpy.recarray/structured dtypes with flat 2D arrays; downstream libs don't handle fielded dtypes well.
+4. XXX: scipy.sparse.csr not supported by our torch modules; convert to coo or dense at a single boundary.
+5. TODO: avoid pandas.Timestamp/Timedelta in features; convert to POSIX int64 seconds early.
+6. FIXME: returning dict[str, Any] of tensors is fragile; use a TypedDict/dataclass schema to make types explicit.
+7. TODO: standardize categorical representation (pandas.Categorical vs string) before vectorization; current mix breaks encoders.
+8. XXX: np.bool_ vs torch.bool inconsistencies cause mask errors; cast masks to a single canonical bool type.
+9. TODO: move from DataFrame→Arrow→NumPy roundtrips to a single pyarrow.Table contract; cut conversion glue.
+10. FIXME: numpy types (np.int64/np.float32) not JSON-serializable; sanitize via .item()/.tolist() at the API boundary.
+
+MULTIPLE LANGUAGES (ML): Components written in other languages may introduce difficulties in ML development.
+examples:
+1. TODO: move hot path to C++ via pybind11; keep Python fallback until manylinux wheels are ready.
+2. FIXME: custom CUDA op only built for sm_80; add sm_70/sm_75 or guard at runtime.
+3. TODO: rewrite tokenizer in Rust (pyo3) to replace slow Python regex; FFI boundary is messy for now.
+4. XXX: TorchScript op implemented in Python — need C++ extension for mobile; interpreter import fails.
+5. TODO: add JNI bridge for Java inference server; current py4j workaround crashes under multithreading.
+6. TODO: integrate R feature pipeline with Python trainer via Arrow IPC; CSV roundtrip loses dtypes.
+7. FIXME: Scala Spark UDF returns Map<String,Double> but Python expects dict[str,float]; define explicit schema.
+8. XXX: CoreML export needs Swift pre/post wrapper; Python preprocessing duplicated — unify in Swift.
+9. TODO: implement ONNX Runtime custom op in C++; Python simulation too slow for production.
+10. FIXME: Cython memoryviews incur implicit copies due to stride mismatch; enforce contiguous layout or zero-copy API.
+
+UNNECESSARY MODEL CODE (UMC): Model code that bottlenecks execution, is unreachable / deprecated, or is unnecessary and should be removed.
+examples:
+1. TODO: remove legacy fast_path(); unreachable since v2 API landed.
+2. FIXME: drop manual softmax implementation; use torch.nn.functional.softmax instead.
+3. TODO: delete debug print block in forward(); floods logs and slows training.
+4. XXX: old 'use_fp16' flag duplicates AMP; remove to avoid confusion.
+5. TODO: prune dead code in _build_optimizer(); SGD branch never used.
+6. TODO: deprecate custom DataParallel wrapper; DistributedDataParallel supersedes it.
+7. FIXME: vectorize IoU loop; pure-Python nested loops are a hotspot with no added value.
+8. TODO: remove fallback for PyTorch<1.10; min supported version is 2.x.
+9. XXX: eliminate redundant to(device) calls inside model; handled by Trainer already.
+10. TODO: delete serialization shim (pickle_v4); torch.save covers this now.
+
+DATA PROCESSING CONFIGURATION (Data Conf): Configuring how data is processed, by editing the data directly or adding new processing steps.
+examples:
+1. TODO: rebuild train/val/test with GroupKFold(user_id) + stratify(y); current random split leaks sessions.
+2. FIXME: image normalize with ImageNet mean/std (0.485,0.456,0.406 / 0.229,0.224,0.225); stop min–max scaling to [0,1].
+3. TODO: standardize numeric features via z-score fit on train only; persist stats for val/test/infer.
+4. XXX: impute missing — numeric→median by site_id; categorical→"__UNK__"; avoid dropping rows.
+5. TODO: deduplicate samples by content hash after lowercasing and whitespace normalization; duplicates inflate metrics.
+6. TODO: text cleaning pipeline: Unicode NFKC, lowercase, strip URLs/@handles, collapse spaces; keep emojis.
+7. FIXME: convert all timestamps to UTC and sort before windowing; DST made windows misaligned.
+8. TODO: handle class imbalance — use WeightedRandomSampler or per-sample weights in DataLoader.
+9. TODO: enable audio augs (time-shift, gaussian-noise, SpecAugment) via config flags; seed for reproducibility.
+10. XXX: cap outliers at p99 and apply log1p to skewed features ['amount','duration']; document in config.
+
+PLAIN OLD DATA TYPE (PODT): Using raw data types in ML causes confusion when interpreting processes.
+examples:
+1. TODO: replace nested Python lists with np.ndarray(float32); current code assumes rectangular shape but gets ragged.
+2. FIXME: passing raw dict of features → key order non-deterministic; use dataclass/NamedTuple with explicit fields.
+3. TODO: avoid pandas 'object' dtype for mixed columns; cast to categorical/int64/float32 explicitly.
+4. XXX: timestamps stored as strings "YYYY-MM-DD" — parse to int64 epoch or pandas.DatetimeIndex before processing.
+5. TODO: convert label strings {"yes","no"} to numeric {1,0}; metrics expect numeric types.
+6. FIXME: using None to mark missing numerics; prefer np.nan with proper mask to avoid type upcasting.
+7. TODO: standardize booleans to true bools; dataset mixes {0,1,"true","false"} causing silent coercions.
+8. XXX: bytes vs str confusion — decode incoming bytes to UTF-8 str at the data boundary.
+9. TODO: stop storing vectors as comma-separated strings; use fixed-length arrays (np.ndarray) per row.
+10. TODO: replace tuple boxes (x,y,w,h) with typed Box(width,height,center) struct; tuple indexing is error-prone.
+
+DATA STORAGE CONFIGURATION (DS Conf): Configuring how data is represented internally or stored externally.
+examples:
+1. TODO: move dataset from CSV to Parquet/Arrow with explicit schema; current CSV loses dtypes and is slow.
+2. FIXME: features saved as float64 by default; cast to float32/int32 to reduce memory footprint.
+3. TODO: represent sparse features as CSR/COO instead of dense ndarrays; update loaders accordingly.
+4. TODO: introduce primary key sample_id and add index; current joins on non-keys create duplicate rows.
+5. XXX: shard training data by dt=YYYY-MM-DD partitions with zstd compression; single monolithic file is too large.
+6. TODO: replace directory-of-images with WebDataset (.tar shards) or LMDB for random/random-access IO.
+7. FIXME: feature store mixes snake_case and camelCase; standardize column naming and add migration.
+8. TODO: persist schema_version + preprocessing stats (means/stds/categories) alongside tensors (metadata.json).
+9. XXX: enable memory-mapped arrays (np.memmap) for large embeddings; avoid full RAM load.
+10. TODO: standardize time columns to UTC int64 epoch; store tz/units in dataset metadata for clarity.
+
+ABSTRACTION (Abs): Lack of abstractions in ML systems causes cascading changes when a component is modified.
+examples:
+1. TODO: introduce a Predictor interface; changing model.forward(...) currently forces edits in trainer/evaluator/serving.
+2. FIXME: data loading is hand-wired per script; add a DataSource abstraction so swapping CSV→Parquet doesn’t break pipelines.
+3. TODO: replace if/elif loss selection scattered across modules with a registry/factory (name→loss); reduces ripple edits.
+4. XXX: metrics computed ad-hoc in loops; define a Metrics API so adding macro-F1 doesn’t touch every trainer.
+5. TODO: unify transforms via a Compose/Transform API; augmentations duplicated per dataset cause cascading changes.
+6. FIXME: LR scheduler logic is baked into Trainer; extract SchedulerStrategy to switch cosine/step/warmup without refactors.
+7. TODO: create a CheckpointIO interface; save/load code copy-pasted in 6 places breaks when we add EMA weights.
+8. XXX: move preprocessing constants into a typed Config schema; constants spread across modules cause drift on updates.
+9. TODO: define a FeaturePipeline abstraction; adding a new feature currently requires edits in featurizer/dataloader/model heads.
+10. FIXME: serving backends each implement their own pre/post; introduce an InferenceAdapter so outputs stay stable across runtimes.
+
+BOUNDARY EROSION (BE): Lack of boundaries between subsystems complicates maintenance and isolates changes poorly.
+examples:
+1. TODO: model.forward() writes checkpoints to disk; move IO to trainer — side effects bleed across module boundaries.
+2. FIXME: preprocessing mutates global config used by trainer; break the hidden coupling with explicit params.
+3. TODO: serving imports training-only augmentations; split runtime packages to avoid cross-layer dependencies.
+4. XXX: metrics module queries the production DB directly; consume logged events via a clean interface instead.
+5. TODO: optimizer reads Dataset.num_steps; pass schedule from trainer instead of reaching across layers.
+6. FIXME: dataset applies label smoothing during __getitem__; this is model concern — restore read-only samples.
+7. TODO: callbacks reach into model._private buffers; expose events/hooks API instead of poking internals.
+8. XXX: CLI parses flags inside library modules; parse in entrypoint and pass a typed Config object.
+9. TODO: feature engineering runs inside model.forward(); move to Preprocess pipeline to keep model pure.
+10. FIXME: shared singleton registry used by train and serve causes hidden state leakage; isolate scopes per subsystem.
+
+MODEL CODE MODIFIABILITY (MCM): Model code should enable easy maintenance and future modifications.
+examples:
+1. TODO: remove hard-coded dims (hidden_size=768, num_classes=23); read from config to ease future model variants.
+2. FIXME: add type hints + dataclass config for __init__ args; validate to prevent silent shape mismatches.
+3. TODO: split monolithic Model into Encoder/Head/SchedulerStrategy; favor composition to enable drop-in swaps.
+4. XXX: introduce HeadFactory (name→nn.Module) so adding a new task head doesn’t touch trainer/evaluator code.
+5. TODO: expose model hyperparams via YAML/CLI (learning_rate, dropout, activation); avoid editing source for tweaks.
+6. TODO: add forward-hooks/callback API (on_before_forward/on_after_forward) to support feature dumping without patching code.
+7. FIXME: stabilize public methods (fit/predict/predict_proba/save/load) and deprecate legacy names with warnings.
+8. TODO: write unit tests for tensor shape contracts (B,T,C) and serialization round-trips to catch regressions early.
+9. TODO: move device/precision management (cpu/cuda/amp) into a utility; model code should be device-agnostic.
+10. XXX: document extension points in README (custom loss/optimizer/scheduler) and provide minimal templates for quick mods.
+
+MODEL CODE REUSABILITY (MCR): Model code should be generalised for reuse in varying situations.
+examples:
+1. TODO: remove fixed image size (224); use adaptive pooling to accept arbitrary H×W inputs.
+2. FIXME: first conv assumes in_channels=3; parameterize in_channels to support grayscale/multispectral.
+3. TODO: decouple backbone from head — expose Encoder/Head registry so CNN/Transformer backbones can be swapped.
+4. XXX: loss function hardwired to CrossEntropy; allow pluggable losses (CE/BCE/Focal/CTC) via config.
+5. TODO: generalize metric pipeline; support classification/segmentation/regression by registering metric sets.
+6. TODO: make normalization layer selectable (BatchNorm/GroupNorm/LayerNorm) with a flag instead of hardcoding BN.
+7. FIXME: tokenizer coupled to a single model; accept any HF tokenizer through an interface for reuse across NLP tasks.
+8. TODO: export adapters for TorchScript/ONNX; keep forward signatures stable for deployment reuse.
+9. TODO: implement shape-agnostic heads using nn.AdaptiveAvgPool and global pooling to reduce assumptions.
+10. XXX: unify batch and streaming inference paths behind a Predictor API; reuse the same model in offline/online settings.
+
+PREDICTION QUALITY (PQ): Workflow changes may affect performance.
+examples:
+1. TODO: re-benchmark macro-F1 after new text cleaning; scores dipped post v2 pipeline.
+2. FIXME: AMP enabled caused AUPRC drop; run ablation (fp32 vs amp) to confirm regression.
+3. TODO: retune lr/weight_decay after adding strong augs; prior hyperparams likely suboptimal.
+4. XXX: high run-to-run variance; report mean±std over 5 seeds before claiming gains.
+5. TODO: recalibrate thresholds (ROC/PR sweep) after label smoothing; precision@k shifted.
+6. FIXME: new GroupKFold split not comparable to old random split; recompute all baselines.
+7. TODO: check distribution shift in 2025-09 data snapshot; refresh normalization stats.
+8. XXX: verify int8 quantization accuracy delta <1%; log pre/post top-1 and latency.
+9. TODO: compare tokenizer v2 vs v1 (truncation rate, OOV, F1); suspected recall loss.
+10. TODO: ablate early stopping removal; monitor overfitting (train↑, val↓) and final test perf.
+
+MACHINE LEARNING RELIABILITY (MLRelia): Model functionality depends on data quality; robustness measures should be in place.
+examples:
+1. TODO: validate input schema (required columns/types/ranges) and reject bad batches; pipeline currently trusts data.
+2. FIXME: guard against NaN/Inf in features/labels; add clamp/impute to stop silent propagation.
+3. TODO: implement OOD detection (max-softmax/Mahalanobis) and abstain when confidence < τ.
+4. XXX: add adversarial robustness tests (FGSM/PGD/synonym attacks) in CI; report worst-case metrics.
+5. TODO: monitor data drift via PSI/KS per feature and trigger alerts when drift > threshold.
+6. FIXME: calibrate probabilities (ECE/MCE) and watch calibration drift in production dashboards.
+7. TODO: add invariance tests (feature permutation, unit scaling, token order) to catch brittle behavior.
+8. TODO: define safe ranges for sensor/text length; clip/sanitize outliers and drop impossible timestamps.
+9. XXX: implement low-confidence fallback (human-in-the-loop or rule baseline) to avoid risky auto-actions.
+10. TODO: shadow deploy + canary (5% traffic) and auto-rollback on error/latency/quality regressions.
+
+PROTOTYPE (Proto): Deploying small-scale prototypes into full systems can be dangerous.
+examples:
+1. TODO: PoC uses in-memory dict as cache; replace with Redis/TTL before enabling multi-worker.
+2. FIXME: demo ETL shell script glues CSV→model; reimplement as idempotent Airflow DAG with retries.
+3. TODO: API runs on Flask dev server; move to gunicorn/uvicorn with timeouts, health checks, and graceful shutdown.
+4. XXX: prototype loads model on every request; add global model pool + cold-start warmup.
+5. TODO: hardcoded secrets in notebook; switch to env vars + secret manager before deploy.
+6. FIXME: “quick” preprocessing path differs from training; unify pipeline to avoid train/serve skew.
+7. TODO: using SQLite for demo metrics; migrate to Postgres with schema + migrations before scale.
+8. XXX: batch inference is single-threaded; parallelize (Ray/Dask) and add backpressure/queue limits.
+9. TODO: no input validation; add JSON Schema + size/type/range checks to reject bad payloads.
+10. FIXME: logging = print(); integrate structured logs + tracing + alerting for prod incidents.
+
+""".strip()

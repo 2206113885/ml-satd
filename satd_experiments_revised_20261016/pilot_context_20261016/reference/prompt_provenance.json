@@ -1,0 +1,19 @@
+{
+  "original_source": "/Users/yizho/Desktop/satd_data/basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+  "original_source_sha256": "5c8638d37821820d538740db8b73b0bf1c5d150d4f539fd961a09fc568ef6759",
+  "frozen_prompt_sha256": "b94cbdf8684412cd86b0411b9a9cabf1ae24197ec36cbb066cd39e0c2f5cb256",
+  "extracted_assignments": [
+    "ABBR2FULL",
+    "ABBR_LOWER",
+    "ABBR_SET",
+    "LABELS",
+    "LABEL_ABBR",
+    "PROMPT_HEAD",
+    "PROMPT_TAIL"
+  ],
+  "extracted_functions": [
+    "build_prompt",
+    "simple_extract"
+  ],
+  "notes": "User selected original non-thinking vanilla zero-shot script. Prior thinking exploratory records preserved separately and excluded."
+}

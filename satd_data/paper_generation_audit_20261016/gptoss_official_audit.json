@@ -1,0 +1,1191 @@
+{
+  "model": "openai/gpt-oss-20b",
+  "checked_original_scripts": 14,
+  "official_sources": [
+    {
+      "url": "https://developers.openai.com/cookbook/articles/gpt-oss/run-transformers",
+      "supports": [
+        "pipeline and manual generate are supported",
+        "pipeline role/content messages invoke chat template",
+        "ordinary chat system instructions map to Harmony developer role",
+        "example temperatures1.0 and0.7 are examples, not a unique mandatory recommendation"
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/cookbook/articles/openai-harmony",
+      "supports": [
+        "Harmony formatting required",
+        "native reasoning effort low/medium/high belongs to Harmony system metadata",
+        "default reasoning medium if not set",
+        "final response is in final channel"
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-oss-20b",
+      "supports": [
+        "open-weight21B3.6Bactive",
+        "reasoning levels low/medium/high"
+      ]
+    }
+  ],
+  "conclusion": {
+    "uniform_temperature_zero_supported": false,
+    "hard_temperature_error_confirmed": false,
+    "single_mandatory_official_temperature_found": false,
+    "generation_defaults_historically_proven": false,
+    "all_runs_high_reasoning_effort_proven": false,
+    "suggested_action": "Replace blanket zero-temperature claim with actual model/method settings. For gpt-oss retrieve original effective pipeline.generation_config and rendered Harmony prompt before claiming all high effort; do not infer exact temperatures from example docs."
+  },
+  "scripts": [
+    {
+      "script": "basic_few_shot/gpt-oss-20b_few_shot.py",
+      "sha256": "709aac8ad23c93c856535618db6be33ca5725411a57537af3e4a946240a1b06e",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 891,
+          "end_line": 894,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "You are a strict classifier. Reasoning: high. Output ONLY the abbreviation, one line."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_prompt(comment)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "MAX_NEW_TOKENS",
+              "resolved": 4096
+            }
+          },
+          "function_scope": "classify",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 15,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 16,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 19,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 26,
+          "value": 4096
+        },
+        "MAX_INPUT_TOKENS": {
+          "line": 27,
+          "value": 65536
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [
+        {
+          "line": 884,
+          "content": "You are a strict classifier. Reasoning: high. Output ONLY the abbreviation, one line."
+        }
+      ],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "sha256": "68929cb682d27f68b98630d930a67e59b34861f04cbab87e6ad590f63bb03003",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 362,
+          "end_line": 365,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "You are a strict classifier. Reasoning: high. Output ONLY the abbreviation, one line."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_prompt(comment)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "MAX_NEW_TOKENS",
+              "resolved": 32768
+            }
+          },
+          "function_scope": "classify",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 15,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 16,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 19,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 26,
+          "value": 32768
+        },
+        "MAX_INPUT_TOKENS": {
+          "line": 27,
+          "value": 16384
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [
+        {
+          "line": 355,
+          "content": "You are a strict classifier. Reasoning: high. Output ONLY the abbreviation, one line."
+        }
+      ],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "sha256": "1884b42e29da7571b7e3d259dae68286e99b5ec4d8d3e8f74982a929588d505c",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 313,
+          "end_line": 313,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "You are a concise classifier. Think silently. Reply with ONE paragraph that starts with 'REASON:' followed by a short justification (<= 512 words)."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_reason_prompt(comment, abbr)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "REASON_MAX_NEW_TOKENS",
+              "resolved": 512
+            }
+          },
+          "function_scope": "generate_reason",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        },
+        {
+          "line": 324,
+          "end_line": 324,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "Return exactly ONE paragraph. It must start with 'REASON:' then a short justification (<= 512 words). No preface, no label, no markdown."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_reason_prompt(comment, abbr)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "REASON_MAX_NEW_TOKENS",
+              "resolved": 512
+            }
+          },
+          "function_scope": "generate_reason",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        },
+        {
+          "line": 335,
+          "end_line": 335,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "Output exactly ONE paragraph starting with 'REASON:' followed by a brief justification (<= 512 words). Ground it in the comment text. No label names, no category names, no markdown, no quotes."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_reason_prompt(comment, abbr)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "REASON_MAX_NEW_TOKENS",
+              "resolved": 512
+            }
+          },
+          "function_scope": "generate_reason",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        },
+        {
+          "line": 352,
+          "end_line": 352,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "You are a strict classifier. Reasoning: high. Output ONLY the abbreviation, one line."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_prompt(comment)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "MAX_NEW_TOKENS",
+              "resolved": 32768
+            }
+          },
+          "function_scope": "classify",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 15,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 16,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 19,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 26,
+          "value": 32768
+        },
+        "MAX_INPUT_TOKENS": {
+          "line": 27,
+          "value": 16384
+        },
+        "REASON_MAX_NEW_TOKENS": {
+          "line": 28,
+          "value": 512
+        },
+        "REASON_SYS_1": {
+          "line": 254,
+          "value": "You are a concise classifier. Think silently. Reply with ONE paragraph that starts with 'REASON:' followed by a short justification (<= 512 words)."
+        },
+        "REASON_SYS_2": {
+          "line": 258,
+          "value": "Return exactly ONE paragraph. It must start with 'REASON:' then a short justification (<= 512 words). No preface, no label, no markdown."
+        },
+        "REASON_SYS_FORCE": {
+          "line": 262,
+          "value": "Output exactly ONE paragraph starting with 'REASON:' followed by a brief justification (<= 512 words). Ground it in the comment text. No label names, no category names, no markdown, no quotes."
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [
+        {
+          "line": 348,
+          "content": "You are a strict classifier. Reasoning: high. Output ONLY the abbreviation, one line."
+        }
+      ],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "sha256": "8cef2d07b17b73f079b557171b9e7f9cf103be56310caee74a8dac9cb0b2af1e",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 180,
+          "end_line": 183,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "You are a strict classifier. Reasoning: low. Output ONLY the abbreviation, one line."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_prompt(comment)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "MAX_NEW_TOKENS",
+              "resolved": 4096
+            }
+          },
+          "function_scope": "classify",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 15,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 16,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 19,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 26,
+          "value": 4096
+        },
+        "MAX_INPUT_TOKENS": {
+          "line": 27,
+          "value": 4096
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [
+        {
+          "line": 173,
+          "content": "You are a strict classifier. Reasoning: low. Output ONLY the abbreviation, one line."
+        }
+      ],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "sha256": "5ee76121a18b563a1229ab35945ce2ab47a8ffd701e44bf08ea3ae84d499b0fc",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 197,
+          "end_line": 200,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "You are a strict classifier. Reasoning: low. Output ONLY the abbreviation, one line."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_prompt(comment)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "MAX_NEW_TOKENS",
+              "resolved": 32768
+            }
+          },
+          "function_scope": "classify",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 15,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 16,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 19,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 26,
+          "value": 32768
+        },
+        "MAX_INPUT_TOKENS": {
+          "line": 27,
+          "value": 4096
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [
+        {
+          "line": 190,
+          "content": "You are a strict classifier. Reasoning: low. Output ONLY the abbreviation, one line."
+        }
+      ],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "sha256": "2d191747b93672b05e2b3891c42f815794a49c8c4f24e5a8663cb08ecc9e0dd5",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 221,
+          "end_line": 221,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "You are a concise classifier. Think silently. Reply with ONE paragraph that starts with 'REASON:' followed by a short justification (<= 512 words)."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_reason_prompt(comment, abbr)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "REASON_MAX_NEW_TOKENS",
+              "resolved": 512
+            }
+          },
+          "function_scope": "generate_reason",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        },
+        {
+          "line": 232,
+          "end_line": 232,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "Return exactly ONE paragraph. It must start with 'REASON:' then a short justification (<= 512 words). No preface, no label, no markdown."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_reason_prompt(comment, abbr)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "REASON_MAX_NEW_TOKENS",
+              "resolved": 512
+            }
+          },
+          "function_scope": "generate_reason",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        },
+        {
+          "line": 243,
+          "end_line": 243,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "Output exactly ONE paragraph starting with 'REASON:' followed by a brief justification (<= 512 words). Ground it in the comment text. No label names, no category names, no markdown, no quotes."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_reason_prompt(comment, abbr)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "REASON_MAX_NEW_TOKENS",
+              "resolved": 512
+            }
+          },
+          "function_scope": "generate_reason",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        },
+        {
+          "line": 260,
+          "end_line": 260,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "You are a strict classifier. Reasoning: high. Output ONLY the abbreviation, one line."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_prompt(comment)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "MAX_NEW_TOKENS",
+              "resolved": 32768
+            }
+          },
+          "function_scope": "classify",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 15,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 16,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 19,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 26,
+          "value": 32768
+        },
+        "MAX_INPUT_TOKENS": {
+          "line": 27,
+          "value": 4096
+        },
+        "REASON_MAX_NEW_TOKENS": {
+          "line": 28,
+          "value": 512
+        },
+        "REASON_SYS_1": {
+          "line": 162,
+          "value": "You are a concise classifier. Think silently. Reply with ONE paragraph that starts with 'REASON:' followed by a short justification (<= 512 words)."
+        },
+        "REASON_SYS_2": {
+          "line": 166,
+          "value": "Return exactly ONE paragraph. It must start with 'REASON:' then a short justification (<= 512 words). No preface, no label, no markdown."
+        },
+        "REASON_SYS_FORCE": {
+          "line": 170,
+          "value": "Output exactly ONE paragraph starting with 'REASON:' followed by a brief justification (<= 512 words). Ground it in the comment text. No label names, no category names, no markdown, no quotes."
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [
+        {
+          "line": 256,
+          "content": "You are a strict classifier. Reasoning: high. Output ONLY the abbreviation, one line."
+        }
+      ],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+      "sha256": "9722780dd61d1be80398d055ca2a41b485fcb228a9a723e2a05e03a6b9d3f03c",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 212,
+          "end_line": 215,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_prompt(comment)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "MAX_NEW_TOKENS",
+              "resolved": 32768
+            }
+          },
+          "function_scope": "classify",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 15,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 16,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 19,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 26,
+          "value": 32768
+        },
+        "MAX_INPUT_TOKENS": {
+          "line": 27,
+          "value": 4096
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "sha256": "07faeab8f0fd7ae04d254fc2afd6155311bc1e9a3aca62a8c14f8cb552c2b077",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 547,
+          "end_line": 550,
+          "callee": "pipe",
+          "args": [
+            {
+              "expression": "messages"
+            }
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens",
+              "resolved": {
+                "expression": "max_new_tokens"
+              }
+            }
+          },
+          "function_scope": "generate_first_line",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 23,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 24,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 27,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_YN_TOKENS": {
+          "line": 34,
+          "value": 2048
+        },
+        "MAX_PICK_TOKENS": {
+          "line": 35,
+          "value": 2048
+        },
+        "MAX_FALLBACK_TOKENS": {
+          "line": 36,
+          "value": 2048
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "sha256": "a91bb0825f05bbd45a209265cfa80f7eb513ae30acc3e1cb0fd244a526380191",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 472,
+          "end_line": 475,
+          "callee": "pipe",
+          "args": [
+            {
+              "expression": "messages"
+            }
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens",
+              "resolved": {
+                "expression": "max_new_tokens"
+              }
+            }
+          },
+          "function_scope": "generate_first_line",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 23,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 24,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 27,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_YN_TOKENS": {
+          "line": 34,
+          "value": 2048
+        },
+        "MAX_PICK_TOKENS": {
+          "line": 35,
+          "value": 2048
+        },
+        "MAX_FALLBACK_TOKENS": {
+          "line": 36,
+          "value": 2048
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "sha256": "217af126132cdb1892ba11f937d5c55200d04b62a1ba435f85f0c747791c8f08",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 188,
+          "end_line": 191,
+          "callee": "pipe",
+          "args": [
+            {
+              "expression": "messages"
+            }
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens",
+              "resolved": {
+                "expression": "max_new_tokens"
+              }
+            }
+          },
+          "function_scope": "generate_first_line",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 23,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 24,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 27,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_YN_TOKENS": {
+          "line": 34,
+          "value": 2048
+        },
+        "MAX_PICK_TOKENS": {
+          "line": 35,
+          "value": 2048
+        },
+        "MAX_FALLBACK_TOKENS": {
+          "line": 36,
+          "value": 2048
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "sha256": "02eee5e877a1c7cffb8dd082f909daf2fb42c773de9d1683013968a875f6b451",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 365,
+          "end_line": 368,
+          "callee": "pipe",
+          "args": [
+            {
+              "expression": "messages"
+            }
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens",
+              "resolved": {
+                "expression": "max_new_tokens"
+              }
+            }
+          },
+          "function_scope": "generate_first_line",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 26,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 27,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 30,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 36,
+          "value": 32768
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+      "sha256": "2a424643e44d39860c66f1f2b86735e9c6978eed5050a69fc3cd1c707b98f6b4",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 273,
+          "end_line": 276,
+          "callee": "pipe",
+          "args": [
+            {
+              "expression": "messages"
+            }
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens",
+              "resolved": {
+                "expression": "max_new_tokens"
+              }
+            }
+          },
+          "function_scope": "generate_first_line",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 26,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 27,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "MODEL_NAME": {
+          "line": 30,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 36,
+          "value": 4096
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "literal_reasoning_instructions": [],
+      "sampling_assessment": "Calls do not explicitly set temperature/top_p/top_k/do_sample. Actual settings are inherited from the original local model/pipeline and library version, which were not snapshotted.",
+      "format_assessment": "Role/content messages are passed to text-generation pipeline, consistent with official automatic chat-template/Harmony route. Actual historical tokenizer/chat template revision was not saved.",
+      "reasoning_assessment": "Reasoning: low/high text inside an ordinary chat system-content string is not proof that the official Harmony system header was configured to that effort. The official guide says that ordinary chat system instructions map to Harmony developer instructions; inspect the rendered header or explicitly set the appropriate template/renderer argument."
+    },
+    {
+      "script": "battle/gpt_battle.py",
+      "sha256": "4fe931df45d7bb451a54f8669fe1a68a4697ee74f8d1032b88aafb2090f82164",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 279,
+          "end_line": 279,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_referee_prompt(comment, pred1_full, pred2_full, pred1_reason, pred2_reason)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "MAX_NEW_TOKENS",
+              "resolved": 32768
+            }
+          },
+          "function_scope": "arbitrate_once",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        },
+        {
+          "line": 331,
+          "end_line": 331,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "Return ONLY one line starting with 'Reason:'. No extra text."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "'\\n'.join(prompt)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "MAX_NEW_TOKENS",
+              "resolved": 32768
+            }
+          },
+          "function_scope": "refill_reason",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 15,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 16,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "PRED1_PATH": {
+          "line": 19,
+          "value": "/data/yangzhifei/pro/ML_SATD/basic_zero_shot_CoT_reason/results/run-20250908-170030-gpt-oss-20b-36.6/predictions.csv"
+        },
+        "PRED2_PATH": {
+          "line": 20,
+          "value": "/data/yangzhifei/pro/ML_SATD/basic_zero_shot_CoT_reason/results/run-20250909-192139-Qwen3-14B-35.9/predictions.csv"
+        },
+        "MODEL_NAME": {
+          "line": 22,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 29,
+          "value": 32768
+        },
+        "MAX_INPUT_TOKENS": {
+          "line": 30,
+          "value": 4096
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "scope_role": "arbiter_experiment_not_in_active_manuscript_tables",
+      "sampling_assessment": "No explicit sampling overrides; historical effective pipeline/checkpoint configuration was not saved.",
+      "reasoning_assessment": "No explicit native reasoning-effort control; arbiter experiment is outside active manuscript tables."
+    },
+    {
+      "script": "battle/test.py",
+      "sha256": "138ddec47d27cbf136371a313a942967ada729a3eaf94f44b0aad3bac178204f",
+      "backend": "transformers.pipeline",
+      "generation_calls": [
+        {
+          "line": 210,
+          "end_line": 210,
+          "callee": "pipe",
+          "args": [
+            [
+              {
+                "role": "system",
+                "content": "You are a strict classifier arbiter. Reasoning: low. Output ONLY the abbreviation, one line, and it must be one of the two candidates."
+              },
+              {
+                "role": "user",
+                "content": {
+                  "expression": "build_referee_prompt(comment, q_abbr, g_abbr, ABBR2FULL[q_abbr], ABBR2FULL[g_abbr], qwen_raw=qwen_raw, gemma_raw=gemma_raw)"
+                }
+              }
+            ]
+          ],
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "MAX_NEW_TOKENS",
+              "resolved": 32768
+            }
+          },
+          "function_scope": "choose_between",
+          "inside_if_conditions": [],
+          "inside_shadowed_function_definition": false,
+          "sampling_mode_observation": "do_sample omitted at call; effective mode depends on passed/inherited GenerationConfig or backend defaults"
+        }
+      ],
+      "model_configuration_constants": {
+        "CSV_PATH": {
+          "line": 15,
+          "value": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv"
+        },
+        "MODEL_PATH": {
+          "line": 16,
+          "value": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b"
+        },
+        "QWEN_PRED_PATH": {
+          "line": 19,
+          "value": "/data/yangzhifei/pro/ML_SATD/basic_zero_shot_CoT/results/run-20250821-064248-Qwen3-14B-38.4/predictions.csv"
+        },
+        "GEMMA_PRED_PATH": {
+          "line": 20,
+          "value": "/data/yangzhifei/pro/ML_SATD/basic_zero_shot_CoT/results/run-20250822-011558-gpt-oss-20b-35.8/predictions.csv"
+        },
+        "MODEL_NAME": {
+          "line": 23,
+          "value": {
+            "expression": "Path(MODEL_PATH).name"
+          }
+        },
+        "MAX_NEW_TOKENS": {
+          "line": 30,
+          "value": 32768
+        },
+        "MAX_INPUT_TOKENS": {
+          "line": 31,
+          "value": 4096
+        }
+      },
+      "explicit_reasoning_effort_parameter": false,
+      "scope_role": "arbiter_experiment_not_in_active_manuscript_tables",
+      "sampling_assessment": "No explicit sampling overrides; historical effective pipeline/checkpoint configuration was not saved.",
+      "reasoning_assessment": "No explicit native reasoning-effort control; arbiter experiment is outside active manuscript tables."
+    }
+  ]
+}

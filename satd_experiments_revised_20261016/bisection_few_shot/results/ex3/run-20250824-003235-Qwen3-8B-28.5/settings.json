@@ -1,0 +1,11 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+  "model_name": "Qwen3-8B",
+  "run_dir": "results/run-20250824-003235-Qwen3-8B",
+  "max_yn_tokens": 8,
+  "max_pick_tokens": 64,
+  "max_fallback_tokens": 32,
+  "fallback_abbr": "Data Conf",
+  "method": "YN polling -> pick best"
+}

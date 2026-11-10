@@ -1,0 +1,24 @@
+,Machine Learning Knowledge,Model Interpretability,Model Code Comprehension,Duplicate Model Code,Duplicate Feature Extraction Code,Weight Configuration,Layer Configuration,Hyper-parameter Configuration,Code Dependency,Glue Code,Custom Data Type,Multiple Languages,Unnecessary Model Code,Data Processing Configuration,Plain Old Data Type,Data Storage Configuration,Abstraction,Boundary Erosion,Model Code Modifiability,Model Code Reusability,Prediction Quality,Machine Learning Reliability,Prototype
+Machine Learning Knowledge,8,50,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Model Interpretability,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Model Code Comprehension,0,6,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Duplicate Model Code,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Duplicate Feature Extraction Code,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Weight Configuration,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0
+Layer Configuration,0,3,3,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Hyper-parameter Configuration,1,12,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Code Dependency,5,9,1,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Glue Code,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Custom Data Type,4,13,4,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Multiple Languages,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Unnecessary Model Code,6,18,1,0,0,0,0,0,4,0,0,0,3,0,0,0,0,0,0,0,0,2,0
+Data Processing Configuration,5,65,11,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,1,0,3,0
+Plain Old Data Type,2,4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Data Storage Configuration,4,22,7,0,0,0,0,0,5,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Abstraction,0,7,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Boundary Erosion,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Model Code Modifiability,1,7,2,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Model Code Reusability,2,13,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Prediction Quality,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Machine Learning Reliability,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Prototype,1,12,4,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2,0

@@ -1,0 +1,3013 @@
+[
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_few_shot/CodeLlama-7b_few_shot.py",
+    "relative_path": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 722,
+        "end_line": 726,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 730,
+        "end_line": 738,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20,
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 720,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 727,
+        "end_line": 728,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "relative_path": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "transformers.pipeline",
+        "line": 723,
+        "end_line": 728,
+        "kwargs": {
+          "model": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+          "model_kwargs": "{'torch_dtype': torch.bfloat16}",
+          "device_map": "'auto'"
+        },
+        "args": [
+          "'text-generation'"
+        ]
+      },
+      {
+        "function": "pipeline",
+        "line": 733,
+        "end_line": 737,
+        "kwargs": {
+          "max_new_tokens": 20,
+          "pad_token_id": "pipeline.tokenizer.eos_token_id"
+        },
+        "args": [
+          "messages"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "line": 751,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": []
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "relative_path": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 920,
+        "end_line": 922,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 926,
+        "end_line": 932,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 918,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 923,
+        "end_line": 924,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "16384"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "relative_path": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 926,
+        "end_line": 928,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 932,
+        "end_line": 938,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 924,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 929,
+        "end_line": 930,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "relative_path": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 920,
+        "end_line": 922,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 926,
+        "end_line": 930,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 918,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 923,
+        "end_line": 924,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "66356"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "relative_path": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 361,
+        "end_line": 365,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 369,
+        "end_line": 377,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20,
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 359,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 366,
+        "end_line": 367,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "relative_path": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "transformers.pipeline",
+        "line": 361,
+        "end_line": 366,
+        "kwargs": {
+          "model": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+          "model_kwargs": "{'torch_dtype': torch.bfloat16}",
+          "device_map": "'auto'"
+        },
+        "args": [
+          "'text-generation'"
+        ]
+      },
+      {
+        "function": "pipeline",
+        "line": 371,
+        "end_line": 375,
+        "kwargs": {
+          "max_new_tokens": 20,
+          "pad_token_id": "pipeline.tokenizer.eos_token_id"
+        },
+        "args": [
+          "messages"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "line": 382,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": []
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "relative_path": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 4096
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 369,
+        "end_line": 371,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 375,
+        "end_line": 378,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 4096
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 367,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 372,
+        "end_line": 373,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "relative_path": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 369,
+        "end_line": 371,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 375,
+        "end_line": 378,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 367,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 372,
+        "end_line": 373,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "relative_path": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 32768
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 368,
+        "end_line": 370,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 374,
+        "end_line": 377,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 32768
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 366,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 371,
+        "end_line": 372,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "relative_path": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 138,
+        "end_line": 142,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 146,
+        "end_line": 154,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20,
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 136,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 143,
+        "end_line": 144,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "relative_path": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 256
+    },
+    "calls": [
+      {
+        "function": "transformers.pipeline",
+        "line": 140,
+        "end_line": 145,
+        "kwargs": {
+          "model": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+          "model_kwargs": "{'torch_dtype': torch.bfloat16}",
+          "device_map": "'auto'"
+        },
+        "args": [
+          "'text-generation'"
+        ]
+      },
+      {
+        "function": "pipeline",
+        "line": 150,
+        "end_line": 154,
+        "kwargs": {
+          "max_new_tokens": 256,
+          "pad_token_id": "pipeline.tokenizer.eos_token_id"
+        },
+        "args": [
+          "messages"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "line": 161,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": []
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "relative_path": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 2048
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 140,
+        "end_line": 142,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 146,
+        "end_line": 149,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 2048
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 138,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 143,
+        "end_line": 144,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "relative_path": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 141,
+        "end_line": 143,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 147,
+        "end_line": 150,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 139,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 144,
+        "end_line": 145,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "relative_path": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 140,
+        "end_line": 142,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 146,
+        "end_line": 150,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 138,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 143,
+        "end_line": 144,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "relative_path": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 151,
+        "end_line": 155,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 159,
+        "end_line": 167,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20,
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 149,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 156,
+        "end_line": 157,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "relative_path": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "transformers.pipeline",
+        "line": 151,
+        "end_line": 156,
+        "kwargs": {
+          "model": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+          "model_kwargs": "{'torch_dtype': torch.bfloat16}",
+          "device_map": "'auto'"
+        },
+        "args": [
+          "'text-generation'"
+        ]
+      },
+      {
+        "function": "pipeline",
+        "line": 161,
+        "end_line": 165,
+        "kwargs": {
+          "max_new_tokens": 20,
+          "pad_token_id": "pipeline.tokenizer.eos_token_id"
+        },
+        "args": [
+          "messages"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "line": 172,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": []
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "relative_path": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 4096
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 158,
+        "end_line": 160,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 164,
+        "end_line": 167,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 4096
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 156,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 161,
+        "end_line": 162,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "relative_path": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 158,
+        "end_line": 160,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 164,
+        "end_line": 167,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 156,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 161,
+        "end_line": 162,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "relative_path": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 32768
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 157,
+        "end_line": 159,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 163,
+        "end_line": 166,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 32768
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 155,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 160,
+        "end_line": 161,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "relative_path": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 164,
+        "end_line": 166,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 170,
+        "end_line": 173,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 162,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 167,
+        "end_line": 168,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "relative_path": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 512
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 161,
+        "end_line": 165,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 169,
+        "end_line": 176,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 512,
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 159,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 166,
+        "end_line": 167,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "relative_path": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 512
+    },
+    "calls": [
+      {
+        "function": "transformers.pipeline",
+        "line": 168,
+        "end_line": 173,
+        "kwargs": {
+          "model": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+          "model_kwargs": "{'torch_dtype': torch.bfloat16}",
+          "device_map": "'auto'"
+        },
+        "args": [
+          "'text-generation'"
+        ]
+      },
+      {
+        "function": "pipeline",
+        "line": 176,
+        "end_line": 180,
+        "kwargs": {
+          "max_new_tokens": 512,
+          "pad_token_id": "pipeline.tokenizer.eos_token_id"
+        },
+        "args": [
+          "messages"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "line": 186,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": []
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "relative_path": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 512
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 171,
+        "end_line": 173,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 177,
+        "end_line": 180,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 512
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 169,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 174,
+        "end_line": 175,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "relative_path": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 512
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 182,
+        "end_line": 184,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 188,
+        "end_line": 191,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 512
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 180,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 185,
+        "end_line": 186,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "relative_path": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 512
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 182,
+        "end_line": 184,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 188,
+        "end_line": 191,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 512
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 180,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 185,
+        "end_line": 186,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_CoT/CodeLlama-7b_few_shot.py",
+    "relative_path": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 353,
+        "end_line": 355,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 368,
+        "end_line": 376,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.pad_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 390,
+        "role": "user"
+      },
+      {
+        "line": 402,
+        "role": "user"
+      },
+      {
+        "line": 412,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 366,
+        "end_line": 367,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "relative_path": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 418,
+        "end_line": 420,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 423,
+        "end_line": 432,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 446,
+        "role": "user"
+      },
+      {
+        "line": 458,
+        "role": "user"
+      },
+      {
+        "line": 469,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 421,
+        "end_line": 422,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "100000"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "relative_path": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 373,
+        "end_line": 375,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 378,
+        "end_line": 387,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 401,
+        "role": "user"
+      },
+      {
+        "line": 413,
+        "role": "user"
+      },
+      {
+        "line": 424,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 376,
+        "end_line": 377,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_CoT/gemma-2-9b_few_shot.py",
+    "relative_path": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 422,
+        "end_line": 424,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 427,
+        "end_line": 431,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 445,
+        "role": "user"
+      },
+      {
+        "line": 457,
+        "role": "user"
+      },
+      {
+        "line": 468,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 425,
+        "end_line": 426,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_CoT/gemma-3-12b_few_shot.py",
+    "relative_path": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 422,
+        "end_line": 424,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 427,
+        "end_line": 431,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 445,
+        "role": "user"
+      },
+      {
+        "line": 457,
+        "role": "user"
+      },
+      {
+        "line": 468,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 425,
+        "end_line": 426,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "relative_path": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 582,
+        "end_line": 584,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 597,
+        "end_line": 605,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.pad_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 619,
+        "role": "user"
+      },
+      {
+        "line": 631,
+        "role": "user"
+      },
+      {
+        "line": 641,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 595,
+        "end_line": 596,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "relative_path": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 576,
+        "end_line": 578,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 581,
+        "end_line": 590,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 604,
+        "role": "user"
+      },
+      {
+        "line": 616,
+        "role": "user"
+      },
+      {
+        "line": 627,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 579,
+        "end_line": 580,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "100000"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "relative_path": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 579,
+        "end_line": 581,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 584,
+        "end_line": 593,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 607,
+        "role": "user"
+      },
+      {
+        "line": 619,
+        "role": "user"
+      },
+      {
+        "line": 630,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 582,
+        "end_line": 583,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_few_shot/gemma-2-9b_few_shot.py",
+    "relative_path": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 580,
+        "end_line": 582,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 585,
+        "end_line": 589,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 603,
+        "role": "user"
+      },
+      {
+        "line": 615,
+        "role": "user"
+      },
+      {
+        "line": 626,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 583,
+        "end_line": 584,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_few_shot/gemma-3-12b_few_shot.py",
+    "relative_path": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 580,
+        "end_line": 582,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 585,
+        "end_line": 594,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 608,
+        "role": "user"
+      },
+      {
+        "line": 620,
+        "role": "user"
+      },
+      {
+        "line": 631,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 583,
+        "end_line": 584,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "relative_path": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 165,
+        "end_line": 167,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 180,
+        "end_line": 188,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.pad_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 202,
+        "role": "user"
+      },
+      {
+        "line": 214,
+        "role": "user"
+      },
+      {
+        "line": 224,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 178,
+        "end_line": 179,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "relative_path": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 182,
+        "end_line": 184,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 187,
+        "end_line": 196,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 210,
+        "role": "user"
+      },
+      {
+        "line": 222,
+        "role": "user"
+      },
+      {
+        "line": 233,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 185,
+        "end_line": 186,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "relative_path": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 184,
+        "end_line": 186,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 189,
+        "end_line": 198,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 212,
+        "role": "user"
+      },
+      {
+        "line": 224,
+        "role": "user"
+      },
+      {
+        "line": 235,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 187,
+        "end_line": 188,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "relative_path": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 192,
+        "end_line": 194,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 197,
+        "end_line": 201,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 215,
+        "role": "user"
+      },
+      {
+        "line": 227,
+        "role": "user"
+      },
+      {
+        "line": 238,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 195,
+        "end_line": 196,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "relative_path": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name"
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 184,
+        "end_line": 186,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 189,
+        "end_line": 198,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": "max_new_tokens"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 212,
+        "role": "user"
+      },
+      {
+        "line": 224,
+        "role": "user"
+      },
+      {
+        "line": 235,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 187,
+        "end_line": 188,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/tree_few_shot/CodeLlama-7b_few_shot.py",
+    "relative_path": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20,
+      "DO_SAMPLE": true,
+      "TEMPERATURE": 0.2,
+      "TOP_P": 0.95
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 450,
+        "end_line": 452,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 455,
+        "end_line": 457,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 466,
+        "end_line": 473,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20,
+          "do_sample": true,
+          "temperature": 0.2,
+          "top_p": 0.95,
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 461,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 463,
+        "end_line": 464,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "relative_path": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20,
+      "DO_SAMPLE": false
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 436,
+        "end_line": 438,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 441,
+        "end_line": 443,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 452,
+        "end_line": 460,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20,
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 447,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 449,
+        "end_line": 450,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "relative_path": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20,
+      "DO_SAMPLE": false,
+      "TEMPERATURE": 0.7,
+      "TOP_P": 0.8,
+      "TOP_K": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 438,
+        "end_line": 440,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 443,
+        "end_line": 445,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 454,
+        "end_line": 463,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 449,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 451,
+        "end_line": 452,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/tree_few_shot/gemma-2-9b_few_shot.py",
+    "relative_path": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20,
+      "DO_SAMPLE": false,
+      "TEMPERATURE": 0.7,
+      "TOP_P": 0.8,
+      "TOP_K": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 426,
+        "end_line": 428,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 431,
+        "end_line": 433,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 442,
+        "end_line": 451,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 437,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 439,
+        "end_line": 440,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/tree_few_shot/gemma-3-12b_few_shot.py",
+    "relative_path": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20,
+      "DO_SAMPLE": false,
+      "TEMPERATURE": 0.7,
+      "TOP_P": 0.8,
+      "TOP_K": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 426,
+        "end_line": 428,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 431,
+        "end_line": 433,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 442,
+        "end_line": 451,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 437,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 439,
+        "end_line": 440,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "relative_path": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20,
+      "DO_SAMPLE": true,
+      "TEMPERATURE": 0.2,
+      "TOP_P": 0.95
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 358,
+        "end_line": 360,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 363,
+        "end_line": 365,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 374,
+        "end_line": 381,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20,
+          "do_sample": true,
+          "temperature": 0.2,
+          "top_p": 0.95,
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 369,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 371,
+        "end_line": 372,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "relative_path": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20,
+      "DO_SAMPLE": false
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 344,
+        "end_line": 346,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 349,
+        "end_line": 351,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 360,
+        "end_line": 368,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20,
+          "pad_token_id": "tokenizer.eos_token_id"
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 355,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 357,
+        "end_line": 358,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "relative_path": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20,
+      "DO_SAMPLE": false,
+      "TEMPERATURE": 0.7,
+      "TOP_P": 0.8,
+      "TOP_K": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 346,
+        "end_line": 348,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 351,
+        "end_line": 353,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 362,
+        "end_line": 371,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 357,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 359,
+        "end_line": 360,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "relative_path": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-2-9b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 2048
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 278,
+        "end_line": 278,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 281,
+        "end_line": 285,
+        "kwargs": {
+          "input_ids": "inputs.to(model.device)",
+          "max_new_tokens": 2048
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 277,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 279,
+        "end_line": 279,
+        "func": "tokenizer.encode",
+        "args": [
+          "prompt"
+        ],
+        "kwargs": {
+          "add_special_tokens": "False",
+          "return_tensors": "'pt'"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "relative_path": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "constants": {
+      "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+      "MODEL_NAME": "Path(MODEL_PATH).name",
+      "MAX_NEW_TOKENS": 20,
+      "DO_SAMPLE": false,
+      "TEMPERATURE": 0.7,
+      "TOP_P": 0.8,
+      "TOP_K": 20
+    },
+    "calls": [
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 347,
+        "end_line": 349,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "tokenizer.apply_chat_template",
+        "line": 352,
+        "end_line": 354,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        },
+        "args": [
+          "messages"
+        ]
+      },
+      {
+        "function": "model.generate",
+        "line": 363,
+        "end_line": 372,
+        "kwargs": {
+          "**": "inputs",
+          "max_new_tokens": 20
+        },
+        "args": []
+      }
+    ],
+    "roles": [
+      {
+        "line": 358,
+        "role": "user"
+      }
+    ],
+    "tokenization_and_seed_calls": [
+      {
+        "line": 360,
+        "end_line": 361,
+        "func": "tokenizer",
+        "args": [
+          "text"
+        ],
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      }
+    ]
+  }
+]

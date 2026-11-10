@@ -1,0 +1,145 @@
+MLKnow, MLInter
+MLKnow, MCC
+MLInter: The comment mentions the lack of understanding of model functionality, which is a common issue in machine learning. The comment also mentions that the code is a black box, which can make it difficult to understand how the model works.
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow: The comment mentions that the code is a bug and that predict_proba should not change. This suggests that the code is not functioning as intended and that there is a problem with the model's functionality.
+MLInter: The code comment is describing the functionality of a machine learning model, which is a black box and can be difficult to understand.
+MLInter: The code comment is describing the functionality of the module and the tasks that need to be completed. It does not provide any information about the model's interpretability, which is the focus of the MLInter SATD.
+MLInter: The code comment describes the need to shift a signal in a circular manner, which is a common operation in machine learning.
+MLKnow: The comment mentions a "TODO" task that will be implemented in a future release, which suggests that the code is not yet complete and may require further development.
+MLKnow, MLInter
+MLKnow, PQ
+MLKnow: The comment is requesting for a better understanding of the machine-learning model's functionality.
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow: The comment is a reminder that machine-learning software carries unique challenges and that unaware developers may need to revisit their solutions.
+MLInter: The comment is a reminder to check if the mod function is equivalent to floorMod in NumPy, which is a common library used in machine learning.
+MLKnow, UMC
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLInter, MLKnow
+MLKnow: The comment is a statement of knowledge about the machine learning software, specifically that the software may need to shrink the mask if it is possible to do so.
+MLKnow: The comment mentions the importance of keeping matrices in the right order for matrix products, which is a common issue in machine learning.
+MLKnow, MLInter
+MLKnow: The code comment mentions that the code needs to be fixed when giving a random in_dim, which suggests that the code is not well-understood and may require revisiting.
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow: The comment is a reminder for the developer to consider the performance implications of the code change.
+MLKnow: The comment is discussing the need to remove unused code from the model.
+MLDepend, MLInter
+MLKnow, MLInter
+MLInter: This code comment is related to model interpretability. The comment suggests that the model is not interpretable and that the masks used in the code should be changed to have an input mask and a warped target mask.
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLInter: This code comment is related to model interpretability. It describes a hack that allows inference when the "go" token is used.
+MLKnow, MLInter
+MLInter - The comment is discussing the interpretability of the model, and whether it handles N-dim tensors correctly.
+MLInter: The comment is discussing the lack of interpretability of machine learning models, specifically the difficulty in understanding how the models work and how they make predictions.
+MLKnow, MLRelia
+MLKnow, MLInter
+MLKnow, PQ
+MLKnow, MLInter
+MLKnow, MLInter
+MLInter: The comment is discussing the interpretation of the results of a machine learning model, specifically the eigenvalues of 1.
+MLInter: The code comment mentions the need to consider a 3D case, which suggests that the model is not handling 3D data properly. The comment also mentions using a tag to identify the size of the data, which suggests that the model is not handling different sizes of data properly.
+MLInter: The code comment is related to model interpretability, as it discusses how to distinguish oxidation states.
+MLKnow: The comment suggests that the developer is not aware of the potential issues with the model and its weights, which could lead to poor performance or unknown behavior.
+MLInter: The code comment is suggesting that the model's interpretability is poor, which is a common issue in machine learning.
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLRelia
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLInter: The comment mentions that the model is a "black box" and that it is difficult to understand how it works, which is a common issue in machine learning.
+MLKnow, MLInter
+MLInter: The code comment is asking why the model is not printing the output.
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow: The comment is a statement of a problem or a question that is related to the machine learning knowledge. It is not a technical debt, but rather a statement of a problem that needs to be addressed.
+MLKnow, MLInter
+MLKnow, MLInter
+MLInter: The comment mentions the lack of understanding of model functionality, which is a common issue in machine learning.
+MLInter: The comment mentions that the model is a black box, which can make it difficult to understand how it works and can lead to unknown behavior.
+MLKnow, MCC
+MLKnow: The comment is discussing the need to revisit the solution to a problem caused by a lack of understanding of machine learning concepts.
+MLKnow, MLInter
+MLInter: The comment is discussing the model's interpretability, specifically whether it is a QuartzNet model.
+MLInter: The comment mentions that the model is a black box, which suggests that the code is not well-understood.
+MLKnow, MLInter
+MLInter: The comment suggests that the code could be more interpretable if it directly calculates the minimum, maximum, and mean of the `opt.yi` variable, which could also contain time values.
+MLKnow, MLRelia
+MLDepend, GC
+MLKnow, MLInter
+MLInter: The comment is describing the need to understand the functionality of a machine learning model, specifically the reason why the result of einsum requires reshape.
+MLInter: The comment mentions "model functionality" and "unknown behaviour", which are both related to model interpretability.
+MLKnow, MLInter
+MLInter: This code comment is related to model interpretability, as it mentions the need to handle channel modalities later.
+MLKnow, MLInter
+MLKnow: The comment mentions that the code carries unique challenges, which is related to the first SATD type: MLKnowledge.
+MLKnow, MLInter
+MLKnow: The comment is expressing uncertainty about the functionality of the machine-learning software.
+MLKnow, MLRelia
+MLInter: The code comment is related to model interpretability, as it suggests that the method could be improved by running it on the entire data set rather than just a small subset.
+MLInter: The comment mentions the need to switch back to a different preprocessing method when retraining an InceptionResNetV2 model, which suggests that the model's interpretation is not straightforward.
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLInter: The comment mentions that the code needs to be re-written to match the new stitch datasets signature, which suggests that the model interpretation is not clear or accurate.
+MLKnow, Reason: The comment is a reminder to normalize the true states of the model.
+MLKnow, MLInter
+MLKnow: The comment mentions the need to rewrite code to move tensors into GPU memory, which is a common task in machine learning. However, the comment does not provide any specific details about the rewrite, which suggests that the developer may not have a deep understanding of the underlying machine learning concepts.
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLRelia
+MLKnow, PQ
+MLDepend, GC
+MLKnow: The comment is a self-admitted technical debt because it is a repeat of a known issue with the `tf.split` function. The comment is a reminder to revisit the code to find a better solution.
+MLKnow, MLInter
+MLKnow, MLRelia
+MLKnow, MLInter
+MLInter: The code comment mentions a need to see how the model functions, which is a common problem in machine learning.
+MLInter: The comment is asking for a recommendation on whether to use a LogarithmicFilteredSpectrogram, which is a type of model.
+MLKnow, MLInter
+MLKnow, MLRelia
+MLKnow, MLInter
+MLKnow: The code comment mentions the complexity of the algorithm and its potential to be slow for large graphs, which is a common issue in machine learning.
+MLKnow, MLInter
+MLKnow: The comment mentions that the code is slow and suggests ways to improve its performance.
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLInter: The comment is discussing the readability and understandability of the code, specifically the use of the term "unroll" and its relationship to the context manager.
+MLKnow: The comment is a reminder to update the machine-learning software with new knowledge.
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLInter
+MLKnow, MLRelia
+MLKnow, MLInter
+MLKnow: The comment is a reference to the fact that the default number of samples drawn from the arse is not a standard practice in machine learning.
+MLKnow: The comment is related to the knowledge of machine learning, specifically the need to understand the model's functionality and how it is used in the code.
+MLKnow: The comment is a statement of knowledge about the type of a variable, which is a common issue in machine learning software.
+MLInter, MLKnow
+MLInter: The comment mentions the need to prepare a statement before using a machine learning model, which is a common issue in machine learning code.
+MLKnow: The comment mentions the use of a variable named "XXX" which is not explained in the comment.
+MLInter: The comment asks about the impact of control flow on type inference in Numba, which is a machine learning library.
+MLDepend: This code comment is related to the issue of code dependencies in machine learning models. It asks how to catch dependence cycles correctly, which is a common problem in machine learning development.
+MLInter: The comment is related to model interpretability, as it asks how to find good values for a level.
+MLKnow: The comment is not handling dictionaries, which is a common issue in machine learning.
+MLInter: The comment suggests that the model is not interpretable, which is a common problem in machine learning.
+MLInter: The code comment is related to model interpretability, as it suggests a temporary solution to determine if an estimator is a classifier.
+MLKnow: The comment is a statement of knowledge, not a technical debt.
+MLKnow: The comment mentions "re-caching" and "mozci version", which are related to machine learning knowledge and model interpretation.
+MLKnow: The comment is asking for clarification on where to place the code snippet in the machine learning project.

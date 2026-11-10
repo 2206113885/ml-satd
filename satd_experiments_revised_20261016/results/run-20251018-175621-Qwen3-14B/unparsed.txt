@@ -1,0 +1,4 @@
+<think>
+Okay, let's break this down. The code comment is "FIXME: The code works with EpisodicReplayBuffer." The key here is the mention of "EpisodicReplayBuffer," which is likely a specific component or library used in the code. The "FIXME" indicates that there's
+<think>
+Okay, let's break this down. The code comment is about changing the return type of 'attns' from a dictionary to a list or tuple, specifically for ONNX compatibility. ONNX is a format for machine learning models, so this is likely related to how data is processed or stored in the

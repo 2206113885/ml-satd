@@ -1,0 +1,394 @@
+comment,real,pred,reason,raw_output
+!TODO: In some cases; US is not enough to hold the complete number,Machine Learning Knowledge,Model Code Comprehension,Comment focuses on model code legibility concern.,MCC
+# reverse bw; before concat TODO,Layer Configuration,Model Code Comprehension,Comment indicates need for model code comprehension.,MCC
+# TODO : load landmarks in validation and test set also. I'm too sleepy to do it today -_- zzz... zzz...,Data Processing Configuration,Duplicate Model Code,Code duplication of loading landmarks is hinted.,DMC
+## elif (): ## FIXME: handle other bases here,Prototype,Abstraction,FIXME indicates a known issue or to-do item in the code.,Abs
+#TODO: improve the copying of parameters,Hyper-parameter Configuration,Duplicate Model Code,"The comment mentions ""copying of parameters"", indicating duplicated code.",DMC
+@todo nrows is for testing only!,Boundary Erosion,Unnecessary Model Code,Comment indicates unnecessary model code for production.,UMC
+@todo: arabtex and iso8859-6 need individual handling because in some cases using one-two mapping,Data Processing Configuration,Code Dependency,External dependency is mentioned as the reason for the TODO.,MLDepend
+@TODO: need better solutions,Machine Learning Knowledge,Machine Learning Knowledge,"Comment implies lack of knowledge about solution, typical of ML development.",MLKnow
+@TODO: remove time usage; use it under the hood,Unnecessary Model Code,Unnecessary Model Code,Comment explicitly mentions removing unused code.,UMC
+[todo]: this is a bug; predict_proba should not change,Model Code Modifiability,Unnecessary Model Code,Comment explicitly mentions a bug in model code.,UMC
+"\""\""\"" || Corpus in CSV format. TODO: still serializes to SVMLight format; feel free to change this. || \""\""\""",Data Processing Configuration,Abstraction,Lack of clear and direct abstraction description in the comment.,Abs
+"\""\""\"" || Simple Gaussian Mixture model plotting example ||  || TODO: use the faithful dataset || \""\""\""",Data Processing Configuration,Prototype,TODO indicates a prototype deployment.,Proto
+"\""\""\"" Turn compiler.ast structures back into executable python code. ||  ||     The unparse method takes a compiler.ast tree and transforms it back into ||     valid python code.  It is incomplete and currently only works for ||     import statements; function calls; function definitions; assignments; and ||     basic expressions. ||  ||     Inspired by python-2.5-svn\/Demo\/parser\/unparse.py ||  ||     fixme: We may want to move to using _ast trees because the compiler for ||            them is about 6 times faster than compiler.compile. || \""\""\""",Custom Data Type,Model Code Comprehension,"The comment describes model code legibility concerns, specifically a lack of completeness and a note about speed.",MCC
+"\""\""\""Converts legacy encodings into Unicode || TODO for replacer.py: ||  - add perseus-style iota subscript and diaeresis || \""\""\""",Data Processing Configuration,Duplicate Feature Extraction Code,"The comment mentions specific encoding conversions, indicating duplicate feature extraction code.",DFEC
+"\""\""\""Converts legacy encodings into Unicode. ||  || TODO: Rm regex dependency || TODO: Add tests || \""\""\""",Code Dependency,Code Dependency,The comment mentions a needed change blocked by an external dependency.,MLDepend
+"\""\""\""Models. ||  || Models are objects which take Tensor(s) as input; perform some computation on  || those Tensor(s); and output probability distributions. ||  || TODO: more... ||  || * :func:`.Model` || * :func:`.ContinuousModel` || * :func:`.DiscreteModel` || * :func:`.CategoricalModel` || * :func:`.save_model` || * :func:`.load_model` ||  || ---------- ||  || \""\""\""",Model Code Modifiability,Model Code Comprehension,Poorly-named temporary matrix variables are not present but comment does not specify anything related to functionality or model code legibility,MCC
+"\""\""\""Module dedicated to extraction of Model Based Metafeatures. ||  || Todo: ||     * Implement metafeatures. ||     * Improve documentation. || \""\""\""",Data Processing Configuration,Model Code Comprehension,"The comment mentions improving documentation, which is related to model code legibility concerns.",MCC
+"\""\""\""Process downloaded or local corpora from one format into another. || Some formatting can happen here; or invoke language-specific formatters in || other files. ||  || #TODO: Add TLG & PHI text cleaners from KJ's IPython notebooks || #TODO: Add non-ascii stripper || #TODO: Add generic HTML stripper || \""\""\""",Data Processing Configuration,Glue Code,Comment mentions invoking language-specific formatters in other files.,GC
+"\""\""\""The Imperial Aramaic alphabet; plus simple script to transform || a Hebrew transcription of an Imperial Aramaic text to its own Unicode block. ||  || TODO: Add Hebrew-to-Aramaic converter || \""\""\""",Data Processing Configuration,Machine Learning Knowledge,Lack of education in unique ML challenges causes unaware solutions.,MLKnow
+\/\/TODO in future add arguments compatibility check,Hyper-parameter Configuration,Code Dependency,External dependency (library/subsystem) is blocked due to needed change.,MLDepend
+apparently package_deps are broken in 3.4,Code Dependency,Code Dependency,Comment explicitly mentions dependency issue.,MLDepend
+BETTER FIX: iterate through; if length = 0; then bump it up to 0.125,Prototype,Model Code Comprehension,comment mentions improving code readability through specific iteration.,MCC
+circular shift the signal (needed for correct phase),Data Processing Configuration,Model Code Comprehension,"The comment is short, specific, and focused on model code legibility.",MCC
+DEPRICATE? I don't think this is needed anymore,Unnecessary Model Code,Unnecessary Model Code,Comment indicates code is potentially unnecessary and should be removed.,UMC
+Double newlines seem to mess with the rendering,Data Processing Configuration,Machine Learning Knowledge,Uneducated solution by unaware developer may have to be revisited.,MLKnow
+early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),Prediction Quality,Model Code Comprehension,Comment addresses model code legibility and understanding,MCC
+else:  # TODO check that the variation wasn't already in there,Prototype,Machine Learning Knowledge,"Short, specific, and grounded in the comment, indicates lack of knowledge.",MLKnow
+env = ScaledFloatFrame(env)  # TODO: use for dqn?,Machine Learning Knowledge,Machine Learning Knowledge,Uneducated solutions by unaware developers may have to be revisited.,MLKnow
+find out why prefix neg_ is needed,Machine Learning Knowledge,Model Code Comprehension,Comment indicates code legibility concern with variable naming.,MCC
+FIXME : adhoc (answer being last word); not ignoring single question,Data Processing Configuration,Machine Learning Knowledge,Comment mentions lack of knowledge or understanding of the code.,MLKnow
+FIXME annoying hack for batching different sized shapes;,Model Code Reusability,Duplicate Model Code,"Comment mentions ""hack for batching different sized shapes"" implying duplicated code.",DMC
+FIXME don't l2_normalize for any metric,Data Processing Configuration,Model Code Comprehension,"Code comment explicitly references model functionality, indicating model code comprehension issues.",MCC
+FIXME homogeneize the meaning of margin parameter,Hyper-parameter Configuration,Abstraction,"The comment refers to homogeneizing the meaning of a parameter, indicating a lack of abstraction.",Abs
+FIXME non-uniform sample weights not yet supported,Weight Configuration,Model Code Comprehension,"Comment describes a specific, non-uniform aspect of model code.",MCC
+FIXME not sure what are those CB1 \/ CB2,Machine Learning Knowledge,Model Code Comprehension,"Short, specific comment about model code legibility concerns.",MCC
+FIXME This will make sense when all controllers are in one file (like task.py),Data Storage Configuration,Abstraction,The code comment indicates a lack of abstraction between different controllers.,Abs
+FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,Glue Code,Duplicate Model Code,Comment refers to duplicated code from another file.,DMC
+FIXME: Allow some diff; e.g. on repr style text in text\/plain,Prototype,Model Code Comprehension,Comment suggests improving model code legibility.,MCC
+FIXME: Handle execution_count (always change to None?),Machine Learning Knowledge,Model Code Comprehension,Comment about specific model code variable legibility concern.,MCC
+FIXME: Hardcoded usually sucks,Data Storage Configuration,Machine Learning Knowledge,Uneducated solutions by unaware developers may have to be revisited.,MLKnow
+FIXME: if we inherit from scipy.io.netcdf.NetCDFFile and omit the self.nc,Machine Learning Knowledge,Code Dependency,Code blocked by external dependency (scipy library).,MLDepend
+FIXME: INDRA's section_type entry is meant to contain,Custom Data Type,Model Code Comprehension,"Comment mentions INDRA's section_type entry, indicating model code comprehension issue.",MCC
+FIXME: Need to check if mod is the equivalent of floorMod in NumPy,Machine Learning Knowledge,Code Dependency,Refers to a needed change blocked by an external dependency.,MLDepend
+FIXME: need to implement sample_weight in Ridge,Weight Configuration,Hyper-parameter Configuration,Short comment specifying need to configure a hyper-parameter.,HP Conf
+FIXME: Only keeping the first label,Data Processing Configuration,Duplicate Model Code,Comment suggests code duplication in model code.,DMC
+FIXME: pixel_classes dict needs to be populated with classes obtained from target,Data Processing Configuration,Machine Learning Knowledge,"Uneducated solution by unaware developer, needs to be revisited.",MLKnow
+"FIXME: Return type \""None\"" of \""fit\"" incompatible with return type \""float\"" in supertype \""Model\""",Plain Old Data Type,Model Code Comprehension,Comment indicates model code comprehension issue with variable types.,MCC
+FIXME: support for many evaluators; maybe event support,Prototype,Code Dependency,Comment mentions support for many evaluators; implies dependency on other code.,MLDepend
+FIXME: The code works with EpisodicReplayBuffer,Custom Data Type,Code Dependency,Comment indicates code is blocked by an external dependency.,MLDepend
+FIXME: this is kind of hackish; but being able to simply set,Model Code Comprehension,Weight Configuration,"This comment suggests that the code is directly configuring model weights, indicating a type of weight configuration.",Weight Conf
+FIXME: this needs to become more generic; we need to find the actual so in the python root,Model Code Reusability,Model Code Comprehension,Comment indicates code needs improvement for legibility.,MCC
+FIXME: this representation of covars is going to lose for caching,Data Storage Configuration,Model Code Comprehension,"<<- short, specific, and grounded in the comment, referring to model code legibility concerns>>",MCC
+FIXME: Use linebased diff of some types of outputs:,Data Processing Configuration,Machine Learning Knowledge,"Comment about machine-learning software challenges, implies uneducated solutions.",MLKnow
+FIXME: What about the next diff entry?,Machine Learning Knowledge,Machine Learning Knowledge,Comment indicates a lack of understanding of ML software.,MLKnow
+FIXME: What if we never find a fail-high?,Machine Learning Knowledge,Machine Learning Knowledge,"The comment indicates the developer is aware of potential issues with the model, showing ML knowledge.",MLKnow
+FIXME_Numba#5157: remove np.asarray and return as list,Data Storage Configuration,Model Code Comprehension,Comment refers to model code and suggests a code change.,MCC
+Force shrinking of the mask if needed (and possible),Data Processing Configuration,Model Code Comprehension,Short comment specifically addresses model code legibility concern.,MCC
+Freeze weights - TODO: NOT IMPLEMENTED!,Weight Configuration,Weight Configuration,Weight configuration mentioned directly in the comment.,Weight Conf
+h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,Hyper-parameter Configuration,Model Code Comprehension,"Comment mentions ""model code"" and ""tf.layers.dense"", indicating a legibility concern.",MCC
+handle BoxedSeries and list\/set of BoxedSeries; TODO: others?,Custom Data Type,Model Code Comprehension,Comment about understanding specific type of series in model code.,MCC
+if this is needed.,Machine Learning Knowledge,Duplicate Model Code,Code duplication frequently occurs in model code.,DMC
+IMPORTANT: keep matrices in suitable order for matrix products; failing to do so gives 8x lower performance :(,Model Code Reusability,Model Code Comprehension,Comment addresses matrix naming and order legibility concerns.,MCC
+In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,Plain Old Data Type,Model Code Comprehension,"Comment explains code legibility concern, specifically naming issue.",MCC
+in_dim=(4; 8; 8; 8); # TODO: Needs fix when giving a randon in_dim,Model Code Reusability,Model Code Comprehension,Comment indicates poor variable naming and unclear code legibility.,MCC
+Initialize model (TODO: really necessary?),Machine Learning Knowledge,Unnecessary Model Code,"Short, specific comment questioning model necessity.",UMC
+It's only needed for a specific purpose in the short term; will go.,Layer Configuration,Unnecessary Model Code,Comment implies code is temporary and should be removed.,UMC
+needed so command completion and help can use it,Data Storage Configuration,Glue Code,Comment suggests glue code for interfacing with other components.,GC
+needed to sklearn comparability,Code Dependency,Custom Data Type,"Comment refers to compatibility with external library, implying data type concern.",CDT
+needed to sklearn comparability,Code Dependency,Custom Data Type,Comment indicates use of sklearn for inter-operability burden.,CDT
+needed?,Unnecessary Model Code,Model Code Comprehension,Comment is about understanding model code.,MCC
+normed_cross_entropy # TODO,Hyper-parameter Configuration,Model Code Comprehension,"Comment is short, specific, and grounded in the comment, referring to a model code concept.",MCC
+NOTE: probably more efficient to sort then stride by nt_regions,Data Processing Configuration,Model Code Comprehension,<<- Comment about model code efficiency and performance>>,MCC
+nv by ns dot ns by m -> nv by m  # TODO: Change to CSC for speed?,Data Processing Configuration,Model Code Comprehension,Comment mentions 'nv by ns dot ns by m -> nv by m' which is a matrix operation.,MCC
+once they are no longer needed in the schedule or by,Data Storage Configuration,Unnecessary Model Code,"Comment mentions ""no longer needed"", indicating unnecessary model code.",UMC
+Pass on diff to external difftool (TODO: store in global metadata at end instead of in separate diff dicts?),Data Storage Configuration,Glue Code,Comment describes glue code written to interface with external difftool.,GC
+probably not needed; transition,Unnecessary Model Code,Unnecessary Model Code,"Short, specific comment indicating model code is unnecessary.",UMC
+"r\""\""\""Run inference on random sequences many times; saving the top results. ||  || This module is designed to run inference on a trained aptamers TF model || to score many sequences and then write out the top scoring sequences to || be used in other analysis. For example; these top predicted sequences || can read in the colab picking sequences in order || to validate the TF model. ||  || This module uses the standard aptamers tensorflow infrastructure to run || the inference. This is the inferer class defined in || learning\/eval_feedforward and described in the Aptamers TensorFlow Doc. ||  || Inference is generally run in batches of sequences; so a MapFlat function || is used to combine the results of interference into a flattened list || of (sequence; score) pairs. (In other words; each map function returns || a list of (sequence; score) pairs and these results are combined into || one list of pairs. Using a standard Map function would result in a || list of lists which is not what we want.) From there; the Top.Of || combiner returns only the top results; sorted by highest score. These || are then written to a text file. ||  || For now; each batch creates its own inferer; causing each map function || to have more overhead. Because of this;batch sizes around the default of || 10000 are performant. Fixing this in the future means converting the || MapFlat to a ParDo and initializing the inferer in start_bundle. || This module runs inference 1 billion times in 50 minutes so it || is sufficient for now ||  || Run locally with: ||  ||   :search_inference -- --flume_exec_mode=UNOPT \\ ||   --target_name='target' \\ ||   --model_dir=xxx \\ ||    --checkpoint_path='model.ckpt-312500' \\ ||    --output_name=xxx\/base30_1B_inference_top2k ||  || \""\""\""",Custom Data Type,Abstraction,Lack of abstraction in ML system causes cascading changes when a component is modified.,Abs
+Random Warp # TODO change masks to have a input mask and a warped target mask,Hyper-parameter Configuration,Model Code Comprehension,"Comment indicates specific, short, and grounded model code improvement.",MCC
+seem out of place. If you were able to do better; feel free to share your,Prediction Quality,Model Code Modifiability,Comment suggests modifiability of code and invites improvement.,MCM
+self.clearChanges() #TODO perhaps?,Data Storage Configuration,Model Code Comprehension,Comment indicates potential model code modification.,MCC
+self.mpc_sum(3; -5) TODO: Future work: how to handle gracefully minus numbers,Machine Learning Knowledge,Model Code Comprehension,Commenting on model code legibility concerns with specific example.,MCC
+should be WeightNorm here TODO.,Layer Configuration,Weight Configuration,Comment indicates specific weight configuration concern.,Weight Conf
+tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,Code Dependency,Code Dependency,The comment suggests an external dependency blocks a needed change.,MLDepend
+this importing of matplotlib is needed to run on the cluster,Code Dependency,Code Dependency,Comment explains dependency issue with external library.,MLDepend
+This is a hack to allows inference when the <go> token,Model Code Modifiability,Unnecessary Model Code,This comment acknowledges a workaround or temporary solution.,UMC
+THIS IS A VERY UGLY FUNCTION because it has hardcoded 0\/4\/5 integers for each of the metric. I need to make an enumerated class for this!,Model Code Comprehension,Model Code Comprehension,Comment mentions poor code quality and lack of abstraction.,MCC
+time to fix. TODO: optimize the crap out of this,Data Processing Configuration,Unnecessary Model Code,"Comment mentions ""time to fix"" and ""optimize"", indicating unnecessary code.",UMC
+TODO - can remove one of these m0 restores if A and B both TLU,Machine Learning Knowledge,Model Code Comprehension,"Comment mentions specific model code restoration, indicating complexity.",MCC
+TODO - does this handle N-dim tensors correctly?,Machine Learning Knowledge,Model Interpretability,Short comment about model functionality and tensor handling.,MLInter
+TODO - in the code it is different - why?,Machine Learning Knowledge,Model Code Comprehension,"The comment refers to a specific code difference, indicating model code comprehension issues.",MCC
+TODO (pradeep): Sort the indices and do intersections in order; so that we can return the,Data Processing Configuration,Model Code Comprehension,Comment focuses on improving model code legibility and understanding.,MCC
+TODO (ytz): really; we want at least one active and inactive in both scenarios.,Data Processing Configuration,Machine Learning Knowledge,The comment mentions a general knowledge or understanding issue.,MLKnow
+TODO : add these in the options. (None; None) => no limit,Data Processing Configuration,Machine Learning Knowledge,Uneducated solution by unaware developer may need to be revisited.,MLKnow
+TODO : Any other options,Machine Learning Knowledge,Machine Learning Knowledge,Comment indicates a lack of knowledge on how to implement a solution.,MLKnow
+TODO : market value,Data Processing Configuration,Unnecessary Model Code,Comment indicates unnecessary model code with a TODO task.,UMC
+TODO : removal,Unnecessary Model Code,Unnecessary Model Code,"Short, specific comment indicating model code removal is needed.",UMC
+TODO : this is quite bad in term of execution speed. We need to fix this.,Data Processing Configuration,Unnecessary Model Code,Comment indicates model code bottlenecks execution and should be improved.,UMC
+"TODO accept_sparse=\""csc\""",Data Processing Configuration,Code Dependency,"External dependency issue, accepting sparse data format ""csc"".",MLDepend
+TODO add general Distribution,Data Processing Configuration,Model Code Modifiability,Comment suggests adding abstraction for code modifiability,MCM
+TODO add index to xls file,Data Processing Configuration,Data Processing Configuration,Refers to data configuration and storage.,Data Conf
+TODO add introductory explanation,Data Processing Configuration,Machine Learning Knowledge,Comment indicates lack of knowledge about the code's functionality.,MLKnow
+TODO add support for other metrics (ex. euclidean; angular),Prototype,Model Code Comprehension,Comment mentions code modification and adds to existing functionality.,MCC
+TODO add test for keypoints once their handling was improved in Convolve,Code Dependency,Machine Learning Knowledge,Uneducated solution by unaware developer needs to be revisited.,MLKnow
+TODO add vertical gradient alpha to have fog only at skylevel\/groundlevel,Data Processing Configuration,Model Code Comprehension,"Comment is short, specific, and refers to model code legibility concern.",MCC
+TODO anticipate multi-agents for AEB space,Data Storage Configuration,Boundary Erosion,"The comment is related to boundary erosion, anticipating changes in a system.",BE
+TODO change as soon as svhn has a val set :),Data Storage Configuration,Prototype,The comment mentions a specific dataset (svhn) and a temporary deployment.,Proto
+TODO change the way attns is returned dict => list or tuple (onnx),Data Processing Configuration,Model Code Comprehension,Code comment focuses on improving model code legibility.,MCC
+TODO change to np.partition for PERF,Data Storage Configuration,Model Code Comprehension,Comment refers to model code modification for performance improvement.,MCC
+TODO check for each tentacle specified if update is available (with requirements),Code Dependency,Code Dependency,Check for update availability is dependent on external requirements.,MLDepend
+TODO check results after standardizing num ft once a ml algorithm is ready to test,Code Dependency,Machine Learning Knowledge,Uneducated solution by unaware developer may need to be revisited.,MLKnow
+TODO checkpoints; incremental save,Prototype,Data Processing Configuration,Refers to configuring how data is processed.,Data Conf
+TODO combine these values to get a final prediction!,Data Processing Configuration,Model Code Comprehension,The comment is about model code and its interpretation.,MCC
+TODO confirm that multiple eigenvalues of 1 means the rotation,Machine Learning Knowledge,Model Code Comprehension,Comment refers to specific model code concerns with eigenvalues.,MCC
+ToDo consider 3D case --> do that by using tag->size,Data Processing Configuration,Model Code Comprehension,"Comment is short, specific, and refers to model code legibility.",MCC
+TODO cpickle vs json,Data Storage Configuration,Machine Learning Knowledge,Uneducated solution choice by unaware developer may have to be revisited.,MLKnow
+TODO Dehaze with 1\/t,Data Processing Configuration,Unnecessary Model Code,TODO comment indicates unnecessary code or unimplemented feature.,UMC
+TODO design an API interface for advanced access as an importable package,Abstraction,Glue Code,"Commenting on API interface, indicating glue code.",GC
+TODO double num_filters,Hyper-parameter Configuration,Layer Configuration,Commenting on specific model layer configuration.,Layer Conf
+TODO Figure out how to distinguish oxidation states,Machine Learning Knowledge,Model Code Comprehension,Code Comment mentions distinguishing oxidation states in model code.,MCC
+TODO figure out what exactly size does,Machine Learning Knowledge,Model Code Comprehension,Comment is about understanding specific model code functionality.,MCC
+TODO ForceSign,Hyper-parameter Configuration,Machine Learning Knowledge,Indicates uneducated solution by unaware developer.,MLKnow
+TODO generalise to columns with series of unequal length,Model Code Reusability,Model Code Reusability,Comment hints at improving code reusability for varying situations.,MCR
+TODO generalise to series-to-series functions and function kwargs,Data Processing Configuration,Model Code Reusability,Comment suggests code reusability by mentioning series-to-series functions.,MCR
+TODO handle 1d series; not only 2d dataframes,Data Processing Configuration,Model Code Comprehension,Comment mentions specific data type (2d dataframes) and implies extra legibility concerns.,MCC
+ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,Abstraction,Model Code Comprehension,Comment mentions handling complex model functionality.,MCC
+TODO if without momentum; weights should not change too,Weight Configuration,Weight Configuration,Comment specifies weights change without momentum.,Weight Conf
+TODO Implement,Hyper-parameter Configuration,Unnecessary Model Code,"Short, specific comment indicating model code is unnecessary.",UMC
+TODO implement generic method,Abstraction,Abstraction,"Comment implies lack of abstraction, a common issue in ML systems.",Abs
+TODO implement multi-gpu training and compare performance,Prototype,Machine Learning Knowledge,"Comment is general, not specific to code functionality or implementation details.",MLKnow
+TODO improve the regex here,Data Processing Configuration,Model Code Comprehension,<<Comment indicates improvement of model code readability>>,MCC
+"TODO last token include: \""&& $last_token[...]\""",Data Processing Configuration,Model Code Comprehension,"Model code carries extra legibility concerns, poorly-named variable.",MCC
+TODO make paf_scored not part of self?,Abstraction,Machine Learning Knowledge,"Short, specific, and grounded in the comment, indicating a knowledge gap.",MLKnow
+TODO make threshold a variable,Custom Data Type,Hyper-parameter Configuration,Comment is focused on hyper-parameter configuration.,HP Conf
+TODO max in one tensor,Layer Configuration,Model Code Comprehension,Comment implies model code comprehension issue due to unclear naming convention.,MCC
+TODO move these registrations to backend-specific files,Prototype,Glue Code,"Comment mentions moving code to backend-specific files, implying glue code.",GC
+TODO normalice to make sum up to 1?,Data Processing Configuration,Model Code Comprehension,Comment refers to improving model code legibility and clarity.,MCC
+todo not support dense,Unnecessary Model Code,Unnecessary Model Code,The comment is a to-do note indicating unnecessary model code.,UMC
+TODO Option for string lenght,Data Storage Configuration,Model Code Comprehension,Comment implies need for code legibility and comprehension.,MCC
+TODO Promote this to a Funsor subclass.,Model Code Reusability,Model Code Comprehension,Comment refers to specific model code modification.,MCC
+TODO refactor second part of if statement when implementing live model prediction,Model Code Comprehension,Model Code Comprehension,Comment indicates need for model code legibility and comprehension,MCC
+TODO remove,Unnecessary Model Code,Unnecessary Model Code,Short comment indicating code is unnecessary and should be removed.,UMC
+TODO remove later.,Unnecessary Model Code,Unnecessary Model Code,Comment indicates removal of unnecessary model code is pending.,UMC
+TODO remove this,Unnecessary Model Code,Unnecessary Model Code,"Short, specific comment about removing unnecessary model code.",UMC
+TODO replace this code with the following commented out code after viz is fixed,Code Dependency,Machine Learning Knowledge,Comment indicates uneducated solution by unaware developer.,MLKnow
+TODO replace this speedup implementation with nni.compression.torch.ModelSpeedup,Layer Configuration,Hyper-parameter Configuration,TODO comment mentions replacing speedup implementation with hyper-parameter configuration.,HP Conf
+TODO replace whole pandas data container as input argument with separated metadata container,Data Storage Configuration,Boundary Erosion,Lack of boundaries between components is indicated by separate container suggestion.,BE
+TODO replace with Streamlines,Custom Data Type,Unnecessary Model Code,Short comment indicating unnecessary code should be removed.,UMC
+TODO save all the results to a json inside the experiment's folder,Data Storage Configuration,Data Processing Configuration,Comment focuses on data configuration and storage.,Data Conf
+TODO Search the web or use other algorithms,Machine Learning Knowledge,Machine Learning Knowledge,"Uneducated solution, unaware developer, revisit later.",MLKnow
+TODO Send the context back into some list maintained by,Data Storage Configuration,Code Dependency,"The comment mentions sending data back into a list, implying an external dependency.",MLDepend
+TODO Set bioassembly info,Data Processing Configuration,Model Code Comprehension,"Comment is short, specific, and grounded in model code legibility concerns.",MCC
+TODO Should this stay generic? (point),Machine Learning Knowledge,Abstraction,"The comment is questioning the generic nature of the code, indicating a lack of abstraction.",Abs
+TODO stim channel exclusion,Data Processing Configuration,Machine Learning Knowledge,TODO comment indicates a lack of knowledge about model functionality.,MLKnow
+TODO support recursive parfor; multi-D; mutiple body blocks,Prototype,Code Dependency,Comment mentions needed change blocked by external dependency (library / subsystem).,MLDepend
+todo sweep,Model Code Modifiability,Unnecessary Model Code,"The comment explicitly states ""todo sweep"", indicating unnecessary model code.",UMC
+TODO switch similar statements to work inplace (w\/o making a copy),Model Code Reusability,Model Code Comprehension,Comment suggests improving code legibility and efficiency.,MCC
+TODO These ratios can't be hardcoded,Model Code Reusability,Machine Learning Knowledge,Comment indicates unawareness of solution by developer.,MLKnow
+TODO this code is currently necessary for the async_fit method in websocket_client.py,Hyper-parameter Configuration,Code Dependency,The comment indicates a needed change is blocked by an external dependency.,MLDepend
+TODO this is too general; register all ops,Prototype,Model Code Comprehension,Comment mentions code legibility and specific functionality.,MCC
+TODO this is wrong for other entitiey types nor appearing in the edge,Custom Data Type,Model Code Comprehension,Code comment indicates unclear model code functionality.,MCC
+TODO this vector is very sparse; we can make it more memory efficient,Data Storage Configuration,Model Code Comprehension,Short comment about model code legibility concern.,MCC
+TODO to be modified,Model Code Modifiability,Machine Learning Knowledge,Comment indicates need for further education or knowledge.,MLKnow
+TODO Update and move now this isn't used here,Unnecessary Model Code,Unnecessary Model Code,Short comment indicates unused code should be removed.,UMC
+TODO update these - the sklearn transformation class should be able,Custom Data Type,Code Dependency,TODO update these - due to external dependency (library / subsystem),MLDepend
+TODO validate and normalize to \/path\/to\/variable,Data Processing Configuration,Code Dependency,Comment mentions dependency on external path variable.,MLDepend
+TODO validate configuration and set defaults,Data Storage Configuration,Code Dependency,Code change blocked by external dependency (library / subsystem).,MLDepend
+TODO validation_split is not used,Unnecessary Model Code,Model Code Comprehension,<<-Comment explicitly mentions code legibility concern in model code.,MCC
+TODO WIP temp_coherence_loss # assumes all sequences in the dataset share at least one same 3D pos of Baxter arm,Hyper-parameter Configuration,Model Code Comprehension,Model code carries extra legibility concerns,MCC
+TODO wouldn't it be better with a set rather than a list?,Data Storage Configuration,Model Code Comprehension,Comment mentions code legibility and model code complexity.,MCC
+TODO write a warning,Model Interpretability,Machine Learning Knowledge,Comment indicates unawareness of machine learning software.,MLKnow
+"TODO(ahundt) difference between \""redundant\"" and regular proto parsing; figure out how to deal with grasp_success rename properly",Machine Learning Knowledge,Machine Learning Knowledge,Uneducated solutions by unaware developers may have to be revisited.,MLKnow
+TODO(ahundt) make more efficient,Data Processing Configuration,Unnecessary Model Code,Indicates unnecessary code that should be optimized or removed.,UMC
+TODO(ahundt) maybe the rotation component of this needs to be inverted due to sva implementation?,Machine Learning Knowledge,Abstraction,The comment suggests a need for abstraction or clarity in the code's behavior due to a specific implementation detail.,Abs
+TODO(b\/119775953): fix the circular dependencies.,Code Dependency,Code Dependency,Comment specifically mentions circular dependencies.,MLDepend
+TODO(beam2d): Fix after supporting correct dtype promotion.,Custom Data Type,Plain Old Data Type,"Short, specific comment about data type promotion.",PODT
+TODO(crcrpar): Improve resource computation\/allocation algorithm.,Data Storage Configuration,Code Dependency,The comment indicates a needed change is blocked by an external dependency.,MLDepend
+TODO(dbieber): Move this logic into the dataset definition.,Boundary Erosion,Glue Code,"Comment mentions moving logic into dataset definition, indicating glue code.",GC
+TODO(fstahlberg): Move to config,Model Code Modifiability,Data Processing Configuration,Suggests moving data configuration to a different place.,Data Conf
+TODO(rbharath): The script expects that all columns in xlsx\/csv files,Prototype,Code Dependency,Comment indicates dependency on external file format.,MLDepend
+TODO(rliaw): This behavior is probably undesirable; but right now,Prototype,Machine Learning Knowledge,Comment by unaware developer indicates uneducated solution.,MLKnow
+TODO(sonots): Implement in C++,Multiple Languages,Multiple Languages,TODO comment mentions specific programming language.,ML
+TODO(sven): Add once ModelV1 is deprecated and we no longer cause circular,Code Dependency,Machine Learning Knowledge,Uneducated solution by unaware developer may have to be revisited.,MLKnow
+TODO(tokunaga): the number of processes should be configurable,Model Code Modifiability,Data Processing Configuration,Configurable number of processes in TODO comment.,Data Conf
+TODO(vsatish): Figure out why this isn't printed.,Machine Learning Knowledge,Machine Learning Knowledge,Comment implies developer unawareness of model functionality.,MLKnow
+TODO. get rid of from_model_pt,Unnecessary Model Code,Unnecessary Model Code,Short comment indicates model code removal.,UMC
+TODO: (sven) rename to simply stats_fn to match eager and torch.,Abstraction,Model Code Comprehension,Comment is about improving code legibility by renaming a function.,MCC
+TODO: @trask @theo could you take a look at this if you have better ideas on how to get these parameters,Machine Learning Knowledge,Machine Learning Knowledge,Comment indicates lack of understanding in ML solution by developers.,MLKnow
+todo: accurate Value,Machine Learning Reliability,Model Code Comprehension,Comment indicates need for model code comprehension and improvement.,MCC
+TODO: add a complete frame_size; to cover the whole audio signal?,Machine Learning Knowledge,Model Code Comprehension,Comment mentions frame_size which is a temporary variable.,MCC
+TODO: add backward images also.,Data Processing Configuration,Unnecessary Model Code,"Comment indicates code that is incomplete, or unnecessary.",UMC
+TODO: add datetype conversion,Data Storage Configuration,Plain Old Data Type,"Comment mentions ""datetype"" conversion, implying data type conversion issue.",PODT
+TODO: add inheritance from Graph once implemented,Code Dependency,Abstraction,Comment suggests lack of abstraction due to inheritance issue.,Abs
+TODO: add more tags based on the scikit-learn,Prototype,Duplicate Feature Extraction Code,"Comment refers to adding more tags based on scikit-learn, implying duplicate feature extraction code.",DFEC
+TODO: Add this to configuration framework,Data Processing Configuration,Data Processing Configuration,Commenting on data configuration framework addition.,Data Conf
+TODO: arbitrary threshold is problematic,Model Code Reusability,Model Code Comprehension,Comment suggests code legibility concern in model functionality.,MCC
+TODO: assertWarns exist only for Python 3.2+; test in all versions,Code Dependency,Code Dependency,The comment refers to a dependency between Python versions and the functionality of the code.,MLDepend
+TODO: At the moment LHUC is RNN specific. We should support other models as well.,Model Code Reusability,Model Code Comprehension,"Comment refers to model-specific code, indicating lack of code comprehensibility.",MCC
+TODO: auto detect dtype,Data Processing Configuration,Plain Old Data Type,Code comment indicates need for specifying data type.,PODT
+TODO: Basically identical to `test_intra_cv_target_transform` except for repeated KFold,Duplicate Model Code,Duplicate Model Code,Identical code duplication mentioned in comment.,DMC
+TODO: black box attacks,Machine Learning Reliability,Model Interpretability,"Mention of ""black box attacks"" implies model interpretability concerns.",MLInter
+"TODO: calculate this centroid\""",Data Processing Configuration,Unnecessary Model Code,Code comment indicates model code that is unreachable/deprecated.,UMC
+TODO: calibration dataset,Hyper-parameter Configuration,Data Processing Configuration,calibration dataset indicates data processing configuration change.,Data Conf
+todo: change the feature_na_method!,Data Processing Configuration,Duplicate Feature Extraction Code,"Short, specific, and grounded in the comment, indicating duplication of feature-extraction code.",DFEC
+TODO: Change the optimizer to the appropriate Optimizer class,Hyper-parameter Configuration,Hyper-parameter Configuration,"Short, specific comment about changing a hyper-parameter.",HP Conf
+TODO: change this logic when there is a git pretty-format,Code Dependency,Code Dependency,Comment mentions a needed change blocked by external dependency.,MLDepend
+TODO: check `other` is Series after a circular import of SeriesType fixed,Code Dependency,Code Dependency,comment mentions circular import of an external dependency (library / subsystem).,MLDepend
+TODO: Check behavior if this is a single mrc file (no '@'),Machine Learning Knowledge,Machine Learning Knowledge,Comment indicates uneducated solution by unaware developer.,MLKnow
+TODO: check CAPTALIZED WORDS as their lower case counterparts before saving,Data Processing Configuration,Model Code Comprehension,Comment focuses on model code legibility and variable naming.,MCC
+TODO: check for series\/dict\/list input,Plain Old Data Type,Model Code Comprehension,Comment focuses on understanding model code functionality and input types.,MCC
+TODO: Check if self._mean_squared_error_w_precision can be used here,Machine Learning Knowledge,Model Code Comprehension,Comment is about model code comprehension and interpretation.,MCC
+TODO: check if stride of 2 causes alignment issues if the featuremap,Machine Learning Knowledge,Model Code Comprehension,"The comment is about model code, specifically a model's feature map.",MCC
+TODO: check whether the model is QuartzNet,Custom Data Type,Model Code Comprehension,"Short, specific comment about model code comprehension.",MCC
+TODO: check why there's an IF,Machine Learning Knowledge,Model Code Comprehension,Comment indicates need for model code comprehension,MCC
+TODO: clip polygons,Data Processing Configuration,Model Code Comprehension,"Short, specific, and grounded in model code legibility concerns.",MCC
+TODO: compare the performance!,Prediction Quality,Unnecessary Model Code,Comment indicates code is unnecessary and should be removed.,UMC
+TODO: compute signed distance between walls,Data Processing Configuration,Model Code Comprehension,Comment mentions specific model code functionality.,MCC
+ToDo: consider go\/no-go with following modification,Data Processing Configuration,Prototype,"Short, specific comment indicating prototype deployment consideration.",Proto
+TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,Multiple Languages,Code Dependency,The comment is about a needed change being blocked by an external dependency.,MLDepend
+TODO: Could be implemented as optimization option in LK???,Machine Learning Knowledge,Machine Learning Knowledge,Comment shows unawareness of potential optimization in model.,MLKnow
+TODO: Could check if QSettings.Format stores type info.,Machine Learning Knowledge,Code Dependency,"Comment about checking an external dependency, QSettings.Format.",MLDepend
+TODO: Currently this turns any upregulation associated with,Custom Data Type,Model Code Comprehension,Comment references specific model code maintenance issue.,MCC
+TODO: Currently we don't look at source text; but we may want to,Data Processing Configuration,Machine Learning Knowledge,Comment indicates lack of knowledge about current functionality.,MLKnow
+TODO: dataframe pass needed?,Machine Learning Knowledge,Code Dependency,Comment indicates a needed change is blocked by an external dependency.,MLDepend
+TODO: delete this method when no longer needed,Unnecessary Model Code,Unnecessary Model Code,Comment explicitly states a method is no longer needed.,UMC
+TODO: deprecate?,Unnecessary Model Code,Unnecessary Model Code,"Short, specific, and grounded in the comment; implies model code is unnecessary.",UMC
+TODO: determine if requiring same sense is too string; i.e.,Data Processing Configuration,Model Code Comprehension,Comment is about model code legibility and variable naming.,MCC
+TODO: Do below `y_lie` lines directly calculate min\/max\/mean on `opt.yi` when it could also contain times?,Machine Learning Knowledge,Model Code Comprehension,Comment addresses model code legibility concern.,MCC
+TODO: do more to protect against race conditions. File lock?,Data Storage Configuration,Code Dependency,Comment mentions a needed change is blocked by an external dependency (library / subsystem).,MLDepend
+TODO: do not replace unless explicitly noticed + add 'only hangul' option,Model Code Modifiability,Machine Learning Knowledge,Comment suggests uneducated solution may have to be revisited later.,MLKnow
+TODO: do the transpose as a DataLoaderTransformer instead of in host,Data Storage Configuration,Boundary Erosion,Comment suggests reorganization of boundaries between subsystems.,BE
+TODO: do this better,Hyper-parameter Configuration,Machine Learning Knowledge,Comment implies uneducated solution and need for improvement.,MLKnow
+TODO: do we need this?!,Unnecessary Model Code,Unnecessary Model Code,Indicates unnecessary code should be removed.,UMC
+TODO: does it make graph?,Machine Learning Knowledge,Model Code Comprehension,Comment focuses on model code readability and understanding.,MCC
+TODO: don't make these a constant initializer because we,Data Storage Configuration,Hyper-parameter Configuration,"Comment suggests configuration, specifically hyper-parameter adjustment.",HP Conf
+TODO: don't need this w\/ py.test,Unnecessary Model Code,Unnecessary Model Code,Code comment indicates model code is unnecessary.,UMC
+TODO: double check if this is still true in 1.9.0,Machine Learning Knowledge,Machine Learning Knowledge,Comment indicates a lack of knowledge or understanding of the system.,MLKnow
+TODO: dtype,Custom Data Type,Plain Old Data Type,"Short, specific, and grounded in the comment about data type.",PODT
+TODO: ensure dummy_na =False is what you want,Machine Learning Knowledge,Model Code Comprehension,Comment about model code requires understanding of model functionality.,MCC
+TODO: ensure x data shape matches model._ph['x'] shape (only if fit),Model Code Reusability,Model Code Comprehension,comment is about understanding and checking model code.,MCC
+TODO: Extend to multifidelity problems by adding training_points = {'approx': {}},Prototype,Machine Learning Knowledge,"Comment mentions extending existing functionality, indicating lack of knowledge.",MLKnow
+TODO: extend to other key types,Custom Data Type,Model Code Comprehension,Comment indicates need to improve model code legibility and comprehension.,MCC
+TODO: extract an eval func more robustly,Machine Learning Reliability,Duplicate Model Code,Extracting duplicate model code functionality.,DMC
+TODO: figure out how why the result of einsum requires reshape,Machine Learning Knowledge,Model Code Comprehension,Comment is about model code comprehension and specific to einsum operation.,MCC
+TODO: figure out why some machines prefer one of these options,Machine Learning Knowledge,Machine Learning Knowledge,"Comment indicates uneducated solution, unaware developer, and revisit needed.",MLKnow
+TODO: figure out why this happens.,Machine Learning Knowledge,Machine Learning Knowledge,Comment indicates uneducated solution by unaware developer.,MLKnow
+TODO: Formats should not be specified; just saving all the materialized formats,Data Storage Configuration,Data Processing Configuration,Comment mentions'materialized formats' indicating data processing configuration.,Data Conf
+TODO: Get rid of this,Unnecessary Model Code,Unnecessary Model Code,Short comment indicating model code should be removed.,UMC
+TODO: handle boolean scalars properly,Data Processing Configuration,Machine Learning Knowledge,Comment indicates lack of knowledge about handling boolean scalars.,MLKnow
+TODO: handle channel modalities later,Model Code Reusability,Boundary Erosion,Comment indicates handling of subsystem boundaries.,BE
+TODO: handle other participant types,Model Code Reusability,Machine Learning Knowledge,Comment implies lack of knowledge on how to handle participant types.,MLKnow
+TODO: handle record value which are lists; at least error,Plain Old Data Type,Model Code Comprehension,"Comment addresses model code comprehension issue, specifically variable type.",MCC
+TODO: handle string,Plain Old Data Type,Model Code Comprehension,"Short comment indicates specific, grounded need for model code comprehension.",MCC
+TODO: I believe this is not really much used,Unnecessary Model Code,Unnecessary Model Code,"Short, specific, and grounded in the comment; indicates unnecessary model code.",UMC
+TODO: I cannot get good results with this yet,Prediction Quality,Unnecessary Model Code,Short comment indicates unnecessary model code that needs improvement.,UMC
+"TODO: identify the \""best\"" language detector available for OSS python",Machine Learning Knowledge,Multiple Languages,Comment indicates language-dependent choice for ML system.,ML
+TODO: ignore non-numerics,Data Processing Configuration,Model Code Comprehension,Comment focuses on specific model code concern and legibility.,MCC
+TODO: I'm not sure about this part,Machine Learning Knowledge,Machine Learning Knowledge,Uneducated solution by unaware developer may have to be revisited.,MLKnow
+TODO: Implement Conv Transpose,Model Code Modifiability,Model Code Comprehension,"Comment indicates a need for code implementation, suggesting model code comprehension issues.",MCC
+TODO: Implement mass downloading with a cool-off in case of 429 response,Prototype,Code Dependency,Code change blocked by external dependency (429 response).,MLDepend
+TODO: implement required params,Hyper-parameter Configuration,Machine Learning Knowledge,"Short, specific, and grounded in the comment, indicating lack of education.",MLKnow
+TODO: implement residual connection,Layer Configuration,Model Code Comprehension,"Comment suggests understanding and improving model code, indicating comprehension issues.",MCC
+TODO: In terms of functional API; there should not be any initialization of an nn.Module.,Unnecessary Model Code,Model Code Comprehension,Comment focuses on model code legibility and initialization.,MCC
+TODO: index and name,Data Processing Configuration,Abstraction,Lack of clear naming conventions or index specification.,Abs
+TODO: is incref required?,Machine Learning Knowledge,Machine Learning Knowledge,"Short, specific, and grounded in the comment, indicating a lack of knowledge.",MLKnow
+TODO: is that best way to handle,Machine Learning Knowledge,Model Code Comprehension,Comment on code model interpretability and legibility,MCC
+TODO: It could be nice if this method was run on entire data; not just,Data Processing Configuration,Machine Learning Knowledge,Uneducated solution by unaware developer may have to be revisited.,MLKnow
+TODO: it's worth to switch back to the correct preprocess_input when InceptionResNetV2 model is re-trained,Code Dependency,Model Code Comprehension,"Short comment about model code, indicating a specific concern with model functionality.",MCC
+TODO: list,Plain Old Data Type,Machine Learning Knowledge,Uneducated solutions by unaware developers may have to be revisited.,MLKnow
+TODO: Log message,Model Interpretability,Machine Learning Knowledge,Comment implies uneducated solution by unaware developer.,MLKnow
+TODO: make efficient,Prototype,Unnecessary Model Code,Code comment explicitly states a need to remove or modify existing model code.,UMC
+TODO: make efficient,Prototype,Unnecessary Model Code,"Short, specific comment indicating unnecessary model code.",UMC
+TODO: make fast_rcnn irrelevant,Unnecessary Model Code,Unnecessary Model Code,The comment indicates code to be removed or made irrelevant.,UMC
+TODO: make it save a zipfile instead of a tarfile.,Data Storage Configuration,Data Processing Configuration,Comment refers to configuring data processing and storage.,Data Conf
+TODO: make the dtype configurable; see __init__(),Model Code Modifiability,Data Processing Configuration,Configuring data type is mentioned in the comment.,Data Conf
+TODO: maxpool?,Data Processing Configuration,Model Code Comprehension,"The comment suggests a specific, minor modification to model code.",MCC
+TODO: maybe introduce a DefaultEnvironment?,Machine Learning Knowledge,Abstraction,Comment suggests abstraction by introducing a default environment.,Abs
+TODO: min,Data Processing Configuration,Unnecessary Model Code,"Short, specific, and grounded in the comment, indicating unnecessary model code.",UMC
+TODO: Model Precision,Data Processing Configuration,Model Code Comprehension,Model code legibility concerns are mentioned in the comment.,MCC
+TODO: modify this later,Data Processing Configuration,Model Code Comprehension,Code comment suggests model code needs modification.,MCC
+TODO: more specific types?,Custom Data Type,Machine Learning Knowledge,Indicates lack of knowledge or education about model types.,MLKnow
+TODO: need a better way,Plain Old Data Type,Machine Learning Knowledge,The comment implies uneducated solution by unaware developer.,MLKnow
+TODO: need to discuss whether this is 'allowed' or smart,Machine Learning Knowledge,Machine Learning Knowledge,The comment indicates a lack of knowledge about the model's behavior.,MLKnow
+TODO: Need to invert the CameraToWorld matrix => WorldToCamera matrix,Data Processing Configuration,Model Code Comprehension,Comment indicates need to invert model matrix.,MCC
+TODO: needs to be re-written to match new stitch datasets signature.,Glue Code,Model Code Comprehension,The comment suggests rewriting code for better understanding.,MCC
+TODO: non-numeric columns should be ignored automatically,Data Processing Configuration,Model Code Comprehension,Comment indicates need for improved model code legibility.,MCC
+TODO: normalize true states,Data Processing Configuration,Model Code Comprehension,"The comment is short, specific, and grounded in the comment, suggesting model code comprehension issues.",MCC
+TODO: num pad examples is not set here if fillup strategy would be padding,Data Processing Configuration,Code Dependency,Comment indicates a needed change is blocked by an external dependency.,MLDepend
+TODO: optimize scheduling to support more cases.,Data Storage Configuration,Machine Learning Knowledge,Comment indicates lack of knowledge about scheduling optimization.,MLKnow
+TODO: other types?,Custom Data Type,Machine Learning Knowledge,Comment indicates lack of knowledge or understanding of machine learning.,MLKnow
+TODO: parallelize,Data Processing Configuration,Model Code Comprehension,Comment suggests improving model code legibility and maintainability.,MCC
+TODO: pass in just the id instead of the entire obj_msg.,Data Processing Configuration,Code Dependency,"Comment about passing in a dependency, a needed change blocked.",MLDepend
+todo: perhaps it's better to use pickle in the future?,Data Storage Configuration,Machine Learning Knowledge,Comment indicates unfamiliarity with ML specifics.,MLKnow
+TODO: Place tensors into GPU memory. This will require rewriting,Data Storage Configuration,Layer Configuration,"Comment references tensors, which are related to model layers.",Layer Conf
+TODO: pretty sure this isn't necessary,Unnecessary Model Code,Unnecessary Model Code,The comment explicitly states that the code is not necessary.,UMC
+TODO: Probably should just implement __deepcopy__,Model Code Reusability,Model Code Comprehension,Lack of deepcopy method implementation affects model code legibility.,MCC
+TODO: programmatically check wether these are indeed features (predict; correct),Data Processing Configuration,Abstraction,Comment indicates lack of abstraction in ML functionality.,Abs
+TODO: Properly break circular dependencies,Code Dependency,Code Dependency,Comment highlights need for change due to dependency issue.,MLDepend
+TODO: put in infrastructure to fold over trace as it's built.,Data Processing Configuration,Code Dependency,Code change blocked by an external dependency (infrastructure),MLDepend
+TODO: put in the option to do substitution here (most likely scenario;,Prototype,Hyper-parameter Configuration,Comment mentions'substitution' in a model's hyper-parameters configuration.,HP Conf
+TODO: Reduce dim. of mean.,Data Processing Configuration,Model Code Comprehension,"Comment is about reducing dimensionality of a mean, indicating model code complexity.",MCC
+TODO: refactor as independent function,Abstraction,Abstraction,"The comment is suggesting a lack of abstraction in the code, and the need to refactor into an independent function.",Abs
+TODO: Refactor\/simplify Configuration class so it can be used in cases,Model Code Reusability,Hyper-parameter Configuration,Commenting on configuration class for model hyper-parameters.,HP Conf
+TODO: re-implement support for constraint satisfaction method as needed,Data Processing Configuration,Machine Learning Knowledge,Short comment indicating the need for knowledge or solution.,MLKnow
+TODO: remove dummy \/ debug tasks,Unnecessary Model Code,Unnecessary Model Code,Comment explicitly states intention to remove unnecessary code.,UMC
+TODO: remove hard-coded sizes and make relative to parent?,Model Code Modifiability,Model Code Comprehension,Comment focuses on code legibility and understanding.,MCC
+TODO: Remove hardcoding of downscaling calculations.,Model Code Reusability,Unnecessary Model Code,Comment suggests removal of unnecessary hardcoded calculations.,UMC
+TODO: Remove in 0.26 when the _pairwise attribute is removed,Unnecessary Model Code,Unnecessary Model Code,Indicates unnecessary code that should be removed.,UMC
+TODO: remove this method in v1.3.0.,Unnecessary Model Code,Unnecessary Model Code,Removal request due to future version.,UMC
+TODO: remove when dict results are deprecated,Unnecessary Model Code,Unnecessary Model Code,Comment mentions removing unnecessary code when it is deprecated.,UMC
+"TODO: rename kwarg \""forward\"" to \""forward_additive\""",Model Code Comprehension,Model Code Comprehension,Short comment about renaming a poorly-named variable.,MCC
+TODO: Repeat_elements and tf.split doesn't support dynamic splits.,Custom Data Type,Model Code Comprehension,Comment indicates specific model code comprehension issue.,MCC
+TODO: replace init=None by init='auto' in v0.6.0 and remove the warning,Unnecessary Model Code,Machine Learning Knowledge,Comment indicates unaware developer created solution that needs to be revisited.,MLKnow
+TODO: Replace Lambda with custom Keras layer for loss.,Layer Configuration,Model Code Comprehension,Comment focuses on code legibility and model functionality.,MCC
+TODO: replace with (stable) Draft6Validator; if available,Custom Data Type,Code Dependency,Comment indicates needed change is blocked by external dependency.,MLDepend
+ToDo: replace with 3d input; when grid_sample will start to support it,Data Processing Configuration,Model Code Comprehension,Comment indicates a need for model code modification.,MCC
+TODO: replace with unbatch or readout,Custom Data Type,Model Code Comprehension,Comment indicates need to improve model code legibility.,MCC
+TODO: reward computation,Data Processing Configuration,Unnecessary Model Code,Short comment indicating unnecessary code.,UMC
+TODO: rotated_grids might as well give us correctly shaped array in the first place,Data Processing Configuration,Duplicate Model Code,Comment suggests duplicate functionality in model code.,DMC
+TODO: run-on and split module,Data Processing Configuration,Duplicate Model Code,Code duplication frequently occurs in model code.,DMC
+TODO: See https:\/\/www.pyimagesearch.com\/2017\/05\/22\/face-alignment-with-opencv-and-python\/,Data Processing Configuration,Machine Learning Knowledge,"Comment refers to external resource, indicating lack of ML knowledge.",MLKnow
+TODO: Set interval for the original date ?,Prototype,Machine Learning Knowledge,"Short, specific comment about machine learning knowledge gap.",MLKnow
+TODO: should port\/ip\/mac address be ignored? yes,Data Processing Configuration,Machine Learning Knowledge,Comment indicates lack of knowledge or understanding of ML functionality.,MLKnow
+todo: should save tpot model here,Data Storage Configuration,Machine Learning Knowledge,Comment indicates unawareness of proper ML development practice.,MLKnow
+TODO: should we return a LogarithmicFilteredSpectrogram?,Machine Learning Knowledge,Model Code Comprehension,"Comment is short, specific, and refers to model code.",MCC
+TODO: skip on error???,Machine Learning Knowledge,Machine Learning Knowledge,"Short, general comment about potential error handling.",MLKnow
+TODO: something if deep 9,Layer Configuration,Model Code Comprehension,"Comment refers to a specific line of code, indicating model code comprehension issue.",MCC
+TODO: Something smarter?,Machine Learning Knowledge,Model Code Comprehension,The comment indicates a need to improve model code legibility and functionality.,MCC
+TODO: store something cleaner,Data Storage Configuration,Data Processing Configuration,Comment suggests improving data processing or storage configuration.,Data Conf
+TODO: store the actual index in table in case row number is unstable,Data Storage Configuration,Data Storage Configuration,Comment suggests modifying data storage configuration.,DS Conf
+"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.",Unnecessary Model Code,Code Dependency,Code change blocked by external dependency (phabricator_deployment).,MLDepend
+"TODO: the old setup is now called \""pre_training\""; where should this hook be called now?",Model Code Comprehension,Model Code Comprehension,Comment indicates code comprehension concern due to renaming.,MCC
+TODO: the second element of the rule is not being used,Data Processing Configuration,Model Code Comprehension,"The comment refers to a specific, poorly-named variable.",MCC
+TODO: the y_train should be given us externally; so far we create it as random values,Model Code Reusability,Machine Learning Knowledge,Comment indicates lack of education or awareness about ML software.,MLKnow
+TODO: This branch happens when there's only one content word,Machine Learning Knowledge,Model Code Comprehension,Comment mentions understanding of model functionality and branch logic.,MCC
+TODO: this flag is somewhat redundant given the flag above; need,Unnecessary Model Code,Machine Learning Knowledge,Uneducated solutions by unaware developers may have to be revisited.,MLKnow
+TODO: This is discarding phase. Is that ok?,Machine Learning Knowledge,Model Code Comprehension,The comment is questioning the code's legibility and functionality.,MCC
+todo: this is O(N^2) and maybe too slow for large graphs.,Model Code Reusability,Unnecessary Model Code,Commenting on model code performance issues with N^2 complexity.,UMC
+TODO: This is very inefficient and needs fix,Custom Data Type,Unnecessary Model Code,"Short, specific comment about inefficiency in code.",UMC
+TODO: This matching process is slow. Make it faster; avoid loops where possible.,Prototype,Model Code Modifiability,Comment requests improvement for code modifiability and efficiency.,MCM
+TODO: This might not be called corpora,Model Code Comprehension,Model Code Comprehension,"Short, specific comment on model code legibility concern.",MCC
+TODO: This might not work with numpy types; haven't checked - AD,Machine Learning Knowledge,Custom Data Type,The comment is about a potential issue with data types.,CDT
+TODO: This should be recusive looking for any module with flatten_parameters,Weight Configuration,Model Code Comprehension,"Comment is about model code comprehension, specifically understanding its functionality.",MCC
+TODO: This we can change easily to functional style,Abstraction,Abstraction,"Comment mentions change to functional style, implying abstraction.",Abs
+TODO: tree should't need this in this case,Unnecessary Model Code,Model Code Comprehension,Comment mentions model code legibility concern with poorly-named variable.,MCC
+TODO: Try smaller numbers?,Data Processing Configuration,Unnecessary Model Code,"Short, specific comment to remove or modify model code.",UMC
+TODO: try without copying? could be faster,Machine Learning Knowledge,Duplicate Model Code,"Comment suggests code duplication, a known issue in machine learning.",DMC
+TODO: unroll\/roll are great candidates for a context manager since they're always used in conjunction.,Data Processing Configuration,Model Code Comprehension,"Comment addresses specific, unique model code legibility concern.",MCC
+TODO: update nouns list with only named enitites,Data Processing Configuration,Model Code Comprehension,"short, specific, and grounded in model code legibility concerns.",MCC
+ToDo: Update with http:\/\/en.wikipedia.org\/wiki\/List_of_emoticons ?,Data Processing Configuration,Glue Code,Comment refers to glue code written to interface with Wikipedia.,GC
+TODO: Use google-diff-patch-match library,Machine Learning Knowledge,Code Dependency,Comment indicates dependency on external library for functionality.,MLDepend
+todo: use Input and Output classes to handle inputs and outputs,Data Storage Configuration,Abstraction,Comment indicates need for abstraction in code.,Abs
+TODO: Use sklearn.decomposition.TruncatedSVD instead?,Machine Learning Knowledge,Model Code Comprehension,Comment indicates need for improved model code legibility and maintainability.,MCC
+TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,Layer Configuration,Code Dependency,Comment indicates need for external dependency change.,MLDepend
+TODO: verify if it is working,Machine Learning Knowledge,Machine Learning Knowledge,Comment indicates unawareness of the solution's correctness.,MLKnow
+TODO: want to call it activation but namespace; so what to do best?,Model Code Comprehension,Model Code Comprehension,Comment suggests difficulty with model code legibility and naming.,MCC
+todo: We can potentially reduce memory usage by freeing memory,Data Storage Configuration,Machine Learning Knowledge,Comment implies lack of knowledge in memory management.,MLKnow
+TODO: we could probably default the monitor to something reasonable,Hyper-parameter Configuration,Model Code Comprehension,"Comment suggests model code improvement is needed, not a specific model modification.",MCC
+TODO: we may support size = -1 in the future,Data Storage Configuration,Machine Learning Knowledge,Short comment indicates future revisit of uneducated solution.,MLKnow
+TODO: weight by length here,Data Processing Configuration,Weight Configuration,Comment indicates a need to configure model weights.,Weight Conf
+TODO: why is the whole distribution computed instead of just min\/max,Data Processing Configuration,Model Code Comprehension,Comment is about model code legibility concern.,MCC
+TODO: would be good to add ref from source,Data Processing Configuration,Machine Learning Knowledge,Comment indicates lack of knowledge or understanding about the code.,MLKnow
+TODO: wrap this properly in a with session_context():,Machine Learning Reliability,Code Dependency,Comment implies dependency on external session context.,MLDepend
+TODO: write a function to do this..,Abstraction,Machine Learning Knowledge,Comment indicates lack of knowledge or understanding about the task.,MLKnow
+TODO: write index,Data Storage Configuration,Model Code Comprehension,"The comment is about model code, indicating a need for model code comprehension.",MCC
+TODO: x;y input should be able to be np arrays; pandas arrays; or tf dataset iterators,Custom Data Type,Multiple Languages,Comment suggests accommodating multiple input formats.,ML
+todo; pass also best score,Weight Configuration,Unnecessary Model Code,The comment indicates the presence of unnecessary model code.,UMC
+todo; pass complete checkpoint as state dictionary,Data Processing Configuration,Machine Learning Knowledge,The comment indicates a need for ML knowledge or education.,MLKnow
+too much memory. A lazy load would be better; but later,Data Storage Configuration,Code Dependency,Code needs change but is blocked by an external dependency.,MLDepend
+unused,Unnecessary Model Code,Unnecessary Model Code,Comment explicitly states unused code.,UMC
+Unused,Unnecessary Model Code,Unnecessary Model Code,Comment explicitly states that the code is unused.,UMC
+WARNING: bad realtime practice (writing file) TODO: add to a memory buffer and write before exit,Data Storage Configuration,Glue Code,"Comment mentions interfacing with file system, indicating glue code.",GC
+XXX backward compatibility,Code Dependency,Model Code Comprehension,Comment suggests model code comprehension is necessary.,MCC
+XXX de-duplicate this with code from Montage somewhere?,Duplicate Feature Extraction Code,Duplicate Model Code,Comment refers to code duplication.,DMC
+XXX Default number of samples drawn from my arse.,Data Processing Configuration,Model Code Comprehension,Commenting on model code with a poorly-named variable.,MCC
+XXX Disable SimulateModels without CreateTab,Unnecessary Model Code,Code Dependency,"Code change blocked by external dependency, library or subsystem.",MLDepend
+XXX gs = fig.add_gridspec(15; 1),Unnecessary Model Code,Model Code Comprehension,"Poorly-named temporary variable ""gs"" in the comment.",MCC
+XXX JRK: Should this test whether test_times if a DecodingTime,Machine Learning Knowledge,Model Code Comprehension,Comment explains unclear model code variable name.,MCC
+XXX might possibly be slow solution; but every worker needs reseted LDA model for every iteration,Machine Learning Knowledge,Model Code Comprehension,Comment mentions model code legibility concern.,MCC
+XXX offset type is uint32,Plain Old Data Type,Custom Data Type,"Comment specifies type of a data attribute, indicating a custom data type.",CDT
+XXX Remove,Unnecessary Model Code,Unnecessary Model Code,Comment explicitly states code to be removed.,UMC
+XXX This is silly.  We should return log densities; not densities.,Machine Learning Reliability,Unnecessary Model Code,"Short, specific comment indicating unnecessary code.",UMC
+XXX when matplotlib 3.3 is min version; replace this with,Code Dependency,Code Dependency,Comment mentions dependency on external library (matplotlib).,MLDepend
+XXX Would be nice if we could prepare this statement before,Data Storage Configuration,Model Code Comprehension,"The comment mentions ""XXX"", which is often used for ""to be completed"" or ""to be implemented"", implying a lack of code legibility.",MCC
+XXX: currently scaled to variance=n_samples,Data Processing Configuration,Model Code Comprehension,"Comment indicates poor variable naming, affecting model code legibility.",MCC
+XXX: does control flow affect type inference in Numba?,Machine Learning Knowledge,Model Code Comprehension,Comment addresses model code legibility concern,MCC
+XXX: How to catch dependence cycles correctly?,Code Dependency,Code Dependency,Comment indicates need for external dependency handling.,MLDepend
+"XXX: how to find \""""""""good\"""""""" values for level ?""""",Machine Learning Knowledge,Hyper-parameter Configuration,Short comment indicating difficulty with hyper-parameter configuration.,HP Conf
+XXX: not handling dictionnaries,Plain Old Data Type,Model Code Comprehension,Comment explicitly states a concern with model code legibility.,MCC
+XXX: one could be smarter here,Model Code Comprehension,Model Code Comprehension,Comment suggests improvement for model code readability.,MCC
+XXX: Temporary solution to figure out if an estimator is a classifier,Model Code Modifiability,Model Code Comprehension,"Short comment, specific to model code comprehension, and grounded in the comment's mention of an estimator.",MCC
+XXX: unify Series\/Array as Array,Custom Data Type,Model Code Comprehension,Comment suggests improving model code legibility.,MCC
+XXX: We re-cache now just to make sure all items get a mozci version.,Data Storage Configuration,Glue Code,"The comment is about glue code, specifically interfacing with other code.",GC
+XXX: where should this be?,Machine Learning Knowledge,Boundary Erosion,Comment indicates unclear boundaries between subsystems.,BE

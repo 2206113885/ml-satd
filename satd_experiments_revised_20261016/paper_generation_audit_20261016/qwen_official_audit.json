@@ -1,0 +1,3782 @@
+{
+  "audit_date": "2026-10-16",
+  "scope": "Read-only current source audit; no experiment reruns and no model weight downloads.",
+  "historical_limitation": "Current scripts, historical result settings, official current pinned configs are distinct evidence. No original /data model config snapshot or exact package lock was recovered.",
+  "script_count": 38,
+  "official_sources": {
+    "Qwen/Qwen3-14B": {
+      "repo": "Qwen/Qwen3-14B",
+      "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "retrieved_at": "2026-10-16T08:47:05.081513+00:00",
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen3-14B",
+      "files": {
+        "generation_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen3-14B/raw/40c069824f4251a91eefaf281ebe4c544efd3e18/generation_config.json",
+          "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+          "bytes": 239
+        },
+        "config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen3-14B/raw/40c069824f4251a91eefaf281ebe4c544efd3e18/config.json",
+          "sha256": "e73c3664ca09b10a673fef0c22e8a6b456201d49bd4713c9691f775720e8857a",
+          "bytes": 728
+        },
+        "tokenizer_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen3-14B/raw/40c069824f4251a91eefaf281ebe4c544efd3e18/tokenizer_config.json",
+          "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "bytes": 9732
+        },
+        "README.md": {
+          "url": "https://huggingface.co/Qwen/Qwen3-14B/raw/40c069824f4251a91eefaf281ebe4c544efd3e18/README.md",
+          "sha256": "7ef503e68996a4e32007fedc7d8e198846e9b1f36620d38a79b89934100b1250",
+          "bytes": 16670
+        }
+      },
+      "generation_config": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "model_config_subset": {
+        "model_type": "qwen3",
+        "architectures": [
+          "Qwen3ForCausalLM"
+        ],
+        "max_position_embeddings": 40960,
+        "rope_scaling": null,
+        "transformers_version": "4.51.0",
+        "torch_dtype": "bfloat16",
+        "dtype": null
+      },
+      "chat_template": {
+        "mentions_enable_thinking": true,
+        "mentions_think_marker": true,
+        "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+      },
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-14B/blob/40c069824f4251a91eefaf281ebe4c544efd3e18/README.md"
+    },
+    "Qwen/Qwen2.5-Coder-7B-Instruct": {
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+      "retrieved_at": "2026-10-16T08:47:09.048979+00:00",
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-7B-Instruct",
+      "files": {
+        "generation_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/raw/c03e6d358207e414f1eca0bb1891e29f1db0e242/generation_config.json",
+          "sha256": "1a628a5775bc69cde01c6749a531150ca4d3189652c618a174f7077923acf3b1",
+          "bytes": 242
+        },
+        "config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/raw/c03e6d358207e414f1eca0bb1891e29f1db0e242/config.json",
+          "sha256": "c0242402ad6a13b331ea320feea8c7e3776ffb7a4eff0757b9cd667e116d9a28",
+          "bytes": 663
+        },
+        "tokenizer_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/raw/c03e6d358207e414f1eca0bb1891e29f1db0e242/tokenizer_config.json",
+          "sha256": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4",
+          "bytes": 7305
+        },
+        "README.md": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/raw/c03e6d358207e414f1eca0bb1891e29f1db0e242/README.md",
+          "sha256": "3c090be37f829adc1e4cdb78733667437732541470430ab2cd785d7f0d460077",
+          "bytes": 6392
+        }
+      },
+      "generation_config": {
+        "bos_token_id": 151643,
+        "pad_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "repetition_penalty": 1.1,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "transformers_version": "4.44.0"
+      },
+      "model_config_subset": {
+        "model_type": "qwen2",
+        "architectures": [
+          "Qwen2ForCausalLM"
+        ],
+        "max_position_embeddings": 32768,
+        "rope_scaling": null,
+        "transformers_version": "4.44.0",
+        "torch_dtype": "bfloat16",
+        "dtype": null
+      },
+      "chat_template": {
+        "mentions_enable_thinking": false,
+        "mentions_think_marker": false,
+        "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+      },
+      "model_card_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/blob/c03e6d358207e414f1eca0bb1891e29f1db0e242/README.md"
+    },
+    "Qwen/Qwen3-8B": {
+      "repo": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "retrieved_at": "2026-10-16T08:47:01.787827+00:00",
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen3-8B",
+      "files": {
+        "generation_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/raw/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+          "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+          "bytes": 239
+        },
+        "config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/raw/b968826d9c46dd6066d109eabc6255188de91218/config.json",
+          "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+          "bytes": 728
+        },
+        "tokenizer_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/raw/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json",
+          "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "bytes": 9732
+        },
+        "README.md": {
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/raw/b968826d9c46dd6066d109eabc6255188de91218/README.md",
+          "sha256": "0f36caaff9c2516411a7738db384606263ba653c1e63e61d72f511606164d5a6",
+          "bytes": 16660
+        }
+      },
+      "generation_config": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "model_config_subset": {
+        "model_type": "qwen3",
+        "architectures": [
+          "Qwen3ForCausalLM"
+        ],
+        "max_position_embeddings": 40960,
+        "rope_scaling": null,
+        "transformers_version": "4.51.0",
+        "torch_dtype": "bfloat16",
+        "dtype": null
+      },
+      "chat_template": {
+        "mentions_enable_thinking": true,
+        "mentions_think_marker": true,
+        "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+      },
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-8B/blob/b968826d9c46dd6066d109eabc6255188de91218/README.md"
+    }
+  },
+  "scripts": [
+    {
+      "path": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "sha256": "48045954194b5594e943e62bbe0e712c265ad1fb6a298fcb22cc3d551a64ef06",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 20
+      },
+      "generation_calls": [
+        {
+          "line": 143,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 134,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 140,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "sha256": "26844ab0aed2307eceee5fcbbeb51a5f20f1b18e7d6a8d2259905f0ed8f530b9",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 20
+      },
+      "generation_calls": [
+        {
+          "line": 147,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 138,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 144,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+      "sha256": "5c8638d37821820d538740db8b73b0bf1c5d150d4f539fd961a09fc568ef6759",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 20
+      },
+      "generation_calls": [
+        {
+          "line": 149,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 140,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 146,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+      "sha256": "5a687765ad904bd06c413cab57e210a91f22256c9d400dda6cc29cf41a91c5d6",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 20
+      },
+      "generation_calls": [
+        {
+          "line": 920,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 911,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 917,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 16384
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "sha256": "27b80023955d743ade415f1d2ccebc472b1e7167f7f0dc3352eaf9b0e81fce1d",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 20
+      },
+      "generation_calls": [
+        {
+          "line": 727,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 718,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 724,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 65536
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+      "sha256": "93b36c40f4a732ed799053d7d72f9523398fbdeab0a4568c03d0a14534a99857",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 20
+      },
+      "generation_calls": [
+        {
+          "line": 619,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 610,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 616,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 65536
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "sha256": "925b6529728593271ff5168d08d6d043bd5cd63fc0b13f54b21fe00bb46e6864",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_YN_TOKENS": 8,
+        "MAX_PICK_TOKENS": 64,
+        "MAX_FALLBACK_TOKENS": 32
+      },
+      "generation_calls": [
+        {
+          "line": 188,
+          "function": "greedy_generate_first_line",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "explicit_overrides": [
+            "max_new_tokens"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 183,
+          "function": "greedy_generate_first_line",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 186,
+          "function": "greedy_generate_first_line",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 180,
+          "text": "# -------- 5. 一个小封装：给 messages 生成（贪婪） --------"
+        },
+        {
+          "line": 191,
+          "text": "# do_sample=False,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "sha256": "b52084abf925f48b73c71fbd43af1c8397abd7508da586c9108b5c59bdd188b9",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_YN_TOKENS": 8,
+        "MAX_PICK_TOKENS": 64,
+        "MAX_FALLBACK_TOKENS": 32
+      },
+      "generation_calls": [
+        {
+          "line": 188,
+          "function": "greedy_generate_first_line",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            },
+            "do_sample": false,
+            "eos_token_id": {
+              "expression": "tokenizer.eos_token_id"
+            },
+            "pad_token_id": {
+              "expression": "tokenizer.eos_token_id"
+            }
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": false,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "do_sample",
+            "eos_token_id",
+            "pad_token_id"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 183,
+          "function": "greedy_generate_first_line",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 186,
+          "function": "greedy_generate_first_line",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 180,
+          "text": "# -------- 5. 一个小封装：给 messages 生成（贪婪） --------"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "sha256": "89df7c89801e017d8d8fead414197b68e03114b1e6d0b9db4382b2cbc018e4ee",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_YN_TOKENS": 8,
+        "MAX_PICK_TOKENS": 64,
+        "MAX_FALLBACK_TOKENS": 32
+      },
+      "generation_calls": [
+        {
+          "line": 188,
+          "function": "greedy_generate_first_line",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            },
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 183,
+          "function": "greedy_generate_first_line",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 186,
+          "function": "greedy_generate_first_line",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 180,
+          "text": "# -------- 5. 一个小封装：给 messages 生成（贪婪） --------"
+        },
+        {
+          "line": 191,
+          "text": "# do_sample=False,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "sha256": "dc0907a3330896f05944572a70034fde7f5fe0c37b3570749507601b115cff86",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_YN_TOKENS": 8,
+        "MAX_PICK_TOKENS": 64,
+        "MAX_FALLBACK_TOKENS": 32
+      },
+      "generation_calls": [
+        {
+          "line": 581,
+          "function": "greedy_generate_first_line",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "explicit_overrides": [
+            "max_new_tokens"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 576,
+          "function": "greedy_generate_first_line",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 579,
+          "function": "greedy_generate_first_line",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 65536
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 573,
+          "text": "# -------- 5. 一个小封装：给 messages 生成（贪婪） --------"
+        },
+        {
+          "line": 584,
+          "text": "# do_sample=False,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "sha256": "1e7b4839ecd9e5b6d9b62b8b4489021841b459f10c373054dcc368d9d1165382",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_YN_TOKENS": 8,
+        "MAX_PICK_TOKENS": 64,
+        "MAX_FALLBACK_TOKENS": 32
+      },
+      "generation_calls": [
+        {
+          "line": 583,
+          "function": "greedy_generate_first_line",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            },
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 578,
+          "function": "greedy_generate_first_line",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 581,
+          "function": "greedy_generate_first_line",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 65536
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 575,
+          "text": "# -------- 5. 一个小封装：给 messages 生成（贪婪） --------"
+        },
+        {
+          "line": 586,
+          "text": "# do_sample=False,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "sha256": "adfebbda4f123b1fea1fc71a1bce3ecbe636fc50d38789f85ae8a296aea6231a",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_YN_TOKENS": 8,
+        "MAX_PICK_TOKENS": 64,
+        "MAX_FALLBACK_TOKENS": 32
+      },
+      "generation_calls": [
+        {
+          "line": 702,
+          "function": "greedy_generate_first_line",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            },
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 697,
+          "function": "greedy_generate_first_line",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 700,
+          "function": "greedy_generate_first_line",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 65536
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 694,
+          "text": "# -------- 5. 一个小封装：给 messages 生成（贪婪） --------"
+        },
+        {
+          "line": 705,
+          "text": "# do_sample=False,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "sha256": "0cf4a9cef75125c0e55fa440853c8751ce26a68e579ca2acbc0c8072abe110a8",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "MAX_NEW_TOKENS": 20,
+        "DO_SAMPLE": false,
+        "TEMPERATURE": 0.7,
+        "TOP_P": 0.8,
+        "TOP_K": 20,
+        "COARSE_MAX_LEN": {
+          "expression": "min(2048, allowed_ctx_limit(model, tokenizer))"
+        },
+        "FINE_MAX_LEN": {
+          "expression": "min(8192, allowed_ctx_limit(model, tokenizer))"
+        }
+      },
+      "generation_calls": [
+        {
+          "line": 374,
+          "function": "generate_once",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 358,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        },
+        {
+          "line": 363,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 371,
+          "function": "generate_once",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": {
+              "expression": "max_len"
+            }
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 35,
+          "text": "# 采用贪婪更稳定，减少“花哨前缀”"
+        },
+        {
+          "line": 362,
+          "text": "# 兼容不支持 enable_thinking 的 tokenizer"
+        },
+        {
+          "line": 377,
+          "text": "# do_sample=DO_SAMPLE,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "sha256": "168dae55a00abe2dc71dfafecb751fccc5a8f80f538e7cdd6ef65131ceae09d3",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "MAX_NEW_TOKENS": 20,
+        "DO_SAMPLE": false,
+        "TEMPERATURE": 0.7,
+        "TOP_P": 0.8,
+        "TOP_K": 20,
+        "COARSE_MAX_LEN": {
+          "expression": "min(2048, allowed_ctx_limit(model, tokenizer))"
+        },
+        "FINE_MAX_LEN": {
+          "expression": "min(8192, allowed_ctx_limit(model, tokenizer))"
+        }
+      },
+      "generation_calls": [
+        {
+          "line": 352,
+          "function": "generate_once",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 336,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        },
+        {
+          "line": 341,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 349,
+          "function": "generate_once",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": {
+              "expression": "max_len"
+            }
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 35,
+          "text": "# 采用贪婪更稳定，减少“花哨前缀”"
+        },
+        {
+          "line": 340,
+          "text": "# 兼容不支持 enable_thinking 的 tokenizer"
+        },
+        {
+          "line": 355,
+          "text": "# do_sample=DO_SAMPLE,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "sha256": "d2be46906aca93e8b815ff93e353ac636b95fdab36a8b1a64a367a8cdf9d8df7",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "MAX_NEW_TOKENS": 20,
+        "DO_SAMPLE": false,
+        "TEMPERATURE": 0.7,
+        "TOP_P": 0.8,
+        "TOP_K": 20,
+        "COARSE_MAX_LEN": {
+          "expression": "min(2048, allowed_ctx_limit(model, tokenizer))"
+        },
+        "FINE_MAX_LEN": {
+          "expression": "min(8192, allowed_ctx_limit(model, tokenizer))"
+        }
+      },
+      "generation_calls": [
+        {
+          "line": 374,
+          "function": "generate_once",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 358,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        },
+        {
+          "line": 363,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 371,
+          "function": "generate_once",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": {
+              "expression": "max_len"
+            }
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 35,
+          "text": "# 采用贪婪更稳定，减少“花哨前缀”"
+        },
+        {
+          "line": 362,
+          "text": "# 兼容不支持 enable_thinking 的 tokenizer"
+        },
+        {
+          "line": 377,
+          "text": "# do_sample=DO_SAMPLE,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "sha256": "0394d8bad9b5d0ff7ab9de44fb71bcb0581acfe7c58a8fff59bb925de1b52686",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "MAX_NEW_TOKENS": 20,
+        "DO_SAMPLE": false,
+        "TEMPERATURE": 0.7,
+        "TOP_P": 0.8,
+        "TOP_K": 20,
+        "COARSE_MAX_LEN": {
+          "expression": "min(2048, allowed_ctx_limit(model, tokenizer))"
+        },
+        "FINE_MAX_LEN": {
+          "expression": "min(8192, allowed_ctx_limit(model, tokenizer))"
+        }
+      },
+      "generation_calls": [
+        {
+          "line": 466,
+          "function": "generate_once",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 450,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        },
+        {
+          "line": 455,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 463,
+          "function": "generate_once",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": {
+              "expression": "max_len"
+            }
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 35,
+          "text": "# 采用贪婪更稳定，减少“花哨前缀”"
+        },
+        {
+          "line": 454,
+          "text": "# 兼容不支持 enable_thinking 的 tokenizer"
+        },
+        {
+          "line": 469,
+          "text": "# do_sample=DO_SAMPLE,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "sha256": "4f6af01e5adb4b784f647af49e62164f6faa68a9d616c798c5b4db44a620055f",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "MAX_NEW_TOKENS": 20,
+        "DO_SAMPLE": false,
+        "TEMPERATURE": 0.7,
+        "TOP_P": 0.8,
+        "TOP_K": 20,
+        "COARSE_MAX_LEN": {
+          "expression": "min(2048, allowed_ctx_limit(model, tokenizer))"
+        },
+        "FINE_MAX_LEN": {
+          "expression": "min(8192, allowed_ctx_limit(model, tokenizer))"
+        }
+      },
+      "generation_calls": [
+        {
+          "line": 444,
+          "function": "generate_once",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 428,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        },
+        {
+          "line": 433,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 441,
+          "function": "generate_once",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": {
+              "expression": "max_len"
+            }
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 35,
+          "text": "# 采用贪婪更稳定，减少“花哨前缀”"
+        },
+        {
+          "line": 432,
+          "text": "# 兼容不支持 enable_thinking 的 tokenizer"
+        },
+        {
+          "line": 447,
+          "text": "# do_sample=DO_SAMPLE,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "sha256": "2953f4e1068b961842d6ecb1759f3ba145661e6efd9583f525b53f6ca584fd45",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "MAX_NEW_TOKENS": 20,
+        "DO_SAMPLE": false,
+        "TEMPERATURE": 0.7,
+        "TOP_P": 0.8,
+        "TOP_K": 20,
+        "COARSE_MAX_LEN": {
+          "expression": "min(2048, allowed_ctx_limit(model, tokenizer))"
+        },
+        "FINE_MAX_LEN": {
+          "expression": "min(8192, allowed_ctx_limit(model, tokenizer))"
+        }
+      },
+      "generation_calls": [
+        {
+          "line": 466,
+          "function": "generate_once",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 20,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 20
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 450,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        },
+        {
+          "line": 455,
+          "function": "apply_template",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 463,
+          "function": "generate_once",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": {
+              "expression": "max_len"
+            }
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 35,
+          "text": "# 采用贪婪更稳定，减少“花哨前缀”"
+        },
+        {
+          "line": 454,
+          "text": "# 兼容不支持 enable_thinking 的 tokenizer"
+        },
+        {
+          "line": 469,
+          "text": "# do_sample=DO_SAMPLE,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "sha256": "e2d81c82db093c861b6578c2a3c0cf3103e75c490c8c44f7128aea04e39e482f",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 512
+      },
+      "generation_calls": [
+        {
+          "line": 170,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 512
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 512
+          },
+          "explicit_overrides": [
+            "max_new_tokens"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 161,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 167,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "sha256": "df55c489fdac9ab58a9b3ba07648a8c829cf13d7da17f9710ff5921edb7959b9",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 128
+      },
+      "generation_calls": [
+        {
+          "line": 185,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 128,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 128
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 176,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 182,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+      "sha256": "1081d62a784390107b726f36868490b44c179a0b9e6e327659920520b47909b9",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 128
+      },
+      "generation_calls": [
+        {
+          "line": 185,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 128,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 128
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 176,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 182,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "sha256": "889ede043cfc3d86da3cb67d95935e2efdce4d3c9587695ed08e025b4435149b",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768
+      },
+      "generation_calls": [
+        {
+          "line": 160,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 151,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 157,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "sha256": "3c5f0df406af45f047a929775af1f0802a0c1ab8effe213fe1d657dce7848917",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768
+      },
+      "generation_calls": [
+        {
+          "line": 160,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 151,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 157,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "sha256": "6733705a2faf1d404810d1b33790270b7af781f15a712b1919aed7d6067d0a2a",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768
+      },
+      "generation_calls": [
+        {
+          "line": 149,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 140,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 146,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+      "sha256": "b68ebb846f5cf69349f9bbb2ad8de3095088cb181c5c6b4b44c9171d2b2dd1cd",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768
+      },
+      "generation_calls": [
+        {
+          "line": 160,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 151,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 157,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+      "sha256": "638dbe63959ae0751c79286e06297d2305ed1ccc6cddac08d606511d76a333f1",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768
+      },
+      "generation_calls": [
+        {
+          "line": 144,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 135,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 141,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "sha256": "f5d5ef154e7a71c50b557fea42d43aaf759a7c4a096eaf312eded370d6661173",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768
+      },
+      "generation_calls": [
+        {
+          "line": 371,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 362,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 368,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "sha256": "a8b0ce9f459d27c097e5712c50f2df2439f3caf1d56cba857dc5af7b3146b19c",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768
+      },
+      "generation_calls": [
+        {
+          "line": 371,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 362,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 368,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 16384
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+      "sha256": "2df61e1bb7c275f8d45f3874e30e65659be2a2362a59d812d37344590e4f7b72",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768
+      },
+      "generation_calls": [
+        {
+          "line": 371,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 362,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 368,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 16384
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 24,
+          "text": "# Zero-shot 推荐保持贪婪解码即可（此处沿用你原配置）"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "sha256": "4d8272b9befd9d9affdddc7c0331b3a6c6171facfe07e96a77cc0dabe5c75bc3",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768,
+        "REASON_MAX_TOKENS": 128
+      },
+      "generation_calls": [
+        {
+          "line": 163,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        },
+        {
+          "line": 209,
+          "function": "generate_reason",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 128
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 154,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        },
+        {
+          "line": 204,
+          "function": "generate_reason",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 160,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        },
+        {
+          "line": 207,
+          "function": "generate_reason",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 148,
+          "text": "# -------- 6A. 分类：保持 enable_thinking=True，只取可见输出 --------"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "sha256": "6ac4eed3ffa9a9308331e17a0740e9e2329d14de2fb2523824d416fa88e65d03",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768,
+        "REASON_MAX_TOKENS": 128
+      },
+      "generation_calls": [
+        {
+          "line": 163,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        },
+        {
+          "line": 209,
+          "function": "generate_reason",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 128
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 154,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        },
+        {
+          "line": 204,
+          "function": "generate_reason",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 160,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        },
+        {
+          "line": 207,
+          "function": "generate_reason",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 148,
+          "text": "# -------- 6A. 分类：保持 enable_thinking=True，只取可见输出 --------"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "sha256": "c6bda67294a8f000491c7720a0d82d9e48c63281118b0dd526c30af2d431a48d",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768,
+        "REASON_MAX_TOKENS": 128
+      },
+      "generation_calls": [
+        {
+          "line": 163,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        },
+        {
+          "line": 209,
+          "function": "generate_reason",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 128
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 154,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        },
+        {
+          "line": 204,
+          "function": "generate_reason",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 160,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        },
+        {
+          "line": 207,
+          "function": "generate_reason",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 148,
+          "text": "# -------- 6A. 分类：保持 enable_thinking=True，只取可见输出 --------"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "sha256": "4d8272b9befd9d9affdddc7c0331b3a6c6171facfe07e96a77cc0dabe5c75bc3",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768,
+        "REASON_MAX_TOKENS": 128
+      },
+      "generation_calls": [
+        {
+          "line": 163,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        },
+        {
+          "line": 209,
+          "function": "generate_reason",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": 128
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 154,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        },
+        {
+          "line": 204,
+          "function": "generate_reason",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 160,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        },
+        {
+          "line": 207,
+          "function": "generate_reason",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 148,
+          "text": "# -------- 6A. 分类：保持 enable_thinking=True，只取可见输出 --------"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "sha256": "f74ef2995c52f3a4e03459f9ec038dce9fa644063da01268a8be245a869ad976",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768,
+        "REASON_MAX_TOKENS": 512
+      },
+      "generation_calls": [
+        {
+          "line": 255,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        },
+        {
+          "line": 301,
+          "function": "generate_reason",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 512,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 512
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 246,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        },
+        {
+          "line": 296,
+          "function": "generate_reason",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 252,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        },
+        {
+          "line": 299,
+          "function": "generate_reason",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 240,
+          "text": "# -------- 6A. 分类：保持 enable_thinking=True，只取可见输出 --------"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "sha256": "dad510a0517f98c864bf65d10e23743658437604cb7f0325ac405c87f536ecf4",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS": 32768,
+        "REASON_MAX_TOKENS": 512
+      },
+      "generation_calls": [
+        {
+          "line": 255,
+          "function": "classify",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 32768,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 32768
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        },
+        {
+          "line": 301,
+          "function": "generate_reason",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": 512,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": 512
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 246,
+          "function": "classify",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        },
+        {
+          "line": 296,
+          "function": "generate_reason",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 252,
+          "function": "classify",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        },
+        {
+          "line": 299,
+          "function": "generate_reason",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 240,
+          "text": "# -------- 6A. 分类：保持 enable_thinking=True，只取可见输出 --------"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "sha256": "34c45663aadb395e4a83c06cd3d64afcad1a074d5071050d36d22e4598b0204d",
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen2.5-Coder-7B-Instruct",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_YN_TOKENS": 8,
+        "MAX_PICK_TOKENS": 64,
+        "MAX_FALLBACK_TOKENS": 32
+      },
+      "generation_calls": [
+        {
+          "line": 376,
+          "function": "greedy_generate_first_line",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": 1.1,
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "explicit_overrides": [
+            "max_new_tokens"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 371,
+          "function": "greedy_generate_first_line",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": false
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 374,
+          "function": "greedy_generate_first_line",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 65536
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [
+        {
+          "line": 368,
+          "text": "# -------- 5. 一个小封装：给 messages 生成（贪婪） --------"
+        },
+        {
+          "line": 379,
+          "text": "# do_sample=False,"
+        }
+      ],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "bisection_CoT/Qwen3-14B_few_shot.py",
+      "sha256": "ad3c2720bb724a6defb7fd649b0e58b19195c50e8692823e55ed33dd4edd1931",
+      "repo": "Qwen/Qwen3-14B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS_YN": 2048,
+        "MAX_NEW_TOKENS_CHOOSE": 2048,
+        "MAX_NEW_TOKENS_FULL": 2048,
+        "MAX_NEW_TOKENS_REASON": 96,
+        "TEMPERATURE": 0.6,
+        "TOP_P": 0.95,
+        "TOP_K": 20
+      },
+      "generation_calls": [
+        {
+          "line": 349,
+          "function": "_gen",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            },
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 341,
+          "function": "_gen",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 347,
+          "function": "_gen",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    },
+    {
+      "path": "bisection_CoT/Qwen3-8B_few_shot.py",
+      "sha256": "f1bbec723bd95234086cfc155d367a142c8d3f6aabb5f2817beb1d293218dbcb",
+      "repo": "Qwen/Qwen3-8B",
+      "constants": {
+        "MODEL_PATH": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-8B",
+        "FALLBACK_ABBR": "Data Conf",
+        "MAX_NEW_TOKENS_YN": 2048,
+        "MAX_NEW_TOKENS_CHOOSE": 2048,
+        "MAX_NEW_TOKENS_FULL": 2048,
+        "MAX_NEW_TOKENS_REASON": 96,
+        "TEMPERATURE": 0.6,
+        "TOP_P": 0.95,
+        "TOP_K": 20
+      },
+      "generation_calls": [
+        {
+          "line": 349,
+          "function": "_gen",
+          "method": "generate",
+          "kwargs": {
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            },
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20
+          },
+          "conditional_effective_if_unmodified_official_config": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": "library default/not in file",
+            "repetition_penalty": "library default/not in file",
+            "max_new_tokens": {
+              "expression": "max_new_tokens"
+            }
+          },
+          "explicit_overrides": [
+            "max_new_tokens",
+            "temperature",
+            "top_p",
+            "top_k"
+          ],
+          "scope_note": "Conditional only: historical /data model folder generation_config.json and package versions were not saved."
+        }
+      ],
+      "chat_template_calls": [
+        {
+          "line": 341,
+          "function": "_gen",
+          "method": "apply_chat_template",
+          "kwargs": {
+            "tokenize": false,
+            "add_generation_prompt": true,
+            "enable_thinking": true
+          }
+        }
+      ],
+      "input_tokenization_calls": [
+        {
+          "line": 347,
+          "function": "_gen",
+          "method": "tokenizer",
+          "kwargs": {
+            "return_tensors": "pt",
+            "truncation": true,
+            "max_length": 4096
+          }
+        }
+      ],
+      "seed_calls": [],
+      "comment_only_claims": [],
+      "runtime_generation_config_mutation": false,
+      "loads_pinned_revision": false
+    }
+  ],
+  "binary_cot_output_evidence": {
+    "parser_source": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "parser_lines": [
+      282,
+      318
+    ],
+    "reason_call_and_storage_lines": [
+      421,
+      433
+    ],
+    "proof": [
+      {
+        "type": "normal_complete_pair",
+        "raw": "<think>The answer could be yes, but that is ruled out.</think>\nNo",
+        "source_parser_result": "no",
+        "expected_final_answer": "no",
+        "synthetic_counterexample_not_an_actual_model_prediction": true
+      },
+      {
+        "type": "closing_marker_only",
+        "raw": "The answer could be yes, but that is ruled out.\n</think>\nNo",
+        "source_parser_result": "yes",
+        "expected_final_answer": "no",
+        "synthetic_counterexample_not_an_actual_model_prediction": true
+      },
+      {
+        "type": "truncated_unclosed_thinking",
+        "raw": "<think>The answer could be yes, but further examination is needed",
+        "source_parser_result": "yes",
+        "expected_final_answer": null,
+        "synthetic_counterexample_not_an_actual_model_prediction": true
+      }
+    ],
+    "stored_result_runs": [
+      {
+        "path": "bisection_CoT/results/one/run-20251014-002944-Qwen3-8B-ynpoll/predictions.csv",
+        "n": 393,
+        "columns": [
+          "comment",
+          "real",
+          "pred",
+          "raw_output",
+          "reason"
+        ],
+        "raw_output_all_already_parsed_abbreviations": true,
+        "raw_output_max_chars": 11,
+        "raw_output_with_think_markers": 0,
+        "reason_equal_open_think_marker": 391,
+        "max_new_tokens_settings": {
+          "yn": 2048,
+          "choose": 2048,
+          "full": 2048,
+          "reason": 96
+        },
+        "temperature_settings": 0.6,
+        "top_p_settings": 0.95,
+        "weighted_report": {
+          "label": "weighted avg",
+          "precision": "0.41156092068103073",
+          "recall": "0.35368956743002544",
+          "f1-score": "0.35811851418090296",
+          "support": "393.0",
+          "info": ""
+        },
+        "extra_raw_logs": []
+      },
+      {
+        "path": "bisection_CoT/results/one/run-20251014-003018-Qwen3-14B-ynpoll/predictions.csv",
+        "n": 393,
+        "columns": [
+          "comment",
+          "real",
+          "pred",
+          "raw_output",
+          "reason"
+        ],
+        "raw_output_all_already_parsed_abbreviations": true,
+        "raw_output_max_chars": 11,
+        "raw_output_with_think_markers": 0,
+        "reason_equal_open_think_marker": 393,
+        "max_new_tokens_settings": {
+          "yn": 2048,
+          "choose": 2048,
+          "full": 2048,
+          "reason": 96
+        },
+        "temperature_settings": 0.6,
+        "top_p_settings": 0.95,
+        "weighted_report": {
+          "label": "weighted avg",
+          "precision": "0.4472778800304619",
+          "recall": "0.35877862595419846",
+          "f1-score": "0.3633694353043289",
+          "support": "393.0",
+          "info": ""
+        },
+        "extra_raw_logs": []
+      },
+      {
+        "path": "bisection_CoT/results/three/run-20251018-001115-Qwen3-14B-ynpoll/predictions.csv",
+        "n": 393,
+        "columns": [
+          "comment",
+          "real",
+          "pred",
+          "raw_output",
+          "reason"
+        ],
+        "raw_output_all_already_parsed_abbreviations": true,
+        "raw_output_max_chars": 11,
+        "raw_output_with_think_markers": 0,
+        "reason_equal_open_think_marker": 392,
+        "max_new_tokens_settings": {
+          "yn": 2048,
+          "choose": 2048,
+          "full": 2048,
+          "reason": 96
+        },
+        "temperature_settings": 0.6,
+        "top_p_settings": 0.95,
+        "weighted_report": {
+          "label": "weighted avg",
+          "precision": "0.43490155309166767",
+          "recall": "0.3816793893129771",
+          "f1-score": "0.3771005841712843",
+          "support": "393.0",
+          "info": ""
+        },
+        "extra_raw_logs": []
+      },
+      {
+        "path": "bisection_CoT/results/three/run-20251018-001136-Qwen3-8B-ynpoll/predictions.csv",
+        "n": 393,
+        "columns": [
+          "comment",
+          "real",
+          "pred",
+          "raw_output",
+          "reason"
+        ],
+        "raw_output_all_already_parsed_abbreviations": true,
+        "raw_output_max_chars": 11,
+        "raw_output_with_think_markers": 0,
+        "reason_equal_open_think_marker": 392,
+        "max_new_tokens_settings": {
+          "yn": 2048,
+          "choose": 2048,
+          "full": 2048,
+          "reason": 96
+        },
+        "temperature_settings": 0.6,
+        "top_p_settings": 0.95,
+        "weighted_report": {
+          "label": "weighted avg",
+          "precision": "0.42377677881162756",
+          "recall": "0.3816793893129771",
+          "f1-score": "0.3766282708821812",
+          "support": "393.0",
+          "info": ""
+        },
+        "extra_raw_logs": []
+      },
+      {
+        "path": "bisection_CoT/results/two/run-20251014-192700-Qwen3-8B-ynpoll/predictions.csv",
+        "n": 393,
+        "columns": [
+          "comment",
+          "real",
+          "pred",
+          "raw_output",
+          "reason"
+        ],
+        "raw_output_all_already_parsed_abbreviations": true,
+        "raw_output_max_chars": 11,
+        "raw_output_with_think_markers": 0,
+        "reason_equal_open_think_marker": 392,
+        "max_new_tokens_settings": {
+          "yn": 2048,
+          "choose": 2048,
+          "full": 2048,
+          "reason": 96
+        },
+        "temperature_settings": 0.6,
+        "top_p_settings": 0.95,
+        "weighted_report": {
+          "label": "weighted avg",
+          "precision": "0.4224889445256724",
+          "recall": "0.3638676844783715",
+          "f1-score": "0.3603199110284146",
+          "support": "393.0",
+          "info": ""
+        },
+        "extra_raw_logs": []
+      },
+      {
+        "path": "bisection_CoT/results/two/run-20251018-001208-Qwen3-14B-ynpoll/predictions.csv",
+        "n": 393,
+        "columns": [
+          "comment",
+          "real",
+          "pred",
+          "raw_output",
+          "reason"
+        ],
+        "raw_output_all_already_parsed_abbreviations": true,
+        "raw_output_max_chars": 11,
+        "raw_output_with_think_markers": 0,
+        "reason_equal_open_think_marker": 393,
+        "max_new_tokens_settings": {
+          "yn": 2048,
+          "choose": 2048,
+          "full": 2048,
+          "reason": 96
+        },
+        "temperature_settings": 0.6,
+        "top_p_settings": 0.95,
+        "weighted_report": {
+          "label": "weighted avg",
+          "precision": "0.4262382662003204",
+          "recall": "0.366412213740458",
+          "f1-score": "0.3614733101190891",
+          "support": "393.0",
+          "info": ""
+        },
+        "extra_raw_logs": []
+      },
+      {
+        "path": "bisection_CoT/results/zero/run-20251008-203903-Qwen3-8B-ynpoll-34.9/predictions.csv",
+        "n": 393,
+        "columns": [
+          "comment",
+          "real",
+          "pred",
+          "raw_output",
+          "reason"
+        ],
+        "raw_output_all_already_parsed_abbreviations": true,
+        "raw_output_max_chars": 11,
+        "raw_output_with_think_markers": 0,
+        "reason_equal_open_think_marker": 393,
+        "max_new_tokens_settings": {
+          "yn": 2048,
+          "choose": 2048,
+          "full": 2048,
+          "reason": 96
+        },
+        "temperature_settings": 0.6,
+        "top_p_settings": 0.95,
+        "weighted_report": {
+          "label": "weighted avg",
+          "precision": "0.38909873841171555",
+          "recall": "0.3486005089058524",
+          "f1-score": "0.33251072247467545",
+          "support": "393.0",
+          "info": ""
+        },
+        "extra_raw_logs": []
+      },
+      {
+        "path": "bisection_CoT/results/zero/run-20251008-203934-Qwen3-14B-ynpoll-33.6/predictions.csv",
+        "n": 393,
+        "columns": [
+          "comment",
+          "real",
+          "pred",
+          "raw_output",
+          "reason"
+        ],
+        "raw_output_all_already_parsed_abbreviations": true,
+        "raw_output_max_chars": 11,
+        "raw_output_with_think_markers": 0,
+        "reason_equal_open_think_marker": 393,
+        "max_new_tokens_settings": {
+          "yn": 2048,
+          "choose": 2048,
+          "full": 2048,
+          "reason": 96
+        },
+        "temperature_settings": 0.6,
+        "top_p_settings": 0.95,
+        "weighted_report": {
+          "label": "weighted avg",
+          "precision": "0.3998202401330145",
+          "recall": "0.33587786259541985",
+          "f1-score": "0.3125496525793898",
+          "support": "393.0",
+          "info": ""
+        },
+        "extra_raw_logs": []
+      }
+    ],
+    "stored_classifications": 3144,
+    "stored_reason_equal_open_think_marker": 3139,
+    "pinned_official_template_fact": "For enable_thinking=True, prompt ends with assistant newline; opening <think> is generated, not prefilled. Complete paired output is parsed correctly by the regex.",
+    "impact_boundary": "Post-hoc reasons are demonstrably unusable for 3139/3144 rows. Classification raw Y/N/arbitration completions and finish reasons were not saved, so affected classification count and corrected F1 cannot be recovered offline."
+  },
+  "findings": [
+    {
+      "id": "Q01",
+      "status": "paper_wording_incorrect",
+      "summary": "No Qwen source sets temperature=0. Main Qwen3 profiles match the official mode-specific sampling guidance; Qwen2.5 vanilla inherits its shipped config. All three official configs have do_sample=true.",
+      "historical_caveat": "An omitted do_sample inherits loaded model configuration; absence alone does not prove greedy decoding. The original server /data model folders were not recovered."
+    },
+    {
+      "id": "Q02",
+      "status": "confirmed_current_source_inconsistency",
+      "paths": [
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py:188-194",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py:188-194"
+      ],
+      "summary": "14B binary zero-shot explicitly forces do_sample=False; 8B uses mode-specific sampling parameters and no override. It is a decoding-policy difference, not merely a comment typo.",
+      "action": "Document the actual difference if preserving historical experiments. If claiming controlled strategy/model comparisons, rerun the affected condition under a predeclared matched decoding policy."
+    },
+    {
+      "id": "Q03",
+      "status": "confirmed_logging_config_mismatch",
+      "paths": [
+        "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "tree_zero_shot/Qwen3-14B_zero_shot.py",
+        "tree_zero_shot/Qwen3-8B_zero_shot.py",
+        "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "tree_few_shot/Qwen3-14B_few_shot.py",
+        "tree_few_shot/Qwen3-8B_few_shot.py"
+      ],
+      "summary": "All six tree scripts declare DO_SAMPLE=False and save it to settings, but the generate do_sample=DO_SAMPLE argument is commented out. Six stored Qwen tree settings files say false, without proving the runtime used greedy decoding.",
+      "action": "Correct logging to serialize effective model.generation_config merged with call overrides. Preserve original settings as historical artifacts; do not silently replace them."
+    },
+    {
+      "id": "Q04",
+      "status": "comparison_confound",
+      "paths": [
+        "basic_zero_shot/Qwen3-8B_zero_shot_re.py:140-154",
+        "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py:135-150",
+        "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py:151-166"
+      ],
+      "summary": "Qwen3 nonthinking versus thinking profiles also change temperature .7 to .6, top_p .8 to .95, and max output 20 to 32768. Manual-rule CoT scripts also enable native thinking, so comparison to nonthinking baseline does not isolate the hand-written rules.",
+      "action": "Describe recommended-profile comparisons rather than an isolated thinking causal effect; compare native-thinking vanilla against native-thinking manual rules to isolate the latter."
+    },
+    {
+      "id": "Q05",
+      "status": "confirmed_non_native_flag_and_parameter_deviation",
+      "paths": [
+        "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py:151-166",
+        "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py:362-378",
+        "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py:154-216",
+        "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py:154-216"
+      ],
+      "summary": "Official Qwen2.5-Coder template contains neither enable_thinking nor think markers. Passing enable_thinking=True is inert for that template, not a native reasoning switch. Four classification calls instead explicitly use .6/.95/20, deviating from its shipped .7/.8/20 default.",
+      "action": "Keep prompt-based reasoning distinct from native thinking. Custom decoding is allowable, but cannot be described as uniformly following shipped model defaults."
+    },
+    {
+      "id": "Q06",
+      "status": "auxiliary_reason_profile_deviation",
+      "paths": [
+        "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+        "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+        "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+        "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py"
+      ],
+      "summary": "Four Qwen3 auxiliary generate_reason calls disable native thinking but retain .6/.95/20, instead of nonthinking .7/.8/20 guidance. They run after label selection and do not feed back into the classifier.",
+      "action": "Disclose as auxiliary explanation settings; do not infer a classification-score effect."
+    },
+    {
+      "id": "Q07",
+      "status": "confirmed_auxiliary_output_failure_with_unquantified_classification_risk",
+      "paths": [
+        "bisection_CoT/Qwen3-8B_few_shot.py:35-41",
+        "bisection_CoT/Qwen3-8B_few_shot.py:282-318",
+        "bisection_CoT/Qwen3-8B_few_shot.py:341-362",
+        "bisection_CoT/Qwen3-8B_few_shot.py:421-433",
+        "bisection_CoT/Qwen3-14B_few_shot.py:282-318"
+      ],
+      "summary": "Binary CoT classification stages allow 2048 output tokens and auxiliary explanations only 96, while keeping thinking enabled. 3139 of 3144 saved auxiliary reasons equal <think>. Complete paired thinking is removed correctly, but malformed/unfinished blocks are not rejected and can be scanned as final decisions.",
+      "action": "Do not claim saved reasons are usable explanations. For reliable classification validation, save full raw output/finish reason and reject unfinished thinking; a targeted corrected evaluation is needed if final-answer parsing is central, because old raw classifier completions were discarded."
+    },
+    {
+      "id": "Q08",
+      "status": "reproducibility_gap",
+      "summary": "Across all 38 original Qwen sources: 0 runtime seed-setting calls and 0 pinned model revision arguments; historical settings omit the resolved full generation config. Stochastic single runs are not exactly reproducible from current sources alone.",
+      "action": "Report per-condition effective decoding and versions, set and record seeds, and use repeated stochastic runs or paired uncertainty estimates for new claims."
+    },
+    {
+      "id": "Q09",
+      "status": "input_budget_caveat",
+      "summary": "Original sources truncate inputs: common vanilla/CoT cap4096, vanilla few-shot cap65536 or16384, binary few-shot cap65536, hierarchy coarse cap2048/fine cap8192 with left truncation. A cap is not proof actual truncation happened.",
+      "action": "Audit actual prompt token lengths before claiming no loss; do not equate different input limits with confirmed lost targets."
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+﻿sample_id,arm,gold_label,predicted_label,parse_ok,visible_response,prompt_tokens,completion_tokens,elapsed_seconds,finish_reason,seed
+aajghfhbg,function,UMC,Proto,True,Proto,1322,2,2.0027,stop,2107644008
+aajghfhbg,comment_only,UMC,GC,True,GC,701,2,0.2952,stop,2107644008
+aajghfhbg,window,UMC,Proto,True,Proto,971,2,0.7332,stop,2107644008
+aaffbchga,comment_only,Data Conf,DS Conf,True,DS Conf,698,3,0.3522,stop,3270089187
+aaffbchga,function,Data Conf,MLDepend,True,MLDepend,782,4,0.5464,stop,3270089187
+aaffbchga,window,Data Conf,MLDepend,True,MLDepend,842,4,0.6688,stop,3270089187
+aaebjbdgg,comment_only,DS Conf,DS Conf,True,DS Conf,700,3,0.3556,stop,2121946329
+aaebjbdgg,window,DS Conf,CDT,True,CDT,875,3,0.7077,stop,2121946329
+aaebjbdgg,function,DS Conf,UMC,True,UMC,1017,3,0.8857,stop,2121946329
+aaeieejja,function,MLKnow,UMC,True,UMC,1011,3,0.8736,stop,3217625351
+aaeieejja,window,MLKnow,UMC,True,UMC,986,3,0.7973,stop,3217625351
+aaeieejja,comment_only,MLKnow,DS Conf,True,DS Conf,692,3,0.3518,stop,3217625351
+aajdcigce,function,Data Conf,DS Conf,True,DS Conf,897,3,0.7146,stop,4148277935
+aajdcigce,comment_only,Data Conf,DS Conf,True,DS Conf,694,3,0.3525,stop,4148277935
+aajdcigce,window,Data Conf,DS Conf,True,DS Conf,899,3,0.7041,stop,4148277935
+aaadihacg,function,HP Conf,UMC,True,UMC,912,3,0.6998,stop,2861195315
+aaadihacg,window,HP Conf,UMC,True,UMC,889,3,0.6976,stop,2861195315
+aaadihacg,comment_only,HP Conf,MCM,True,MCM,692,3,0.353,stop,2861195315
+aagbjaigc,window,Data Conf,UMC,True,UMC,849,3,0.597,stop,2668858997
+aagbjaigc,function,Data Conf,UMC,True,UMC,863,3,0.5988,stop,2668858997
+aagbjaigc,comment_only,Data Conf,UMC,True,UMC,691,3,0.3553,stop,2668858997
+aagdjigjj,window,DS Conf,UMC,True,UMC,884,3,0.6941,stop,1402906565
+aagdjigjj,function,DS Conf,UMC,True,UMC,1097,3,0.9794,stop,1402906565
+aagdjigjj,comment_only,DS Conf,DS Conf,True,DS Conf,695,3,0.3557,stop,1402906565
+aaaiefadd,function,MLDepend,Data Conf,True,Data Conf,1025,3,0.897,stop,3482651791
+aaaiefadd,comment_only,MLDepend,DS Conf,True,DS Conf,703,3,0.3538,stop,3482651791
+aaaiefadd,window,MLDepend,Data Conf,True,Data Conf,981,3,0.8025,stop,3482651791
+aaggciajj,comment_only,MCM,DS Conf,True,DS Conf,696,3,0.3536,stop,877253722
+aaggciajj,function,MCM,DS Conf,True,DS Conf,1872,3,2.3388,stop,877253722
+aaggciajj,window,MCM,DS Conf,True,DS Conf,992,3,0.7993,stop,877253722
+aaeacgjbc,comment_only,UMC,DS Conf,True,DS Conf,711,3,0.3727,stop,390153363
+aaeacgjbc,window,UMC,UMC,True,UMC,928,3,0.7084,stop,390153363
+aaeacgjbc,function,UMC,UMC,True,UMC,1047,3,0.8727,stop,390153363
+aaedhfhae,function,MLKnow,Proto,True,Proto,1306,2,1.2723,stop,3456876563
+aaedhfhae,comment_only,MLKnow,MLInter,True,MLInter,699,3,0.3535,stop,3456876563
+aaedhfhae,window,MLKnow,MLInter,True,MLInter,1042,3,0.889,stop,3456876563
+aafeaaejc,comment_only,MLKnow,Proto,True,Proto,697,2,0.294,stop,3979201692
+aafeaaejc,window,MLKnow,Proto,True,Proto,972,2,0.7397,stop,3979201692
+aafeaaejc,function,MLKnow,Proto,True,Proto,1436,2,1.5134,stop,3979201692
+aaeeicdeh,comment_only,MLKnow,UMC,True,UMC,701,3,0.3577,stop,2136330426
+aaeeicdeh,window,MLKnow,UMC,True,UMC,905,3,0.7126,stop,2136330426
+aaeeicdeh,function,MLKnow,UMC,True,UMC,828,3,0.6011,stop,2136330426
+aaacgfhgb,window,DS Conf,UMC,True,UMC,949,3,0.7902,stop,1406414526
+aaacgfhgb,comment_only,DS Conf,DS Conf,True,DS Conf,692,3,0.3558,stop,1406414526
+aaacgfhgb,function,DS Conf,MLDepend,True,MLDepend,866,4,0.7731,stop,1406414526
+aajfeejjg,window,UMC,UMC,True,UMC,860,3,0.6055,stop,74397591
+aajfeejjg,comment_only,UMC,UMC,True,UMC,696,3,0.354,stop,74397591
+aajfeejjg,function,UMC,UMC,True,UMC,832,3,0.5953,stop,74397591
+aagcbdejg,comment_only,DS Conf,MCC,True,MCC,693,3,0.3513,stop,1095832937
+aagcbdejg,window,DS Conf,MCM,True,MCM,889,3,0.7015,stop,1095832937
+aagcbdejg,function,DS Conf,MCM,True,MCM,780,3,0.4837,stop,1095832937
+aadfaifgh,comment_only,UMC,UMC,True,UMC,690,3,0.3531,stop,1381190772
+aadfaifgh,window,UMC,UMC,True,UMC,945,3,0.7974,stop,1381190772
+aadfaifgh,function,UMC,UMC,True,UMC,1739,3,2.1103,stop,1381190772
+aaeiefhcb,function,Data Conf,UMC,True,UMC,815,3,0.5854,stop,1390116899
+aaeiefhcb,comment_only,Data Conf,UMC,True,UMC,694,3,0.3494,stop,1390116899
+aaeiefhcb,window,Data Conf,UMC,True,UMC,888,3,0.7065,stop,1390116899
+aahjaaihb,comment_only,Proto,Weight Conf,True,Weight Conf,692,3,0.3551,stop,4127737757
+aahjaaihb,window,Proto,UMC,True,UMC,816,3,0.5947,stop,4127737757
+aahjaaihb,function,Proto,UMC,True,UMC,775,3,0.4832,stop,4127737757
+aafeaihbg,comment_only,MCR,UMC,True,UMC,696,3,0.3539,stop,711274719
+aafeaihbg,window,MCR,UMC,True,UMC,1007,3,0.8759,stop,711274719
+aafeaihbg,function,MCR,UMC,True,UMC,1571,3,1.8436,stop,711274719
+aahhdabij,comment_only,Abs,GC,True,GC,700,2,0.2929,stop,2887748738
+aahhdabij,function,Abs,Abs,True,Abs,999,2,0.8184,stop,2887748738
+aahhdabij,window,Abs,GC,True,GC,845,2,0.5355,stop,2887748738
+aajacfjii,window,MCR,UMC,True,UMC,941,3,0.784,stop,2964863558
+aajacfjii,comment_only,MCR,UMC,True,UMC,703,3,0.3463,stop,2964863558
+aajacfjii,function,MCR,UMC,True,UMC,2448,3,3.3381,stop,2964863558
+aaahbfbhe,window,UMC,UMC,True,UMC,880,3,0.6893,stop,1668291611
+aaahbfbhe,comment_only,UMC,UMC,True,UMC,700,3,0.3544,stop,1668291611
+aaahbfbhe,function,UMC,UMC,True,UMC,820,3,0.5977,stop,1668291611
+aaeigcjdd,comment_only,CDT,MCC,True,MCC,695,3,0.3563,stop,593796036
+aaeigcjdd,function,CDT,MCC,True,MCC,902,3,0.708,stop,593796036
+aaeigcjdd,window,CDT,MCM,True,MCM,926,3,0.7045,stop,593796036
+aafacjjjb,window,HP Conf,MCM,True,MCM,1086,3,0.9773,stop,906815429
+aafacjjjb,comment_only,HP Conf,MCC,True,MCC,712,3,0.3754,stop,906815429
+aafacjjjb,function,HP Conf,MCM,True,MCM,1091,3,0.9897,stop,906815429
+aagciihdj,function,DS Conf,Proto,True,Proto,1585,2,1.7638,stop,2597319961
+aagciihdj,comment_only,DS Conf,GC,True,GC,697,2,0.281,stop,2597319961
+aagciihdj,window,DS Conf,Abs,True,Abs,952,2,0.72,stop,2597319961
+aaiejaeea,comment_only,CDT,DMC,True,DMC,696,3,0.3402,stop,3980070750
+aaiejaeea,function,CDT,MCM,True,MCM,870,3,0.689,stop,3980070750
+aaiejaeea,window,CDT,UMC,True,UMC,882,3,0.6831,stop,3980070750
+aaggcgaie,comment_only,MLKnow,UMC,True,UMC,694,3,0.3372,stop,284436769
+aaggcgaie,window,MLKnow,UMC,True,UMC,903,3,0.6929,stop,284436769
+aaggcgaie,function,MLKnow,UMC,True,UMC,1760,3,2.0537,stop,284436769
+aaejdhjid,comment_only,MLRelia,MLInter,True,MLInter,692,3,0.3404,stop,540879179
+aaejdhjid,window,MLRelia,MLInter,True,MLInter,941,3,0.7675,stop,540879179
+aaejdhjid,function,MLRelia,MLInter,True,MLInter,1270,3,1.2737,stop,540879179
+aaibgbejh,comment_only,CDT,MLDepend,True,MLDepend,700,4,0.3966,stop,969284569
+aaibgbejh,function,CDT,MLDepend,True,MLDepend,835,4,0.6475,stop,969284569
+aaibgbejh,window,CDT,MLDepend,True,MLDepend,897,4,0.7523,stop,969284569
+aaibjdjdj,window,PODT,CDT,True,CDT,935,3,0.7751,stop,2056892510
+aaibjdjdj,function,PODT,DMC,True,DMC,1054,3,0.8668,stop,2056892510
+aaibjdjdj,comment_only,PODT,DS Conf,True,DS Conf,695,3,0.342,stop,2056892510
+aadajbgbb,window,Data Conf,UMC,True,UMC,997,3,0.8636,stop,1288312504
+aadajbgbb,function,Data Conf,UMC,True,UMC,1037,3,0.8742,stop,1288312504
+aadajbgbb,comment_only,Data Conf,DS Conf,True,DS Conf,703,3,0.3519,stop,1288312504
+aagdffgjh,function,MLKnow,MCC,True,MCC,861,3,0.5938,stop,2161902418
+aagdffgjh,window,MLKnow,MCC,True,MCC,980,3,0.7953,stop,2161902418
+aagdffgjh,comment_only,MLKnow,MLKnow,True,MLKnow,695,3,0.3473,stop,2161902418
+aagfgggge,comment_only,PQ,MLRelia,True,MLRelia,705,4,0.4211,stop,3417006712
+aagfgggge,window,PQ,MCM,True,MCM,964,3,0.7972,stop,3417006712
+aagfgggge,function,PQ,Proto,True,Proto,2581,2,3.4536,stop,3417006712
+aaididbfa,comment_only,DS Conf,UMC,True,UMC,691,3,0.349,stop,4266805369
+aaididbfa,function,DS Conf,MCC,True,MCC,810,3,0.5963,stop,4266805369
+aaididbfa,window,DS Conf,UMC,True,UMC,853,3,0.6044,stop,4266805369
+aaedcebbj,function,MCM,MCM,True,MCM,869,3,0.7263,stop,3778767425
+aaedcebbj,comment_only,MCM,UMC,True,UMC,689,3,0.371,stop,3778767425
+aaedcebbj,window,MCM,MCM,True,MCM,881,3,0.7065,stop,3778767425
+aajfajibh,comment_only,HP Conf,MCC,True,MCC,696,3,0.3502,stop,310714678
+aajfajibh,window,HP Conf,MCM,True,MCM,911,3,0.7094,stop,310714678
+aajfajibh,function,HP Conf,MCM,True,MCM,941,3,0.7842,stop,310714678
+aahddjbah,window,MCR,UMC,True,UMC,914,3,0.704,stop,1121737160
+aahddjbah,comment_only,MCR,MLInter,True,MLInter,705,3,0.3717,stop,1121737160
+aahddjbah,function,MCR,UMC,True,UMC,1057,3,0.9598,stop,1121737160
+aajbgadgf,window,MLDepend,MLDepend,True,MLDepend,930,4,0.8375,stop,739453125
+aajbgadgf,function,MLDepend,MLDepend,True,MLDepend,802,4,0.6728,stop,739453125
+aajbgadgf,comment_only,MLDepend,MLDepend,True,MLDepend,701,4,0.3943,stop,739453125
+aaeiedgej,window,Data Conf,MCC,True,MCC,940,3,0.7711,stop,4010041384
+aaeiedgej,function,Data Conf,Proto,True,Proto,2461,2,3.2037,stop,4010041384
+aaeiedgej,comment_only,Data Conf,MCC,True,MCC,690,3,0.3429,stop,4010041384
+aaiiccdhb,function,Abs,UMC,True,UMC,2504,3,3.3537,stop,136889341
+aaiiccdhb,comment_only,Abs,MCC,True,MCC,703,3,0.3386,stop,136889341
+aaiiccdhb,window,Abs,MCC,True,MCC,937,3,0.7658,stop,136889341
+aahfgjaff,function,Layer Conf,UMC,True,UMC,840,3,0.5847,stop,3667800150
+aahfgjaff,window,Layer Conf,UMC,True,UMC,940,3,0.768,stop,3667800150
+aahfgjaff,comment_only,Layer Conf,UMC,True,UMC,702,3,0.3399,stop,3667800150
+aajdcijhj,window,GC,DMC,True,DMC,916,3,0.6972,stop,204862940
+aajdcijhj,comment_only,GC,DMC,True,DMC,711,3,0.355,stop,204862940
+aajdcijhj,function,GC,DMC,True,DMC,796,3,0.4733,stop,204862940
+aajceeeid,function,CDT,UMC,True,UMC,1422,3,1.539,stop,647170037
+aajceeeid,comment_only,CDT,MCC,True,MCC,692,3,0.3421,stop,647170037
+aajceeeid,window,CDT,UMC,True,UMC,912,3,0.6916,stop,647170037
+aagibhhbe,function,BE,Abs,True,Abs,930,2,0.7163,stop,3285061796
+aagibhhbe,comment_only,BE,GC,True,GC,698,2,0.2951,stop,3285061796
+aagibhhbe,window,BE,Abs,True,Abs,906,2,0.6723,stop,3285061796
+aabgahibh,function,MCC,MCM,True,MCM,1231,3,1.2202,stop,651641038
+aabgahibh,comment_only,MCC,MCM,True,MCM,694,3,0.3554,stop,651641038
+aabgahibh,window,MCC,MCM,True,MCM,906,3,0.7104,stop,651641038
+aadfiacgf,comment_only,CDT,Weight Conf,True,Weight Conf,692,3,0.3565,stop,2855349958
+aadfiacgf,function,CDT,MCM,True,MCM,827,3,0.5904,stop,2855349958
+aadfiacgf,window,CDT,UMC,True,UMC,882,3,0.7006,stop,2855349958
+aafeaiffi,comment_only,Layer Conf,Weight Conf,True,Weight Conf,698,3,0.3565,stop,2700553359
+aafeaiffi,function,Layer Conf,Weight Conf,True,Weight Conf,1315,3,1.4791,stop,2700553359
+aafeaiffi,window,Layer Conf,Weight Conf,True,Weight Conf,902,3,0.7179,stop,2700553359
+aajdbjejb,function,MCM,UMC,True,UMC,1021,3,0.8842,stop,709435773
+aajdbjejb,comment_only,MCM,MCM,True,MCM,698,3,0.3558,stop,709435773
+aajdbjejb,window,MCM,MCM,True,MCM,906,3,0.7167,stop,709435773
+aadagdejg,comment_only,CDT,DMC,True,DMC,699,3,0.3528,stop,1890188242
+aadagdejg,window,CDT,DMC,True,DMC,1067,3,0.9757,stop,1890188242
+aadagdejg,function,CDT,DMC,True,DMC,1534,3,1.7447,stop,1890188242
+aafahfcgh,comment_only,Proto,Proto,True,Proto,698,2,0.2967,stop,2179394520
+aafahfcgh,window,Proto,MLInter,True,MLInter,847,3,0.6056,stop,2179394520
+aafahfcgh,function,Proto,Proto,True,Proto,843,2,0.5433,stop,2179394520
+aaeidieej,comment_only,CDT,MCR,True,MCR,694,3,0.3503,stop,3627564189
+aaeidieej,function,CDT,UMC,True,UMC,1221,3,1.2108,stop,3627564189
+aaeidieej,window,CDT,MCM,True,MCM,1038,3,0.89,stop,3627564189
+aagdhccjd,function,MLInter,UMC,True,UMC,2345,3,3.1996,stop,2938948965
+aagdhccjd,comment_only,MLInter,MLKnow,True,MLKnow,691,3,0.3494,stop,2938948965
+aagdhccjd,window,MLInter,Abs,True,Abs,994,2,0.8114,stop,2938948965
+aaahcdafe,window,MCR,Proto,True,Proto,908,2,0.6505,stop,3844899349
+aaahcdafe,comment_only,MCR,MLRelia,True,MLRelia,694,4,0.422,stop,3844899349
+aaahcdafe,function,MCR,Proto,True,Proto,926,2,0.6348,stop,3844899349
+aaiiaefbb,window,Proto,UMC,True,UMC,924,3,0.7061,stop,176292035
+aaiiaefbb,comment_only,Proto,MLKnow,True,MLKnow,701,3,0.3538,stop,176292035
+aaiiaefbb,function,Proto,Proto,True,Proto,995,2,0.8138,stop,176292035
+aaaggiije,window,UMC,UMC,True,UMC,832,3,0.5921,stop,2573275218
+aaaggiije,comment_only,UMC,UMC,True,UMC,692,3,0.3502,stop,2573275218
+aaaggiije,function,UMC,UMC,True,UMC,769,3,0.4775,stop,2573275218
+aajffiiac,window,Abs,UMC,True,UMC,916,3,0.7008,stop,3637422083
+aajffiiac,function,Abs,UMC,True,UMC,870,3,0.7091,stop,3637422083
+aajffiiac,comment_only,Abs,UMC,True,UMC,695,3,0.3585,stop,3637422083
+aaefagbgc,function,MCM,DS Conf,True,DS Conf,1171,3,1.0847,stop,2745442954
+aaefagbgc,window,MCM,DS Conf,True,DS Conf,896,3,0.6916,stop,2745442954
+aaefagbgc,comment_only,MCM,DS Conf,True,DS Conf,697,3,0.3437,stop,2745442954
+aadajcbia,function,ML,Weight Conf,True,Weight Conf,1090,3,0.9889,stop,353439015
+aadajcbia,comment_only,ML,ML,True,ML,711,2,0.3087,stop,353439015
+aadajcbia,window,ML,ML,True,ML,1057,2,0.9028,stop,353439015
+aadhgfgeb,comment_only,MCM,HP Conf,True,HP Conf,699,3,0.3496,stop,855210963
+aadhgfgeb,function,MCM,DS Conf,True,DS Conf,876,3,0.6991,stop,855210963
+aadhgfgeb,window,MCM,DS Conf,True,DS Conf,951,3,0.7843,stop,855210963
+aadfjffba,comment_only,Proto,MCC,True,MCC,696,3,0.3496,stop,1704672560
+aadfjffba,function,Proto,MCC,True,MCC,854,3,0.5929,stop,1704672560
+aadfjffba,window,Proto,UMC,True,UMC,923,3,0.6887,stop,1704672560
+aaibjjjbc,window,Weight Conf,Weight Conf,True,Weight Conf,918,3,0.7042,stop,1152044590
+aaibjjjbc,comment_only,Weight Conf,Weight Conf,True,Weight Conf,696,3,0.3499,stop,1152044590
+aaibjjjbc,function,Weight Conf,UMC,True,UMC,899,3,0.702,stop,1152044590
+aahcgjcji,window,MLDepend,Proto,True,Proto,940,2,0.7251,stop,3156827951
+aahcgjcji,function,MLDepend,Proto,True,Proto,1058,2,0.9077,stop,3156827951
+aahcgjcji,comment_only,MLDepend,HP Conf,True,HP Conf,705,3,0.3684,stop,3156827951
+aajdcifej,comment_only,Proto,MLInter,True,MLInter,704,3,0.3741,stop,3439058206
+aajdcifej,window,Proto,UMC,True,UMC,907,3,0.7101,stop,3439058206
+aajdcifej,function,Proto,UMC,True,UMC,943,3,0.7732,stop,3439058206
+aaeifhdjh,comment_only,PODT,MLInter,True,MLInter,697,3,0.3468,stop,993490598
+aaeifhdjh,window,PODT,DMC,True,DMC,983,3,0.8008,stop,993490598
+aaeifhdjh,function,PODT,DMC,True,DMC,929,3,0.781,stop,993490598
+aaefgiijg,comment_only,MCR,MCR,True,MCR,706,3,0.3615,stop,3932971424
+aaefgiijg,function,MCR,Proto,True,Proto,3503,2,5.1761,stop,3932971424
+aaefgiijg,window,MCR,MCR,True,MCR,1005,3,0.8814,stop,3932971424
+aafejhiea,comment_only,HP Conf,MCC,True,MCC,703,3,0.3537,stop,3964877811
+aafejhiea,function,HP Conf,UMC,True,UMC,1198,3,1.1535,stop,3964877811
+aafejhiea,window,HP Conf,MCC,True,MCC,940,3,0.7894,stop,3964877811
+aaffedgad,comment_only,HP Conf,MCC,True,MCC,694,3,0.3438,stop,569552790
+aaffedgad,function,HP Conf,UMC,True,UMC,1528,3,1.721,stop,569552790
+aaffedgad,window,HP Conf,MCM,True,MCM,876,3,0.7003,stop,569552790
+aadgfdibb,comment_only,MCR,UMC,True,UMC,693,3,0.3545,stop,4172295241
+aadgfdibb,window,MCR,Proto,True,Proto,912,2,0.6517,stop,4172295241
+aadgfdibb,function,MCR,Proto,True,Proto,1235,2,1.1588,stop,4172295241
+aaeiaghhj,window,MLInter,Proto,True,Proto,890,2,0.6226,stop,2847464021
+aaeiaghhj,function,MLInter,UMC,True,UMC,1129,3,1.0631,stop,2847464021
+aaeiaghhj,comment_only,MLInter,GC,True,GC,691,2,0.2827,stop,2847464021
+aaaefgdbc,function,PQ,Proto,True,Proto,3634,2,5.3329,stop,2564219956
+aaaefgdbc,window,PQ,Proto,True,Proto,968,2,0.7197,stop,2564219956
+aaaefgdbc,comment_only,PQ,PQ,True,PQ,692,3,0.3408,stop,2564219956
+aagbbjgij,function,MLDepend,UMC,True,UMC,1850,3,2.2821,stop,4053879604
+aagbbjgij,window,MLDepend,UMC,True,UMC,1039,3,0.8672,stop,4053879604
+aagbbjgij,comment_only,MLDepend,DMC,True,DMC,701,3,0.3467,stop,4053879604
+aajfiibhb,function,MCM,UMC,True,UMC,807,3,0.5765,stop,1796942451
+aajfiibhb,comment_only,MCM,MCC,True,MCC,703,3,0.3416,stop,1796942451
+aajfiibhb,window,MCM,UMC,True,UMC,928,3,0.6914,stop,1796942451
+aadageajc,window,Proto,UMC,True,UMC,855,3,0.5926,stop,3802782190
+aadageajc,function,Proto,MCM,True,MCM,816,3,0.5919,stop,3802782190
+aadageajc,comment_only,Proto,MCM,True,MCM,691,3,0.3516,stop,3802782190
+aaffdcfdh,window,HP Conf,HP Conf,True,HP Conf,911,3,0.711,stop,1030426227
+aaffdcfdh,function,HP Conf,HP Conf,True,HP Conf,1325,3,1.4452,stop,1030426227
+aaffdcfdh,comment_only,HP Conf,HP Conf,True,HP Conf,698,3,0.3443,stop,1030426227
+aafbdjhfg,comment_only,Layer Conf,Weight Conf,True,Weight Conf,693,3,0.3472,stop,1159041038
+aafbdjhfg,function,Layer Conf,Weight Conf,True,Weight Conf,1053,3,0.8809,stop,1159041038
+aafbdjhfg,window,Layer Conf,Weight Conf,True,Weight Conf,902,3,0.7137,stop,1159041038
+aaedjcbec,function,MLDepend,Abs,True,Abs,926,2,0.6408,stop,2120444183
+aaedjcbec,comment_only,MLDepend,Abs,True,Abs,695,2,0.2913,stop,2120444183
+aaedjcbec,window,MLDepend,Abs,True,Abs,983,2,0.7301,stop,2120444183
+aagaghfef,window,Layer Conf,MCM,True,MCM,981,3,0.8072,stop,2352309689
+aagaghfef,comment_only,Layer Conf,MCM,True,MCM,692,3,0.3573,stop,2352309689
+aagaghfef,function,Layer Conf,UMC,True,UMC,1337,3,1.458,stop,2352309689
+aaicecaej,comment_only,Weight Conf,Weight Conf,True,Weight Conf,696,3,0.352,stop,1326299592
+aaicecaej,function,Weight Conf,Weight Conf,True,Weight Conf,1391,3,1.5485,stop,1326299592
+aaicecaej,window,Weight Conf,Weight Conf,True,Weight Conf,948,3,0.7903,stop,1326299592
+aaffdjjaa,window,Layer Conf,MLDepend,True,MLDepend,928,4,0.7662,stop,778447392
+aaffdjjaa,function,Layer Conf,DMC,True,DMC,1026,3,0.8885,stop,778447392
+aaffdjjaa,comment_only,Layer Conf,MLDepend,True,MLDepend,711,4,0.4291,stop,778447392
+aaijaggcb,window,PODT,MLKnow,True,MLKnow,997,3,0.8588,stop,881067295
+aaijaggcb,function,PODT,MLKnow,True,MLKnow,1254,3,1.2729,stop,881067295
+aaijaggcb,comment_only,PODT,DS Conf,True,DS Conf,711,3,0.3605,stop,881067295
+aahicagej,function,Weight Conf,UMC,True,UMC,848,3,0.5914,stop,2197496962
+aahicagej,comment_only,Weight Conf,MCC,True,MCC,693,3,0.3398,stop,2197496962
+aahicagej,window,Weight Conf,Proto,True,Proto,910,2,0.6379,stop,2197496962
+aaedghfjd,comment_only,MCC,MCC,True,MCC,701,3,0.3447,stop,366587590
+aaedghfjd,function,MCC,MCC,True,MCC,1062,3,0.9543,stop,366587590
+aaedghfjd,window,MCC,MCC,True,MCC,929,3,0.7762,stop,366587590
+aadghcged,window,Abs,UMC,True,UMC,914,3,0.6984,stop,1971779564
+aadghcged,function,Abs,MCC,True,MCC,948,3,0.7781,stop,1971779564
+aadghcged,comment_only,Abs,MCC,True,MCC,704,3,0.3418,stop,1971779564
+aahjgeiic,function,MLDepend,MLDepend,True,MLDepend,960,4,0.8362,stop,2761062037
+aahjgeiic,window,MLDepend,MLDepend,True,MLDepend,883,4,0.7443,stop,2761062037
+aahjgeiic,comment_only,MLDepend,MLDepend,True,MLDepend,695,4,0.3996,stop,2761062037
+aagfeiiaj,window,Weight Conf,Weight Conf,True,Weight Conf,921,3,0.6816,stop,36639015
+aagfeiiaj,comment_only,Weight Conf,Weight Conf,True,Weight Conf,696,3,0.3444,stop,36639015
+aagfeiiaj,function,Weight Conf,Weight Conf,True,Weight Conf,1157,3,1.0632,stop,36639015
+aafadcigh,comment_only,MLRelia,MLInter,True,MLInter,691,3,0.3389,stop,3785932632
+aafadcigh,function,MLRelia,UMC,True,UMC,934,3,0.7745,stop,3785932632
+aafadcigh,window,MLRelia,Proto,True,Proto,953,2,0.7157,stop,3785932632
+aahjdcjgg,function,PODT,UMC,True,UMC,2335,3,3.0823,stop,149620210
+aahjdcjgg,comment_only,PODT,UMC,True,UMC,699,3,0.3526,stop,149620210
+aahjdcjgg,window,PODT,UMC,True,UMC,918,3,0.6959,stop,149620210
+aaeieahii,comment_only,PODT,DS Conf,True,DS Conf,694,3,0.3515,stop,3926765240
+aaeieahii,window,PODT,DS Conf,True,DS Conf,933,3,0.7894,stop,3926765240
+aaeieahii,function,PODT,MCC,True,MCC,1127,3,1.0786,stop,3926765240
+aadgecacc,window,MCC,MCM,True,MCM,985,3,0.8099,stop,1592164713
+aadgecacc,function,MCC,MCM,True,MCM,1922,3,2.4355,stop,1592164713
+aadgecacc,comment_only,MCC,MCM,True,MCM,699,3,0.3494,stop,1592164713
+aaeiebjie,window,PODT,MCC,True,MCC,959,3,0.7914,stop,3200529781
+aaeiebjie,comment_only,PODT,UMC,True,UMC,690,3,0.3501,stop,3200529781
+aaeiebjie,function,PODT,UMC,True,UMC,917,3,0.6986,stop,3200529781
+aafadaiij,function,Layer Conf,MCC,True,MCC,867,3,0.7033,stop,2623337125
+aafadaiij,comment_only,Layer Conf,DMC,True,DMC,692,3,0.3567,stop,2623337125
+aafadaiij,window,Layer Conf,UMC,True,UMC,935,3,0.8212,stop,2623337125
+aaeejjfbc,function,MCC,UMC,True,UMC,1403,3,1.5426,stop,2317039749
+aaeejjfbc,window,MCC,Weight Conf,True,Weight Conf,999,3,0.885,stop,2317039749
+aaeejjfbc,comment_only,MCC,Weight Conf,True,Weight Conf,702,3,0.3543,stop,2317039749
+aafdibbge,comment_only,PQ,Proto,True,Proto,697,2,0.2905,stop,3145555493
+aafdibbge,function,PQ,Proto,True,Proto,1013,2,0.8177,stop,3145555493
+aafdibbge,window,PQ,Proto,True,Proto,1014,2,0.82,stop,3145555493
+aaeidjjhd,comment_only,MLRelia,MCM,True,MCM,696,3,0.3644,stop,2837444649
+aaeidjjhd,function,MLRelia,UMC,True,UMC,1175,3,1.1571,stop,2837444649
+aaeidjjhd,window,MLRelia,MCM,True,MCM,976,3,0.7933,stop,2837444649
+aagfjdjeg,function,Abs,MCM,True,MCM,2961,3,4.4764,stop,3345136619
+aagfjdjeg,comment_only,Abs,MCM,True,MCM,693,3,0.3563,stop,3345136619
+aagfjdjeg,window,Abs,MCM,True,MCM,1056,3,0.927,stop,3345136619
+aahiiegbc,function,Abs,MCM,True,MCM,795,3,0.4866,stop,764435806
+aahiiegbc,comment_only,Abs,MCM,True,MCM,691,3,0.3485,stop,764435806
+aahiiegbc,window,Abs,MCM,True,MCM,864,3,0.6121,stop,764435806
+aajcfhiga,function,Abs,UMC,True,UMC,1243,3,1.2906,stop,709357811
+aajcfhiga,comment_only,Abs,MCM,True,MCM,697,3,0.3547,stop,709357811
+aajcfhiga,window,Abs,UMC,True,UMC,990,3,0.8203,stop,709357811
+aahiigecd,function,Weight Conf,Weight Conf,True,Weight Conf,982,3,0.7983,stop,4021208937
+aahiigecd,window,Weight Conf,Weight Conf,True,Weight Conf,998,3,0.8729,stop,4021208937
+aahiigecd,comment_only,Weight Conf,Weight Conf,True,Weight Conf,697,3,0.3437,stop,4021208937

@@ -1,0 +1,11 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/gpt-oss-20b",
+  "model_name": "gpt-oss-20b",
+  "run_dir": "results/run-20251014-183557-gpt-oss-20b",
+  "max_yn_tokens": 2048,
+  "max_pick_tokens": 2048,
+  "max_fallback_tokens": 2048,
+  "fallback_abbr": "Data Conf",
+  "method": "YN polling -> pick best"
+}

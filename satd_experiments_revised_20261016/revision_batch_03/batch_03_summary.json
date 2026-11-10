@@ -1,0 +1,2713 @@
+{
+  "status": "passed",
+  "modified_existing_code_files": 120,
+  "unchanged_existing_code_files": 4,
+  "original_scope_ast_passed": 124,
+  "new_python_files_ast_passed": 10,
+  "new_files": [
+    "AUXILIARY_REVISED_PROTOCOL.md",
+    "auxiliary_protocol.py",
+    "icl_revised.py",
+    "pilot_context_20261016/analyze_pilot_revised.py",
+    "pilot_context_20261016/prepare_pilot_revised.py",
+    "pilot_context_20261016/reference_revised.py",
+    "pilot_context_20261016/run_pilot_revised.py",
+    "pilot_context_20261016/verified_subset_revised.py",
+    "pilot_context_20261016/verify_historical_revised.py",
+    "qwen_auxiliary_runtime.py",
+    "revision_runtime.py"
+  ],
+  "original_source_hash_files_checked": 124,
+  "original_source_changed": [],
+  "historical_dataset_result_frozen_files_hash_checked": 747,
+  "historical_dataset_result_frozen_hash_mismatches": [],
+  "replaced_executable_lines_preserved_as_comments": 11402,
+  "comment_validation": "Normalize nested history comment prefixes; subtract preexisting commented lines; all replaced executable lines remain represented. Credential bytes are an explicit safety exception.",
+  "user_excluded_files": [
+    "ICL_Ob_qwen-8b.py",
+    "ICL_Ob_qwen-8b_new.py",
+    "ICL_Ob_qwen-8b_v0.py",
+    "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "battle/gpt_battle.py",
+    "battle/test.py",
+    "data_process.py",
+    "download_model.py",
+    "original_COT.py",
+    "test1.py",
+    "test3.py"
+  ],
+  "models_tokenizers_experiments_functions_tests_executed": false,
+  "validation": "AST/source/hash/diff and read-only peer review only",
+  "errors": [],
+  "files": [
+    {
+      "file": "ICL_Ob_qwen-8b.py",
+      "changed_this_batch": true,
+      "before_sha256": "a541eb49467959b7c3a831da2109072af9253b26ea8e734f9b38ebcf9d81d3ba",
+      "after_sha256": "2cfb4f1d6c250dc60ce7805f515a097c4c54ba24a714db09b4e7a3a6f23a2c0e",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": true,
+      "replaced_executable_lines": 341,
+      "active_functions": {},
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "ICL_Ob_qwen-8b_new.py",
+      "changed_this_batch": true,
+      "before_sha256": "790ad6b4cf001ca6ed31191bf73e4d9b1467480fcdb1f20c7eedae9dba7cdb38",
+      "after_sha256": "0328b31066d64c201bf84e8f68bdf80b7615f9e9e475d06276d81a6351155f2e",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": true,
+      "replaced_executable_lines": 291,
+      "active_functions": {},
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "ICL_Ob_qwen-8b_v0.py",
+      "changed_this_batch": true,
+      "before_sha256": "656ceed08057c204bbbf5d8fcfef0ff51007e01ace4a691c12c670723b3808ec",
+      "after_sha256": "0be8934a463133a8b42cfd967d4a73873950ce4729cf4b2590208ed668bf8b8f",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": true,
+      "replaced_executable_lines": 311,
+      "active_functions": {},
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "79bbd73fca25e205edb14d5e3a0b30949eb73317e489f84d7c142c20d58d7f0e",
+      "after_sha256": "2cbd7992ac59a57dfaaa778391b9c8c738d5851f7373a3a34e11c76fdca9fb41",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 96,
+      "active_functions": {
+        "build_prompt": 710,
+        "simple_extract": 732,
+        "classify": 791
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "bc28f332877b7cb337803d8d064db03e5bbbdd6cc6184937803bf7ce2c5729ca",
+      "after_sha256": "734414de5a4f2ad1f7bf7720e56a5b099c39a1b2310b02473d25dbdb747a6de9",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 69,
+      "active_functions": {
+        "build_prompt": 708,
+        "extract_abbr": 739,
+        "text_gen": 765,
+        "classify": 794
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "5a687765ad904bd06c413cab57e210a91f22256c9d400dda6cc29cf41a91c5d6",
+      "after_sha256": "62ee9b3d2e283ea87f0252b0a39c8351a358f0f16e4b4b55a60c6a9e369388de",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 81,
+      "active_functions": {
+        "build_prompt": 900,
+        "simple_extract": 922,
+        "classify": 955
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "27b80023955d743ade415f1d2ccebc472b1e7167f7f0dc3352eaf9b0e81fce1d",
+      "after_sha256": "2c70c2f4e64fdc14e0cad838bb70d1aa300e1fd3d85813e11cbfcad9d80e318d",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 84,
+      "active_functions": {
+        "build_prompt": 706,
+        "simple_extract": 728,
+        "classify": 766
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "93b36c40f4a732ed799053d7d72f9523398fbdeab0a4568c03d0a14534a99857",
+      "after_sha256": "2445bfdd4169265206e10cd090b4162afe3d670afccc4ffc2fa2025b6b5a9d19",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 84,
+      "active_functions": {
+        "build_prompt": 598,
+        "simple_extract": 620,
+        "classify": 657
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "87aa6db2dfbb548e00f21959a926832651f2006a808b62629084abc28f8d86a8",
+      "after_sha256": "2207f634f33c74a77720ff52565039cf2887d76d09679606ee114bbb525e2e0d",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 75,
+      "active_functions": {
+        "build_prompt": 903,
+        "simple_extract": 923,
+        "classify": 956
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "d05de44b49e727e0b401922967a8e3c7590d2aeb91fc1066f9aa720d902e92ad",
+      "after_sha256": "fe91d48abeb9763ab780c832fc7b43c773ac003c17eec7c579ce9d094df48f0c",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 75,
+      "active_functions": {
+        "build_prompt": 909,
+        "simple_extract": 929,
+        "classify": 962
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "c1e2a2343dc048493a5d74840f745d0c87053fadb91ac40c6f41d76b87d829f0",
+      "after_sha256": "0d415b5c17393495659447d3812bb88ca8318bd8955bca89355ca92dbc5b749c",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 75,
+      "active_functions": {
+        "build_prompt": 903,
+        "simple_extract": 923,
+        "classify": 954
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "709aac8ad23c93c856535618db6be33ca5725411a57537af3e4a946240a1b06e",
+      "after_sha256": "c9d7fbdd571d41d4fbc862c1c6a0ca6661e8dc031065b6cef005de7bf627097f",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 92,
+      "active_functions": {
+        "_canon": 62,
+        "normalize_to_full": 69,
+        "build_prompt": 849,
+        "extract_abbr_from_text": 883,
+        "classify": 922
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "613a2b1f6a62c6bc3916d205633c5a00a2fd00567648a7ec15ef3430c34d4969",
+      "after_sha256": "b821ed3b5f7a2dff74d4773961c67a378f9651bffe96b756087b8c5a0411e877",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 85,
+      "active_functions": {
+        "build_prompt": 372,
+        "simple_extract": 394,
+        "classify": 432
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "da59e080cf1234e039690d7327e92809fd87b2673cb7d3bc43323a5a1686eceb",
+      "after_sha256": "9e5711fc07a2fd36117b91202734b0acbb0b78779dd5e903e0405f329c322444",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 71,
+      "active_functions": {
+        "build_prompt": 369,
+        "extract_abbr": 400,
+        "text_gen": 426,
+        "classify": 449
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "f5d5ef154e7a71c50b557fea42d43aaf759a7c4a096eaf312eded370d6661173",
+      "after_sha256": "bb82dd53200ab178cd18a154f9ca86adb12c6826bec8cdda59a1480f1843d2a0",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 87,
+      "active_functions": {
+        "build_prompt": 374,
+        "simple_extract": 396,
+        "classify": 434
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "a8b0ce9f459d27c097e5712c50f2df2439f3caf1d56cba857dc5af7b3146b19c",
+      "after_sha256": "36b1486abe8cb372d60bba6a7bcfae6a3900f6e4991bbc332d2317ad7f17f6d3",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 87,
+      "active_functions": {
+        "build_prompt": 374,
+        "simple_extract": 396,
+        "classify": 434
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "2df61e1bb7c275f8d45f3874e30e65659be2a2362a59d812d37344590e4f7b72",
+      "after_sha256": "97f0f6f215adcb3536d0796273e77da76b83903d28b7c4dc9d9f36a626985499",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 87,
+      "active_functions": {
+        "build_prompt": 374,
+        "simple_extract": 396,
+        "classify": 434
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "38c57cac0eacf7f1ce9fc79e3cf88736982b0d98fc9a452bdf109bbb3cb1ae9f",
+      "after_sha256": "77612634f111d31704475851bb71d97b08124440da79c3608dfe99de6952c4cf",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 78,
+      "active_functions": {
+        "build_prompt": 375,
+        "simple_extract": 395,
+        "classify": 427
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "31001fbfc76f4e7506a03b81e45ebb83858c2d4b6d55e2639222f1817965dd4d",
+      "after_sha256": "6e822772d4b5d038ee8205ab3680eefbdaa66672b9d0fed8c4f99392df8544b9",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 78,
+      "active_functions": {
+        "build_prompt": 375,
+        "simple_extract": 395,
+        "classify": 427
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "d08e3d007d3a2fa02cdc719b88dc14e374f547e2549e6cd2769b2788eed4dcd8",
+      "after_sha256": "16a28d14c64ca4d8a9ba4c6cda9c0dd5710c0eefbba0c067089d8a7a3db8c3f6",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 76,
+      "active_functions": {
+        "build_prompt": 374,
+        "simple_extract": 394,
+        "classify": 424
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "68929cb682d27f68b98630d930a67e59b34861f04cbab87e6ad590f63bb03003",
+      "after_sha256": "538d2506fa7650b8a802de3b8e1750bee447edd79d8cefcde09c71ddc371d3f4",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 92,
+      "active_functions": {
+        "_canon": 62,
+        "normalize_to_full": 69,
+        "build_prompt": 346,
+        "extract_abbr_from_text": 377,
+        "classify": 416
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "changed_this_batch": true,
+      "before_sha256": "4d8272b9befd9d9affdddc7c0331b3a6c6171facfe07e96a77cc0dabe5c75bc3",
+      "after_sha256": "9f098988101c96775babffced854824d107e2de2f680a3ddf6fed6e7796248ea",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 113,
+      "active_functions": {
+        "build_prompt": 166,
+        "simple_extract": 188,
+        "classify": 226,
+        "build_reason_prompt": 238,
+        "extract_reason": 260,
+        "generate_reason": 289
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "changed_this_batch": true,
+      "before_sha256": "f74ef2995c52f3a4e03459f9ec038dce9fa644063da01268a8be245a869ad976",
+      "after_sha256": "5588e58e39908a3536b1310de758b441db8af3dcbc97030a2902e77a2f7956d3",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 113,
+      "active_functions": {
+        "build_prompt": 258,
+        "simple_extract": 280,
+        "classify": 318,
+        "build_reason_prompt": 330,
+        "extract_reason": 352,
+        "generate_reason": 381
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "changed_this_batch": true,
+      "before_sha256": "dad510a0517f98c864bf65d10e23743658437604cb7f0325ac405c87f536ecf4",
+      "after_sha256": "373a3e8ae998c6a668ca380e86927214f76efc224930b0c5fc192cc890bf65a8",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 113,
+      "active_functions": {
+        "build_prompt": 258,
+        "simple_extract": 280,
+        "classify": 318,
+        "build_reason_prompt": 330,
+        "extract_reason": 352,
+        "generate_reason": 381
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "changed_this_batch": true,
+      "before_sha256": "1884b42e29da7571b7e3d259dae68286e99b5ec4d8d3e8f74982a929588d505c",
+      "after_sha256": "5ef744e028949be7b081b569a553c7d7bb4f78342055cc6f6ad628c4f99ac5a1",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 139,
+      "active_functions": {
+        "_canon": 62,
+        "normalize_to_full": 69,
+        "build_prompt": 232,
+        "extract_abbr_from_text": 258,
+        "build_reason_prompt": 284,
+        "_extract_visible": 305,
+        "parse_reason": 328,
+        "generate_reason": 373,
+        "classify": 401
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "5a173899ab6e81701450a6acfa819812e7c288c362b2826d9e42e5fe68f48051",
+      "after_sha256": "2bc3781d9c08e3463d624c1aa3408c700b4e5392f140cd501f16c08575946c0c",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 84,
+      "active_functions": {
+        "build_prompt": 126,
+        "simple_extract": 148,
+        "classify": 186
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "16c3d32ea447f65c8a715dabaa299b9144af11eb7b863cbdb21a5565b39386a3",
+      "after_sha256": "380279138678d7eae2fa48745770d3b2f59eb3abdfa7f88990325582ecefee14",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 69,
+      "active_functions": {
+        "build_prompt": 125,
+        "extract_abbr": 156,
+        "text_gen": 182,
+        "classify": 204
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "48045954194b5594e943e62bbe0e712c265ad1fb6a298fcb22cc3d551a64ef06",
+      "after_sha256": "6f5907c9c808f4030724007b52f2218969b8672a7b793c6f0ee437ef2004cac8",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 81,
+      "active_functions": {
+        "build_prompt": 122,
+        "simple_extract": 144,
+        "classify": 178
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "26844ab0aed2307eceee5fcbbeb51a5f20f1b18e7d6a8d2259905f0ed8f530b9",
+      "after_sha256": "f8f3ae0796c8a6e43f41904048a3454ae9a0652d84ceda281019f5424a342be6",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 84,
+      "active_functions": {
+        "build_prompt": 126,
+        "simple_extract": 148,
+        "classify": 186
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "5c8638d37821820d538740db8b73b0bf1c5d150d4f539fd961a09fc568ef6759",
+      "after_sha256": "8eec529b20d4ea02d9036e89f93bcb93ee8b6e406a5cbd438ee41d777e04af94",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 84,
+      "active_functions": {
+        "build_prompt": 128,
+        "simple_extract": 150,
+        "classify": 187
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "7f828db3594da216cc7e7efb3e9273c6b45c77c67670ea3c0c07429c9c8edfef",
+      "after_sha256": "a2d23bf1cf2dc13b96f2810346a81c5e08346ce607f84c02dc5dde93a863e9f3",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 75,
+      "active_functions": {
+        "build_prompt": 123,
+        "simple_extract": 143,
+        "classify": 173
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "a3aedc2f71c02129877bcb593212d042fd6dcf83432f612b7845aa39e21edeb1",
+      "after_sha256": "d127e41df1087e924b6f1f3fdf3d29e93d6d72c31c4a3b2ce3bab7b135e89996",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 75,
+      "active_functions": {
+        "build_prompt": 124,
+        "simple_extract": 144,
+        "classify": 174
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "4300ce16199d06d022b75e6651b5c05858a0e031aaead3cea0cfd32c6cb4972f",
+      "after_sha256": "de355e910e6ed5f54720952048e7229599f36cd28ecfeb15cfe486753801ab7a",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 75,
+      "active_functions": {
+        "build_prompt": 123,
+        "simple_extract": 143,
+        "classify": 174
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "8cef2d07b17b73f079b557171b9e7f9cf103be56310caee74a8dac9cb0b2af1e",
+      "after_sha256": "b3bf204314826b99a354ddc7bd471e88d4c80f373b77be2af88d189ca4c22e9b",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 91,
+      "active_functions": {
+        "_canon": 62,
+        "normalize_to_full": 69,
+        "build_prompt": 141,
+        "extract_abbr_from_text": 172,
+        "classify": 211
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "ab2c4c860ed78db405da4d84537e622bb12dd9cb13b0d76c25793ef1f7ba5fcb",
+      "after_sha256": "07a89d8ad30f70b0d424bf38b8add14b6ae8a3867312012ba8bea4884ec0a301",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 85,
+      "active_functions": {
+        "build_prompt": 162,
+        "simple_extract": 184,
+        "classify": 222
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "2ff12b7ab78ed6ecc63759021afa3b47544de5a621493dc62146e084dd03fd33",
+      "after_sha256": "ddb6b28fd4e4adbfdf44c8b481bee152ae47a5f4af4ddd69100e4b8ba9a9ecfa",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 71,
+      "active_functions": {
+        "build_prompt": 159,
+        "extract_abbr": 190,
+        "text_gen": 216,
+        "classify": 239
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "889ede043cfc3d86da3cb67d95935e2efdce4d3c9587695ed08e025b4435149b",
+      "after_sha256": "372f56e4629157246ea207ce554a802d398f04b12eb04f8961665d83f542cbaf",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 87,
+      "active_functions": {
+        "build_prompt": 163,
+        "simple_extract": 185,
+        "classify": 223
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "3c5f0df406af45f047a929775af1f0802a0c1ab8effe213fe1d657dce7848917",
+      "after_sha256": "94a72c56df2a1540eb3bccf275bef1bbc89b6346fd3a159b581b4bf72eacd21e",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 87,
+      "active_functions": {
+        "build_prompt": 163,
+        "simple_extract": 185,
+        "classify": 223
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "changed_this_batch": true,
+      "before_sha256": "6733705a2faf1d404810d1b33790270b7af781f15a712b1919aed7d6067d0a2a",
+      "after_sha256": "9f67a56b1091989da11fe4dffe2289390c7cdecffdf5734a59e48263c3663117",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 85,
+      "active_functions": {
+        "build_prompt": 128,
+        "simple_extract": 150,
+        "classify": 188
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "b68ebb846f5cf69349f9bbb2ad8de3095088cb181c5c6b4b44c9171d2b2dd1cd",
+      "after_sha256": "4cc30ee0556fa329d335d22bbbf998390d03e722642d55ab0a972cf7150bf4eb",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 87,
+      "active_functions": {
+        "build_prompt": 163,
+        "simple_extract": 185,
+        "classify": 223
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+      "changed_this_batch": true,
+      "before_sha256": "638dbe63959ae0751c79286e06297d2305ed1ccc6cddac08d606511d76a333f1",
+      "after_sha256": "31b48fb97a9fea7be593b21a17c569237411dcf22b510bb783eb23def08a30b9",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 85,
+      "active_functions": {
+        "build_prompt": 123,
+        "simple_extract": 145,
+        "classify": 183
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "c10ebceaf1afac421e7c1a1649da091a51713ae0773027de57064b27343f4be5",
+      "after_sha256": "957f2dfdec9a58e4757d5a8cf6e62e71fb22717f452b473e39d9efd11c7b1d29",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 78,
+      "active_functions": {
+        "build_prompt": 164,
+        "simple_extract": 184,
+        "classify": 216
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "5a308b09c1fc3078f53afa07ffd3faae301218dffe8b3fc421e8866387dd6316",
+      "after_sha256": "6020b7712ae088eed2587e3929a40ff87b83b565be48cb88eb19d1b645b8a092",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 78,
+      "active_functions": {
+        "build_prompt": 164,
+        "simple_extract": 184,
+        "classify": 216
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "2e408e633d55110558bfa2802d39241623e45cda10ee07b0b9d1a028a9ea5b88",
+      "after_sha256": "bf8eaffd89c3faa18365b1274af0f332260939aa19b79924a22d0f10103bf3ae",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 76,
+      "active_functions": {
+        "build_prompt": 163,
+        "simple_extract": 183,
+        "classify": 213
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "5ee76121a18b563a1229ab35945ce2ab47a8ffd701e44bf08ea3ae84d499b0fc",
+      "after_sha256": "93fb3ef16bd752c8f062899bc660490f2141197982cc9045de59f7bb0409570f",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 92,
+      "active_functions": {
+        "_canon": 62,
+        "normalize_to_full": 69,
+        "build_prompt": 181,
+        "extract_abbr_from_text": 212,
+        "classify": 251
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+      "changed_this_batch": true,
+      "before_sha256": "cec64e05b7fe6779293c482e5b9aed15ef337638a60f465eb28e44970ec4787b",
+      "after_sha256": "b7df32e411aa92a3fd49f96ccd54b5997d42130522d302c2c14c966e59222766",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 83,
+      "active_functions": {
+        "build_prompt": 155,
+        "simple_extract": 178,
+        "extract_tagged_answer": 193,
+        "classify": 228
+      },
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "changed_this_batch": true,
+      "before_sha256": "4d8272b9befd9d9affdddc7c0331b3a6c6171facfe07e96a77cc0dabe5c75bc3",
+      "after_sha256": "9f098988101c96775babffced854824d107e2de2f680a3ddf6fed6e7796248ea",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 113,
+      "active_functions": {
+        "build_prompt": 166,
+        "simple_extract": 188,
+        "classify": 226,
+        "build_reason_prompt": 238,
+        "extract_reason": 260,
+        "generate_reason": 289
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "changed_this_batch": true,
+      "before_sha256": "6ac4eed3ffa9a9308331e17a0740e9e2329d14de2fb2523824d416fa88e65d03",
+      "after_sha256": "a94c62039279548b90d0a5cff5b55c058eb595b27bef5084ffbfbf2c0dbba6a2",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 113,
+      "active_functions": {
+        "build_prompt": 166,
+        "simple_extract": 188,
+        "classify": 226,
+        "build_reason_prompt": 238,
+        "extract_reason": 260,
+        "generate_reason": 289
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "changed_this_batch": true,
+      "before_sha256": "c6bda67294a8f000491c7720a0d82d9e48c63281118b0dd526c30af2d431a48d",
+      "after_sha256": "bd1fef3f7f6ec93c02c3684b6283707ac433bfde9b708539c36e0c22173af2cf",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 113,
+      "active_functions": {
+        "build_prompt": 166,
+        "simple_extract": 188,
+        "classify": 226,
+        "build_reason_prompt": 238,
+        "extract_reason": 260,
+        "generate_reason": 289
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "changed_this_batch": true,
+      "before_sha256": "2d191747b93672b05e2b3891c42f815794a49c8c4f24e5a8663cb08ecc9e0dd5",
+      "after_sha256": "02a006e92604ee9c981498123e0194e7e5619893a006694a16b3e6d36145323c",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 139,
+      "active_functions": {
+        "_canon": 62,
+        "normalize_to_full": 69,
+        "build_prompt": 140,
+        "extract_abbr_from_text": 166,
+        "build_reason_prompt": 192,
+        "_extract_visible": 213,
+        "parse_reason": 236,
+        "generate_reason": 281,
+        "classify": 309
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "7c706c905b4814e5fc3de7c5e7471d6a28b4f3d3d82f59c54090e653e7dac9fc",
+      "after_sha256": "8f6e917921800dbc18f3d6f13692f7bca969b4bf3a3bf78deb7f28a9297f52db",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 106,
+      "active_functions": {
+        "build_prompt": 116,
+        "simple_extract": 141,
+        "parse_abbr_and_reason": 168,
+        "classify": 210
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "16cd37710b001e6936a3323f9b8d556bc0fef349a2ef6bb6cc65641357203bd5",
+      "after_sha256": "9e1d92cd4e20bfb251d3b42e5f715e71d04e8c9696a2d9be9d679917ba033e9a",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 97,
+      "active_functions": {
+        "build_prompt": 123,
+        "parse_abbr_and_reason": 162,
+        "extract_abbr": 192,
+        "text_gen": 213,
+        "classify": 239
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "e2d81c82db093c861b6578c2a3c0cf3103e75c490c8c44f7128aea04e39e482f",
+      "after_sha256": "74cc258b2b998af623674be20dd71915b8dace82eaf14418d75aa19d029a7b9e",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 103,
+      "active_functions": {
+        "build_prompt": 116,
+        "simple_extract": 141,
+        "parse_abbr_and_reason": 168,
+        "classify": 207
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "df55c489fdac9ab58a9b3ba07648a8c829cf13d7da17f9710ff5921edb7959b9",
+      "after_sha256": "72f0b7658283da73c2e5c16a53692c98b2b2e7f22ad225eaab87f1cce16f503f",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 108,
+      "active_functions": {
+        "build_prompt": 130,
+        "simple_extract": 160,
+        "extract_reason": 183,
+        "classify": 235
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "1081d62a784390107b726f36868490b44c179a0b9e6e327659920520b47909b9",
+      "after_sha256": "63a6ed5e9177dce131ba8902b2c2606292a7d2b6329eec4a7b1e27bbf01def14",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 108,
+      "active_functions": {
+        "build_prompt": 130,
+        "simple_extract": 160,
+        "extract_reason": 183,
+        "classify": 235
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "237fe018eecbf423c15f3ccc2d037e60d65fc5d77619cba5f65a7d9342ab5d00",
+      "after_sha256": "4c04132e1f154334abf5daa8f1befc9c53a6db07f5b22d68d9d25ad9f36f6506",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 99,
+      "active_functions": {
+        "build_prompt": 127,
+        "simple_extract": 150,
+        "parse_abbr_and_reason": 178,
+        "classify": 214
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "5bdf4b5591a19b61cf220984044c330e2dab1081fb38b53e52c66e77163a3426",
+      "after_sha256": "718ec63f2bfd95feb96890a49202897bf324cab98218af5e4f7137c82739b26e",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 104,
+      "active_functions": {
+        "build_prompt": 127,
+        "simple_extract": 154,
+        "parse_abbr_and_reason": 189,
+        "classify": 225
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+      "changed_this_batch": true,
+      "before_sha256": "956d161a3b090fcf1e926bc5ce2af8351f070b48c2840f148f069d37f5ad2417",
+      "after_sha256": "a8648b2524bcfe3b9872aab8d414c4bf17eb4294277497a58caf2f6694958f6b",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 104,
+      "active_functions": {
+        "build_prompt": 127,
+        "simple_extract": 154,
+        "parse_abbr_and_reason": 189,
+        "classify": 225
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "9722780dd61d1be80398d055ca2a41b485fcb228a9a723e2a05e03a6b9d3f03c",
+      "after_sha256": "99557b21cf166029836bdec299ab4f3c0eb4a2bb9f16a0e9189c4e0cb500ead5",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 118,
+      "active_functions": {
+        "_canon": 62,
+        "normalize_to_full": 69,
+        "build_prompt": 147,
+        "extract_abbr_from_text": 190,
+        "extract_reason_from_text": 209,
+        "classify": 252
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "battle/gpt_battle.py",
+      "changed_this_batch": true,
+      "before_sha256": "4fe931df45d7bb451a54f8669fe1a68a4697ee74f8d1032b88aafb2090f82164",
+      "after_sha256": "723bfdf452e35dddaf61e87d215b172ae60229cb2510bba505352ac779588410",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 78,
+      "active_functions": {
+        "_revision_generate": 69,
+        "_canon": 90,
+        "normalize_to_full": 96,
+        "build_referee_prompt": 165,
+        "extract_abbr": 227,
+        "extract_reason": 235,
+        "read_preds": 297,
+        "arbitrate_once": 404,
+        "refill_reason": 481
+      },
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "battle/test.py",
+      "changed_this_batch": true,
+      "before_sha256": "138ddec47d27cbf136371a313a942967ada729a3eaf94f44b0aad3bac178204f",
+      "after_sha256": "61a2e6103513be883f493ab055b16abb736252d9983819d44c18bdd425629e2f",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 66,
+      "active_functions": {
+        "_revision_generate": 71,
+        "_canon": 92,
+        "normalize_to_full": 98,
+        "build_referee_prompt": 165,
+        "extract_abbr_from_text": 218,
+        "choose_between": 273,
+        "_read_preds": 338
+      },
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "4d4f1de21360919d56d2c6f9575f03e40a20c6f8b563c8647954ac54407fe822",
+      "after_sha256": "98ac302c57c97ada71a6e67bbe6bd127b551422591ddaf9e1518918f6c2e8be7",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 81,
+      "active_functions": {
+        "build_yn_prompt": 327,
+        "build_pick_from_candidates_prompt": 342,
+        "build_force_pick_any_prompt": 358,
+        "extract_yes_no": 402,
+        "extract_abbr": 435,
+        "_render_with_template": 452,
+        "greedy_generate_first_line": 492,
+        "classify_by_polling": 588
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "3ed2b41df4dac14c21e225ebd6416b0c1795001a6a6929c49ab457cb212e76b7",
+      "after_sha256": "b885b7df726653a0d04538c93a25907a738968b26b0747ee77f347d7528d535f",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 80,
+      "active_functions": {
+        "build_yn_prompt": 399,
+        "build_pick_from_candidates_prompt": 414,
+        "build_force_pick_any_prompt": 430,
+        "extract_yes_no": 475,
+        "extract_abbr": 509,
+        "greedy_generate_first_line": 548,
+        "classify_by_polling": 645
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "718de0e34971038599530787c25069945d78effdf75e4df27811752d76599fad",
+      "after_sha256": "5c8802981ad889580185437c186140f4f1f17fce71f96c543579e59c6dfd2653",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 78,
+      "active_functions": {
+        "build_yn_prompt": 352,
+        "build_pick_from_candidates_prompt": 367,
+        "build_force_pick_any_prompt": 383,
+        "extract_yes_no": 428,
+        "extract_abbr": 462,
+        "greedy_generate_first_line": 501,
+        "classify_by_polling": 598
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "d0834acf1a22f01dfc4e46bc722b5ec457743604007b3752c76cb1e9e1b88dae",
+      "after_sha256": "c235fbaecf7d0b5ce4a8e6405be1c1609e24f91d781eeb9f6aa3cc474ae70006",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 110,
+      "active_functions": {
+        "build_yn_prompt": 286,
+        "build_choose_prompt": 301,
+        "build_full_prompt": 319,
+        "build_reason_prompt": 335,
+        "_visible_only": 355,
+        "extract_yes_no": 388,
+        "parse_yesno": 398,
+        "parse_abbr": 420,
+        "parse_reason": 423,
+        "_gen": 465,
+        "classify_by_polling": 480
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "4b09447083b17d23007323b3e3c1968f0ad1537983c5eab3ca43ab3331ffca75",
+      "after_sha256": "f05a77a9ea3150974004af9846b0eb7bd97557ca6ea1e9ec2e47fe817039984d",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 110,
+      "active_functions": {
+        "build_yn_prompt": 286,
+        "build_choose_prompt": 301,
+        "build_full_prompt": 319,
+        "build_reason_prompt": 335,
+        "_visible_only": 355,
+        "extract_yes_no": 388,
+        "parse_yesno": 398,
+        "parse_abbr": 420,
+        "parse_reason": 423,
+        "_gen": 465,
+        "classify_by_polling": 480
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "2cf310c1ecbd6584b10e6da3701def799e6c3ea0f43dbbc4c91d7a33f0856d15",
+      "after_sha256": "24bc901d5133e6ce96ac00e4a324ad5e4505a4bf612ca7f2d93aeb5532eb7c9f",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 78,
+      "active_functions": {
+        "build_yn_prompt": 354,
+        "build_pick_from_candidates_prompt": 369,
+        "build_force_pick_any_prompt": 385,
+        "extract_yes_no": 430,
+        "extract_abbr": 464,
+        "greedy_generate_first_line": 503,
+        "classify_by_polling": 600
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "cd7be8b1076c7e9e00fe2833372ac3b4ef3c3c6866773b26596b11978a0607e0",
+      "after_sha256": "c7ea2869442fe60344438b3cebea95510da93aad81554d60427193746914e39d",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 78,
+      "active_functions": {
+        "build_yn_prompt": 402,
+        "build_pick_from_candidates_prompt": 417,
+        "build_force_pick_any_prompt": 433,
+        "extract_yes_no": 478,
+        "extract_abbr": 512,
+        "greedy_generate_first_line": 547,
+        "classify_by_polling": 644
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "5bdbbc80547657c92290fb752ea4e8edf54749117309db521887fc4e2592283e",
+      "after_sha256": "ef8a106f7a7cf190d5644a154afffc1f44bf3ca990f9d3916810d84951228cb0",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 78,
+      "active_functions": {
+        "build_yn_prompt": 402,
+        "build_pick_from_candidates_prompt": 417,
+        "build_force_pick_any_prompt": 433,
+        "extract_yes_no": 478,
+        "extract_abbr": 512,
+        "greedy_generate_first_line": 547,
+        "classify_by_polling": 644
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "dd4a15ded07f326b8e4385670835278e820af6aec7e0864d1864c0347262a62a",
+      "after_sha256": "d8df0facb18f1d3e4a7979f976d12911ab8edb00c47e8948e3c98f22656f0c2a",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 74,
+      "active_functions": {
+        "build_yn_prompt": 524,
+        "build_pick_from_candidates_prompt": 539,
+        "build_force_pick_any_prompt": 555,
+        "extract_yes_no": 602,
+        "extract_abbr": 635,
+        "generate_first_line": 662,
+        "classify_by_polling": 783
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "f9827a1a8dd779d434c666b150ba6383077a391c833ea82e33877b4fe04d4b67",
+      "after_sha256": "01f3bd156234ed7fda7eec6d75dee66da9a73623136f8e3f4a86276922993c11",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 80,
+      "active_functions": {
+        "build_yn_prompt": 517,
+        "build_pick_from_candidates_prompt": 528,
+        "build_force_pick_any_prompt": 540,
+        "extract_yes_no": 580,
+        "extract_abbr": 613,
+        "_render_with_template": 630,
+        "greedy_generate_first_line": 670,
+        "classify_by_polling": 766
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "3f92d80b534aaefabea1326949c914a3a7bbc4f6371d87d344288acac571c60a",
+      "after_sha256": "04d5ed9d70fc41ded39036efc954e98e4c36e2bd8040c19d960df8bece7832da",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 79,
+      "active_functions": {
+        "build_yn_prompt": 518,
+        "build_pick_from_candidates_prompt": 529,
+        "build_force_pick_any_prompt": 541,
+        "extract_yes_no": 582,
+        "extract_abbr": 616,
+        "greedy_generate_first_line": 655,
+        "classify_by_polling": 752
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "31652509bc73050e09759107c8dad77323d19e7de91aea8fd810f513078304ea",
+      "after_sha256": "01b7281550ffc10df91228c33f9aa2ac8d37335a07aef5bb395bde229668c258",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 77,
+      "active_functions": {
+        "build_yn_prompt": 518,
+        "build_pick_from_candidates_prompt": 529,
+        "build_force_pick_any_prompt": 541,
+        "extract_yes_no": 582,
+        "extract_abbr": 616,
+        "greedy_generate_first_line": 655,
+        "classify_by_polling": 752
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "78cb59b9a0ac57c4a530666a613b2c49129ed1099347fc6e956ab0f2ee8aeccc",
+      "after_sha256": "74991ac6ff9e2f3595b4491d9dd8e697b54066a8aaf0afdcb2e994e20fe5ff62",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 80,
+      "active_functions": {
+        "build_yn_prompt": 520,
+        "build_pick_from_candidates_prompt": 531,
+        "build_force_pick_any_prompt": 543,
+        "extract_yes_no": 584,
+        "extract_abbr": 618,
+        "greedy_generate_first_line": 657,
+        "classify_by_polling": 754
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "35e73f3998e71355d371da46ccdddf16f76c059fc8f0f7bc575185b0dfa9483c",
+      "after_sha256": "84d959307106050c0fbd6496c197b285116792f48d7f4fb6afbf4c65dcff995d",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 80,
+      "active_functions": {
+        "build_yn_prompt": 639,
+        "build_pick_from_candidates_prompt": 650,
+        "build_force_pick_any_prompt": 662,
+        "extract_yes_no": 703,
+        "extract_abbr": 737,
+        "greedy_generate_first_line": 776,
+        "classify_by_polling": 873
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "beb7bbc13ef2a34033f26707a94d670a5188087a372c15851e5a43be6d0d6adc",
+      "after_sha256": "539a4b7a298b4bbb0ca515d24b18aca6da3193328d756f0243fb0211fc3fff23",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 77,
+      "active_functions": {
+        "build_yn_prompt": 521,
+        "build_pick_from_candidates_prompt": 532,
+        "build_force_pick_any_prompt": 544,
+        "extract_yes_no": 585,
+        "extract_abbr": 619,
+        "greedy_generate_first_line": 658,
+        "classify_by_polling": 755
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "f6ea75f8a644d6032c354ba761072ed3b0d8e435ef2e399d900ea9041995a450",
+      "after_sha256": "6fbf56bb6f113f41fa16e06f4b7949774d32e9a9ec7d8d98bca224e4ab126e8f",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 77,
+      "active_functions": {
+        "build_yn_prompt": 521,
+        "build_pick_from_candidates_prompt": 532,
+        "build_force_pick_any_prompt": 544,
+        "extract_yes_no": 585,
+        "extract_abbr": 619,
+        "greedy_generate_first_line": 654,
+        "classify_by_polling": 751
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "4e91e24a257c2216d85227513b39f35df67d73b2c61f0250705908bc41ef161a",
+      "after_sha256": "477729e72dfb06e675297fd57c5dccea1a6b5e1dd88b7fa5f52357018fee6da3",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 77,
+      "active_functions": {
+        "build_yn_prompt": 522,
+        "build_pick_from_candidates_prompt": 533,
+        "build_force_pick_any_prompt": 545,
+        "extract_yes_no": 586,
+        "extract_abbr": 620,
+        "greedy_generate_first_line": 659,
+        "classify_by_polling": 756
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "edba506e1d35b2e09c375b38961654c0572ab45c7e81882a3c4cbbf7f76d34d9",
+      "after_sha256": "01c5e8f94d07f56e704c79860f6e0d0a7acd7a8f277871425e14c206f149ef4b",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 73,
+      "active_functions": {
+        "build_yn_prompt": 410,
+        "build_pick_from_candidates_prompt": 421,
+        "build_force_pick_any_prompt": 433,
+        "extract_yes_no": 476,
+        "extract_abbr": 509,
+        "generate_first_line": 536,
+        "classify_by_polling": 657
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "d1337f6ce0b2823de8c17293b517b8dc8bca51a9e5cd8104f3791b77821a32d5",
+      "after_sha256": "bb4033be29aca04455fd1a6bdf88ac9912a9a2040ad27913c480abc6f0df98f8",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 80,
+      "active_functions": {
+        "build_yn_prompt": 100,
+        "build_pick_from_candidates_prompt": 111,
+        "build_force_pick_any_prompt": 123,
+        "extract_yes_no": 163,
+        "extract_abbr": 196,
+        "_render_with_template": 213,
+        "greedy_generate_first_line": 253,
+        "classify_by_polling": 349
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "029fbf39881645327e857f547beefa36dd94ea54958c773f9d4a815117d0fee1",
+      "after_sha256": "b7038f832feaf533734f6920161586229a3a3a0a1594e76666cfe85971bca754",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 79,
+      "active_functions": {
+        "build_yn_prompt": 124,
+        "build_pick_from_candidates_prompt": 135,
+        "build_force_pick_any_prompt": 147,
+        "extract_yes_no": 188,
+        "extract_abbr": 222,
+        "greedy_generate_first_line": 261,
+        "classify_by_polling": 358
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "af6eb94a41cfab9ef2242be4d634b5ab663181b18aa45fb3a08480856b7f5271",
+      "after_sha256": "b72f5f245db0eb9127e535d2ce356fdfa1b5b41460287a23d95bc868fc1845d7",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 77,
+      "active_functions": {
+        "build_yn_prompt": 125,
+        "build_pick_from_candidates_prompt": 136,
+        "build_force_pick_any_prompt": 148,
+        "extract_yes_no": 189,
+        "extract_abbr": 223,
+        "greedy_generate_first_line": 262,
+        "classify_by_polling": 359
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "b39172dba2813b9921d514b6b0423e837497b7ed44d2303e0faf4e3b0326aedf",
+      "after_sha256": "1dd30256d28027acb3d6cfaa37b2ab6b51ae401f009d2a5e658618cebc2b180f",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 80,
+      "active_functions": {
+        "build_yn_prompt": 125,
+        "build_pick_from_candidates_prompt": 136,
+        "build_force_pick_any_prompt": 148,
+        "extract_yes_no": 189,
+        "extract_abbr": 223,
+        "greedy_generate_first_line": 262,
+        "classify_by_polling": 359
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "371327db4868bbdcdd51e8b529348c324d41a2e330b8ad8074196cdc9d357cff",
+      "after_sha256": "cc82a2bc48c592e3c50b5db30a14da03444fdf4a5e932344a8e78052b60fed41",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 80,
+      "active_functions": {
+        "build_yn_prompt": 125,
+        "build_pick_from_candidates_prompt": 136,
+        "build_force_pick_any_prompt": 148,
+        "extract_yes_no": 189,
+        "extract_abbr": 223,
+        "greedy_generate_first_line": 262,
+        "classify_by_polling": 359
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/bin_new_test.py",
+      "changed_this_batch": true,
+      "before_sha256": "f98b065ddaa7ccae844ea544ee3de87243544353b6b742e0e503bbade1e5a193",
+      "after_sha256": "9ce8f8690d7cacc70e50805707b70b54d2dadf5ef0fb0674c56798aaf9a9e205",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 80,
+      "active_functions": {
+        "build_yn_prompt": 125,
+        "build_pick_from_candidates_prompt": 136,
+        "build_force_pick_any_prompt": 148,
+        "extract_yes_no": 189,
+        "extract_abbr": 223,
+        "greedy_generate_first_line": 262,
+        "classify_by_polling": 359
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/bin_test.py",
+      "changed_this_batch": true,
+      "before_sha256": "7650fb29cd6d6ce4fca25e9647eb07aa97c6486de88ad67d1bf7750f57711590",
+      "after_sha256": "a6e5b69a26510f5ce10a1f669ba6054e5f2342494fedb5b512f6449f8cd142b3",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 70,
+      "active_functions": {
+        "chat": 135,
+        "yes_or_no": 158,
+        "explain": 198
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "91599934576b541c7b69843ba2686ce81a68b534e4c570ba3a7134674d032442",
+      "after_sha256": "5f73c6cb07083018b8284b199d68c5a305720254a46ed1ea8fd133e280ae4296",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 77,
+      "active_functions": {
+        "build_yn_prompt": 126,
+        "build_pick_from_candidates_prompt": 137,
+        "build_force_pick_any_prompt": 149,
+        "extract_yes_no": 190,
+        "extract_abbr": 224,
+        "greedy_generate_first_line": 263,
+        "classify_by_polling": 360
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "4c5d6e08ecfcfde4a3c1767934ac3dae2ad34b891eb45d343ffc9876944c56f4",
+      "after_sha256": "2a8915ca29234b3b4f8ca3e946551d942bc8d9e1e7c098d273562e3aaf889a60",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 77,
+      "active_functions": {
+        "build_yn_prompt": 126,
+        "build_pick_from_candidates_prompt": 137,
+        "build_force_pick_any_prompt": 149,
+        "extract_yes_no": 190,
+        "extract_abbr": 224,
+        "greedy_generate_first_line": 266,
+        "classify_by_polling": 363
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "9c31964f6dc55fb5ec053eeef4ce0fea62253e4fda0bc1e18815525fee417bdb",
+      "after_sha256": "2e4a30af490aa962f57453bc819b7d724cd7ff51e6d4bab50e1d718cd2311dfa",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 77,
+      "active_functions": {
+        "build_yn_prompt": 126,
+        "build_pick_from_candidates_prompt": 137,
+        "build_force_pick_any_prompt": 149,
+        "extract_yes_no": 190,
+        "extract_abbr": 224,
+        "greedy_generate_first_line": 263,
+        "classify_by_polling": 360
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "1730929139474e35d7a9b63975caaf832359854a0e3955f4cc36f2dac64a3820",
+      "after_sha256": "35a0efeb6f9eff6eedbbf74b5972aafee1a9fd42f327ac9a9fe618a6b8957e39",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 73,
+      "active_functions": {
+        "build_yn_prompt": 126,
+        "build_pick_from_candidates_prompt": 137,
+        "build_force_pick_any_prompt": 149,
+        "extract_yes_no": 192,
+        "extract_abbr": 225,
+        "generate_first_line": 252,
+        "classify_by_polling": 373
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "data_process.py",
+      "changed_this_batch": true,
+      "before_sha256": "058dd65dc0d142f4ffbd52823421febd8d14d304bf0f633230644a05314a0525",
+      "after_sha256": "4c15e30a357a75c35368a2154731069de90d3a52747c2bd673e839bf639d3fc6",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": true,
+      "replaced_executable_lines": 99,
+      "active_functions": {
+        "main": 158
+      },
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "download_model.py",
+      "changed_this_batch": true,
+      "before_sha256": "f654ccd7bcb4e3d977249c6680ba93e146101473ed81b2e556c0063783cd31a5",
+      "after_sha256": "d2499448a8647e29bc4ed198d171c8a7942c5cdc87a994d6ecd1882887faeef1",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": true,
+      "user_excluded_temporary": true,
+      "replaced_executable_lines": 0,
+      "active_functions": {
+        "main": 48
+      },
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "original_COT.py",
+      "changed_this_batch": true,
+      "before_sha256": "1933a33fd58b85925456598975989b140850c325930e2e5de20dc90545fd5d26",
+      "after_sha256": "f34c9e70bac868e62e9266e776c8f37ac36633c1cdc184a777f15c1907684e44",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": true,
+      "replaced_executable_lines": 210,
+      "active_functions": {
+        "build_cot_stage1": 310,
+        "build_cot_stage2": 315,
+        "main": 321
+      },
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "pilot_context_20261016/analyze_pilot.py",
+      "changed_this_batch": true,
+      "before_sha256": "92ac9b83630f97031acd03e0d99346e8f0535363dc98569e9d1d51eecdf49ac1",
+      "after_sha256": "7b6b1fb86991ce4514fba449dec86d09df3434ea8540a2f3161b8f276bc5f0ec",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 1,
+      "active_functions": {
+        "canonical_label": 41,
+        "first": 52,
+        "row_id": 56,
+        "read_jsonl": 63,
+        "prediction": 85,
+        "scores": 94,
+        "quantile": 127,
+        "bootstrap": 136,
+        "exact_mcnemar": 158,
+        "write_csv": 166,
+        "review_forms": 176,
+        "analyze": 211,
+        "main": 318
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "pilot_context_20261016/download_model.py",
+      "changed_this_batch": true,
+      "before_sha256": "27d86c664a0eeb8867a20504c522601eb6c60c60500184f5bb5eb3910f668fbf",
+      "after_sha256": "5e03d24d2af8c1d2c656049fbf0e6694b7313f86777ad64b4f6f3b63dad213a7",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 49,
+      "active_functions": {},
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "pilot_context_20261016/prepare_pilot.py",
+      "changed_this_batch": true,
+      "before_sha256": "c550be14f49e0475a3b09d285bbd1f73b8b79a2d9c0fd7a363ec51e8f8739562",
+      "after_sha256": "15413914ff61beff2ba037d62965cbcace92568aa0ce602dce09a22e1cc144aa",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 1,
+      "active_functions": {
+        "digest": 31,
+        "canonical": 35,
+        "read_csv": 43,
+        "ast_functions": 48,
+        "extract_function": 62,
+        "comment_line_aligned": 102,
+        "rank": 110,
+        "target_is_comment_or_string": 114,
+        "token_key": 123,
+        "main": 127
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "pilot_context_20261016/reference/frozen_prompt.py",
+      "changed_this_batch": false,
+      "before_sha256": "b94cbdf8684412cd86b0411b9a9cabf1ae24197ec36cbb066cd39e0c2f5cb256",
+      "after_sha256": "b94cbdf8684412cd86b0411b9a9cabf1ae24197ec36cbb066cd39e0c2f5cb256",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 0,
+      "active_functions": {
+        "build_prompt": 10,
+        "simple_extract": 13
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "pilot_context_20261016/reference_thinking_stopped/frozen_prompt.py",
+      "changed_this_batch": false,
+      "before_sha256": "d88c3614ea09c7040778d7834c568dee8cbb830b93d4b7cd2da5b2722e73b902",
+      "after_sha256": "d88c3614ea09c7040778d7834c568dee8cbb830b93d4b7cd2da5b2722e73b902",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 0,
+      "active_functions": {
+        "build_prompt": 10,
+        "simple_extract": 13
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "pilot_context_20261016/run_pilot.py",
+      "changed_this_batch": true,
+      "before_sha256": "c32401956ce91965b8e52451f9b1616b4470925837980fa3f55c6300b5d39e4a",
+      "after_sha256": "ca0eab14478fe7740e3375f6d272c4e80b0ee42264c4302d498a1600be6d583d",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 1,
+      "active_functions": {
+        "sha256": 24,
+        "read_jsonl": 28,
+        "load_reference": 32,
+        "prompt_for": 40,
+        "row_seed": 55,
+        "as_token_ids": 60,
+        "parse_response": 75,
+        "common_prefix": 86,
+        "build_jobs": 97,
+        "main": 113
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "pilot_context_20261016/test_analyze_pilot.py",
+      "changed_this_batch": false,
+      "before_sha256": "9da216f6d61b5cfc0cd83ce2c1b0ef2a5d52e3cbcdc34b5904e3e7a10cf61578",
+      "after_sha256": "9da216f6d61b5cfc0cd83ce2c1b0ef2a5d52e3cbcdc34b5904e3e7a10cf61578",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 0,
+      "active_functions": {},
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "pilot_context_20261016/test_runner.py",
+      "changed_this_batch": false,
+      "before_sha256": "8272fcb17c12b948097c09dbda7232d873879fb1862b0d313e2b65534d0a22bf",
+      "after_sha256": "8272fcb17c12b948097c09dbda7232d873879fb1862b0d313e2b65534d0a22bf",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 0,
+      "active_functions": {},
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "pilot_context_20261016/verify_historical.py",
+      "changed_this_batch": true,
+      "before_sha256": "5b243fc546c6c6bf0da2b8938001a2581d1d19d15ef2c244cd0f655bf8312128",
+      "after_sha256": "d6022f5d087c5c6fbd5f65c4e66cfc871598b5f4bcc4c7b23dcae1eba06200d2",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 138,
+      "active_functions": {},
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "pilot_context_20261016/wait_and_run.py",
+      "changed_this_batch": true,
+      "before_sha256": "2cd8ce618892cbbbefad4613a5310ecd970d9b4bcdcab104e0f8b2f170965ff0",
+      "after_sha256": "8c61dd56d3ca0557ba168956e40f229a1ca9afdb33c4e717c729fac66f0c890e",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 1,
+      "active_functions": {
+        "status": 19,
+        "resident_models": 25,
+        "main": 39
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "random_classify/random_classify.py",
+      "changed_this_batch": true,
+      "before_sha256": "8a0a075170ed3a4b823dd53de82e9ef48efb4ad4115acb94f3d0f4d661f7ef2f",
+      "after_sha256": "ab78c43e6a3549ffd9067e0371bc2a11034bf2cfb0efd84899e96be646de1d41",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 72,
+      "active_functions": {
+        "quantile": 127,
+        "main": 135
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "test1.py",
+      "changed_this_batch": true,
+      "before_sha256": "c7eba3f7e33e8aa1c6c97d3f8f9d2e350b2dacb728ccccf912da3ab7498193ff",
+      "after_sha256": "1fed0476f8139370cf3c7663f83d1fac2e0d8f14a5e52f6736f23c7f6cee6bae",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": true,
+      "replaced_executable_lines": 109,
+      "active_functions": {
+        "build_yn_prompt": 129,
+        "build_choose_prompt": 140,
+        "build_full_prompt": 154,
+        "build_reason_prompt": 166,
+        "_visible_only": 186,
+        "extract_yes_no": 219,
+        "parse_yesno": 229,
+        "parse_abbr": 251,
+        "parse_reason": 254,
+        "_gen": 296,
+        "classify_by_polling": 311
+      },
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "test3.py",
+      "changed_this_batch": true,
+      "before_sha256": "bc2593d43290e45e13e841db57e3869dfd01bed9d0cb3a59d4f659225db86822",
+      "after_sha256": "9ab5e3dcf80d553e72928dbaa283e3b17fe6b3e2f5f8d846e8b66c9d427ecb93",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": true,
+      "replaced_executable_lines": 109,
+      "active_functions": {
+        "build_yn_prompt": 129,
+        "build_choose_prompt": 140,
+        "build_full_prompt": 154,
+        "build_reason_prompt": 166,
+        "_visible_only": 186,
+        "extract_yes_no": 219,
+        "parse_yesno": 229,
+        "parse_abbr": 251,
+        "parse_reason": 254,
+        "_gen": 296,
+        "classify_by_polling": 311
+      },
+      "user_excluded_nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "2b89dad2be149a093bfc4f691284bea6559960e35dc5a83ab5978a92063335f7",
+      "after_sha256": "4be43dd70b358b55ad649e334e32d886c3511d4db1ea3d4c8a336a033bdac433",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 119,
+      "active_functions": {
+        "build_prompt_coarse": 239,
+        "build_prompt_fine": 395,
+        "extract_coarse": 435,
+        "extract_fine": 475,
+        "allowed_ctx_limit": 485,
+        "apply_template": 496,
+        "generate_once": 527,
+        "classify_two_stage": 562
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "672a96f5dd4f039e43c410fffaa0e3513806ecdccfcfa4b7334dbd1cb5a34019",
+      "after_sha256": "56a89e4b5c1a90be657b1a2d0132f6cf9c92fe80a80d22a2254ecf6aa8f8b194",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 114,
+      "active_functions": {
+        "build_prompt_coarse": 224,
+        "build_prompt_fine": 380,
+        "extract_coarse": 420,
+        "extract_fine": 460,
+        "allowed_ctx_limit": 488,
+        "apply_template": 499,
+        "generate_once": 537,
+        "classify_two_stage": 572
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "3cf5023bc27df5538f1f16f76ca06e13addc7d3f7445c101091d2c93fcb89e29",
+      "after_sha256": "f32e45319684790a919bedcb08c2cd6940545d7ae41229831e74ce52b0276438",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 121,
+      "active_functions": {
+        "build_prompt_coarse": 248,
+        "build_prompt_fine": 404,
+        "extract_coarse": 444,
+        "extract_fine": 484,
+        "allowed_ctx_limit": 511,
+        "apply_template": 522,
+        "generate_once": 561,
+        "classify_two_stage": 596
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "00b5463c6f78d269115abffc0792dcfe7dc15d92a49f46f20b136bd9619fcc69",
+      "after_sha256": "4cb3edfd04d8d5fc033f0dadc703d1f4fd8b8b796345764accef6d9b5db610e4",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 121,
+      "active_functions": {
+        "build_prompt_coarse": 226,
+        "build_prompt_fine": 382,
+        "extract_coarse": 422,
+        "extract_fine": 462,
+        "allowed_ctx_limit": 489,
+        "apply_template": 500,
+        "generate_once": 539,
+        "classify_two_stage": 574
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "a97448a2d18a6523b38b2611e9fcded17d0fd2a8aa9cab2ff80a528d08fdc6f0",
+      "after_sha256": "203a4792c368eb4fdb8b2f27c74379312469083ea72726d37fb67bdab3abcf9e",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 121,
+      "active_functions": {
+        "build_prompt_coarse": 248,
+        "build_prompt_fine": 404,
+        "extract_coarse": 444,
+        "extract_fine": 484,
+        "allowed_ctx_limit": 511,
+        "apply_template": 522,
+        "generate_once": 561,
+        "classify_two_stage": 596
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "17b1b6fbae1eeea38c8e898bb7b97814cb73ce22902c4cf4fa64021901e09228",
+      "after_sha256": "a8c817fc1b8b13f521b381331628d44560f98d27460a57dea25f64f5b8c8ab3d",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 114,
+      "active_functions": {
+        "build_prompt_coarse": 226,
+        "build_prompt_fine": 382,
+        "extract_coarse": 422,
+        "extract_fine": 462,
+        "allowed_ctx_limit": 489,
+        "apply_template": 500,
+        "generate_once": 539,
+        "classify_two_stage": 574
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "bee23d8eed0f20eaacf28fd05d9aa548f3649a6ea2aa4ea7df24f02f77f9b888",
+      "after_sha256": "505e0a400e5679a86f1a61fdd17fb4c9bc1e5507b398a634bd3e110dfcdb2aec",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 115,
+      "active_functions": {
+        "build_prompt_coarse": 217,
+        "build_prompt_fine": 373,
+        "extract_coarse": 413,
+        "extract_fine": 453,
+        "allowed_ctx_limit": 483,
+        "apply_template": 494,
+        "generate_once": 533,
+        "classify_two_stage": 568
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "57c4f2461d7c1f30398c3c0e87b02d47929969669b59cbce1f88c84439693f5e",
+      "after_sha256": "a155cf8cf430114e4c17ded428a369414a8564ec15ec9b4f7ded8e9b70b81b2a",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 114,
+      "active_functions": {
+        "build_prompt_coarse": 214,
+        "build_prompt_fine": 370,
+        "extract_coarse": 410,
+        "extract_fine": 450,
+        "allowed_ctx_limit": 477,
+        "apply_template": 488,
+        "generate_once": 527,
+        "classify_two_stage": 562
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "d115efef76d1a235243e327c40cd4022c136a293d22e8fd9ea89144f579597df",
+      "after_sha256": "4c6b96fd89c43c66810cf278cb47703694ba961e179da7aa183c28cb27c141b5",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 119,
+      "active_functions": {
+        "build_prompt_coarse": 160,
+        "build_prompt_fine": 319,
+        "extract_coarse": 359,
+        "extract_fine": 399,
+        "generate_first_line": 427,
+        "classify_two_stage": 465
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "a0e372c7e1a01b8c9f70d9f6682c20be59c491eeb55970b483c706cac60f8017",
+      "after_sha256": "c32bead4f8e045353c27364322ba8fab1a4da3d6ae68528250e9cfed26455156",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 119,
+      "active_functions": {
+        "build_prompt_coarse": 239,
+        "build_prompt_fine": 303,
+        "extract_coarse": 343,
+        "extract_fine": 383,
+        "allowed_ctx_limit": 393,
+        "apply_template": 404,
+        "generate_once": 435,
+        "classify_two_stage": 470
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "279cc1d1f11c7e6046836679f857ed1ad0970ea6a70cdba77e44cc319f5d140e",
+      "after_sha256": "3ed764823599b8ec21599e579758a33a0b1f02bc52a4ed7b51ada09c718fecfd",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 114,
+      "active_functions": {
+        "build_prompt_coarse": 224,
+        "build_prompt_fine": 288,
+        "extract_coarse": 328,
+        "extract_fine": 368,
+        "allowed_ctx_limit": 396,
+        "apply_template": 407,
+        "generate_once": 445,
+        "classify_two_stage": 480
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "9b38712998f3f81a67c53ab145f08ed3da53ea89c852a8b4c4db2be2fa14256a",
+      "after_sha256": "6de0da1979df866af397306551a5cde33f238567eb871d3f58a4e3e563a3fa5c",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 121,
+      "active_functions": {
+        "build_prompt_coarse": 248,
+        "build_prompt_fine": 312,
+        "extract_coarse": 352,
+        "extract_fine": 392,
+        "allowed_ctx_limit": 419,
+        "apply_template": 430,
+        "generate_once": 469,
+        "classify_two_stage": 504
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "2178b24f529cdf347e78aa33412784a673ae5663fd7fbb0f85d5810dbd00be9f",
+      "after_sha256": "a1d37d9455d353feca85a0a254b236c0c387987be4bd3bd68058464cbc8a9bc3",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 121,
+      "active_functions": {
+        "build_prompt_coarse": 226,
+        "build_prompt_fine": 290,
+        "extract_coarse": 330,
+        "extract_fine": 370,
+        "allowed_ctx_limit": 397,
+        "apply_template": 408,
+        "generate_once": 447,
+        "classify_two_stage": 482
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "b54ea804f343d1a988eb1a3915c88c5c60c3d0066f7609399a6325fbae70151d",
+      "after_sha256": "1438f1e41465336f162280c633a54cba189731c623c70d07863c26e1322d03a7",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 121,
+      "active_functions": {
+        "build_prompt_coarse": 248,
+        "build_prompt_fine": 312,
+        "extract_coarse": 352,
+        "extract_fine": 392,
+        "allowed_ctx_limit": 419,
+        "apply_template": 430,
+        "generate_once": 469,
+        "classify_two_stage": 504
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "96d6f4137ef8976ddaf3ea03f2d1ca676016f11f32307f4cc476b9dafd4640ee",
+      "after_sha256": "f81b4d1180a8d7297e746c6ad38ad7802609f62c4770bd5d9ba21848c7696761",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 114,
+      "active_functions": {
+        "build_prompt_coarse": 226,
+        "build_prompt_fine": 290,
+        "extract_coarse": 330,
+        "extract_fine": 370,
+        "allowed_ctx_limit": 397,
+        "apply_template": 408,
+        "generate_once": 447,
+        "classify_two_stage": 482
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "a0d5765a318bb35678d124d35e0beb50d87b7284f653f6c0d5c198daf06ef42f",
+      "after_sha256": "afe2a5003314477cd6428d00a8f862d38b378561968fc1c745b6c8be65070fe8",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 120,
+      "active_functions": {
+        "build_prompt_coarse": 161,
+        "build_prompt_fine": 225,
+        "extract_coarse": 260,
+        "extract_fine": 300,
+        "generate_once": 352,
+        "classify_two_stage": 388
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "150410e95c535c0d8c5fe111e52c1cdf57d6be815ce93ab083c900aa7a076ec1",
+      "after_sha256": "eacbd1aeec987ac74650d59397448613658b030171afb80e1457178c9ddd6086",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 114,
+      "active_functions": {
+        "build_prompt_coarse": 227,
+        "build_prompt_fine": 291,
+        "extract_coarse": 331,
+        "extract_fine": 371,
+        "allowed_ctx_limit": 398,
+        "apply_template": 409,
+        "generate_once": 448,
+        "classify_two_stage": 483
+      },
+      "user_excluded_nonpaper": false
+    },
+    {
+      "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+      "changed_this_batch": true,
+      "before_sha256": "7526b447bbb5b97207efbeb430106b19453df5e8a8833801699ada780cc1c4f9",
+      "after_sha256": "4c827f19fdb234936f123fdc60168cd85ce064f7a0d436d2477e6f3445627886",
+      "syntax": "passed",
+      "old_code_preserved": true,
+      "security_redaction_exception": false,
+      "user_excluded_temporary": false,
+      "replaced_executable_lines": 119,
+      "active_functions": {
+        "build_prompt_coarse": 160,
+        "build_prompt_fine": 227,
+        "extract_coarse": 267,
+        "extract_fine": 307,
+        "generate_first_line": 335,
+        "classify_two_stage": 373
+      },
+      "user_excluded_nonpaper": false
+    }
+  ],
+  "new_artifacts": [
+    {
+      "file": "AUXILIARY_REVISED_PROTOCOL.md",
+      "sha256": "4aa81c68762ce2d9364766c4a4d3ad39fabc9d4538466af1ffffa41d4f30a6bb"
+    },
+    {
+      "file": "auxiliary_protocol.py",
+      "sha256": "31b3fc1a998d2ed6e7cd71ea8977cd7929fbc5ffb21a9481f8ada7c7acae8585"
+    },
+    {
+      "file": "icl_revised.py",
+      "sha256": "f15b49c74961fc4f0f4d8ed92890f3183db52cbb8daa9038b3f38a4bd95b4999"
+    },
+    {
+      "file": "pilot_context_20261016/analyze_pilot_revised.py",
+      "sha256": "4a5820f196f0f7c048bf32ec85c4c7ce2c098e6de2ee6dab0175f59479254df5"
+    },
+    {
+      "file": "pilot_context_20261016/prepare_pilot_revised.py",
+      "sha256": "bd54c6e0a5596afe2aac0b9853d53b5ebe677bdb4634ad8275740d8639538dc5"
+    },
+    {
+      "file": "pilot_context_20261016/reference_revised.py",
+      "sha256": "de362753003711370814da7f42a3df71c1bdbc81c70557e5011f88d14909e284"
+    },
+    {
+      "file": "pilot_context_20261016/run_pilot_revised.py",
+      "sha256": "b87e2862002563e49bd0b7d200f59d4aede41045ac12986945045df06412b6f8"
+    },
+    {
+      "file": "pilot_context_20261016/verified_subset_revised.py",
+      "sha256": "8bc51b1b1c9a32c8d2702f72d3065b8d3512a7595f4d1ef1316f391821deb796"
+    },
+    {
+      "file": "pilot_context_20261016/verify_historical_revised.py",
+      "sha256": "bfc7d3dd6a8dd9209a881e2eb4df7e58add9498e29a99f6a9075f15dee4a6da6"
+    },
+    {
+      "file": "qwen_auxiliary_runtime.py",
+      "sha256": "e9dabec7eb143938c2427d966ff2ea51a6dbdbae7149457649f2c6aba1532479"
+    },
+    {
+      "file": "revision_runtime.py",
+      "sha256": "c6a98b4e325211329a5e126d68a6adc37ec0e8cdc228e06a84a013a85e09572f"
+    }
+  ],
+  "paper_scope": {
+    "explicitly_excluded_temporary_files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py",
+      "data_process.py",
+      "download_model.py",
+      "original_COT.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "active_table_rows_from_prior_audit": 224,
+    "current_script_candidates_excluding_user_temporary": [
+      "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+      "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "basic_few_shot/Qwen3-8B_few_shot_re.py",
+      "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+      "basic_few_shot/gemma-2-9b_few_shot_re.py",
+      "basic_few_shot/gemma-3-12b_few_shot_re.py",
+      "basic_few_shot/gpt-oss-20b_few_shot.py",
+      "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+      "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+      "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+      "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+      "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+      "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+      "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+      "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+      "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_CoT/Qwen3-14B_few_shot.py",
+      "bisection_CoT/Qwen3-8B_few_shot.py",
+      "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "bisection_CoT/gemma-2-9b_few_shot.py",
+      "bisection_CoT/gemma-3-12b_few_shot.py",
+      "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "bisection_zero_shot/bin_new_test.py",
+      "bisection_zero_shot/bin_test.py",
+      "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "tree_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "candidate_count": 70,
+    "prose_confirmed_baseline": {
+      "file": "random_classify/random_classify.py",
+      "manuscript": "main.tex",
+      "lines": [
+        909,
+        1188
+      ],
+      "future_seed_repetitions": 10
+    },
+    "important_boundary": "The eight temporary files plus both nonpaper directories are excluded from paper-risk and rerun evidence. Other files remain candidates only; aggregate metric matching does not establish historical source versions.",
+    "explicitly_excluded_nonpaper_directories": [
+      "basic_zero_shot_CoT_output_reason",
+      "battle"
+    ],
+    "all_user_excluded_existing_python_files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py",
+      "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+      "battle/gpt_battle.py",
+      "battle/test.py",
+      "data_process.py",
+      "download_model.py",
+      "original_COT.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "latest_user_directory_clarification": {
+      "source": "Direct user clarification with screenshots, 2026-10-16",
+      "excluded_directories": [
+        "basic_zero_shot_CoT_output_reason",
+        "battle"
+      ],
+      "directory_scope": "Entire directories including scripts, result runs, and all nested files",
+      "previously_excluded_temporary_files": [
+        "ICL_Ob_qwen-8b.py",
+        "ICL_Ob_qwen-8b_new.py",
+        "ICL_Ob_qwen-8b_v0.py",
+        "data_process.py",
+        "download_model.py",
+        "original_COT.py",
+        "test1.py",
+        "test3.py"
+      ],
+      "newly_excluded_existing_python_files": [
+        "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+        "battle/gpt_battle.py",
+        "battle/test.py"
+      ],
+      "paper_risk_basis": false,
+      "rerun_basis": false,
+      "source_action": "Metadata only. Existing code edits retained; no source expansion or data edits.",
+      "attribution_rule": "Human clarification overrides heuristic paper-source matching."
+    },
+    "user_deprioritized_issues": {
+      "R30": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    }
+  },
+  "remaining_issue_status_file": "/Users/yizho/Desktop/satd_experiments_revised_20261016/revision_batch_03/remaining_issue_status.html",
+  "history_still_unresolved": [
+    "Historical seeds, effective settings or discarded reasoning cannot be inferred from repaired code.",
+    "GPT-5 synthetic-example provenance remains an external unrecorded workflow; old temporary ICL overlap is NOT evidence of paper leakage."
+  ],
+  "user_excluded_directories": [
+    "basic_zero_shot_CoT_output_reason",
+    "battle"
+  ],
+  "latest_user_scope_update": {
+    "source": "Direct user clarification with screenshots, 2026-10-16",
+    "excluded_directories": [
+      "basic_zero_shot_CoT_output_reason",
+      "battle"
+    ],
+    "directory_scope": "Entire directories including scripts, result runs, and all nested files",
+    "previously_excluded_temporary_files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py",
+      "data_process.py",
+      "download_model.py",
+      "original_COT.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "newly_excluded_existing_python_files": [
+      "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+      "battle/gpt_battle.py",
+      "battle/test.py"
+    ],
+    "paper_risk_basis": false,
+    "rerun_basis": false,
+    "source_action": "Metadata only. Existing code edits retained; no source expansion or data edits.",
+    "attribution_rule": "Human clarification overrides heuristic paper-source matching."
+  },
+  "nonblocking_preprocessing_notes": {
+    "R30": {
+      "issue_id": "R30",
+      "source": "Direct user clarification, 2026-10-16",
+      "classification": "low_priority_nonblocking_preprocessing_note",
+      "paper_experiment_code_defect_basis": false,
+      "standalone_rerun_basis": false,
+      "requires_historical_followup": false,
+      "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+      "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+      "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed.",
+      "archived_observation": [
+        "The missing raw-dataset/version chain is not reconstructed."
+      ]
+    }
+  },
+  "latest_R30_scope_update": {
+    "issue_id": "R30",
+    "source": "Direct user clarification, 2026-10-16",
+    "classification": "low_priority_nonblocking_preprocessing_note",
+    "paper_experiment_code_defect_basis": false,
+    "standalone_rerun_basis": false,
+    "requires_historical_followup": false,
+    "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+    "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+    "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+  }
+}

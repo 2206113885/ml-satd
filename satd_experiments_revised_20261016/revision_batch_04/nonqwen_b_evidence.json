@@ -1,0 +1,408 @@
+{
+  "audit_utc": "2026-10-16T11:35:06.869114+00:00",
+  "scope": [
+    "google/gemma-2-9b-it",
+    "google/gemma-3-12b-it",
+    "openai/gpt-oss-20b"
+  ],
+  "execution_policy": "Official browsing and small source/config downloads only. No experiment, model or tokenizer loaded/executed; no experiment source modified.",
+  "source_priority": [
+    "explicit general author recommendation",
+    "official reference implementation when translating unspecified neutral sampler details",
+    "official pinned checkpoint generation_config",
+    "pinned framework defaults for omitted checkpoint fields"
+  ],
+  "models": {
+    "google/gemma-2-9b-it": {
+      "pinned_revision": "11c9b309abf73637e4b6f9a3fa1e92e615547819",
+      "official_repo_url": "https://huggingface.co/google/gemma-2-9b-it",
+      "official_generation_config_url": "https://huggingface.co/google/gemma-2-9b-it/resolve/11c9b309abf73637e4b6f9a3fa1e92e615547819/generation_config.json",
+      "generation_config_access": {
+        "http_status": 401,
+        "status": "gated_not_retrieved",
+        "must_not_substitute_third_party_mirror": true
+      },
+      "sampler_parameters": {
+        "do_sample": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        },
+        "temperature": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        },
+        "top_p": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        },
+        "top_k": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        },
+        "min_p": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        },
+        "repetition_penalty": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        }
+      },
+      "general_recommendation_in_checked_official_sources": "No single model-wide numeric sampling recommendation established by the inspected official model card and Google Hugging Face inference guide. Usage examples are not promoted to a universal recommendation.",
+      "official_usage_examples": [
+        {
+          "lines": [
+            249,
+            249
+          ],
+          "text": "    outputs = model.generate(**model_inputs, past_key_values=past_key_values, do_sample=True, temperature=1.0, max_new_tokens=128)"
+        },
+        {
+          "lines": [
+            253,
+            253
+          ],
+          "text": "outputs = model.generate(**model_inputs, past_key_values=past_key_values, do_sample=True, temperature=1.0, max_new_tokens=128)"
+        }
+      ],
+      "example_interpretation": "do_sample=True/temperature=1.0 occurs in a torch.compile/cache warm-up example; other usage examples omit sampler overrides.",
+      "executable_policy": {
+        "name": "official_checkpoint_generation_config",
+        "steps": [
+          "Load GenerationConfig from the licensed official checkpoint, with its actual source revision/config-file hash recorded.",
+          "Clone the checkpoint GenerationConfig and retain all sampler values; remove per-script do_sample/temperature/top_p/top_k/min_p/repetition overrides.",
+          "Keep original task output cap, EOS/PAD, native template and complete-input budgeting logic separate from sampler selection.",
+          "For fields absent in the checkpoint file, resolve the pinned Transformers GenerationConfig defaults, log the library version and full merged effective config.",
+          "If an official numeric value is unavailable, do not hardcode a mirror/example value; mark official remote verification unavailable and record the loaded local bytes."
+        ]
+      },
+      "runtime_verification_pending": true
+    },
+    "google/gemma-3-12b-it": {
+      "pinned_revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "official_repo_url": "https://huggingface.co/google/gemma-3-12b-it",
+      "official_generation_config_url": "https://huggingface.co/google/gemma-3-12b-it/resolve/96b6f1eccf38110c56df3a15bffe176da04bfd80/generation_config.json",
+      "generation_config_access": {
+        "http_status": 401,
+        "status": "gated_not_retrieved",
+        "must_not_substitute_third_party_mirror": true
+      },
+      "sampler_parameters": {
+        "do_sample": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        },
+        "temperature": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        },
+        "top_p": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        },
+        "top_k": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        },
+        "min_p": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        },
+        "repetition_penalty": {
+          "value": null,
+          "status": "not_verified_gated_checkpoint"
+        }
+      },
+      "general_recommendation_in_checked_official_sources": "No single model-wide numeric sampling recommendation established by the inspected official model card and Google Hugging Face inference guide. Usage examples are not promoted to a universal recommendation.",
+      "official_usage_examples": [
+        {
+          "lines": [
+            151,
+            151
+          ],
+          "text": "    generation = model.generate(**inputs, max_new_tokens=100, do_sample=False)"
+        }
+      ],
+      "example_interpretation": "do_sample=False occurs in a single image-caption generation example; it is not evidence that every text-classification experiment should be greedy.",
+      "executable_policy": {
+        "name": "official_checkpoint_generation_config",
+        "steps": [
+          "Load GenerationConfig from the licensed official checkpoint, with its actual source revision/config-file hash recorded.",
+          "Clone the checkpoint GenerationConfig and retain all sampler values; remove per-script do_sample/temperature/top_p/top_k/min_p/repetition overrides.",
+          "Keep original task output cap, EOS/PAD, native template and complete-input budgeting logic separate from sampler selection.",
+          "For fields absent in the checkpoint file, resolve the pinned Transformers GenerationConfig defaults, log the library version and full merged effective config.",
+          "If an official numeric value is unavailable, do not hardcode a mirror/example value; mark official remote verification unavailable and record the loaded local bytes."
+        ]
+      },
+      "runtime_verification_pending": true
+    },
+    "openai/gpt-oss-20b": {
+      "pinned_revision": "6cee5e81ee83917806bbde320786a8fb61efebee",
+      "official_repo_url": "https://huggingface.co/openai/gpt-oss-20b",
+      "checkpoint_generation_config": {
+        "bos_token_id": 199998,
+        "do_sample": true,
+        "eos_token_id": [
+          200002,
+          199999,
+          200012
+        ],
+        "pad_token_id": 199999,
+        "transformers_version": "4.55.0.dev0"
+      },
+      "checkpoint_parameters_explicit": {
+        "do_sample": true
+      },
+      "checkpoint_parameters_omitted": [
+        "temperature",
+        "top_p",
+        "top_k",
+        "min_p",
+        "repetition_penalty"
+      ],
+      "official_recommendation": {
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "source": "https://github.com/openai/gpt-oss/blob/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/README.md#recommended-sampling-parameters",
+        "snapshot": "nonqwen_b_sources/openai_gpt-oss__README.md",
+        "lines": [
+          574,
+          576
+        ],
+        "classification": "explicit_general_author_recommendation"
+      },
+      "reasoning_effort": {
+        "default": "medium",
+        "allowed": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "template_source": "https://huggingface.co/openai/gpt-oss-20b/blob/6cee5e81ee83917806bbde320786a8fb61efebee/chat_template.jinja",
+        "template_lines": [
+          203,
+          206
+        ],
+        "official_documentation": "https://developers.openai.com/cookbook/articles/openai-harmony",
+        "policy": "Explicit native template reasoning_effort=medium for every new GPT-OSS method/stage; no prose-only or per-script low/high override."
+      },
+      "recommended_executable_profile": {
+        "do_sample": true,
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "top_k": 0,
+        "min_p": null,
+        "repetition_penalty": 1.0,
+        "num_beams": 1,
+        "typical_p": 1.0,
+        "epsilon_cutoff": 0.0,
+        "eta_cutoff": 0.0
+      },
+      "profile_parameter_provenance": {
+        "do_sample": "Explicit official checkpoint value and author recommendation to sample.",
+        "temperature/top_p": "Explicit author recommendation in README.",
+        "top_k=0/min_p=None/repetition_penalty=1.0/neutral_extra_warpers": "Neutral Transformers translation of the official reference sampler: full-vocabulary softmax(logits/temperature) followed directly by multinomial sampling. These numeric neutralizers are an implementation inference, not separately quoted author recommendations.",
+        "num_beams=1": "Reference implementation emits one sampled next token at each step; standard multinomial sampling translation."
+      },
+      "reference_sampler": {
+        "source": "https://github.com/openai/gpt-oss/blob/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/gpt_oss/torch/model.py#L454-L465",
+        "snapshot": "nonqwen_b_sources/openai_gpt-oss__gpt_oss__torch__model.py",
+        "lines": [
+          454,
+          465
+        ],
+        "behavior": "temperature default 1.0; temperature-zero branch argmax, otherwise full logits softmax and torch.multinomial, without top-k/min-p/repetition filtering."
+      },
+      "alternative_checkpoint_only_policy": {
+        "name": "official checkpoint plus pinned Transformers defaults",
+        "merged_sampler_at_transformers_v4_55_0": {
+          "do_sample": true,
+          "temperature": 1.0,
+          "top_p": 1.0,
+          "top_k": 50,
+          "min_p": null,
+          "repetition_penalty": 1.0
+        },
+        "warning": "top_k=50 is a Transformers library fallback, not an OpenAI recommendation; choose one policy uniformly and disclose it. The reference-equivalent profile above avoids an extra top-k filter."
+      },
+      "preserve": [
+        "checkpoint eos_token_id",
+        "checkpoint pad_token_id",
+        "original task output cap subject to complete-input remaining-context adjustment"
+      ],
+      "historical_boundary": "This prospective unified profile does not establish the sampling settings of previous paper runs."
+    }
+  },
+  "framework_defaults": {
+    "library": "huggingface/transformers",
+    "version": "v4.55.0",
+    "source_url": "https://github.com/huggingface/transformers/blob/v4.55.0/src/transformers/generation/configuration_utils.py",
+    "snapshot": "nonqwen_b_sources/transformers_v4.55.0_configuration_utils.py",
+    "values": {
+      "do_sample": {
+        "value": false,
+        "source_line": 389
+      },
+      "num_beams": {
+        "value": 1,
+        "source_line": 390
+      },
+      "temperature": {
+        "value": 1.0,
+        "source_line": 413
+      },
+      "top_k": {
+        "value": 50,
+        "source_line": 414
+      },
+      "top_p": {
+        "value": 1.0,
+        "source_line": 415
+      },
+      "min_p": {
+        "value": null,
+        "source_line": 416
+      },
+      "typical_p": {
+        "value": 1.0,
+        "source_line": 417
+      },
+      "epsilon_cutoff": {
+        "value": 0.0,
+        "source_line": 418
+      },
+      "eta_cutoff": {
+        "value": 0.0,
+        "source_line": 419
+      },
+      "repetition_penalty": {
+        "value": 1.0,
+        "source_line": 421
+      }
+    },
+    "interpretation": "Library defaults only; model generation_config or deliberate official profile can override them. Do not label these as every model author recommendation."
+  },
+  "sources": {
+    "fetched_utc": "2026-10-16T11:31:36.590584+00:00",
+    "revisions": {
+      "google/gemma-2-9b-it": "11c9b309abf73637e4b6f9a3fa1e92e615547819",
+      "google/gemma-3-12b-it": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "openai/gpt-oss-20b": "6cee5e81ee83917806bbde320786a8fb61efebee",
+      "github/openai/gpt-oss": "5681a6b6552635e7b29cde94a61ca6a7aee90ebd"
+    },
+    "records": [
+      {
+        "url": "https://huggingface.co/api/models/google/gemma-2-9b-it",
+        "snapshot": "google__gemma-2-9b-it__api.json",
+        "http_status": 200,
+        "sha256": "950cb15c45f460e5c8b760e9d9f2a2137fbadc04434c70beaec91616755d748c",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8",
+          "ETag": "W/\"191d-aRrpgikPvAG0go+nc+KzzMQGTOs\""
+        }
+      },
+      {
+        "url": "https://huggingface.co/google/gemma-2-9b-it/resolve/11c9b309abf73637e4b6f9a3fa1e92e615547819/generation_config.json",
+        "snapshot": "google__gemma-2-9b-it__generation_config.http401.txt",
+        "http_status": 401,
+        "sha256": "ddc36914d17b4cc2a3e897e580b57d3abc56a9604213788907e34113b7cd1a42",
+        "headers": {},
+        "not_a_configuration_file": true
+      },
+      {
+        "url": "https://huggingface.co/api/models/google/gemma-3-12b-it",
+        "snapshot": "google__gemma-3-12b-it__api.json",
+        "http_status": 200,
+        "sha256": "6cd89f2423ba5a8c40451ef8bc39b51a06bd38b56a00c6241f32c14cd2d9cc83",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8",
+          "ETag": "W/\"2375-/klrDnZAsLztZBXSbB+HCujpT5U\""
+        }
+      },
+      {
+        "url": "https://huggingface.co/google/gemma-3-12b-it/resolve/96b6f1eccf38110c56df3a15bffe176da04bfd80/generation_config.json",
+        "snapshot": "google__gemma-3-12b-it__generation_config.http401.txt",
+        "http_status": 401,
+        "sha256": "912e87b4d871f9922c14c83b6a3fdae5be1bde760a9374f984f9b4119bffe478",
+        "headers": {},
+        "not_a_configuration_file": true
+      },
+      {
+        "url": "https://huggingface.co/api/models/openai/gpt-oss-20b",
+        "snapshot": "openai__gpt-oss-20b__api.json",
+        "http_status": 200,
+        "sha256": "8ad249e050aa56648eb3648c8516590380cf6b15c1c50d498d3f397b80bdc26b",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8",
+          "ETag": "W/\"58b5-zx5k68s386BPKOAtFeMMgiJQQTY\""
+        }
+      },
+      {
+        "url": "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/generation_config.json",
+        "snapshot": "openai__gpt-oss-20b__generation_config.json",
+        "http_status": 200,
+        "sha256": "f9970ada892d2d1f72e3ed0a6535ccebadd11897318794ca671d8c7014c957da",
+        "headers": {
+          "Content-Type": "text/plain; charset=utf-8",
+          "ETag": "\"86f91466555bd40e3de0b1edee3d5d82f4ccdbfe\"",
+          "X-Repo-Commit": "6cee5e81ee83917806bbde320786a8fb61efebee"
+        }
+      },
+      {
+        "url": "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/chat_template.jinja",
+        "snapshot": "openai__gpt-oss-20b__chat_template.jinja",
+        "http_status": 200,
+        "sha256": "a4c9919cbbd4acdd51ccffe22da049264b1b73e59055fa58811a99efbd7c8146",
+        "headers": {
+          "Content-Type": "text/plain; charset=utf-8",
+          "ETag": "\"dc7bb11927d29f653ba2740f2db2c688fd77592f\"",
+          "X-Repo-Commit": "6cee5e81ee83917806bbde320786a8fb61efebee"
+        }
+      },
+      {
+        "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.55.0/src/transformers/generation/configuration_utils.py",
+        "snapshot": "transformers_v4.55.0_configuration_utils.py",
+        "http_status": 200,
+        "sha256": "dedf66eb91cd1ca32fbbe7488289aded954452df8f93c70427ba7e75194a7280",
+        "headers": {
+          "Content-Type": "text/plain; charset=utf-8",
+          "ETag": "\"316932fcbd1de9293606e21bf0675eb5fe59f48b76f437ad9b2dd87373d9264d\""
+        }
+      },
+      {
+        "url": "https://api.github.com/repos/openai/gpt-oss/commits/main",
+        "snapshot": "openai_gpt-oss_github_commit.json",
+        "http_status": 200,
+        "sha256": "d30f942e7afb10798c4aaabd90da743820972d4f2838cf49a80b489dbeda8641"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openai/gpt-oss/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/README.md",
+        "snapshot": "openai_gpt-oss__README.md",
+        "http_status": 200,
+        "sha256": "578ad0f82c1d823229f9bf2b52b3f1c55ce82772ac57f634f0ca4eb46a6370aa"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openai/gpt-oss/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/gpt_oss/generate.py",
+        "snapshot": "openai_gpt-oss__gpt_oss__generate.py",
+        "http_status": 200,
+        "sha256": "ddd5e599fea79d3c71b6b4411b4705b36669d0506a7c3049be1f54c9749b16e8"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/openai/gpt-oss/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/gpt_oss/torch/model.py",
+        "snapshot": "openai_gpt-oss__gpt_oss__torch__model.py",
+        "http_status": 200,
+        "sha256": "319ba3c6e4d827eb3115fe4838942af448376b513c02cea4b6b471bf6c21a346"
+      }
+    ]
+  },
+  "google_guide_checked": {
+    "url": "https://ai.google.dev/gemma/docs/core/huggingface_inference",
+    "title": "Run Gemma with Hugging Face Transformers",
+    "finding": "No single numeric temperature/top-p/top-k profile established from this inspected guide."
+  },
+  "snapshots": [
+    "nonqwen_b_sources/gemma_official_card_excerpts.json",
+    "nonqwen_b_sources/openai_harmony_excerpt.json"
+  ],
+  "historical_results": "Unchanged; no new inference or historical server configuration reconstruction."
+}

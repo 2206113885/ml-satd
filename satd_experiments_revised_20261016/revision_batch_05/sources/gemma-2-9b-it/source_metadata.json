@@ -1,0 +1,12 @@
+{
+  "url": "https://huggingface.co/google/gemma-2-9b-it/blob/main/generation_config.json",
+  "pinned_revision": null,
+  "evidence_kind": "transcribed_user_screenshot_of_author_repository",
+  "visible_file_commit_short": "39ea45b",
+  "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-df3fc465-c575-46e2-a625-5dd597d110ae.png",
+  "archived_screenshot_relative_path": "revision_batch_05/sources/gemma-2-9b-it/official_generation_config_screenshot.png",
+  "screenshot_sha256": "226ae6fa539fc79422047feb535ff888df95f05358ae328cab4121e02edf5de8",
+  "archived_transcription_relative_path": "revision_batch_05/sources/gemma-2-9b-it/generation_config.json",
+  "retrieved_on": "2026-10-16",
+  "verification_boundary": "Complete visible JSON transcribed from user screenshot displaying the official Google repository and filename. No claim of byte-for-byte original download or match to full queried repository revision."
+}

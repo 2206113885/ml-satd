@@ -1,0 +1,701 @@
+{
+  "issue_id": "R03",
+  "source_issue_id": "INF-02",
+  "files_changed": 31,
+  "strategy": "Reuse the existing normalized first-line token. Normalize each full label with the same lowercase ASCII-letter-only rule; accept exactly one complete normalized full-label match; otherwise continue to the existing UNK/default policy.",
+  "preservation": "Each replaced original loop is commented line by line in place between R03 original/revised markers.",
+  "validation": {
+    "ast_parse_changed_files": 31,
+    "replacement_blocks_per_file": 1,
+    "prefix_suffix_static_equality": true,
+    "original_lines_preserved_as_comments": true,
+    "experiments_executed": false,
+    "model_calls": false,
+    "pure_function_tests_executed": false,
+    "original_directory_written": false
+  },
+  "changes": [
+    {
+      "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "review_original_function_range": {
+        "line": 703,
+        "end_line": 715
+      },
+      "replaced_old_active_range": {
+        "line": 712,
+        "end_line": 714
+      },
+      "preserved_original_comment_range": {
+        "line": 713,
+        "end_line": 715
+      },
+      "new_active_range": {
+        "line": 717,
+        "end_line": 722
+      },
+      "sha256_before": "fd5ca7ccb871f50955ebcdda59e353200ce303dff7d4fd0e4aea0f6b3196c6eb",
+      "sha256_after_r03": "bc28f332877b7cb337803d8d064db03e5bbbdd6cc6184937803bf7ce2c5729ca",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "review_original_function_range": {
+        "line": 341,
+        "end_line": 353
+      },
+      "replaced_old_active_range": {
+        "line": 350,
+        "end_line": 352
+      },
+      "preserved_original_comment_range": {
+        "line": 351,
+        "end_line": 353
+      },
+      "new_active_range": {
+        "line": 355,
+        "end_line": 360
+      },
+      "sha256_before": "9e9d485a31bb0020d71ee24400758257f5d33af3f3fde976b1766c9ccfe94e32",
+      "sha256_after_r03": "da59e080cf1234e039690d7327e92809fd87b2673cb7d3bc43323a5a1686eceb",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "review_original_function_range": {
+        "line": 120,
+        "end_line": 132
+      },
+      "replaced_old_active_range": {
+        "line": 129,
+        "end_line": 131
+      },
+      "preserved_original_comment_range": {
+        "line": 130,
+        "end_line": 132
+      },
+      "new_active_range": {
+        "line": 134,
+        "end_line": 139
+      },
+      "sha256_before": "1e277d5d947bcb36f1331fed51f633707d3f38ecfec0369edcb7c5957d38bf23",
+      "sha256_after_r03": "16c3d32ea447f65c8a715dabaa299b9144af11eb7b863cbdb21a5565b39386a3",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "review_original_function_range": {
+        "line": 131,
+        "end_line": 143
+      },
+      "replaced_old_active_range": {
+        "line": 140,
+        "end_line": 142
+      },
+      "preserved_original_comment_range": {
+        "line": 141,
+        "end_line": 143
+      },
+      "new_active_range": {
+        "line": 145,
+        "end_line": 150
+      },
+      "sha256_before": "eab9c752fa2ac68ec04c09680bce20253a7584b0c0ec67222c72e2ff9d87a93a",
+      "sha256_after_r03": "2ff12b7ab78ed6ecc63759021afa3b47544de5a621493dc62146e084dd03fd33",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+      "review_original_function_range": {
+        "line": 148,
+        "end_line": 163
+      },
+      "replaced_old_active_range": {
+        "line": 160,
+        "end_line": 162
+      },
+      "preserved_original_comment_range": {
+        "line": 161,
+        "end_line": 163
+      },
+      "new_active_range": {
+        "line": 165,
+        "end_line": 170
+      },
+      "sha256_before": "4bc830cc99cce094ff593165599021f35916f72585c4345ba7d67ea3296d1e4f",
+      "sha256_after_r03": "16cd37710b001e6936a3323f9b8d556bc0fef349a2ef6bb6cc65641357203bd5",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "review_original_function_range": {
+        "line": 321,
+        "end_line": 334
+      },
+      "replaced_old_active_range": {
+        "line": 331,
+        "end_line": 333
+      },
+      "preserved_original_comment_range": {
+        "line": 332,
+        "end_line": 334
+      },
+      "new_active_range": {
+        "line": 336,
+        "end_line": 341
+      },
+      "sha256_before": "ce1beeaf8f7df2471fbe39dbfe922befac21f4c598aa4ef6add84f19c7bf0761",
+      "sha256_after_r03": "d219c02bb6401fe3ba1936649a9f19d0f5b24255a9f1ee78515a92c07f1dea20",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "review_original_function_range": {
+        "line": 394,
+        "end_line": 408
+      },
+      "replaced_old_active_range": {
+        "line": 405,
+        "end_line": 407
+      },
+      "preserved_original_comment_range": {
+        "line": 406,
+        "end_line": 408
+      },
+      "new_active_range": {
+        "line": 410,
+        "end_line": 415
+      },
+      "sha256_before": "b1069720cfd242bb1d6e599e356203ed88c3fc31421250e53112a782554b34db",
+      "sha256_after_r03": "c8aa9ae1d48aa31cf5147ebbea085af3daf6dc392038a0e4928199c009de5f5f",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "review_original_function_range": {
+        "line": 347,
+        "end_line": 361
+      },
+      "replaced_old_active_range": {
+        "line": 358,
+        "end_line": 360
+      },
+      "preserved_original_comment_range": {
+        "line": 359,
+        "end_line": 361
+      },
+      "new_active_range": {
+        "line": 363,
+        "end_line": 368
+      },
+      "sha256_before": "34c45663aadb395e4a83c06cd3d64afcad1a074d5071050d36d22e4598b0204d",
+      "sha256_after_r03": "9d5a7c44678dc1020acc0e86b337dd7aa21828c67702305bb15445c9d5101263",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "review_original_function_range": {
+        "line": 349,
+        "end_line": 363
+      },
+      "replaced_old_active_range": {
+        "line": 360,
+        "end_line": 362
+      },
+      "preserved_original_comment_range": {
+        "line": 361,
+        "end_line": 363
+      },
+      "new_active_range": {
+        "line": 365,
+        "end_line": 370
+      },
+      "sha256_before": "e2386c56b8609b048b823ed693ef9e14a93b21817251a23cc471d23f28b15a86",
+      "sha256_after_r03": "1a17e68beb24dd83596aaf829bbb591f1cceb27c5c68a55fd21cfff24296eb98",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "review_original_function_range": {
+        "line": 397,
+        "end_line": 411
+      },
+      "replaced_old_active_range": {
+        "line": 408,
+        "end_line": 410
+      },
+      "preserved_original_comment_range": {
+        "line": 409,
+        "end_line": 411
+      },
+      "new_active_range": {
+        "line": 413,
+        "end_line": 418
+      },
+      "sha256_before": "7fc4b3bc47a58d6a53280e07b7963df837950df15eca37d456aad25d8254cc00",
+      "sha256_after_r03": "85595060fa8c8d6ac6daa43c383117837b8b409d4da89a0768c33c20c77c96d3",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "review_original_function_range": {
+        "line": 397,
+        "end_line": 411
+      },
+      "replaced_old_active_range": {
+        "line": 408,
+        "end_line": 410
+      },
+      "preserved_original_comment_range": {
+        "line": 409,
+        "end_line": 411
+      },
+      "new_active_range": {
+        "line": 413,
+        "end_line": 418
+      },
+      "sha256_before": "4b4d49f0213bacee5ad0af9202d165d00601c7dc985798a31e1d83328d2987ea",
+      "sha256_after_r03": "6f3dc64063999f9149bd392ef9bcbf5bc83b41eef0915d7ef7cbe093c889f452",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "review_original_function_range": {
+        "line": 518,
+        "end_line": 531
+      },
+      "replaced_old_active_range": {
+        "line": 528,
+        "end_line": 530
+      },
+      "preserved_original_comment_range": {
+        "line": 529,
+        "end_line": 531
+      },
+      "new_active_range": {
+        "line": 533,
+        "end_line": 538
+      },
+      "sha256_before": "07faeab8f0fd7ae04d254fc2afd6155311bc1e9a3aca62a8c14f8cb552c2b077",
+      "sha256_after_r03": "0108d53f3796a0cc9b1da14b880d0622d0bf4e948bef2fc707ad54189cc1742f",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "review_original_function_range": {
+        "line": 550,
+        "end_line": 563
+      },
+      "replaced_old_active_range": {
+        "line": 560,
+        "end_line": 562
+      },
+      "preserved_original_comment_range": {
+        "line": 561,
+        "end_line": 563
+      },
+      "new_active_range": {
+        "line": 565,
+        "end_line": 570
+      },
+      "sha256_before": "a87b71db198013cdb102f922e8efd734b40f87809146e6b3ff192dce17997a9e",
+      "sha256_after_r03": "25f60385567ef19ca7f603a871cdffd600bd205e3b71bbaeb655b5057c59e2ba",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "review_original_function_range": {
+        "line": 552,
+        "end_line": 566
+      },
+      "replaced_old_active_range": {
+        "line": 563,
+        "end_line": 565
+      },
+      "preserved_original_comment_range": {
+        "line": 564,
+        "end_line": 566
+      },
+      "new_active_range": {
+        "line": 568,
+        "end_line": 573
+      },
+      "sha256_before": "f0bdf87b9cf5e1257aac90e3b7faa2902211383d5060dfbbccbfea7848360ac5",
+      "sha256_after_r03": "f9eedc7f4279a5393df48d74dd279c2e36b6341d1ffb4b4ce22a72ff6cb0c31b",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "review_original_function_range": {
+        "line": 552,
+        "end_line": 566
+      },
+      "replaced_old_active_range": {
+        "line": 563,
+        "end_line": 565
+      },
+      "preserved_original_comment_range": {
+        "line": 564,
+        "end_line": 566
+      },
+      "new_active_range": {
+        "line": 568,
+        "end_line": 573
+      },
+      "sha256_before": "dc0907a3330896f05944572a70034fde7f5fe0c37b3570749507601b115cff86",
+      "sha256_after_r03": "46a838f41393d974d5381ff735bc7c99e01751185bb349c90b40ea4a4edb825c",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "review_original_function_range": {
+        "line": 554,
+        "end_line": 568
+      },
+      "replaced_old_active_range": {
+        "line": 565,
+        "end_line": 567
+      },
+      "preserved_original_comment_range": {
+        "line": 566,
+        "end_line": 568
+      },
+      "new_active_range": {
+        "line": 570,
+        "end_line": 575
+      },
+      "sha256_before": "1e7b4839ecd9e5b6d9b62b8b4489021841b459f10c373054dcc368d9d1165382",
+      "sha256_after_r03": "39fece9d12fc3e328f48431eb88bb9916f0d80ea61435973a85075b0b67ea3ea",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "review_original_function_range": {
+        "line": 673,
+        "end_line": 687
+      },
+      "replaced_old_active_range": {
+        "line": 684,
+        "end_line": 686
+      },
+      "preserved_original_comment_range": {
+        "line": 685,
+        "end_line": 687
+      },
+      "new_active_range": {
+        "line": 689,
+        "end_line": 694
+      },
+      "sha256_before": "adfebbda4f123b1fea1fc71a1bce3ecbe636fc50d38789f85ae8a296aea6231a",
+      "sha256_after_r03": "c899bdb9a38101b0bfcc286b7fc5bea6d629f1f7acef11ddbd3608396d00fc11",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "review_original_function_range": {
+        "line": 555,
+        "end_line": 569
+      },
+      "replaced_old_active_range": {
+        "line": 566,
+        "end_line": 568
+      },
+      "preserved_original_comment_range": {
+        "line": 567,
+        "end_line": 569
+      },
+      "new_active_range": {
+        "line": 571,
+        "end_line": 576
+      },
+      "sha256_before": "2e1efd698c524783ad17b9cf22a90326f5c3cb685e2fa418f10d7591de5ddb77",
+      "sha256_after_r03": "855dce35319d2987857661df3e2a77bdd80b86cee294f30ae5bed0596a651fa1",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "review_original_function_range": {
+        "line": 555,
+        "end_line": 569
+      },
+      "replaced_old_active_range": {
+        "line": 566,
+        "end_line": 568
+      },
+      "preserved_original_comment_range": {
+        "line": 567,
+        "end_line": 569
+      },
+      "new_active_range": {
+        "line": 571,
+        "end_line": 576
+      },
+      "sha256_before": "647b1d0aa715bd585f17bb5ff842e3766189acf7e6334f571ea0760d40f23cbf",
+      "sha256_after_r03": "0f4f785e9607c2be6920a7361f76ae03e9a283e1770e2c1ab46ac247d55ea2d0",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "review_original_function_range": {
+        "line": 556,
+        "end_line": 570
+      },
+      "replaced_old_active_range": {
+        "line": 567,
+        "end_line": 569
+      },
+      "preserved_original_comment_range": {
+        "line": 568,
+        "end_line": 570
+      },
+      "new_active_range": {
+        "line": 572,
+        "end_line": 577
+      },
+      "sha256_before": "9d78b79b80f05899f7d43927419166d653aed8bb903ea4ec1c8ae85d44efdac8",
+      "sha256_after_r03": "ea8b33cf287629afea9cf8b88c86fea9071d0d42cfa754416fb0406b87fbcc6b",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "review_original_function_range": {
+        "line": 443,
+        "end_line": 456
+      },
+      "replaced_old_active_range": {
+        "line": 453,
+        "end_line": 455
+      },
+      "preserved_original_comment_range": {
+        "line": 454,
+        "end_line": 456
+      },
+      "new_active_range": {
+        "line": 458,
+        "end_line": 463
+      },
+      "sha256_before": "a91bb0825f05bbd45a209265cfa80f7eb513ae30acc3e1cb0fd244a526380191",
+      "sha256_after_r03": "161326cea4699333df33a75aeefb49aac4def75f5e730416a153799e906e37de",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "review_original_function_range": {
+        "line": 133,
+        "end_line": 146
+      },
+      "replaced_old_active_range": {
+        "line": 143,
+        "end_line": 145
+      },
+      "preserved_original_comment_range": {
+        "line": 144,
+        "end_line": 146
+      },
+      "new_active_range": {
+        "line": 148,
+        "end_line": 153
+      },
+      "sha256_before": "066b8b181f5c8553128a75dd2af978636b26e1671639aa3a8c4967544f1bc059",
+      "sha256_after_r03": "c6dea267a9f823f2f0aa285fefb168f7bf97c3f893ee9d41cfc7ff12eeb298af",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "review_original_function_range": {
+        "line": 158,
+        "end_line": 172
+      },
+      "replaced_old_active_range": {
+        "line": 169,
+        "end_line": 171
+      },
+      "preserved_original_comment_range": {
+        "line": 170,
+        "end_line": 172
+      },
+      "new_active_range": {
+        "line": 174,
+        "end_line": 179
+      },
+      "sha256_before": "aa20673b500ed572659a033279e99ade51e97b882b0027b19a67c3e8be318cf4",
+      "sha256_after_r03": "6b78002ce7b1e1360677b109df7e4906916e79e623db8c634795d337a7fb50b7",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "review_original_function_range": {
+        "line": 159,
+        "end_line": 173
+      },
+      "replaced_old_active_range": {
+        "line": 170,
+        "end_line": 172
+      },
+      "preserved_original_comment_range": {
+        "line": 171,
+        "end_line": 173
+      },
+      "new_active_range": {
+        "line": 175,
+        "end_line": 180
+      },
+      "sha256_before": "925b6529728593271ff5168d08d6d043bd5cd63fc0b13f54b21fe00bb46e6864",
+      "sha256_after_r03": "323cb3ddd22baa66f07aad08e6aa8cfe192d86cfeb1998a9b90113d6556c6668",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "review_original_function_range": {
+        "line": 159,
+        "end_line": 173
+      },
+      "replaced_old_active_range": {
+        "line": 170,
+        "end_line": 172
+      },
+      "preserved_original_comment_range": {
+        "line": 171,
+        "end_line": 173
+      },
+      "new_active_range": {
+        "line": 175,
+        "end_line": 180
+      },
+      "sha256_before": "b52084abf925f48b73c71fbd43af1c8397abd7508da586c9108b5c59bdd188b9",
+      "sha256_after_r03": "8f82f9bd5ee46849640a574c1b061b15af9c325f67583bf54638c17356d3ab32",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "review_original_function_range": {
+        "line": 159,
+        "end_line": 173
+      },
+      "replaced_old_active_range": {
+        "line": 170,
+        "end_line": 172
+      },
+      "preserved_original_comment_range": {
+        "line": 171,
+        "end_line": 173
+      },
+      "new_active_range": {
+        "line": 175,
+        "end_line": 180
+      },
+      "sha256_before": "89df7c89801e017d8d8fead414197b68e03114b1e6d0b9db4382b2cbc018e4ee",
+      "sha256_after_r03": "f16c8ef5c8da5bf62f98fc244ac351c2873d0f7c955bc812cc4a90e3a0544846",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_zero_shot/bin_new_test.py",
+      "review_original_function_range": {
+        "line": 159,
+        "end_line": 173
+      },
+      "replaced_old_active_range": {
+        "line": 170,
+        "end_line": 172
+      },
+      "preserved_original_comment_range": {
+        "line": 171,
+        "end_line": 173
+      },
+      "new_active_range": {
+        "line": 175,
+        "end_line": 180
+      },
+      "sha256_before": "a6f32fe3191784192ffbdc06c6b08e2b46aabd3140cd456a601f05a4225d29b4",
+      "sha256_after_r03": "2acbc89a9fc5d4df96f97af50494ab4660487c8cfb5be7a1e8fc3d19104fa558",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "review_original_function_range": {
+        "line": 160,
+        "end_line": 174
+      },
+      "replaced_old_active_range": {
+        "line": 171,
+        "end_line": 173
+      },
+      "preserved_original_comment_range": {
+        "line": 172,
+        "end_line": 174
+      },
+      "new_active_range": {
+        "line": 176,
+        "end_line": 181
+      },
+      "sha256_before": "f6dce5888ad47506b2fb4775890982e06953293ddaf581de3684f1a196aa28b4",
+      "sha256_after_r03": "85b67cf5c74e3a78a89dfa42dc54c67a6fc85816bac27436b838f7b6abaef8a0",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "review_original_function_range": {
+        "line": 160,
+        "end_line": 174
+      },
+      "replaced_old_active_range": {
+        "line": 171,
+        "end_line": 173
+      },
+      "preserved_original_comment_range": {
+        "line": 172,
+        "end_line": 174
+      },
+      "new_active_range": {
+        "line": 176,
+        "end_line": 181
+      },
+      "sha256_before": "3feb7a5fea1ce6960e56940e946d7b77181c5e6574c5aeace35fe8b81bfd30a1",
+      "sha256_after_r03": "1bccc082def9f367e38cda22a43d6f71196d4a07a601b9361964914347db665a",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "review_original_function_range": {
+        "line": 160,
+        "end_line": 174
+      },
+      "replaced_old_active_range": {
+        "line": 171,
+        "end_line": 173
+      },
+      "preserved_original_comment_range": {
+        "line": 172,
+        "end_line": 174
+      },
+      "new_active_range": {
+        "line": 176,
+        "end_line": 181
+      },
+      "sha256_before": "fa261d7ad3ef8a2977f57f65b63d5dc59ee967c4da3a5bcd8a43b328bf3e27c2",
+      "sha256_after_r03": "b4ee0e9e0a05b263c91764189a9b4459e486852c99289cf7c985a70967ac5dde",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    },
+    {
+      "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "review_original_function_range": {
+        "line": 159,
+        "end_line": 172
+      },
+      "replaced_old_active_range": {
+        "line": 169,
+        "end_line": 171
+      },
+      "preserved_original_comment_range": {
+        "line": 170,
+        "end_line": 172
+      },
+      "new_active_range": {
+        "line": 174,
+        "end_line": 179
+      },
+      "sha256_before": "217af126132cdb1892ba11f937d5c55200d04b62a1ba435f85f0c747791c8f08",
+      "sha256_after_r03": "c773136e6681eca5ddd01896e66deb4ede52be340117b729e8625aaf5f4f428f",
+      "note": "Only full-name first-word fallback replaced. Existing abbreviation parsing, Yes/No, prompts, sampling and default-label control flow retained."
+    }
+  ]
+}

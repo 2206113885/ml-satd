@@ -1,0 +1,12 @@
+{
+  "url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/generation_config.json",
+  "pinned_revision": null,
+  "evidence_kind": "transcribed_user_screenshot_of_author_repository",
+  "visible_file_commit_short": "0ee9a34",
+  "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-363397f0-f887-472d-bb4a-671f6d9bb030.png",
+  "archived_screenshot_relative_path": "revision_batch_05/sources/CodeLlama-7b-Instruct-hf/official_generation_config_screenshot.png",
+  "screenshot_sha256": "0db3c0e17efff44c4c81d78f868e79ecd0723207bb6323ebb171ce14a10ca41f",
+  "archived_transcription_relative_path": "revision_batch_05/sources/CodeLlama-7b-Instruct-hf/generation_config.json",
+  "retrieved_on": "2026-10-16",
+  "verification_boundary": "All six visible JSON lines transcribed from user screenshot displaying the official Meta repository and filename. No claim of byte-for-byte original download or match to full queried repository revision."
+}

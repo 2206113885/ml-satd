@@ -1,0 +1,60 @@
+[
+  {
+    "id": "DATA-PASS-01",
+    "title": "158个论文对应run均保持393行及注释/gold逐行一致",
+    "status": "verified",
+    "evidence": "data_integrity_checks.json",
+    "details": {
+      "runs": 158,
+      "rows_per_run": 393,
+      "comment_sequence_mismatches": 0,
+      "gold_sequence_mismatches": 0,
+      "scope": "Current active manuscript result mappings, excluding auxiliary/legacy runs."
+    }
+  },
+  {
+    "id": "DATA-PASS-02",
+    "title": "224个主文/附录P/R/F1三元组从预测重新计算全部吻合",
+    "status": "verified",
+    "evidence": "data_metric_recomputation_checks.json",
+    "details": {
+      "triples": 224,
+      "rounding_decimals": 3,
+      "mismatches": 0,
+      "method": "Standard-library TP/FP/FN calculation from predictions; weighted metrics and appendix per-coarse-class metrics; coarse uses existing final-fine-derived field as saved."
+    }
+  },
+  {
+    "id": "DATA-PASS-03",
+    "title": "标准主/细类映射覆盖相同23个标签，最终gold无缺失或未知类",
+    "status": "verified",
+    "evidence": [
+      "data_label_space_checks.json",
+      "data_integrity_checks.json"
+    ],
+    "details": {
+      "literal_label_maps_checked": 108,
+      "maps_with_wrong_abbreviation_set": 0,
+      "final_gold_values": 23,
+      "scope": "LABEL_ABBR/FINE_LABEL_ABBR dictionaries; legacy satd_type mismatch separately reported."
+    }
+  },
+  {
+    "id": "DATA-PASS-04",
+    "title": "主方法活动固定长字符串未检出最终测试完整注释重叠",
+    "status": "verified_with_scope_limit",
+    "evidence": "data_demo_overlap_checks.json",
+    "details": {
+      "current_method_family_overlaps": 0,
+      "legacy_only_overlapping_prompt_files": 3,
+      "limit": "Static complete-string/serialization-normalized matching, minimum20characters; does not establish GPT-5 seed provenance or pretraining independence."
+    }
+  },
+  {
+    "id": "DATA-PASS-05",
+    "title": "多数主循环zip读取同一DataFrame两列，没有发现其本身造成行错配",
+    "status": "verified_with_scope_limit",
+    "evidence": "data_integrity_checks.json",
+    "details": "158现有主结果的实际行序与gold一致；字典按comment仲裁的重复键覆盖另见DATA-07，不混为zip错误。"
+  }
+]

@@ -1,0 +1,1226 @@
+{
+  "1b2da99d7f5a": {
+    "name": "generate_prompt",
+    "files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py"
+    ],
+    "source": "def generate_prompt(instruction: str, input_ctxt: str = None) -> str:\n    if input_ctxt:\n        return f\"\"\"\n### Instruction:\n{instruction}\n\n### Input:\n{input_ctxt}\n\n### Response:\"\"\"\n    else:\n        return f\"\"\"Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response:\"\"\"",
+    "line": 143
+  },
+  "c239ae10c13b": {
+    "name": "generate_prompt_without_adding_dynamic_examples",
+    "files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py"
+    ],
+    "source": "def generate_prompt_without_adding_dynamic_examples(init_prompt, test_context):\n    prompt = init_prompt\n    prompt += test_context + '\\n'\n    prompt += '### Label: '\n    return prompt",
+    "line": 273
+  },
+  "63f967aacce6": {
+    "name": "generate_prompt_by_top_n_items",
+    "files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py"
+    ],
+    "source": "def generate_prompt_by_top_n_items(init_prompt, test_context, top_n_items, data):\n    prompt = init_prompt\n    for indx,similarity in top_n_items:\n        if len(split_to_tokens(prompt+data['prompt_context'][indx]+test_context))<4096:\n            prompt += data['prompt_context'][indx] + '\\n'\n            prompt += '### Label: ' + data['label'][indx].upper() + '\\n\\n'\n    prompt += 'Give the type of following technical debt:\\n'\n    prompt += test_context + '\\n'\n    prompt += 'You only need give the type.'\n    # prompt += 'You only need give the type.<|im_end|>\\n<|im_start|>assistant\\n'\n    return prompt",
+    "line": 279
+  },
+  "9040e409c6a0": {
+    "name": "generate_prompt_by_random_n_items",
+    "files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py"
+    ],
+    "source": "def generate_prompt_by_random_n_items(init_prompt, test_context, num_rand, data):\n    random_n_items = random.sample(range(len(data)), num_rand)\n    prompt = init_prompt\n    for indx in random_n_items:\n        if len(split_to_tokens(prompt+data['prompt_context'][indx]+test_context))<4096:\n            prompt += data['prompt_context'][indx] + '\\n'\n            prompt += '### Label: ' + data['label'][indx] + '\\n\\n'\n    prompt += test_context + '\\n'\n    prompt += '### Label: '\n    return prompt",
+    "line": 291
+  },
+  "dead00b5de7a": {
+    "name": "generate_prompt_by_top_n_items",
+    "files": [
+      "ICL_Ob_qwen-8b_v0.py"
+    ],
+    "source": "def generate_prompt_by_top_n_items(init_prompt, test_context, top_n_items, data):\n    prompt = init_prompt\n    for indx,similarity in top_n_items:\n        if len(split_to_tokens(prompt+data['prompt_context'][indx]+test_context))<4096:\n            prompt += data['prompt_context'][indx] + '\\n'\n            prompt += '### Label: ' + data['label'][indx].upper() + '\\n\\n'\n    prompt += 'Give the type of following technical debt:\\n'\n    prompt += test_context + '\\n'\n    prompt += 'You only need give the type.<|im_end|>\\n<|im_start|>assistant\\n'\n    return prompt",
+    "line": 226
+  },
+  "b37bee3ba233": {
+    "name": "build_prompt",
+    "files": [
+      "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+      "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "basic_few_shot/Qwen3-8B_few_shot_re.py",
+      "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+      "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+      "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py"
+    ],
+    "source": "def build_prompt(comment: str) -> str:\n    return (\n        f\"{PROMPT_HEAD}\\n\\n{PROMPT_TAIL}\\n\\n\"\n        \"Code Comment:\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\nAbbreviation:\"\n    )",
+    "line": 689
+  },
+  "625957989804": {
+    "name": "simple_extract",
+    "files": [
+      "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+      "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "basic_few_shot/Qwen3-8B_few_shot_re.py",
+      "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+      "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+      "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py"
+    ],
+    "source": "def simple_extract(raw: str) -> str:\n    first = re.split(r\"[\\r\\n]\", raw.strip())[0]\n    token = re.sub(r\"[^a-z]\", \"\", first.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    raw_strip = first.strip()\n    if raw_strip in ABBR2FULL:\n        return raw_strip\n    join = raw_strip.replace(\" \", \"\")\n    if join.lower() in ABBR_LOWER:\n        return ABBR_LOWER[join.lower()]\n    return \"<UNK>\"",
+    "line": 697
+  },
+  "9080a65042fb": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        do_sample=True,\n        temperature=0.2,\n        top_p=0.95,\n        pad_token_id=tokenizer.eos_token_id,\n        \n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    raw_first = re.split(r\"[\\r\\n]\", raw, maxsplit=1)[0]\n    return simple_extract(raw_first), raw_first",
+    "line": 718
+  },
+  "740994a05c6a": {
+    "name": "build_prompt",
+    "files": [
+      "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+      "basic_few_shot/gemma-2-9b_few_shot_re.py",
+      "basic_few_shot/gemma-3-12b_few_shot_re.py",
+      "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+      "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+      "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+      "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+      "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+      "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+      "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+      "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py"
+    ],
+    "source": "def build_prompt(comment: str) -> str:\n    return (\n        f\"{PROMPT_HEAD}\\n\\n{PROMPT_TAIL}\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\nAbbreviation:\"\n    )",
+    "line": 695
+  },
+  "2803c023df2c": {
+    "name": "extract_abbr",
+    "files": [
+      "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py"
+    ],
+    "source": "def extract_abbr(raw: str) -> str:\n    first = re.split(r\"[\\r\\n]\", raw.strip(), maxsplit=1)[0].strip()\n    first = re.sub(r\"(^[*_`]+|[*_`]+$)\", \"\", first)  # 去装饰\n    m = ABBR_REGEX.search(first)\n    if m:\n        return ABBR_LOWER[m.group(1).lower()]\n    token = re.sub(r\"[^a-z]\", \"\", first.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    for full, ab in LABEL_ABBR.items():\n        if full.split()[0].lower() in token:\n            return ab\n    return \"<UNK>\"",
+    "line": 703
+  },
+  "df9d8ccc5b45": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "basic_zero_shot/Llama-3.1-8B_zero_shot.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        # {\"role\": \"system\", \"content\": SYSTEM_MSG},\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    out = text_gen(messages, MAX_NEW_TOKENS)\n    # out[0][\"generated_text\"] 是对话消息列表，最后一个是 assistant 的回复\n    assistant_msg = out[0][\"generated_text\"][-1]\n    raw = assistant_msg.get(\"content\", \"\").strip()\n    raw_first = raw.split(\"\\n\", 1)[0].strip()\n    return extract_abbr(raw_first), raw_first",
+    "line": 748
+  },
+  "43739fc92653": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n        enable_thinking=False\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=16384).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    raw_first = re.split(r\"[\\r\\n]\", raw, maxsplit=1)[0]\n    return simple_extract(raw_first), raw_first",
+    "line": 907
+  },
+  "a4455407ee2f": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "basic_few_shot/Qwen3-8B_few_shot_re.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n        enable_thinking=False\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=65536).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        temperature=0.7,\n        top_p=0.8,\n        top_k=20,\n        \n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    raw_first = re.split(r\"[\\r\\n]\", raw, maxsplit=1)[0]\n    return simple_extract(raw_first), raw_first",
+    "line": 714
+  },
+  "722e1d7e6884": {
+    "name": "simple_extract",
+    "files": [
+      "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+      "basic_few_shot/gemma-2-9b_few_shot_re.py",
+      "basic_few_shot/gemma-3-12b_few_shot_re.py",
+      "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+      "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+      "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+      "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+      "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+      "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+      "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+      "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py"
+    ],
+    "source": "def simple_extract(raw: str) -> str:\n    token = re.sub(r\"[^a-z]\", \"\", raw.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    if raw in ABBR2FULL:              # 全称\n        return raw\n    join = raw.replace(\" \", \"\")\n    if join.lower() in ABBR_LOWER:\n        return ABBR_LOWER[join.lower()]\n    return \"<UNK>\"",
+    "line": 898
+  },
+  "1d0c68864ec8": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot/codegemma-1.1-7b_few_shot_re.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\", \"content\": build_prompt(comment)},   # gemma 只要 user\n    ]\n    text = tokenizer.apply_chat_template(messages,\n                                         tokenize=False,\n                                         add_generation_prompt=True)\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=16384).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        # do_sample=False,                         # 如需强制贪婪可解开\n        # eos_token_id=tokenizer.eos_token_id,\n        # pad_token_id=tokenizer.eos_token_id,\n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    raw_first = raw.split(\"\\n\", 1)[0]\n    return simple_extract(raw_first), raw_first",
+    "line": 916
+  },
+  "25d5383d549c": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot/gemma-2-9b_few_shot_re.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\", \"content\": build_prompt(comment)},   # gemma 只要 user\n    ]\n    text = tokenizer.apply_chat_template(messages,\n                                         tokenize=False,\n                                         add_generation_prompt=True)\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=65536).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        # do_sample=False,                         # 如需强制贪婪可解开\n        # eos_token_id=tokenizer.eos_token_id,\n        # pad_token_id=tokenizer.eos_token_id,\n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    raw_first = raw.split(\"\\n\", 1)[0]\n    return simple_extract(raw_first), raw_first",
+    "line": 922
+  },
+  "e2af085650a2": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot/gemma-3-12b_few_shot_re.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\", \"content\": build_prompt(comment)},   # gemma 只要 user\n    ]\n    text = tokenizer.apply_chat_template(messages,\n                                         tokenize=False,\n                                         add_generation_prompt=True)\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=66356).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        # do_sample=False,                         \n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    raw_first = raw.split(\"\\n\", 1)[0]\n    return simple_extract(raw_first), raw_first",
+    "line": 916
+  },
+  "db6141b54177": {
+    "name": "build_prompt",
+    "files": [
+      "basic_few_shot/gpt-oss-20b_few_shot.py",
+      "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py"
+    ],
+    "source": "def build_prompt(comment: str) -> str:\n    return (\n        f\"{PROMPT_HEAD}\\n\\n{PROMPT_TAIL}\\n\\n\"\n        \"Code Comment:\\n\"\n        f\"```text\\n{comment}\\n```\\n\\n\"\n        \"#Abbreviation:\"\n    )",
+    "line": 836
+  },
+  "dcbb9373433f": {
+    "name": "extract_abbr_from_text",
+    "files": [
+      "basic_few_shot/gpt-oss-20b_few_shot.py",
+      "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "battle/test.py"
+    ],
+    "source": "def extract_abbr_from_text(text: str) -> str:\n    if not text:\n        return \"<UNK>\"\n    # 规范化直接命中\n    cz = _canon(text)\n    if cz in {_canon(a): a for a in ABBR_SET}:\n        # 把 cz 映回真实缩写\n        for a in ABBR_SET:\n            if _canon(a) == cz:\n                return a\n    # 正则宽松匹配（允许空白差异）\n    for abbr in ABBR_SET:\n        pat = r'\\b' + re.sub(r'\\s+', r'\\\\s*', re.escape(abbr)) + r'\\b'\n        if re.search(pat, text, flags=re.IGNORECASE):\n            return abbr\n    # 全称也兜底匹配\n    for full, abbr in FULL2ABBR.items():\n        pat = r'\\b' + re.sub(r'\\s+', r'\\\\s*', re.escape(full)) + r'\\b'\n        if re.search(pat, text, flags=re.IGNORECASE):\n            return abbr\n    return \"<UNK>\"",
+    "line": 847
+  },
+  "dab8f68c24a4": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot/gpt-oss-20b_few_shot.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"system\", \"content\":\n         \"You are a strict classifier. Reasoning: high. \"\n         \"Output ONLY the abbreviation, one line.\"},\n        {\"role\": \"user\", \"content\": build_prompt(comment)}, \n    ]\n\n    \n\n    outputs =  pipe(\n    messages,\n    max_new_tokens=MAX_NEW_TOKENS,\n    )\n\n    # 关键：不要跳过特殊标记，便于找到 final 段\n    answer = outputs[0][\"generated_text\"][-1]['content']\n    raw_answer = answer.split('assistantfinal')[-1]\n    print(raw_answer)\n    abbr = extract_abbr_from_text(raw_answer)\n\n    return abbr,raw_answer",
+    "line": 881
+  },
+  "c93f26f5c417": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    out = text_gen(messages, MAX_NEW_TOKENS)\n    # out[0][\"generated_text\"] 是对话消息列表，最后一个是 assistant 的回复\n    assistant_msg = out[0][\"generated_text\"][-1]\n    raw = assistant_msg.get(\"content\", \"\").strip()\n    raw_first = raw.split(\"\\n\", 1)[0].strip()\n    print(raw_first)\n    return extract_abbr(raw_first), raw_first",
+    "line": 380
+  },
+  "aeb8f972016f": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n        enable_thinking=True\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        temperature=0.6,\n        top_p=0.95,\n        top_k=20,\n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    visible = raw.split('</think>')[-1].strip()\n    print(visible)\n    raw_first = visible\n    return simple_extract(raw_first), raw_first",
+    "line": 358
+  },
+  "fdfd5a01d6fb": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "basic_few_shot_CoT/Qwen3-8B-CoT-new.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n        enable_thinking=True\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=16384).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        temperature=0.6,\n        top_p=0.95,\n        top_k=20,\n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    visible = raw.split('</think>')[-1].strip()\n    print(visible)\n    raw_first = visible\n    return simple_extract(raw_first), raw_first",
+    "line": 358
+  },
+  "7c9791f8ee15": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+      "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+      "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\", \"content\": build_prompt(comment)},   # gemma 只要 user\n    ]\n    text = tokenizer.apply_chat_template(messages,\n                                         tokenize=False,\n                                         add_generation_prompt=True)\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=8192).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    print(raw)\n    raw_first = raw.split(\"\\n\", 1)[0]\n    print(raw_first)\n    return simple_extract(raw_first), raw_first",
+    "line": 365
+  },
+  "a8d596575427": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+      "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\", \"content\": build_prompt(comment)},   # gemma 只要 user\n    ]\n    text = tokenizer.apply_chat_template(messages,\n                                         tokenize=False,\n                                         add_generation_prompt=True)\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=8192).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,                       \n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    raw_first = raw.split(\"\\n\", 1)[0]\n    return simple_extract(raw_first), raw_first",
+    "line": 364
+  },
+  "f10a5df31dde": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"system\", \"content\":\n         \"You are a strict classifier. Reasoning: high. \"\n         \"Output ONLY the abbreviation, one line.\"},\n        {\"role\": \"user\", \"content\": build_prompt(comment)},\n    ]\n\n    \n\n    outputs =  pipe(\n    messages,\n    max_new_tokens=MAX_NEW_TOKENS,\n    )\n\n    # 关键：不要跳过特殊标记，便于找到 final 段\n    answer = outputs[0][\"generated_text\"][-1]['content']\n    raw_answer = answer.split('assistantfinal')[-1]\n    # print(raw_answer)\n    abbr = extract_abbr_from_text(raw_answer)\n\n    return abbr,raw_answer",
+    "line": 352
+  },
+  "26138e8537c1": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n        enable_thinking=True   # 保持充分思考，但不外露\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        temperature=0.6,   # 保持你的参数\n        top_p=0.95,\n        top_k=20,\n    )\n    raw_all = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                               skip_special_tokens=True).strip()\n    # 仅取可见部分（</think> 之后），不外露思维链\n    visible = raw_all.split('</think>')[-1].strip()\n    abbr = simple_extract(visible)\n    return abbr, visible",
+    "line": 150
+  },
+  "011c3a94b107": {
+    "name": "build_reason_prompt",
+    "files": [
+      "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py"
+    ],
+    "source": "def build_reason_prompt(comment: str, abbr: str) -> str:\n    full = ABBR2FULL.get(abbr, abbr)\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"A label has been chosen: {full} ({abbr}).\\n\"\n        \"In one short sentence, justify why the comment fits this label.\\n\"\n        \"Do not reveal internal reasoning or steps.\\n\"\n        \"Output format: Reason: <short justification>\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Answer:\"\n    )",
+    "line": 178
+  },
+  "9469e15b90ea": {
+    "name": "extract_reason",
+    "files": [
+      "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py"
+    ],
+    "source": "def extract_reason(text: str) -> str:\n    if not isinstance(text, str) or not text.strip():\n        return \"\"\n    line = text.strip().splitlines()[0].strip()\n    line = re.sub(r'^\\s*(?:Reason|原因)\\s*[:：]\\s*', '', line, flags=re.I).strip()\n    # 控制得更短一些（避免跑偏）\n    return line[:300]",
+    "line": 191
+  },
+  "47417156b646": {
+    "name": "extract_abbr_from_text",
+    "files": [
+      "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py"
+    ],
+    "source": "def extract_abbr_from_text(text: str) -> str:\n    if not text:\n        return \"<UNK>\"\n    cz = _canon(text)\n    canon_map = {_canon(a): a for a in ABBR_SET}\n    if cz in canon_map:\n        return canon_map[cz]\n    for abbr in ABBR_SET:\n        pat = r'\\b' + re.sub(r'\\s+', r'\\\\s*', re.escape(abbr)) + r'\\b'\n        if re.search(pat, text, flags=re.IGNORECASE):\n            return abbr\n    for full, abbr in FULL2ABBR.items():\n        pat = r'\\b' + re.sub(r'\\s+', r'\\\\s*', re.escape(full)) + r'\\b'\n        if re.search(pat, text, flags=re.IGNORECASE):\n            return abbr\n    return \"<UNK>\"",
+    "line": 227
+  },
+  "44af8411aced": {
+    "name": "build_reason_prompt",
+    "files": [
+      "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py"
+    ],
+    "source": "def build_reason_prompt(comment: str, abbr: str) -> str:\n    # 已确定的类别仅作为上下文，不要求模型复述标签\n    return (\n        \"You have already chosen the ML-SATD abbreviation: \" + abbr + \".\\n\"\n        \"Provide a brief human-readable justification grounded in the comment content.\\n\"\n        \"Format strictly:\\n\"\n        \"REASON: <short sentence>\\n\\n\"\n        \"Code Comment:\\n\"\n        f\"```text\\n{comment}\\n```\"\n    )",
+    "line": 267
+  },
+  "46ccaea1d938": {
+    "name": "_extract_visible",
+    "files": [
+      "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py"
+    ],
+    "source": "def _extract_visible(content: str) -> str:\n    if not isinstance(content, str):\n        return \"\"\n    # 去除可能的 <think>…</think>\n    content = re.sub(r\"<think>.*?</think>\", \"\", content, flags=re.DOTALL | re.IGNORECASE)\n    # 若含 assistantfinal，取其后内容\n    m = re.search(r\"assistantfinal\\s*(.*)$\", content, flags=re.DOTALL | re.IGNORECASE)\n    return m.group(1).strip() if m else content.strip()",
+    "line": 278
+  },
+  "1d7ebb2f740d": {
+    "name": "parse_reason",
+    "files": [
+      "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py"
+    ],
+    "source": "def parse_reason(text: str) -> str:\n    body = _extract_visible(text)\n    # 1) 优先抓 \"REASON:\"\n    m = re.search(r\"(?:^|\\n)\\s*REASON\\s*[:：]\\s*(.+)\", body, flags=re.IGNORECASE)\n    cand = None\n    if m:\n        cand = m.group(1).strip()\n    else:\n        # 2) 退化为“第一句非空文本”（仍是模型生成），避免空值\n        lines = [ln.strip() for ln in body.splitlines() if ln.strip()]\n        if lines:\n            cand = lines[0]\n    if not cand:\n        return \"\"\n    cand = re.sub(r'^[\\'\"`“”]+|[\\'\"`“”]+$', '', cand).strip()\n    # 控长度：太长则截断为一句\n    cand = re.split(r'(?<=[.。!?])\\s+', cand)[0].strip()\n    return cand[:400]",
+    "line": 287
+  },
+  "14f5f13821f2": {
+    "name": "classify",
+    "files": [
+      "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"system\", \"content\":\n         \"You are a strict classifier. Reasoning: high. \"\n         \"Output ONLY the abbreviation, one line.\"},\n        {\"role\": \"user\", \"content\": build_prompt(comment)},\n    ]\n    outputs = pipe(messages, max_new_tokens=MAX_NEW_TOKENS)\n    answer = outputs[0][\"generated_text\"][-1]['content']\n    raw_answer = answer.split('assistantfinal')[-1] if 'assistantfinal' in answer else answer\n    abbr = extract_abbr_from_text(raw_answer)\n    return abbr, raw_answer",
+    "line": 345
+  },
+  "5f7f37338e11": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        # {\"role\": \"system\", \"content\": SYSTEM_MSG},\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n        enable_thinking=False\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    raw_first = re.split(r\"[\\r\\n]\", raw, maxsplit=1)[0]\n    return simple_extract(raw_first), raw_first",
+    "line": 129
+  },
+  "51c874211b1d": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "basic_zero_shot/Qwen3-8B_zero_shot_re.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n        enable_thinking=False\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        temperature=0.7,\n        top_p=0.8,\n        top_k=20,\n        \n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    raw_first = re.split(r\"[\\r\\n]\", raw, maxsplit=1)[0]\n    return simple_extract(raw_first), raw_first",
+    "line": 134
+  },
+  "47d1d8ec9403": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+      "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+      "basic_zero_shot/gemma-3-12b_zero_shot_re.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\", \"content\": build_prompt(comment)},   # gemma 只要 user\n    ]\n    text = tokenizer.apply_chat_template(messages,\n                                         tokenize=False,\n                                         add_generation_prompt=True)\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    raw_first = raw.split(\"\\n\", 1)[0]\n    return simple_extract(raw_first), raw_first",
+    "line": 136
+  },
+  "463505d3fd98": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"system\", \"content\":\n         \"You are a strict classifier. Reasoning: low. \"\n         \"Output ONLY the abbreviation, one line.\"},\n        {\"role\": \"user\", \"content\": build_prompt(comment)},\n    ]\n\n    \n\n    outputs =  pipe(\n    messages,\n    max_new_tokens=MAX_NEW_TOKENS,\n    )\n\n    # 关键：不要跳过特殊标记，便于找到 final 段\n    answer = outputs[0][\"generated_text\"][-1]['content']\n    raw_answer = answer.split('assistantfinal')[-1]\n    # print(raw_answer)\n    abbr = extract_abbr_from_text(raw_answer)\n\n    return abbr,raw_answer",
+    "line": 170
+  },
+  "35f5265aaad7": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n        enable_thinking=True\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        temperature=0.6,\n        top_p=0.95,\n        top_k=20,\n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n    print(raw.split('</think>')[-1].strip())\n    raw_first = raw.split('</think>')[-1].strip()\n    return simple_extract(raw_first), raw_first",
+    "line": 136
+  },
+  "49c4f3784c1c": {
+    "name": "build_prompt",
+    "files": [
+      "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+      "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+      "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+      "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+      "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+      "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py"
+    ],
+    "source": "def build_prompt(comment: str) -> str:\n    return (\n        f\"{PROMPT_HEAD}\\n\\n{PROMPT_TAIL}\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\"\n    )",
+    "line": 103
+  },
+  "b76ac7b0c4db": {
+    "name": "simple_extract",
+    "files": [
+      "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+      "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py"
+    ],
+    "source": "def simple_extract(raw: str) -> str:\n    first = re.split(r\"[\\r\\n]\", str(raw).strip())[0]\n    token = re.sub(r\"[^a-z]\", \"\", first.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    raw_strip = first.strip()\n    if raw_strip in ABBR2FULL:\n        return raw_strip\n    join = raw_strip.replace(\" \", \"\")\n    if join.lower() in ABBR_LOWER:\n        return ABBR_LOWER[join.lower()]\n    return \"<UNK>\"",
+    "line": 114
+  },
+  "1c10ce0daaff": {
+    "name": "parse_abbr_and_reason",
+    "files": [
+      "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py"
+    ],
+    "source": "def parse_abbr_and_reason(full_text: str):\n    \"\"\"\n    第1行：Abbreviation: <abbr>\n    第2行：Reason: <text>\n    若缺失 Reason，则尝试全文中 'because|reason' 后的内容。\n    返回：(abbr, abbr_raw, reason)\n    \"\"\"\n    lines = [l.strip() for l in str(full_text).strip().splitlines() if l.strip()]\n    abbr_raw, reason = \"\", \"\"\n    if lines:\n        abbr_raw = _ABBR_PREFIX.sub(\"\", lines[0]).strip()\n    if len(lines) >= 2:\n        reason = _REASON_PREFIX.sub(\"\", lines[1]).strip()\n    if not reason:\n        m = re.search(r'(?:because|reason)\\s*[:：-]?\\s*(.+)$', str(full_text), flags=re.I)\n        if m:\n            reason = m.group(1).strip()\n    if len(reason) > 500:\n        reason = reason[:500].rstrip()\n\n    abbr = simple_extract(abbr_raw if abbr_raw else (lines[0] if lines else \"\"))\n    return abbr, abbr_raw, reason",
+    "line": 127
+  },
+  "83076159909d": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\", \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        do_sample=True,           # 保持原配置（温和采样）\n        temperature=0.2,\n        top_p=0.95,\n        pad_token_id=tokenizer.eos_token_id,\n    )\n    full = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                            skip_special_tokens=True).strip()\n\n    # 解析缩写与理由\n    abbr, abbr_raw, reason = parse_abbr_and_reason(full)\n\n    # 保留首行用于排查\n    raw_first = abbr_raw if abbr_raw else (full.split(\"\\n\", 1)[0] if full else \"\")\n    return abbr, raw_first, reason, full",
+    "line": 157
+  },
+  "9d4dc3ea568d": {
+    "name": "parse_abbr_and_reason",
+    "files": [
+      "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py"
+    ],
+    "source": "def parse_abbr_and_reason(full_text: str):\n    \"\"\"\n    解析两行输出：\n      第1行：Abbreviation: <abbr>\n      第2行：Reason: <text>\n    若缺失 Reason，则尝试从全文里找 'because|reason:' 后的内容。\n    返回：(abbr, abbr_raw, reason)\n    \"\"\"\n    lines = [l.strip() for l in full_text.strip().splitlines() if l.strip()]\n    abbr_raw = \"\"\n    reason = \"\"\n\n    if lines:\n        abbr_raw = _ABBR_PREFIX.sub(\"\", lines[0]).strip()\n    if len(lines) >= 2:\n        reason = _REASON_PREFIX.sub(\"\", lines[1]).strip()\n    if not reason:\n        m = re.search(r'(?:because|reason)\\s*[:：-]?\\s*(.+)$', full_text, flags=re.I)\n        if m:\n            reason = m.group(1).strip()\n    if len(reason) > 500:\n        reason = reason[:500].rstrip()\n\n    # 复用原来的缩写抽取策略\n    abbr = extract_abbr(abbr_raw if abbr_raw else (lines[0] if lines else \"\"))\n    return abbr, abbr_raw, reason",
+    "line": 121
+  },
+  "d98c73de023c": {
+    "name": "extract_abbr",
+    "files": [
+      "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py"
+    ],
+    "source": "def extract_abbr(raw: str) -> str:\n    \"\"\"\n    旧版缩写抽取：优先从首行用正则定位；再做归一化 token 比对；最后尝试以全称首词启发。\n    \"\"\"\n    first = re.split(r\"[\\r\\n]\", str(raw).strip(), maxsplit=1)[0].strip()\n    first = re.sub(r\"(^[*_`]+|[*_`]+$)\", \"\", first)  # 去装饰\n    m = ABBR_REGEX.search(first)\n    if m:\n        return ABBR_LOWER[m.group(1).lower()]\n    token = re.sub(r\"[^a-z]\", \"\", first.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    for full, ab in LABEL_ABBR.items():\n        if full.split()[0].lower() in token:\n            return ab\n    return \"<UNK>\"",
+    "line": 148
+  },
+  "37c6e4508f61": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\", \"content\": build_prompt(comment)},\n    ]\n    out = text_gen(messages, MAX_NEW_TOKENS)\n    # out[0][\"generated_text\"] 是对话消息列表，最后一个是 assistant 的回复\n    assistant_msg = out[0][\"generated_text\"][-1]\n    raw_full = assistant_msg.get(\"content\", \"\").strip()\n\n    # 解析缩写与理由\n    abbr, abbr_raw, reason = parse_abbr_and_reason(raw_full)\n\n    # 保留首行用于调试/统计\n    raw_first = abbr_raw if abbr_raw else (raw_full.split(\"\\n\", 1)[0].strip() if raw_full else \"\")\n    return abbr, raw_first, reason, raw_full",
+    "line": 184
+  },
+  "ffb2efda2091": {
+    "name": "parse_abbr_and_reason",
+    "files": [
+      "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py"
+    ],
+    "source": "def parse_abbr_and_reason(full_text: str):\n    \"\"\"\n    第1行：Abbreviation: <abbr>\n    第2行：Reason: <text>\n    若缺失 Reason，则尝试全文中 'because|reason' 后面的内容。\n    返回：(abbr, abbr_raw, reason)\n    \"\"\"\n    lines = [l.strip() for l in str(full_text).strip().splitlines() if l.strip()]\n    abbr_raw, reason = \"\", \"\"\n    if lines:\n        abbr_raw = _ABBR_PREFIX.sub(\"\", lines[0]).strip()\n    if len(lines) >= 2:\n        reason = _REASON_PREFIX.sub(\"\", lines[1]).strip()\n    if not reason:\n        m = re.search(r'(?:because|reason)\\s*[:：-]?\\s*(.+)$', full_text, flags=re.I)\n        if m:\n            reason = m.group(1).strip()\n    if len(reason) > 500:\n        reason = reason[:500].rstrip()\n\n    abbr = simple_extract(abbr_raw if abbr_raw else (lines[0] if lines else \"\"))\n    return abbr, abbr_raw, reason",
+    "line": 127
+  },
+  "a940f3939e19": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\", \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n        enable_thinking=False\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n    )\n    full = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                            skip_special_tokens=True).strip()\n\n    # 解析缩写与理由\n    abbr, abbr_raw, reason = parse_abbr_and_reason(full)\n\n    # raw_first 仍保存首行（便于排查）\n    raw_first = abbr_raw if abbr_raw else (full.split(\"\\n\", 1)[0] if full else \"\")\n    return abbr, raw_first, reason, full",
+    "line": 157
+  },
+  "bea48c88eeba": {
+    "name": "simple_extract",
+    "files": [
+      "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "basic_zero_shot_reason/Qwen3-8B_zero_shot.py"
+    ],
+    "source": "def simple_extract(raw: str) -> str:\n    \"\"\"从一行或一句文本里尽量提取我们的 23 种缩写之一。\"\"\"\n    first = re.split(r\"[\\r\\n]\", raw.strip())[0]\n    # 去掉常见前缀\n    first = re.sub(r'^\\s*(Abbreviation|Label)\\s*:\\s*', '', first, flags=re.I).strip()\n    token = re.sub(r\"[^a-z]\", \"\", first.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    raw_strip = first.strip()\n    if raw_strip in ABBR2FULL:\n        return raw_strip\n    join = raw_strip.replace(\" \", \"\")\n    if join.lower() in ABBR_LOWER:\n        return ABBR_LOWER[join.lower()]\n    # 再尝试在整句里直接正则找一个缩写（宽松兼容空格差异）\n    for abbr in ABBR_SET:\n        pat = r'\\b' + re.sub(r'\\s+', r'\\\\s*', re.escape(abbr)) + r'\\b'\n        if re.search(pat, first, flags=re.I):\n            return abbr\n    return \"<UNK>\"",
+    "line": 125
+  },
+  "6a9dd0e54d37": {
+    "name": "extract_reason",
+    "files": [
+      "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "basic_zero_shot_reason/Qwen3-8B_zero_shot.py"
+    ],
+    "source": "def extract_reason(raw: str) -> str:\n    \"\"\"尽量从模型输出中提取短原因；优先匹配 'Reason:' 行；否则取第二行。\"\"\"\n    if not raw:\n        return \"\"\n    # 优先找 Reason:\n    m = re.search(r'(?:^|\\n)\\s*Reason\\s*:\\s*(.+)', raw, flags=re.I | re.DOTALL)\n    if m:\n        reason = m.group(1).strip()\n        # 只取到下一行结束，避免把后续内容带上\n        reason = reason.splitlines()[0].strip()\n        return reason\n    # 否则取第二行（去空行）\n    lines = [ln.strip() for ln in raw.splitlines() if ln.strip()]\n    if len(lines) >= 2:\n        # 第二行若仍带前缀，清一下\n        second = re.sub(r'^\\s*Reason\\s*:\\s*', '', lines[1], flags=re.I).strip()\n        return second\n    return \"\"",
+    "line": 146
+  },
+  "5f182c54d146": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "basic_zero_shot_reason/Qwen3-8B_zero_shot.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\",   \"content\": build_prompt(comment)},\n    ]\n    text = tokenizer.apply_chat_template(\n        messages,\n        tokenize=False,\n        add_generation_prompt=True,\n        enable_thinking=False\n    )\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n        temperature=0.7,\n        top_p=0.8,\n        top_k=20,\n    )\n    raw = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                           skip_special_tokens=True).strip()\n\n    # —— 解析缩写（优先从“Abbreviation:”行抓）——\n    # 先找带 key 的形式\n    m = re.search(r'(?:^|\\n)\\s*Abbreviation\\s*:\\s*([^\\n\\r]+)', raw, flags=re.I)\n    if m:\n        abbr_candidate_line = m.group(1).strip()\n    else:\n        # 回退：第一行\n        abbr_candidate_line = re.split(r\"[\\r\\n]\", raw, maxsplit=1)[0].strip()\n\n    abbr = simple_extract(abbr_candidate_line)\n    reason = extract_reason(raw)\n\n    return abbr, raw, reason",
+    "line": 172
+  },
+  "3629b4d10d71": {
+    "name": "simple_extract",
+    "files": [
+      "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py"
+    ],
+    "source": "def simple_extract(raw: str) -> str:\n    token = re.sub(r\"[^a-z]\", \"\", str(raw).lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    if raw in ABBR2FULL:              # 精确匹配（保留旧逻辑）\n        return raw\n    join = str(raw).replace(\" \", \"\")\n    if join.lower() in ABBR_LOWER:\n        return ABBR_LOWER[join.lower()]\n    return \"<UNK>\"",
+    "line": 125
+  },
+  "85a8519b8069": {
+    "name": "parse_abbr_and_reason",
+    "files": [
+      "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py"
+    ],
+    "source": "def parse_abbr_and_reason(full_text: str):\n    \"\"\"\n    解析两行输出：\n      第1行：Abbreviation: <abbr>\n      第2行：Reason: <text>\n    若缺失 Reason，则尝试全文里 'because|reason' 后的内容。\n    返回：(abbr, abbr_raw, reason)\n    \"\"\"\n    lines = [l.strip() for l in str(full_text).strip().splitlines() if l.strip()]\n    abbr_raw, reason = \"\", \"\"\n    if lines:\n        abbr_raw = _ABBR_PREFIX.sub(\"\", lines[0]).strip()\n    if len(lines) >= 2:\n        reason = _REASON_PREFIX.sub(\"\", lines[1]).strip()\n    if not reason:\n        m = re.search(r'(?:because|reason)\\s*[:：-]?\\s*(.+)$', str(full_text), flags=re.I)\n        if m:\n            reason = m.group(1).strip()\n    if len(reason) > 500:\n        reason = reason[:500].rstrip()\n\n    abbr = simple_extract(abbr_raw if abbr_raw else (lines[0] if lines else \"\"))\n    return abbr, abbr_raw, reason",
+    "line": 136
+  },
+  "c5032914743e": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+      "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+      "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        {\"role\": \"user\", \"content\": build_prompt(comment)},   # codegemma 只要 user\n    ]\n    text = tokenizer.apply_chat_template(messages,\n                                         tokenize=False,\n                                         add_generation_prompt=True)\n    inputs = tokenizer(text, return_tensors=\"pt\",\n                       truncation=True, max_length=4096).to(model.device)\n\n    outputs = model.generate(\n        **inputs,\n        max_new_tokens=MAX_NEW_TOKENS,\n    )\n    full = tokenizer.decode(outputs[0][inputs[\"input_ids\"].shape[1]:],\n                            skip_special_tokens=True).strip()\n\n    # 解析缩写与理由\n    abbr, abbr_raw, reason = parse_abbr_and_reason(full)\n\n    # raw_first 保留首行（便于排查）\n    raw_first = abbr_raw if abbr_raw else (full.split(\"\\n\", 1)[0] if full else \"\")\n    return abbr, raw_first, reason, full",
+    "line": 167
+  },
+  "d3db55df9911": {
+    "name": "simple_extract",
+    "files": [
+      "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+      "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py"
+    ],
+    "source": "def simple_extract(raw: str) -> str:\n    \"\"\"\n    原有缩写解析：优先尝试“去非字母小写”的匹配，再尝试全称与去空格匹配。\n    注意：这里保持与旧版兼容的行为，不做大幅度改动。\n    \"\"\"\n    token = re.sub(r\"[^a-z]\", \"\", raw.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    if raw in ABBR2FULL:              # 精确匹配缩写（区分大小写）\n        return raw\n    join = raw.replace(\" \", \"\")\n    if join.lower() in ABBR_LOWER:\n        return ABBR_LOWER[join.lower()]\n    return \"<UNK>\"",
+    "line": 125
+  },
+  "0bca0eb8af29": {
+    "name": "parse_abbr_and_reason",
+    "files": [
+      "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+      "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py"
+    ],
+    "source": "def parse_abbr_and_reason(full_text: str):\n    \"\"\"\n    解析两行输出：\n      第1行：Abbreviation: <abbr>\n      第2行：Reason: <text>\n    兜底：若找不到第2行，则从首行里尝试 'because|reason|:|-' 之后的文本作为理由。\n    返回：(abbr, abbr_raw, reason_text)\n    \"\"\"\n    # 取非空行\n    lines = [l.strip() for l in full_text.strip().splitlines() if l.strip()]\n    abbr_raw = \"\"\n    reason = \"\"\n\n    if lines:\n        abbr_raw = _ABBR_PREFIX.sub(\"\", lines[0]).strip()\n    if len(lines) >= 2:\n        reason = _REASON_PREFIX.sub(\"\", lines[1]).strip()\n\n    if not reason:\n        # 尝试从整段文本里抽一个简短理由\n        m = re.search(r'(?:because|reason)\\s*[:：-]?\\s*(.+)$', full_text, flags=re.I)\n        if m:\n            reason = m.group(1).strip()\n\n    # 限宽一下（避免极端长文本写入 CSV）\n    if len(reason) > 500:\n        reason = reason[:500].rstrip()\n\n    abbr = simple_extract(abbr_raw)\n    return abbr, abbr_raw, reason",
+    "line": 140
+  },
+  "b71daf98af0c": {
+    "name": "build_prompt",
+    "files": [
+      "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def build_prompt(comment: str) -> str:\n    return (\n        f\"{PROMPT_HEAD}\\n\\n{PROMPT_TAIL}\\n\\n\"\n        \"Code Comment:\\n\"\n        f\"```text\\n{comment}\\n```\\n\"\n    )",
+    "line": 134
+  },
+  "db5fba1f1375": {
+    "name": "extract_abbr_from_text",
+    "files": [
+      "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def extract_abbr_from_text(text: str) -> str:\n    if not text:\n        return \"<UNK>\"\n    # 先抓键值对形式：Abbreviation: ...\n    m = re.search(r'(?:^|\\n)\\s*Abbreviation\\s*:\\s*([^\\n\\r]+)', text, flags=re.I)\n    if m:\n        cand = m.group(1).strip()\n        cz = _canon(cand)\n        for a in ABBR_SET:\n            if _canon(a) == cz:\n                return a\n        # 再宽松找一次\n        for abbr in ABBR_SET:\n            pat = r'\\b' + re.sub(r'\\s+', r'\\\\s*', re.escape(abbr)) + r'\\b'\n            if re.search(pat, cand, flags=re.IGNORECASE):\n                return abbr\n\n    # 规范化直接命中（对全文）\n    cz = _canon(text)\n    for a in ABBR_SET:\n        if _canon(a) == cz:\n            return a\n\n    # 正则宽松匹配（允许空白差异）\n    for abbr in ABBR_SET:\n        pat = r'\\b' + re.sub(r'\\s+', r'\\\\s*', re.escape(abbr)) + r'\\b'\n        if re.search(pat, text, flags=re.IGNORECASE):\n            return abbr\n    # 全称也兜底匹配\n    for full, abbr in FULL2ABBR.items():\n        pat = r'\\b' + re.sub(r'\\s+', r'\\\\s*', re.escape(full)) + r'\\b'\n        if re.search(pat, text, flags=re.IGNORECASE):\n            return abbr\n    return \"<UNK>\"",
+    "line": 141
+  },
+  "821575bebe02": {
+    "name": "extract_reason_from_text",
+    "files": [
+      "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def extract_reason_from_text(text: str) -> str:\n    \"\"\"优先抓 'Reason:' 行；否则取第二个非空行；再不行给空串。\"\"\"\n    if not text:\n        return \"\"\n    m = re.search(r'(?:^|\\n)\\s*Reason\\s*:\\s*(.+)', text, flags=re.I | re.DOTALL)\n    if m:\n        reason = m.group(1).strip().splitlines()[0].strip()\n        return reason\n    # 无 Reason:，取第二行（非空）\n    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]\n    if len(lines) >= 2:\n        # 如果第二行仍有“Reason:”前缀，清理掉\n        return re.sub(r'^\\s*Reason\\s*:\\s*', '', lines[1], flags=re.I).strip()\n    return \"\"",
+    "line": 176
+  },
+  "7d2725c3751b": {
+    "name": "classify",
+    "files": [
+      "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def classify(comment: str):\n    messages = [\n        # {\"role\": \"system\", \"content\":\n        #  \"You are a strict classifier. Reasoning: low. \"\n        #  \"Output EXACTLY two lines: 'Abbreviation: <...>' and 'Reason: <...>'. No other text.\"},\n        {\"role\": \"user\", \"content\": build_prompt(comment)},\n    ]\n\n    outputs = pipe(\n        messages,\n        max_new_tokens=MAX_NEW_TOKENS,\n    )\n\n    # 关键：不要跳过特殊标记，便于找到 final 段\n    answer = outputs[0][\"generated_text\"][-1]['content']\n    raw_answer = answer.split('assistantfinal')[-1]\n\n    abbr  = extract_abbr_from_text(raw_answer)\n    reason = extract_reason_from_text(raw_answer)\n\n    return abbr, raw_answer, reason",
+    "line": 204
+  },
+  "5716ff55d3c6": {
+    "name": "build_referee_prompt",
+    "files": [
+      "battle/gpt_battle.py"
+    ],
+    "source": "def build_referee_prompt(comment: str,\n                         pred1_full: str, pred2_full: str,\n                         pred1_reason: str = None, pred2_reason: str = None) -> str:\n    \"\"\"\n    - 仍提供 23 类定义作为依据。\n    - 给出两个候选（全称与缩写）与它们各自的一句话 reason（若有）。\n    - 让 gpt-oss-20b：优先二选一；若都不合适，可改从 23 类中自选。\n    - 强制输出格式：第一行缩写、第二行 Reason: ...（≤256 words）\n    \"\"\"\n    p1_abbr = FULL2ABBR.get(pred1_full, FALLBACK_ABBR)\n    p2_abbr = FULL2ABBR.get(pred2_full, FALLBACK_ABBR)\n\n    parts = [\n        PROMPT_HEAD,\n        \"Please determine which type of ML Self-Admitted Technical Debt (STAD) the following Code Comment belongs to.\",\n        \"Two models have predicted SATD categories for the code comment below.\",\n        # \"You are an arbiter. Two models have predicted SATD categories for the code comment below.\",\n        # \"Decide the most appropriate label:\",\n        \" • If one of the two candidates matches the definition best, choose it.\",\n        \" • If both are inappropriate, choose a BETTER label from the full set of allowed abbreviations.\",\n        \"\",\n        \"Candidates:\",\n        f\" - Model-1: {p1_abbr} → {pred1_full}\" + (f\" | reason: {pred1_reason}\" if pred1_reason else \"\"),\n        f\" - Model-2: {p2_abbr} → {pred2_full}\" + (f\" | reason: {pred2_reason}\" if pred2_reason else \"\"),\n        \"\",\n        \"Output format (STRICT):\",\n        \"Line 1: Reason: <a brief justification in <= 256 words>\",\n        \"Line 2: <ABBREVIATION>   (must be one of: \" + ALLOWED_ABBRS_LINE + \")\",\n        \"\",\n        \"Code Comment:\",\n        f\"```text\\n{comment}\\n```\",\n        \"\",\n        \"#Final:\"\n    ]\n    return \"\\n\".join(parts)",
+    "line": 125
+  },
+  "667168e72c27": {
+    "name": "extract_abbr",
+    "files": [
+      "battle/gpt_battle.py"
+    ],
+    "source": "def extract_abbr(text: str) -> str:\n    if not text:\n        return \"<UNK>\"\n    # 1) 直接匹配缩写（优先精确）\n    m = ABBR_REGEX.search(text)\n    if m:\n        hit = m.group(1)\n        # 归一化回标准大小写/空格\n        for a in ABBR_SET:\n            if _canon(a) == _canon(hit):\n                return a\n    # 2) 纯字母规范后命中\n    cz = _canon(text)\n    if cz in ABBR_CANON_MAP:\n        return ABBR_CANON_MAP[cz]\n    # 3) 如果写了全称，也容错一下\n    for full, ab in FULL2ABBR.items():\n        if re.search(r'\\b' + re.escape(full) + r'\\b', text, flags=re.I):\n            return ab\n    return \"<UNK>\"",
+    "line": 165
+  },
+  "ea197ac7e15c": {
+    "name": "extract_reason",
+    "files": [
+      "battle/gpt_battle.py"
+    ],
+    "source": "def extract_reason(text: str) -> str:\n    \"\"\"\n    规则：\n    - 取 'assistantfinal' 之后的内容中，优先找以 'Reason:' 开头的行\n    - 否则尝试第一行之外的剩余文本\n    - 长度做一次适度截断（安全）\n    \"\"\"\n    if not text:\n        return \"\"\n    body = text.split('assistantfinal')[-1]\n    lines = [ln.strip() for ln in body.splitlines() if ln.strip()]\n    if not lines:\n        return \"\"\n    # 搜索 Reason: 行\n    for ln in lines:\n        if re.match(r'^\\s*reason\\s*[:\\-]\\s*(.+)$', ln, flags=re.I):\n            return re.sub(r'^\\s*reason\\s*[:\\-]\\s*', '', ln, flags=re.I).strip()\n    # 否则：把第一行视作缩写行，其余拼接为 reason\n    if len(lines) >= 2:\n        return \" \".join(lines[1:]).strip()\n    return \"\"",
+    "line": 186
+  },
+  "c533cd1ffd1d": {
+    "name": "build_referee_prompt",
+    "files": [
+      "battle/test.py"
+    ],
+    "source": "def build_referee_prompt(comment: str,\n                         qwen_abbr: str, gemma_abbr: str,\n                         qwen_full: str, gemma_full: str,\n                         qwen_raw: str = None, gemma_raw: str = None) -> str:\n    \"\"\"\n    给 gpt-oss-20b 的用户提示：\n    - 仍提供 23 类定义（利于依据定义判别）。\n    - 指明“只在两个候选缩写中二选一”，并要求输出单行缩写。\n    - 可选附带两模型的原始输出，帮助裁判理解它们各自的依据（不强制）。\n    \"\"\"\n    parts = [\n        PROMPT_HEAD,\n        \"You are an arbiter. Two other models (Qwen and Gemma) have predicted categories for the code comment below.\",\n        \"Your job is to choose the better-matching abbreviation ONLY from the two candidates, based on the comment and the definitions above.\",\n        f\"Candidates (abbreviation → full):\",\n        f\" - Qwen:  {qwen_abbr} → {qwen_full}\",\n        f\" - Gemma: {gemma_abbr} → {gemma_full}\",\n    ]\n    if qwen_raw:\n        parts.append(f\"Qwen raw output: {qwen_raw}\")\n    if gemma_raw:\n        parts.append(f\"Gemma raw output: {gemma_raw}\")\n\n    parts.append(\n        \"\\nReturn exactly ONE abbreviation on a single line, with no extra text. \"\n        f\"Choose strictly from: {qwen_abbr}, {gemma_abbr}.\\n\"\n        \"If both look equally plausible, prefer the one more directly evidenced by the comment.\"\n    )\n    parts.append(\n        f\"\\nCode Comment:\\n```text\\n{comment}\\n```\\n\\n#Chosen Abbreviation:\"\n    )\n    return \"\\n\\n\".join(parts)",
+    "line": 125
+  },
+  "328b3c618636": {
+    "name": "choose_between",
+    "files": [
+      "battle/test.py"
+    ],
+    "source": "def choose_between(comment: str,\n                   qwen_full: str, gemma_full: str,\n                   qwen_raw: str = None, gemma_raw: str = None):\n    # 把全称映成缩写；若遇到异常/缺失，用 FALLBACK_ABBR 顶上（但仍尽量二选一）\n    q_abbr = FULL2ABBR.get(qwen_full, FALLBACK_ABBR)\n    g_abbr = FULL2ABBR.get(gemma_full, FALLBACK_ABBR)\n\n    # 若两者缩写完全一样，直接返回即可，无需调用模型\n    if q_abbr == g_abbr and q_abbr in ABBR_SET:\n        return q_abbr, f\"(both agree) {q_abbr}\"\n\n    messages = [\n        {\"role\": \"system\", \"content\":\n         \"You are a strict classifier arbiter. Reasoning: low. \"\n         \"Output ONLY the abbreviation, one line, and it must be one of the two candidates.\"},\n        {\"role\": \"user\", \"content\": build_referee_prompt(\n            comment, q_abbr, g_abbr,\n            ABBR2FULL[q_abbr], ABBR2FULL[g_abbr],\n            qwen_raw=qwen_raw, gemma_raw=gemma_raw\n        )},\n    ]\n\n    outputs = pipe(messages, max_new_tokens=MAX_NEW_TOKENS)\n    answer  = outputs[0][\"generated_text\"][-1]['content']\n    raw_final = answer.split('assistantfinal')[-1]  # 保持你原先的 final 段截断\n    picked = extract_abbr_from_text(raw_final)\n\n    # 强约束：若不在{q_abbr, g_abbr}内，则默认选 Qwen 的（也可以改成 Gemma 或更复杂规则）\n    if picked not in {q_abbr, g_abbr}:\n        picked = q_abbr\n\n    return picked, raw_final",
+    "line": 188
+  },
+  "4845d3a8afcb": {
+    "name": "build_yn_prompt",
+    "files": [
+      "bisection_CoT/CodeLlama-7b_few_shot.py"
+    ],
+    "source": "def build_yn_prompt(comment: str, full_label: str, abbr: str) -> str:\n    \"\"\"是否属于某标签：回答 Yes 或 No。\"\"\"\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"{PROMPT_TAIL}\\n\\n\"\n        \"We are classifying the following code comment into one of the SATD categories.\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        f\"Question: Does this comment indicate the category \\\"{full_label} ({abbr})\\\"?\\n\"\n        \"Answer strictly with Yes or No.\"\n    )",
+    "line": 270
+  },
+  "f48a668e248f": {
+    "name": "build_pick_from_candidates_prompt",
+    "files": [
+      "bisection_CoT/CodeLlama-7b_few_shot.py"
+    ],
+    "source": "def build_pick_from_candidates_prompt(comment: str, candidates_abbr) -> str:\n    \"\"\"在候选缩写中只选 1 个缩写。\"\"\"\n    cand_str = \", \".join(candidates_abbr)\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"{PROMPT_TAIL}\\n\\n\"\n        \"Pick the single best matching category for the comment below.\\n\"\n        f\"Candidates (abbreviations only): {cand_str}\\n\\n\"\n        \"Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Return exactly ONE abbreviation on a single line, with no extra text.\"\n    )",
+    "line": 282
+  },
+  "46d49e816f28": {
+    "name": "build_force_pick_any_prompt",
+    "files": [
+      "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "bisection_CoT/gemma-2-9b_few_shot.py",
+      "bisection_CoT/gemma-3-12b_few_shot.py",
+      "bisection_CoT/gpt-oss-20b_few_shot.py"
+    ],
+    "source": "def build_force_pick_any_prompt(comment: str) -> str:\n    \"\"\"从 23 个缩写中强制挑一个（兜底）。\"\"\"\n    cand_str = \", \".join(sorted(ABBR_SET))\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"{PROMPT_TAIL}\\n\\n\"\n        \"Please determine which type of ML SATD the following Code Comment belongs to.\\n\"\n        \"Return exactly ONE of these abbreviations on a single line, with no extra text:\\n\"\n        f\"{cand_str}\\n\\n\"\n        \"Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Abbreviation:\"\n    )",
+    "line": 295
+  },
+  "79438afbfa69": {
+    "name": "extract_yes_no",
+    "files": [
+      "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "bisection_zero_shot/CodeLlama-7b_zero_shot.py"
+    ],
+    "source": "def extract_yes_no(raw: str) -> str:\n    \"\"\"解析 Yes/No；返回 'yes'/'no'/'unk'。\"\"\"\n    first = re.split(r\"[\\r\\n]\", raw.strip(), maxsplit=1)[0].strip()\n    first = re.sub(r\"(^[*_`]+|[*_`]+$)\", \"\", first)\n    t = re.sub(r\"[^a-z\\u4e00-\\u9fa5]\", \"\", first.lower())\n    if t.startswith((\"yes\", \"y\")) or t.startswith(\"是\"):\n        return \"yes\"\n    if t.startswith((\"no\", \"n\")) or t.startswith((\"否\", \"不是\")):\n        return \"no\"\n    return \"unk\"",
+    "line": 310
+  },
+  "ca5a368e453f": {
+    "name": "extract_abbr",
+    "files": [
+      "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "bisection_zero_shot/CodeLlama-7b_zero_shot.py"
+    ],
+    "source": "def extract_abbr(raw: str) -> str:\n    \"\"\"从一行文本中提取 23 种缩写之一；失败返 '<UNK>'。\"\"\"\n    first = re.split(r\"[\\r\\n]\", raw.strip(), maxsplit=1)[0].strip()\n    first = re.sub(r\"(^[*_`]+|[*_`]+$)\", \"\", first)\n    m = ABBR_REGEX.search(first)\n    if m:\n        return ABBR_LOWER[m.group(1).lower()]\n    token = re.sub(r\"[^a-z]\", \"\", first.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    for full, ab in LABEL_ABBR.items():\n        if full.split()[0].lower() in token:\n            return ab\n    return \"<UNK>\"",
+    "line": 321
+  },
+  "0b6ccf003667": {
+    "name": "classify_by_polling",
+    "files": [
+      "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "bisection_CoT/gemma-2-9b_few_shot.py",
+      "bisection_CoT/gemma-3-12b_few_shot.py",
+      "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "bisection_zero_shot/bin_new_test.py",
+      "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "bisection_zero_shot/gemma-3-12b_zero_shot.py"
+    ],
+    "source": "def classify_by_polling(comment: str):\n    yes_candidates = []\n\n    # 7.1 逐标签 Yes/No\n    for full in LABELS:\n        abbr = FULL2ABBR[full]\n        prompt = build_yn_prompt(comment, full, abbr)\n        messages = [{\"role\": \"user\", \"content\": prompt}]   # CodeLlama 模板常见仅 user\n        raw_yn = greedy_generate_first_line(messages, MAX_YN_TOKENS)\n        yn = extract_yes_no(raw_yn)\n        if yn == \"yes\":\n            yes_candidates.append(abbr)\n\n    # 7.2 根据候选决定最终结果\n    if len(yes_candidates) == 1:\n        final_abbr = yes_candidates[0]\n        raw_final = final_abbr\n    elif len(yes_candidates) >= 2:\n        pick_prompt = build_pick_from_candidates_prompt(comment, yes_candidates)\n        raw_pick = greedy_generate_first_line([{\"role\":\"user\",\"content\":pick_prompt}],\n                                              MAX_PICK_TOKENS)\n        pick_abbr = extract_abbr(raw_pick)\n        if pick_abbr in yes_candidates:\n            final_abbr, raw_final = pick_abbr, raw_pick\n        else:\n            final_abbr, raw_final = yes_candidates[0], raw_pick\n    else:\n        # 没有任何 Yes：走全量强制单标签输出\n        fb_prompt = build_force_pick_any_prompt(comment)\n        raw_fb = greedy_generate_first_line([{\"role\":\"user\",\"content\":fb_prompt}],\n                                            MAX_FALLBACK_TOKENS)\n        fb_abbr = extract_abbr(raw_fb)\n        if fb_abbr in ABBR_SET:\n            final_abbr, raw_final = fb_abbr, raw_fb\n        else:\n            final_abbr, raw_final = FALLBACK_ABBR, raw_fb\n\n    return final_abbr, raw_final, yes_candidates",
+    "line": 383
+  },
+  "9f4252b465d9": {
+    "name": "build_yn_prompt",
+    "files": [
+      "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "bisection_CoT/gemma-2-9b_few_shot.py",
+      "bisection_CoT/gemma-3-12b_few_shot.py"
+    ],
+    "source": "def build_yn_prompt(comment: str, full_label: str, abbr: str) -> str:\n    \"\"\"构造“是否属于某标签”的 Yes/No prompt。\"\"\"\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"{PROMPT_TAIL}\\n\\n\"\n        \"We are classifying the following code comment into one of the SATD categories.\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        f\"Question: Does this comment indicate the category \\\"{full_label} ({abbr})\\\"?\\n\"\n        \"Answer strictly with Yes or No.\"\n    )",
+    "line": 342
+  },
+  "fc32446257cf": {
+    "name": "build_pick_from_candidates_prompt",
+    "files": [
+      "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "bisection_CoT/gemma-2-9b_few_shot.py",
+      "bisection_CoT/gemma-3-12b_few_shot.py",
+      "bisection_CoT/gpt-oss-20b_few_shot.py"
+    ],
+    "source": "def build_pick_from_candidates_prompt(comment: str, candidates_abbr) -> str:\n    \"\"\"在候选缩写中只选 1 个的 prompt。\"\"\"\n    cand_str = \", \".join(candidates_abbr)\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"{PROMPT_TAIL}\\n\\n\"\n        \"Pick the single best matching category for the comment below.\\n\"\n        f\"Candidates (abbreviations only): {cand_str}\\n\\n\"\n        \"Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Return exactly ONE abbreviation on a single line, with no extra text.\"\n    )",
+    "line": 354
+  },
+  "61e4e60163f8": {
+    "name": "extract_yes_no",
+    "files": [
+      "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "bisection_CoT/gemma-2-9b_few_shot.py",
+      "bisection_CoT/gemma-3-12b_few_shot.py",
+      "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "bisection_zero_shot/bin_new_test.py",
+      "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "bisection_zero_shot/gemma-3-12b_zero_shot.py"
+    ],
+    "source": "def extract_yes_no(raw: str) -> str:\n    \"\"\"解析 Yes/No；返回 'yes'/'no'/'unk'。\"\"\"\n    first = re.split(r\"[\\r\\n]\", raw.strip(), maxsplit=1)[0].strip()\n    first = re.sub(r\"(^[*_`]+|[*_`]+$)\", \"\", first)  # 去修饰\n    t = first.lower()\n    t = re.sub(r\"[^a-z\\u4e00-\\u9fa5]\", \"\", t)  # 只留字母与中文（兼容“是/否”）\n    if t.startswith(\"yes\") or t.startswith(\"y\") or t.startswith(\"是\"):\n        return \"yes\"\n    if t.startswith(\"no\") or t.startswith(\"n\") or t.startswith(\"否\") or t.startswith(\"不是\"):\n        return \"no\"\n    return \"unk\"",
+    "line": 382
+  },
+  "479974124402": {
+    "name": "extract_abbr",
+    "files": [
+      "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "bisection_CoT/gemma-2-9b_few_shot.py",
+      "bisection_CoT/gemma-3-12b_few_shot.py",
+      "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "bisection_zero_shot/bin_new_test.py",
+      "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "bisection_zero_shot/gemma-3-12b_zero_shot.py"
+    ],
+    "source": "def extract_abbr(raw: str) -> str:\n    \"\"\"从一行文本中提取我们 23 种缩写之一；失败返 '<UNK>'。\"\"\"\n    first = re.split(r\"[\\r\\n]\", raw.strip(), maxsplit=1)[0].strip()\n    first = re.sub(r\"(^[*_`]+|[*_`]+$)\", \"\", first)\n    m = ABBR_REGEX.search(first)\n    if m:\n        return ABBR_LOWER[m.group(1).lower()]\n    token = re.sub(r\"[^a-z]\", \"\", first.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    # 尝试从全称首词猜测（很弱的兜底）\n    for full, ab in LABEL_ABBR.items():\n        if full.split()[0].lower() in token:\n            return ab\n    return \"<UNK>\"",
+    "line": 394
+  },
+  "555f25cc90f2": {
+    "name": "build_yn_prompt",
+    "files": [
+      "bisection_CoT/Qwen3-14B_few_shot.py",
+      "bisection_CoT/Qwen3-8B_few_shot.py"
+    ],
+    "source": "def build_yn_prompt(comment: str, full_label: str, abbr: str) -> str:\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"{PROMPT_TAIL}\\n\\n\"\n        f\"Task: Decide if the following Code Comment expresses the SATD type **{full_label} ({abbr})**.\\n\"\n        \"Answer strictly with ONE word: Yes or No. Do all reasoning internally and do NOT reveal it.\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Answer:\"\n    )",
+    "line": 229
+  },
+  "e2df6c44581f": {
+    "name": "build_choose_prompt",
+    "files": [
+      "bisection_CoT/Qwen3-14B_few_shot.py",
+      "bisection_CoT/Qwen3-8B_few_shot.py"
+    ],
+    "source": "def build_choose_prompt(comment: str, candidates_abbr: list) -> str:\n    cand_str = \", \".join(candidates_abbr)\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"{PROMPT_TAIL}\\n\\n\"\n        \"Task: The following abbreviations have been marked as plausible candidates.\\n\"\n        f\"Choose exactly ONE abbreviation from this set and output that abbreviation ONLY on a single line:\\n\"\n        f\"{cand_str}\\n\"\n        \"Do all reasoning internally and do NOT reveal it.\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Abbreviation:\"\n    )",
+    "line": 241
+  },
+  "272de27ea85b": {
+    "name": "build_full_prompt",
+    "files": [
+      "bisection_CoT/Qwen3-14B_few_shot.py",
+      "bisection_CoT/Qwen3-8B_few_shot.py"
+    ],
+    "source": "def build_full_prompt(comment: str) -> str:\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"{PROMPT_TAIL}\\n\\n\"\n        \"Please determine which type of ML SATD the following Code Comment belongs to.\\n\"\n        \"Return exactly ONE abbreviation on a single line, with no extra text, chosen from:\\n\"\n        f\"{', '.join(sorted(ABBR_SET))}\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Abbreviation:\"\n    )",
+    "line": 256
+  },
+  "cc2e81841785": {
+    "name": "build_reason_prompt",
+    "files": [
+      "bisection_CoT/Qwen3-14B_few_shot.py",
+      "bisection_CoT/Qwen3-8B_few_shot.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "source": "def build_reason_prompt(comment: str, final_abbr: str) -> str:\n    full = ABBR2FULL.get(final_abbr, final_abbr)\n    return (\n        \"You already chose a label.\\n\"\n        \"Reply with exactly one line beginning with 'REASON:' followed by a short justification (<= 30 words), \"\n        \"grounded in the comment content. Do not output the label name.\\n\\n\"\n        f\"Chosen: {final_abbr} ({full})\\n\"\n        \"Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\"\n    )",
+    "line": 269
+  },
+  "79c91f7f6bbe": {
+    "name": "parse_yesno",
+    "files": [
+      "bisection_CoT/Qwen3-14B_few_shot.py",
+      "bisection_CoT/Qwen3-8B_few_shot.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "source": "def parse_yesno(text: str) -> str:\n    vis = _visible_only(text)\n    first = vis.splitlines()[0].strip() if vis else \"\"\n    token = re.sub(r\"[^a-z]\", \"\", first.lower())\n    if token.startswith(\"yes\"):\n        return \"yes\"\n    if token.startswith(\"no\"):\n        return \"no\"\n    # 宽松匹配\n    if re.search(r\"\\byes\\b\", vis, flags=re.I):\n        return \"yes\"\n    if re.search(r\"\\bno\\b\", vis, flags=re.I):\n        return \"no\"\n    return \"unknown\"",
+    "line": 288
+  },
+  "49c8446ed742": {
+    "name": "parse_abbr",
+    "files": [
+      "bisection_CoT/Qwen3-14B_few_shot.py",
+      "bisection_CoT/Qwen3-8B_few_shot.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "source": "def parse_abbr(text: str) -> str:\n    vis = _visible_only(text)\n    line = vis.splitlines()[0].strip() if vis else \"\"\n    # 允许带前缀 “Abbreviation:”\n    line = re.sub(r'^\\s*(Abbreviation|Label)\\s*:\\s*', '', line, flags=re.I).strip()\n    # 规范化检测\n    token = re.sub(r\"[^a-z]\", \"\", line.lower())\n    if token in ABBR_LOWER: return ABBR_LOWER[token]\n    if line in ABBR2FULL:   return line\n    join = line.replace(\" \", \"\")\n    if join.lower() in ABBR_LOWER: return ABBR_LOWER[join.lower()]\n    # 在整段中宽松找\n    for ab in ABBR_SET:\n        pat = r'\\b' + re.sub(r'\\s+', r'\\\\s*', re.escape(ab)) + r'\\b'\n        if re.search(pat, vis, flags=re.I):\n            return ab\n    return \"<UNK>\"",
+    "line": 303
+  },
+  "be08b44fea99": {
+    "name": "parse_reason",
+    "files": [
+      "bisection_CoT/Qwen3-14B_few_shot.py",
+      "bisection_CoT/Qwen3-8B_few_shot.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "source": "def parse_reason(text: str) -> str:\n    vis = _visible_only(text)\n    m = re.search(r\"(?:^|\\n)\\s*REASON\\s*[:：]\\s*(.+)\", vis, flags=re.I)\n    if m:\n        line = m.group(1).strip()\n    else:\n        # 退化为第一句\n        line = vis.splitlines()[0].strip() if vis else \"\"\n    # 截到一句话\n    line = re.split(r'(?<=[.。!?])\\s+', line)[0].strip()\n    return line[:300]",
+    "line": 321
+  },
+  "5dce0a686036": {
+    "name": "build_yn_prompt",
+    "files": [
+      "bisection_CoT/gpt-oss-20b_few_shot.py"
+    ],
+    "source": "def build_yn_prompt(comment: str, full_label: str, abbr: str) -> str:\n    \"\"\"构造“是否属于某标签”的 Yes/No prompt。\"\"\"\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"{PROMPT_TAIL}\\n\\n\"\n        \"We are classifying the following code comment into one of the ML SATD categories.\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        f\"Question: Does this comment indicate the category \\\"{full_label} ({abbr})\\\"?\\n\"\n        \"Answer strictly with Yes or No.\"\n    )",
+    "line": 464
+  },
+  "6f733efa0e42": {
+    "name": "extract_yes_no",
+    "files": [
+      "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def extract_yes_no(raw: str) -> str:\n    \"\"\"解析 Yes/No；返回 'yes'/'no'/'unk'。\"\"\"\n    first = re.split(r\"[\\r\\n]\", (raw or \"\").strip(), maxsplit=1)[0].strip()\n    first = re.sub(r\"(^[*_`]+|[*_`]+$)\", \"\", first)  # 去修饰\n    t = re.sub(r\"[^a-z\\u4e00-\\u9fa5]\", \"\", first.lower())\n    if t.startswith((\"yes\", \"y\", \"是\")):\n        return \"yes\"\n    if t.startswith((\"no\", \"n\", \"否\", \"不是\")):\n        return \"no\"\n    return \"unk\"",
+    "line": 507
+  },
+  "78b58e152afc": {
+    "name": "extract_abbr",
+    "files": [
+      "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def extract_abbr(raw: str) -> str:\n    \"\"\"从一行文本中提取我们 23 种缩写之一；失败返 '<UNK>'。\"\"\"\n    first = re.split(r\"[\\r\\n]\", (raw or \"\").strip(), maxsplit=1)[0].strip()\n    first = re.sub(r\"(^[*_`]+|[*_`]+$)\", \"\", first)\n    m = ABBR_REGEX.search(first)\n    if m:\n        return ABBR_LOWER[m.group(1).lower()]\n    token = re.sub(r\"[^a-z]\", \"\", first.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    for full, ab in LABEL_ABBR.items():  # 弱兜底：全称首词线索\n        if full.split()[0].lower() in token:\n            return ab\n    return \"<UNK>\"",
+    "line": 518
+  },
+  "f07fda0ac5c9": {
+    "name": "classify_by_polling",
+    "files": [
+      "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def classify_by_polling(comment: str):\n    yes_candidates = []\n\n    # 6.1 逐标签 Yes/No\n    for full in LABELS:\n        abbr = FULL2ABBR[full]\n        prompt = build_yn_prompt(comment, full, abbr)\n        messages = [\n            # {\"role\": \"system\", \"content\": \"Answer strictly with 'Yes' or 'No'.\"},\n            {\"role\": \"user\",   \"content\": prompt},\n        ]\n        raw_yn = generate_first_line(messages, MAX_YN_TOKENS)\n        yn = extract_yes_no(raw_yn)\n        if yn == \"yes\":\n            yes_candidates.append(abbr)\n\n    # 6.2 根据候选决定最终结果\n    if len(yes_candidates) == 1:\n        final_abbr = yes_candidates[0]\n        raw_final = final_abbr\n    elif len(yes_candidates) >= 2:\n        pick_prompt = build_pick_from_candidates_prompt(comment, yes_candidates)\n        messages = [\n            {\"role\": \"system\", \"content\": \"Return only one abbreviation from the candidates.\"},\n            {\"role\": \"user\",   \"content\": pick_prompt},\n        ]\n        raw_pick = generate_first_line(messages, MAX_PICK_TOKENS)\n        pick_abbr = extract_abbr(raw_pick)\n        if pick_abbr in yes_candidates:\n            final_abbr, raw_final = pick_abbr, raw_pick\n        else:\n            final_abbr, raw_final = yes_candidates[0], raw_pick  # 解析不到就用第一个\n    else:\n        # 没有任何 Yes：走全量强制单标签输出\n        fb_prompt = build_force_pick_any_prompt(comment)\n        messages = [\n            {\"role\": \"system\", \"content\": \"Return exactly one abbreviation on a single line.\"},\n            {\"role\": \"user\",   \"content\": fb_prompt},\n        ]\n        raw_fb = generate_first_line(messages, MAX_FALLBACK_TOKENS)\n        fb_abbr = extract_abbr(raw_fb)\n        if fb_abbr in ABBR_SET:\n            final_abbr, raw_final = fb_abbr, raw_fb\n        else:\n            final_abbr, raw_final = FALLBACK_ABBR, raw_fb\n    print(final_abbr)\n    return final_abbr, raw_final, yes_candidates",
+    "line": 558
+  },
+  "e41043cdd2e5": {
+    "name": "build_yn_prompt",
+    "files": [
+      "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "bisection_zero_shot/CodeLlama-7b_zero_shot.py"
+    ],
+    "source": "def build_yn_prompt(comment: str, full_label: str, abbr: str) -> str:\n    \"\"\"是否属于某标签：回答 Yes 或 No。\"\"\"\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        \"We are classifying the following code comment into one of the SATD categories.\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        f\"Question: Does this comment indicate the category \\\"{full_label} ({abbr})\\\"?\\n\"\n        \"Answer strictly with Yes or No.\"\n    )",
+    "line": 502
+  },
+  "1d2b0b6789ab": {
+    "name": "build_pick_from_candidates_prompt",
+    "files": [
+      "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "bisection_zero_shot/CodeLlama-7b_zero_shot.py"
+    ],
+    "source": "def build_pick_from_candidates_prompt(comment: str, candidates_abbr) -> str:\n    \"\"\"在候选缩写中只选 1 个缩写。\"\"\"\n    cand_str = \", \".join(candidates_abbr)\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        \"Pick the single best matching category for the comment below.\\n\"\n        f\"Candidates (abbreviations only): {cand_str}\\n\\n\"\n        \"Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Return exactly ONE abbreviation on a single line, with no extra text.\"\n    )",
+    "line": 513
+  },
+  "c065de0b29a0": {
+    "name": "build_force_pick_any_prompt",
+    "files": [
+      "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "bisection_zero_shot/bin_new_test.py",
+      "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def build_force_pick_any_prompt(comment: str) -> str:\n    \"\"\"从 23 个缩写中强制挑一个（兜底）。\"\"\"\n    cand_str = \", \".join(sorted(ABBR_SET))\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        \"Please determine which type of ML SATD the following Code Comment belongs to.\\n\"\n        \"Return exactly ONE of these abbreviations on a single line, with no extra text:\\n\"\n        f\"{cand_str}\\n\\n\"\n        \"Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Abbreviation:\"\n    )",
+    "line": 525
+  },
+  "bd72f0cf0bb8": {
+    "name": "build_yn_prompt",
+    "files": [
+      "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "bisection_zero_shot/bin_new_test.py",
+      "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "bisection_zero_shot/gemma-3-12b_zero_shot.py"
+    ],
+    "source": "def build_yn_prompt(comment: str, full_label: str, abbr: str) -> str:\n    \"\"\"构造“是否属于某标签”的 Yes/No prompt。\"\"\"\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        \"We are classifying the following code comment into one of the SATD categories.\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        f\"Question: Does this comment indicate the category \\\"{full_label} ({abbr})\\\"?\\n\"\n        \"Answer strictly with Yes or No.\"\n    )",
+    "line": 503
+  },
+  "1b0af204f5cd": {
+    "name": "build_pick_from_candidates_prompt",
+    "files": [
+      "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "bisection_zero_shot/bin_new_test.py",
+      "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def build_pick_from_candidates_prompt(comment: str, candidates_abbr) -> str:\n    \"\"\"在候选缩写中只选 1 个的 prompt。\"\"\"\n    cand_str = \", \".join(candidates_abbr)\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        \"Pick the single best matching category for the comment below.\\n\"\n        f\"Candidates (abbreviations only): {cand_str}\\n\\n\"\n        \"Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Return exactly ONE abbreviation on a single line, with no extra text.\"\n    )",
+    "line": 514
+  },
+  "a44e8faccc5a": {
+    "name": "build_yn_prompt",
+    "files": [
+      "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def build_yn_prompt(comment: str, full_label: str, abbr: str) -> str:\n    \"\"\"构造“是否属于某标签”的 Yes/No prompt。\"\"\"\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        \"We are classifying the following code comment into one of the ML SATD categories.\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        f\"Question: Does this comment indicate the category \\\"{full_label} ({abbr})\\\"?\\n\"\n        \"Answer strictly with Yes or No.\"\n    )",
+    "line": 624
+  },
+  "05c7bbb3698c": {
+    "name": "extract_abbr",
+    "files": [
+      "original_COT.py"
+    ],
+    "source": "def extract_abbr(text: str) -> str:\n    # 先用缩写正则抓取第一个合法命中\n    m = ABBR_PATTERN.search(text)\n    if m:\n        token = re.sub(r\"\\s+\", \" \", m.group(1)).strip()   # 标准化内部空白\n        # 归一化大小写到标准形式\n        key = token.lower().replace(\" \", \"\")\n        for a in ABBR_SET:\n            if a.lower().replace(\" \", \"\") == key:\n                return a\n    # 回退到宽松解析（你的旧逻辑增强）\n    first = re.split(r\"[\\r\\n]\", text.strip())[0]\n    token = re.sub(r\"[^a-z]\", \"\", first.lower())\n    if token in ABBR_LOWER:\n        return ABBR_LOWER[token]\n    raw_strip = first.strip()\n    if raw_strip in ABBR2FULL:\n        return raw_strip\n    join = raw_strip.replace(\" \", \"\")\n    if join.lower() in ABBR_LOWER:\n        return ABBR_LOWER[join.lower()]\n    return \"<UNK>\"",
+    "line": 118
+  },
+  "aa1a1efd34b6": {
+    "name": "classify_one",
+    "files": [
+      "original_COT.py"
+    ],
+    "source": "def classify_one(comment: str):\n    # --- 阶段1：推理 ---\n    if USE_SELF_CONSISTENCY:\n        votes, reasons = [], []\n        for _ in range(SC_SAMPLES):\n            inp1 = _encode_chat(build_cot_stage1(comment))\n            out1 = _gen(inp1, max_new_tokens=512, temperature=SC_TEMP, top_p=SC_TOP_P, top_k=SC_TOP_K)\n            cot = tokenizer.decode(out1[0][inp1[\"input_ids\"].shape[1]:], skip_special_tokens=True).strip()\n            # 阶段2：基于每次采样的推理取最终缩写（贪婪）\n            inp2 = _encode_chat(build_cot_stage2(comment, cot))\n            out2 = _gen(inp2, max_new_tokens=64, temperature=0.0)\n            ans = tokenizer.decode(out2[0][inp2[\"input_ids\"].shape[1]:], skip_special_tokens=True)\n            abbr = extract_abbr(ans)\n            if abbr != \"<UNK>\":\n                votes.append(abbr)\n                reasons.append((abbr, cot))\n        if votes:\n            winner, _ = Counter(votes).most_common(1)[0]\n            # 取与胜出缩写相对应的一条推理存档\n            picked_reason = next((c for a,c in reasons if a==winner), \"\")\n            return winner, picked_reason, ans\n        # 若全是UNK，继续走单次贪婪作为回退\n    # --- 单次贪婪 CoT ---\n    inp1 = _encode_chat(build_cot_stage1(comment))\n    out1 = _gen(inp1, max_new_tokens=512, temperature=0.0)\n    cot = tokenizer.decode(out1[0][inp1[\"input_ids\"].shape[1]:], skip_special_tokens=True).strip()\n\n    inp2 = _encode_chat(build_cot_stage2(comment, cot))\n    out2 = _gen(inp2, max_new_tokens=64, temperature=0.0)\n    ans = tokenizer.decode(out2[0][inp2[\"input_ids\"].shape[1]:], skip_special_tokens=True)\n\n    abbr = extract_abbr(ans)\n    return abbr, cot, ans",
+    "line": 182
+  },
+  "76b78a28dcab": {
+    "name": "build_yn_prompt",
+    "files": [
+      "test1.py",
+      "test3.py"
+    ],
+    "source": "def build_yn_prompt(comment: str, full_label: str, abbr: str) -> str:\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        f\"Task: Decide if the following Code Comment expresses the SATD type **{full_label} ({abbr})**.\\n\"\n        \"Answer strictly with ONE word: Yes or No. Do all reasoning internally and do NOT reveal it.\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Answer:\"\n    )",
+    "line": 116
+  },
+  "67fb3b244bac": {
+    "name": "build_choose_prompt",
+    "files": [
+      "test1.py",
+      "test3.py"
+    ],
+    "source": "def build_choose_prompt(comment: str, candidates_abbr: list) -> str:\n    cand_str = \", \".join(candidates_abbr)\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        \"Task: The following abbreviations have been marked as plausible candidates.\\n\"\n        f\"Choose exactly ONE abbreviation from this set and output that abbreviation ONLY on a single line:\\n\"\n        f\"{cand_str}\\n\"\n        \"Do all reasoning internally and do NOT reveal it.\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Abbreviation:\"\n    )",
+    "line": 127
+  },
+  "03d5d36ad3b6": {
+    "name": "build_full_prompt",
+    "files": [
+      "test1.py",
+      "test3.py"
+    ],
+    "source": "def build_full_prompt(comment: str) -> str:\n    return (\n        f\"{PROMPT_HEAD}\\n\\n\"\n        \"Please determine which type of ML SATD the following Code Comment belongs to.\\n\"\n        \"Return exactly ONE abbreviation on a single line, with no extra text, chosen from:\\n\"\n        f\"{', '.join(sorted(ABBR_SET))}\\n\\n\"\n        \"Code Comment:\\n\\\"\\\"\\\"\\n\"\n        f\"{comment}\\n\\\"\\\"\\\"\\n\\n\"\n        \"Abbreviation:\"\n    )",
+    "line": 141
+  },
+  "5a3f84165668": {
+    "name": "build_prompt_coarse",
+    "files": [
+      "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "tree_few_shot/Qwen3-14B_few_shot.py",
+      "tree_few_shot/Qwen3-8B_few_shot.py",
+      "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "tree_few_shot/gemma-2-9b_few_shot.py",
+      "tree_few_shot/gemma-3-12b_few_shot.py",
+      "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "tree_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def build_prompt_coarse(comment: str) -> str:\n    tail = \"Please classify the following Code Comment into exactly ONE of these coarse abbreviations:\\n\" \\\n           + \", \".join(COARSE_LABELS) + \\\n           \"\\nReturn the abbreviation only (e.g., AWR).\"\n    return f\"{COARSE_PROMPT_HEAD}\\n\\n{tail}\\n\\nCode Comment:\\n\\\"\\\"\\\"\\n{comment}\\n\\\"\\\"\\\"\\n\\nAnswer:\"",
+    "line": 219
+  },
+  "dd2a2c96aed6": {
+    "name": "build_prompt_fine",
+    "files": [
+      "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "tree_few_shot/Qwen3-14B_few_shot.py",
+      "tree_few_shot/Qwen3-8B_few_shot.py",
+      "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "tree_few_shot/gemma-2-9b_few_shot.py",
+      "tree_few_shot/gemma-3-12b_few_shot.py",
+      "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "tree_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def build_prompt_fine(comment: str, coarse_abbr: str) -> str:\n    allowed = COARSE2FINE_ABBR.get(coarse_abbr, sorted(FINE_ABBR_SET))\n    tail = \"Please determine the fine-grained ML SATD type. You MUST answer with only ONE abbreviation from:\\n\" \\\n           + \", \".join(allowed) + \"\\nReturn the abbreviation only (e.g., HP Conf).\"\n    return f\"{FINE_PROMPT_HEAD}\\n\\n{tail}\\n\\nCode Comment:\\n\\\"\\\"\\\"\\n{comment}\\n\\\"\\\"\\\"\\n\\nAnswer:\"",
+    "line": 368
+  },
+  "35a5e1660357": {
+    "name": "extract_coarse",
+    "files": [
+      "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "tree_few_shot/Qwen3-14B_few_shot.py",
+      "tree_few_shot/Qwen3-8B_few_shot.py",
+      "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "tree_few_shot/gemma-2-9b_few_shot.py",
+      "tree_few_shot/gemma-3-12b_few_shot.py",
+      "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "tree_zero_shot/gemma-3-12b_zero_shot.py"
+    ],
+    "source": "def extract_coarse(raw: str) -> str:\n    \"\"\"从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）\"\"\"\n    if not isinstance(raw, str):\n        return \"<UNK>\"\n    s = raw.splitlines()[0].strip()\n\n    # 1) 直接检索允许缩写\n    m = COARSE_REGEX.search(s)\n    if m:\n        return m.group(1).upper()\n\n    # 2) markdown **AWR**\n    m = re.search(r'\\*\\*\\s*(AWR|RDB|DCE|CFO|CDD|DTD|MDL|PRF|SCL)\\s*\\*\\*', s, flags=re.I)\n    if m:\n        return m.group(1).upper()\n\n    # 3) 兜底（去非字母后包含匹配，如 abbreviationawrawareness）\n    letters = re.sub(r'[^A-Za-z]', '', s).lower()\n    for abbr in COARSE_LABELS:\n        if abbr.lower() in letters:\n            return abbr\n    return \"<UNK>\"",
+    "line": 377
+  },
+  "a90a10d91618": {
+    "name": "extract_fine",
+    "files": [
+      "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "tree_few_shot/Qwen3-14B_few_shot.py",
+      "tree_few_shot/Qwen3-8B_few_shot.py",
+      "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "tree_few_shot/gemma-2-9b_few_shot.py",
+      "tree_few_shot/gemma-3-12b_few_shot.py",
+      "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "tree_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def extract_fine(raw: str, allowed_abbr_list) -> str:\n    \"\"\"从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。\"\"\"\n    if not isinstance(raw, str):\n        return \"<UNK>\"\n    s = raw.splitlines()[0].strip()\n\n    # 1) 动态构建模式：支持 'HP Conf' 中的空格写法\n    pat_choices = [re.escape(x).replace(r'\\ ', r'\\s*') for x in allowed_abbr_list]\n    pat = r'\\b(' + '|'.join(pat_choices) + r')\\b'\n    m = re.search(pat, s, flags=re.I)\n    if m:\n        hit = re.sub(r'\\s+', ' ', m.group(1)).strip().lower()\n        for a in allowed_abbr_list:\n            if re.sub(r'\\s+', ' ', a).strip().lower() == hit:\n                return a\n\n    # 2) markdown **HP Conf**\n    m = re.search(r'\\*\\*\\s*(' + '|'.join(pat_choices) + r')\\s*\\*\\*', s, flags=re.I)\n    if m:\n        hit = re.sub(r'\\s+', ' ', m.group(1)).strip().lower()\n        for a in allowed_abbr_list:\n            if re.sub(r'\\s+', ' ', a).strip().lower() == hit:\n                return a\n\n    # 3) 兜底：letters-only 包含匹配\n    letters = re.sub(r'[^A-Za-z]', '', s).lower()\n    for a in allowed_abbr_list:\n        if re.sub(r'[^A-Za-z]', '', a).lower() in letters:\n            return a\n    return \"<UNK>\"",
+    "line": 400
+  },
+  "7da44ee509a9": {
+    "name": "classify_two_stage",
+    "files": [
+      "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "tree_few_shot/Qwen3-14B_few_shot.py",
+      "tree_few_shot/Qwen3-8B_few_shot.py",
+      "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "tree_few_shot/gemma-2-9b_few_shot.py",
+      "tree_few_shot/gemma-3-12b_few_shot.py",
+      "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "tree_zero_shot/gemma-3-12b_zero_shot.py"
+    ],
+    "source": "def classify_two_stage(comment: str):\n    # Stage-1: coarse\n    coarse_prompt = build_prompt_coarse(comment)\n    coarse_raw = generate_once(coarse_prompt, max_len=COARSE_MAX_LEN)\n    # print(coarse_raw)\n    coarse_abbr = extract_coarse(coarse_raw)\n\n    # Stage-2: fine\n    if coarse_abbr == \"<UNK>\":\n        allowed = sorted(FINE_ABBR_SET)  # 粗类不明 -> 全局允许\n    else:\n        allowed = COARSE2FINE_ABBR.get(coarse_abbr, sorted(FINE_ABBR_SET))\n\n    fine_prompt = build_prompt_fine(comment, coarse_abbr)\n    fine_raw = generate_once(fine_prompt, max_len=FINE_MAX_LEN)\n    fine_abbr = extract_fine(fine_raw, allowed)\n\n    if fine_abbr == \"<UNK>\":\n        # 若细类不在允许集合，回退到该粗类默认\n        fine_abbr = FALLBACK_FINE_BY_COARSE.get(coarse_abbr, \"Data Conf\")\n\n    return coarse_abbr, coarse_raw, fine_abbr, fine_raw",
+    "line": 480
+  },
+  "ebe689bbe357": {
+    "name": "extract_coarse",
+    "files": [
+      "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "tree_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def extract_coarse(raw: str) -> str:\n    \"\"\"从任意首行文本里提取粗类缩写（容忍 '**AWR**' / 'Abbreviation: AWR' 等）。\"\"\"\n    if not isinstance(raw, str):\n        return \"<UNK>\"\n    s = raw.splitlines()[0].strip()\n\n    m = COARSE_REGEX.search(s)\n    if m:\n        return m.group(1).upper()\n\n    m = re.search(r'\\*\\*\\s*(AWR|RDB|DCE|CFO|CDD|DTD|MDL|PRF|SCL)\\s*\\*\\*', s, flags=re.I)\n    if m:\n        return m.group(1).upper()\n\n    letters = re.sub(r'[^A-Za-z]', '', s).lower()\n    for abbr in COARSE_LABELS:\n        if abbr.lower() in letters:\n            return abbr\n    return \"<UNK>\"",
+    "line": 300
+  },
+  "93f1d0aea253": {
+    "name": "classify_two_stage",
+    "files": [
+      "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "tree_zero_shot/gpt-oss-20b_zero_shot.py"
+    ],
+    "source": "def classify_two_stage(comment: str):\n    # Stage-1: Coarse\n    coarse_prompt = build_prompt_coarse(comment)\n    messages_coarse = [\n        {\"role\": \"system\", \"content\": \"Return exactly one coarse abbreviation (AWR/RDB/DCE/CFO/CDD/DTD/MDL/PRF/SCL).\"},\n        {\"role\": \"user\",   \"content\": coarse_prompt},\n    ]\n    coarse_raw = generate_first_line(messages_coarse, MAX_NEW_TOKENS)\n    coarse_abbr = extract_coarse(coarse_raw)\n\n    # Stage-2: Fine（限制在该粗类的候选集合）\n    allowed = COARSE2FINE_ABBR.get(coarse_abbr, sorted(FINE_ABBR_SET))\n    fine_prompt = build_prompt_fine(comment, coarse_abbr)\n    messages_fine = [\n        {\"role\": \"system\", \"content\": \"Return exactly one fine abbreviation from the allowed candidates.\"},\n        {\"role\": \"user\",   \"content\": fine_prompt},\n    ]\n    fine_raw = generate_first_line(messages_fine, MAX_NEW_TOKENS)\n    fine_abbr = extract_fine(fine_raw, allowed)\n\n    if fine_abbr == \"<UNK>\":\n        fine_abbr = FALLBACK_FINE_BY_COARSE.get(coarse_abbr, \"Data Conf\")\n    print(fine_abbr)\n    return coarse_abbr, coarse_raw, fine_abbr, fine_raw",
+    "line": 376
+  },
+  "80958524d3d1": {
+    "name": "extract_coarse",
+    "files": [
+      "tree_zero_shot/gemma-2-9b_zero_shot.py"
+    ],
+    "source": "def extract_coarse(raw: str) -> str:\n    \"\"\"从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）\"\"\"\n    if not isinstance(raw, str):\n        return \"<UNK>\"\n\n    # 1) 直接检索允许缩写\n    m = COARSE_REGEX.search(raw)\n    if m:\n        return m.group(1).upper()\n\n    # 2) markdown **AWR**\n    m = re.search(r'\\*\\*\\s*(AWR|RDB|DCE|CFO|CDD|DTD|MDL|PRF|SCL)\\s*\\*\\*', raw, flags=re.I)\n    if m:\n        return m.group(1).upper()\n\n    # 3) 兜底（去非字母后包含匹配，如 abbreviationawrawareness）\n    letters = re.sub(r'[^A-Za-z]', '', raw).lower()\n    for abbr in COARSE_LABELS:\n        if abbr.lower() in letters:\n            return abbr\n    return \"<UNK>\"",
+    "line": 213
+  }
+}

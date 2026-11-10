@@ -1,0 +1,161 @@
+{
+  "retrieved_at": "2026-10-16T08:44:33.782985+00:00",
+  "files": [
+    {
+      "repo": "google/gemma-2-9b-it",
+      "filename": "README.md",
+      "url": "https://huggingface.co/google/gemma-2-9b-it/resolve/11c9b309abf73637e4b6f9a3fa1e92e615547819/README.md",
+      "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/google__gemma-2-9b-it__README.md",
+      "sha256": "8a652ed735e12e4d8241edad2d974aa64ff6e13e8327ec17c9922d9577e9b216",
+      "bytes": 25789,
+      "status": "ok"
+    },
+    {
+      "repo": "google/gemma-2-9b-it",
+      "filename": "config.json",
+      "url": "https://huggingface.co/google/gemma-2-9b-it/resolve/11c9b309abf73637e4b6f9a3fa1e92e615547819/config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "google/gemma-2-9b-it",
+      "filename": "generation_config.json",
+      "url": "https://huggingface.co/google/gemma-2-9b-it/resolve/11c9b309abf73637e4b6f9a3fa1e92e615547819/generation_config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "google/gemma-2-9b-it",
+      "filename": "tokenizer_config.json",
+      "url": "https://huggingface.co/google/gemma-2-9b-it/resolve/11c9b309abf73637e4b6f9a3fa1e92e615547819/tokenizer_config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "google/gemma-3-12b-it",
+      "filename": "README.md",
+      "url": "https://huggingface.co/google/gemma-3-12b-it/resolve/96b6f1eccf38110c56df3a15bffe176da04bfd80/README.md",
+      "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/google__gemma-3-12b-it__README.md",
+      "sha256": "bcd00f0d73a59772e5cac6a98519e8f5eca15f1354cd3889c916e45ba16d8c2e",
+      "bytes": 25126,
+      "status": "ok"
+    },
+    {
+      "repo": "google/gemma-3-12b-it",
+      "filename": "config.json",
+      "url": "https://huggingface.co/google/gemma-3-12b-it/resolve/96b6f1eccf38110c56df3a15bffe176da04bfd80/config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "google/gemma-3-12b-it",
+      "filename": "generation_config.json",
+      "url": "https://huggingface.co/google/gemma-3-12b-it/resolve/96b6f1eccf38110c56df3a15bffe176da04bfd80/generation_config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "google/gemma-3-12b-it",
+      "filename": "tokenizer_config.json",
+      "url": "https://huggingface.co/google/gemma-3-12b-it/resolve/96b6f1eccf38110c56df3a15bffe176da04bfd80/tokenizer_config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "google/codegemma-1.1-7b-it",
+      "filename": "README.md",
+      "url": "https://huggingface.co/google/codegemma-1.1-7b-it/resolve/9523c8dbf32bf2130e2de570c478b3bdb1d36101/README.md",
+      "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/google__codegemma-1.1-7b-it__README.md",
+      "sha256": "87a1c6bba42f75fb7b95b6ad6986facfd1e5fe1728ac7ed97eb7e6c4f08479f6",
+      "bytes": 13438,
+      "status": "ok"
+    },
+    {
+      "repo": "google/codegemma-1.1-7b-it",
+      "filename": "config.json",
+      "url": "https://huggingface.co/google/codegemma-1.1-7b-it/resolve/9523c8dbf32bf2130e2de570c478b3bdb1d36101/config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "google/codegemma-1.1-7b-it",
+      "filename": "generation_config.json",
+      "url": "https://huggingface.co/google/codegemma-1.1-7b-it/resolve/9523c8dbf32bf2130e2de570c478b3bdb1d36101/generation_config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "google/codegemma-1.1-7b-it",
+      "filename": "tokenizer_config.json",
+      "url": "https://huggingface.co/google/codegemma-1.1-7b-it/resolve/9523c8dbf32bf2130e2de570c478b3bdb1d36101/tokenizer_config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "meta-llama/Llama-3.1-8B-Instruct",
+      "filename": "README.md",
+      "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/0e9e39f249a16976918f6564b8830bc894c89659/README.md",
+      "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/meta-llama__Llama-3.1-8B-Instruct__README.md",
+      "sha256": "ed0e2e86f7a40c38b793b0a04dfd993b2c1dfb34906804f96b999f0bbd8d70e6",
+      "bytes": 44044,
+      "status": "ok"
+    },
+    {
+      "repo": "meta-llama/Llama-3.1-8B-Instruct",
+      "filename": "config.json",
+      "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/0e9e39f249a16976918f6564b8830bc894c89659/config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "meta-llama/Llama-3.1-8B-Instruct",
+      "filename": "generation_config.json",
+      "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/0e9e39f249a16976918f6564b8830bc894c89659/generation_config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "meta-llama/Llama-3.1-8B-Instruct",
+      "filename": "tokenizer_config.json",
+      "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/0e9e39f249a16976918f6564b8830bc894c89659/tokenizer_config.json",
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "repo": "codellama/CodeLlama-7b-Instruct-hf",
+      "filename": "README.md",
+      "url": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/resolve/22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed/README.md",
+      "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama__CodeLlama-7b-Instruct-hf__README.md",
+      "sha256": "44f72c25308976cc32e4b9b15d29cf60c946d5885960f60695d8c18582292f23",
+      "bytes": 6552,
+      "status": "ok"
+    },
+    {
+      "repo": "codellama/CodeLlama-7b-Instruct-hf",
+      "filename": "config.json",
+      "url": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/resolve/22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed/config.json",
+      "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama__CodeLlama-7b-Instruct-hf__config.json",
+      "sha256": "8db7009bfcbcf58373a23636f817999d43a4d02764dd94d6313230dfb6568372",
+      "bytes": 646,
+      "status": "ok"
+    },
+    {
+      "repo": "codellama/CodeLlama-7b-Instruct-hf",
+      "filename": "generation_config.json",
+      "url": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/resolve/22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed/generation_config.json",
+      "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama__CodeLlama-7b-Instruct-hf__generation_config.json",
+      "sha256": "95ac031bf2524d1a09cbedff7f1b7d11ea31deb7130b1839af973eab3a20197f",
+      "bytes": 116,
+      "status": "ok"
+    },
+    {
+      "repo": "codellama/CodeLlama-7b-Instruct-hf",
+      "filename": "tokenizer_config.json",
+      "url": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/resolve/22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed/tokenizer_config.json",
+      "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama__CodeLlama-7b-Instruct-hf__tokenizer_config.json",
+      "sha256": "fc8807bb10349bacb929e8d051a2bf41cc624d9b0ff22dd467201af2846ba628",
+      "bytes": 1589,
+      "status": "ok"
+    }
+  ]
+}

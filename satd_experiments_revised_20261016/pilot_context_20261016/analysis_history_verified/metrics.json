@@ -1,0 +1,378 @@
+{
+  "cohort_n": 96,
+  "complete": true,
+  "common_paired_n": 96,
+  "labels": [
+    "MLKnow",
+    "MLInter",
+    "MCC",
+    "DMC",
+    "DFEC",
+    "Weight Conf",
+    "Layer Conf",
+    "HP Conf",
+    "MLDepend",
+    "GC",
+    "CDT",
+    "ML",
+    "UMC",
+    "Data Conf",
+    "PODT",
+    "DS Conf",
+    "Abs",
+    "BE",
+    "MCM",
+    "MCR",
+    "PQ",
+    "MLRelia",
+    "Proto"
+  ],
+  "cohort_support": {
+    "UMC": 6,
+    "Data Conf": 6,
+    "DS Conf": 6,
+    "MLKnow": 6,
+    "HP Conf": 5,
+    "MLDepend": 6,
+    "MCM": 6,
+    "Proto": 6,
+    "Abs": 7,
+    "MCR": 5,
+    "CDT": 7,
+    "MLRelia": 3,
+    "PODT": 6,
+    "PQ": 3,
+    "Layer Conf": 4,
+    "GC": 1,
+    "BE": 1,
+    "MCC": 4,
+    "MLInter": 2,
+    "ML": 1,
+    "Weight Conf": 5
+  },
+  "macro_policy": "macro_* averages labels with gold support in common paired cohort; macro_*_23 fixes all 23 original labels (zero for absent labels).",
+  "primary_common_cohort": {
+    "comment_only": {
+      "n": 96,
+      "accuracy": 0.21875,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.2329174297924298,
+      "weighted_recall": 0.21875,
+      "weighted_f1": 0.19574202349937644,
+      "macro_precision": 0.2527559741845456,
+      "macro_recall": 0.22777777777777777,
+      "macro_f1": 0.2117272005927468,
+      "macro_precision_23": 0.23077719382067208,
+      "macro_recall_23": 0.20797101449275363,
+      "macro_f1_23": 0.19331613967163838,
+      "mean_elapsed_seconds": 0.3486239583333333,
+      "total_elapsed_seconds": 33.4679,
+      "mean_prompt_tokens": 697.2604166666666,
+      "mean_completion_tokens": 2.9479166666666665
+    },
+    "window": {
+      "n": 96,
+      "accuracy": 0.17708333333333334,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.2058982683982684,
+      "weighted_recall": 0.17708333333333334,
+      "weighted_f1": 0.14487665112665113,
+      "macro_precision": 0.22036693465264892,
+      "macro_recall": 0.1880952380952381,
+      "macro_f1": 0.1643023643023643,
+      "macro_precision_23": 0.20120459250894032,
+      "macro_recall_23": 0.17173913043478262,
+      "macro_f1_23": 0.15001520218911524,
+      "mean_elapsed_seconds": 0.7427041666666667,
+      "total_elapsed_seconds": 71.2996,
+      "mean_prompt_tokens": 934.6041666666666,
+      "mean_completion_tokens": 2.875
+    },
+    "function": {
+      "n": 96,
+      "accuracy": 0.16666666666666666,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.16068129604313816,
+      "weighted_recall": 0.16666666666666666,
+      "weighted_f1": 0.12692364824717767,
+      "macro_precision": 0.13446088164133277,
+      "macro_recall": 0.13616780045351473,
+      "macro_f1": 0.1051693404634581,
+      "macro_precision_23": 0.12276863106382557,
+      "macro_recall_23": 0.12432712215320911,
+      "macro_f1_23": 0.0960241804231574,
+      "mean_elapsed_seconds": 1.2376020833333334,
+      "total_elapsed_seconds": 118.8098,
+      "mean_prompt_tokens": 1221.625,
+      "mean_completion_tokens": 2.875
+    }
+  },
+  "primary_ci_95": {
+    "comment_only": {
+      "accuracy": [
+        0.15625,
+        0.28125
+      ],
+      "weighted_precision": [
+        0.12775312871360664,
+        0.3078395562770563
+      ],
+      "weighted_recall": [
+        0.15625,
+        0.28125
+      ],
+      "weighted_f1": [
+        0.12444150148097517,
+        0.2502928704497803
+      ],
+      "macro_precision": [
+        0.15064946491417078,
+        0.3138700328616294
+      ],
+      "macro_recall": [
+        0.16982142857142857,
+        0.2865079365079365
+      ],
+      "macro_f1": [
+        0.14522036693465265,
+        0.26148734741309926
+      ],
+      "macro_f1_23": [
+        0.132592508940335,
+        0.23874931720326456
+      ]
+    },
+    "window": {
+      "accuracy": [
+        0.125,
+        0.22916666666666666
+      ],
+      "weighted_precision": [
+        0.08695669022817461,
+        0.24257864473914567
+      ],
+      "weighted_recall": [
+        0.125,
+        0.22916666666666669
+      ],
+      "weighted_f1": [
+        0.09073286982816427,
+        0.18894301445082692
+      ],
+      "macro_precision": [
+        0.11315036359371333,
+        0.2507690576230492
+      ],
+      "macro_recall": [
+        0.14285714285714285,
+        0.2341468253968253
+      ],
+      "macro_f1": [
+        0.11630319942819943,
+        0.20316800659657797
+      ],
+      "macro_f1_23": [
+        0.10618987773879078,
+        0.18550122341426686
+      ]
+    },
+    "function": {
+      "accuracy": [
+        0.10416666666666667,
+        0.22916666666666666
+      ],
+      "weighted_precision": [
+        0.06675595238095237,
+        0.20464161706349207
+      ],
+      "weighted_recall": [
+        0.10416666666666667,
+        0.22916666666666666
+      ],
+      "weighted_f1": [
+        0.07142558396464646,
+        0.17402388797968063
+      ],
+      "macro_precision": [
+        0.05613500033558173,
+        0.16712334292691433
+      ],
+      "macro_recall": [
+        0.08696145124716553,
+        0.18254251700680268
+      ],
+      "macro_f1": [
+        0.05912556689342404,
+        0.14421875796389014
+      ],
+      "macro_f1_23": [
+        0.0539842132505176,
+        0.13167799640181274
+      ]
+    }
+  },
+  "all_available_per_arm": {
+    "comment_only": {
+      "n": 96,
+      "accuracy": 0.21875,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.2329174297924298,
+      "weighted_recall": 0.21875,
+      "weighted_f1": 0.19574202349937644,
+      "macro_precision": 0.2527559741845456,
+      "macro_recall": 0.22777777777777777,
+      "macro_f1": 0.2117272005927468,
+      "macro_precision_23": 0.23077719382067208,
+      "macro_recall_23": 0.20797101449275363,
+      "macro_f1_23": 0.19331613967163838
+    },
+    "window": {
+      "n": 96,
+      "accuracy": 0.17708333333333334,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.2058982683982684,
+      "weighted_recall": 0.17708333333333334,
+      "weighted_f1": 0.14487665112665113,
+      "macro_precision": 0.22036693465264892,
+      "macro_recall": 0.1880952380952381,
+      "macro_f1": 0.1643023643023643,
+      "macro_precision_23": 0.20120459250894032,
+      "macro_recall_23": 0.17173913043478262,
+      "macro_f1_23": 0.15001520218911524
+    },
+    "function": {
+      "n": 96,
+      "accuracy": 0.16666666666666666,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.16068129604313816,
+      "weighted_recall": 0.16666666666666666,
+      "weighted_f1": 0.12692364824717767,
+      "macro_precision": 0.13446088164133277,
+      "macro_recall": 0.13616780045351473,
+      "macro_f1": 0.1051693404634581,
+      "macro_precision_23": 0.12276863106382557,
+      "macro_recall_23": 0.12432712215320911,
+      "macro_f1_23": 0.0960241804231574
+    }
+  },
+  "comparisons": {
+    "window": {
+      "n": 96,
+      "corrected": 2,
+      "regressed": 6,
+      "changed_predictions": 48,
+      "metric_differences": {
+        "accuracy": -0.04166666666666666,
+        "weighted_precision": -0.027019161394161384,
+        "weighted_recall": -0.04166666666666666,
+        "weighted_f1": -0.050865372372725315,
+        "macro_precision": -0.032389039531896674,
+        "macro_recall": -0.03968253968253968,
+        "macro_f1": -0.047424836290382494,
+        "macro_f1_23": -0.043300937482523144
+      },
+      "difference_ci_95": {
+        "accuracy": [
+          -0.09374999999999997,
+          0.0
+        ],
+        "weighted_precision": [
+          -0.12737930006158166,
+          0.030889186085202715
+        ],
+        "weighted_recall": [
+          -0.09374999999999997,
+          6.938893903869363e-19
+        ],
+        "weighted_f1": [
+          -0.09499699411704782,
+          -0.003366534249497132
+        ],
+        "macro_precision": [
+          -0.11703212644707,
+          0.032400802797608076
+        ],
+        "macro_recall": [
+          -0.07936507936507939,
+          0.0
+        ],
+        "macro_f1": [
+          -0.08794817315122393,
+          -0.0007384049949125381
+        ],
+        "macro_f1_23": [
+          -0.0803005059206827,
+          -0.0006741958649201307
+        ]
+      },
+      "mcnemar_exact_p": 0.2890625,
+      "p_value_note": "Exploratory, no adjustment for multiple comparisons."
+    },
+    "function": {
+      "n": 96,
+      "corrected": 4,
+      "regressed": 9,
+      "changed_predictions": 56,
+      "metric_differences": {
+        "accuracy": -0.05208333333333334,
+        "weighted_precision": -0.07223613374929164,
+        "weighted_recall": -0.05208333333333334,
+        "weighted_f1": -0.06881837525219878,
+        "macro_precision": -0.11829509254321283,
+        "macro_recall": -0.09160997732426304,
+        "macro_f1": -0.1065578601292887,
+        "macro_f1_23": -0.09729195924848098
+      },
+      "difference_ci_95": {
+        "accuracy": [
+          -0.11458333333333331,
+          0.010416666666666657
+        ],
+        "weighted_precision": [
+          -0.17361887040655424,
+          0.014889704137236979
+        ],
+        "weighted_recall": [
+          -0.11458333333333331,
+          0.010416666666666657
+        ],
+        "weighted_f1": [
+          -0.1252326722170472,
+          -0.006145137429094375
+        ],
+        "macro_precision": [
+          -0.19942832036582037,
+          -0.0323108510085862
+        ],
+        "macro_recall": [
+          -0.14196145124716553,
+          -0.039682539682539694
+        ],
+        "macro_f1": [
+          -0.15587973626452176,
+          -0.050758952282600085
+        ],
+        "macro_f1_23": [
+          -0.14232497658934595,
+          -0.04634513034498268
+        ]
+      },
+      "mcnemar_exact_p": 0.266845703125,
+      "p_value_note": "Exploratory, no adjustment for multiple comparisons."
+    }
+  },
+  "bootstrap": {
+    "repeats": 2000,
+    "seed": 20261016,
+    "method": "paired within-gold-label percentile bootstrap"
+  },
+  "parse_policy": "Invalid/missing parsed label counts as incorrect; no majority-class fallback.",
+  "scope": "Conditional on selected stratified cohort. Not a population estimate, independent replication, or cross-project validation.",
+  "warnings": []
+}

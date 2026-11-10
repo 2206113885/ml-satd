@@ -1,0 +1,28 @@
+DataConf
+CSC
+None
+Tag->size
+API
+TODO
+Funsor
+**Data Conf**
+TODO
+C++
+CAPTALIZEDWORDS
+**Weight Conf**
+DataConf
+TODO
+ConvTrans
+TODO
+Log
+**Data Conf**
+DefaultEnvironment
+WTCM
+**HP Conf**
+TODO
+**Data Conf**
+**TSVD**
+TableConf
+**Layer Conf**
+**Data Conf**
+**DS Conf**

@@ -1,0 +1,7 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+  "run_dir": "results/run-20251021-001420-Qwen3-14B",
+  "max_new_tokens": 32768,
+  "fallback_abbr": "Data Conf"
+}

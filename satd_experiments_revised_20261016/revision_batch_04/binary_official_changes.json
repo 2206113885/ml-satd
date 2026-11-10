@@ -1,0 +1,798 @@
+{
+  "issue_id": "R45 OFFICIAL PROFILE",
+  "scope_root": "/Users/yizho/Desktop/satd_experiments_revised_20261016",
+  "scope_source": "Exactly the batch04/before bisection_CoT, bisection_few_shot, bisection_zero_shot scripts with active audited_generate calls",
+  "changed_file_count": 29,
+  "folder_counts": {
+    "bisection_CoT": 9,
+    "bisection_few_shot": 9,
+    "bisection_zero_shot": 11
+  },
+  "root_qwen3_8b_few_shot_file_found": false,
+  "excluded_from_this_edit": [
+    "all root-level scripts including test1.py/test3.py",
+    "battle/",
+    "tree*/",
+    "basic*/",
+    "revision_runtime.py and shared helpers"
+  ],
+  "auxiliary_scope_boundary": "bin_test.py and bin_new_test.py are included only because the user authorized this generation API scope; inclusion is not proof of paper provenance or a rerun requirement.",
+  "generation_contract": "audited_generate(..., generation_kwargs={'max_new_tokens': original_expression}, official_profile=True, native_thinking=original, audit/stage/input-metadata unchanged); no script sampler/generation_config/reasoning_effort overrides",
+  "settings_policy": "settings = audit.settings() plus existing non-sampling experiment caps/metadata; resolved profiles are observed at runtime in generation_events.jsonl, not fabricated here",
+  "changes": [
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "before_sha256": "98ac302c57c97ada71a6e67bbe6bd127b551422591ddaf9e1518918f6c2e8be7",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "do_sample",
+        "eos_token_id",
+        "pad_token_id",
+        "temperature",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "65482e8fbe8d66e7c9a2334a526d323e8788b542c511a81c4cfd175285bbb9ab",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "b885b7df726653a0d04538c93a25907a738968b26b0747ee77f347d7528d535f",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "eos_token_id",
+        "pad_token_id"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "45a7e6b3793af17c8ab79f94ec3e6df386a968de6ee245d40ab87a5e18ff1d19",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "before_sha256": "5c8802981ad889580185437c186140f4f1f17fce71f96c543579e59c6dfd2653",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "59ff8713e41379c8977d35eed751f9861b86c05dcc3321b244d1966f2cbd621b",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+      "before_sha256": "c235fbaecf7d0b5ce4a8e6405be1c1609e24f91d781eeb9f6aa3cc474ae70006",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "_gen"
+      ],
+      "commented_sampler_globals": [
+        "TEMPERATURE",
+        "TOP_P",
+        "TOP_K"
+      ],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "thinking",
+      "removed_settings_keys": [
+        "temperature",
+        "top_p",
+        "top_k"
+      ],
+      "after_sha256": "4cbf83a159cbfbc0795fd27d7442a1b6a154808e5cffe4b066d51b6deac78ffe",
+      "replaced_blocks": 5,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+      "before_sha256": "f05a77a9ea3150974004af9846b0eb7bd97557ca6ea1e9ec2e47fe817039984d",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "_gen"
+      ],
+      "commented_sampler_globals": [
+        "TEMPERATURE",
+        "TOP_P",
+        "TOP_K"
+      ],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "thinking",
+      "removed_settings_keys": [
+        "temperature",
+        "top_p",
+        "top_k"
+      ],
+      "after_sha256": "43a5e7d14c47a27ff3d61a98124cf71fbb7ecb8eb238e0e5450150e4fe670a06",
+      "replaced_blocks": 5,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "before_sha256": "24bc901d5133e6ce96ac00e4a324ad5e4505a4bf612ca7f2d93aeb5532eb7c9f",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "c3eb91ecce6bb4884a07f685fe137d2390ca2d4695228a23d31d4689b49c2c6b",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "before_sha256": "c7ea2869442fe60344438b3cebea95510da93aad81554d60427193746914e39d",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "9b19471911d21bc24a20b2b92eb5e86b0f73dd24b29bdc1bebe8d421ee89b82b",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "before_sha256": "ef8a106f7a7cf190d5644a154afffc1f44bf3ca990f9d3916810d84951228cb0",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "d99ac89655064dadfc1ce982ac31525e21143ccadbd793ec9d59721e4cfa2d56",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "before_sha256": "d8df0facb18f1d3e4a7979f976d12911ab8edb00c47e8948e3c98f22656f0c2a",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "generate_first_line"
+      ],
+      "commented_sampler_globals": [
+        "REASONING_EFFORT"
+      ],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "generation_config"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "e53b9a28e424d73f4ba24790e4881b09e1fa4b69759b14ad779e0d04fe7c81ab",
+      "replaced_blocks": 4,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "before_sha256": "01f3bd156234ed7fda7eec6d75dee66da9a73623136f8e3f4a86276922993c11",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "do_sample",
+        "eos_token_id",
+        "pad_token_id",
+        "temperature",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "590523bdfa7e49dcd6046682bfc42c1217d7c4221c774e887e89f2a52adf35ca",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "04d5ed9d70fc41ded39036efc954e98e4c36e2bd8040c19d960df8bece7832da",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "eos_token_id",
+        "pad_token_id"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "78c40380766d544ddaa7d02b53e20ee9ddd6768f47f976643fe338b2f69c88a6",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "before_sha256": "01b7281550ffc10df91228c33f9aa2ac8d37335a07aef5bb395bde229668c258",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "41da964eab2f612beaf074c743af34828a6050dd65ba20e835b8e69d51bda867",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "before_sha256": "74991ac6ff9e2f3595b4491d9dd8e697b54066a8aaf0afdcb2e994e20fe5ff62",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "0dd4ddf13a8c6a16dbd258c4fc75dfc9b5aba6422fa43544ef4825462cd2f92e",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "before_sha256": "84d959307106050c0fbd6496c197b285116792f48d7f4fb6afbf4c65dcff995d",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "cc862eed7cf3101b0fe7a25167cb9787d2c71813802381f43e1cfd2d33c9874c",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "before_sha256": "539a4b7a298b4bbb0ca515d24b18aca6da3193328d756f0243fb0211fc3fff23",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "7eb46417e1f66d9e157e433219f86c1b4ee869fb19f3f76428c3c5f6364e8f49",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "before_sha256": "6fbf56bb6f113f41fa16e06f4b7949774d32e9a9ec7d8d98bca224e4ab126e8f",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "5ec4d249eb772388b203280252c13966ac1ca8a92ab70eff1bd25c15abbe1279",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "before_sha256": "477729e72dfb06e675297fd57c5dccea1a6b5e1dd88b7fa5f52357018fee6da3",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "2d4fda0074cce81205cbc8057a2899f4cb52af29f308223742c587bed50f9647",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "before_sha256": "01c5e8f94d07f56e704c79860f6e0d0a7acd7a8f277871425e14c206f149ef4b",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "generate_first_line"
+      ],
+      "commented_sampler_globals": [
+        "REASONING_EFFORT"
+      ],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "generation_config"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "bb2e2f5de08bb9ac11cffd17222fa8f21a1414b71633ef4285172154fa7ea6cb",
+      "replaced_blocks": 4,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "before_sha256": "bb4033be29aca04455fd1a6bdf88ac9912a9a2040ad27913c480abc6f0df98f8",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "do_sample",
+        "eos_token_id",
+        "pad_token_id",
+        "temperature",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "9e7a97a68f2375c66382affe813f7ef55b541039177c0f380fd79f145a659f00",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "before_sha256": "b7038f832feaf533734f6920161586229a3a3a0a1594e76666cfe85971bca754",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "eos_token_id",
+        "pad_token_id"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "fa97a1335436cc4f8291f6b53fad22810598e3bf16751c122c0d72a6812db212",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "before_sha256": "b72f5f245db0eb9127e535d2ce356fdfa1b5b41460287a23d95bc868fc1845d7",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "8e6ff06396458bf23d93660a6350dc1b5268389c89a0a21187a7e9a1ed538ddf",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "before_sha256": "1dd30256d28027acb3d6cfaa37b2ab6b51ae401f009d2a5e658618cebc2b180f",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "do_sample",
+        "eos_token_id",
+        "pad_token_id",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "64dcdfbfb860be3329ef39ef0b0a051fd6948fd85d94c8693d37719654e1edca",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "before_sha256": "cc82a2bc48c592e3c50b5db30a14da03444fdf4a5e932344a8e78052b60fed41",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "d888859d1ec38ab2b5ef2bfa3fb9df283302c12d1be4454d62118a4ba1cb0058",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/bin_new_test.py",
+      "before_sha256": "9ce8f8690d7cacc70e50805707b70b54d2dadf5ef0fb0674c56798aaf9a9e205",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Auxiliary utility; not automatic paper/rerun basis",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "aa9358dce9e9937b5be3d8b7855e85abee05d169ce59494b69bec0ae7cea5071",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/bin_test.py",
+      "before_sha256": "a6e5b69a26510f5ce10a1f669ba6054e5f2342494fedb5b512f6449f8cd142b3",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Auxiliary utility; not automatic paper/rerun basis",
+      "replaced_functions": [
+        "chat"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": false,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "legacy_settings_added": true,
+      "after_sha256": "1ab92384686f9b0470615214976b8a649e4c596f0c0acfff6fb68d25667204ad",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "before_sha256": "5f73c6cb07083018b8284b199d68c5a305720254a46ed1ea8fd133e280ae4296",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "41f4091f436ba43c30274e0cdba807748613e48a7687bc75a90fbda3b9989b48",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "before_sha256": "2a8915ca29234b3b4f8ca3e946551d942bc8d9e1e7c098d273562e3aaf889a60",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "d38b7829184bf1855d59a55d4409a0a9a54bc18b554dd7688e957e710b776a6a",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "before_sha256": "2e4a30af490aa962f57453bc819b7d724cd7ff51e6d4bab50e1d718cd2311dfa",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "greedy_generate_first_line"
+      ],
+      "commented_sampler_globals": [],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "80e19b39c2ae328cf01b89aa4d1dbd1fa1edc53ea76ef1f7e420d00fcc0ae28e",
+      "replaced_blocks": 2,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    },
+    {
+      "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "before_sha256": "35a0efeb6f9eff6eedbbf74b5972aafee1a9fd42f327ac9a9fe618a6b8957e39",
+      "scope": "bisection audited_generate baseline set",
+      "paper_provenance": "Use existing manuscript table/run mapping; this code change alone does not prove historical provenance",
+      "replaced_functions": [
+        "generate_first_line"
+      ],
+      "commented_sampler_globals": [
+        "REASONING_EFFORT"
+      ],
+      "removed_explicit_reasoning_effort": true,
+      "pseudo_effort_prompt_changes": 0,
+      "max_new_tokens_expression": "max_new_tokens",
+      "removed_generation_keys": [
+        "generation_config"
+      ],
+      "old_native_thinking_expression": "False",
+      "removed_settings_keys": [],
+      "after_sha256": "4653cfa61da0a6b6ef0acc941b336f89b0f171e2b1a1280874818f3d2490a2c3",
+      "replaced_blocks": 4,
+      "static_ast_parse": "passed",
+      "max_new_caps_seed_prompts_labels_unchanged": true,
+      "mode_stage_audit_keywords_unchanged": true,
+      "old_replaced_code_preserved_as_comments": true,
+      "experiments_models_tokenizers_functions_or_tests_executed": false
+    }
+  ],
+  "validation": "AST, source text and hashes only; no experimental module/function/model/tokenizer or tests executed",
+  "shared_runtime_implementation": "Owned by root; this manifest does not claim that runtime inference was executed or validated",
+  "status": "final stable; root may perform final static review",
+  "final_static_readback": {
+    "files_AST_parse_hashes_and_API_checked": 29,
+    "audited_generation_calls": 29,
+    "generation_kwargs_keys_only_max_new_tokens": 29,
+    "official_profile_true": 29,
+    "reasoning_effort_call_overrides_remaining": 0,
+    "non_wrapper_functions_changed": 0,
+    "old_complete_wrapper_functions_retained_as_comments": 29,
+    "commented_old_sampling_and_effort_globals": 9,
+    "caps_seed_prompts_labels_and_mode_stage_audit_keywords": "unchanged",
+    "settings_json_uses_runtime_actual_profiles": 29,
+    "experiments_models_tokenizers_functions_or_tests_executed": false
+  }
+}

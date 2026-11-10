@@ -1,0 +1,9 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+  "model_name": "CodeLlama-7b-Instruct-hf",
+  "run_dir": "results/run-20251021-005800-CodeLlama-7b-Instruct-hf",
+  "max_new_tokens": 512,
+  "fallback_abbr": "Data Conf",
+  "output_format": "two-lines (Abbreviation / Reason <=12 words)"
+}

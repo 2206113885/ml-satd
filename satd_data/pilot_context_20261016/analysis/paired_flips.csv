@@ -1,0 +1,201 @@
+﻿sample_id,comparison,gold_label,comment_only_prediction,context_prediction,changed,outcome,comment
+aajghfhbg,window-comment_only,UMC,GC,Proto,True,both_wrong,XXX gs = fig.add_gridspec(15; 1)
+aaffbchga,window-comment_only,Data Conf,DS Conf,MLDepend,True,both_wrong,TODO validate and normalize to \/path\/to\/variable
+aaebjbdgg,window-comment_only,DS Conf,DS Conf,CDT,True,regressed,TODO replace whole pandas data container as input argument with separated metadata container
+aaeieejja,window-comment_only,MLKnow,DS Conf,UMC,True,both_wrong,TODO: dataframe pass needed?
+aajdcigce,window-comment_only,Data Conf,DS Conf,DS Conf,False,both_wrong,TODO: Add this to configuration framework
+aaadihacg,window-comment_only,HP Conf,MCM,UMC,True,both_wrong,TODO: do this better
+aagbjaigc,window-comment_only,Data Conf,UMC,UMC,False,both_wrong,TODO: reward computation
+aagdjigjj,window-comment_only,DS Conf,DS Conf,UMC,True,regressed,todo: should save tpot model here
+aaaiefadd,window-comment_only,MLDepend,DS Conf,Data Conf,True,both_wrong,TODO check results after standardizing num ft once a ml algorithm is ready to test
+aaggciajj,window-comment_only,MCM,DS Conf,DS Conf,False,both_wrong,TODO(fstahlberg): Move to config
+aaeacgjbc,window-comment_only,UMC,DS Conf,UMC,True,corrected,"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment."
+aaedhfhae,window-comment_only,MLKnow,MLInter,MLInter,False,both_wrong,TODO confirm that multiple eigenvalues of 1 means the rotation
+aafeaaejc,window-comment_only,MLKnow,Proto,Proto,False,both_wrong,FIXME: What if we never find a fail-high?
+aaeeicdeh,window-comment_only,MLKnow,UMC,UMC,False,both_wrong,TODO: add a complete frame_size; to cover the whole audio signal?
+aaacgfhgb,window-comment_only,DS Conf,DS Conf,UMC,True,regressed,TODO Option for string lenght
+aajfeejjg,window-comment_only,UMC,UMC,UMC,False,both_correct,TODO: delete this method when no longer needed
+aagcbdejg,window-comment_only,DS Conf,MCC,MCM,True,both_wrong,self.clearChanges() #TODO perhaps?
+aadfaifgh,window-comment_only,UMC,UMC,UMC,False,both_correct,TODO remove later.
+aaeiefhcb,window-comment_only,Data Conf,UMC,UMC,False,both_wrong,TODO: ignore non-numerics
+aahjaaihb,window-comment_only,Proto,Weight Conf,UMC,True,both_wrong,TODO checkpoints; incremental save
+aafeaihbg,window-comment_only,MCR,UMC,UMC,False,both_wrong,TODO: Remove hardcoding of downscaling calculations.
+aahhdabij,window-comment_only,Abs,GC,GC,False,both_wrong,TODO design an API interface for advanced access as an importable package
+aajacfjii,window-comment_only,MCR,UMC,UMC,False,both_wrong,todo: this is O(N^2) and maybe too slow for large graphs.
+aaahbfbhe,window-comment_only,UMC,UMC,UMC,False,both_correct,DEPRICATE? I don't think this is needed anymore
+aaeigcjdd,window-comment_only,CDT,MCC,MCM,True,both_wrong,XXX: unify Series\/Array as Array
+aafacjjjb,window-comment_only,HP Conf,MCC,MCM,True,both_wrong,h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO
+aagciihdj,window-comment_only,DS Conf,GC,Abs,True,both_wrong,TODO Send the context back into some list maintained by
+aaiejaeea,window-comment_only,CDT,DMC,UMC,True,both_wrong,TODO: replace with unbatch or readout
+aaggcgaie,window-comment_only,MLKnow,UMC,UMC,False,both_wrong,Initialize model (TODO: really necessary?)
+aaejdhjid,window-comment_only,MLRelia,MLInter,MLInter,False,both_wrong,TODO: black box attacks
+aaibgbejh,window-comment_only,CDT,MLDepend,MLDepend,False,both_wrong,TODO: replace with (stable) Draft6Validator; if available
+aaibjdjdj,window-comment_only,PODT,DS Conf,CDT,True,both_wrong,XXX: not handling dictionnaries
+aadajbgbb,window-comment_only,Data Conf,DS Conf,UMC,True,both_wrong,TODO: num pad examples is not set here if fillup strategy would be padding
+aagdffgjh,window-comment_only,MLKnow,MLKnow,MCC,True,regressed,TODO Figure out how to distinguish oxidation states
+aagfgggge,window-comment_only,PQ,MLRelia,MCM,True,both_wrong,early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release)
+aaididbfa,window-comment_only,DS Conf,UMC,UMC,False,both_wrong,TODO: write index
+aaedcebbj,window-comment_only,MCM,UMC,MCM,True,corrected,todo sweep
+aajfajibh,window-comment_only,HP Conf,MCC,MCM,True,both_wrong,FIXME homogeneize the meaning of margin parameter
+aahddjbah,window-comment_only,MCR,MLInter,UMC,True,both_wrong,TODO: ensure x data shape matches model._ph['x'] shape (only if fit)
+aajbgadgf,window-comment_only,MLDepend,MLDepend,MLDepend,False,both_correct,TODO check for each tentacle specified if update is available (with requirements)
+aaeiedgej,window-comment_only,Data Conf,MCC,MCC,False,both_wrong,TODO: min
+aaiiccdhb,window-comment_only,Abs,MCC,MCC,False,both_wrong,TODO: (sven) rename to simply stats_fn to match eager and torch.
+aahfgjaff,window-comment_only,Layer Conf,UMC,UMC,False,both_wrong,It's only needed for a specific purpose in the short term; will go.
+aajdcijhj,window-comment_only,GC,DMC,DMC,False,both_wrong,FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file
+aajceeeid,window-comment_only,CDT,MCC,UMC,True,both_wrong,TODO replace with Streamlines
+aagibhhbe,window-comment_only,BE,GC,Abs,True,both_wrong,TODO(dbieber): Move this logic into the dataset definition.
+aabgahibh,window-comment_only,MCC,MCM,MCM,False,both_wrong,XXX: one could be smarter here
+aadfiacgf,window-comment_only,CDT,Weight Conf,UMC,True,both_wrong,TODO make threshold a variable
+aafeaiffi,window-comment_only,Layer Conf,Weight Conf,Weight Conf,False,both_wrong,TODO: Replace Lambda with custom Keras layer for loss.
+aajdbjejb,window-comment_only,MCM,MCM,MCM,False,both_correct,TODO: remove hard-coded sizes and make relative to parent?
+aadagdejg,window-comment_only,CDT,DMC,DMC,False,both_wrong,TODO: Repeat_elements and tf.split doesn't support dynamic splits.
+aafahfcgh,window-comment_only,Proto,Proto,MLInter,True,regressed,FIXME: support for many evaluators; maybe event support
+aaeidieej,window-comment_only,CDT,MCR,MCM,True,both_wrong,TODO: extend to other key types
+aagdhccjd,window-comment_only,MLInter,MLKnow,Abs,True,both_wrong,TODO write a warning
+aaahcdafe,window-comment_only,MCR,MLRelia,Proto,True,both_wrong,TODO: handle channel modalities later
+aaiiaefbb,window-comment_only,Proto,MLKnow,UMC,True,both_wrong,TODO(rliaw): This behavior is probably undesirable; but right now
+aaaggiije,window-comment_only,UMC,UMC,UMC,False,both_correct,TODO: deprecate?
+aajffiiac,window-comment_only,Abs,UMC,UMC,False,both_wrong,TODO: write a function to do this..
+aaefagbgc,window-comment_only,MCM,DS Conf,DS Conf,False,both_wrong,TODO: make the dtype configurable; see __init__()
+aadajcbia,window-comment_only,ML,ML,ML,False,both_correct,TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.
+aadhgfgeb,window-comment_only,MCM,HP Conf,DS Conf,True,both_wrong,TODO(tokunaga): the number of processes should be configurable
+aadfjffba,window-comment_only,Proto,MCC,UMC,True,both_wrong,TODO this is too general; register all ops
+aaibjjjbc,window-comment_only,Weight Conf,Weight Conf,Weight Conf,False,both_correct,FIXME: need to implement sample_weight in Ridge
+aahcgjcji,window-comment_only,MLDepend,HP Conf,Proto,True,both_wrong,tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support
+aajdcifej,window-comment_only,Proto,MLInter,UMC,True,both_wrong,FIXME: Allow some diff; e.g. on repr style text in text\/plain
+aaeifhdjh,window-comment_only,PODT,MLInter,DMC,True,both_wrong,TODO: check for series\/dict\/list input
+aaefgiijg,window-comment_only,MCR,MCR,MCR,False,both_correct,TODO: At the moment LHUC is RNN specific. We should support other models as well.
+aafejhiea,window-comment_only,HP Conf,MCC,MCC,False,both_wrong,Random Warp # TODO change masks to have a input mask and a warped target mask
+aaffedgad,window-comment_only,HP Conf,MCC,MCM,True,both_wrong,#TODO: improve the copying of parameters
+aadgfdibb,window-comment_only,MCR,UMC,Proto,True,both_wrong,TODO: handle other participant types
+aaeiaghhj,window-comment_only,MLInter,GC,Proto,True,both_wrong,TODO: Log message
+aaaefgdbc,window-comment_only,PQ,PQ,Proto,True,regressed,TODO: compare the performance!
+aagbbjgij,window-comment_only,MLDepend,DMC,UMC,True,both_wrong,TODO replace this code with the following commented out code after viz is fixed
+aajfiibhb,window-comment_only,MCM,MCC,UMC,True,both_wrong,TODO: do not replace unless explicitly noticed + add 'only hangul' option
+aadageajc,window-comment_only,Proto,MCM,UMC,True,both_wrong,TODO: make efficient
+aaffdcfdh,window-comment_only,HP Conf,HP Conf,HP Conf,False,both_correct,TODO: Change the optimizer to the appropriate Optimizer class
+aafbdjhfg,window-comment_only,Layer Conf,Weight Conf,Weight Conf,False,both_wrong,should be WeightNorm here TODO.
+aaedjcbec,window-comment_only,MLDepend,Abs,Abs,False,both_wrong,TODO: add inheritance from Graph once implemented
+aagaghfef,window-comment_only,Layer Conf,MCM,MCM,False,both_wrong,TODO: implement residual connection
+aaicecaej,window-comment_only,Weight Conf,Weight Conf,Weight Conf,False,both_correct,FIXME non-uniform sample weights not yet supported
+aaffdjjaa,window-comment_only,Layer Conf,MLDepend,MLDepend,False,both_wrong,TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md
+aaijaggcb,window-comment_only,PODT,DS Conf,MLKnow,True,both_wrong,In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.
+aahicagej,window-comment_only,Weight Conf,MCC,Proto,True,both_wrong,todo; pass also best score
+aaedghfjd,window-comment_only,MCC,MCC,MCC,False,both_correct,"TODO: rename kwarg \""forward\"" to \""forward_additive\"""
+aadghcged,window-comment_only,Abs,MCC,UMC,True,both_wrong,ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...
+aahjgeiic,window-comment_only,MLDepend,MLDepend,MLDepend,False,both_correct,XXX: How to catch dependence cycles correctly?
+aagfeiiaj,window-comment_only,Weight Conf,Weight Conf,Weight Conf,False,both_correct,Freeze weights - TODO: NOT IMPLEMENTED!
+aafadcigh,window-comment_only,MLRelia,MLInter,Proto,True,both_wrong,todo: accurate Value
+aahjdcjgg,window-comment_only,PODT,UMC,UMC,False,both_wrong,TODO: handle record value which are lists; at least error
+aaeieahii,window-comment_only,PODT,DS Conf,DS Conf,False,both_wrong,XXX offset type is uint32
+aadgecacc,window-comment_only,MCC,MCM,MCM,False,both_wrong,TODO refactor second part of if statement when implementing live model prediction
+aaeiebjie,window-comment_only,PODT,UMC,MCC,True,both_wrong,TODO: list
+aafadaiij,window-comment_only,Layer Conf,DMC,UMC,True,both_wrong,TODO max in one tensor
+aaeejjfbc,window-comment_only,MCC,Weight Conf,Weight Conf,False,both_wrong,FIXME: this is kind of hackish; but being able to simply set
+aafdibbge,window-comment_only,PQ,Proto,Proto,False,both_wrong,TODO: I cannot get good results with this yet
+aaeidjjhd,window-comment_only,MLRelia,MCM,MCM,False,both_wrong,TODO: extract an eval func more robustly
+aagfjdjeg,window-comment_only,Abs,MCM,MCM,False,both_wrong,TODO: refactor as independent function
+aahiiegbc,window-comment_only,Abs,MCM,MCM,False,both_wrong,TODO implement generic method
+aajcfhiga,window-comment_only,Abs,MCM,UMC,True,both_wrong,TODO make paf_scored not part of self?
+aahiigecd,window-comment_only,Weight Conf,Weight Conf,Weight Conf,False,both_correct,TODO if without momentum; weights should not change too
+aajghfhbg,function-comment_only,UMC,GC,Proto,True,both_wrong,XXX gs = fig.add_gridspec(15; 1)
+aaffbchga,function-comment_only,Data Conf,DS Conf,MLDepend,True,both_wrong,TODO validate and normalize to \/path\/to\/variable
+aaebjbdgg,function-comment_only,DS Conf,DS Conf,UMC,True,regressed,TODO replace whole pandas data container as input argument with separated metadata container
+aaeieejja,function-comment_only,MLKnow,DS Conf,UMC,True,both_wrong,TODO: dataframe pass needed?
+aajdcigce,function-comment_only,Data Conf,DS Conf,DS Conf,False,both_wrong,TODO: Add this to configuration framework
+aaadihacg,function-comment_only,HP Conf,MCM,UMC,True,both_wrong,TODO: do this better
+aagbjaigc,function-comment_only,Data Conf,UMC,UMC,False,both_wrong,TODO: reward computation
+aagdjigjj,function-comment_only,DS Conf,DS Conf,UMC,True,regressed,todo: should save tpot model here
+aaaiefadd,function-comment_only,MLDepend,DS Conf,Data Conf,True,both_wrong,TODO check results after standardizing num ft once a ml algorithm is ready to test
+aaggciajj,function-comment_only,MCM,DS Conf,DS Conf,False,both_wrong,TODO(fstahlberg): Move to config
+aaeacgjbc,function-comment_only,UMC,DS Conf,UMC,True,corrected,"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment."
+aaedhfhae,function-comment_only,MLKnow,MLInter,Proto,True,both_wrong,TODO confirm that multiple eigenvalues of 1 means the rotation
+aafeaaejc,function-comment_only,MLKnow,Proto,Proto,False,both_wrong,FIXME: What if we never find a fail-high?
+aaeeicdeh,function-comment_only,MLKnow,UMC,UMC,False,both_wrong,TODO: add a complete frame_size; to cover the whole audio signal?
+aaacgfhgb,function-comment_only,DS Conf,DS Conf,MLDepend,True,regressed,TODO Option for string lenght
+aajfeejjg,function-comment_only,UMC,UMC,UMC,False,both_correct,TODO: delete this method when no longer needed
+aagcbdejg,function-comment_only,DS Conf,MCC,MCM,True,both_wrong,self.clearChanges() #TODO perhaps?
+aadfaifgh,function-comment_only,UMC,UMC,UMC,False,both_correct,TODO remove later.
+aaeiefhcb,function-comment_only,Data Conf,UMC,UMC,False,both_wrong,TODO: ignore non-numerics
+aahjaaihb,function-comment_only,Proto,Weight Conf,UMC,True,both_wrong,TODO checkpoints; incremental save
+aafeaihbg,function-comment_only,MCR,UMC,UMC,False,both_wrong,TODO: Remove hardcoding of downscaling calculations.
+aahhdabij,function-comment_only,Abs,GC,Abs,True,corrected,TODO design an API interface for advanced access as an importable package
+aajacfjii,function-comment_only,MCR,UMC,UMC,False,both_wrong,todo: this is O(N^2) and maybe too slow for large graphs.
+aaahbfbhe,function-comment_only,UMC,UMC,UMC,False,both_correct,DEPRICATE? I don't think this is needed anymore
+aaeigcjdd,function-comment_only,CDT,MCC,MCC,False,both_wrong,XXX: unify Series\/Array as Array
+aafacjjjb,function-comment_only,HP Conf,MCC,MCM,True,both_wrong,h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO
+aagciihdj,function-comment_only,DS Conf,GC,Proto,True,both_wrong,TODO Send the context back into some list maintained by
+aaiejaeea,function-comment_only,CDT,DMC,MCM,True,both_wrong,TODO: replace with unbatch or readout
+aaggcgaie,function-comment_only,MLKnow,UMC,UMC,False,both_wrong,Initialize model (TODO: really necessary?)
+aaejdhjid,function-comment_only,MLRelia,MLInter,MLInter,False,both_wrong,TODO: black box attacks
+aaibgbejh,function-comment_only,CDT,MLDepend,MLDepend,False,both_wrong,TODO: replace with (stable) Draft6Validator; if available
+aaibjdjdj,function-comment_only,PODT,DS Conf,DMC,True,both_wrong,XXX: not handling dictionnaries
+aadajbgbb,function-comment_only,Data Conf,DS Conf,UMC,True,both_wrong,TODO: num pad examples is not set here if fillup strategy would be padding
+aagdffgjh,function-comment_only,MLKnow,MLKnow,MCC,True,regressed,TODO Figure out how to distinguish oxidation states
+aagfgggge,function-comment_only,PQ,MLRelia,Proto,True,both_wrong,early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release)
+aaididbfa,function-comment_only,DS Conf,UMC,MCC,True,both_wrong,TODO: write index
+aaedcebbj,function-comment_only,MCM,UMC,MCM,True,corrected,todo sweep
+aajfajibh,function-comment_only,HP Conf,MCC,MCM,True,both_wrong,FIXME homogeneize the meaning of margin parameter
+aahddjbah,function-comment_only,MCR,MLInter,UMC,True,both_wrong,TODO: ensure x data shape matches model._ph['x'] shape (only if fit)
+aajbgadgf,function-comment_only,MLDepend,MLDepend,MLDepend,False,both_correct,TODO check for each tentacle specified if update is available (with requirements)
+aaeiedgej,function-comment_only,Data Conf,MCC,Proto,True,both_wrong,TODO: min
+aaiiccdhb,function-comment_only,Abs,MCC,UMC,True,both_wrong,TODO: (sven) rename to simply stats_fn to match eager and torch.
+aahfgjaff,function-comment_only,Layer Conf,UMC,UMC,False,both_wrong,It's only needed for a specific purpose in the short term; will go.
+aajdcijhj,function-comment_only,GC,DMC,DMC,False,both_wrong,FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file
+aajceeeid,function-comment_only,CDT,MCC,UMC,True,both_wrong,TODO replace with Streamlines
+aagibhhbe,function-comment_only,BE,GC,Abs,True,both_wrong,TODO(dbieber): Move this logic into the dataset definition.
+aabgahibh,function-comment_only,MCC,MCM,MCM,False,both_wrong,XXX: one could be smarter here
+aadfiacgf,function-comment_only,CDT,Weight Conf,MCM,True,both_wrong,TODO make threshold a variable
+aafeaiffi,function-comment_only,Layer Conf,Weight Conf,Weight Conf,False,both_wrong,TODO: Replace Lambda with custom Keras layer for loss.
+aajdbjejb,function-comment_only,MCM,MCM,UMC,True,regressed,TODO: remove hard-coded sizes and make relative to parent?
+aadagdejg,function-comment_only,CDT,DMC,DMC,False,both_wrong,TODO: Repeat_elements and tf.split doesn't support dynamic splits.
+aafahfcgh,function-comment_only,Proto,Proto,Proto,False,both_correct,FIXME: support for many evaluators; maybe event support
+aaeidieej,function-comment_only,CDT,MCR,UMC,True,both_wrong,TODO: extend to other key types
+aagdhccjd,function-comment_only,MLInter,MLKnow,UMC,True,both_wrong,TODO write a warning
+aaahcdafe,function-comment_only,MCR,MLRelia,Proto,True,both_wrong,TODO: handle channel modalities later
+aaiiaefbb,function-comment_only,Proto,MLKnow,Proto,True,corrected,TODO(rliaw): This behavior is probably undesirable; but right now
+aaaggiije,function-comment_only,UMC,UMC,UMC,False,both_correct,TODO: deprecate?
+aajffiiac,function-comment_only,Abs,UMC,UMC,False,both_wrong,TODO: write a function to do this..
+aaefagbgc,function-comment_only,MCM,DS Conf,DS Conf,False,both_wrong,TODO: make the dtype configurable; see __init__()
+aadajcbia,function-comment_only,ML,ML,Weight Conf,True,regressed,TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.
+aadhgfgeb,function-comment_only,MCM,HP Conf,DS Conf,True,both_wrong,TODO(tokunaga): the number of processes should be configurable
+aadfjffba,function-comment_only,Proto,MCC,MCC,False,both_wrong,TODO this is too general; register all ops
+aaibjjjbc,function-comment_only,Weight Conf,Weight Conf,UMC,True,regressed,FIXME: need to implement sample_weight in Ridge
+aahcgjcji,function-comment_only,MLDepend,HP Conf,Proto,True,both_wrong,tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support
+aajdcifej,function-comment_only,Proto,MLInter,UMC,True,both_wrong,FIXME: Allow some diff; e.g. on repr style text in text\/plain
+aaeifhdjh,function-comment_only,PODT,MLInter,DMC,True,both_wrong,TODO: check for series\/dict\/list input
+aaefgiijg,function-comment_only,MCR,MCR,Proto,True,regressed,TODO: At the moment LHUC is RNN specific. We should support other models as well.
+aafejhiea,function-comment_only,HP Conf,MCC,UMC,True,both_wrong,Random Warp # TODO change masks to have a input mask and a warped target mask
+aaffedgad,function-comment_only,HP Conf,MCC,UMC,True,both_wrong,#TODO: improve the copying of parameters
+aadgfdibb,function-comment_only,MCR,UMC,Proto,True,both_wrong,TODO: handle other participant types
+aaeiaghhj,function-comment_only,MLInter,GC,UMC,True,both_wrong,TODO: Log message
+aaaefgdbc,function-comment_only,PQ,PQ,Proto,True,regressed,TODO: compare the performance!
+aagbbjgij,function-comment_only,MLDepend,DMC,UMC,True,both_wrong,TODO replace this code with the following commented out code after viz is fixed
+aajfiibhb,function-comment_only,MCM,MCC,UMC,True,both_wrong,TODO: do not replace unless explicitly noticed + add 'only hangul' option
+aadageajc,function-comment_only,Proto,MCM,MCM,False,both_wrong,TODO: make efficient
+aaffdcfdh,function-comment_only,HP Conf,HP Conf,HP Conf,False,both_correct,TODO: Change the optimizer to the appropriate Optimizer class
+aafbdjhfg,function-comment_only,Layer Conf,Weight Conf,Weight Conf,False,both_wrong,should be WeightNorm here TODO.
+aaedjcbec,function-comment_only,MLDepend,Abs,Abs,False,both_wrong,TODO: add inheritance from Graph once implemented
+aagaghfef,function-comment_only,Layer Conf,MCM,UMC,True,both_wrong,TODO: implement residual connection
+aaicecaej,function-comment_only,Weight Conf,Weight Conf,Weight Conf,False,both_correct,FIXME non-uniform sample weights not yet supported
+aaffdjjaa,function-comment_only,Layer Conf,MLDepend,DMC,True,both_wrong,TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md
+aaijaggcb,function-comment_only,PODT,DS Conf,MLKnow,True,both_wrong,In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.
+aahicagej,function-comment_only,Weight Conf,MCC,UMC,True,both_wrong,todo; pass also best score
+aaedghfjd,function-comment_only,MCC,MCC,MCC,False,both_correct,"TODO: rename kwarg \""forward\"" to \""forward_additive\"""
+aadghcged,function-comment_only,Abs,MCC,MCC,False,both_wrong,ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...
+aahjgeiic,function-comment_only,MLDepend,MLDepend,MLDepend,False,both_correct,XXX: How to catch dependence cycles correctly?
+aagfeiiaj,function-comment_only,Weight Conf,Weight Conf,Weight Conf,False,both_correct,Freeze weights - TODO: NOT IMPLEMENTED!
+aafadcigh,function-comment_only,MLRelia,MLInter,UMC,True,both_wrong,todo: accurate Value
+aahjdcjgg,function-comment_only,PODT,UMC,UMC,False,both_wrong,TODO: handle record value which are lists; at least error
+aaeieahii,function-comment_only,PODT,DS Conf,MCC,True,both_wrong,XXX offset type is uint32
+aadgecacc,function-comment_only,MCC,MCM,MCM,False,both_wrong,TODO refactor second part of if statement when implementing live model prediction
+aaeiebjie,function-comment_only,PODT,UMC,UMC,False,both_wrong,TODO: list
+aafadaiij,function-comment_only,Layer Conf,DMC,MCC,True,both_wrong,TODO max in one tensor
+aaeejjfbc,function-comment_only,MCC,Weight Conf,UMC,True,both_wrong,FIXME: this is kind of hackish; but being able to simply set
+aafdibbge,function-comment_only,PQ,Proto,Proto,False,both_wrong,TODO: I cannot get good results with this yet
+aaeidjjhd,function-comment_only,MLRelia,MCM,UMC,True,both_wrong,TODO: extract an eval func more robustly
+aagfjdjeg,function-comment_only,Abs,MCM,MCM,False,both_wrong,TODO: refactor as independent function
+aahiiegbc,function-comment_only,Abs,MCM,MCM,False,both_wrong,TODO implement generic method
+aajcfhiga,function-comment_only,Abs,MCM,UMC,True,both_wrong,TODO make paf_scored not part of self?
+aahiigecd,function-comment_only,Weight Conf,Weight Conf,Weight Conf,False,both_correct,TODO if without momentum; weights should not change too

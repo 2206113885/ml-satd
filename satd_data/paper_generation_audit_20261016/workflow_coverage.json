@@ -1,0 +1,64 @@
+{
+  "active_inputs": [
+    {
+      "file": "table/23 Identified quantity.tex",
+      "matched_result_prf_triples": 0,
+      "kind": "label_count_definition_or_non_result_table"
+    },
+    {
+      "file": "zero-shot-resizebox-bold.tex",
+      "matched_result_prf_triples": 27,
+      "kind": "quantitative_result_table"
+    },
+    {
+      "file": "table/basic few shot.tex",
+      "matched_result_prf_triples": 54,
+      "kind": "quantitative_result_table"
+    },
+    {
+      "file": "table/binary few shot.tex",
+      "matched_result_prf_triples": 54,
+      "kind": "quantitative_result_table"
+    },
+    {
+      "file": "table/table11.tex",
+      "matched_result_prf_triples": 9,
+      "kind": "quantitative_result_table"
+    },
+    {
+      "file": "table/thinking vs no-thinking.tex",
+      "matched_result_prf_triples": 8,
+      "kind": "quantitative_result_table"
+    },
+    {
+      "file": "table/basic and bis.tex",
+      "matched_result_prf_triples": 18,
+      "kind": "quantitative_result_table"
+    },
+    {
+      "file": "table/rq4.tex",
+      "matched_result_prf_triples": 24,
+      "kind": "quantitative_result_table"
+    },
+    {
+      "file": "table/table10.tex",
+      "matched_result_prf_triples": 30,
+      "kind": "quantitative_result_table"
+    },
+    {
+      "file": "table/father label definition.tex",
+      "matched_result_prf_triples": 0,
+      "kind": "label_count_definition_or_non_result_table"
+    }
+  ],
+  "external_workflows": [
+    {
+      "name": "GPT-5 synthetic example generation",
+      "source": "/Users/yizho/Desktop/Fine_grained_ML_SATD_Classification_with_Large_Language_Models_An_Empirical_Study/main.tex",
+      "line_start": 779,
+      "line_end": 788,
+      "status": "external_interactive_workflow_no_generation_script_or_machine_readable_generation_settings_found",
+      "evidence": "Manuscript states GPT-5 deep research generated examples; current classification scripts embed resulting examples as literals. GPT-5 reasoning/sampling/template settings cannot be audited from these scripts."
+    }
+  ]
+}

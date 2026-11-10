@@ -1,0 +1,93 @@
+{
+  "review_scope": [
+    "R01: CodeLlama basic few-shot complete input budget",
+    "R02: Gemma2 hierarchical zero-shot template and generation handling"
+  ],
+  "review_method": [
+    "read original vs revised unified diffs",
+    "read revised target blocks with line numbers",
+    "ast.parse both revised files only"
+  ],
+  "verdict": "pass_for_R01_R02_static_scope",
+  "experiment_or_model_inference_run": false,
+  "tokenizer_or_function_tests_run": false,
+  "source_files_executed": false,
+  "originals_modified": false,
+  "blocking_findings": [],
+  "checks": [
+    {
+      "id": "R01-complete-input",
+      "status": "pass-static",
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "line": 731,
+      "end_line": 749,
+      "detail": "Template is rendered first; complete text is tokenized with truncation=False; total input_ids length is checked before model call; no silent deletion of query or any appended code context."
+    },
+    {
+      "id": "R01-context-reserve",
+      "status": "pass-static",
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "line": 717,
+      "end_line": 722,
+      "detail": "Uses finite model.config.max_position_embeddings, reserves MAX_NEW_TOKENS plus64 tokens, rejects absent/unreasonable capacity. Budget is for the whole final input, not only the example header."
+    },
+    {
+      "id": "R01-original-generation",
+      "status": "pass-static",
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "line": 751,
+      "end_line": 759,
+      "detail": "Generation kwargs unchanged: MAX_NEW_TOKENS, do_sample=True, temperature=0.2, top_p=0.95, pad_token_id. Label definitions, 10-example header and parser unchanged."
+    },
+    {
+      "id": "R02-template-and-specials",
+      "status": "pass-static",
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "line": 280,
+      "end_line": 287,
+      "detail": "Actually encodes rendered text and sets add_special_tokens=False, preventing a second special-token insertion; truncation=False retains full input."
+    },
+    {
+      "id": "R02-stage-and-context-budget",
+      "status": "pass-static",
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "line": 288,
+      "end_line": 299,
+      "detail": "max_len is validated and used. With a finite valid context_limit, budget=min(max_len,context_limit-MAX_NEW_TOKENS); excessive complete input fails explicitly."
+    },
+    {
+      "id": "R02-new-token-decode",
+      "status": "pass-static",
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "line": 301,
+      "end_line": 315,
+      "detail": "Passes template input_ids and attention_mask; preserves max_new_tokens and inherited generation settings. Decodes outputs[0][input_tokens:] only, skips special tokens, and returns first line instead of splitting decoded prompt text."
+    },
+    {
+      "id": "old-code-preservation",
+      "status": "pass-static",
+      "detail": "Replaced R01 tokenization and R02 encoding/generate/decode statements remain commented in their original local positions."
+    },
+    {
+      "id": "syntax",
+      "status": "pass-static",
+      "detail": "Both revised files parsed via ast.parse. This is syntax validation only; no source imports or runtime functions were executed."
+    }
+  ],
+  "known_out_of_scope_or_unverified": [
+    {
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "line": 740,
+      "detail": "Existing default special-token encoding remains, so the separately audited CodeLlama duplicate-BOS issue is not fixed by R01. It does not defeat the new complete-length budget, which counts actual encoded input. Do not describe this batch as fixing all prompt-format issues."
+    },
+    {
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "line": 291,
+      "end_line": 293,
+      "detail": "If context_limit is absent or invalid, only max_len is enforced. Expected Gemma2 model configuration supplies max_position_embeddings; runtime configuration was not loaded or checked in this static-only review."
+    },
+    {
+      "detail": "No conclusion about output quality, runtime memory, actual tokenizer behavior, or historical manuscript numbers follows from this review. No new code-context experiment or shot-count change was added."
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+comment,real,pred,reason,raw_output
+!TODO: In some cases; US is not enough to hold the complete number,Machine Learning Knowledge,Plain Old Data Type,""".",PODT
+# reverse bw; before concat TODO,Layer Configuration,Data Processing Configuration,The comment indicates a planned configuration step for data processing—specifically reversing data before concatenation—justifying the Data Conf label.,Data Conf
+# TODO : load landmarks in validation and test set also. I'm too sleepy to do it today -_- zzz... zzz...,Data Processing Configuration,Data Processing Configuration,"The comment indicates a pending task to load landmarks into the validation and test sets, which is a data‑processing configuration issue.",Data Conf
+## elif (): ## FIXME: handle other bases here,Prototype,Model Code Modifiability,""" and no other text.",MCM
+#TODO: improve the copying of parameters,Hyper-parameter Configuration,Weight Configuration,"The comment indicates a need to improve how parameters are copied, which directly concerns the configuration of weights during model initialization or transfer.",Weight Conf
+@todo nrows is for testing only!,Boundary Erosion,Unnecessary Model Code,""" and no other text.",UMC
+@todo: arabtex and iso8859-6 need individual handling because in some cases using one-two mapping,Data Processing Configuration,Data Processing Configuration,""" and nothing else.",Data Conf
+@TODO: need better solutions,Machine Learning Knowledge,Machine Learning Knowledge,' and no other text.,MLKnow
+@TODO: remove time usage; use it under the hood,Unnecessary Model Code,Unnecessary Model Code,The comment indicates the time-related,UMC
+[todo]: this is a bug; predict_proba should not change,Model Code Modifiability,Prediction Quality,"The comment flags a bug that predict_proba should not change, which directly corresponds to the PQ (Prediction Quality) issue.",PQ
+"\""\""\"" || Corpus in CSV format. TODO: still serializes to SVMLight format; feel free to change this. || \""\""\""",Data Processing Configuration,Data Processing Configuration,"The comment indicates that the data is being handled in CSV format but serialized to SVMLight,",Data Conf
+"\""\""\"" || Simple Gaussian Mixture model plotting example ||  || TODO: use the faithful dataset || \""\""\""",Data Processing Configuration,Data Processing Configuration,""".",Data Conf
+"\""\""\"" Turn compiler.ast structures back into executable python code. ||  ||     The unparse method takes a compiler.ast tree and transforms it back into ||     valid python code.  It is incomplete and currently only works for ||     import statements; function calls; function definitions; assignments; and ||     basic expressions. ||  ||     Inspired by python-2.5-svn\/Demo\/parser\/unparse.py ||  ||     fixme: We may want to move to using _ast trees because the compiler for ||            them is about 6 times faster than compiler.compile. || \""\""\""",Custom Data Type,Data Storage Configuration,' for the predicted label: DS Conf (Data Storage Configuration).,DS Conf
+"\""\""\""Converts legacy encodings into Unicode || TODO for replacer.py: ||  - add perseus-style iota subscript and diaeresis || \""\""\""",Data Processing Configuration,Data Processing Configuration,"' and no other text.""
+
+The predicted label is ""Data Conf (Data Processing Configuration)"".",Data Conf
+"\""\""\""Converts legacy encodings into Unicode. ||  || TODO: Rm regex dependency || TODO: Add tests || \""\""\""",Code Dependency,Code Dependency,"The module uses the `re` regular expression library to perform encoding conversions, creating a dependency on that external module.",MLDepend
+"\""\""\""Models. ||  || Models are objects which take Tensor(s) as input; perform some computation on  || those Tensor(s); and output probability distributions. ||  || TODO: more... ||  || * :func:`.Model` || * :func:`.ContinuousModel` || * :func:`.DiscreteModel` || * :func:`.CategoricalModel` || * :func:`.save_model` || * :func:`.load_model` ||  || ---------- ||  || \""\""\""",Model Code Modifiability,Abstraction,"The comment outlines a high-level abstraction of model classes and their interface, describing their role and core responsibilities without delving into implementation details.",Abs
+"\""\""\""Module dedicated to extraction of Model Based Metafeatures. ||  || Todo: ||     * Implement metafeatures. ||     * Improve documentation. || \""\""\""",Data Processing Configuration,Data Processing Configuration,' and no other text.,Data Conf
+"\""\""\""Process downloaded or local corpora from one format into another. || Some formatting can happen here; or invoke language-specific formatters in || other files. ||  || #TODO: Add TLG & PHI text cleaners from KJ's IPython notebooks || #TODO: Add non-ascii stripper || #TODO: Add generic HTML stripper || \""\""\""",Data Processing Configuration,Data Processing Configuration,"The comment describes configuring data processing steps—formatting, cleaning, and converting corpora—so it is a data processing configuration.",Data Conf
+"\""\""\""The Imperial Aramaic alphabet; plus simple script to transform || a Hebrew transcription of an Imperial Aramaic text to its own Unicode block. ||  || TODO: Add Hebrew-to-Aramaic converter || \""\""\""",Data Processing Configuration,Data Processing Configuration,"The code sets up a mapping and transformation process for converting Hebrew transcription to Imperial Aramaic Unicode, which is a data processing configuration task.",Data Conf
+\/\/TODO in future add arguments compatibility check,Hyper-parameter Configuration,Model Code Modifiability,""".",MCM
+apparently package_deps are broken in 3.4,Code Dependency,Code Dependency,"The comment highlights a broken package dependency issue, indicating a code dependency problem.",MLDepend
+BETTER FIX: iterate through; if length = 0; then bump it up to 0.125,Prototype,Data Processing Configuration,The comment specifies a configuration adjustment for data processing defaults,Data Conf
+circular shift the signal (needed for correct phase),Data Processing Configuration,Data Processing Configuration,"The comment describes a circular shift applied to the signal to correct its phase, which",Data Conf
+DEPRICATE? I don't think this is needed anymore,Unnecessary Model Code,Unnecessary Model Code,"The comment indicates the code is deemed unnecessary and likely slated for removal, fitting the Unnecessary Model Code (UMC) label.",UMC
+Double newlines seem to mess with the rendering,Data Processing Configuration,Data Processing Configuration,""" and nothing else.",Data Conf
+early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),Prediction Quality,Hyper-parameter Configuration,"The comment references the configuration of the early‑stopping hyper‑parameter, specifying its trigger index and validation loss threshold, which",HP Conf
+else:  # TODO check that the variation wasn't already in there,Prototype,Duplicate Model Code,'.,DMC
+env = ScaledFloatFrame(env)  # TODO: use for dqn?,Machine Learning Knowledge,Data Processing Configuration,'.,Data Conf
+find out why prefix neg_ is needed,Machine Learning Knowledge,Model Code Comprehension,The comment indicates,MCC
+FIXME : adhoc (answer being last word); not ignoring single question,Data Processing Configuration,Model Code Comprehension,""".",MCC
+FIXME annoying hack for batching different sized shapes;,Model Code Reusability,Data Processing Configuration,"The comment refers to a hack for configuring data batching of variable‑sized shapes, which is a data processing configuration",Data Conf
+FIXME don't l2_normalize for any metric,Data Processing Configuration,Data Processing Configuration,'.,Data Conf
+FIXME homogeneize the meaning of margin parameter,Hyper-parameter Configuration,Hyper-parameter Configuration,"The comment signals a need to standardize the margin hyper‑parameter, directly",HP Conf
+FIXME non-uniform sample weights not yet supported,Weight Configuration,Weight Configuration,"The comment indicates a limitation regarding non-uniform sample weights, implying a weight configuration issue.",Weight Conf
+FIXME not sure what are those CB1 \/ CB2,Machine Learning Knowledge,Model Code Comprehension,"The comment indicates uncertainty about the meaning of CB1 and CB2, suggesting the need to understand their purpose within",MCC
+FIXME This will make sense when all controllers are in one file (like task.py),Data Storage Configuration,Boundary Erosion,""".",BE
+FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,Glue Code,Duplicate Model Code,The comment signals that functions are being copied from,DMC
+FIXME: Allow some diff; e.g. on repr style text in text\/plain,Prototype,Plain Old Data Type,""" and no other text.",PODT
+FIXME: Handle execution_count (always change to None?),Machine Learning Knowledge,Unnecessary Model Code,"The comment indicates a placeholder or unnecessary handling of execution_count, suggesting the code block is redundant."" Or something",UMC
+FIXME: Hardcoded usually sucks,Data Storage Configuration,Hyper-parameter Configuration,"The comment highlights hardcoded values, indicating a suboptimal hyper‑parameter configuration.",HP Conf
+FIXME: if we inherit from scipy.io.netcdf.NetCDFFile and omit the self.nc,Machine Learning Knowledge,Code Dependency,The code inherits from `scipy.io.netcdf,MLDepend
+FIXME: INDRA's section_type entry is meant to contain,Custom Data Type,Plain Old Data Type,The comment indicates a simple data field (`,PODT
+FIXME: Need to check if mod is the equivalent of floorMod in NumPy,Machine Learning Knowledge,Model Code Comprehension,"..."".",MCC
+FIXME: need to implement sample_weight in Ridge,Weight Configuration,Hyper-parameter Configuration,The comment indicates a missing implementation of a training hyper‑,HP Conf
+FIXME: Only keeping the first label,Data Processing Configuration,Data Processing Configuration,""".",Data Conf
+FIXME: pixel_classes dict needs to be populated with classes obtained from target,Data Processing Configuration,Data Processing Configuration,"The FIXME indicates that the pixel_classes dictionary, which is part of the data processing configuration, requires population with target classes, justifying the Data Conf label.",Data Conf
+"FIXME: Return type \""None\"" of \""fit\"" incompatible with return type \""float\"" in supertype \""Model\""",Plain Old Data Type,Model Code Comprehension,""" and nothing else.",MCC
+FIXME: support for many evaluators; maybe event support,Prototype,Glue Code,"The FIXME comment indicates a need to extend the framework to support multiple evaluators and event handling, which is typical glue code that",GC
+FIXME: The code works with EpisodicReplayBuffer,Custom Data Type,Custom Data Type,The code references a custom `EpisodicReplay,CDT
+FIXME: this is kind of hackish; but being able to simply set,Model Code Comprehension,Hyper-parameter Configuration,"The comment refers to a hack to set a parameter, indicating a hyper‑parameter configuration adjustment.",HP Conf
+FIXME: this needs to become more generic; we need to find the actual so in the python root,Model Code Reusability,Model Code Reusability,"The comment indicates the implementation is too specific and needs refactoring to be more generic, enabling broader reuse across the project.",MCR
+FIXME: this representation of covars is going to lose for caching,Data Storage Configuration,Data Storage Configuration,"The comment highlights a concern about how covariance data will be represented and cached, directly relating to data storage configuration and potential cache‑loss issues.",DS Conf
+FIXME: Use linebased diff of some types of outputs:,Data Processing Configuration,Model Code Modifiability,""" and no other text.",MCM
+FIXME: What about the next diff entry?,Machine Learning Knowledge,Model Code Modifiability,""" and nothing else.",MCM
+FIXME: What if we never find a fail-high?,Machine Learning Knowledge,Prediction Quality,""" that justifies the predicted label PQ (Prediction Quality).",PQ
+FIXME_Numba#5157: remove np.asarray and return as list,Data Storage Configuration,Data Processing Configuration,""".",Data Conf
+Force shrinking of the mask if needed (and possible),Data Processing Configuration,Data Storage Configuration,"analysisWe have to provide a justification for the predicted label ""DS Conf (Data Storage Configuration)"" for the code comment: ""Force shrinking of the mask if needed (and possible)"".",DS Conf
+Freeze weights - TODO: NOT IMPLEMENTED!,Weight Configuration,Weight Configuration,"The comment explicitly references freezing weights, indicating a weight configuration decision.",Weight Conf
+h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,Hyper-parameter Configuration,Layer Configuration,The code snippet defines a,Layer Conf
+handle BoxedSeries and list\/set of BoxedSeries; TODO: others?,Custom Data Type,Custom Data Type,Matches Custom Data Type cues in the comment.,CDT
+if this is needed.,Machine Learning Knowledge,Unnecessary Model Code,"' and no other text."" Predicted label: UMC (Unnecessary Model Code).",UMC
+IMPORTANT: keep matrices in suitable order for matrix products; failing to do so gives 8x lower performance :(,Model Code Reusability,Data Storage Configuration,"The comment stresses the importance of arranging matrix data in memory to optimize multiplication performance, which is a key concern of data storage configuration.",DS Conf
+In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,Plain Old Data Type,Data Processing Configuration,"The code configures data processing by converting a `range` iterator into a list, which is a typical data processing configuration step.",Data Conf
+in_dim=(4; 8; 8; 8); # TODO: Needs fix when giving a randon in_dim,Model Code Reusability,Layer Configuration,"The comment shows a hard‑coded input dimension tuple for a layer, highlighting a layer configuration issue.",Layer Conf
+Initialize model (TODO: really necessary?),Machine Learning Knowledge,Unnecessary Model Code,The code initializes,UMC
+It's only needed for a specific purpose in the short term; will go.,Layer Configuration,Unnecessary Model Code,"The comment indicates the code is only needed for a short-term, specific purpose and will be removed, making it unnecessary for the current model.",UMC
+needed so command completion and help can use it,Data Storage Configuration,Glue Code,"It serves as a small utility to connect command completion and help features, acting as glue between those components.",GC
+needed to sklearn comparability,Code Dependency,Glue Code,It implements compatibility wrappers to integrate with scikit,GC
+needed to sklearn comparability,Code Dependency,Glue Code,The code is added as glue code to ensure compatibility with scikit‑learn’s API.,GC
+needed?,Unnecessary Model Code,Unnecessary Model Code,""" exactly.",UMC
+normed_cross_entropy # TODO,Hyper-parameter Configuration,Model Code Comprehension,analysisWe need to provide a short justification for the predicted label MCC (Model Code Comprehension).,MCC
+NOTE: probably more efficient to sort then stride by nt_regions,Data Processing Configuration,Data Processing Configuration,""" and no other text.",Data Conf
+nv by ns dot ns by m -> nv by m  # TODO: Change to CSC for speed?,Data Processing Configuration,Data Storage Configuration,"' and no other text."" Predicted label: DS Conf (Data Storage Configuration).",DS Conf
+once they are no longer needed in the schedule or by,Data Storage Configuration,Unnecessary Model Code,""".",UMC
+Pass on diff to external difftool (TODO: store in global metadata at end instead of in separate diff dicts?),Data Storage Configuration,Glue Code,Reason:,GC
+probably not needed; transition,Unnecessary Model Code,Unnecessary Model Code,"The code appears redundant and does not contribute to the model's functionality, making it unnecessary.",UMC
+"r\""\""\""Run inference on random sequences many times; saving the top results. ||  || This module is designed to run inference on a trained aptamers TF model || to score many sequences and then write out the top scoring sequences to || be used in other analysis. For example; these top predicted sequences || can read in the colab picking sequences in order || to validate the TF model. ||  || This module uses the standard aptamers tensorflow infrastructure to run || the inference. This is the inferer class defined in || learning\/eval_feedforward and described in the Aptamers TensorFlow Doc. ||  || Inference is generally run in batches of sequences; so a MapFlat function || is used to combine the results of interference into a flattened list || of (sequence; score) pairs. (In other words; each map function returns || a list of (sequence; score) pairs and these results are combined into || one list of pairs. Using a standard Map function would result in a || list of lists which is not what we want.) From there; the Top.Of || combiner returns only the top results; sorted by highest score. These || are then written to a text file. ||  || For now; each batch creates its own inferer; causing each map function || to have more overhead. Because of this;batch sizes around the default of || 10000 are performant. Fixing this in the future means converting the || MapFlat to a ParDo and initializing the inferer in start_bundle. || This module runs inference 1 billion times in 50 minutes so it || is sufficient for now ||  || Run locally with: ||  ||   :search_inference -- --flume_exec_mode=UNOPT \\ ||   --target_name='target' \\ ||   --model_dir=xxx \\ ||    --checkpoint_path='model.ckpt-312500' \\ ||    --output_name=xxx\/base30_1B_inference_top2k ||  || \""\""\""",Custom Data Type,Model Code Modifiability,""" justifying the predicted label MCM (Model Code Modifiability).",MCM
+Random Warp # TODO change masks to have a input mask and a warped target mask,Hyper-parameter Configuration,Data Processing Configuration,"The comment indicates a planned change to how input and target masks are handled, which directly affects",Data Conf
+seem out of place. If you were able to do better; feel free to share your,Prediction Quality,Unnecessary Model Code,' and no other text.,UMC
+self.clearChanges() #TODO perhaps?,Data Storage Configuration,Unnecessary Model Code,""".",UMC
+self.mpc_sum(3; -5) TODO: Future work: how to handle gracefully minus numbers,Machine Learning Knowledge,Model Code Modifiability,The comment indicates a need to modify,MCM
+should be WeightNorm here TODO.,Layer Configuration,Weight Configuration,analysisWe need to provide one short justification.,Weight Conf
+tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,Code Dependency,Code Dependency,""" and no other text.",MLDepend
+this importing of matplotlib is needed to run on the cluster,Code Dependency,Code Dependency,The import of matplotlib is required for the code,MLDepend
+This is a hack to allows inference when the <go> token,Model Code Modifiability,Unnecessary Model Code,'.,UMC
+THIS IS A VERY UGLY FUNCTION because it has hardcoded 0\/4\/5 integers for each of the metric. I need to make an enumerated class for this!,Model Code Comprehension,Abstraction,The comment highlights the need to abstract hardcoded numeric constants into an enumerated,Abs
+time to fix. TODO: optimize the crap out of this,Data Processing Configuration,Prediction Quality,The comment marks,PQ
+TODO - can remove one of these m0 restores if A and B both TLU,Machine Learning Knowledge,Duplicate Model Code,The comment indicates that two identical,DMC
+TODO - does this handle N-dim tensors correctly?,Machine Learning Knowledge,Machine Learning Knowledge,"The comment references handling N‑dimensional tensors, a common concern in machine learning implementations, justifying the MLKnow label.",MLKnow
+TODO - in the code it is different - why?,Machine Learning Knowledge,Model Code Comprehension,""".",MCC
+TODO (pradeep): Sort the indices and do intersections in order; so that we can return the,Data Processing Configuration,Data Processing Configuration,"' and no other text."" Predicted label: Data Conf (Data Processing Configuration).",Data Conf
+TODO (ytz): really; we want at least one active and inactive in both scenarios.,Data Processing Configuration,Data Processing Configuration,The comment explicitly discusses,Data Conf
+TODO : add these in the options. (None; None) => no limit,Data Processing Configuration,Hyper-parameter Configuration,The comment refers to adding configuration options that,HP Conf
+TODO : Any other options,Machine Learning Knowledge,Abstraction,"' and no other text.""
+
+Predicted label: Abs (Abstraction).",Abs
+TODO : market value,Data Processing Configuration,Data Processing Configuration,' and no other text.,Data Conf
+TODO : removal,Unnecessary Model Code,Unnecessary Model Code,"The comment indicates that the code is slated for removal, meaning it is unnecessary.",UMC
+TODO : this is quite bad in term of execution speed. We need to fix this.,Data Processing Configuration,Prediction Quality,""".",PQ
+"TODO accept_sparse=\""csc\""",Data Processing Configuration,Data Processing Configuration,"The comment indicates a configuration change to set accept_sparse to 'csc', a data",Data Conf
+TODO add general Distribution,Data Processing Configuration,Model Code Reusability,""" and no other text.",MCR
+TODO add index to xls file,Data Processing Configuration,Data Processing Configuration,The comment indicates,Data Conf
+TODO add introductory explanation,Data Processing Configuration,Model Code Comprehension,"The comment signals a placeholder for an introductory explanation, implying the code’s purpose",MCC
+TODO add support for other metrics (ex. euclidean; angular),Prototype,Model Code Modifiability,""".",MCM
+TODO add test for keypoints once their handling was improved in Convolve,Code Dependency,Prediction Quality,""".",PQ
+TODO add vertical gradient alpha to have fog only at skylevel\/groundlevel,Data Processing Configuration,Data Processing Configuration,The comment describes a configuration change to data (the fog alpha gradient) that,Data Conf
+TODO anticipate multi-agents for AEB space,Data Storage Configuration,Abstraction,""" for the label ""Abs (Abstraction)"" given the code comment.",Abs
+TODO change as soon as svhn has a val set :),Data Storage Configuration,Data Processing Configuration,"The comment signals an upcoming adjustment to the SVHN dataset’s validation configuration, which directly concerns data processing settings.",Data Conf
+TODO change the way attns is returned dict => list or tuple (onnx),Data Processing Configuration,Glue Code,Matches Glue Code cues in the comment.,GC
+TODO change to np.partition for PERF,Data Storage Configuration,Prediction Quality,""" and no other text.",PQ
+TODO check for each tentacle specified if update is available (with requirements),Code Dependency,Code Dependency,"The comment references checking dependencies for each tentacle, indicating a focus on managing runtime library requirements, which aligns with the MLDepend (Code Dependency) label.",MLDepend
+TODO check results after standardizing num ft once a ml algorithm is ready to test,Code Dependency,Data Processing Configuration,"The comment references standardizing numeric features, a configuration step in data preprocessing for machine learning.",Data Conf
+TODO checkpoints; incremental save,Prototype,Data Storage Configuration,"The comment mentions configuring checkpoints and incremental saves, which directly relates to setting up data storage configuration.",DS Conf
+TODO combine these values to get a final prediction!,Data Processing Configuration,Prediction Quality,"The model combines multiple high-quality metrics, indicating a strong prediction confidence suitable for the PQ label.",PQ
+TODO confirm that multiple eigenvalues of 1 means the rotation,Machine Learning Knowledge,Machine Learning Knowledge,""" that justifies the predicted label MLKnow.",MLKnow
+ToDo consider 3D case --> do that by using tag->size,Data Processing Configuration,Data Processing Configuration,""" and no other text.",Data Conf
+TODO cpickle vs json,Data Storage Configuration,Data Storage Configuration,"' and no other text.""
+
+Predicted label: DS Conf (Data Storage Configuration)
+
+Code comment: ""TODO cpickle vs json""
+
+We need to explain why DS Conf.",DS Conf
+TODO Dehaze with 1\/t,Data Processing Configuration,Data Processing Configuration,""" and be a single sentence.",Data Conf
+TODO design an API interface for advanced access as an importable package,Abstraction,Glue Code,' and no other text.,GC
+TODO double num_filters,Hyper-parameter Configuration,Layer Configuration,"The comment indicates an intention to double the number of filters in a layer, which is a direct modification of the layer's configuration.",Layer Conf
+TODO Figure out how to distinguish oxidation states,Machine Learning Knowledge,Data Processing Configuration,""" that justifies the predicted label ""Data Conf (Data Processing Configuration)"".",Data Conf
+TODO figure out what exactly size does,Machine Learning Knowledge,Model Code Comprehension,"The comment indicates a need to understand the behavior of the size attribute, reflecting a focus on interpreting the model’s code.",MCC
+TODO ForceSign,Hyper-parameter Configuration,Data Processing Configuration,"The TODO comment indicates a pending change to enforce sign handling, reflecting a data processing configuration concern.",Data Conf
+TODO generalise to columns with series of unequal length,Model Code Reusability,Data Processing Configuration,""" and no other text.",Data Conf
+TODO generalise to series-to-series functions and function kwargs,Data Processing Configuration,Model Code Reusability,' and no other text.,MCR
+TODO handle 1d series; not only 2d dataframes,Data Processing Configuration,Plain Old Data Type,' and no other text.,PODT
+ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,Abstraction,Data Processing Configuration,The comment indicates a need to manage,Data Conf
+TODO if without momentum; weights should not change too,Weight Configuration,Weight Configuration,"The comment highlights that without momentum, weights should not change excessively, indicating a concern about the weight configuration.",Weight Conf
+TODO Implement,Hyper-parameter Configuration,Model Code Modifiability,"The presence of a `TODO Implement` comment signals that the code is a placeholder awaiting implementation, indicating it is designed to be easily modified",MCM
+TODO implement generic method,Abstraction,Model Code Reusability,""" and no other text.",MCR
+TODO implement multi-gpu training and compare performance,Prototype,Hyper-parameter Configuration,The comment signals,HP Conf
+TODO improve the regex here,Data Processing Configuration,Data Processing Configuration,"The comment indicates a plan to refine a regular expression used for configuring how data is parsed or extracted, which is directly related to data processing configuration.",Data Conf
+"TODO last token include: \""&& $last_token[...]\""",Data Processing Configuration,Model Code Modifiability,Reason:,MCM
+TODO make paf_scored not part of self?,Abstraction,Unnecessary Model Code,"The comment flags `paf_scored` as potentially unnecessary in the model, suggesting it",UMC
+TODO make threshold a variable,Custom Data Type,Hyper-parameter Configuration,"The comment indicates that the threshold value, which controls model behavior, should be made configurable, highlighting it as a hyper‑parameter.",HP Conf
+TODO max in one tensor,Layer Configuration,Data Processing Configuration,The comment,Data Conf
+TODO move these registrations to backend-specific files,Prototype,Boundary Erosion,"This comment suggests moving registration code to backend-specific files, redefining the boundary between frontend and",BE
+TODO normalice to make sum up to 1?,Data Processing Configuration,Data Processing Configuration,""" for the label Data Conf.",Data Conf
+todo not support dense,Unnecessary Model Code,Layer Configuration,"The comment signals a TODO about unsupported dense layers, pointing to a layer configuration issue.",Layer Conf
+TODO Option for string lenght,Data Storage Configuration,Hyper-parameter Configuration,Reason,HP Conf
+TODO Promote this to a Funsor subclass.,Model Code Reusability,Abstraction,"The comment signals a design change to promote the entity to a Funsor subclass, creating an abstract representation for reuse.",Abs
+TODO refactor second part of if statement when implementing live model prediction,Model Code Comprehension,Model Code Modifiability,"The comment flags a planned refactor of a conditional block, indicating that the code is designed to be modified for future live prediction functionality.",MCM
+TODO remove,Unnecessary Model Code,Unnecessary Model Code,"The comment indicates a placeholder “TODO remove”, implying the code is unnecessary and should be deleted.",UMC
+TODO remove later.,Unnecessary Model Code,Unnecessary Model Code,' and no other text.,UMC
+TODO remove this,Unnecessary Model Code,Unnecessary Model Code,"The code is marked for removal and contains no functional content, indicating it is unnecessary model code.",UMC
+TODO replace this code with the following commented out code after viz is fixed,Code Dependency,Unnecessary Model Code,"The comment indicates the code is a temporary placeholder meant to be replaced later, making it unnecessary for the current implementation.",UMC
+TODO replace this speedup implementation with nni.compression.torch.ModelSpeedup,Layer Configuration,Unnecessary Model Code,""" that justifies the predicted label UMC (Unnecessary Model Code).",UMC
+TODO replace whole pandas data container as input argument with separated metadata container,Data Storage Configuration,Data Processing Configuration,"The comment indicates a planned change to the data input interface, highlighting a configuration issue in how data containers are handled for processing.",Data Conf
+TODO replace with Streamlines,Custom Data Type,Unnecessary Model Code,"The code is a placeholder marked for replacement, indicating it serves no functional purpose and is therefore unnecessary.",UMC
+TODO save all the results to a json inside the experiment's folder,Data Storage Configuration,Data Storage Configuration,The comment indicates a plan to persist results as a JSON,DS Conf
+TODO Search the web or use other algorithms,Machine Learning Knowledge,Machine Learning Knowledge,""" and nothing else.",MLKnow
+TODO Send the context back into some list maintained by,Data Storage Configuration,Glue Code,analysisWe need to provide a short justification for the predicted label GC (Glue Code).,GC
+TODO Set bioassembly info,Data Processing Configuration,Data Processing Configuration,"The comment signals a pending configuration step for setting bioassembly information, indicating a data processing configuration task.",Data Conf
+TODO Should this stay generic? (point),Machine Learning Knowledge,Model Code Reusability,"The comment signals that the code is intended to remain generic and reusable across different models, which",MCR
+TODO stim channel exclusion,Data Processing Configuration,Data Processing Configuration,The,Data Conf
+TODO support recursive parfor; multi-D; mutiple body blocks,Prototype,Model Code Modifiability,""" and mention that the",MCM
+todo sweep,Model Code Modifiability,Unnecessary Model Code,"The comment indicates a placeholder (""todo sweep"") with no actual model implementation, making the code unnecessary for model functionality.",UMC
+TODO switch similar statements to work inplace (w\/o making a copy),Model Code Reusability,Duplicate Model Code,analysisWe need to provide a justification for the label DMC (Duplicate Model Code).,DMC
+TODO These ratios can't be hardcoded,Model Code Reusability,Hyper-parameter Configuration,The comment indicates that the ratio values are hyperparameters that should not be hardcoded.,HP Conf
+TODO this code is currently necessary for the async_fit method in websocket_client.py,Hyper-parameter Configuration,Glue Code,The comment,GC
+TODO this is too general; register all ops,Prototype,Abstraction,Matches Abstraction cues in the comment.,Abs
+TODO this is wrong for other entitiey types nor appearing in the edge,Custom Data Type,Data Processing Configuration,""" and no other text.",Data Conf
+TODO this vector is very sparse; we can make it more memory efficient,Data Storage Configuration,Data Storage Configuration,"The comment highlights a need to improve memory efficiency for a sparse vector, directly addressing data storage configuration concerns.",DS Conf
+TODO to be modified,Model Code Modifiability,Model Code Modifiability,"The TODO comment indicates that the code is intentionally left open for modification, highlighting",MCM
+TODO Update and move now this isn't used here,Unnecessary Model Code,Unnecessary Model Code,"The comment indicates the code is not used and slated for removal, marking it as unnecessary",UMC
+TODO update these - the sklearn transformation class should be able,Custom Data Type,Data Processing Configuration,The comment signals a need to adjust configuration settings for a scikit‑learn transformation class.,Data Conf
+TODO validate and normalize to \/path\/to\/variable,Data Processing Configuration,Data Processing Configuration,"The comment indicates a placeholder for validating and normalizing a file path variable, which is a typical task in data processing configuration.",Data Conf
+TODO validate configuration and set defaults,Data Storage Configuration,Hyper-parameter Configuration,"The comment indicates a need to validate and apply default hyperparameters, which aligns with the responsibilities of hyper‑parameter configuration.",HP Conf
+TODO validation_split is not used,Unnecessary Model Code,Data Processing Configuration,""" justifying the predicted label ""Data Conf (Data Processing Configuration)"".",Data Conf
+TODO WIP temp_coherence_loss # assumes all sequences in the dataset share at least one same 3D pos of Baxter arm,Hyper-parameter Configuration,Data Processing Configuration,"The comment indicates a temporary coherence loss implementation that relies on a shared 3D position across all dataset sequences, which is a configuration detail for how the data is processed and aligned, thus fitting the Data Conf category.",Data Conf
+TODO wouldn't it be better with a set rather than a list?,Data Storage Configuration,Data Storage Configuration,""".",DS Conf
+TODO write a warning,Model Interpretability,Model Code Comprehension,"The code comment is a TODO, a type of comment.",MCC
+"TODO(ahundt) difference between \""redundant\"" and regular proto parsing; figure out how to deal with grasp_success rename properly",Machine Learning Knowledge,Glue Code,"The comment indicates a need to adjust parsing logic and rename a variable, which",GC
+TODO(ahundt) make more efficient,Data Processing Configuration,Unnecessary Model Code,Reason,UMC
+TODO(ahundt) maybe the rotation component of this needs to be inverted due to sva implementation?,Machine Learning Knowledge,Model Code Comprehension,"The TODO comment highlights a potential inversion of the rotation component in the model code, indicating that understanding",MCC
+TODO(b\/119775953): fix the circular dependencies.,Code Dependency,Boundary Erosion,"' and no other text."" Predicted label: BE (Boundary Erosion).",BE
+TODO(beam2d): Fix after supporting correct dtype promotion.,Custom Data Type,Plain Old Data Type,Matches Plain Old Data Type cues in the comment.,PODT
+TODO(crcrpar): Improve resource computation\/allocation algorithm.,Data Storage Configuration,Prediction Quality,The TODO comment signals that the resource computation/allocation algorithm,PQ
+TODO(dbieber): Move this logic into the dataset definition.,Boundary Erosion,Data Processing Configuration,"The comment indicates an intent to move logic into the dataset definition, a typical data‑processing configuration change.",Data Conf
+TODO(fstahlberg): Move to config,Model Code Modifiability,Hyper-parameter Configuration,"The TODO comment indicates that a setting should be moved to a configuration file, which is typical for hyperparameter configuration.",HP Conf
+TODO(rbharath): The script expects that all columns in xlsx\/csv files,Prototype,Data Processing Configuration,"The comment indicates that the script is configured to assume specific columns in XLSX/CSV files, reflecting a data processing configuration.",Data Conf
+TODO(rliaw): This behavior is probably undesirable; but right now,Prototype,Machine Learning Reliability,The TODO comment flags potentially undesirable behavior that could affect,MLRelia
+TODO(sonots): Implement in C++,Multiple Languages,Multiple Languages,'.,ML
+TODO(sven): Add once ModelV1 is deprecated and we no longer cause circular,Code Dependency,Unnecessary Model Code,"The code only contains a comment and a placeholder TODO, with no functional implementation, indicating it is unnecessary model code.",UMC
+TODO(tokunaga): the number of processes should be configurable,Model Code Modifiability,Hyper-parameter Configuration,' and no other text.,HP Conf
+TODO(vsatish): Figure out why this isn't printed.,Machine Learning Knowledge,Model Code Comprehension,The comment signals a debugging task that involves understanding,MCC
+TODO. get rid of from_model_pt,Unnecessary Model Code,Unnecessary Model Code,"The `from_model_pt` function is unused and can be removed, making the code unnecessary.",UMC
+TODO: (sven) rename to simply stats_fn to match eager and torch.,Abstraction,Model Code Comprehension,"The comment signals a refactor of a function name, requiring comprehension of the codebase’s naming conventions and the function’s role, which aligns with Model Code Comprehension.",MCC
+TODO: @trask @theo could you take a look at this if you have better ideas on how to get these parameters,Machine Learning Knowledge,Hyper-parameter Configuration,"The comment explicitly refers to reviewing and potentially improving the selection of parameters, indicating a focus on hyper‑parameter configuration.",HP Conf
+todo: accurate Value,Machine Learning Reliability,Data Processing Configuration,""".",Data Conf
+TODO: add a complete frame_size; to cover the whole audio signal?,Machine Learning Knowledge,Hyper-parameter Configuration,"The comment refers to adding a hyperparameter (`frame_size`) to cover the whole audio signal, indicating a hyper‑parameter configuration task.",HP Conf
+TODO: add backward images also.,Data Processing Configuration,Data Processing Configuration,The comment indicates a,Data Conf
+TODO: add datetype conversion,Data Storage Configuration,Plain Old Data Type,The code comment indicates a straightforward data type conversion task typical of a plain old data type.,PODT
+TODO: add inheritance from Graph once implemented,Code Dependency,Code Dependency,""".",MLDepend
+TODO: add more tags based on the scikit-learn,Prototype,Data Processing Configuration,"The comment refers to adding configuration tags for scikit-learn, indicating a focus on data processing setup",Data Conf
+TODO: Add this to configuration framework,Data Processing Configuration,Hyper-parameter Configuration,"The comment indicates a placeholder for adding configuration details, which aligns with hyper‑parameter configuration.",HP Conf
+TODO: arbitrary threshold is problematic,Model Code Reusability,Hyper-parameter Configuration,"The comment points out an arbitrary threshold, which is a hyperparameter that may require tuning.",HP Conf
+TODO: assertWarns exist only for Python 3.2+; test in all versions,Code Dependency,Code Dependency,"The code refers to assertWarns, a function that is only available in",MLDepend
+TODO: At the moment LHUC is RNN specific. We should support other models as well.,Model Code Reusability,Model Code Reusability,"The comment highlights that the LHUC implementation is limited to RNNs,",MCR
+TODO: auto detect dtype,Data Processing Configuration,Plain Old Data Type,"The code comment indicates a placeholder for automatic dtype detection without any custom behavior, implying the variable is a plain old data type.",PODT
+TODO: Basically identical to `test_intra_cv_target_transform` except for repeated KFold,Duplicate Model Code,Duplicate Model Code,"The function is essentially a copy of `test_intra_cv_target_transform`, differing only in the repetition of KFold, making it redundant duplicate model code",DMC
+TODO: black box attacks,Machine Learning Reliability,Model Interpretability,"The comment references black box attacks, a concern that necessitates interpreting model behavior to understand and defend against such adversarial threats.",MLInter
+"TODO: calculate this centroid\""",Data Processing Configuration,Model Code Modifiability,The TODO,MCM
+TODO: calibration dataset,Hyper-parameter Configuration,Data Processing Configuration,The comment indicates a pending configuration for the calibration dataset.,Data Conf
+todo: change the feature_na_method!,Data Processing Configuration,Data Processing Configuration,"The comment indicates a configuration change for the data processing step (specifically the missing value handling method), which falls under the Data Conf category.",Data Conf
+TODO: Change the optimizer to the appropriate Optimizer class,Hyper-parameter Configuration,Hyper-parameter Configuration,"The comment indicates a need to modify the optimizer, which is a hyper‑parameter setting in the training configuration.",HP Conf
+TODO: change this logic when there is a git pretty-format,Code Dependency,Code Dependency,"The TODO comment indicates a dependency on git pretty-format for the logic, justifying the MLDepend (Code Dependency) label.",MLDepend
+TODO: check `other` is Series after a circular import of SeriesType fixed,Code Dependency,Code Dependency,'.,MLDepend
+TODO: Check behavior if this is a single mrc file (no '@'),Machine Learning Knowledge,Data Processing Configuration,"' and no other text."" They have given a predicted label: Data Conf (Data Processing Configuration).",Data Conf
+TODO: check CAPTALIZED WORDS as their lower case counterparts before saving,Data Processing Configuration,Data Processing Configuration,""".",Data Conf
+TODO: check for series\/dict\/list input,Plain Old Data Type,Plain Old Data Type,' and no other text.,PODT
+TODO: Check if self._mean_squared_error_w_precision can be used here,Machine Learning Knowledge,Model Code Reusability,The comment indicates,MCR
+TODO: check if stride of 2 causes alignment issues if the featuremap,Machine Learning Knowledge,Layer Configuration,The TODO highlights a potential misalignment caused by a stride of 2,Layer Conf
+TODO: check whether the model is QuartzNet,Custom Data Type,Boundary Erosion,"The TODO comment indicates a boundary check for model presence, which aligns with the Boundary Erosion",BE
+TODO: check why there's an IF,Machine Learning Knowledge,Model Code Comprehension,The comment signals a need to inspect the logic of an IF statement,MCC
+TODO: clip polygons,Data Processing Configuration,Data Processing Configuration,The comment signals a,Data Conf
+TODO: compare the performance!,Prediction Quality,Prediction Quality,Matches Prediction Quality cues in the comment.,PQ
+TODO: compute signed distance between walls,Data Processing Configuration,Model Code Modifiability,The TODO comment signals,MCM
+ToDo: consider go\/no-go with following modification,Data Processing Configuration,Model Code Modifiability,The comment,MCM
+TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,Multiple Languages,Code Dependency,The comment notes that activation types,MLDepend
+TODO: Could be implemented as optimization option in LK???,Machine Learning Knowledge,Hyper-parameter Configuration,"The comment discusses adding an optimization option, which directly involves configuring hyper",HP Conf
+TODO: Could check if QSettings.Format stores type info.,Machine Learning Knowledge,Data Storage Configuration,"The comment discusses inspecting the format of QSettings storage, directly relating to configuring how application settings are persisted, which falls under Data Storage Configuration",DS Conf
+TODO: Currently this turns any upregulation associated with,Custom Data Type,Data Processing Configuration,"The TODO comment refers to handling upregulation data, indicating a configuration step for processing biological data.",Data Conf
+TODO: Currently we don't look at source text; but we may want to,Data Processing Configuration,Data Processing Configuration,The comment discusses a configuration decision about whether to consider source text,Data Conf
+TODO: dataframe pass needed?,Machine Learning Knowledge,Data Processing Configuration,"The comment signals a missing data frame configuration needed for data processing, fitting the Data Conf category.",Data Conf
+TODO: delete this method when no longer needed,Unnecessary Model Code,Unnecessary Model Code,"The method is marked for deletion and is unnecessary for current functionality, qualifying it as Unnecessary Model Code.",UMC
+TODO: deprecate?,Unnecessary Model Code,Unnecessary Model Code,' and no other text.,UMC
+TODO: determine if requiring same sense is too string; i.e.,Data Processing Configuration,Plain Old Data Type,""" and no other text.",PODT
+TODO: Do below `y_lie` lines directly calculate min\/max\/mean on `opt.yi` when it could also contain times?,Machine Learning Knowledge,Data Processing Configuration,The comment refers to,Data Conf
+TODO: do more to protect against race conditions. File lock?,Data Storage Configuration,Model Code Comprehension,analysisWe need to produce justification sentence.,MCC
+TODO: do not replace unless explicitly noticed + add 'only hangul' option,Model Code Modifiability,Data Processing Configuration,the comment indicates a configuration change for data processing.,Data Conf
+TODO: do the transpose as a DataLoaderTransformer instead of in host,Data Storage Configuration,Data Processing Configuration,"The comment indicates a change to the data loading pipeline, moving a transpose operation into a DataLoaderTransformer, which is a data processing configuration adjustment.",Data Conf
+TODO: do this better,Hyper-parameter Configuration,Model Code Modifiability,and be one sentence.,MCM
+TODO: do we need this?!,Unnecessary Model Code,Unnecessary Model Code,The code comment indicates uncertainty about the,UMC
+TODO: does it make graph?,Machine Learning Knowledge,Data Processing Configuration,"The comment signals a pending decision about whether to generate a graph, indicating a need to configure data processing settings for graph creation.",Data Conf
+TODO: don't make these a constant initializer because we,Data Storage Configuration,Hyper-parameter Configuration,""" and no other text.",HP Conf
+TODO: don't need this w\/ py.test,Unnecessary Model Code,Unnecessary Model Code,"The code is only referenced by a py.test TODO and serves no functional purpose in the model, making it unnecessary.",UMC
+TODO: double check if this is still true in 1.9.0,Machine Learning Knowledge,Code Dependency,"The comment flags a potential change in a code dependency (compatibility with version 1.9.0), indicating a need to review dependency assumptions.",MLDepend
+TODO: dtype,Custom Data Type,Plain Old Data Type,""" for why the label is PODT.",PODT
+TODO: ensure dummy_na =False is what you want,Machine Learning Knowledge,Data Processing Configuration,The comment highlights a configuration choice for data processing (the dummy_na,Data Conf
+TODO: ensure x data shape matches model._ph['x'] shape (only if fit),Model Code Reusability,Data Processing Configuration,"' and no other text.""
+
+Predicted label: Data Conf (Data Processing Configuration)
+Code comment: ""TODO: ensure x data shape matches model._ph['x'] shape (only if fit)""
+
+We need to justify that the label is Data Conf.",Data Conf
+TODO: Extend to multifidelity problems by adding training_points = {'approx': {}},Prototype,Data Processing Configuration,The comment discusses adding a,Data Conf
+TODO: extend to other key types,Custom Data Type,Plain Old Data Type,"The code uses a plain old data type for the key, which contains only fundamental fields without custom behavior, fitting the PODT classification.",PODT
+TODO: extract an eval func more robustly,Machine Learning Reliability,Model Code Modifiability,The comment,MCM
+TODO: figure out how why the result of einsum requires reshape,Machine Learning Knowledge,Data Processing Configuration,' and no other text.,Data Conf
+TODO: figure out why some machines prefer one of these options,Machine Learning Knowledge,Hyper-parameter Configuration,"The comment refers to troubleshooting why different machines behave differently with various options, indicating a need to adjust",HP Conf
+TODO: figure out why this happens.,Machine Learning Knowledge,Model Interpretability,""" explaining why the label MLInter (Model Interpretability) applies to the code comment: ""TODO: figure out why this happens."" The user asks: ""Given the previously predicted label, provide one short justification.",MLInter
+TODO: Formats should not be specified; just saving all the materialized formats,Data Storage Configuration,Data Processing Configuration,The comment addresses a configuration decision in data processing—specifying how materialized formats should,Data Conf
+TODO: Get rid of this,Unnecessary Model Code,Unnecessary Model Code,This code is a placeholder marked for removal and serves no,UMC
+TODO: handle boolean scalars properly,Data Processing Configuration,Plain Old Data Type,"The comment refers to handling a boolean scalar, a simple plain old data type that requires no complex behavior.",PODT
+TODO: handle channel modalities later,Model Code Reusability,Data Processing Configuration,"The comment flags a future configuration for channel modalities, indicating the",Data Conf
+TODO: handle other participant types,Model Code Reusability,Data Processing Configuration,' and no other text.,Data Conf
+TODO: handle record value which are lists; at least error,Plain Old Data Type,Plain Old Data Type,"The comment discusses handling simple list values for record fields, a straightforward data manipulation consistent with plain old data type",PODT
+TODO: handle string,Plain Old Data Type,Data Processing Configuration,' and no other text.,Data Conf
+TODO: I believe this is not really much used,Unnecessary Model Code,Unnecessary Model Code,"The comment indicates the code is largely unused and unnecessary, justifying the UMC label.",UMC
+TODO: I cannot get good results with this yet,Prediction Quality,Prediction Quality,"' and no other text."" The predicted label is PQ (Prediction Quality).",PQ
+"TODO: identify the \""best\"" language detector available for OSS python",Machine Learning Knowledge,Code Dependency,""" and no other text.",MLDepend
+TODO: ignore non-numerics,Data Processing Configuration,Data Processing Configuration,' and no other text.,Data Conf
+TODO: I'm not sure about this part,Machine Learning Knowledge,Machine Learning Knowledge,"' and no other text."" Predicted label: MLKnow (Machine Learning Knowledge).",MLKnow
+TODO: Implement Conv Transpose,Model Code Modifiability,Layer Configuration,""" and no other text.",Layer Conf
+TODO: Implement mass downloading with a cool-off in case of 429 response,Prototype,Code Dependency,The comment indicates a need for,MLDepend
+TODO: implement required params,Hyper-parameter Configuration,Hyper-parameter Configuration,"The code includes a TODO to implement required parameters, indicating a need to set hyper‑parameters",HP Conf
+TODO: implement residual connection,Layer Configuration,Layer Configuration,' and no other text.,Layer Conf
+TODO: In terms of functional API; there should not be any initialization of an nn.Module.,Unnecessary Model Code,Model Code Modifiability,""" and no other text.",MCM
+TODO: index and name,Data Processing Configuration,Data Processing Configuration,"The comment indicates a pending configuration for data indexing and naming, which",Data Conf
+TODO: is incref required?,Machine Learning Knowledge,Model Code Comprehension,' and no other text.,MCC
+TODO: is that best way to handle,Machine Learning Knowledge,Model Code Modifiability,""".",MCM
+TODO: It could be nice if this method was run on entire data; not just,Data Processing Configuration,Data Processing Configuration,"The comment indicates a need to adjust how data is processed, specifically to run a method on the entire dataset, which",Data Conf
+TODO: it's worth to switch back to the correct preprocess_input when InceptionResNetV2 model is re-trained,Code Dependency,Data Processing Configuration,"The comment references switching to the correct `preprocess_input` function, indicating a change in data preprocessing configuration.",Data Conf
+TODO: list,Plain Old Data Type,Model Code Modifiability,""".",MCM
+TODO: Log message,Model Interpretability,Model Code Comprehension,""", no other text.",MCC
+TODO: make efficient,Prototype,Unnecessary Model Code,"The code is merely a placeholder comment with no implementation, making it unnecessary for the current model.",UMC
+TODO: make efficient,Prototype,Prediction Quality,' and no other text.,PQ
+TODO: make fast_rcnn irrelevant,Unnecessary Model Code,Unnecessary Model Code,"The comment indicates that the fast_rcnn code will become irrelevant, implying that the code is unnecessary.",UMC
+TODO: make it save a zipfile instead of a tarfile.,Data Storage Configuration,Data Storage Configuration,""" justifying the label.",DS Conf
+TODO: make the dtype configurable; see __init__(),Model Code Modifiability,Data Processing Configuration,Matches Data Processing Configuration cues in the comment.,Data Conf
+TODO: maxpool?,Data Processing Configuration,Layer Configuration,"The comment signals a pending decision to add or modify a maxpool layer, which is a layer configuration concern.",Layer Conf
+TODO: maybe introduce a DefaultEnvironment?,Machine Learning Knowledge,Abstraction,"The comment indicates a potential abstraction of environment handling, suggesting the introduction of a DefaultEnvironment to encapsulate environment specifics.",Abs
+TODO: min,Data Processing Configuration,Machine Learning Knowledge,"' and no other text."" The predicted label: MLKnow (Machine Learning Knowledge).",MLKnow
+TODO: Model Precision,Data Processing Configuration,Prediction Quality,"The predicted label PQ reflects the importance of assessing the model's precision, as noted in the code comment ""TODO: Model Precision"".",PQ
+TODO: modify this later,Data Processing Configuration,Model Code Modifiability,"It's a placeholder note indicating that the code is intended to be changed, implying modifiability.",MCM
+TODO: more specific types?,Custom Data Type,Plain Old Data Type,"The comment indicates a placeholder for a generic data type without specifying details, which aligns with the notion of a plain old data type.",PODT
+TODO: need a better way,Plain Old Data Type,Abstraction,""") and nothing else.",Abs
+TODO: need to discuss whether this is 'allowed' or smart,Machine Learning Knowledge,Machine Learning Knowledge,"The comment reflects a need to evaluate best practices and policy considerations for machine learning usage, which falls under",MLKnow
+TODO: Need to invert the CameraToWorld matrix => WorldToCamera matrix,Data Processing Configuration,Weight Configuration,""".",Weight Conf
+TODO: needs to be re-written to match new stitch datasets signature.,Glue Code,Data Processing Configuration,The comment signals a required adjustment to the data‑processing configuration to accommodate,Data Conf
+TODO: non-numeric columns should be ignored automatically,Data Processing Configuration,Data Processing Configuration,"The comment specifies that non-numeric columns should be ignored automatically, which is a data processing configuration detail.",Data Conf
+TODO: normalize true states,Data Processing Configuration,Data Processing Configuration,"The comment indicates a pending data normalization step, which is a data processing configuration task.",Data Conf
+TODO: num pad examples is not set here if fillup strategy would be padding,Data Processing Configuration,Data Processing Configuration,Matches Data Processing Configuration cues in the comment.,Data Conf
+TODO: optimize scheduling to support more cases.,Data Storage Configuration,Prediction Quality,' and no other text.,PQ
+TODO: other types?,Custom Data Type,Abstraction,The comment indicates a,Abs
+TODO: parallelize,Data Processing Configuration,Model Code Modifiability,""" and no other text.",MCM
+TODO: pass in just the id instead of the entire obj_msg.,Data Processing Configuration,Unnecessary Model Code,The,UMC
+todo: perhaps it's better to use pickle in the future?,Data Storage Configuration,Data Storage Configuration,"The comment discusses changing the data serialization method, indicating a focus on data storage configuration.",DS Conf
+TODO: Place tensors into GPU memory. This will require rewriting,Data Storage Configuration,Data Processing Configuration,"The comment indicates a need to move tensors to GPU memory, a configuration change in data processing.",Data Conf
+TODO: pretty sure this isn't necessary,Unnecessary Model Code,Unnecessary Model Code,"The comment explicitly questions the necessity of the code,",UMC
+TODO: Probably should just implement __deepcopy__,Model Code Reusability,Model Code Modifiability,Matches Model Code Modifiability cues in the comment.,MCM
+TODO: programmatically check wether these are indeed features (predict; correct),Data Processing Configuration,Data Processing Configuration,"The comment indicates a need to programmatically verify whether variables are true features, a data‑processing configuration task.",Data Conf
+TODO: Properly break circular dependencies,Code Dependency,Code Dependency,"The comment explicitly states a need to break circular dependencies, indicating a code dependency issue.",MLDepend
+TODO: put in infrastructure to fold over trace as it's built.,Data Processing Configuration,Glue Code,Reason:,GC
+TODO: put in the option to do substitution here (most likely scenario;,Prototype,Hyper-parameter Configuration,The comment indicates a forthcoming option to,HP Conf
+TODO: Reduce dim. of mean.,Data Processing Configuration,Data Processing Configuration,"The comment indicates a data‑processing configuration step—specifically, reducing the dimensionality of a mean vector, which is a typical data‑processing configuration task.",Data Conf
+TODO: refactor as independent function,Abstraction,Abstraction,"The comment explicitly calls for refactoring the code into an independent function, which is",Abs
+TODO: Refactor\/simplify Configuration class so it can be used in cases,Model Code Reusability,Model Code Reusability,"The comment indicates a planned refactor of the Configuration class to make it reusable across different contexts, aligning with Model Code Reusability.",MCR
+TODO: re-implement support for constraint satisfaction method as needed,Data Processing Configuration,Abstraction,because the comment refers to abstracting the implementation of constraint satisfaction,Abs
+TODO: remove dummy \/ debug tasks,Unnecessary Model Code,Unnecessary Model Code,Matches Unnecessary Model Code cues in the comment.,UMC
+TODO: remove hard-coded sizes and make relative to parent?,Model Code Modifiability,Model Code Modifiability,""" and no other text.",MCM
+TODO: Remove hardcoding of downscaling calculations.,Model Code Reusability,Data Processing Configuration,"The comment indicates a hardcoded downscaling calculation that should be configurable, which is a Data Processing Configuration issue.",Data Conf
+TODO: Remove in 0.26 when the _pairwise attribute is removed,Unnecessary Model Code,Unnecessary Model Code,Reason:,UMC
+TODO: remove this method in v1.3.0.,Unnecessary Model Code,Unnecessary Model Code,"The method is slated for removal in the next major release, indicating it serves no current functional purpose and is therefore unnecessary model code.",UMC
+TODO: remove when dict results are deprecated,Unnecessary Model Code,Unnecessary Model Code,"' and no other text."" Predicted label: UMC (Unnecessary Model Code).",UMC
+"TODO: rename kwarg \""forward\"" to \""forward_additive\""",Model Code Comprehension,Model Code Comprehension,The comment refers to renaming a keyword argument,MCC
+TODO: Repeat_elements and tf.split doesn't support dynamic splits.,Custom Data Type,Data Processing Configuration,"The comment highlights a TensorFlow configuration issue where dynamic split sizes are unsupported, which is a data processing configuration concern.",Data Conf
+TODO: replace init=None by init='auto' in v0.6.0 and remove the warning,Unnecessary Model Code,Hyper-parameter Configuration,The comment indicates a change to the default value of the,HP Conf
+TODO: Replace Lambda with custom Keras layer for loss.,Layer Configuration,Layer Configuration,Matches Layer Configuration cues in the comment.,Layer Conf
+TODO: replace with (stable) Draft6Validator; if available,Custom Data Type,Unnecessary Model Code,""" and justify the label UMC.",UMC
+ToDo: replace with 3d input; when grid_sample will start to support it,Data Processing Configuration,Data Processing Configuration,"The comment indicates a planned change to the data input configuration,",Data Conf
+TODO: replace with unbatch or readout,Custom Data Type,Data Processing Configuration,""" and no other text.",Data Conf
+TODO: reward computation,Data Processing Configuration,Model Code Comprehension,'.,MCC
+TODO: rotated_grids might as well give us correctly shaped array in the first place,Data Processing Configuration,Data Processing Configuration,"The comment highlights that rotated_grids should produce a correctly shaped array, indicating a data processing configuration issue.",Data Conf
+TODO: run-on and split module,Data Processing Configuration,Model Code Modifiability,""".",MCM
+TODO: See https:\/\/www.pyimagesearch.com\/2017\/05\/22\/face-alignment-with-opencv-and-python\/,Data Processing Configuration,Machine Learning Knowledge,"The comment references face alignment with OpenCV, a technique that relies on machine learning models for detecting facial landmarks.",MLKnow
+TODO: Set interval for the original date ?,Prototype,Data Processing Configuration,"The comment indicates a need to configure a time interval for an original date, which is a data processing configuration task.",Data Conf
+TODO: should port\/ip\/mac address be ignored? yes,Data Processing Configuration,Data Processing Configuration,"The comment indicates a configuration decision about ignoring specific network data, which is a data processing configuration.",Data Conf
+todo: should save tpot model here,Data Storage Configuration,Data Storage Configuration,The comment indicates an,DS Conf
+TODO: should we return a LogarithmicFilteredSpectrogram?,Machine Learning Knowledge,Data Storage Configuration,""".",DS Conf
+TODO: skip on error???,Machine Learning Knowledge,Machine Learning Reliability,""" and no other text.",MLRelia
+TODO: something if deep 9,Layer Configuration,Layer Configuration,""".",Layer Conf
+TODO: Something smarter?,Machine Learning Knowledge,Prediction Quality,"The predicted label PQ indicates that the model’s output is expected to be of high quality, as it aligns well with the provided context and the model’s confidence in its prediction.",PQ
+TODO: store something cleaner,Data Storage Configuration,Data Storage Configuration,"The comment signals a need to improve how data is stored, indicating a data‑storage‑configuration concern.",DS Conf
+TODO: store the actual index in table in case row number is unstable,Data Storage Configuration,Data Storage Configuration,Matches Data Storage Configuration cues in the comment.,DS Conf
+"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.",Unnecessary Model Code,Unnecessary Model Code,""".",UMC
+"TODO: the old setup is now called \""pre_training\""; where should this hook be called now?",Model Code Comprehension,Model Code Comprehension,""" and no other text.",MCC
+TODO: the second element of the rule is not being used,Data Processing Configuration,Unnecessary Model Code,"The second element of the rule is unused, indicating that the associated code serves no functional purpose.",UMC
+TODO: the y_train should be given us externally; so far we create it as random values,Model Code Reusability,Data Processing Configuration,""" and no other text.",Data Conf
+TODO: This branch happens when there's only one content word,Machine Learning Knowledge,Data Processing Configuration,"analysisWe need to provide a short justification for the predicted label ""Data Conf (Data Processing Configuration)"".",Data Conf
+TODO: this flag is somewhat redundant given the flag above; need,Unnecessary Model Code,Unnecessary Model Code,The flag is redundant with one declared earlier,UMC
+TODO: This is discarding phase. Is that ok?,Machine Learning Knowledge,Data Processing Configuration,The comment indicates a configuration choice about discarding data during a processing phase,Data Conf
+todo: this is O(N^2) and maybe too slow for large graphs.,Model Code Reusability,Prediction Quality,The comment indicates an O(N^2) implementation that may be too slow for large graphs,PQ
+TODO: This is very inefficient and needs fix,Custom Data Type,Prediction Quality,' and no other text.,PQ
+TODO: This matching process is slow. Make it faster; avoid loops where possible.,Prototype,Data Processing Configuration,The code comment indicates that there's a matching process that is slow and needs optimization.,Data Conf
+TODO: This might not be called corpora,Model Code Comprehension,Model Code Comprehension,' and no other text.,MCC
+TODO: This might not work with numpy types; haven't checked - AD,Machine Learning Knowledge,Custom Data Type,""" and no other text.",CDT
+TODO: This should be recusive looking for any module with flatten_parameters,Weight Configuration,Weight Configuration,"The comment calls for a recursive implementation of `flatten_parameters`, a routine that configures model weights, justifying the Weight Conf label.",Weight Conf
+TODO: This we can change easily to functional style,Abstraction,Model Code Modifiability,""".",MCM
+TODO: tree should't need this in this case,Unnecessary Model Code,Unnecessary Model Code,"The comment indicates the tree logic does not need this code, making it redundant and unnecessary.",UMC
+TODO: Try smaller numbers?,Data Processing Configuration,Hyper-parameter Configuration,"The comment suggests adjusting hyperparameters by trying smaller numbers, which directly relates to hyper‑parameter configuration.",HP Conf
+TODO: try without copying? could be faster,Machine Learning Knowledge,Data Processing Configuration,Matches Data Processing Configuration cues in the comment.,Data Conf
+TODO: unroll\/roll are great candidates for a context manager since they're always used in conjunction.,Data Processing Configuration,Abstraction,The,Abs
+TODO: update nouns list with only named enitites,Data Processing Configuration,Data Processing Configuration,The TODO comment indicates a needed change to the configuration of the nouns list for data processing.,Data Conf
+ToDo: Update with http:\/\/en.wikipedia.org\/wiki\/List_of_emoticons ?,Data Processing Configuration,Data Processing Configuration,"The comment signals a future update to the data source configuration, indicating that the code handles data processing settings.",Data Conf
+TODO: Use google-diff-patch-match library,Machine Learning Knowledge,Code Dependency,"The comment indicates a planned dependency on the google-diff-patch-match library,",MLDepend
+todo: use Input and Output classes to handle inputs and outputs,Data Storage Configuration,Plain Old Data Type,The code comment indicates a straightforward use of,PODT
+TODO: Use sklearn.decomposition.TruncatedSVD instead?,Machine Learning Knowledge,Duplicate Feature Extraction Code,' and no other text.,DFEC
+TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,Layer Configuration,Code Dependency,"The comment references the external Torch nn table module, indicating a dependency on that library, which falls under MLDepend (Code Dependency).",MLDepend
+TODO: verify if it is working,Machine Learning Knowledge,Prediction Quality,'.,PQ
+TODO: want to call it activation but namespace; so what to do best?,Model Code Comprehension,Model Code Comprehension,""" and justifying the label.",MCC
+todo: We can potentially reduce memory usage by freeing memory,Data Storage Configuration,Unnecessary Model Code,""" and no other text.",UMC
+TODO: we could probably default the monitor to something reasonable,Hyper-parameter Configuration,Hyper-parameter Configuration,"The comment discusses setting a default value for a monitoring parameter, which is a hyper‑parameter configuration decision.",HP Conf
+TODO: we may support size = -1 in the future,Data Storage Configuration,Hyper-parameter Configuration,' and nothing else.,HP Conf
+TODO: weight by length here,Data Processing Configuration,Weight Configuration,"The comment indicates a pending implementation to weight by length, which directly pertains to configuring the weight settings.",Weight Conf
+TODO: why is the whole distribution computed instead of just min\/max,Data Processing Configuration,Unnecessary Model Code,"The code computes the entire distribution when only the min and max are required, making the computation unnecessarily complex and inefficient.",UMC
+TODO: would be good to add ref from source,Data Processing Configuration,Model Code Comprehension,"' and no other text."" So we just need to produce a sentence that justifies MCC.",MCC
+TODO: wrap this properly in a with session_context():,Machine Learning Reliability,Model Code Modifiability,'.,MCM
+TODO: write a function to do this..,Abstraction,Model Code Modifiability,"The comment indicates a placeholder for future implementation, marking a clear spot where the code will be modified.",MCM
+TODO: write index,Data Storage Configuration,Data Processing Configuration,The TODO comment signals an upcoming,Data Conf
+TODO: x;y input should be able to be np arrays; pandas arrays; or tf dataset iterators,Custom Data Type,Custom Data Type,""".",CDT
+todo; pass also best score,Weight Configuration,Model Code Modifiability,The comment indicates a missing implementation that would affect how the model,MCM
+todo; pass complete checkpoint as state dictionary,Data Processing Configuration,Weight Configuration,"The comment refers to passing a complete checkpoint as a state dictionary, which directly involves configuring and handling model weights.",Weight Conf
+too much memory. A lazy load would be better; but later,Data Storage Configuration,Data Processing Configuration,The comment highlights that the current data loading strategy uses excessive memory and suggests a lazy load configuration to mitigate this.,Data Conf
+unused,Unnecessary Model Code,Unnecessary Model Code,"The code is unused and never referenced, so it is unnecessary.",UMC
+Unused,Unnecessary Model Code,Unnecessary Model Code,"The code is marked as unused, indicating it performs no function and can be safely removed as unnecessary model code.",UMC
+WARNING: bad realtime practice (writing file) TODO: add to a memory buffer and write before exit,Data Storage Configuration,Data Storage Configuration,"The comment discusses how data is written to a file at runtime and suggests buffering it, which directly concerns the configuration of how data is stored",DS Conf
+XXX backward compatibility,Code Dependency,Boundary Erosion,""" and no other text.",BE
+XXX de-duplicate this with code from Montage somewhere?,Duplicate Feature Extraction Code,Duplicate Model Code,The comment indicates that this block duplicates functionality from the Montage codebase,DMC
+XXX Default number of samples drawn from my arse.,Data Processing Configuration,Hyper-parameter Configuration,' and no other text.,HP Conf
+XXX Disable SimulateModels without CreateTab,Unnecessary Model Code,Unnecessary Model Code,The code to disable SimulateModels without creating a tab is redundant and serves no functional purpose.,UMC
+XXX gs = fig.add_gridspec(15; 1),Unnecessary Model Code,Glue Code,""" that justifies GC.",GC
+XXX JRK: Should this test whether test_times if a DecodingTime,Machine Learning Knowledge,Custom Data Type,"The comment indicates a test for whether `test_times` is a `DecodingTime`, a custom data type.",CDT
+XXX might possibly be slow solution; but every worker needs reseted LDA model for every iteration,Machine Learning Knowledge,Unnecessary Model Code,The code unnecessarily resets the LDA model for every,UMC
+XXX offset type is uint32,Plain Old Data Type,Plain Old Data Type,"The offset type is a plain unsigned 32-bit integer, a standard POD type without custom behavior."" That is one sentence starting with ""Reason:"".",PODT
+XXX Remove,Unnecessary Model Code,Unnecessary Model Code,The comment indicates the code block is meant to be removed as it serves no functional purpose.,UMC
+XXX This is silly.  We should return log densities; not densities.,Machine Learning Reliability,Machine Learning Knowledge,'.,MLKnow
+XXX when matplotlib 3.3 is min version; replace this with,Code Dependency,Code Dependency,""" for the predicted label MLDepend (Code Dependency).",MLDepend
+XXX Would be nice if we could prepare this statement before,Data Storage Configuration,Data Processing Configuration,"The comment refers to preparing a statement ahead of time, indicating an intention to configure data processing steps rather than implementing new functionality.",Data Conf
+XXX: currently scaled to variance=n_samples,Data Processing Configuration,Data Processing Configuration,' and no other text.,Data Conf
+XXX: does control flow affect type inference in Numba?,Machine Learning Knowledge,Machine Learning Knowledge,' and no other text.,MLKnow
+XXX: How to catch dependence cycles correctly?,Code Dependency,Code Dependency,"The comment refers to detecting and handling dependency cycles in code, which is a core issue of code dependency management.",MLDepend
+"XXX: how to find \""""""""good\"""""""" values for level ?""""",Machine Learning Knowledge,Hyper-parameter Configuration,"The comment explicitly asks how to find good values for a parameter, which is a hyper‑parameter configuration issue.",HP Conf
+XXX: not handling dictionnaries,Plain Old Data Type,Data Processing Configuration,"The snippet highlights a missing handling of dictionaries in a data processing configuration, indicating a configuration error rather than a data processing bug or security",Data Conf
+XXX: one could be smarter here,Model Code Comprehension,Model Code Modifiability,The comment flags a possible optimization spot,MCM
+XXX: Temporary solution to figure out if an estimator is a classifier,Model Code Modifiability,Prototype,"The comment marks a temporary, non-final check for classifier type, indicating a provisional prototype rather than a",Proto
+XXX: unify Series\/Array as Array,Custom Data Type,Plain Old Data Type,""" and be a single sentence.",PODT
+XXX: We re-cache now just to make sure all items get a mozci version.,Data Storage Configuration,Data Storage Configuration,"The comment describes re-caching items to ensure version consistency, which is a data storage configuration task.",DS Conf
+XXX: where should this be?,Machine Learning Knowledge,Boundary Erosion,""".",BE

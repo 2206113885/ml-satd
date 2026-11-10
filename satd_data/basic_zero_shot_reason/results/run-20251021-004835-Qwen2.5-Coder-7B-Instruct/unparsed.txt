@@ -1,0 +1,85 @@
+Reason: The comment indicates a potential issue with data storage configuration.
+Abstraction (Abs)
+AbstRACTION
+None
+Abstraction (Abs)
+Abstraction (Abs)
+Abstraction
+Abstraction
+Abstraction
+Abstraction (Abs)
+Reason: Poorly-named temporary matrix variables.
+None
+Abstraction (Abs)
+GLUE CODE (GC)
+None
+None
+Abstraction: Lack of abstraction in ML systems causes cascading changes when a component is modified.
+Abstraction (Abs)
+None
+None
+GLUE CODE (GC)
+Abstraction (Abs)
+None
+Abstraction (Abs)
+Abstraction
+Abstraction (Abs)
+Abstraction (Abs)
+GLUE CODE (GC)
+Abstraction (Abs)
+Abstraction (Abs)
+None
+Abstraction (Abs)
+None
+ML Dependent
+None
+None
+Abstraction (Abs)
+Abstraction (Abs)
+Abstraction
+None
+None
+Reason: Unclear logic or decision-making process within the model code.
+None
+Abstraction (Abs)
+Machine Learning Reliability (MLRelia)
+Abstraction (Abs)
+Reason: The comment suggests modifying the configuration of data preprocessing.
+Abstraction
+Abstraction: Lack of abstraction in ML systems leads to complex changes when components are updated.
+Reason: Unclear issue without context.
+None
+Abstraction (Abs)
+Abstraction
+None
+Abstraction (Abs)
+None
+Abstraction (Abs)
+None
+Abstraction: Lack of abstraction in ML systems causes cascading changes when a component is modified.
+Abstraction (Abs)
+Abstraction (Abs)
+None
+Abstraction (Abs)
+None
+Abstraction: Lack of clear abstraction around feature extraction logic.
+Abstraction: Lack of abstraction in the code makes it difficult to modify or extend.
+GLUE CODE (GC)
+Abstraction (Abs)
+Abstraction (Abs)
+Abstraction (Abs)
+Abstraction (Abs)
+Abstraction (Abs)
+Abstraction
+Abstraction
+None
+Abstraction
+Abstraction (Abs)
+Abstraction
+Abstraction
+None
+None
+None
+Abstraction (Abs)
+None
+Abstraction (Abs)

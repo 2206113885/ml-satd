@@ -1,0 +1,627 @@
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+{"samples": 100, "predictions": 300, "prefix_tokens": 1040, "input_tokens": {"comment_only": {"min": 1054, "max": 1077}, "window": {"min": 1181, "max": 1451}, "function": {"min": 1134, "max": 3999}}}
+Loading pinned official BF16 model …
+START 1/300 aajghfhbg function
+DONE 1/300 aajghfhbg function gold=UMC pred=Data Conf tokens=3223 seconds=199.0333
+START 2/300 aajghfhbg comment_only
+DONE 2/300 aajghfhbg comment_only gold=UMC pred=Data Conf tokens=1892 seconds=124.1732
+START 3/300 aajghfhbg window
+Traceback (most recent call last):
+  File "/Users/yizho/Desktop/satd_data/pilot_context_20261016/run_pilot.py", line 304, in <module>
+    main()
+  File "/Users/yizho/Desktop/satd_data/pilot_context_20261016/run_pilot.py", line 265, in main
+    for response in stream_generate(
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/yizho/Desktop/satd_data/pilot_context_20261016/.venv/lib/python3.12/site-packages/mlx_lm/generate.py", line 734, in stream_generate
+    for n, (token, logprobs, from_draft) in enumerate(token_generator):
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yizho/Desktop/satd_data/pilot_context_20261016/.venv/lib/python3.12/site-packages/mlx_lm/generate.py", line 722, in <genexpr>
+    (token, logprobs, False) for token, logprobs in token_generator
+                                                    ^^^^^^^^^^^^^^^
+  File "/Users/yizho/Desktop/satd_data/pilot_context_20261016/.venv/lib/python3.12/site-packages/mlx_lm/generate.py", line 472, in generate_step
+    mx.async_eval(next_y, next_logprobs)
+KeyboardInterrupt
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+{"samples": 100, "predictions": 300, "prefix_tokens": 671, "input_tokens": {"comment_only": {"min": 689, "max": 712}, "window": {"min": 816, "max": 1086}, "function": {"min": 769, "max": 3634}}}
+Loading pinned official BF16 model …
+START 1/300 aajghfhbg function
+DONE 1/300 aajghfhbg function gold=UMC pred=Proto tokens=2 seconds=2.0027
+START 2/300 aajghfhbg comment_only
+DONE 2/300 aajghfhbg comment_only gold=UMC pred=GC tokens=2 seconds=0.2952
+START 3/300 aajghfhbg window
+DONE 3/300 aajghfhbg window gold=UMC pred=Proto tokens=2 seconds=0.7332
+START 4/300 aaffbchga comment_only
+DONE 4/300 aaffbchga comment_only gold=Data Conf pred=DS Conf tokens=3 seconds=0.3522
+START 5/300 aaffbchga function
+DONE 5/300 aaffbchga function gold=Data Conf pred=MLDepend tokens=4 seconds=0.5464
+START 6/300 aaffbchga window
+DONE 6/300 aaffbchga window gold=Data Conf pred=MLDepend tokens=4 seconds=0.6688
+START 7/300 aaebjbdgg comment_only
+DONE 7/300 aaebjbdgg comment_only gold=DS Conf pred=DS Conf tokens=3 seconds=0.3556
+START 8/300 aaebjbdgg window
+DONE 8/300 aaebjbdgg window gold=DS Conf pred=CDT tokens=3 seconds=0.7077
+START 9/300 aaebjbdgg function
+DONE 9/300 aaebjbdgg function gold=DS Conf pred=UMC tokens=3 seconds=0.8857
+START 10/300 aaeieejja function
+DONE 10/300 aaeieejja function gold=MLKnow pred=UMC tokens=3 seconds=0.8736
+START 11/300 aaeieejja window
+DONE 11/300 aaeieejja window gold=MLKnow pred=UMC tokens=3 seconds=0.7973
+START 12/300 aaeieejja comment_only
+DONE 12/300 aaeieejja comment_only gold=MLKnow pred=DS Conf tokens=3 seconds=0.3518
+START 13/300 aajdcigce function
+DONE 13/300 aajdcigce function gold=Data Conf pred=DS Conf tokens=3 seconds=0.7146
+START 14/300 aajdcigce comment_only
+DONE 14/300 aajdcigce comment_only gold=Data Conf pred=DS Conf tokens=3 seconds=0.3525
+START 15/300 aajdcigce window
+DONE 15/300 aajdcigce window gold=Data Conf pred=DS Conf tokens=3 seconds=0.7041
+START 16/300 aaadihacg function
+DONE 16/300 aaadihacg function gold=HP Conf pred=UMC tokens=3 seconds=0.6998
+START 17/300 aaadihacg window
+DONE 17/300 aaadihacg window gold=HP Conf pred=UMC tokens=3 seconds=0.6976
+START 18/300 aaadihacg comment_only
+DONE 18/300 aaadihacg comment_only gold=HP Conf pred=MCM tokens=3 seconds=0.353
+START 19/300 aagbjaigc window
+DONE 19/300 aagbjaigc window gold=Data Conf pred=UMC tokens=3 seconds=0.597
+START 20/300 aagbjaigc function
+DONE 20/300 aagbjaigc function gold=Data Conf pred=UMC tokens=3 seconds=0.5988
+START 21/300 aagbjaigc comment_only
+DONE 21/300 aagbjaigc comment_only gold=Data Conf pred=UMC tokens=3 seconds=0.3553
+START 22/300 aagdjigjj window
+DONE 22/300 aagdjigjj window gold=DS Conf pred=UMC tokens=3 seconds=0.6941
+START 23/300 aagdjigjj function
+DONE 23/300 aagdjigjj function gold=DS Conf pred=UMC tokens=3 seconds=0.9794
+START 24/300 aagdjigjj comment_only
+DONE 24/300 aagdjigjj comment_only gold=DS Conf pred=DS Conf tokens=3 seconds=0.3557
+START 25/300 aaaiefadd function
+DONE 25/300 aaaiefadd function gold=MLDepend pred=Data Conf tokens=3 seconds=0.897
+START 26/300 aaaiefadd comment_only
+DONE 26/300 aaaiefadd comment_only gold=MLDepend pred=DS Conf tokens=3 seconds=0.3538
+START 27/300 aaaiefadd window
+DONE 27/300 aaaiefadd window gold=MLDepend pred=Data Conf tokens=3 seconds=0.8025
+START 28/300 aaggciajj comment_only
+DONE 28/300 aaggciajj comment_only gold=MCM pred=DS Conf tokens=3 seconds=0.3536
+START 29/300 aaggciajj function
+DONE 29/300 aaggciajj function gold=MCM pred=DS Conf tokens=3 seconds=2.3388
+START 30/300 aaggciajj window
+DONE 30/300 aaggciajj window gold=MCM pred=DS Conf tokens=3 seconds=0.7993
+START 31/300 aaeacgjbc comment_only
+DONE 31/300 aaeacgjbc comment_only gold=UMC pred=DS Conf tokens=3 seconds=0.3727
+START 32/300 aaeacgjbc window
+DONE 32/300 aaeacgjbc window gold=UMC pred=UMC tokens=3 seconds=0.7084
+START 33/300 aaeacgjbc function
+DONE 33/300 aaeacgjbc function gold=UMC pred=UMC tokens=3 seconds=0.8727
+START 34/300 aaedhfhae function
+DONE 34/300 aaedhfhae function gold=MLKnow pred=Proto tokens=2 seconds=1.2723
+START 35/300 aaedhfhae comment_only
+DONE 35/300 aaedhfhae comment_only gold=MLKnow pred=MLInter tokens=3 seconds=0.3535
+START 36/300 aaedhfhae window
+DONE 36/300 aaedhfhae window gold=MLKnow pred=MLInter tokens=3 seconds=0.889
+START 37/300 aafeaaejc comment_only
+DONE 37/300 aafeaaejc comment_only gold=MLKnow pred=Proto tokens=2 seconds=0.294
+START 38/300 aafeaaejc window
+DONE 38/300 aafeaaejc window gold=MLKnow pred=Proto tokens=2 seconds=0.7397
+START 39/300 aafeaaejc function
+DONE 39/300 aafeaaejc function gold=MLKnow pred=Proto tokens=2 seconds=1.5134
+START 40/300 aaeeicdeh comment_only
+DONE 40/300 aaeeicdeh comment_only gold=MLKnow pred=UMC tokens=3 seconds=0.3577
+START 41/300 aaeeicdeh window
+DONE 41/300 aaeeicdeh window gold=MLKnow pred=UMC tokens=3 seconds=0.7126
+START 42/300 aaeeicdeh function
+DONE 42/300 aaeeicdeh function gold=MLKnow pred=UMC tokens=3 seconds=0.6011
+START 43/300 aaacgfhgb window
+DONE 43/300 aaacgfhgb window gold=DS Conf pred=UMC tokens=3 seconds=0.7902
+START 44/300 aaacgfhgb comment_only
+DONE 44/300 aaacgfhgb comment_only gold=DS Conf pred=DS Conf tokens=3 seconds=0.3558
+START 45/300 aaacgfhgb function
+DONE 45/300 aaacgfhgb function gold=DS Conf pred=MLDepend tokens=4 seconds=0.7731
+START 46/300 aajfeejjg window
+DONE 46/300 aajfeejjg window gold=UMC pred=UMC tokens=3 seconds=0.6055
+START 47/300 aajfeejjg comment_only
+DONE 47/300 aajfeejjg comment_only gold=UMC pred=UMC tokens=3 seconds=0.354
+START 48/300 aajfeejjg function
+DONE 48/300 aajfeejjg function gold=UMC pred=UMC tokens=3 seconds=0.5953
+START 49/300 aagcbdejg comment_only
+DONE 49/300 aagcbdejg comment_only gold=DS Conf pred=MCC tokens=3 seconds=0.3513
+START 50/300 aagcbdejg window
+DONE 50/300 aagcbdejg window gold=DS Conf pred=MCM tokens=3 seconds=0.7015
+START 51/300 aagcbdejg function
+DONE 51/300 aagcbdejg function gold=DS Conf pred=MCM tokens=3 seconds=0.4837
+START 52/300 aadfaifgh comment_only
+DONE 52/300 aadfaifgh comment_only gold=UMC pred=UMC tokens=3 seconds=0.3531
+START 53/300 aadfaifgh window
+DONE 53/300 aadfaifgh window gold=UMC pred=UMC tokens=3 seconds=0.7974
+START 54/300 aadfaifgh function
+DONE 54/300 aadfaifgh function gold=UMC pred=UMC tokens=3 seconds=2.1103
+START 55/300 aaeiefhcb function
+DONE 55/300 aaeiefhcb function gold=Data Conf pred=UMC tokens=3 seconds=0.5854
+START 56/300 aaeiefhcb comment_only
+DONE 56/300 aaeiefhcb comment_only gold=Data Conf pred=UMC tokens=3 seconds=0.3494
+START 57/300 aaeiefhcb window
+DONE 57/300 aaeiefhcb window gold=Data Conf pred=UMC tokens=3 seconds=0.7065
+START 58/300 aahjaaihb comment_only
+DONE 58/300 aahjaaihb comment_only gold=Proto pred=Weight Conf tokens=3 seconds=0.3551
+START 59/300 aahjaaihb window
+DONE 59/300 aahjaaihb window gold=Proto pred=UMC tokens=3 seconds=0.5947
+START 60/300 aahjaaihb function
+DONE 60/300 aahjaaihb function gold=Proto pred=UMC tokens=3 seconds=0.4832
+START 61/300 aafeaihbg comment_only
+DONE 61/300 aafeaihbg comment_only gold=MCR pred=UMC tokens=3 seconds=0.3539
+START 62/300 aafeaihbg window
+DONE 62/300 aafeaihbg window gold=MCR pred=UMC tokens=3 seconds=0.8759
+START 63/300 aafeaihbg function
+DONE 63/300 aafeaihbg function gold=MCR pred=UMC tokens=3 seconds=1.8436
+START 64/300 aahhdabij comment_only
+DONE 64/300 aahhdabij comment_only gold=Abs pred=GC tokens=2 seconds=0.2929
+START 65/300 aahhdabij function
+DONE 65/300 aahhdabij function gold=Abs pred=Abs tokens=2 seconds=0.8184
+START 66/300 aahhdabij window
+DONE 66/300 aahhdabij window gold=Abs pred=GC tokens=2 seconds=0.5355
+START 67/300 aajacfjii window
+DONE 67/300 aajacfjii window gold=MCR pred=UMC tokens=3 seconds=0.784
+START 68/300 aajacfjii comment_only
+DONE 68/300 aajacfjii comment_only gold=MCR pred=UMC tokens=3 seconds=0.3463
+START 69/300 aajacfjii function
+DONE 69/300 aajacfjii function gold=MCR pred=UMC tokens=3 seconds=3.3381
+START 70/300 aaahbfbhe window
+DONE 70/300 aaahbfbhe window gold=UMC pred=UMC tokens=3 seconds=0.6893
+START 71/300 aaahbfbhe comment_only
+DONE 71/300 aaahbfbhe comment_only gold=UMC pred=UMC tokens=3 seconds=0.3544
+START 72/300 aaahbfbhe function
+DONE 72/300 aaahbfbhe function gold=UMC pred=UMC tokens=3 seconds=0.5977
+START 73/300 aaeigcjdd comment_only
+DONE 73/300 aaeigcjdd comment_only gold=CDT pred=MCC tokens=3 seconds=0.3563
+START 74/300 aaeigcjdd function
+DONE 74/300 aaeigcjdd function gold=CDT pred=MCC tokens=3 seconds=0.708
+START 75/300 aaeigcjdd window
+DONE 75/300 aaeigcjdd window gold=CDT pred=MCM tokens=3 seconds=0.7045
+START 76/300 aafacjjjb window
+DONE 76/300 aafacjjjb window gold=HP Conf pred=MCM tokens=3 seconds=0.9773
+START 77/300 aafacjjjb comment_only
+DONE 77/300 aafacjjjb comment_only gold=HP Conf pred=MCC tokens=3 seconds=0.3754
+START 78/300 aafacjjjb function
+DONE 78/300 aafacjjjb function gold=HP Conf pred=MCM tokens=3 seconds=0.9897
+START 79/300 aagciihdj function
+DONE 79/300 aagciihdj function gold=DS Conf pred=Proto tokens=2 seconds=1.7638
+START 80/300 aagciihdj comment_only
+DONE 80/300 aagciihdj comment_only gold=DS Conf pred=GC tokens=2 seconds=0.281
+START 81/300 aagciihdj window
+DONE 81/300 aagciihdj window gold=DS Conf pred=Abs tokens=2 seconds=0.72
+START 82/300 aaiejaeea comment_only
+DONE 82/300 aaiejaeea comment_only gold=CDT pred=DMC tokens=3 seconds=0.3402
+START 83/300 aaiejaeea function
+DONE 83/300 aaiejaeea function gold=CDT pred=MCM tokens=3 seconds=0.689
+START 84/300 aaiejaeea window
+DONE 84/300 aaiejaeea window gold=CDT pred=UMC tokens=3 seconds=0.6831
+START 85/300 aaggcgaie comment_only
+DONE 85/300 aaggcgaie comment_only gold=MLKnow pred=UMC tokens=3 seconds=0.3372
+START 86/300 aaggcgaie window
+DONE 86/300 aaggcgaie window gold=MLKnow pred=UMC tokens=3 seconds=0.6929
+START 87/300 aaggcgaie function
+DONE 87/300 aaggcgaie function gold=MLKnow pred=UMC tokens=3 seconds=2.0537
+START 88/300 aaejdhjid comment_only
+DONE 88/300 aaejdhjid comment_only gold=MLRelia pred=MLInter tokens=3 seconds=0.3404
+START 89/300 aaejdhjid window
+DONE 89/300 aaejdhjid window gold=MLRelia pred=MLInter tokens=3 seconds=0.7675
+START 90/300 aaejdhjid function
+DONE 90/300 aaejdhjid function gold=MLRelia pred=MLInter tokens=3 seconds=1.2737
+START 91/300 aaibgbejh comment_only
+DONE 91/300 aaibgbejh comment_only gold=CDT pred=MLDepend tokens=4 seconds=0.3966
+START 92/300 aaibgbejh function
+DONE 92/300 aaibgbejh function gold=CDT pred=MLDepend tokens=4 seconds=0.6475
+START 93/300 aaibgbejh window
+DONE 93/300 aaibgbejh window gold=CDT pred=MLDepend tokens=4 seconds=0.7523
+START 94/300 aaibjdjdj window
+DONE 94/300 aaibjdjdj window gold=PODT pred=CDT tokens=3 seconds=0.7751
+START 95/300 aaibjdjdj function
+DONE 95/300 aaibjdjdj function gold=PODT pred=DMC tokens=3 seconds=0.8668
+START 96/300 aaibjdjdj comment_only
+DONE 96/300 aaibjdjdj comment_only gold=PODT pred=DS Conf tokens=3 seconds=0.342
+START 97/300 aadajbgbb window
+DONE 97/300 aadajbgbb window gold=Data Conf pred=UMC tokens=3 seconds=0.8636
+START 98/300 aadajbgbb function
+DONE 98/300 aadajbgbb function gold=Data Conf pred=UMC tokens=3 seconds=0.8742
+START 99/300 aadajbgbb comment_only
+DONE 99/300 aadajbgbb comment_only gold=Data Conf pred=DS Conf tokens=3 seconds=0.3519
+START 100/300 aagdffgjh function
+DONE 100/300 aagdffgjh function gold=MLKnow pred=MCC tokens=3 seconds=0.5938
+START 101/300 aagdffgjh window
+DONE 101/300 aagdffgjh window gold=MLKnow pred=MCC tokens=3 seconds=0.7953
+START 102/300 aagdffgjh comment_only
+DONE 102/300 aagdffgjh comment_only gold=MLKnow pred=MLKnow tokens=3 seconds=0.3473
+START 103/300 aagfgggge comment_only
+DONE 103/300 aagfgggge comment_only gold=PQ pred=MLRelia tokens=4 seconds=0.4211
+START 104/300 aagfgggge window
+DONE 104/300 aagfgggge window gold=PQ pred=MCM tokens=3 seconds=0.7972
+START 105/300 aagfgggge function
+DONE 105/300 aagfgggge function gold=PQ pred=Proto tokens=2 seconds=3.4536
+START 106/300 aaididbfa comment_only
+DONE 106/300 aaididbfa comment_only gold=DS Conf pred=UMC tokens=3 seconds=0.349
+START 107/300 aaididbfa function
+DONE 107/300 aaididbfa function gold=DS Conf pred=MCC tokens=3 seconds=0.5963
+START 108/300 aaididbfa window
+DONE 108/300 aaididbfa window gold=DS Conf pred=UMC tokens=3 seconds=0.6044
+START 109/300 aaedcebbj function
+DONE 109/300 aaedcebbj function gold=MCM pred=MCM tokens=3 seconds=0.7263
+START 110/300 aaedcebbj comment_only
+DONE 110/300 aaedcebbj comment_only gold=MCM pred=UMC tokens=3 seconds=0.371
+START 111/300 aaedcebbj window
+DONE 111/300 aaedcebbj window gold=MCM pred=MCM tokens=3 seconds=0.7065
+START 112/300 aajfajibh comment_only
+DONE 112/300 aajfajibh comment_only gold=HP Conf pred=MCC tokens=3 seconds=0.3502
+START 113/300 aajfajibh window
+DONE 113/300 aajfajibh window gold=HP Conf pred=MCM tokens=3 seconds=0.7094
+START 114/300 aajfajibh function
+DONE 114/300 aajfajibh function gold=HP Conf pred=MCM tokens=3 seconds=0.7842
+START 115/300 aahddjbah window
+DONE 115/300 aahddjbah window gold=MCR pred=UMC tokens=3 seconds=0.704
+START 116/300 aahddjbah comment_only
+DONE 116/300 aahddjbah comment_only gold=MCR pred=MLInter tokens=3 seconds=0.3717
+START 117/300 aahddjbah function
+DONE 117/300 aahddjbah function gold=MCR pred=UMC tokens=3 seconds=0.9598
+START 118/300 aajbgadgf window
+DONE 118/300 aajbgadgf window gold=MLDepend pred=MLDepend tokens=4 seconds=0.8375
+START 119/300 aajbgadgf function
+DONE 119/300 aajbgadgf function gold=MLDepend pred=MLDepend tokens=4 seconds=0.6728
+START 120/300 aajbgadgf comment_only
+DONE 120/300 aajbgadgf comment_only gold=MLDepend pred=MLDepend tokens=4 seconds=0.3943
+START 121/300 aaeiedgej window
+DONE 121/300 aaeiedgej window gold=Data Conf pred=MCC tokens=3 seconds=0.7711
+START 122/300 aaeiedgej function
+DONE 122/300 aaeiedgej function gold=Data Conf pred=Proto tokens=2 seconds=3.2037
+START 123/300 aaeiedgej comment_only
+DONE 123/300 aaeiedgej comment_only gold=Data Conf pred=MCC tokens=3 seconds=0.3429
+START 124/300 aaiiccdhb function
+DONE 124/300 aaiiccdhb function gold=Abs pred=UMC tokens=3 seconds=3.3537
+START 125/300 aaiiccdhb comment_only
+DONE 125/300 aaiiccdhb comment_only gold=Abs pred=MCC tokens=3 seconds=0.3386
+START 126/300 aaiiccdhb window
+DONE 126/300 aaiiccdhb window gold=Abs pred=MCC tokens=3 seconds=0.7658
+START 127/300 aahfgjaff function
+DONE 127/300 aahfgjaff function gold=Layer Conf pred=UMC tokens=3 seconds=0.5847
+START 128/300 aahfgjaff window
+DONE 128/300 aahfgjaff window gold=Layer Conf pred=UMC tokens=3 seconds=0.768
+START 129/300 aahfgjaff comment_only
+DONE 129/300 aahfgjaff comment_only gold=Layer Conf pred=UMC tokens=3 seconds=0.3399
+START 130/300 aajdcijhj window
+DONE 130/300 aajdcijhj window gold=GC pred=DMC tokens=3 seconds=0.6972
+START 131/300 aajdcijhj comment_only
+DONE 131/300 aajdcijhj comment_only gold=GC pred=DMC tokens=3 seconds=0.355
+START 132/300 aajdcijhj function
+DONE 132/300 aajdcijhj function gold=GC pred=DMC tokens=3 seconds=0.4733
+START 133/300 aajceeeid function
+DONE 133/300 aajceeeid function gold=CDT pred=UMC tokens=3 seconds=1.539
+START 134/300 aajceeeid comment_only
+DONE 134/300 aajceeeid comment_only gold=CDT pred=MCC tokens=3 seconds=0.3421
+START 135/300 aajceeeid window
+DONE 135/300 aajceeeid window gold=CDT pred=UMC tokens=3 seconds=0.6916
+START 136/300 aagibhhbe function
+DONE 136/300 aagibhhbe function gold=BE pred=Abs tokens=2 seconds=0.7163
+START 137/300 aagibhhbe comment_only
+DONE 137/300 aagibhhbe comment_only gold=BE pred=GC tokens=2 seconds=0.2951
+START 138/300 aagibhhbe window
+DONE 138/300 aagibhhbe window gold=BE pred=Abs tokens=2 seconds=0.6723
+START 139/300 aabgahibh function
+DONE 139/300 aabgahibh function gold=MCC pred=MCM tokens=3 seconds=1.2202
+START 140/300 aabgahibh comment_only
+DONE 140/300 aabgahibh comment_only gold=MCC pred=MCM tokens=3 seconds=0.3554
+START 141/300 aabgahibh window
+DONE 141/300 aabgahibh window gold=MCC pred=MCM tokens=3 seconds=0.7104
+START 142/300 aadfiacgf comment_only
+DONE 142/300 aadfiacgf comment_only gold=CDT pred=Weight Conf tokens=3 seconds=0.3565
+START 143/300 aadfiacgf function
+DONE 143/300 aadfiacgf function gold=CDT pred=MCM tokens=3 seconds=0.5904
+START 144/300 aadfiacgf window
+DONE 144/300 aadfiacgf window gold=CDT pred=UMC tokens=3 seconds=0.7006
+START 145/300 aafeaiffi comment_only
+DONE 145/300 aafeaiffi comment_only gold=Layer Conf pred=Weight Conf tokens=3 seconds=0.3565
+START 146/300 aafeaiffi function
+DONE 146/300 aafeaiffi function gold=Layer Conf pred=Weight Conf tokens=3 seconds=1.4791
+START 147/300 aafeaiffi window
+DONE 147/300 aafeaiffi window gold=Layer Conf pred=Weight Conf tokens=3 seconds=0.7179
+START 148/300 aajdbjejb function
+DONE 148/300 aajdbjejb function gold=MCM pred=UMC tokens=3 seconds=0.8842
+START 149/300 aajdbjejb comment_only
+DONE 149/300 aajdbjejb comment_only gold=MCM pred=MCM tokens=3 seconds=0.3558
+START 150/300 aajdbjejb window
+DONE 150/300 aajdbjejb window gold=MCM pred=MCM tokens=3 seconds=0.7167
+START 151/300 aadagdejg comment_only
+DONE 151/300 aadagdejg comment_only gold=CDT pred=DMC tokens=3 seconds=0.3528
+START 152/300 aadagdejg window
+DONE 152/300 aadagdejg window gold=CDT pred=DMC tokens=3 seconds=0.9757
+START 153/300 aadagdejg function
+DONE 153/300 aadagdejg function gold=CDT pred=DMC tokens=3 seconds=1.7447
+START 154/300 aafahfcgh comment_only
+DONE 154/300 aafahfcgh comment_only gold=Proto pred=Proto tokens=2 seconds=0.2967
+START 155/300 aafahfcgh window
+DONE 155/300 aafahfcgh window gold=Proto pred=MLInter tokens=3 seconds=0.6056
+START 156/300 aafahfcgh function
+DONE 156/300 aafahfcgh function gold=Proto pred=Proto tokens=2 seconds=0.5433
+START 157/300 aaeidieej comment_only
+DONE 157/300 aaeidieej comment_only gold=CDT pred=MCR tokens=3 seconds=0.3503
+START 158/300 aaeidieej function
+DONE 158/300 aaeidieej function gold=CDT pred=UMC tokens=3 seconds=1.2108
+START 159/300 aaeidieej window
+DONE 159/300 aaeidieej window gold=CDT pred=MCM tokens=3 seconds=0.89
+START 160/300 aagdhccjd function
+DONE 160/300 aagdhccjd function gold=MLInter pred=UMC tokens=3 seconds=3.1996
+START 161/300 aagdhccjd comment_only
+DONE 161/300 aagdhccjd comment_only gold=MLInter pred=MLKnow tokens=3 seconds=0.3494
+START 162/300 aagdhccjd window
+DONE 162/300 aagdhccjd window gold=MLInter pred=Abs tokens=2 seconds=0.8114
+START 163/300 aaahcdafe window
+DONE 163/300 aaahcdafe window gold=MCR pred=Proto tokens=2 seconds=0.6505
+START 164/300 aaahcdafe comment_only
+DONE 164/300 aaahcdafe comment_only gold=MCR pred=MLRelia tokens=4 seconds=0.422
+START 165/300 aaahcdafe function
+DONE 165/300 aaahcdafe function gold=MCR pred=Proto tokens=2 seconds=0.6348
+START 166/300 aaiiaefbb window
+DONE 166/300 aaiiaefbb window gold=Proto pred=UMC tokens=3 seconds=0.7061
+START 167/300 aaiiaefbb comment_only
+DONE 167/300 aaiiaefbb comment_only gold=Proto pred=MLKnow tokens=3 seconds=0.3538
+START 168/300 aaiiaefbb function
+DONE 168/300 aaiiaefbb function gold=Proto pred=Proto tokens=2 seconds=0.8138
+START 169/300 aaaggiije window
+DONE 169/300 aaaggiije window gold=UMC pred=UMC tokens=3 seconds=0.5921
+START 170/300 aaaggiije comment_only
+DONE 170/300 aaaggiije comment_only gold=UMC pred=UMC tokens=3 seconds=0.3502
+START 171/300 aaaggiije function
+DONE 171/300 aaaggiije function gold=UMC pred=UMC tokens=3 seconds=0.4775
+START 172/300 aajffiiac window
+DONE 172/300 aajffiiac window gold=Abs pred=UMC tokens=3 seconds=0.7008
+START 173/300 aajffiiac function
+DONE 173/300 aajffiiac function gold=Abs pred=UMC tokens=3 seconds=0.7091
+START 174/300 aajffiiac comment_only
+DONE 174/300 aajffiiac comment_only gold=Abs pred=UMC tokens=3 seconds=0.3585
+START 175/300 aaefagbgc function
+DONE 175/300 aaefagbgc function gold=MCM pred=DS Conf tokens=3 seconds=1.0847
+START 176/300 aaefagbgc window
+DONE 176/300 aaefagbgc window gold=MCM pred=DS Conf tokens=3 seconds=0.6916
+START 177/300 aaefagbgc comment_only
+DONE 177/300 aaefagbgc comment_only gold=MCM pred=DS Conf tokens=3 seconds=0.3437
+START 178/300 aadajcbia function
+DONE 178/300 aadajcbia function gold=ML pred=Weight Conf tokens=3 seconds=0.9889
+START 179/300 aadajcbia comment_only
+DONE 179/300 aadajcbia comment_only gold=ML pred=ML tokens=2 seconds=0.3087
+START 180/300 aadajcbia window
+DONE 180/300 aadajcbia window gold=ML pred=ML tokens=2 seconds=0.9028
+START 181/300 aadhgfgeb comment_only
+DONE 181/300 aadhgfgeb comment_only gold=MCM pred=HP Conf tokens=3 seconds=0.3496
+START 182/300 aadhgfgeb function
+DONE 182/300 aadhgfgeb function gold=MCM pred=DS Conf tokens=3 seconds=0.6991
+START 183/300 aadhgfgeb window
+DONE 183/300 aadhgfgeb window gold=MCM pred=DS Conf tokens=3 seconds=0.7843
+START 184/300 aadfjffba comment_only
+DONE 184/300 aadfjffba comment_only gold=Proto pred=MCC tokens=3 seconds=0.3496
+START 185/300 aadfjffba function
+DONE 185/300 aadfjffba function gold=Proto pred=MCC tokens=3 seconds=0.5929
+START 186/300 aadfjffba window
+DONE 186/300 aadfjffba window gold=Proto pred=UMC tokens=3 seconds=0.6887
+START 187/300 aaibjjjbc window
+DONE 187/300 aaibjjjbc window gold=Weight Conf pred=Weight Conf tokens=3 seconds=0.7042
+START 188/300 aaibjjjbc comment_only
+DONE 188/300 aaibjjjbc comment_only gold=Weight Conf pred=Weight Conf tokens=3 seconds=0.3499
+START 189/300 aaibjjjbc function
+DONE 189/300 aaibjjjbc function gold=Weight Conf pred=UMC tokens=3 seconds=0.702
+START 190/300 aahcgjcji window
+DONE 190/300 aahcgjcji window gold=MLDepend pred=Proto tokens=2 seconds=0.7251
+START 191/300 aahcgjcji function
+DONE 191/300 aahcgjcji function gold=MLDepend pred=Proto tokens=2 seconds=0.9077
+START 192/300 aahcgjcji comment_only
+DONE 192/300 aahcgjcji comment_only gold=MLDepend pred=HP Conf tokens=3 seconds=0.3684
+START 193/300 aajdcifej comment_only
+DONE 193/300 aajdcifej comment_only gold=Proto pred=MLInter tokens=3 seconds=0.3741
+START 194/300 aajdcifej window
+DONE 194/300 aajdcifej window gold=Proto pred=UMC tokens=3 seconds=0.7101
+START 195/300 aajdcifej function
+DONE 195/300 aajdcifej function gold=Proto pred=UMC tokens=3 seconds=0.7732
+START 196/300 aaeifhdjh comment_only
+DONE 196/300 aaeifhdjh comment_only gold=PODT pred=MLInter tokens=3 seconds=0.3468
+START 197/300 aaeifhdjh window
+DONE 197/300 aaeifhdjh window gold=PODT pred=DMC tokens=3 seconds=0.8008
+START 198/300 aaeifhdjh function
+DONE 198/300 aaeifhdjh function gold=PODT pred=DMC tokens=3 seconds=0.781
+START 199/300 aaefgiijg comment_only
+DONE 199/300 aaefgiijg comment_only gold=MCR pred=MCR tokens=3 seconds=0.3615
+START 200/300 aaefgiijg function
+DONE 200/300 aaefgiijg function gold=MCR pred=Proto tokens=2 seconds=5.1761
+START 201/300 aaefgiijg window
+DONE 201/300 aaefgiijg window gold=MCR pred=MCR tokens=3 seconds=0.8814
+START 202/300 aafejhiea comment_only
+DONE 202/300 aafejhiea comment_only gold=HP Conf pred=MCC tokens=3 seconds=0.3537
+START 203/300 aafejhiea function
+DONE 203/300 aafejhiea function gold=HP Conf pred=UMC tokens=3 seconds=1.1535
+START 204/300 aafejhiea window
+DONE 204/300 aafejhiea window gold=HP Conf pred=MCC tokens=3 seconds=0.7894
+START 205/300 aaffedgad comment_only
+DONE 205/300 aaffedgad comment_only gold=HP Conf pred=MCC tokens=3 seconds=0.3438
+START 206/300 aaffedgad function
+DONE 206/300 aaffedgad function gold=HP Conf pred=UMC tokens=3 seconds=1.721
+START 207/300 aaffedgad window
+DONE 207/300 aaffedgad window gold=HP Conf pred=MCM tokens=3 seconds=0.7003
+START 208/300 aadgfdibb comment_only
+DONE 208/300 aadgfdibb comment_only gold=MCR pred=UMC tokens=3 seconds=0.3545
+START 209/300 aadgfdibb window
+DONE 209/300 aadgfdibb window gold=MCR pred=Proto tokens=2 seconds=0.6517
+START 210/300 aadgfdibb function
+DONE 210/300 aadgfdibb function gold=MCR pred=Proto tokens=2 seconds=1.1588
+START 211/300 aaeiaghhj window
+DONE 211/300 aaeiaghhj window gold=MLInter pred=Proto tokens=2 seconds=0.6226
+START 212/300 aaeiaghhj function
+DONE 212/300 aaeiaghhj function gold=MLInter pred=UMC tokens=3 seconds=1.0631
+START 213/300 aaeiaghhj comment_only
+DONE 213/300 aaeiaghhj comment_only gold=MLInter pred=GC tokens=2 seconds=0.2827
+START 214/300 aaaefgdbc function
+DONE 214/300 aaaefgdbc function gold=PQ pred=Proto tokens=2 seconds=5.3329
+START 215/300 aaaefgdbc window
+DONE 215/300 aaaefgdbc window gold=PQ pred=Proto tokens=2 seconds=0.7197
+START 216/300 aaaefgdbc comment_only
+DONE 216/300 aaaefgdbc comment_only gold=PQ pred=PQ tokens=3 seconds=0.3408
+START 217/300 aagbbjgij function
+DONE 217/300 aagbbjgij function gold=MLDepend pred=UMC tokens=3 seconds=2.2821
+START 218/300 aagbbjgij window
+DONE 218/300 aagbbjgij window gold=MLDepend pred=UMC tokens=3 seconds=0.8672
+START 219/300 aagbbjgij comment_only
+DONE 219/300 aagbbjgij comment_only gold=MLDepend pred=DMC tokens=3 seconds=0.3467
+START 220/300 aajfiibhb function
+DONE 220/300 aajfiibhb function gold=MCM pred=UMC tokens=3 seconds=0.5765
+START 221/300 aajfiibhb comment_only
+DONE 221/300 aajfiibhb comment_only gold=MCM pred=MCC tokens=3 seconds=0.3416
+START 222/300 aajfiibhb window
+DONE 222/300 aajfiibhb window gold=MCM pred=UMC tokens=3 seconds=0.6914
+START 223/300 aadageajc window
+DONE 223/300 aadageajc window gold=Proto pred=UMC tokens=3 seconds=0.5926
+START 224/300 aadageajc function
+DONE 224/300 aadageajc function gold=Proto pred=MCM tokens=3 seconds=0.5919
+START 225/300 aadageajc comment_only
+DONE 225/300 aadageajc comment_only gold=Proto pred=MCM tokens=3 seconds=0.3516
+START 226/300 aaffdcfdh window
+DONE 226/300 aaffdcfdh window gold=HP Conf pred=HP Conf tokens=3 seconds=0.711
+START 227/300 aaffdcfdh function
+DONE 227/300 aaffdcfdh function gold=HP Conf pred=HP Conf tokens=3 seconds=1.4452
+START 228/300 aaffdcfdh comment_only
+DONE 228/300 aaffdcfdh comment_only gold=HP Conf pred=HP Conf tokens=3 seconds=0.3443
+START 229/300 aafbdjhfg comment_only
+DONE 229/300 aafbdjhfg comment_only gold=Layer Conf pred=Weight Conf tokens=3 seconds=0.3472
+START 230/300 aafbdjhfg function
+DONE 230/300 aafbdjhfg function gold=Layer Conf pred=Weight Conf tokens=3 seconds=0.8809
+START 231/300 aafbdjhfg window
+DONE 231/300 aafbdjhfg window gold=Layer Conf pred=Weight Conf tokens=3 seconds=0.7137
+START 232/300 aaedjcbec function
+DONE 232/300 aaedjcbec function gold=MLDepend pred=Abs tokens=2 seconds=0.6408
+START 233/300 aaedjcbec comment_only
+DONE 233/300 aaedjcbec comment_only gold=MLDepend pred=Abs tokens=2 seconds=0.2913
+START 234/300 aaedjcbec window
+DONE 234/300 aaedjcbec window gold=MLDepend pred=Abs tokens=2 seconds=0.7301
+START 235/300 aagaghfef window
+DONE 235/300 aagaghfef window gold=Layer Conf pred=MCM tokens=3 seconds=0.8072
+START 236/300 aagaghfef comment_only
+DONE 236/300 aagaghfef comment_only gold=Layer Conf pred=MCM tokens=3 seconds=0.3573
+START 237/300 aagaghfef function
+DONE 237/300 aagaghfef function gold=Layer Conf pred=UMC tokens=3 seconds=1.458
+START 238/300 aaicecaej comment_only
+DONE 238/300 aaicecaej comment_only gold=Weight Conf pred=Weight Conf tokens=3 seconds=0.352
+START 239/300 aaicecaej function
+DONE 239/300 aaicecaej function gold=Weight Conf pred=Weight Conf tokens=3 seconds=1.5485
+START 240/300 aaicecaej window
+DONE 240/300 aaicecaej window gold=Weight Conf pred=Weight Conf tokens=3 seconds=0.7903
+START 241/300 aaffdjjaa window
+DONE 241/300 aaffdjjaa window gold=Layer Conf pred=MLDepend tokens=4 seconds=0.7662
+START 242/300 aaffdjjaa function
+DONE 242/300 aaffdjjaa function gold=Layer Conf pred=DMC tokens=3 seconds=0.8885
+START 243/300 aaffdjjaa comment_only
+DONE 243/300 aaffdjjaa comment_only gold=Layer Conf pred=MLDepend tokens=4 seconds=0.4291
+START 244/300 aaijaggcb window
+DONE 244/300 aaijaggcb window gold=PODT pred=MLKnow tokens=3 seconds=0.8588
+START 245/300 aaijaggcb function
+DONE 245/300 aaijaggcb function gold=PODT pred=MLKnow tokens=3 seconds=1.2729
+START 246/300 aaijaggcb comment_only
+DONE 246/300 aaijaggcb comment_only gold=PODT pred=DS Conf tokens=3 seconds=0.3605
+START 247/300 aahicagej function
+DONE 247/300 aahicagej function gold=Weight Conf pred=UMC tokens=3 seconds=0.5914
+START 248/300 aahicagej comment_only
+DONE 248/300 aahicagej comment_only gold=Weight Conf pred=MCC tokens=3 seconds=0.3398
+START 249/300 aahicagej window
+DONE 249/300 aahicagej window gold=Weight Conf pred=Proto tokens=2 seconds=0.6379
+START 250/300 aaedghfjd comment_only
+DONE 250/300 aaedghfjd comment_only gold=MCC pred=MCC tokens=3 seconds=0.3447
+START 251/300 aaedghfjd function
+DONE 251/300 aaedghfjd function gold=MCC pred=MCC tokens=3 seconds=0.9543
+START 252/300 aaedghfjd window
+DONE 252/300 aaedghfjd window gold=MCC pred=MCC tokens=3 seconds=0.7762
+START 253/300 aadghcged window
+DONE 253/300 aadghcged window gold=Abs pred=UMC tokens=3 seconds=0.6984
+START 254/300 aadghcged function
+DONE 254/300 aadghcged function gold=Abs pred=MCC tokens=3 seconds=0.7781
+START 255/300 aadghcged comment_only
+DONE 255/300 aadghcged comment_only gold=Abs pred=MCC tokens=3 seconds=0.3418
+START 256/300 aahjgeiic function
+DONE 256/300 aahjgeiic function gold=MLDepend pred=MLDepend tokens=4 seconds=0.8362
+START 257/300 aahjgeiic window
+DONE 257/300 aahjgeiic window gold=MLDepend pred=MLDepend tokens=4 seconds=0.7443
+START 258/300 aahjgeiic comment_only
+DONE 258/300 aahjgeiic comment_only gold=MLDepend pred=MLDepend tokens=4 seconds=0.3996
+START 259/300 aagfeiiaj window
+DONE 259/300 aagfeiiaj window gold=Weight Conf pred=Weight Conf tokens=3 seconds=0.6816
+START 260/300 aagfeiiaj comment_only
+DONE 260/300 aagfeiiaj comment_only gold=Weight Conf pred=Weight Conf tokens=3 seconds=0.3444
+START 261/300 aagfeiiaj function
+DONE 261/300 aagfeiiaj function gold=Weight Conf pred=Weight Conf tokens=3 seconds=1.0632
+START 262/300 aafadcigh comment_only
+DONE 262/300 aafadcigh comment_only gold=MLRelia pred=MLInter tokens=3 seconds=0.3389
+START 263/300 aafadcigh function
+DONE 263/300 aafadcigh function gold=MLRelia pred=UMC tokens=3 seconds=0.7745
+START 264/300 aafadcigh window
+DONE 264/300 aafadcigh window gold=MLRelia pred=Proto tokens=2 seconds=0.7157
+START 265/300 aahjdcjgg function
+DONE 265/300 aahjdcjgg function gold=PODT pred=UMC tokens=3 seconds=3.0823
+START 266/300 aahjdcjgg comment_only
+DONE 266/300 aahjdcjgg comment_only gold=PODT pred=UMC tokens=3 seconds=0.3526
+START 267/300 aahjdcjgg window
+DONE 267/300 aahjdcjgg window gold=PODT pred=UMC tokens=3 seconds=0.6959
+START 268/300 aaeieahii comment_only
+DONE 268/300 aaeieahii comment_only gold=PODT pred=DS Conf tokens=3 seconds=0.3515
+START 269/300 aaeieahii window
+DONE 269/300 aaeieahii window gold=PODT pred=DS Conf tokens=3 seconds=0.7894
+START 270/300 aaeieahii function
+DONE 270/300 aaeieahii function gold=PODT pred=MCC tokens=3 seconds=1.0786
+START 271/300 aadgecacc window
+DONE 271/300 aadgecacc window gold=MCC pred=MCM tokens=3 seconds=0.8099
+START 272/300 aadgecacc function
+DONE 272/300 aadgecacc function gold=MCC pred=MCM tokens=3 seconds=2.4355
+START 273/300 aadgecacc comment_only
+DONE 273/300 aadgecacc comment_only gold=MCC pred=MCM tokens=3 seconds=0.3494
+START 274/300 aaeiebjie window
+DONE 274/300 aaeiebjie window gold=PODT pred=MCC tokens=3 seconds=0.7914
+START 275/300 aaeiebjie comment_only
+DONE 275/300 aaeiebjie comment_only gold=PODT pred=UMC tokens=3 seconds=0.3501
+START 276/300 aaeiebjie function
+DONE 276/300 aaeiebjie function gold=PODT pred=UMC tokens=3 seconds=0.6986
+START 277/300 aafadaiij function
+DONE 277/300 aafadaiij function gold=Layer Conf pred=MCC tokens=3 seconds=0.7033
+START 278/300 aafadaiij comment_only
+DONE 278/300 aafadaiij comment_only gold=Layer Conf pred=DMC tokens=3 seconds=0.3567
+START 279/300 aafadaiij window
+DONE 279/300 aafadaiij window gold=Layer Conf pred=UMC tokens=3 seconds=0.8212
+START 280/300 aaeejjfbc function
+DONE 280/300 aaeejjfbc function gold=MCC pred=UMC tokens=3 seconds=1.5426
+START 281/300 aaeejjfbc window
+DONE 281/300 aaeejjfbc window gold=MCC pred=Weight Conf tokens=3 seconds=0.885
+START 282/300 aaeejjfbc comment_only
+DONE 282/300 aaeejjfbc comment_only gold=MCC pred=Weight Conf tokens=3 seconds=0.3543
+START 283/300 aafdibbge comment_only
+DONE 283/300 aafdibbge comment_only gold=PQ pred=Proto tokens=2 seconds=0.2905
+START 284/300 aafdibbge function
+DONE 284/300 aafdibbge function gold=PQ pred=Proto tokens=2 seconds=0.8177
+START 285/300 aafdibbge window
+DONE 285/300 aafdibbge window gold=PQ pred=Proto tokens=2 seconds=0.82
+START 286/300 aaeidjjhd comment_only
+DONE 286/300 aaeidjjhd comment_only gold=MLRelia pred=MCM tokens=3 seconds=0.3644
+START 287/300 aaeidjjhd function
+DONE 287/300 aaeidjjhd function gold=MLRelia pred=UMC tokens=3 seconds=1.1571
+START 288/300 aaeidjjhd window
+DONE 288/300 aaeidjjhd window gold=MLRelia pred=MCM tokens=3 seconds=0.7933
+START 289/300 aagfjdjeg function
+DONE 289/300 aagfjdjeg function gold=Abs pred=MCM tokens=3 seconds=4.4764
+START 290/300 aagfjdjeg comment_only
+DONE 290/300 aagfjdjeg comment_only gold=Abs pred=MCM tokens=3 seconds=0.3563
+START 291/300 aagfjdjeg window
+DONE 291/300 aagfjdjeg window gold=Abs pred=MCM tokens=3 seconds=0.927
+START 292/300 aahiiegbc function
+DONE 292/300 aahiiegbc function gold=Abs pred=MCM tokens=3 seconds=0.4866
+START 293/300 aahiiegbc comment_only
+DONE 293/300 aahiiegbc comment_only gold=Abs pred=MCM tokens=3 seconds=0.3485
+START 294/300 aahiiegbc window
+DONE 294/300 aahiiegbc window gold=Abs pred=MCM tokens=3 seconds=0.6121
+START 295/300 aajcfhiga function
+DONE 295/300 aajcfhiga function gold=Abs pred=UMC tokens=3 seconds=1.2906
+START 296/300 aajcfhiga comment_only
+DONE 296/300 aajcfhiga comment_only gold=Abs pred=MCM tokens=3 seconds=0.3547
+START 297/300 aajcfhiga window
+DONE 297/300 aajcfhiga window gold=Abs pred=UMC tokens=3 seconds=0.8203
+START 298/300 aahiigecd function
+DONE 298/300 aahiigecd function gold=Weight Conf pred=Weight Conf tokens=3 seconds=0.7983
+START 299/300 aahiigecd window
+DONE 299/300 aahiigecd window gold=Weight Conf pred=Weight Conf tokens=3 seconds=0.8729
+START 300/300 aahiigecd comment_only
+DONE 300/300 aahiigecd comment_only gold=Weight Conf pred=Weight Conf tokens=3 seconds=0.3437
+RUN_COMPLETE 300

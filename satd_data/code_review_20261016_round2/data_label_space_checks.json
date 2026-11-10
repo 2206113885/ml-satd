@@ -1,0 +1,758 @@
+[
+  {
+    "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "line": 32,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "line": 32,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "line": 31,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "line": 32,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "line": 32,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "line": 27,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "line": 31,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "line": 26,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "line": 33,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "line": 26,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+    "line": 37,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "line": 38,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "line": 38,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "line": 38,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "battle/gpt_battle.py",
+    "line": 33,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "battle/test.py",
+    "line": 34,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "line": 36,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "line": 38,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "line": 44,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "line": 44,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "line": 40,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "line": 40,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "line": 40,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "line": 36,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "line": 38,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "line": 40,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "line": 40,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "line": 40,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "line": 36,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "line": 38,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "line": 40,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "line": 40,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "line": 40,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "line": 39,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "original_COT.py",
+    "line": 36,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "random_classify/random_classify.py",
+    "line": 30,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "test1.py",
+    "line": 44,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "test3.py",
+    "line": 44,
+    "constant": "LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "line": 42,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "line": 28,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "line": 42,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "line": 42,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "line": 42,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "line": 30,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "line": 31,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "line": 31,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "line": 39,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "line": 42,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "line": 28,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "line": 42,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "line": 42,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "line": 42,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "line": 30,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "line": 28,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "line": 31,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "line": 39,
+    "constant": "FINE_LABEL_ABBR",
+    "labels": 23,
+    "matches_expected_23_abbreviations": true
+  }
+]

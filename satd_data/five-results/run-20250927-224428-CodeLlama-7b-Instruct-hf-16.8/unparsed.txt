@@ -1,0 +1,1 @@
+pairs.) The results are then sorted || by score and the top sequences are written to a file.

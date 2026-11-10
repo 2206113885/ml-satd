@@ -1,0 +1,11 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/codegemma-1.1-7b-it",
+  "model_name": "codegemma-1.1-7b-it",
+  "run_dir": "results/run-20251004-011850-codegemma-1.1-7b-it",
+  "max_yn_tokens": 8,
+  "max_pick_tokens": 64,
+  "max_fallback_tokens": 32,
+  "fallback_abbr": "Data Conf",
+  "method": "YN polling -> pick best"
+}

@@ -1,0 +1,16 @@
+{
+  "predictions": 300,
+  "unique_sample_arm_pairs": 300,
+  "samples": 100,
+  "arms": 3,
+  "normal_eos_finishes": 300,
+  "parse_failures": 0,
+  "input_truncations": 0,
+  "source_csv_hashes_unchanged": true,
+  "cohort_hash_matches_settings": true,
+  "runner_hash_matches_settings": true,
+  "reference_hash_matches_settings": true,
+  "independent_sklearn_metrics_agreement": true,
+  "historically_verified_subgroup_size": 96,
+  "interpretation": "Paired small stratified pilot under original nonthinking vanilla settings; not direct comparison with manuscript best CoT score."
+}

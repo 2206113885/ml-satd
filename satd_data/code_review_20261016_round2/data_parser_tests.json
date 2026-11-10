@@ -1,0 +1,7909 @@
+[
+  {
+    "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "simple_extract",
+    "line": 697,
+    "end_line": 708,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "simple_extract",
+    "line": 697,
+    "end_line": 708,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "simple_extract",
+    "line": 697,
+    "end_line": 708,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "simple_extract",
+    "line": 697,
+    "end_line": 708,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "simple_extract",
+    "line": 697,
+    "end_line": 708,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "simple_extract",
+    "line": 697,
+    "end_line": 708,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 703,
+    "end_line": 715,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 703,
+    "end_line": 715,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 703,
+    "end_line": 715,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 703,
+    "end_line": 715,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 703,
+    "end_line": 715,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 703,
+    "end_line": 715,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 887,
+    "end_line": 898,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 887,
+    "end_line": 898,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 887,
+    "end_line": 898,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 887,
+    "end_line": 898,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 887,
+    "end_line": 898,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 887,
+    "end_line": 898,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 693,
+    "end_line": 704,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 693,
+    "end_line": 704,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 693,
+    "end_line": 704,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 693,
+    "end_line": 704,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 693,
+    "end_line": 704,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 693,
+    "end_line": 704,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 585,
+    "end_line": 596,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 585,
+    "end_line": 596,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 585,
+    "end_line": 596,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 585,
+    "end_line": 596,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 585,
+    "end_line": 596,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 585,
+    "end_line": 596,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 904,
+    "end_line": 913,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 904,
+    "end_line": 913,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 904,
+    "end_line": 913,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 904,
+    "end_line": 913,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 904,
+    "end_line": 913,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 904,
+    "end_line": 913,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "function": "simple_extract",
+    "line": 898,
+    "end_line": 907,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 847,
+    "end_line": 867,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 847,
+    "end_line": 867,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 847,
+    "end_line": 867,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 847,
+    "end_line": 867,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 847,
+    "end_line": 867,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 847,
+    "end_line": 867,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 336,
+    "end_line": 347,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 336,
+    "end_line": 347,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 336,
+    "end_line": 347,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 336,
+    "end_line": 347,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 336,
+    "end_line": 347,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 336,
+    "end_line": 347,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 341,
+    "end_line": 353,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 341,
+    "end_line": 353,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 341,
+    "end_line": 353,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 341,
+    "end_line": 353,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 341,
+    "end_line": 353,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 341,
+    "end_line": 353,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 338,
+    "end_line": 349,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 347,
+    "end_line": 356,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 346,
+    "end_line": 355,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 346,
+    "end_line": 355,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 346,
+    "end_line": 355,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 346,
+    "end_line": 355,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 346,
+    "end_line": 355,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 346,
+    "end_line": 355,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 318,
+    "end_line": 338,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 318,
+    "end_line": 338,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 318,
+    "end_line": 338,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 318,
+    "end_line": 338,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 318,
+    "end_line": 338,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 318,
+    "end_line": 338,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 222,
+    "end_line": 233,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 227,
+    "end_line": 242,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 227,
+    "end_line": 242,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 227,
+    "end_line": 242,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 227,
+    "end_line": 242,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 227,
+    "end_line": 242,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 227,
+    "end_line": 242,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 120,
+    "end_line": 132,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 120,
+    "end_line": 132,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 120,
+    "end_line": 132,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 120,
+    "end_line": 132,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 120,
+    "end_line": 132,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 120,
+    "end_line": 132,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 109,
+    "end_line": 120,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 109,
+    "end_line": 120,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 109,
+    "end_line": 120,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 109,
+    "end_line": 120,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 109,
+    "end_line": 120,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 109,
+    "end_line": 120,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 113,
+    "end_line": 124,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 119,
+    "end_line": 128,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 119,
+    "end_line": 128,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 119,
+    "end_line": 128,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 119,
+    "end_line": 128,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 119,
+    "end_line": 128,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 119,
+    "end_line": 128,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 118,
+    "end_line": 127,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 136,
+    "end_line": 156,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 136,
+    "end_line": 156,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 136,
+    "end_line": 156,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 136,
+    "end_line": 156,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 136,
+    "end_line": 156,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 136,
+    "end_line": 156,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 126,
+    "end_line": 137,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 126,
+    "end_line": 137,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 126,
+    "end_line": 137,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 126,
+    "end_line": 137,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 126,
+    "end_line": 137,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 126,
+    "end_line": 137,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 131,
+    "end_line": 143,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 131,
+    "end_line": 143,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 131,
+    "end_line": 143,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 131,
+    "end_line": 143,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 131,
+    "end_line": 143,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "function": "extract_abbr",
+    "line": 131,
+    "end_line": 143,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 115,
+    "end_line": 126,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "function": "simple_extract",
+    "line": 127,
+    "end_line": 138,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 110,
+    "end_line": 121,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 110,
+    "end_line": 121,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 110,
+    "end_line": 121,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 110,
+    "end_line": 121,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 110,
+    "end_line": 121,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "function": "simple_extract",
+    "line": 110,
+    "end_line": 121,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 136,
+    "end_line": 145,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 135,
+    "end_line": 144,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 135,
+    "end_line": 144,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 135,
+    "end_line": 144,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 135,
+    "end_line": 144,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 135,
+    "end_line": 144,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 135,
+    "end_line": 144,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 153,
+    "end_line": 173,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 153,
+    "end_line": 173,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 153,
+    "end_line": 173,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 153,
+    "end_line": 173,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 153,
+    "end_line": 173,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "function": "extract_abbr_from_text",
+    "line": 153,
+    "end_line": 173,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 142,
+    "end_line": 151,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 142,
+    "end_line": 151,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 142,
+    "end_line": 151,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 142,
+    "end_line": 151,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 142,
+    "end_line": 151,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "function": "simple_extract",
+    "line": 142,
+    "end_line": 151,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "function": "simple_extract",
+    "line": 130,
+    "end_line": 141,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 135,
+    "end_line": 150,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 135,
+    "end_line": 150,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 135,
+    "end_line": 150,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 135,
+    "end_line": 150,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 135,
+    "end_line": 150,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "function": "extract_abbr_from_text",
+    "line": 135,
+    "end_line": 150,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "",
+    "output": [
+      "<UNK>",
+      "",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "Yesterday",
+    "output": [
+      "<UNK>",
+      "Yesterday",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "Not sure",
+    "output": [
+      "<UNK>",
+      "Not sure",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "Model Code Reusability",
+    "output": [
+      "<UNK>",
+      "Model Code Reusability",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "Data Conf.",
+    "output": [
+      "<UNK>",
+      "Data Conf.",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "**Data Conf**",
+    "output": [
+      "<UNK>",
+      "**Data Conf**",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 121,
+    "end_line": 146,
+    "input": "",
+    "output": [
+      "<UNK>",
+      "",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 121,
+    "end_line": 146,
+    "input": "Yesterday",
+    "output": [
+      "<UNK>",
+      "Yesterday",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 121,
+    "end_line": 146,
+    "input": "Not sure",
+    "output": [
+      "<UNK>",
+      "Not sure",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 121,
+    "end_line": 146,
+    "input": "Model Code Reusability",
+    "output": [
+      "MLInter",
+      "Model Code Reusability",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 121,
+    "end_line": 146,
+    "input": "Data Conf.",
+    "output": [
+      "Data Conf",
+      "Data Conf.",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "parse_abbr_and_reason",
+    "line": 121,
+    "end_line": 146,
+    "input": "**Data Conf**",
+    "output": [
+      "Data Conf",
+      "**Data Conf**",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 148,
+    "end_line": 163,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 148,
+    "end_line": 163,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 148,
+    "end_line": 163,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 148,
+    "end_line": 163,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 148,
+    "end_line": 163,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 148,
+    "end_line": 163,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 114,
+    "end_line": 125,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "",
+    "output": [
+      "<UNK>",
+      "",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "Yesterday",
+    "output": [
+      "<UNK>",
+      "Yesterday",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "Not sure",
+    "output": [
+      "<UNK>",
+      "Not sure",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "Model Code Reusability",
+    "output": [
+      "<UNK>",
+      "Model Code Reusability",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "Data Conf.",
+    "output": [
+      "<UNK>",
+      "Data Conf.",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 127,
+    "end_line": 148,
+    "input": "**Data Conf**",
+    "output": [
+      "<UNK>",
+      "**Data Conf**",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 144,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 134,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 134,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 134,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 134,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 134,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 134,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 136,
+    "end_line": 158,
+    "input": "",
+    "output": [
+      "<UNK>",
+      "",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 136,
+    "end_line": 158,
+    "input": "Yesterday",
+    "output": [
+      "<UNK>",
+      "Yesterday",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 136,
+    "end_line": 158,
+    "input": "Not sure",
+    "output": [
+      "<UNK>",
+      "Not sure",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 136,
+    "end_line": 158,
+    "input": "Model Code Reusability",
+    "output": [
+      "<UNK>",
+      "Model Code Reusability",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 136,
+    "end_line": 158,
+    "input": "Data Conf.",
+    "output": [
+      "<UNK>",
+      "Data Conf.",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 136,
+    "end_line": 158,
+    "input": "**Data Conf**",
+    "output": [
+      "<UNK>",
+      "**Data Conf**",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "",
+    "output": [
+      "<UNK>",
+      "",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "Yesterday",
+    "output": [
+      "<UNK>",
+      "Yesterday",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "Not sure",
+    "output": [
+      "<UNK>",
+      "Not sure",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "Model Code Reusability",
+    "output": [
+      "<UNK>",
+      "Model Code Reusability",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "Data Conf.",
+    "output": [
+      "<UNK>",
+      "Data Conf.",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "**Data Conf**",
+    "output": [
+      "<UNK>",
+      "**Data Conf**",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "simple_extract",
+    "line": 125,
+    "end_line": 138,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "",
+    "output": [
+      "<UNK>",
+      "",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "Yesterday",
+    "output": [
+      "<UNK>",
+      "Yesterday",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "Not sure",
+    "output": [
+      "<UNK>",
+      "Not sure",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "Model Code Reusability",
+    "output": [
+      "<UNK>",
+      "Model Code Reusability",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "Data Conf.",
+    "output": [
+      "<UNK>",
+      "Data Conf.",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "function": "parse_abbr_and_reason",
+    "line": 140,
+    "end_line": 169,
+    "input": "**Data Conf**",
+    "output": [
+      "<UNK>",
+      "**Data Conf**",
+      ""
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 141,
+    "end_line": 174,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 141,
+    "end_line": 174,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 141,
+    "end_line": 174,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 141,
+    "end_line": 174,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 141,
+    "end_line": 174,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr_from_text",
+    "line": 141,
+    "end_line": 174,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "battle/gpt_battle.py",
+    "function": "extract_abbr",
+    "line": 165,
+    "end_line": 184,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "battle/gpt_battle.py",
+    "function": "extract_abbr",
+    "line": 165,
+    "end_line": 184,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "battle/gpt_battle.py",
+    "function": "extract_abbr",
+    "line": 165,
+    "end_line": 184,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "battle/gpt_battle.py",
+    "function": "extract_abbr",
+    "line": 165,
+    "end_line": 184,
+    "input": "Model Code Reusability",
+    "output": "MCR"
+  },
+  {
+    "file": "battle/gpt_battle.py",
+    "function": "extract_abbr",
+    "line": 165,
+    "end_line": 184,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "battle/gpt_battle.py",
+    "function": "extract_abbr",
+    "line": 165,
+    "end_line": 184,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "battle/test.py",
+    "function": "extract_abbr_from_text",
+    "line": 159,
+    "end_line": 175,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "battle/test.py",
+    "function": "extract_abbr_from_text",
+    "line": 159,
+    "end_line": 175,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "battle/test.py",
+    "function": "extract_abbr_from_text",
+    "line": 159,
+    "end_line": 175,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "battle/test.py",
+    "function": "extract_abbr_from_text",
+    "line": 159,
+    "end_line": 175,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "battle/test.py",
+    "function": "extract_abbr_from_text",
+    "line": 159,
+    "end_line": 175,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "battle/test.py",
+    "function": "extract_abbr_from_text",
+    "line": 159,
+    "end_line": 175,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 310,
+    "end_line": 319,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 310,
+    "end_line": 319,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 310,
+    "end_line": 319,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 310,
+    "end_line": 319,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 310,
+    "end_line": 319,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 310,
+    "end_line": 319,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 321,
+    "end_line": 334,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 321,
+    "end_line": 334,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 321,
+    "end_line": 334,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 321,
+    "end_line": 334,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 321,
+    "end_line": 334,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 321,
+    "end_line": 334,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 382,
+    "end_line": 392,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 382,
+    "end_line": 392,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 382,
+    "end_line": 392,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 382,
+    "end_line": 392,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 382,
+    "end_line": 392,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 382,
+    "end_line": 392,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 394,
+    "end_line": 408,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 394,
+    "end_line": 408,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 394,
+    "end_line": 408,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 394,
+    "end_line": 408,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 394,
+    "end_line": 408,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 394,
+    "end_line": 408,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 335,
+    "end_line": 345,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 335,
+    "end_line": 345,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 335,
+    "end_line": 345,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 335,
+    "end_line": 345,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 335,
+    "end_line": 345,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 335,
+    "end_line": 345,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 347,
+    "end_line": 361,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 347,
+    "end_line": 361,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 347,
+    "end_line": 361,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 347,
+    "end_line": 361,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 347,
+    "end_line": 361,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 347,
+    "end_line": 361,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "",
+    "output": "unknown"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "Model Code Reusability",
+    "output": "unknown"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "Data Conf.",
+    "output": "unknown"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "**Data Conf**",
+    "output": "unknown"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "",
+    "output": "unknown"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "Model Code Reusability",
+    "output": "unknown"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "Data Conf.",
+    "output": "unknown"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_yesno",
+    "line": 288,
+    "end_line": 301,
+    "input": "**Data Conf**",
+    "output": "unknown"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "function": "parse_abbr",
+    "line": 303,
+    "end_line": 319,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 337,
+    "end_line": 347,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 337,
+    "end_line": 347,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 337,
+    "end_line": 347,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 337,
+    "end_line": 347,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 337,
+    "end_line": 347,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 337,
+    "end_line": 347,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 349,
+    "end_line": 363,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 349,
+    "end_line": 363,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 349,
+    "end_line": 363,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 349,
+    "end_line": 363,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 349,
+    "end_line": 363,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 349,
+    "end_line": 363,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 385,
+    "end_line": 395,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 397,
+    "end_line": 411,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 507,
+    "end_line": 516,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 507,
+    "end_line": 516,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 507,
+    "end_line": 516,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 507,
+    "end_line": 516,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 507,
+    "end_line": 516,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 507,
+    "end_line": 516,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 518,
+    "end_line": 531,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 518,
+    "end_line": 531,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 518,
+    "end_line": 531,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 518,
+    "end_line": 531,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 518,
+    "end_line": 531,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 518,
+    "end_line": 531,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 539,
+    "end_line": 548,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 539,
+    "end_line": 548,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 539,
+    "end_line": 548,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 539,
+    "end_line": 548,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 539,
+    "end_line": 548,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 539,
+    "end_line": 548,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 550,
+    "end_line": 563,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 550,
+    "end_line": 563,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 550,
+    "end_line": 563,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 550,
+    "end_line": 563,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 550,
+    "end_line": 563,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 550,
+    "end_line": 563,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 540,
+    "end_line": 550,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 552,
+    "end_line": 566,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 542,
+    "end_line": 552,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 542,
+    "end_line": 552,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 542,
+    "end_line": 552,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 542,
+    "end_line": 552,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 542,
+    "end_line": 552,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 542,
+    "end_line": 552,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 554,
+    "end_line": 568,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 554,
+    "end_line": 568,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 554,
+    "end_line": 568,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 554,
+    "end_line": 568,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 554,
+    "end_line": 568,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 554,
+    "end_line": 568,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 661,
+    "end_line": 671,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 661,
+    "end_line": 671,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 661,
+    "end_line": 671,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 661,
+    "end_line": 671,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 661,
+    "end_line": 671,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 661,
+    "end_line": 671,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 673,
+    "end_line": 687,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 673,
+    "end_line": 687,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 673,
+    "end_line": 687,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 673,
+    "end_line": 687,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 673,
+    "end_line": 687,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_abbr",
+    "line": 673,
+    "end_line": 687,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 543,
+    "end_line": 553,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 555,
+    "end_line": 569,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 544,
+    "end_line": 554,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 544,
+    "end_line": 554,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 544,
+    "end_line": 554,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 544,
+    "end_line": 554,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 544,
+    "end_line": 554,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 544,
+    "end_line": 554,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 556,
+    "end_line": 570,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 556,
+    "end_line": 570,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 556,
+    "end_line": 570,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 556,
+    "end_line": 570,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 556,
+    "end_line": 570,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 556,
+    "end_line": 570,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 432,
+    "end_line": 441,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 432,
+    "end_line": 441,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 432,
+    "end_line": 441,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 432,
+    "end_line": 441,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 432,
+    "end_line": 441,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_yes_no",
+    "line": 432,
+    "end_line": 441,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 443,
+    "end_line": 456,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 443,
+    "end_line": 456,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 443,
+    "end_line": 456,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 443,
+    "end_line": 456,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 443,
+    "end_line": 456,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_abbr",
+    "line": 443,
+    "end_line": 456,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 122,
+    "end_line": 131,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 122,
+    "end_line": 131,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 122,
+    "end_line": 131,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 122,
+    "end_line": 131,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 122,
+    "end_line": 131,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 122,
+    "end_line": 131,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 133,
+    "end_line": 146,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 133,
+    "end_line": 146,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 133,
+    "end_line": 146,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 133,
+    "end_line": 146,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 133,
+    "end_line": 146,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 133,
+    "end_line": 146,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 146,
+    "end_line": 156,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 146,
+    "end_line": 156,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 146,
+    "end_line": 156,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 146,
+    "end_line": 156,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 146,
+    "end_line": 156,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 146,
+    "end_line": 156,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 158,
+    "end_line": 172,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 158,
+    "end_line": 172,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 158,
+    "end_line": 172,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 158,
+    "end_line": 172,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 158,
+    "end_line": 172,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 158,
+    "end_line": 172,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_yes_no",
+    "line": 147,
+    "end_line": 157,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 173,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 158,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 160,
+    "end_line": 174,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 157,
+    "input": "",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 157,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 157,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 157,
+    "input": "Model Code Reusability",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 157,
+    "input": "Data Conf.",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_yes_no",
+    "line": 148,
+    "end_line": 157,
+    "input": "**Data Conf**",
+    "output": "unk"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 172,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 172,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 172,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 172,
+    "input": "Model Code Reusability",
+    "output": "MLInter"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 172,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_abbr",
+    "line": 159,
+    "end_line": 172,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "original_COT.py",
+    "function": "extract_abbr",
+    "line": 118,
+    "end_line": 139,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "original_COT.py",
+    "function": "extract_abbr",
+    "line": 118,
+    "end_line": 139,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "original_COT.py",
+    "function": "extract_abbr",
+    "line": 118,
+    "end_line": 139,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "original_COT.py",
+    "function": "extract_abbr",
+    "line": 118,
+    "end_line": 139,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "original_COT.py",
+    "function": "extract_abbr",
+    "line": 118,
+    "end_line": 139,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "original_COT.py",
+    "function": "extract_abbr",
+    "line": 118,
+    "end_line": 139,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "",
+    "output": "unknown"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "Model Code Reusability",
+    "output": "unknown"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "Data Conf.",
+    "output": "unknown"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "**Data Conf**",
+    "output": "unknown"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test1.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "",
+    "output": "unknown"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "Yesterday",
+    "output": "yes"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "Not sure",
+    "output": "no"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "Model Code Reusability",
+    "output": "unknown"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "Data Conf.",
+    "output": "unknown"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_yesno",
+    "line": 172,
+    "end_line": 185,
+    "input": "**Data Conf**",
+    "output": "unknown"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "test3.py",
+    "function": "parse_abbr",
+    "line": 187,
+    "end_line": 203,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 363,
+    "end_line": 384,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 363,
+    "end_line": 384,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 363,
+    "end_line": 384,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 363,
+    "end_line": 384,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 363,
+    "end_line": 384,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 363,
+    "end_line": 384,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 386,
+    "end_line": 415,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 386,
+    "end_line": 415,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 386,
+    "end_line": 415,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 386,
+    "end_line": 415,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 386,
+    "end_line": 415,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 386,
+    "end_line": 415,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 355,
+    "end_line": 376,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 355,
+    "end_line": 376,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 355,
+    "end_line": 376,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 355,
+    "end_line": 376,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 355,
+    "end_line": 376,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 355,
+    "end_line": 376,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_fine",
+    "line": 378,
+    "end_line": 407,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_fine",
+    "line": 378,
+    "end_line": 407,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_fine",
+    "line": 378,
+    "end_line": 407,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_fine",
+    "line": 378,
+    "end_line": 407,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_fine",
+    "line": 378,
+    "end_line": 407,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "function": "extract_fine",
+    "line": 378,
+    "end_line": 407,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_coarse",
+    "line": 377,
+    "end_line": 398,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "function": "extract_fine",
+    "line": 400,
+    "end_line": 429,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 365,
+    "end_line": 386,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 365,
+    "end_line": 386,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 365,
+    "end_line": 386,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 365,
+    "end_line": 386,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 365,
+    "end_line": 386,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 365,
+    "end_line": 386,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 388,
+    "end_line": 417,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 388,
+    "end_line": 417,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 388,
+    "end_line": 417,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 388,
+    "end_line": 417,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 388,
+    "end_line": 417,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "function": "extract_fine",
+    "line": 388,
+    "end_line": 417,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 353,
+    "end_line": 374,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "function": "extract_fine",
+    "line": 376,
+    "end_line": 405,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 300,
+    "end_line": 318,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 300,
+    "end_line": 318,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 300,
+    "end_line": 318,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 300,
+    "end_line": 318,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 300,
+    "end_line": 318,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_coarse",
+    "line": 300,
+    "end_line": 318,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_fine",
+    "line": 320,
+    "end_line": 349,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_fine",
+    "line": 320,
+    "end_line": 349,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_fine",
+    "line": 320,
+    "end_line": 349,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_fine",
+    "line": 320,
+    "end_line": 349,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_fine",
+    "line": 320,
+    "end_line": 349,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "function": "extract_fine",
+    "line": 320,
+    "end_line": 349,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 271,
+    "end_line": 292,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 271,
+    "end_line": 292,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 271,
+    "end_line": 292,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 271,
+    "end_line": 292,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 271,
+    "end_line": 292,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 271,
+    "end_line": 292,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 294,
+    "end_line": 323,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 294,
+    "end_line": 323,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 294,
+    "end_line": 323,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 294,
+    "end_line": 323,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 294,
+    "end_line": 323,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 294,
+    "end_line": 323,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 263,
+    "end_line": 284,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 263,
+    "end_line": 284,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 263,
+    "end_line": 284,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 263,
+    "end_line": 284,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 263,
+    "end_line": 284,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 263,
+    "end_line": 284,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 286,
+    "end_line": 315,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 286,
+    "end_line": 315,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 286,
+    "end_line": 315,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 286,
+    "end_line": 315,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 286,
+    "end_line": 315,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 286,
+    "end_line": 315,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 285,
+    "end_line": 306,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "function": "extract_fine",
+    "line": 308,
+    "end_line": 337,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 273,
+    "end_line": 294,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 273,
+    "end_line": 294,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 273,
+    "end_line": 294,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 273,
+    "end_line": 294,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 273,
+    "end_line": 294,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 273,
+    "end_line": 294,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 296,
+    "end_line": 325,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 296,
+    "end_line": 325,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 296,
+    "end_line": 325,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 296,
+    "end_line": 325,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 296,
+    "end_line": 325,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 296,
+    "end_line": 325,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 213,
+    "end_line": 233,
+    "input": "",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 213,
+    "end_line": 233,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 213,
+    "end_line": 233,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 213,
+    "end_line": 233,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 213,
+    "end_line": 233,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 213,
+    "end_line": 233,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 235,
+    "end_line": 264,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 235,
+    "end_line": 264,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 235,
+    "end_line": 264,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 235,
+    "end_line": 264,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 235,
+    "end_line": 264,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 235,
+    "end_line": 264,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 274,
+    "end_line": 295,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 274,
+    "end_line": 295,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 274,
+    "end_line": 295,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 274,
+    "end_line": 295,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 274,
+    "end_line": 295,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 274,
+    "end_line": 295,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 297,
+    "end_line": 326,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 297,
+    "end_line": 326,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 297,
+    "end_line": 326,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 297,
+    "end_line": 326,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 297,
+    "end_line": 326,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 297,
+    "end_line": 326,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 208,
+    "end_line": 226,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 208,
+    "end_line": 226,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 208,
+    "end_line": 226,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 208,
+    "end_line": 226,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 208,
+    "end_line": 226,
+    "input": "Data Conf.",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_coarse",
+    "line": 208,
+    "end_line": 226,
+    "input": "**Data Conf**",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 228,
+    "end_line": 257,
+    "input": "",
+    "exception": "IndexError",
+    "message": "list index out of range"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 228,
+    "end_line": 257,
+    "input": "Yesterday",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 228,
+    "end_line": 257,
+    "input": "Not sure",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 228,
+    "end_line": 257,
+    "input": "Model Code Reusability",
+    "output": "<UNK>"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 228,
+    "end_line": 257,
+    "input": "Data Conf.",
+    "output": "Data Conf"
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "function": "extract_fine",
+    "line": 228,
+    "end_line": 257,
+    "input": "**Data Conf**",
+    "output": "Data Conf"
+  }
+]

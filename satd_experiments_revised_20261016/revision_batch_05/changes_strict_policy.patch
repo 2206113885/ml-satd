@@ -1,0 +1,947 @@
+--- before/official_generation.py
++++ after/official_generation.py
+@@ -1,8 +1,15 @@
+-"""R45: one source of generation policy per model and native runtime mode.
+-
+-No model/tokenizer is loaded on import. Profiles distinguish author advice,
+-checkpoint values, framework defaults, and reference-implementation inference.
+-Task output caps and audit seeds are deliberately outside the model policy.
++# R46 STRICT POLICY: previous module description retained.
++# """R45: one source of generation policy per model and native runtime mode.
++#
++# No model/tokenizer is loaded on import. Profiles distinguish author advice,
++# checkpoint values, framework defaults, and reference-implementation inference.
++# Task output caps and audit seeds are deliberately outside the model policy.
++# """
++"""R46: explicit author advice > checkpoint config > framework defaults.
++
++No model/tokenizer is loaded on import. Usage examples and inferred reference
++sampler settings are not promoted to general author recommendations.
++Task output caps and audit seeds remain outside the model policy.
+ """
+ from __future__ import annotations
+ 
+@@ -73,8 +80,139 @@
+     return resolved
+ 
+ 
++# R46 STRICT POLICY: previous function preserved in place.
++# def build_official_generation(model, model_path, native_thinking, max_new_tokens):
++#     """Read a clean checkpoint config, then apply only the selected model policy.
++#
++#     This deliberately never copies model.generation_config, which pipelines or
++#     legacy scripts may have mutated. No network request is made here. A gated
++#     checkpoint's unknown values are read from the user's existing local files.
++#     """
++#     from transformers import GenerationConfig
++#
++#     if not isinstance(max_new_tokens, int) or isinstance(max_new_tokens, bool) or max_new_tokens <= 0:
++#         raise ValueError("An explicit positive task max_new_tokens is required")
++#     registry, registry_source = _read_json(REGISTRY_PATH)
++#     model_key, entry = _model_entry(registry, model_path)
++#     if model_key.startswith("Qwen3-"):
++#         mode = "thinking" if native_thinking else "nonthinking"
++#     elif model_key == "gpt-oss-20b":
++#         mode = "reasoning"
++#     else:
++#         if native_thinking:
++#             raise ValueError("This checkpoint has no supported native thinking switch")
++#         mode = "instruct"
++#     profile = entry["modes"][mode]
++#     checkpoint_dir = Path(model_path)
++#     generation_path = checkpoint_dir / "generation_config.json"
++#     model_config_path = checkpoint_dir / "config.json"
++#     if generation_path.is_file():
++#         raw, config_source = _read_json(generation_path)
++#         config = GenerationConfig.from_dict(deepcopy(raw))
++#         config_origin = "fresh_local_checkpoint_generation_config"
++#     elif model_config_path.is_file():
++#         raw, config_source = _read_json(model_config_path)
++#         # Reconstruct a configuration object only; this does not load weights.
++#         # R45 OFFICIAL PROFILE: initial object-only implementation retained.
++#         # fresh_model_config = type(model.config).from_dict(deepcopy(raw))
++#         # config = GenerationConfig.from_model_config(fresh_model_config)
++#         config, model_config_api = _fresh_model_generation(GenerationConfig, model, raw)
++#         config_source["generation_config_api"] = model_config_api
++#         config_origin = "fresh_local_model_config_and_transformers_defaults"
++#     elif entry.get("public_generation_config") is not None:
++#         raw = deepcopy(entry["public_generation_config"])
++#         config = GenerationConfig.from_dict(raw)
++#         config_source = {"url": entry["generation_config_url"],
++#                          "pinned_revision": entry["official_revision"],
++#                          "embedded_json_sha256": _sha(json.dumps(raw, sort_keys=True).encode())}
++#         config_origin = "bundled_pinned_official_public_generation_config"
++#     else:
++#         raise FileNotFoundError("No clean local generation_config.json/config.json for "
++#                                 + model_key + "; gated defaults must not be guessed")
++#
++#     # R45 OFFICIAL PROFILE: initial base snapshot retained below as history.
++#     # base_config = deepcopy(config.to_dict())
++#     # Special-token fallback must also use disk data, never the script-mutated
++#     # model.generation_config reference. GenerationConfig.from_model_config
++#     # handles nested text configs (including Gemma 3) in the installed library.
++#     protocol_fallback = {}
++#     protocol_source = None
++#     protocol_keys = ("bos_token_id", "eos_token_id", "pad_token_id", "decoder_start_token_id")
++#     if model_config_path.is_file() and any(getattr(config, key, None) is None for key in protocol_keys):
++#         model_raw, protocol_source = _read_json(model_config_path)
++#         # R45 OFFICIAL PROFILE: object-only implementation retained.
++#         # disk_model_config = type(model.config).from_dict(deepcopy(model_raw))
++#         # disk_generation = GenerationConfig.from_model_config(disk_model_config)
++#         disk_generation, protocol_api = _fresh_model_generation(GenerationConfig, model, model_raw)
++#         protocol_source["generation_config_api"] = protocol_api
++#         for key in protocol_keys:
++#             value = getattr(disk_generation, key, None)
++#             if getattr(config, key, None) is None and value is not None:
++#                 setattr(config, key, deepcopy(value))
++#                 protocol_fallback[key] = deepcopy(value)
++#     base_config = deepcopy(config.to_dict())
++#     if getattr(config, "eos_token_id", None) is None or getattr(config, "eos_token_id", None) == []:
++#         raise ValueError("Clean checkpoint has no EOS token ID; do not guess an instruction model's stopping protocol")
++#     overrides = deepcopy(profile["parameters"])
++#     unused = config.update(**overrides)
++#     if unused:
++#         raise ValueError("Installed Transformers does not support profile fields: "
++#                          + ", ".join(sorted(unused)))
++#     default_resolution = _resolve_framework_defaults(config)
++#     # HF's decoder-only pad fallback is EOS when a checkpoint has no pad ID.
++#     # Materialize that technical fallback so the saved config is accurate.
++#     pad_resolution = None
++#     if getattr(config, "pad_token_id", None) is None and getattr(config, "eos_token_id", None) is not None:
++#         eos = config.eos_token_id
++#         config.pad_token_id = eos[0] if isinstance(eos, (list, tuple)) else eos
++#         pad_resolution = {"pad_token_id": config.pad_token_id,
++#                           "origin": "Transformers technical fallback to first EOS; not an author sampling recommendation"}
++#     config.max_new_tokens = max_new_tokens
++#     config._from_model_config = False
++#
++#     # 4.50+ may otherwise merge defaults back from a mutated model config even
++#     # when a separate GenerationConfig was supplied. This is a generate() kwarg,
++#     # not a GenerationConfig field. Older versions lack that merge switch.
++#     generate_options = {}
++#     parameters = inspect.signature(model.generate).parameters
++#     if "use_model_defaults" in parameters:
++#         generate_options["use_model_defaults"] = False
++#     else:
++#         # A wrapper hiding this keyword must not silently enable inheritance.
++#         prepare = getattr(model, "_prepare_generation_config", None)
++#         if prepare is not None and "use_model_defaults" in inspect.signature(prepare).parameters:
++#             generate_options["use_model_defaults"] = False
++#
++#     metadata = {
++#         "profile_id": profile["profile_id"], "model_key": model_key, "mode": mode,
++#         "policy": registry["policy"], "registry": registry_source,
++#         "helper_sha256": _sha(Path(__file__).read_bytes()),
++#         "official_repo": entry["repo_id"], "official_source_revision": entry["official_revision"],
++#         "official_model_card_url": entry["model_card_url"],
++#         "official_generation_config_url": entry["generation_config_url"],
++#         "author_sampling_recommendation_url": profile.get("sampling_recommendation_url"),
++#         "reference_sampler_url": profile.get("reference_sampler_url"),
++#         "official_source_revision_is_local_weight_revision": False,
++#         "config_origin": config_origin, "config_source": config_source,
++#         "fresh_model_config_protocol_source": protocol_source,
++#         "fresh_model_config_protocol_fallback": protocol_fallback,
++#         "technical_pad_fallback": pad_resolution,
++#         "remote_generation_config_status": entry.get("remote_generation_config_status", "public_snapshot_verified"),
++#         "parameter_evidence": deepcopy(profile["parameter_evidence"]),
++#         "official_profile_overrides": overrides,
++#         "framework_version": importlib.metadata.version("transformers"),
++#         "materialized_framework_defaults": default_resolution,
++#         "effective_sampler": {key: deepcopy(getattr(config, key, None)) for key in SAMPLING_KEYS},
++#         "generate_options": generate_options,
++#         "model_default_isolation": "During this sequential call, runtime uses a fresh config as model.generation_config fallback and restores the previous reference in finally; covers Transformers 4 special-token fallback and Transformers 5 unconditional None-field fallback.",
++#         "input_output_budget_policy": registry["output_budget_policy"],
++#         "requested_task_max_new_tokens": max_new_tokens,
++#     }
++#     return config, base_config, deepcopy(profile["chat_template_kwargs"]), metadata, generate_options
++
++# R46 STRICT POLICY: only explicit recommendations override clean defaults.
+ def build_official_generation(model, model_path, native_thinking, max_new_tokens):
+-    """Read a clean checkpoint config, then apply only the selected model policy.
++    """R46: author recommendation > clean checkpoint fields > framework defaults.
+ 
+     This deliberately never copies model.generation_config, which pipelines or
+     legacy scripts may have mutated. No network request is made here. A gated
+@@ -98,29 +236,36 @@
+     checkpoint_dir = Path(model_path)
+     generation_path = checkpoint_dir / "generation_config.json"
+     model_config_path = checkpoint_dir / "config.json"
++    # R46 STRICT POLICY: never treat a usage example or a pipeline's modified
++    # in-memory config as a checkpoint default. Prefer actual generation JSON.
+     if generation_path.is_file():
+         raw, config_source = _read_json(generation_path)
+         config = GenerationConfig.from_dict(deepcopy(raw))
+         config_origin = "fresh_local_checkpoint_generation_config"
++    elif entry.get("public_generation_config") is not None:
++        raw = deepcopy(entry["public_generation_config"])
++        config = GenerationConfig.from_dict(raw)
++        # R46 STRICT POLICY: first fallback provenance retained; a user-supplied
++        # main-branch download must not be reported as a verified pinned file.
++        # config_source = {"url": entry["generation_config_url"],
++        #                  "pinned_revision": entry["official_revision"],
++        #                  "embedded_json_sha256": _sha(json.dumps(raw, sort_keys=True).encode())}
++        # config_origin = "bundled_pinned_official_generation_config"
++        config_source = deepcopy(entry.get("generation_config_snapshot_source", {
++            "url": entry["generation_config_url"],
++            "pinned_revision": entry["official_revision"],
++            "evidence_kind": "direct_official_repository_snapshot",
++        }))
++        config_source["embedded_json_sha256"] = _sha(json.dumps(raw, sort_keys=True).encode())
++        config_origin = "bundled_official_source_generation_config_snapshot"
+     elif model_config_path.is_file():
+         raw, config_source = _read_json(model_config_path)
+-        # Reconstruct a configuration object only; this does not load weights.
+-        # R45 OFFICIAL PROFILE: initial object-only implementation retained.
+-        # fresh_model_config = type(model.config).from_dict(deepcopy(raw))
+-        # config = GenerationConfig.from_model_config(fresh_model_config)
+         config, model_config_api = _fresh_model_generation(GenerationConfig, model, raw)
+         config_source["generation_config_api"] = model_config_api
+         config_origin = "fresh_local_model_config_and_transformers_defaults"
+-    elif entry.get("public_generation_config") is not None:
+-        raw = deepcopy(entry["public_generation_config"])
+-        config = GenerationConfig.from_dict(raw)
+-        config_source = {"url": entry["generation_config_url"],
+-                         "pinned_revision": entry["official_revision"],
+-                         "embedded_json_sha256": _sha(json.dumps(raw, sort_keys=True).encode())}
+-        config_origin = "bundled_pinned_official_public_generation_config"
+     else:
+-        raise FileNotFoundError("No clean local generation_config.json/config.json for "
+-                                + model_key + "; gated defaults must not be guessed")
++        raise FileNotFoundError("No clean checkpoint configuration for " + model_key
++                                + "; EOS and unknown gated defaults must not be guessed")
+ 
+     # R45 OFFICIAL PROFILE: initial base snapshot retained below as history.
+     # base_config = deepcopy(config.to_dict())
+@@ -150,7 +295,35 @@
+     if unused:
+         raise ValueError("Installed Transformers does not support profile fields: "
+                          + ", ".join(sorted(unused)))
++    # Constructor defaults in 4.x and deferred defaults in 5.x both come
++    # from the installed framework, never from fixed experiment-level knobs.
+     default_resolution = _resolve_framework_defaults(config)
++    configured_fields = set(raw)
++    if config_origin == "fresh_local_model_config_and_transformers_defaults":
++        for name in ("decoder", "generator", "text_config"):
++            nested = raw.get(name)
++            if isinstance(nested, dict):
++                configured_fields.update(nested)
++    parameter_sources = {}
++    for key in SAMPLING_KEYS:
++        if key in overrides:
++            origin = "explicit_author_recommendation"
++        elif key in default_resolution:
++            # A checkpoint field explicitly set to None can still be resolved
++            # by Transformers 5; its effective value is a framework default.
++            origin = "transformers_framework_default"
++        elif key in configured_fields:
++            origin = "checkpoint_generation_config" if "model_config_and" not in config_origin else "legacy_model_config_generation_field"
++        else:
++            origin = "transformers_framework_default"
++        parameter_sources[key] = {
++            "origin": origin,
++            "value": deepcopy(getattr(config, key, None)),
++            "operative_for_sampling": bool(getattr(config, "do_sample", False))
++            if key in {"temperature", "top_p", "top_k", "min_p", "typical_p", "epsilon_cutoff", "eta_cutoff"}
++            else None,
++        }
++
+     # HF's decoder-only pad fallback is EOS when a checkpoint has no pad ID.
+     # Materialize that technical fallback so the saved config is accurate.
+     pad_resolution = None
+@@ -192,7 +365,12 @@
+         "remote_generation_config_status": entry.get("remote_generation_config_status", "public_snapshot_verified"),
+         "parameter_evidence": deepcopy(profile["parameter_evidence"]),
+         "official_profile_overrides": overrides,
++        "generation_parameter_priority": registry["parameter_priority"],
++        "parameter_sources": parameter_sources,
++        "explicit_checkpoint_fields": sorted(configured_fields),
++        "author_recommendation_urls": profile.get("recommendation_urls", []),
+         "framework_version": importlib.metadata.version("transformers"),
++        "framework_do_sample_fallback": "No forced True. Omitted checkpoint field uses installed GenerationConfig default (basic HF default False).",
+         "materialized_framework_defaults": default_resolution,
+         "effective_sampler": {key: deepcopy(getattr(config, key, None)) for key in SAMPLING_KEYS},
+         "generate_options": generate_options,
+--- before/official_generation_profiles.json
++++ after/official_generation_profiles.json
+@@ -1,7 +1,7 @@
+ {
+-  "schema_version": 1,
+-  "revision_id": "R45",
+-  "policy": "Author general recommendations take priority; otherwise fresh checkpoint defaults plus installed Transformers defaults. Usage-example choices are not universal recommendations. No pipeline or mutated model.generation_config is inherited.",
++  "schema_version": 2,
++  "revision_id": "R46",
++  "policy": "1 explicit general author recommendations; 2 fresh checkpoint generation_config.json; 3 installed Transformers defaults for omitted fields. No universal do_sample=True, usage-example promotion, or reference-sampler inference.",
+   "output_budget_policy": "Preserve all original task/stage max_new_tokens upper bounds. Existing complete-input remaining-context cap remains in force.",
+   "seed_policy": "Existing per-sample/per-stage audit seeds unchanged; seed is an experiment reproducibility control, not a sampling recommendation.",
+   "identity_boundary": "Pinned public source revisions establish recommendations only. Local weight revision/identity is not inferred; local config hashes are recorded at future runtime.",
+@@ -35,11 +35,28 @@
+             "temperature": 0.6,
+             "top_p": 0.95,
+             "top_k": 20,
++            "min_p": 0.0
++          },
++          "parameter_evidence": {
++            "do_sample": "Official thinking guidance explicitly rejects greedy; sampling enabled.",
++            "temperature": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "top_p": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "top_k": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "min_p": "Explicit mode-specific Best Practices recommendation in the pinned official model card."
++          },
++          "chat_template_kwargs": {
++            "enable_thinking": true
++          },
++          "previous_parameters_R45": {
++            "do_sample": true,
++            "temperature": 0.6,
++            "top_p": 0.95,
++            "top_k": 20,
+             "min_p": 0.0,
+             "repetition_penalty": 1.0,
+             "num_beams": 1
+           },
+-          "parameter_evidence": {
++          "previous_parameter_evidence_R45": {
+             "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+             "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+             "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+@@ -48,13 +65,29 @@
+             "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+             "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+           },
+-          "chat_template_kwargs": {
+-            "enable_thinking": true
+-          }
++          "recommendation_urls": [
++            "https://huggingface.co/Qwen/Qwen3-8B#best-practices"
++          ],
++          "change_note_R46": "Only explicit general author recommendations remain as overrides. Previous values retained above; checkpoint and framework fields are resolved at runtime with per-field provenance."
+         },
+         "nonthinking": {
+           "profile_id": "Qwen3-8B_nonthinking",
+           "parameters": {
++            "temperature": 0.7,
++            "top_p": 0.8,
++            "top_k": 20,
++            "min_p": 0.0
++          },
++          "parameter_evidence": {
++            "temperature": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "top_p": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "top_k": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "min_p": "Explicit mode-specific Best Practices recommendation in the pinned official model card."
++          },
++          "chat_template_kwargs": {
++            "enable_thinking": false
++          },
++          "previous_parameters_R45": {
+             "do_sample": true,
+             "temperature": 0.7,
+             "top_p": 0.8,
+@@ -63,7 +96,7 @@
+             "repetition_penalty": 1.0,
+             "num_beams": 1
+           },
+-          "parameter_evidence": {
++          "previous_parameter_evidence_R45": {
+             "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+             "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+             "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+@@ -72,9 +105,10 @@
+             "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+             "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+           },
+-          "chat_template_kwargs": {
+-            "enable_thinking": false
+-          }
++          "recommendation_urls": [
++            "https://huggingface.co/Qwen/Qwen3-8B#best-practices"
++          ],
++          "change_note_R46": "Only explicit general author recommendations remain as overrides. Previous values retained above; checkpoint and framework fields are resolved at runtime with per-field provenance."
+         }
+       }
+     },
+@@ -107,11 +141,28 @@
+             "temperature": 0.6,
+             "top_p": 0.95,
+             "top_k": 20,
++            "min_p": 0.0
++          },
++          "parameter_evidence": {
++            "do_sample": "Official thinking guidance explicitly rejects greedy; sampling enabled.",
++            "temperature": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "top_p": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "top_k": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "min_p": "Explicit mode-specific Best Practices recommendation in the pinned official model card."
++          },
++          "chat_template_kwargs": {
++            "enable_thinking": true
++          },
++          "previous_parameters_R45": {
++            "do_sample": true,
++            "temperature": 0.6,
++            "top_p": 0.95,
++            "top_k": 20,
+             "min_p": 0.0,
+             "repetition_penalty": 1.0,
+             "num_beams": 1
+           },
+-          "parameter_evidence": {
++          "previous_parameter_evidence_R45": {
+             "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+             "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+             "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+@@ -120,13 +171,29 @@
+             "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+             "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+           },
+-          "chat_template_kwargs": {
+-            "enable_thinking": true
+-          }
++          "recommendation_urls": [
++            "https://huggingface.co/Qwen/Qwen3-14B#best-practices"
++          ],
++          "change_note_R46": "Only explicit general author recommendations remain as overrides. Previous values retained above; checkpoint and framework fields are resolved at runtime with per-field provenance."
+         },
+         "nonthinking": {
+           "profile_id": "Qwen3-14B_nonthinking",
+           "parameters": {
++            "temperature": 0.7,
++            "top_p": 0.8,
++            "top_k": 20,
++            "min_p": 0.0
++          },
++          "parameter_evidence": {
++            "temperature": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "top_p": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "top_k": "Explicit mode-specific Best Practices recommendation in the pinned official model card.",
++            "min_p": "Explicit mode-specific Best Practices recommendation in the pinned official model card."
++          },
++          "chat_template_kwargs": {
++            "enable_thinking": false
++          },
++          "previous_parameters_R45": {
+             "do_sample": true,
+             "temperature": 0.7,
+             "top_p": 0.8,
+@@ -135,7 +202,7 @@
+             "repetition_penalty": 1.0,
+             "num_beams": 1
+           },
+-          "parameter_evidence": {
++          "previous_parameter_evidence_R45": {
+             "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+             "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+             "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+@@ -144,9 +211,10 @@
+             "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+             "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+           },
+-          "chat_template_kwargs": {
+-            "enable_thinking": false
+-          }
++          "recommendation_urls": [
++            "https://huggingface.co/Qwen/Qwen3-14B#best-practices"
++          ],
++          "change_note_R46": "Only explicit general author recommendations remain as overrides. Previous values retained above; checkpoint and framework fields are resolved at runtime with per-field provenance."
+         }
+       }
+     },
+@@ -175,7 +243,12 @@
+       "modes": {
+         "instruct": {
+           "profile_id": "Qwen2.5-Coder-7B-Instruct_instruct",
+-          "parameters": {
++          "parameters": {},
++          "parameter_evidence": {
++            "all": "No general numeric author recommendation established. Use explicit fields of clean checkpoint generation_config.json; omitted fields inherit installed Transformers defaults. Do not infer sampling from an example or from poor classification scores."
++          },
++          "chat_template_kwargs": {},
++          "previous_parameters_R45": {
+             "do_sample": true,
+             "temperature": 0.7,
+             "top_p": 0.8,
+@@ -184,7 +257,7 @@
+             "repetition_penalty": 1.1,
+             "num_beams": 1
+           },
+-          "parameter_evidence": {
++          "previous_parameter_evidence_R45": {
+             "do_sample": "Exact 7B-Instruct checkpoint generation_config default=True",
+             "temperature": "Exact checkpoint default=.7; model card does not give a separate universal tuned SATD recommendation",
+             "top_p": "Exact checkpoint default=.8",
+@@ -193,7 +266,8 @@
+             "repetition_penalty": "Exact 7B-Instruct checkpoint default=1.1; do not copy 1.05 from another size/base/vLLM example",
+             "num_beams": "Transformers effective framework default=1"
+           },
+-          "chat_template_kwargs": {}
++          "recommendation_urls": [],
++          "change_note_R46": "Only explicit general author recommendations remain as overrides. Previous values retained above; checkpoint and framework fields are resolved at runtime with per-field provenance."
+         }
+       }
+     },
+@@ -205,17 +279,72 @@
+       ],
+       "model_card_url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf",
+       "generation_config_url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/resolve/4ce0c40b2ea823bd1d8f1f3fd5bc8a7e80d749bc/generation_config.json",
+-      "public_generation_config": null,
+-      "remote_generation_config_status": "401 gated; numeric values not independently verified",
++      "public_generation_config": {
++        "_from_model_config": true,
++        "bos_token_id": 1,
++        "eos_token_id": 2,
++        "transformers_version": "4.33.0.dev0"
++      },
++      "remote_generation_config_status": "official_generation_config_visible_in_user_screenshot; transcribed and archived",
+       "modes": {
+         "instruct": {
+           "profile_id": "CodeLlama-7b-Instruct-hf_local_checkpoint_default",
+           "parameters": {},
+           "parameter_evidence": {
++            "all": "No general numeric author recommendation established. Use explicit fields of clean checkpoint generation_config.json; omitted fields inherit installed Transformers defaults. Do not infer sampling from an example or from poor classification scores.",
++            "do_sample": {
++              "origin": "transformers_framework_default",
++              "reason": "Not specified in the screenshot of official generation_config.json; local checkpoint file is read first at runtime.",
++              "source": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/generation_config.json"
++            },
++            "temperature": {
++              "origin": "transformers_framework_default",
++              "reason": "Not specified in the screenshot of official generation_config.json; local checkpoint file is read first at runtime.",
++              "source": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/generation_config.json"
++            },
++            "top_p": {
++              "origin": "transformers_framework_default",
++              "reason": "Not specified in the screenshot of official generation_config.json; local checkpoint file is read first at runtime.",
++              "source": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/generation_config.json"
++            },
++            "top_k": {
++              "origin": "transformers_framework_default",
++              "reason": "Not specified in the screenshot of official generation_config.json; local checkpoint file is read first at runtime.",
++              "source": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/generation_config.json"
++            },
++            "repetition_penalty": {
++              "origin": "transformers_framework_default",
++              "reason": "Not specified in the screenshot of official generation_config.json; local checkpoint file is read first at runtime.",
++              "source": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/generation_config.json"
++            },
++            "num_beams": {
++              "origin": "transformers_framework_default",
++              "reason": "Not specified in the screenshot of official generation_config.json; local checkpoint file is read first at runtime.",
++              "source": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/generation_config.json"
++            }
++          },
++          "chat_template_kwargs": {},
++          "previous_parameters_R45": {},
++          "previous_parameter_evidence_R45": {
+             "all": "Fresh local checkpoint generation_config.json, otherwise fresh config.json via GenerationConfig.from_model_config, then installed Transformers defaults. No sampling values guessed from other models or usage examples."
+           },
+-          "chat_template_kwargs": {}
+-        }
++          "recommendation_urls": [],
++          "change_note_R46": "No universal author numeric recommendation. Official generation_config in supplied screenshot contains only _from_model_config, BOS/EOS and library version. With no local checkpoint overrides, omitted do_sample follows Transformers basic default False (single-beam greedy); temperature/top_p/top_k are inoperative under greedy. Meta example temperature=0.2/top_p=0.95 is not promoted to general advice."
++        }
++      },
++      "previous_public_generation_config_R45": null,
++      "previous_remote_generation_config_status_R45": "401 gated; numeric values not independently verified",
++      "generation_config_snapshot_source": {
++        "url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/blob/main/generation_config.json",
++        "pinned_revision": null,
++        "evidence_kind": "transcribed_user_screenshot_of_author_repository",
++        "visible_file_commit_short": "0ee9a34",
++        "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-363397f0-f887-472d-bb4a-671f6d9bb030.png",
++        "archived_screenshot_relative_path": "revision_batch_05/sources/CodeLlama-7b-Instruct-hf/official_generation_config_screenshot.png",
++        "screenshot_sha256": "0db3c0e17efff44c4c81d78f868e79ecd0723207bb6323ebb171ce14a10ca41f",
++        "archived_transcription_relative_path": "revision_batch_05/sources/CodeLlama-7b-Instruct-hf/generation_config.json",
++        "retrieved_on": "2026-10-16",
++        "verification_boundary": "All six visible JSON lines transcribed from user screenshot displaying the official Meta repository and filename. No claim of byte-for-byte original download or match to full queried repository revision."
+       }
+     },
+     "Llama-3.1-8B-Instruct": {
+@@ -226,18 +355,64 @@
+       ],
+       "model_card_url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+       "generation_config_url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/0e9e39f249a16976918f6564b8830bc894c89659/generation_config.json",
+-      "public_generation_config": null,
+-      "remote_generation_config_status": "401 gated; numeric values not independently verified",
++      "public_generation_config": {
++        "bos_token_id": 128000,
++        "do_sample": true,
++        "eos_token_id": [
++          128001,
++          128008,
++          128009
++        ],
++        "temperature": 0.6,
++        "top_p": 0.9,
++        "transformers_version": "4.42.3"
++      },
++      "remote_generation_config_status": "user_supplied_official_download_archived; independent browser body extraction unavailable",
+       "modes": {
+         "instruct": {
+           "profile_id": "Llama-3.1-8B-Instruct_local_checkpoint_default",
+           "parameters": {},
+           "parameter_evidence": {
++            "all": "No general numeric author recommendation established. Use explicit fields of clean checkpoint generation_config.json; omitted fields inherit installed Transformers defaults. Do not infer sampling from an example or from poor classification scores.",
++            "do_sample": {
++              "value": true,
++              "origin": "checkpoint_generation_config",
++              "source": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/generation_config.json"
++            },
++            "temperature": {
++              "value": 0.6,
++              "origin": "checkpoint_generation_config",
++              "source": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/generation_config.json"
++            },
++            "top_p": {
++              "value": 0.9,
++              "origin": "checkpoint_generation_config",
++              "source": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/generation_config.json"
++            }
++          },
++          "chat_template_kwargs": {},
++          "previous_parameters_R45": {},
++          "previous_parameter_evidence_R45": {
+             "all": "Fresh local checkpoint generation_config.json, otherwise fresh config.json via GenerationConfig.from_model_config, then installed Transformers defaults. No sampling values guessed from other models or usage examples."
+           },
+-          "chat_template_kwargs": {}
+-        }
+-      }
++          "recommendation_urls": [],
++          "change_note_R46": "No universal author numeric recommendation. Follow freshly read local generation_config.json; otherwise use the user-supplied official download snapshot (do_sample=true, temperature=0.6, top_p=0.9). Omitted fields follow installed Transformers defaults. Task cap unchanged."
++        }
++      },
++      "logged_in_access_observation": "Access granted in native Chrome; generation_config content subsequently supplied by user and archived under revision_batch_05/sources. Current snapshot source is recorded separately.",
++      "previous_public_generation_config_R45": null,
++      "previous_remote_generation_config_status_R45": "401 gated; numeric values not independently verified",
++      "generation_config_snapshot_source": {
++        "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/generation_config.json",
++        "pinned_revision": null,
++        "evidence_kind": "user_download_from_author_repository",
++        "user_supplied_path": "/Users/yizho/Downloads/generation_config.json",
++        "archived_relative_path": "revision_batch_05/sources/Llama-3.1-8B-Instruct/generation_config.json",
++        "download_sha256": "189fb0c0d7fd8a527db217c0a60a0e013f0394cd8800f9697a666a9e75e5f7fd",
++        "retrieved_on": "2026-10-16",
++        "verification_boundary": "Exact supplied bytes archived. Association with Llama3.1 follows the ongoing official-file request and user download; browser could not independently extract the file. Main-branch file is not claimed to match the previously queried pinned revision."
++      },
++      "previous_logged_in_access_observation_R46": "Native Chrome model page showed access granted. Numerical generation_config content not yet extracted; no values guessed."
+     },
+     "codegemma-1.1-7b-it": {
+       "repo_id": "google/codegemma-1.1-7b-it",
+@@ -247,17 +422,73 @@
+       ],
+       "model_card_url": "https://huggingface.co/google/codegemma-1.1-7b-it",
+       "generation_config_url": "https://huggingface.co/google/codegemma-1.1-7b-it/resolve/9523c8dbf32bf2130e2de570c478b3bdb1d36101/generation_config.json",
+-      "public_generation_config": null,
+-      "remote_generation_config_status": "401 gated; numeric values not independently verified",
++      "public_generation_config": {
++        "_from_model_config": true,
++        "bos_token_id": 2,
++        "eos_token_id": 1,
++        "pad_token_id": 0,
++        "transformers_version": "4.40.1"
++      },
++      "remote_generation_config_status": "official_generation_config_visible_in_user_screenshot; transcribed and archived",
+       "modes": {
+         "instruct": {
+           "profile_id": "codegemma-1.1-7b-it_local_checkpoint_default",
+           "parameters": {},
+           "parameter_evidence": {
++            "all": "No general numeric author recommendation established. Use explicit fields of clean checkpoint generation_config.json; omitted fields inherit installed Transformers defaults. Do not infer sampling from an example or from poor classification scores.",
++            "do_sample": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/codegemma-1.1-7b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config. Local checkpoint read first; installed framework supplies omitted defaults."
++            },
++            "temperature": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/codegemma-1.1-7b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config. Local checkpoint read first; installed framework supplies omitted defaults."
++            },
++            "top_p": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/codegemma-1.1-7b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config. Local checkpoint read first; installed framework supplies omitted defaults."
++            },
++            "top_k": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/codegemma-1.1-7b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config. Local checkpoint read first; installed framework supplies omitted defaults."
++            },
++            "repetition_penalty": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/codegemma-1.1-7b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config. Local checkpoint read first; installed framework supplies omitted defaults."
++            },
++            "num_beams": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/codegemma-1.1-7b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config. Local checkpoint read first; installed framework supplies omitted defaults."
++            }
++          },
++          "chat_template_kwargs": {},
++          "previous_parameters_R45": {},
++          "previous_parameter_evidence_R45": {
+             "all": "Fresh local checkpoint generation_config.json, otherwise fresh config.json via GenerationConfig.from_model_config, then installed Transformers defaults. No sampling values guessed from other models or usage examples."
+           },
+-          "chat_template_kwargs": {}
+-        }
++          "recommendation_urls": [],
++          "change_note_R46": "No universal author numeric recommendation found. Supplied official generation_config omits sampling parameters, so installed framework basic defaults apply (do_sample=False; single-beam greedy). Task cap unchanged."
++        }
++      },
++      "previous_public_generation_config_R45": null,
++      "previous_remote_generation_config_status_R45": "401 gated; numeric values not independently verified",
++      "generation_config_snapshot_source": {
++        "url": "https://huggingface.co/google/codegemma-1.1-7b-it/blob/main/generation_config.json",
++        "pinned_revision": null,
++        "evidence_kind": "transcribed_user_screenshot_of_author_repository",
++        "visible_file_commit_short": "8a9aefb",
++        "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-3d65e8a0-48be-4344-821c-320991dfa94f.png",
++        "archived_screenshot_relative_path": "revision_batch_05/sources/codegemma-1.1-7b-it/official_generation_config_screenshot.png",
++        "screenshot_sha256": "6e13dbc8285c0aa7eb3a61111a53ad312886844ce00d82f9fa66682de74ef964",
++        "archived_transcription_relative_path": "revision_batch_05/sources/codegemma-1.1-7b-it/generation_config.json",
++        "retrieved_on": "2026-10-16",
++        "verification_boundary": "Complete visible JSON transcribed from user screenshot showing codegemma-1.1-7b-it and generation_config.json; official Google repository association follows the ongoing request. No byte-for-byte original download or full revision match claimed."
+       }
+     },
+     "gemma-2-9b-it": {
+@@ -268,18 +499,77 @@
+       ],
+       "model_card_url": "https://huggingface.co/google/gemma-2-9b-it",
+       "generation_config_url": "https://huggingface.co/google/gemma-2-9b-it/resolve/11c9b309abf73637e4b6f9a3fa1e92e615547819/generation_config.json",
+-      "public_generation_config": null,
+-      "remote_generation_config_status": "401 gated; numeric values not independently verified",
++      "public_generation_config": {
++        "_from_model_config": true,
++        "bos_token_id": 2,
++        "cache_implementation": "hybrid",
++        "eos_token_id": 1,
++        "pad_token_id": 0,
++        "transformers_version": "4.42.0.dev0"
++      },
++      "remote_generation_config_status": "official_generation_config_visible_in_user_screenshot; transcribed and archived",
+       "modes": {
+         "instruct": {
+           "profile_id": "gemma-2-9b-it_local_checkpoint_default",
+           "parameters": {},
+           "parameter_evidence": {
++            "all": "No general numeric author recommendation established. Use explicit fields of clean checkpoint generation_config.json; omitted fields inherit installed Transformers defaults. Do not infer sampling from an example or from poor classification scores.",
++            "do_sample": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/gemma-2-9b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config; installed framework supplies default."
++            },
++            "temperature": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/gemma-2-9b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config; installed framework supplies default."
++            },
++            "top_p": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/gemma-2-9b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config; installed framework supplies default."
++            },
++            "top_k": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/gemma-2-9b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config; installed framework supplies default."
++            },
++            "repetition_penalty": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/gemma-2-9b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config; installed framework supplies default."
++            },
++            "num_beams": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/gemma-2-9b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config; installed framework supplies default."
++            }
++          },
++          "chat_template_kwargs": {},
++          "previous_parameters_R45": {},
++          "previous_parameter_evidence_R45": {
+             "all": "Fresh local checkpoint defaults plus installed Transformers defaults. Official usage examples are not universal sampling recommendations."
+           },
+-          "chat_template_kwargs": {}
+-        }
+-      }
++          "recommendation_urls": [],
++          "change_note_R46": "No universal author numeric recommendation found. Read local checkpoint first; otherwise use archived official screenshot transcription; omitted fields use installed framework defaults. No generic sampling override; stage output cap unchanged."
++        }
++      },
++      "logged_in_access_observation": "Access granted in native Chrome; generation_config content subsequently supplied by user and archived under revision_batch_05/sources. Current snapshot source is recorded separately.",
++      "previous_public_generation_config_R45": null,
++      "previous_remote_generation_config_status_R45": "401 gated; numeric values not independently verified",
++      "generation_config_snapshot_source": {
++        "url": "https://huggingface.co/google/gemma-2-9b-it/blob/main/generation_config.json",
++        "pinned_revision": null,
++        "evidence_kind": "transcribed_user_screenshot_of_author_repository",
++        "visible_file_commit_short": "39ea45b",
++        "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-df3fc465-c575-46e2-a625-5dd597d110ae.png",
++        "archived_screenshot_relative_path": "revision_batch_05/sources/gemma-2-9b-it/official_generation_config_screenshot.png",
++        "screenshot_sha256": "226ae6fa539fc79422047feb535ff888df95f05358ae328cab4121e02edf5de8",
++        "archived_transcription_relative_path": "revision_batch_05/sources/gemma-2-9b-it/generation_config.json",
++        "retrieved_on": "2026-10-16",
++        "verification_boundary": "Complete visible JSON transcribed from user screenshot displaying the official Google repository and filename. No claim of byte-for-byte original download or match to full queried repository revision."
++      },
++      "previous_logged_in_access_observation_R46": "Native Chrome model page showed access granted. Numerical generation_config content not yet extracted; no values guessed."
+     },
+     "gemma-3-12b-it": {
+       "repo_id": "google/gemma-3-12b-it",
+@@ -289,17 +579,79 @@
+       ],
+       "model_card_url": "https://huggingface.co/google/gemma-3-12b-it",
+       "generation_config_url": "https://huggingface.co/google/gemma-3-12b-it/resolve/96b6f1eccf38110c56df3a15bffe176da04bfd80/generation_config.json",
+-      "public_generation_config": null,
+-      "remote_generation_config_status": "401 gated; numeric values not independently verified",
++      "public_generation_config": {
++        "bos_token_id": 2,
++        "cache_implementation": "hybrid",
++        "do_sample": true,
++        "eos_token_id": [
++          1,
++          106
++        ],
++        "pad_token_id": 0,
++        "top_k": 64,
++        "top_p": 0.95,
++        "transformers_version": "4.50.0.dev0"
++      },
++      "remote_generation_config_status": "official_generation_config_visible_in_user_screenshot; transcribed and archived",
+       "modes": {
+         "instruct": {
+           "profile_id": "gemma-3-12b-it_local_checkpoint_default",
+           "parameters": {},
+           "parameter_evidence": {
++            "all": "No general numeric author recommendation established. Use explicit fields of clean checkpoint generation_config.json; omitted fields inherit installed Transformers defaults. Do not infer sampling from an example or from poor classification scores.",
++            "do_sample": {
++              "origin": "checkpoint_generation_config",
++              "source": "https://huggingface.co/google/gemma-3-12b-it/blob/main/generation_config.json",
++              "value": true
++            },
++            "temperature": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/gemma-3-12b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config; installed framework supplies default."
++            },
++            "top_p": {
++              "origin": "checkpoint_generation_config",
++              "source": "https://huggingface.co/google/gemma-3-12b-it/blob/main/generation_config.json",
++              "value": 0.95
++            },
++            "top_k": {
++              "origin": "checkpoint_generation_config",
++              "source": "https://huggingface.co/google/gemma-3-12b-it/blob/main/generation_config.json",
++              "value": 64
++            },
++            "repetition_penalty": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/gemma-3-12b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config; installed framework supplies default."
++            },
++            "num_beams": {
++              "origin": "transformers_framework_default",
++              "source": "https://huggingface.co/google/gemma-3-12b-it/blob/main/generation_config.json",
++              "reason": "Omitted from supplied official generation_config; installed framework supplies default."
++            }
++          },
++          "chat_template_kwargs": {},
++          "previous_parameters_R45": {},
++          "previous_parameter_evidence_R45": {
+             "all": "Fresh local checkpoint defaults plus installed Transformers defaults. Official usage examples are not universal sampling recommendations."
+           },
+-          "chat_template_kwargs": {}
+-        }
++          "recommendation_urls": [],
++          "change_note_R46": "No universal author numeric recommendation found. Read local checkpoint first; otherwise use archived official screenshot transcription; omitted fields use installed framework defaults. No generic sampling override; stage output cap unchanged."
++        }
++      },
++      "previous_public_generation_config_R45": null,
++      "previous_remote_generation_config_status_R45": "401 gated; numeric values not independently verified",
++      "generation_config_snapshot_source": {
++        "url": "https://huggingface.co/google/gemma-3-12b-it/blob/main/generation_config.json",
++        "pinned_revision": null,
++        "evidence_kind": "transcribed_user_screenshot_of_author_repository",
++        "visible_file_commit_short": "d82ecc1",
++        "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-6e622635-4a5e-4ce4-80b4-048dc5617224.png",
++        "archived_screenshot_relative_path": "revision_batch_05/sources/gemma-3-12b-it/official_generation_config_screenshot.png",
++        "screenshot_sha256": "24b2d85f2ca3023474af7d93a31e991ea79f64d762864c4a677f9a84445f2270",
++        "archived_transcription_relative_path": "revision_batch_05/sources/gemma-3-12b-it/generation_config.json",
++        "retrieved_on": "2026-10-16",
++        "verification_boundary": "Complete visible JSON transcribed from user screenshot displaying the official Google repository and filename. No claim of byte-for-byte original download or match to full queried repository revision."
+       }
+     },
+     "gpt-oss-20b": {
+@@ -323,8 +675,21 @@
+       },
+       "modes": {
+         "reasoning": {
+-          "profile_id": "gpt-oss-20b_medium_reference_sampling",
++          "profile_id": "gpt-oss-20b_medium_official_hierarchy",
+           "parameters": {
++            "temperature": 1.0,
++            "top_p": 1.0
++          },
++          "parameter_evidence": {
++            "temperature": "Explicit author Recommended Sampling Parameters in official README.",
++            "top_p": "Explicit author Recommended Sampling Parameters in official README."
++          },
++          "chat_template_kwargs": {
++            "reasoning_effort": "medium"
++          },
++          "sampling_recommendation_url": "https://github.com/openai/gpt-oss/blob/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/README.md#recommended-sampling-parameters",
++          "reference_sampler_url": "https://github.com/openai/gpt-oss/blob/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/gpt_oss/torch/model.py#L454-L465",
++          "previous_parameters_R45": {
+             "do_sample": true,
+             "temperature": 1.0,
+             "top_p": 1.0,
+@@ -336,19 +701,30 @@
+             "epsilon_cutoff": 0.0,
+             "eta_cutoff": 0.0
+           },
+-          "parameter_evidence": {
++          "previous_parameter_evidence_R45": {
+             "do_sample": "Explicit official checkpoint value and author recommendation to sample.",
+             "temperature/top_p": "Explicit author recommendation in README.",
+             "top_k=0/min_p=None/repetition_penalty=1.0/neutral_extra_warpers": "Neutral Transformers translation of the official reference sampler: full-vocabulary softmax(logits/temperature) followed directly by multinomial sampling. These numeric neutralizers are an implementation inference, not separately quoted author recommendations.",
+             "num_beams=1": "Reference implementation emits one sampled next token at each step; standard multinomial sampling translation."
+           },
+-          "chat_template_kwargs": {
+-            "reasoning_effort": "medium"
+-          },
+-          "sampling_recommendation_url": "https://github.com/openai/gpt-oss/blob/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/README.md#recommended-sampling-parameters",
+-          "reference_sampler_url": "https://github.com/openai/gpt-oss/blob/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/gpt_oss/torch/model.py#L454-L465"
++          "recommendation_urls": [
++            "https://github.com/openai/gpt-oss/blob/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/README.md#recommended-sampling-parameters"
++          ],
++          "change_note_R46": "Only explicit general author recommendations remain as overrides. Previous values retained above; checkpoint and framework fields are resolved at runtime with per-field provenance."
+         }
+       }
+     }
+-  }
++  },
++  "previous_policy_R45": "Author general recommendations take priority; otherwise fresh checkpoint defaults plus installed Transformers defaults. Usage-example choices are not universal recommendations. No pipeline or mutated model.generation_config is inherited.",
++  "parameter_priority": [
++    "explicit_author_recommendation",
++    "checkpoint_generation_config",
++    "transformers_framework_default"
++  ],
++  "generation_config_source_priority": [
++    "fresh local checkpoint generation_config.json",
++    "verified bundled official generation_config snapshot, when local file is absent",
++    "fresh config.json legacy generation fields only when no generation_config source exists",
++    "installed Transformers defaults for omitted fields"
++  ]
+ }
+--- before/revision_runtime.py
++++ after/revision_runtime.py
+@@ -324,7 +324,9 @@
+             if previous is not None and previous != summary:
+                 raise ValueError("Official generation profile changed within the same run")
+             profiles[profile["profile_id"]] = summary
+-            self._settings["generation_profile_policy"] = "R45: author recommendations; otherwise fresh local checkpoint defaults; caps/seeds unchanged"
++            # R46 STRICT POLICY: previous metadata retained.
++            # self._settings["generation_profile_policy"] = "R45: author recommendations; otherwise fresh local checkpoint defaults; caps/seeds unchanged"
++            self._settings["generation_profile_policy"] = "R46: explicit author recommendation > checkpoint generation_config > installed framework defaults; no universal do_sample=True; caps/seeds unchanged"
+             (self.run_dir / "runtime_manifest.json").write_text(
+                 json.dumps(self._settings, ensure_ascii=False, indent=2), encoding="utf-8")
+         self.events.append(event)

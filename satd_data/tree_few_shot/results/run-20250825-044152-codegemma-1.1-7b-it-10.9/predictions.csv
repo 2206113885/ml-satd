@@ -1,0 +1,394 @@
+comment,real,pred,coarse_pred,coarse_raw_output,fine_abbr,raw_output,real_coarse,pred_coarse
+!TODO: In some cases; US is not enough to hold the complete number,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,US,AWR,RDB
+# reverse bw; before concat TODO,Layer Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,CFO,RDB
+# TODO : load landmarks in validation and test set also. I'm too sleepy to do it today -_- zzz... zzz...,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+## elif (): ## FIXME: handle other bases here,Prototype,Model Code Comprehension,RDB,RDB,MCC,FIXME,SCL,RDB
+#TODO: improve the copying of parameters,Hyper-parameter Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+@todo nrows is for testing only!,Boundary Erosion,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,MDL,CFO
+@todo: arabtex and iso8859-6 need individual handling because in some cases using one-two mapping,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+@TODO: need better solutions,Machine Learning Knowledge,Weight Configuration,CFO,CFO,Weight Conf,The code comment indicates that the issue is related to **Weight Conf**.,AWR,CFO
+@TODO: remove time usage; use it under the hood,Unnecessary Model Code,Model Code Comprehension,RDB,**RDB**,MCC,HP Conf,CDD,RDB
+[todo]: this is a bug; predict_proba should not change,Model Code Modifiability,Machine Learning Knowledge,AWR,AWR,MLKnow,MLKnow,MDL,AWR
+"\""\""\"" || Corpus in CSV format. TODO: still serializes to SVMLight format; feel free to change this. || \""\""\""",Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+"\""\""\"" || Simple Gaussian Mixture model plotting example ||  || TODO: use the faithful dataset || \""\""\""",Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,**HP Conf**,DTD,RDB
+"\""\""\"" Turn compiler.ast structures back into executable python code. ||  ||     The unparse method takes a compiler.ast tree and transforms it back into ||     valid python code.  It is incomplete and currently only works for ||     import statements; function calls; function definitions; assignments; and ||     basic expressions. ||  ||     Inspired by python-2.5-svn\/Demo\/parser\/unparse.py ||  ||     fixme: We may want to move to using _ast trees because the compiler for ||            them is about 6 times faster than compiler.compile. || \""\""\""",Custom Data Type,Model Code Comprehension,RDB,RDB,MCC,MCC,CDD,RDB
+"\""\""\""Converts legacy encodings into Unicode || TODO for replacer.py: ||  - add perseus-style iota subscript and diaeresis || \""\""\""",Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+"\""\""\""Converts legacy encodings into Unicode. ||  || TODO: Rm regex dependency || TODO: Add tests || \""\""\""",Code Dependency,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+"\""\""\""Models. ||  || Models are objects which take Tensor(s) as input; perform some computation on  || those Tensor(s); and output probability distributions. ||  || TODO: more... ||  || * :func:`.Model` || * :func:`.ContinuousModel` || * :func:`.DiscreteModel` || * :func:`.CategoricalModel` || * :func:`.save_model` || * :func:`.load_model` ||  || ---------- ||  || \""\""\""",Model Code Modifiability,Model Code Comprehension,RDB,RDB,MCC,MCC,MDL,RDB
+"\""\""\""Module dedicated to extraction of Model Based Metafeatures. ||  || Todo: ||     * Implement metafeatures. ||     * Improve documentation. || \""\""\""",Data Processing Configuration,Abstraction,MDL,MDL,Abs,Abs,DTD,MDL
+"\""\""\""Process downloaded or local corpora from one format into another. || Some formatting can happen here; or invoke language-specific formatters in || other files. ||  || #TODO: Add TLG & PHI text cleaners from KJ's IPython notebooks || #TODO: Add non-ascii stripper || #TODO: Add generic HTML stripper || \""\""\""",Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+"\""\""\""The Imperial Aramaic alphabet; plus simple script to transform || a Hebrew transcription of an Imperial Aramaic text to its own Unicode block. ||  || TODO: Add Hebrew-to-Aramaic converter || \""\""\""",Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,TODO,DTD,RDB
+\/\/TODO in future add arguments compatibility check,Hyper-parameter Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+apparently package_deps are broken in 3.4,Code Dependency,Code Dependency,CDD,**CDD**,MLDepend,MLDepend,CDD,CDD
+BETTER FIX: iterate through; if length = 0; then bump it up to 0.125,Prototype,Model Code Comprehension,RDB,RDB,MCC,HP Conf,SCL,RDB
+circular shift the signal (needed for correct phase),Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+DEPRICATE? I don't think this is needed anymore,Unnecessary Model Code,Code Dependency,CDD,CDD,MLDepend,DEPRICATE,CDD,CDD
+Double newlines seem to mess with the rendering,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,The code comment does not provide enough information to determine the specific ML SATD type.,DTD,RDB
+early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),Prediction Quality,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,PRF,CFO
+else:  # TODO check that the variation wasn't already in there,Prototype,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,SCL,CFO
+env = ScaledFloatFrame(env)  # TODO: use for dqn?,Machine Learning Knowledge,Prototype,SCL,SCL,Proto,**TODO**,AWR,SCL
+find out why prefix neg_ is needed,Machine Learning Knowledge,Model Interpretability,AWR,**AWR**,MLInter,MLInter,AWR,AWR
+FIXME : adhoc (answer being last word); not ignoring single question,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,The code comment indicates that the issue is related to **Weight Conf**.,DTD,CFO
+FIXME annoying hack for batching different sized shapes;,Model Code Reusability,Unnecessary Model Code,CDD,CDD,UMC,UMC,MDL,CDD
+FIXME don't l2_normalize for any metric,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,"The provided code comment indicates a need to configure a model weight. Therefore, the fine-grained ML",DTD,CFO
+FIXME homogeneize the meaning of margin parameter,Hyper-parameter Configuration,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,CFO,CFO
+FIXME non-uniform sample weights not yet supported,Weight Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,CFO,CFO
+FIXME not sure what are those CB1 \/ CB2,Machine Learning Knowledge,Machine Learning Knowledge,AWR,AWR,MLKnow,"The provided code comment indicates a ""FIXME not sure what are those CB1 \/ CB2"".",AWR,AWR
+FIXME This will make sense when all controllers are in one file (like task.py),Data Storage Configuration,Boundary Erosion,MDL,MDL,BE,BE,DTD,MDL
+FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,Glue Code,Hyper-parameter Configuration,CFO,CFO,HP Conf,XXX,CDD,CFO
+FIXME: Allow some diff; e.g. on repr style text in text\/plain,Prototype,Model Code Comprehension,RDB,RDB,MCC,MCC,SCL,RDB
+FIXME: Handle execution_count (always change to None?),Machine Learning Knowledge,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,AWR,CFO
+FIXME: Hardcoded usually sucks,Data Storage Configuration,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,DTD,CFO
+FIXME: if we inherit from scipy.io.netcdf.NetCDFFile and omit the self.nc,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,MCC,AWR,RDB
+FIXME: INDRA's section_type entry is meant to contain,Custom Data Type,Model Code Comprehension,RDB,RDB,MCC,INDRA,CDD,RDB
+FIXME: Need to check if mod is the equivalent of floorMod in NumPy,Machine Learning Knowledge,Model Code Comprehension,RDB,**RDB**,MCC,MCC,AWR,RDB
+FIXME: need to implement sample_weight in Ridge,Weight Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+FIXME: Only keeping the first label,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+FIXME: pixel_classes dict needs to be populated with classes obtained from target,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,DTD,CFO
+"FIXME: Return type \""None\"" of \""fit\"" incompatible with return type \""float\"" in supertype \""Model\""",Plain Old Data Type,Weight Configuration,CFO,**CFO**,Weight Conf,Weight Conf,DTD,CFO
+FIXME: support for many evaluators; maybe event support,Prototype,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,SCL,CFO
+FIXME: The code works with EpisodicReplayBuffer,Custom Data Type,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,CDD,CFO
+FIXME: this is kind of hackish; but being able to simply set,Model Code Comprehension,Model Code Comprehension,RDB,RDB,MCC,MCC,RDB,RDB
+FIXME: this needs to become more generic; we need to find the actual so in the python root,Model Code Reusability,Glue Code,CDD,**CDD**,GC,GC,MDL,CDD
+FIXME: this representation of covars is going to lose for caching,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+FIXME: Use linebased diff of some types of outputs:,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+FIXME: What about the next diff entry?,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,"The provided code comment indicates a ""FIXME"" for the ""What about the next diff entry?""",AWR,RDB
+FIXME: What if we never find a fail-high?,Machine Learning Knowledge,Machine Learning Knowledge,AWR,**AWR**,MLKnow,**HP Conf**,AWR,AWR
+FIXME_Numba#5157: remove np.asarray and return as list,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+Force shrinking of the mask if needed (and possible),Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+Freeze weights - TODO: NOT IMPLEMENTED!,Weight Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,Hyper-parameter Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+handle BoxedSeries and list\/set of BoxedSeries; TODO: others?,Custom Data Type,Model Code Comprehension,RDB,RDB,MCC,MCC,CDD,RDB
+if this is needed.,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,XXX,AWR,RDB
+IMPORTANT: keep matrices in suitable order for matrix products; failing to do so gives 8x lower performance :(,Model Code Reusability,Prediction Quality,PRF,PRF,PQ,UMC,MDL,PRF
+In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,Plain Old Data Type,Model Code Comprehension,RDB,RDB,MCC,PODT,DTD,RDB
+in_dim=(4; 8; 8; 8); # TODO: Needs fix when giving a randon in_dim,Model Code Reusability,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,MDL,CFO
+Initialize model (TODO: really necessary?),Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,**TODO**,AWR,RDB
+It's only needed for a specific purpose in the short term; will go.,Layer Configuration,Model Code Comprehension,RDB,RDB,MCC,UMC,CFO,RDB
+needed so command completion and help can use it,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,PODT,DTD,RDB
+needed to sklearn comparability,Code Dependency,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CDD,CFO
+needed to sklearn comparability,Code Dependency,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CDD,CFO
+needed?,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,XXX,CDD,RDB
+normed_cross_entropy # TODO,Hyper-parameter Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,CFO,CFO
+NOTE: probably more efficient to sort then stride by nt_regions,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+nv by ns dot ns by m -> nv by m  # TODO: Change to CSC for speed?,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+once they are no longer needed in the schedule or by,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,UMC,DTD,RDB
+Pass on diff to external difftool (TODO: store in global metadata at end instead of in separate diff dicts?),Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,TODO,DTD,RDB
+probably not needed; transition,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,UMC,CDD,RDB
+"r\""\""\""Run inference on random sequences many times; saving the top results. ||  || This module is designed to run inference on a trained aptamers TF model || to score many sequences and then write out the top scoring sequences to || be used in other analysis. For example; these top predicted sequences || can read in the colab picking sequences in order || to validate the TF model. ||  || This module uses the standard aptamers tensorflow infrastructure to run || the inference. This is the inferer class defined in || learning\/eval_feedforward and described in the Aptamers TensorFlow Doc. ||  || Inference is generally run in batches of sequences; so a MapFlat function || is used to combine the results of interference into a flattened list || of (sequence; score) pairs. (In other words; each map function returns || a list of (sequence; score) pairs and these results are combined into || one list of pairs. Using a standard Map function would result in a || list of lists which is not what we want.) From there; the Top.Of || combiner returns only the top results; sorted by highest score. These || are then written to a text file. ||  || For now; each batch creates its own inferer; causing each map function || to have more overhead. Because of this;batch sizes around the default of || 10000 are performant. Fixing this in the future means converting the || MapFlat to a ParDo and initializing the inferer in start_bundle. || This module runs inference 1 billion times in 50 minutes so it || is sufficient for now ||  || Run locally with: ||  ||   :search_inference -- --flume_exec_mode=UNOPT \\ ||   --target_name='target' \\ ||   --model_dir=xxx \\ ||    --checkpoint_path='model.ckpt-312500' \\ ||    --output_name=xxx\/base30_1B_inference_top2k ||  || \""\""\""",Custom Data Type,Model Code Comprehension,RDB,RDB,MCC,MCC,CDD,RDB
+Random Warp # TODO change masks to have a input mask and a warped target mask,Hyper-parameter Configuration,Model Code Comprehension,RDB,RDB,MCC,**MCC**,CFO,RDB
+seem out of place. If you were able to do better; feel free to share your,Prediction Quality,Model Code Comprehension,RDB,RDB,MCC,UMC,PRF,RDB
+self.clearChanges() #TODO perhaps?,Data Storage Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+self.mpc_sum(3; -5) TODO: Future work: how to handle gracefully minus numbers,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,HP Conf,AWR,RDB
+should be WeightNorm here TODO.,Layer Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,Code Dependency,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CDD,CFO
+this importing of matplotlib is needed to run on the cluster,Code Dependency,Model Code Comprehension,<UNK>,The code comment indicates a need for **dependency** on external libraries.,MCC,MCC,CDD,RDB
+This is a hack to allows inference when the <go> token,Model Code Modifiability,Unnecessary Model Code,CDD,CDD,UMC,UMC,MDL,CDD
+THIS IS A VERY UGLY FUNCTION because it has hardcoded 0\/4\/5 integers for each of the metric. I need to make an enumerated class for this!,Model Code Comprehension,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,RDB,CFO
+time to fix. TODO: optimize the crap out of this,Data Processing Configuration,Prediction Quality,PRF,PRF,PQ,TODO,DTD,PRF
+TODO - can remove one of these m0 restores if A and B both TLU,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,MCC,AWR,RDB
+TODO - does this handle N-dim tensors correctly?,Machine Learning Knowledge,Model Code Comprehension,RDB,**RDB**,MCC,HP Conf,AWR,RDB
+TODO - in the code it is different - why?,Machine Learning Knowledge,Machine Learning Knowledge,AWR,**AWR**,MLKnow,"The provided code comment indicates a ""TODO"" for a ""different"" issue. Therefore, the abbreviation",AWR,AWR
+TODO (pradeep): Sort the indices and do intersections in order; so that we can return the,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO (ytz): really; we want at least one active and inactive in both scenarios.,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,The code comment indicates that the issue is about **Weight Conf**.,DTD,CFO
+TODO : add these in the options. (None; None) => no limit,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,"The code comment indicates that the SATD is in the ""Weight Conf"" category.",DTD,CFO
+TODO : Any other options,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,"The code comment indicates that the SATD is a ""TODO : Any other options"". Therefore, the",AWR,CFO
+TODO : market value,Data Processing Configuration,Hyper-parameter Configuration,<UNK>,"The code comment ""TODO : market value"" indicates a need for further work on the market value aspect",HP Conf,HP Conf,DTD,CFO
+TODO : removal,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,TODO,CDD,RDB
+TODO : this is quite bad in term of execution speed. We need to fix this.,Data Processing Configuration,Prediction Quality,PRF,PRF,PQ,**PQ**,DTD,PRF
+"TODO accept_sparse=\""csc\""",Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,DTD,CFO
+TODO add general Distribution,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,The code comment indicates that the SATD is related to **Weight Conf**.,DTD,CFO
+TODO add index to xls file,Data Processing Configuration,Data Processing Configuration,DTD,DTD,Data Conf,**Data Conf**,DTD,DTD
+TODO add introductory explanation,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO add support for other metrics (ex. euclidean; angular),Prototype,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,SCL,CFO
+TODO add test for keypoints once their handling was improved in Convolve,Code Dependency,Machine Learning Knowledge,AWR,The code comment indicates a need for **AWR** (Awareness). The comment suggests a lack of,MLKnow,MLKnow,CDD,AWR
+TODO add vertical gradient alpha to have fog only at skylevel\/groundlevel,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO anticipate multi-agents for AEB space,Data Storage Configuration,Machine Learning Knowledge,AWR,AWR,MLKnow,MLKnow,DTD,AWR
+TODO change as soon as svhn has a val set :),Data Storage Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO change the way attns is returned dict => list or tuple (onnx),Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,DTD,CFO
+TODO change to np.partition for PERF,Data Storage Configuration,Prediction Quality,PRF,PRF,PQ,**HP Conf**,DTD,PRF
+TODO check for each tentacle specified if update is available (with requirements),Code Dependency,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CDD,CFO
+TODO check results after standardizing num ft once a ml algorithm is ready to test,Code Dependency,Prediction Quality,PRF,PRF,PQ,**PQ**,CDD,PRF
+TODO checkpoints; incremental save,Prototype,Weight Configuration,CFO,"The code comment ""TODO checkpoints; incremental save"" is related to the ""Configurable Options"" (CFO",Weight Conf,Weight Conf,SCL,CFO
+TODO combine these values to get a final prediction!,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO confirm that multiple eigenvalues of 1 means the rotation,Machine Learning Knowledge,Machine Learning Knowledge,AWR,AWR,MLKnow,MLKnow,AWR,AWR
+ToDo consider 3D case --> do that by using tag->size,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,Tag->Size,DTD,RDB
+TODO cpickle vs json,Data Storage Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,DTD,CFO
+TODO Dehaze with 1\/t,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO design an API interface for advanced access as an importable package,Abstraction,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,MDL,CFO
+TODO double num_filters,Hyper-parameter Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+TODO Figure out how to distinguish oxidation states,Machine Learning Knowledge,Machine Learning Knowledge,AWR,AWR,MLKnow,MLKnow,AWR,AWR
+TODO figure out what exactly size does,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,HP Conf,AWR,RDB
+TODO ForceSign,Hyper-parameter Configuration,Data Processing Configuration,<UNK>,"The code comment ""TODO ForceSign"" indicates a need for further development or implementation, which aligns with",Data Conf,ForceSign,CFO,DTD
+TODO generalise to columns with series of unequal length,Model Code Reusability,Model Code Modifiability,MDL,MDL,MCM,MCM,MDL,MDL
+TODO generalise to series-to-series functions and function kwargs,Data Processing Configuration,Model Code Modifiability,MDL,MDL,MCM,**MCM**,DTD,MDL
+TODO handle 1d series; not only 2d dataframes,Data Processing Configuration,Model Code Comprehension,RDB,**RDB**,MCC,HP Conf,DTD,RDB
+ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,Abstraction,Model Code Comprehension,RDB,RDB,MCC,"The provided code comment indicates a ""TODO"" for ""Handle when source and/or target is COMPLEX",MDL,RDB
+TODO if without momentum; weights should not change too,Weight Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,CFO,RDB
+TODO Implement,Hyper-parameter Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,"The code comment indicates a need to implement something. This is a ""TODO"" task, which is",CFO,CFO
+TODO implement generic method,Abstraction,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,MDL,CFO
+TODO implement multi-gpu training and compare performance,Prototype,Prediction Quality,PRF,PRF,PQ,HP Conf,SCL,PRF
+TODO improve the regex here,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+"TODO last token include: \""&& $last_token[...]\""",Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,DTD,CFO
+TODO make paf_scored not part of self?,Abstraction,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,MDL,CFO
+TODO make threshold a variable,Custom Data Type,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,CDD,CFO
+TODO max in one tensor,Layer Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,CFO,RDB
+TODO move these registrations to backend-specific files,Prototype,Abstraction,MDL,MDL,Abs,Abs,SCL,MDL
+TODO normalice to make sum up to 1?,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+todo not support dense,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+TODO Option for string lenght,Data Storage Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO Promote this to a Funsor subclass.,Model Code Reusability,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,MDL,CFO
+TODO refactor second part of if statement when implementing live model prediction,Model Code Comprehension,Model Code Comprehension,RDB,RDB,MCC,HP Conf,RDB,RDB
+TODO remove,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,TODO,CDD,RDB
+TODO remove later.,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,TODO,CDD,RDB
+TODO remove this,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,TODO,CDD,RDB
+TODO replace this code with the following commented out code after viz is fixed,Code Dependency,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CDD,CFO
+TODO replace this speedup implementation with nni.compression.torch.ModelSpeedup,Layer Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+TODO replace whole pandas data container as input argument with separated metadata container,Data Storage Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,DTD,CFO
+TODO replace with Streamlines,Custom Data Type,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+TODO save all the results to a json inside the experiment's folder,Data Storage Configuration,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,DTD,CFO
+TODO Search the web or use other algorithms,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,"The code comment ""TODO Search the web or use other algorithms"" indicates a need for **CFO**.",HP Conf,HP Conf,AWR,CFO
+TODO Send the context back into some list maintained by,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO Set bioassembly info,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,DTD,CFO
+TODO Should this stay generic? (point),Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+TODO stim channel exclusion,Data Processing Configuration,Hyper-parameter Configuration,CFO,"The code comment ""TODO stim channel exclusion"" is related to the ""Configurable Options"" category (CFO",HP Conf,HP Conf,DTD,CFO
+TODO support recursive parfor; multi-D; mutiple body blocks,Prototype,Prototype,SCL,The code comment indicates a need for scalability improvements (SCL).,Proto,Proto,SCL,SCL
+todo sweep,Model Code Modifiability,Hyper-parameter Configuration,<UNK>,"The code comment ""todo sweep"" indicates a need for code cleanup and organization. It is not related",HP Conf,HP Conf,MDL,CFO
+TODO switch similar statements to work inplace (w\/o making a copy),Model Code Reusability,Model Code Comprehension,RDB,RDB,MCC,MCC,MDL,RDB
+TODO These ratios can't be hardcoded,Model Code Reusability,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,MDL,CFO
+TODO this code is currently necessary for the async_fit method in websocket_client.py,Hyper-parameter Configuration,Hyper-parameter Configuration,<UNK>,"The code comment indicates a need for further development or refactoring, which aligns with the ""TODO""",HP Conf,HP Conf,CFO,CFO
+TODO this is too general; register all ops,Prototype,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,SCL,CFO
+TODO this is wrong for other entitiey types nor appearing in the edge,Custom Data Type,Model Code Comprehension,RDB,RDB,MCC,The code comment indicates that the code is a TODO and is not related to the provided list of ML,CDD,RDB
+TODO this vector is very sparse; we can make it more memory efficient,Data Storage Configuration,Plain Old Data Type,DTD,The code comment indicates a need for data dependency optimization (DTD).,PODT,PODT,DTD,DTD
+TODO to be modified,Model Code Modifiability,Data Processing Configuration,<UNK>,The code comment indicates that the code needs to be modified. This is a task that is not related,Data Conf,TODO,MDL,DTD
+TODO Update and move now this isn't used here,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,"The provided code comment indicates a ""TODO"" task, which suggests a ""TODO Update and move""",CDD,RDB
+TODO update these - the sklearn transformation class should be able,Custom Data Type,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+TODO validate and normalize to \/path\/to\/variable,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO validate configuration and set defaults,Data Storage Configuration,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,DTD,CFO
+TODO validation_split is not used,Unnecessary Model Code,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,CDD,CFO
+TODO WIP temp_coherence_loss # assumes all sequences in the dataset share at least one same 3D pos of Baxter arm,Hyper-parameter Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CFO,RDB
+TODO wouldn't it be better with a set rather than a list?,Data Storage Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO write a warning,Model Interpretability,Hyper-parameter Configuration,<UNK>,"The code comment ""TODO write a warning"" indicates a need for a warning message, which suggests a",HP Conf,HP Conf,AWR,CFO
+"TODO(ahundt) difference between \""redundant\"" and regular proto parsing; figure out how to deal with grasp_success rename properly",Machine Learning Knowledge,Hyper-parameter Configuration,CFO,**CFO**,HP Conf,HP Conf,AWR,CFO
+TODO(ahundt) make more efficient,Data Processing Configuration,Prediction Quality,PRF,**PRF**,PQ,**HP Conf**,DTD,PRF
+TODO(ahundt) maybe the rotation component of this needs to be inverted due to sva implementation?,Machine Learning Knowledge,Machine Learning Knowledge,AWR,**AWR**,MLKnow,MLKnow,AWR,AWR
+TODO(b\/119775953): fix the circular dependencies.,Code Dependency,Code Dependency,CDD,CDD,MLDepend,MLDepend,CDD,CDD
+TODO(beam2d): Fix after supporting correct dtype promotion.,Custom Data Type,Hyper-parameter Configuration,<UNK>,The code comment indicates a need to fix the code after supporting correct dtype promotion. This suggests a potential,HP Conf,HP Conf,CDD,CFO
+TODO(crcrpar): Improve resource computation\/allocation algorithm.,Data Storage Configuration,Hyper-parameter Configuration,<UNK>,The code comment indicates a need to improve the resource computation/allocation algorithm. This suggests a need for,HP Conf,**HP Conf**,DTD,CFO
+TODO(dbieber): Move this logic into the dataset definition.,Boundary Erosion,Abstraction,MDL,**MDL**,Abs,Abs,MDL,MDL
+TODO(fstahlberg): Move to config,Model Code Modifiability,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,MDL,CFO
+TODO(rbharath): The script expects that all columns in xlsx\/csv files,Prototype,Model Code Comprehension,RDB,RDB,MCC,HP Conf,SCL,RDB
+TODO(rliaw): This behavior is probably undesirable; but right now,Prototype,Model Code Comprehension,RDB,RDB,MCC,RLiA,SCL,RDB
+TODO(sonots): Implement in C++,Multiple Languages,Hyper-parameter Configuration,CFO,CFO,HP Conf,The code comment indicates a need to implement something in C++. This is not related to any of the,CDD,CFO
+TODO(sven): Add once ModelV1 is deprecated and we no longer cause circular,Code Dependency,Unnecessary Model Code,CDD,CDD,UMC,UMC,CDD,CDD
+TODO(tokunaga): the number of processes should be configurable,Model Code Modifiability,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,MDL,CFO
+TODO(vsatish): Figure out why this isn't printed.,Machine Learning Knowledge,Machine Learning Knowledge,AWR,**AWR**,MLKnow,MLKnow,AWR,AWR
+TODO. get rid of from_model_pt,Unnecessary Model Code,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CDD,CFO
+TODO: (sven) rename to simply stats_fn to match eager and torch.,Abstraction,Model Code Comprehension,RDB,RDB,MCC,HP Conf,MDL,RDB
+TODO: @trask @theo could you take a look at this if you have better ideas on how to get these parameters,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+todo: accurate Value,Machine Learning Reliability,Hyper-parameter Configuration,<UNK>,"The code comment ""todo: accurate Value"" indicates a need for improvement in the model accuracy. This",HP Conf,HP Conf,PRF,CFO
+TODO: add a complete frame_size; to cover the whole audio signal?,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,AWR,CFO
+TODO: add backward images also.,Data Processing Configuration,Unnecessary Model Code,<UNK>,"The code comment ""TODO: add backward images also."" indicates a need to add something related to backward",UMC,UMC,DTD,CDD
+TODO: add datetype conversion,Data Storage Configuration,Plain Old Data Type,DTD,DTD,PODT,PODT,DTD,DTD
+TODO: add inheritance from Graph once implemented,Code Dependency,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,CDD,CFO
+TODO: add more tags based on the scikit-learn,Prototype,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,SCL,CFO
+TODO: Add this to configuration framework,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: arbitrary threshold is problematic,Model Code Reusability,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,MDL,CFO
+TODO: assertWarns exist only for Python 3.2+; test in all versions,Code Dependency,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CDD,CFO
+TODO: At the moment LHUC is RNN specific. We should support other models as well.,Model Code Reusability,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,MDL,CFO
+TODO: auto detect dtype,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,DTD,CFO
+TODO: Basically identical to `test_intra_cv_target_transform` except for repeated KFold,Duplicate Model Code,Duplicate Feature Extraction Code,DCE,DCE,DFEC,DFEC,DCE,DCE
+TODO: black box attacks,Machine Learning Reliability,Model Interpretability,AWR,**AWR**,MLInter,MLInter,PRF,AWR
+"TODO: calculate this centroid\""",Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+TODO: calibration dataset,Hyper-parameter Configuration,Hyper-parameter Configuration,<UNK>,"The code comment ""TODO: calibration dataset"" indicates a need for a **calibration dataset**, which is",HP Conf,**HP Conf**,CFO,CFO
+todo: change the feature_na_method!,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: Change the optimizer to the appropriate Optimizer class,Hyper-parameter Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+TODO: change this logic when there is a git pretty-format,Code Dependency,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+TODO: check `other` is Series after a circular import of SeriesType fixed,Code Dependency,Unnecessary Model Code,CDD,**CDD**,UMC,UMC,CDD,CDD
+TODO: Check behavior if this is a single mrc file (no '@'),Machine Learning Knowledge,Machine Learning Knowledge,AWR,**AWR**,MLKnow,MLKnow,AWR,AWR
+TODO: check CAPTALIZED WORDS as their lower case counterparts before saving,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,CAP,DTD,RDB
+TODO: check for series\/dict\/list input,Plain Old Data Type,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: Check if self._mean_squared_error_w_precision can be used here,Machine Learning Knowledge,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,AWR,CFO
+TODO: check if stride of 2 causes alignment issues if the featuremap,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,MCC,AWR,RDB
+TODO: check whether the model is QuartzNet,Custom Data Type,Machine Learning Knowledge,AWR,**AWR**,MLKnow,MLKnow,CDD,AWR
+TODO: check why there's an IF,Machine Learning Knowledge,Model Code Comprehension,RDB,**RDB**,MCC,HP Conf,AWR,RDB
+TODO: clip polygons,Data Processing Configuration,Data Processing Configuration,<UNK>,"The code comment ""TODO: clip polygons"" indicates a need to implement polygon clipping functionality. This is",Data Conf,"The provided code comment indicates a ""TODO"" for ""CLIPPING POLYGONS"", which is not",DTD,DTD
+TODO: compare the performance!,Prediction Quality,Prediction Quality,PRF,PRF,PQ,**PQ**,PRF,PRF
+TODO: compute signed distance between walls,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+ToDo: consider go\/no-go with following modification,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,Multiple Languages,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CDD,CFO
+TODO: Could be implemented as optimization option in LK???,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+TODO: Could check if QSettings.Format stores type info.,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+TODO: Currently this turns any upregulation associated with,Custom Data Type,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+TODO: Currently we don't look at source text; but we may want to,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: dataframe pass needed?,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+TODO: delete this method when no longer needed,Unnecessary Model Code,Unnecessary Model Code,<UNK>,The code comment indicates that the method is a TODO item and should be deleted when it is no longer,UMC,UMC,CDD,CDD
+TODO: deprecate?,Unnecessary Model Code,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CDD,CFO
+TODO: determine if requiring same sense is too string; i.e.,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: Do below `y_lie` lines directly calculate min\/max\/mean on `opt.yi` when it could also contain times?,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,HP Conf,AWR,RDB
+TODO: do more to protect against race conditions. File lock?,Data Storage Configuration,Code Dependency,CDD,**CDD**,MLDepend,MLDepend,DTD,CDD
+TODO: do not replace unless explicitly noticed + add 'only hangul' option,Model Code Modifiability,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,MDL,CFO
+TODO: do the transpose as a DataLoaderTransformer instead of in host,Data Storage Configuration,Model Code Comprehension,RDB,**RDB**,MCC,MCC,DTD,RDB
+TODO: do this better,Hyper-parameter Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CFO,RDB
+TODO: do we need this?!,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+TODO: does it make graph?,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,MCC,AWR,RDB
+TODO: don't make these a constant initializer because we,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: don't need this w\/ py.test,Unnecessary Model Code,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,CDD,CFO
+TODO: double check if this is still true in 1.9.0,Machine Learning Knowledge,Multiple Languages,CDD,**CDD**,ML,ML,AWR,CDD
+TODO: dtype,Custom Data Type,Hyper-parameter Configuration,CFO,CFO,HP Conf,dtype,CDD,CFO
+TODO: ensure dummy_na =False is what you want,Machine Learning Knowledge,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,AWR,CFO
+TODO: ensure x data shape matches model._ph['x'] shape (only if fit),Model Code Reusability,Plain Old Data Type,DTD,DTD,PODT,PODT,MDL,DTD
+TODO: Extend to multifidelity problems by adding training_points = {'approx': {}},Prototype,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,SCL,CFO
+TODO: extend to other key types,Custom Data Type,Data Processing Configuration,<UNK>,"The code comment ""TODO: extend to other key types"" indicates a need for additional configuration options,",Data Conf,"The code comment indicates that the SATD is an extension to other key types. Therefore, the answer",CDD,DTD
+TODO: extract an eval func more robustly,Machine Learning Reliability,Prediction Quality,PRF,PRF,PQ,**HP Conf**,PRF,PRF
+TODO: figure out how why the result of einsum requires reshape,Machine Learning Knowledge,Machine Learning Knowledge,AWR,**AWR**,MLKnow,MLKnow,AWR,AWR
+TODO: figure out why some machines prefer one of these options,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+TODO: figure out why this happens.,Machine Learning Knowledge,Machine Learning Knowledge,AWR,AWR,MLKnow,MLKnow,AWR,AWR
+TODO: Formats should not be specified; just saving all the materialized formats,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: Get rid of this,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,MCC,CDD,RDB
+TODO: handle boolean scalars properly,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,DTD,CFO
+TODO: handle channel modalities later,Model Code Reusability,Unnecessary Model Code,<UNK>,"The code comment ""TODO: handle channel modalities later"" indicates a need to address the issue of channel",UMC,UMC,MDL,CDD
+TODO: handle other participant types,Model Code Reusability,Weight Configuration,CFO,CFO,Weight Conf,The code comment indicates that the SATD is related to **Weight Conf**.,MDL,CFO
+TODO: handle record value which are lists; at least error,Plain Old Data Type,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: handle string,Plain Old Data Type,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: I believe this is not really much used,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,"The code comment indicates that the code is a TODO item and is not in use. Therefore, the",CDD,RDB
+TODO: I cannot get good results with this yet,Prediction Quality,Prediction Quality,PRF,PRF,PQ,PQ,PRF,PRF
+"TODO: identify the \""best\"" language detector available for OSS python",Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+TODO: ignore non-numerics,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: I'm not sure about this part,Machine Learning Knowledge,Machine Learning Knowledge,AWR,**AWR**,MLKnow,MLKnow,AWR,AWR
+TODO: Implement Conv Transpose,Model Code Modifiability,Model Code Comprehension,RDB,RDB,MCC,MCC,MDL,RDB
+TODO: Implement mass downloading with a cool-off in case of 429 response,Prototype,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,SCL,CFO
+TODO: implement required params,Hyper-parameter Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+TODO: implement residual connection,Layer Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,CFO,RDB
+TODO: In terms of functional API; there should not be any initialization of an nn.Module.,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,MCC,CDD,RDB
+TODO: index and name,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,**HP Conf**,DTD,RDB
+TODO: is incref required?,Machine Learning Knowledge,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,AWR,CFO
+TODO: is that best way to handle,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,HP Conf,AWR,RDB
+TODO: It could be nice if this method was run on entire data; not just,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: it's worth to switch back to the correct preprocess_input when InceptionResNetV2 model is re-trained,Code Dependency,Unnecessary Model Code,CDD,**CDD**,UMC,UMC,CDD,CDD
+TODO: list,Plain Old Data Type,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: Log message,Model Interpretability,Hyper-parameter Configuration,<UNK>,"The code comment ""TODO: Log message"" indicates a need for adding a log message, which is",HP Conf,HP Conf,AWR,CFO
+TODO: make efficient,Prototype,Prototype,SCL,SCL,Proto,**HP Conf**,SCL,SCL
+TODO: make efficient,Prototype,Prototype,SCL,SCL,Proto,**HP Conf**,SCL,SCL
+TODO: make fast_rcnn irrelevant,Unnecessary Model Code,Unnecessary Model Code,<UNK>,"The code comment ""TODO: make fast_rcnn irrelevant"" indicates a need to remove or disable",UMC,UMC,CDD,CDD
+TODO: make it save a zipfile instead of a tarfile.,Data Storage Configuration,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,DTD,CFO
+TODO: make the dtype configurable; see __init__(),Model Code Modifiability,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,MDL,CFO
+TODO: maxpool?,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,"The code comment indicates a need to configure a hyper-parameter, so the answer is **HP Conf",DTD,CFO
+TODO: maybe introduce a DefaultEnvironment?,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+TODO: min,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,Min,DTD,RDB
+TODO: Model Precision,Data Processing Configuration,Prediction Quality,PRF,PRF,PQ,**PQ**,DTD,PRF
+TODO: modify this later,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,The code comment indicates that the change is related to weight configuration (Weight Conf).,DTD,CFO
+TODO: more specific types?,Custom Data Type,Hyper-parameter Configuration,CFO,"The code comment indicates a need for more specific types, which suggests a need for **CFO**.",HP Conf,"The code comment indicates a need for more specific types of machine learning SATD. Therefore, the answer",CDD,CFO
+TODO: need a better way,Plain Old Data Type,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: need to discuss whether this is 'allowed' or smart,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,"The code comment indicates a need to discuss whether a specific action is ""allowed"" or ""smart.""",AWR,CFO
+TODO: Need to invert the CameraToWorld matrix => WorldToCamera matrix,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+TODO: needs to be re-written to match new stitch datasets signature.,Glue Code,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+TODO: non-numeric columns should be ignored automatically,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: normalize true states,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: num pad examples is not set here if fillup strategy would be padding,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,DTD,CFO
+TODO: optimize scheduling to support more cases.,Data Storage Configuration,Prediction Quality,PRF,PRF,PQ,**HP Conf**,DTD,PRF
+TODO: other types?,Custom Data Type,Data Processing Configuration,<UNK>,"The code comment ""TODO: other types?"" indicates a need for additional types or configuration options, which",Data Conf,"The code comment indicates that the missing types are ""other"". Therefore, the answer is not provided in",CDD,DTD
+TODO: parallelize,Data Processing Configuration,Prototype,SCL,SCL,Proto,**HP Conf**,DTD,SCL
+TODO: pass in just the id instead of the entire obj_msg.,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+todo: perhaps it's better to use pickle in the future?,Data Storage Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,DTD,CFO
+TODO: Place tensors into GPU memory. This will require rewriting,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+TODO: pretty sure this isn't necessary,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,"The provided code comment indicates a ""TODO"" task related to code cleanup and refactoring.",CDD,RDB
+TODO: Probably should just implement __deepcopy__,Model Code Reusability,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,MDL,CFO
+TODO: programmatically check wether these are indeed features (predict; correct),Data Processing Configuration,Machine Learning Knowledge,AWR,AWR,MLKnow,MLKnow,DTD,AWR
+TODO: Properly break circular dependencies,Code Dependency,Code Dependency,CDD,CDD,MLDepend,MLDepend,CDD,CDD
+TODO: put in infrastructure to fold over trace as it's built.,Data Processing Configuration,Model Interpretability,<UNK>,"The code comment ""TODO: put in infrastructure to fold over trace as it's built."" indicates",MLInter,**MLInter**,DTD,AWR
+TODO: put in the option to do substitution here (most likely scenario;,Prototype,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,SCL,CFO
+TODO: Reduce dim. of mean.,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+TODO: refactor as independent function,Abstraction,Model Code Comprehension,RDB,RDB,MCC,MCC,MDL,RDB
+TODO: Refactor\/simplify Configuration class so it can be used in cases,Model Code Reusability,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,MDL,CFO
+TODO: re-implement support for constraint satisfaction method as needed,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: remove dummy \/ debug tasks,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+TODO: remove hard-coded sizes and make relative to parent?,Model Code Modifiability,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,MDL,CFO
+TODO: Remove hardcoding of downscaling calculations.,Model Code Reusability,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,MDL,CFO
+TODO: Remove in 0.26 when the _pairwise attribute is removed,Unnecessary Model Code,Unnecessary Model Code,CDD,**CDD**,UMC,UMC,CDD,CDD
+TODO: remove this method in v1.3.0.,Unnecessary Model Code,Unnecessary Model Code,CDD,**CDD**,UMC,UMC,CDD,CDD
+TODO: remove when dict results are deprecated,Unnecessary Model Code,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,CDD,CFO
+"TODO: rename kwarg \""forward\"" to \""forward_additive\""",Model Code Comprehension,Model Code Comprehension,RDB,RDB,MCC,MCC,RDB,RDB
+TODO: Repeat_elements and tf.split doesn't support dynamic splits.,Custom Data Type,Multiple Languages,CDD,**CDD**,ML,ML,CDD,CDD
+TODO: replace init=None by init='auto' in v0.6.0 and remove the warning,Unnecessary Model Code,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CDD,CFO
+TODO: Replace Lambda with custom Keras layer for loss.,Layer Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+TODO: replace with (stable) Draft6Validator; if available,Custom Data Type,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,CDD,CFO
+ToDo: replace with 3d input; when grid_sample will start to support it,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,DTD,CFO
+TODO: replace with unbatch or readout,Custom Data Type,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+TODO: reward computation,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: rotated_grids might as well give us correctly shaped array in the first place,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: run-on and split module,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+TODO: See https:\/\/www.pyimagesearch.com\/2017\/05\/22\/face-alignment-with-opencv-and-python\/,Data Processing Configuration,Multiple Languages,<UNK>,The code comment is a reference to a resource and does not contain any code that could be classified as,ML,**ML**,DTD,CDD
+TODO: Set interval for the original date ?,Prototype,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,SCL,CFO
+TODO: should port\/ip\/mac address be ignored? yes,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+todo: should save tpot model here,Data Storage Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,DTD,CFO
+TODO: should we return a LogarithmicFilteredSpectrogram?,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+TODO: skip on error???,Machine Learning Knowledge,Weight Configuration,CFO,CFO,Weight Conf,"The code comment indicates a need to handle errors gracefully, which aligns with the ""Weight Conf"" category",AWR,CFO
+TODO: something if deep 9,Layer Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CFO,RDB
+TODO: Something smarter?,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+TODO: store something cleaner,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: store the actual index in table in case row number is unstable,Data Storage Configuration,Data Processing Configuration,DTD,**DTD**,Data Conf,Data Conf,DTD,DTD
+"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.",Unnecessary Model Code,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,CDD,CFO
+"TODO: the old setup is now called \""pre_training\""; where should this hook be called now?",Model Code Comprehension,Model Code Comprehension,RDB,**RDB**,MCC,HP Conf,RDB,RDB
+TODO: the second element of the rule is not being used,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: the y_train should be given us externally; so far we create it as random values,Model Code Reusability,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,MDL,CFO
+TODO: This branch happens when there's only one content word,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,HP Conf,AWR,RDB
+TODO: this flag is somewhat redundant given the flag above; need,Unnecessary Model Code,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,CDD,CFO
+TODO: This is discarding phase. Is that ok?,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,"The code comment indicates a TODO task related to the ""Data Processing Configuration"" (Data Conf) category",AWR,RDB
+todo: this is O(N^2) and maybe too slow for large graphs.,Model Code Reusability,Prediction Quality,PRF,PRF,PQ,**PQ**,MDL,PRF
+TODO: This is very inefficient and needs fix,Custom Data Type,Prediction Quality,PRF,PRF,PQ,**HP Conf**,CDD,PRF
+TODO: This matching process is slow. Make it faster; avoid loops where possible.,Prototype,Prototype,SCL,SCL,Proto,**HP Conf**,SCL,SCL
+TODO: This might not be called corpora,Model Code Comprehension,Model Code Comprehension,RDB,RDB,MCC,"The provided code comment indicates a **TODO** type of SATD, specifically **Data Conf**.",RDB,RDB
+TODO: This might not work with numpy types; haven't checked - AD,Machine Learning Knowledge,Machine Learning Knowledge,AWR,AWR,MLKnow,MLKnow,AWR,AWR
+TODO: This should be recusive looking for any module with flatten_parameters,Weight Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,CFO,CFO
+TODO: This we can change easily to functional style,Abstraction,Model Code Comprehension,RDB,RDB,MCC,MCC,MDL,RDB
+TODO: tree should't need this in this case,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,HP Conf,CDD,RDB
+TODO: Try smaller numbers?,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: try without copying? could be faster,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,HP Conf,AWR,RDB
+TODO: unroll\/roll are great candidates for a context manager since they're always used in conjunction.,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+TODO: update nouns list with only named enitites,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,**HP Conf**,DTD,CFO
+ToDo: Update with http:\/\/en.wikipedia.org\/wiki\/List_of_emoticons ?,Data Processing Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,The code comment contains a reference to a Wikipedia page about emoticons. It does not mention any of,DTD,CFO
+TODO: Use google-diff-patch-match library,Machine Learning Knowledge,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,AWR,CFO
+todo: use Input and Output classes to handle inputs and outputs,Data Storage Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: Use sklearn.decomposition.TruncatedSVD instead?,Machine Learning Knowledge,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,AWR,CFO
+TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,Layer Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,CFO,CFO
+TODO: verify if it is working,Machine Learning Knowledge,Prediction Quality,PRF,**PRF**,PQ,**HP Conf**,AWR,PRF
+TODO: want to call it activation but namespace; so what to do best?,Model Code Comprehension,Model Code Comprehension,RDB,RDB,MCC,MCC,RDB,RDB
+todo: We can potentially reduce memory usage by freeing memory,Data Storage Configuration,Unnecessary Model Code,<UNK>,"The code comment ""todo: We can potentially reduce memory usage by freeing memory"" indicates a need for",UMC,UMC,DTD,CDD
+TODO: we could probably default the monitor to something reasonable,Hyper-parameter Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,CFO,CFO
+TODO: we may support size = -1 in the future,Data Storage Configuration,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,DTD,CFO
+TODO: weight by length here,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,DTD,CFO
+TODO: why is the whole distribution computed instead of just min\/max,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+TODO: would be good to add ref from source,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: wrap this properly in a with session_context():,Machine Learning Reliability,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,PRF,CFO
+TODO: write a function to do this..,Abstraction,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,MDL,CFO
+TODO: write index,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,HP Conf,DTD,RDB
+TODO: x;y input should be able to be np arrays; pandas arrays; or tf dataset iterators,Custom Data Type,Hyper-parameter Configuration,CFO,CFO,HP Conf,HP Conf,CDD,CFO
+todo; pass also best score,Weight Configuration,Model Code Comprehension,RDB,RDB,MCC,The provided code comment indicates a TODO comment for hyper-parameter configuration (HP Conf).,CFO,RDB
+todo; pass complete checkpoint as state dictionary,Data Processing Configuration,Weight Configuration,CFO,CFO,Weight Conf,Weight Conf,DTD,CFO
+too much memory. A lazy load would be better; but later,Data Storage Configuration,Unnecessary Model Code,<UNK>,The code comment indicates a need for **memory optimization**. It suggests that the current approach is inefficient and,UMC,UMC,DTD,CDD
+unused,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,"The code comment indicates that the code is unused, which is not an ML SATD type.",CDD,RDB
+Unused,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,"The code comment indicates that the code is unused, so the answer is **UMC (Unnecessary",CDD,RDB
+WARNING: bad realtime practice (writing file) TODO: add to a memory buffer and write before exit,Data Storage Configuration,Data Processing Configuration,DTD,"The code comment indicates a potential issue with the ""Data Dependency"" (DTD) category. The comment",Data Conf,**Data Conf**,DTD,DTD
+XXX backward compatibility,Code Dependency,Hyper-parameter Configuration,CFO,"The code comment indicates a need for **backward compatibility**, which aligns with the **CFO** abbreviation.",HP Conf,XXX,CDD,CFO
+XXX de-duplicate this with code from Montage somewhere?,Duplicate Feature Extraction Code,Duplicate Model Code,DCE,DCE,DMC,DMC,DCE,DCE
+XXX Default number of samples drawn from my arse.,Data Processing Configuration,Model Code Comprehension,RDB,RDB,MCC,UMC,DTD,RDB
+XXX Disable SimulateModels without CreateTab,Unnecessary Model Code,Hyper-parameter Configuration,CFO,CFO,HP Conf,XXX,CDD,CFO
+XXX gs = fig.add_gridspec(15; 1),Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,MCC,CDD,RDB
+XXX JRK: Should this test whether test_times if a DecodingTime,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,JRK,AWR,RDB
+XXX might possibly be slow solution; but every worker needs reseted LDA model for every iteration,Machine Learning Knowledge,Machine Learning Reliability,PRF,**PRF**,MLRelia,MLRelia,AWR,PRF
+XXX offset type is uint32,Plain Old Data Type,Model Code Comprehension,RDB,RDB,MCC,MCC,DTD,RDB
+XXX Remove,Unnecessary Model Code,Model Code Comprehension,RDB,RDB,MCC,XXX,CDD,RDB
+XXX This is silly.  We should return log densities; not densities.,Machine Learning Reliability,Model Code Comprehension,RDB,RDB,MCC,MCC,PRF,RDB
+XXX when matplotlib 3.3 is min version; replace this with,Code Dependency,Hyper-parameter Configuration,CFO,CFO,HP Conf,The code comment indicates a need to update a configuration for matplotlib to a minimum version. This suggests the,CDD,CFO
+XXX Would be nice if we could prepare this statement before,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,XXX,DTD,RDB
+XXX: currently scaled to variance=n_samples,Data Processing Configuration,Prototype,SCL,SCL,Proto,"The provided code comment indicates a ""MODEL CODE MODIFIABILITY"" (MCM) issue.",DTD,SCL
+XXX: does control flow affect type inference in Numba?,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,MCC,AWR,RDB
+XXX: How to catch dependence cycles correctly?,Code Dependency,Code Dependency,CDD,"The code comment ""XXX: How to catch dependence cycles correctly?"" is about **Dependency (CDD)**",MLDepend,MLDepend,CDD,CDD
+"XXX: how to find \""""""""good\"""""""" values for level ?""""",Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,HP Conf,AWR,RDB
+XXX: not handling dictionnaries,Plain Old Data Type,Model Code Comprehension,RDB,RDB,MCC,XXX,DTD,RDB
+XXX: one could be smarter here,Model Code Comprehension,Model Code Comprehension,RDB,RDB,MCC,MCM,RDB,RDB
+XXX: Temporary solution to figure out if an estimator is a classifier,Model Code Modifiability,Weight Configuration,CFO,CFO,Weight Conf,**Weight Conf**,MDL,CFO
+XXX: unify Series\/Array as Array,Custom Data Type,Model Code Comprehension,RDB,RDB,MCC,MCC,CDD,RDB
+XXX: We re-cache now just to make sure all items get a mozci version.,Data Storage Configuration,Model Code Comprehension,RDB,RDB,MCC,XXX,DTD,RDB
+XXX: where should this be?,Machine Learning Knowledge,Model Code Comprehension,RDB,RDB,MCC,MCC,AWR,RDB

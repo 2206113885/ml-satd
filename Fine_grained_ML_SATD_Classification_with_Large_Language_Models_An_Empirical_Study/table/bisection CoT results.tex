@@ -1,0 +1,39 @@
+\begin{table}[htbp]
+  \centering
+  \caption{bisection CoT results}
+  \label{tab:bisection_CoT_results}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{
+    >{\centering\arraybackslash}p{1cm}
+    >{\centering\arraybackslash}p{1.2cm}
+    *{8}{>{\centering\arraybackslash}p{1.9cm}}
+  }
+    \toprule
+    & & Qwen3-8B & Qwen3-14B & gemma-2-9b & gemma-3-12b & Llama-3.1-8B-Instruct & gpt-oss-20b \\
+    \midrule
+    % --- 0-shot ---
+    \multirow{3}{*}{0} & precision & 0.389 & 0.400 & 0.382 & \textbf{0.381} & \textbf{0.321} & 0.447 \\
+    & recall & 0.349 & 0.336 & 0.295 & 0.290 & 0.155 & \textbf{0.372} \\
+    & f1 & 0.333 & 0.313 & 0.297 & 0.292 & 0.155 & 0.362 \\
+    \midrule
+    % --- 1-shot ---
+    \multirow{3}{*}{1} & precision & 0.412 & \textbf{0.447} & 0.410 & 0.371 & 0.283 & 0.430 \\
+    & recall & 0.354 & 0.359 & \textbf{0.313} & \textbf{0.328} & 0.176 & 0.356 \\
+    & f1 & 0.358 & 0.363 & \textbf{0.331} & \textbf{0.310} & 0.190 & 0.355 \\
+    \midrule
+    % --- 2-shot ---
+    \multirow{3}{*}{2} & precision & 0.422 & 0.426 & 0.405 & 0.368 & 0.282 & 0.408 \\
+    & recall & 0.364 & 0.366 & 0.303 & 0.326 & \textbf{0.181} & 0.364 \\
+    & f1 & 0.360 & 0.361 & 0.314 & 0.309 & \textbf{0.202} & 0.354 \\
+    \midrule
+    % --- 3-shot ---
+    \multirow{3}{*}{3} & precision & \textbf{0.424} & 0.435 & \textbf{0.425} & 0.349 & 0.247 & \textbf{0.450} \\
+    & recall & \textbf{0.382} & \textbf{0.382} & 0.298 & 0.318 & 0.160 & 0.369 \\
+    & f1 & \textbf{0.377} & \textbf{0.377} & 0.316 & 0.301 & 0.171 & \textbf{0.371} \\
+    \bottomrule
+  \end{tabular}%
+  }
+\end{table}

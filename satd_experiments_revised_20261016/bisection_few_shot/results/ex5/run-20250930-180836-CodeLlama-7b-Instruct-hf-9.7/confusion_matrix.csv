@@ -1,0 +1,24 @@
+,Machine Learning Knowledge,Model Interpretability,Model Code Comprehension,Duplicate Model Code,Duplicate Feature Extraction Code,Weight Configuration,Layer Configuration,Hyper-parameter Configuration,Code Dependency,Glue Code,Custom Data Type,Multiple Languages,Unnecessary Model Code,Data Processing Configuration,Plain Old Data Type,Data Storage Configuration,Abstraction,Boundary Erosion,Model Code Modifiability,Model Code Reusability,Prediction Quality,Machine Learning Reliability,Prototype
+Machine Learning Knowledge,26,24,5,0,3,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,3,0
+Model Interpretability,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Model Code Comprehension,2,4,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Duplicate Model Code,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Duplicate Feature Extraction Code,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Weight Configuration,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Layer Configuration,2,3,3,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Hyper-parameter Configuration,4,6,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0
+Code Dependency,5,11,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Glue Code,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Custom Data Type,8,3,4,0,3,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,0
+Multiple Languages,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Unnecessary Model Code,21,7,2,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2,0
+Data Processing Configuration,30,45,8,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0
+Plain Old Data Type,4,0,3,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+Data Storage Configuration,9,10,9,1,3,0,0,0,0,0,2,0,0,2,0,1,0,0,0,1,0,2,0
+Abstraction,2,4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Boundary Erosion,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Model Code Modifiability,3,4,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Model Code Reusability,2,6,6,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+Prediction Quality,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Machine Learning Reliability,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Prototype,6,6,7,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0

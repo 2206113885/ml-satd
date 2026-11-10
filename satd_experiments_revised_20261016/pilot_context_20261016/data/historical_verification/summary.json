@@ -1,0 +1,26 @@
+{
+  "cohort_sha256": "7bc4d5dab574579236e190a2c1faac858d791a1f0f4e6875d6eb8e4417acbb11",
+  "cohort_unchanged": true,
+  "cohort_size": 100,
+  "attempted": 100,
+  "workers": 4,
+  "requests_this_run": 7,
+  "retry_network_errors_only": true,
+  "timeout_seconds": 15,
+  "stopped_due_to_network_rate_errors": false,
+  "status_counts": {
+    "fetched": 96,
+    "http_error": 4
+  },
+  "http_error_counts": {
+    "404": 4
+  },
+  "fetched": 96,
+  "full_snapshot_identical": 96,
+  "target_line_identical_at_original_position": 96,
+  "exact_local_function_present": 96,
+  "exact_local_window_present": 96,
+  "serialized_comment_present_after_matching_normalization": 96,
+  "scope": "Only recorded introducing-commit SHA and recorded filename; no removal revision or current HEAD fallback; frozen cohort is never changed.",
+  "interpretation": "Identical full snapshot or exact supplied function/window establishes that that input existed at the recorded introducing revision. A file fetch alone, or target-comment presence alone, does not validate all supplied context historically."
+}

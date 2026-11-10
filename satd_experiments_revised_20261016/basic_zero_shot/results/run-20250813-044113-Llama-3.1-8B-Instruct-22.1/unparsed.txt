@@ -1,0 +1,277 @@
+**MCC** (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION) 
+**HP Conf**
+CDT (Custom Data Type) 
+**UMC** (UNNECESSARY MODEL CODE) 
+The Code Comment belongs to: **MLKnow**
+The correct abbreviation is **MCC** (MODEL CODE COMPREHENSION). This is because the
+The correct answer is **GC** (Glue Code).
+MCC (MODEL CODE COMPREHENSION)
+The Code Comment belongs to **DFEC** (DUPLICATE FEATURE EXTRACTION CODE).
+The given code comment belongs to **GC** (Glue Code).
+The correct answer is: **MLKnow** 
+**HP Conf**
+**MCC** (MODEL CODE COMPREHENSION)
+**Layer Conf**
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION)
+The Code Comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+The Code Comment "find out why prefix neg_ is needed" belongs to **MCC** (
+**DFEC** (Duplicate Feature Extraction Code) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**Weight Conf**
+The code comment belongs to: **MCC** (MODEL CODE COMPREHENSION)
+**GC** (Glue Code)
+**DMC** (DUPLICATE MODEL CODE)
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**UMC** (Unnecessary Model Code) 
+The code comment belongs to **CDT** (Custom Data Type).
+Based on the given code comment, the type of ML SATD is: **MCC** (
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**HP Conf** 
+Based on the code comment, I would categorize it as **MCC** (MODEL CODE COM
+**MCC** (MODEL CODE COMPREHENSION) 
+The code comment belongs to: **GC** (Glue Code)
+**HP Conf** 
+The Code Comment belongs to: **MCR** (MODEL CODE REUSABILITY)
+**MCC** (MODEL CODE COMPREHENSION) 
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+**MCC** (MODEL CODE COMPREHENSION) 
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**Layer Conf**
+**Weight Conf**
+**MCC** (MODEL CODE COMPREHENSION)
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**UMC** (UNNECESSARY MODEL CODE)
+MCC (MODEL CODE COMPREHENSION)
+UMC (UNNECESSARY MODEL CODE)
+CDT (CUSTOM DATA TYPE) 
+Based on the given code comment "needed?", I would categorize it as **MCM** (
+**MCC** (MODEL CODE COMPREHENSION) 
+**UMC** (UNNECESSARY MODEL CODE) 
+**GC** (Glue Code)
+**UMC** (Unnecessary Model Code)
+The code comment belongs to **MLKnow**.
+**MCC** (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION)
+**DFEC** (Duplicate Feature Extraction Code) 
+The correct answer is **MLDepend**.
+**MCC** (MODEL CODE COMPREHENSION)
+The type of ML Self-Admitted Technical Debt (SATD) the given Code Comment belongs to
+UMC (UNNECESSARY MODEL CODE)
+The code comment belongs to **DMC** (DUPLICATE MODEL CODE).
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION)
+**MCM** (MODEL CODE MODIFIABILITY)
+The Code Comment belongs to: **DMC** (DUPLICATE MODEL CODE)
+Based on the code comment, I would categorize it as **MLKnow**. 
+**UMC** (UNNECESSARY MODEL CODE)
+**Data Conf**
+**Data Conf**
+Based on the given code comment, I would categorize it as **MLKnow**. 
+**HP Conf**
+**MCC** (MODEL CODE COMPREHENSION) 
+**Layer Conf**
+**MCC** (MODEL CODE COMPREHENSION) 
+Based on the code comment, the type of ML Self-Admitted Technical Debt (SATD)
+**Data Conf**
+**Data Conf**
+**MCC** (MODEL CODE COMPREHENSION) 
+MCC (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION)
+The Code Comment "TODO cpickle vs json" belongs to **MLKnow**. 
+**DFEC** (Duplicate Feature Extraction Code)
+GC (Glue Code) 
+**Layer Conf**
+The code comment belongs to **MCR** (MODEL CODE REUSABILITY). The comment suggests that
+**MCR** (MODEL CODE REUSABILITY) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**Weight Conf**
+The code comment "TODO Implement" does not specify any particular type of technical debt. However, based
+MCM (MODEL CODE MODIFIABILITY) 
+**HP Conf**
+Based on the given code comment, I would categorize it as **MCC** (MODEL CODE
+The given code comment is related to a specific line of code that is incomplete or requires further action.
+**HP Conf** (Hyper-Parameter Configuration) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+MCC (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION)
+**UMC** (UNNECESSARY MODEL CODE)
+**UMC** (UNNECESSARY MODEL CODE) 
+UMC (UNNECESSARY MODEL CODE)
+Based on the given code comment, the type of ML SATD is **GC** (Glue
+**HP Conf** 
+The code comment belongs to **Data Conf**.
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+**Data Conf**
+MCR (MODEL CODE REUSABILITY)
+The code comment "TODO stim channel exclusion" likely belongs to the category: **MLKnow** (
+**HP Conf**
+**DMC** (DUPLICATE MODEL CODE) 
+**MCC** (MODEL CODE COMPREHENSION) 
+Based on the given code comment, I would categorize it under **MCC** (MODEL CODE
+**PODT** (Plain Old Data Type) 
+**MCC** (MODEL CODE COMPREHENSION) 
+UMC (UNNECESSARY MODEL CODE)
+**DFEC** (Duplicate Feature Extraction Code) 
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**HP Conf** (Hyper-Parameter Configuration) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION)
+**Layer Conf**
+CDT (CUSTOM DATA TYPE) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**Data Conf**
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+The code comment belongs to **UMC** (Unnecessary Model Code).
+**Data Conf**
+The given code comment does not explicitly indicate any specific type of ML SATD, but based on the
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+Based on the given code comment, I would categorize it as **GC** (Glue Code
+**MCC** (MODEL CODE COMPREHENSION) 
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+**Data Conf**
+**MCC** (MODEL CODE COMPREHENSION) 
+The code comment belongs to **MLKnow** (MACHINE LEARNING KNOWLEDGE). This is
+**HP Conf** (Hyper-Parameter Configuration)
+The Code Comment belongs to **DMC** (DUPLICATE MODEL CODE).
+**MCC** (MODEL CODE COMPREHENSION) 
+**Data Conf**
+**HP Conf**
+**GC** (Glue Code)
+**MCC** (MODEL CODE COMPREHENSION) 
+The code comment belongs to: **MCC** (MODEL CODE COMPREHENSION)
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**MCC** (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION) 
+The given code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**HP Conf** (Hyper-Parameter Configuration) 
+Based on the given code comment, I would categorize it as **MLKnow**. 
+UMC (UNNECESSARY MODEL CODE)
+Based on the code comment, I would categorize it as **MCC** (MODEL CODE COM
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION). This is because
+**DFEC** (Duplicate Feature Extraction Code)
+UMC (UNNECESSARY MODEL CODE)
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+Based on the code comment, I would categorize it as **MLKnow** (MACHINE LE
+**MCC** (MODEL CODE COMPREHENSION) 
+**Data Conf**
+Based on the code comment, the type of ML Self-Admitted Technical Debt (SATD)
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+DFEC (Duplicate Feature Extraction Code)
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**Data Conf**
+UMC (UNNECESSARY MODEL CODE)
+Based on the provided code comment, the type of ML Self-Admitted Technical Debt (SATD
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+UMC (UNNECESSARY MODEL CODE) 
+**MCC** (MODEL CODE COMPREHENSION) 
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+**MCC** (MODEL CODE COMPREHENSION) 
+**HP Conf**
+**Layer Conf**
+**MCC** (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION) 
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+Based on the code comment, the type of ML SATD is: **MLKnow**
+Based on the provided code comment, I would categorize it as **MLKnow** (MACHINE
+The given code comment "TODO: make efficient" does not directly relate to any specific type of ML
+UMC (UNNECESSARY MODEL CODE)
+**GC** (Glue Code)
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+Based on the given code comment, I would categorize it as **UMC** (UNNE
+Based on the given code comment, I would categorize it as **MCC** (MODEL CODE
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+Based on the given code comment, the type of ML SATD it belongs to is: **ML
+**Layer Conf**
+**Data Conf**
+The Code Comment belongs to: **PODT**
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+**MCM** (MODEL CODE MODIFIABILITY) 
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**CDT** (Custom Data Type) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**BE** (BOUNDARY EROSION) 
+Based on the code comment, the type of ML Self-Admitted Technical Debt (SATD)
+**MCC** (MODEL CODE COMPREHENSION) 
+The Code Comment "TODO: refactor as independent function" belongs to **MCM** (MODEL CODE
+**DMC** (DUPLICATE MODEL CODE) 
+**UMC** (Unnecessary Model Code)
+**MCM** (MODEL CODE MODIFIABILITY) 
+**Data Conf**
+**UMC** (Unnecessary Model Code) 
+UMC (UNNECESSARY MODEL CODE)
+UMC (UNNECESSARY MODEL CODE)
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+The code comment belongs to **MLKnow**. 
+**Layer Conf**
+The code comment belongs to: **GC** (Glue Code)
+**Layer Conf**
+**DFEC** (Duplicate Feature Extraction Code) 
+**MCC** (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION)
+The correct abbreviation for the given Code Comment is: **MLKnow** 
+**Data Conf**
+**DMC** (DUPLICATE MODEL CODE) 
+Based on the code comment, the type of ML Self-Admitted Technical Debt (SATD)
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+**Data Conf**
+**Data Conf**
+**GC** (Glue Code)
+**Layer Conf**
+Based on the given code comment, the type of ML Self-Admitted Technical Debt (SATD
+Based on the given code comment, I would categorize it as **MLKnow**. 
+Based on the given code comment, the type of ML SATD it belongs to is **DMC
+**MCC** (MODEL CODE COMPREHENSION)
+UMC (UNNECESSARY MODEL CODE)
+The given code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+**MCC** (MODEL CODE COMPREHENSION)
+MCC (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION) 
+**HP Conf**
+**DMC** (DUPLICATE MODEL CODE)
+The code comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+Based on the given code comment, the type of ML SATD it belongs to is **GC**
+**GC** (Glue Code)
+**DFEC** (DUPLICATE FEATURE EXTRACTION CODE)
+**MCC** (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCM** (MODEL CODE MODIFIABILITY) 
+**HP Conf** 
+**HP Conf**
+The Code Comment belongs to **MCC** (MODEL CODE COMPREHENSION).
+Based on the provided code comment, the type of ML Self-Admitted Technical Debt (SATD
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION)
+**MCC** (MODEL CODE COMPREHENSION) 
+**UMC** (UNNECESSARY MODEL CODE)
+UMC (UNNECESSARY MODEL CODE)
+**Data Conf**
+DMC (DUPLICATE MODEL CODE)
+**DMC** (DUPLICATE MODEL CODE) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCM** (MODEL CODE MODIFIABILITY)
+Based on the given code comment, the type of ML SATD it belongs to is **UMC
+**GC** (Glue Code)
+**Data Conf**
+**MCC** (MODEL CODE COMPREHENSION)
+**HP Conf** (Hyper-Parameter Configuration) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 
+**MCC** (MODEL CODE COMPREHENSION) 

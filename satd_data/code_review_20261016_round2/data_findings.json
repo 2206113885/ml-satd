@@ -1,0 +1,2747 @@
+[
+  {
+    "id": "DATA-01",
+    "title": "层级解析器遇空输出会直接崩溃",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "extract_coarse/extract_fine在raw是字符串时直接访问raw.splitlines()[0]；空字符串经过类型检查但没有任何首行。",
+    "impact": "模型首步EOS或空content会触发IndexError；当前脚本在整批结束才保存预测，异常可使未落盘进度丢失。是否曾影响历史运行需日志确认。",
+    "recommendation": "先检查非空字符串，再获取首个非空行；空输出返回显式invalid，并保存失败状态。",
+    "locations": [
+      {
+        "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 377,
+        "end_line": 398
+      },
+      {
+        "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 400,
+        "end_line": 429
+      },
+      {
+        "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 363,
+        "end_line": 384
+      },
+      {
+        "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 386,
+        "end_line": 415
+      },
+      {
+        "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 377,
+        "end_line": 398
+      },
+      {
+        "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 400,
+        "end_line": 429
+      },
+      {
+        "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+        "line": 355,
+        "end_line": 376
+      },
+      {
+        "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+        "line": 378,
+        "end_line": 407
+      },
+      {
+        "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+        "line": 377,
+        "end_line": 398
+      },
+      {
+        "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+        "line": 400,
+        "end_line": 429
+      },
+      {
+        "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 365,
+        "end_line": 386
+      },
+      {
+        "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 388,
+        "end_line": 417
+      },
+      {
+        "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+        "line": 353,
+        "end_line": 374
+      },
+      {
+        "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+        "line": 376,
+        "end_line": 405
+      },
+      {
+        "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+        "line": 353,
+        "end_line": 374
+      },
+      {
+        "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+        "line": 376,
+        "end_line": 405
+      },
+      {
+        "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 300,
+        "end_line": 318
+      },
+      {
+        "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 320,
+        "end_line": 349
+      },
+      {
+        "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 285,
+        "end_line": 306
+      },
+      {
+        "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 308,
+        "end_line": 337
+      },
+      {
+        "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 271,
+        "end_line": 292
+      },
+      {
+        "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 294,
+        "end_line": 323
+      },
+      {
+        "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 285,
+        "end_line": 306
+      },
+      {
+        "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 308,
+        "end_line": 337
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 263,
+        "end_line": 284
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 286,
+        "end_line": 315
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 285,
+        "end_line": 306
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 308,
+        "end_line": 337
+      },
+      {
+        "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 273,
+        "end_line": 294
+      },
+      {
+        "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 296,
+        "end_line": 325
+      },
+      {
+        "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 235,
+        "end_line": 264
+      },
+      {
+        "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 274,
+        "end_line": 295
+      },
+      {
+        "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 297,
+        "end_line": 326
+      },
+      {
+        "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 208,
+        "end_line": 226
+      },
+      {
+        "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 228,
+        "end_line": 257
+      }
+    ],
+    "evidence/test": {
+      "test": "只编译原AST字符串解析函数，调用parser(\"\")；extract_fine额外传入合法候选列表。",
+      "reproduced_exceptions": 35,
+      "functions": {
+        "extract_coarse": 17,
+        "extract_fine": 18
+      },
+      "evidence_file": "data_parser_tests.json"
+    }
+  },
+  {
+    "id": "DATA-02",
+    "title": "全称兜底按首词把多个Model类别误映射到MLInter",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "extract_abbr全称回退只判断full.split()[0]是否包含在输出文本中；多个全称共用Model首词，先出现的Model Interpretability因此截获Model Code Reusability等完整有效类名。",
+    "impact": "这不是保守地拒绝非协议格式，而是把语义明确的完整标签变成另一类；可改变候选仲裁和最终预测。历史触发频次需重放已存输出统计。",
+    "recommendation": "用规范化完整全称→唯一缩写映射；删除首词猜测，无法唯一映射时标invalid。",
+    "locations": [
+      {
+        "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 703,
+        "end_line": 715
+      },
+      {
+        "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+        "line": 341,
+        "end_line": 353
+      },
+      {
+        "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 120,
+        "end_line": 132
+      },
+      {
+        "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+        "line": 131,
+        "end_line": 143
+      },
+      {
+        "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+        "line": 148,
+        "end_line": 163
+      },
+      {
+        "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "line": 321,
+        "end_line": 334
+      },
+      {
+        "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "line": 394,
+        "end_line": 408
+      },
+      {
+        "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 347,
+        "end_line": 361
+      },
+      {
+        "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "line": 349,
+        "end_line": 363
+      },
+      {
+        "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+        "line": 397,
+        "end_line": 411
+      },
+      {
+        "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+        "line": 397,
+        "end_line": 411
+      },
+      {
+        "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "line": 518,
+        "end_line": 531
+      },
+      {
+        "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 550,
+        "end_line": 563
+      },
+      {
+        "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 552,
+        "end_line": 566
+      },
+      {
+        "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 552,
+        "end_line": 566
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "line": 554,
+        "end_line": 568
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "line": 673,
+        "end_line": 687
+      },
+      {
+        "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 555,
+        "end_line": 569
+      },
+      {
+        "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "line": 555,
+        "end_line": 569
+      },
+      {
+        "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "line": 556,
+        "end_line": 570
+      },
+      {
+        "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 443,
+        "end_line": 456
+      },
+      {
+        "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 133,
+        "end_line": 146
+      },
+      {
+        "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 158,
+        "end_line": 172
+      },
+      {
+        "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 159,
+        "end_line": 173
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 159,
+        "end_line": 173
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 159,
+        "end_line": 173
+      },
+      {
+        "file": "bisection_zero_shot/bin_new_test.py",
+        "line": 159,
+        "end_line": 173
+      },
+      {
+        "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 160,
+        "end_line": 174
+      },
+      {
+        "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 160,
+        "end_line": 174
+      },
+      {
+        "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 160,
+        "end_line": 174
+      },
+      {
+        "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 159,
+        "end_line": 172
+      }
+    ],
+    "evidence/test": {
+      "input": "Model Code Reusability",
+      "expected_if_full_names_are_supported": "MCR",
+      "actual": "MLInter",
+      "affected_functions": 31,
+      "evidence_file": "data_parser_tests.json",
+      "observed_unambiguous_current_main_vanilla_fullname_misparses": 0,
+      "impact_caveat": "Logic defect reproduced; no unambiguous standalone-fullname misparse was found in the current active Vanilla saved outputs."
+    }
+  },
+  {
+    "id": "DATA-03",
+    "title": "Binary内部已回退，外部unk_cnt漏记真实解析失败",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "classify_by_polling在无法解析时已返回合法Data Conf，主循环只在返回值不属于ABBR_SET时递增unk_cnt；非法仲裁又可能默认第一候选而不单独计数。",
+    "impact": "报告中Unrecognized mapped...:0不能证明无解析失败；失败率与格式可靠性无法由该计数复原。最终带回退标签的F1公式本身未因此算错。",
+    "recommendation": "helper返回raw_pred、parse_ok、fallback_used、fallback_reason和各阶段状态；分别统计无候选、非法仲裁、最终解析失败及回退。",
+    "locations": [
+      {
+        "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "line": 383,
+        "end_line": 420
+      },
+      {
+        "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "line": 439,
+        "end_line": 477
+      },
+      {
+        "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 392,
+        "end_line": 430
+      },
+      {
+        "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "line": 394,
+        "end_line": 432
+      },
+      {
+        "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+        "line": 438,
+        "end_line": 476
+      },
+      {
+        "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+        "line": 438,
+        "end_line": 476
+      },
+      {
+        "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "line": 558,
+        "end_line": 604
+      },
+      {
+        "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 612,
+        "end_line": 649
+      },
+      {
+        "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 597,
+        "end_line": 635
+      },
+      {
+        "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 597,
+        "end_line": 635
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "line": 599,
+        "end_line": 637
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "line": 718,
+        "end_line": 756
+      },
+      {
+        "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 600,
+        "end_line": 638
+      },
+      {
+        "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "line": 596,
+        "end_line": 634
+      },
+      {
+        "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "line": 601,
+        "end_line": 639
+      },
+      {
+        "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 483,
+        "end_line": 529
+      },
+      {
+        "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 195,
+        "end_line": 232
+      },
+      {
+        "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 203,
+        "end_line": 241
+      },
+      {
+        "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 204,
+        "end_line": 242
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 204,
+        "end_line": 242
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 204,
+        "end_line": 242
+      },
+      {
+        "file": "bisection_zero_shot/bin_new_test.py",
+        "line": 204,
+        "end_line": 242
+      },
+      {
+        "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 205,
+        "end_line": 243
+      },
+      {
+        "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 208,
+        "end_line": 246
+      },
+      {
+        "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 205,
+        "end_line": 243
+      },
+      {
+        "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 199,
+        "end_line": 245
+      },
+      {
+        "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "line": 430,
+        "end_line": 430
+      },
+      {
+        "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "line": 487,
+        "end_line": 487
+      },
+      {
+        "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 440,
+        "end_line": 440
+      },
+      {
+        "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "line": 442,
+        "end_line": 442
+      },
+      {
+        "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+        "line": 486,
+        "end_line": 486
+      },
+      {
+        "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+        "line": 486,
+        "end_line": 486
+      },
+      {
+        "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "line": 614,
+        "end_line": 614
+      },
+      {
+        "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 659,
+        "end_line": 659
+      },
+      {
+        "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 645,
+        "end_line": 645
+      },
+      {
+        "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 645,
+        "end_line": 645
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "line": 647,
+        "end_line": 647
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "line": 766,
+        "end_line": 766
+      },
+      {
+        "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 648,
+        "end_line": 648
+      },
+      {
+        "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "line": 644,
+        "end_line": 644
+      },
+      {
+        "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "line": 649,
+        "end_line": 649
+      },
+      {
+        "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 539,
+        "end_line": 539
+      },
+      {
+        "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 242,
+        "end_line": 242
+      },
+      {
+        "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 251,
+        "end_line": 251
+      },
+      {
+        "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 252,
+        "end_line": 252
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 252,
+        "end_line": 252
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 252,
+        "end_line": 252
+      },
+      {
+        "file": "bisection_zero_shot/bin_new_test.py",
+        "line": 252,
+        "end_line": 252
+      },
+      {
+        "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 253,
+        "end_line": 253
+      },
+      {
+        "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 256,
+        "end_line": 256
+      },
+      {
+        "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 253,
+        "end_line": 253
+      },
+      {
+        "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 255,
+        "end_line": 255
+      }
+    ],
+    "evidence/test": {
+      "model_stub": "每次生成都返回unparseable；未运行任何模型或原模块。",
+      "reproduced_helpers": 26,
+      "all_invalid_return_legal_label_and_not_counted": true,
+      "evidence_file": "data_control_flow_tests.json"
+    }
+  },
+  {
+    "id": "DATA-04",
+    "title": "层级unknown_fine在默认回退后统计，遗漏全部细类解析失败",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "classify_two_stage将<UNK>替换为FALLBACK_FINE_BY_COARSE中的合法标签后才返回；主循环随后检查fine_abbr是否属于FINE_ABBR_SET，因此正常路径的unknown_fine始终为0。",
+    "impact": "保存的unknown_fine=0不代表第二阶段全部可解析；会掩盖层级模型格式失败和默认类贡献。最终预测标签仍可用于报告带回退的指标。",
+    "recommendation": "在替换前记录fine_parse_ok/fine_raw_label和fallback_used，再将状态返回主循环；保留回退前后两个字段。",
+    "locations": [
+      {
+        "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 480,
+        "end_line": 501
+      },
+      {
+        "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 467,
+        "end_line": 488
+      },
+      {
+        "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 482,
+        "end_line": 503
+      },
+      {
+        "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+        "line": 460,
+        "end_line": 481
+      },
+      {
+        "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+        "line": 482,
+        "end_line": 503
+      },
+      {
+        "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 470,
+        "end_line": 491
+      },
+      {
+        "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+        "line": 458,
+        "end_line": 479
+      },
+      {
+        "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+        "line": 458,
+        "end_line": 479
+      },
+      {
+        "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 376,
+        "end_line": 399
+      },
+      {
+        "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 388,
+        "end_line": 409
+      },
+      {
+        "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 375,
+        "end_line": 396
+      },
+      {
+        "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 390,
+        "end_line": 411
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 368,
+        "end_line": 389
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 390,
+        "end_line": 411
+      },
+      {
+        "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 378,
+        "end_line": 399
+      },
+      {
+        "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 292,
+        "end_line": 314
+      },
+      {
+        "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 379,
+        "end_line": 400
+      },
+      {
+        "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 284,
+        "end_line": 307
+      },
+      {
+        "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 516,
+        "end_line": 516
+      },
+      {
+        "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 503,
+        "end_line": 503
+      },
+      {
+        "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 518,
+        "end_line": 518
+      },
+      {
+        "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+        "line": 496,
+        "end_line": 496
+      },
+      {
+        "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+        "line": 518,
+        "end_line": 518
+      },
+      {
+        "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 506,
+        "end_line": 506
+      },
+      {
+        "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+        "line": 494,
+        "end_line": 494
+      },
+      {
+        "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+        "line": 494,
+        "end_line": 494
+      },
+      {
+        "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 414,
+        "end_line": 414
+      },
+      {
+        "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 424,
+        "end_line": 424
+      },
+      {
+        "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 411,
+        "end_line": 411
+      },
+      {
+        "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 426,
+        "end_line": 426
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 404,
+        "end_line": 404
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 426,
+        "end_line": 426
+      },
+      {
+        "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 414,
+        "end_line": 414
+      },
+      {
+        "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 329,
+        "end_line": 329
+      },
+      {
+        "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 415,
+        "end_line": 415
+      },
+      {
+        "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 322,
+        "end_line": 322
+      }
+    ],
+    "evidence/test": {
+      "model_stub": "两个阶段均返回<UNK>。",
+      "reproduced_helpers": 18,
+      "all_invalid_return_legal_fine_and_not_counted": true,
+      "evidence_file": "data_control_flow_tests.json",
+      "current_parser_replay_file": "data_observed_tree_parse_failures.json"
+    }
+  },
+  {
+    "id": "DATA-05",
+    "title": "Coarse指标评估最终细类回映，不等同于第一阶段coarse输出",
+    "status": "design-choice",
+    "severity": "P2",
+    "description": "粗类报告使用pred_df.pred映射到FINE2COARSE_FULL得到pred_coarse，没有直接评估已保存的coarse_pred；阶段1未知时，阶段2全局选择仍能得到合法粗类。",
+    "impact": "若论文将表解释为第一阶段性能，会混入第二阶段补救；当前zero-shot Qwen2.5-Coder有9条、CodeGemma有23条差异。若本意是最终细类聚合后的粗类指标，该公式可以保留但需改名。",
+    "recommendation": "分别报告stage1_coarse与final_fine_aggregated_coarse，明确无效粗类按错处理；保留当前最终fine指标。",
+    "locations": [
+      {
+        "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 541,
+        "end_line": 541
+      },
+      {
+        "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 528,
+        "end_line": 528
+      },
+      {
+        "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 543,
+        "end_line": 543
+      },
+      {
+        "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+        "line": 521,
+        "end_line": 521
+      },
+      {
+        "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+        "line": 543,
+        "end_line": 543
+      },
+      {
+        "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 531,
+        "end_line": 531
+      },
+      {
+        "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+        "line": 519,
+        "end_line": 519
+      },
+      {
+        "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+        "line": 519,
+        "end_line": 519
+      },
+      {
+        "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 439,
+        "end_line": 439
+      },
+      {
+        "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 449,
+        "end_line": 449
+      },
+      {
+        "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 436,
+        "end_line": 436
+      },
+      {
+        "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 451,
+        "end_line": 451
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 429,
+        "end_line": 429
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 451,
+        "end_line": 451
+      },
+      {
+        "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 439,
+        "end_line": 439
+      },
+      {
+        "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 354,
+        "end_line": 354
+      },
+      {
+        "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 440,
+        "end_line": 440
+      },
+      {
+        "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 347,
+        "end_line": 347
+      }
+    ],
+    "evidence/test": {
+      "csv_differences": [
+        {
+          "file": "tree_zero_shot/results/run-20250813-032417-Qwen2.5-Coder-7B-Instruct-nd+es-22.1/predictions.csv",
+          "different_stage1_and_derived_coarse": 9
+        },
+        {
+          "file": "tree_zero_shot/results/run-20250813-044653-codegemma-1.1-7b-it-9.4/predictions.csv",
+          "different_stage1_and_derived_coarse": 23
+        },
+        {
+          "file": "tree_few_shot/results/run-20250813-033744-Qwen2.5-Coder-7B-Instruct-21.6/predictions.csv",
+          "different_stage1_and_derived_coarse": 13
+        },
+        {
+          "file": "tree_few_shot/results/run-20250825-044152-codegemma-1.1-7b-it-10.9/predictions.csv",
+          "different_stage1_and_derived_coarse": 23
+        },
+        {
+          "file": "tree_few_shot/results/run-20250825-044320-CodeLlama-7b-Instruct-hf-2.5/predictions.csv",
+          "different_stage1_and_derived_coarse": 1
+        }
+      ],
+      "no_automatic_relabeling": true
+    }
+  },
+  {
+    "id": "DATA-06",
+    "title": "实际393条数据仍含重复ID和重复注释",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "最终CSV共有393行、392个唯一Dataset ID、391个唯一Comment Text；aafedbhaj的同一条记录重复，TODO: make efficient另在两个不同项目出现。",
+    "impact": "当前结果对同一样本重复计权；未来按行划分示例/训练/测试会使重复或克隆跨集合。重复量较小，不应夸大成整个实验无效。",
+    "recommendation": "先按Dataset ID、项目/路径/提交与规范化注释建立身份清单，冻结去重版本和旧结果敏感性分析；跨项目相同文本按研究目标单独标记。",
+    "locations": [
+      {
+        "file": "dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+        "line": 1,
+        "end_line": 1
+      }
+    ],
+    "evidence/test": {
+      "rows": 393,
+      "unique_ids": 392,
+      "unique_comments": 391,
+      "duplicate_ids": {
+        "aafedbhaj": 2
+      },
+      "duplicate_comments": {
+        "needed to sklearn comparability": 2,
+        "TODO: make efficient": 2
+      }
+    }
+  },
+  {
+    "id": "DATA-07",
+    "title": "仲裁预测以comment作唯一键，重复注释会静默覆盖",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "两个battle脚本将每行预测写入out[cmt]字典，再按comment查找。数据中存在重复comment，不同项目/样本的预测和reason可被最后一行替换。",
+    "impact": "仲裁实验无法保持一一对应；当前重复文本已经满足覆盖条件，但具体历史仲裁预测是否改变需逐行比较。此实验未列为主文最佳结果来源。",
+    "recommendation": "所有预测保存Dataset ID及项目/路径/提交；连接前assert key唯一并检查一对一覆盖，重复键明确报错。",
+    "locations": [
+      {
+        "file": "battle/gpt_battle.py",
+        "line": 209,
+        "end_line": 245
+      },
+      {
+        "file": "battle/test.py",
+        "line": 222,
+        "end_line": 249
+      }
+    ],
+    "evidence/test": {
+      "counterexample": "两行(comment=\"same\",pred=\"A\")与(comment=\"same\",pred=\"B\")进入out[cmt]后只有最后的B；不同Dataset ID不会被保留。",
+      "actual_duplicate_comment_groups": {
+        "needed to sklearn comparability": 2,
+        "TODO: make efficient": 2
+      }
+    }
+  },
+  {
+    "id": "DATA-08",
+    "title": "旧ICL代码仍把传统satd_type当作23类任务gold",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "ICL_Ob_qwen-8b系列保留satd_type列并重命名label，而其后定义的预测候选是23个ML细粒度全称；OBrien_789_v2.csv的satd_type实际为传统Requirement/Code/Design等。",
+    "impact": "即使修复旧脚本其余运行问题，该gold与候选不在同一标签空间，所得评估不能视为23类ML-SATD结果。没有证据表明这些旧脚本产出了主文已匹配的结果。",
+    "recommendation": "将旧代码隔离为历史材料；复用时显式选择ml_satd_type并执行相同预处理，强制assert gold均属于候选集合。",
+    "locations": [
+      {
+        "file": "ICL_Ob_qwen-8b.py",
+        "line": 89,
+        "end_line": 89
+      },
+      {
+        "file": "ICL_Ob_qwen-8b_new.py",
+        "line": 41,
+        "end_line": 41
+      },
+      {
+        "file": "ICL_Ob_qwen-8b_v0.py",
+        "line": 93,
+        "end_line": 93
+      }
+    ],
+    "evidence/test": {
+      "legacy_rows": 789,
+      "satd_type_values": {
+        "Design": 80,
+        "Code": 207,
+        "Requirement": 321,
+        "Defect": 82,
+        "Documentation": 15,
+        "M&T": 84
+      },
+      "scope": "Legacy root ICL scripts only; not an assertion against current method-family reports."
+    }
+  },
+  {
+    "id": "DATA-09",
+    "title": "严格格式及宽松归一化策略不统一，需明确协议",
+    "status": "design-choice",
+    "severity": "P3",
+    "description": "部分simple_extract先移除非字母，但ABBR_LOWER的多词key仍保留空格；Data Conf.或markdown格式因此可能返回UNK，而单词缩写的同类格式可被接受。",
+    "impact": "纯缩写协议下拒绝附加标点可以是合理设计，不应把这些案例算硬bug；问题在于不同模型族的格式容忍程度不同且回退率影响评估。",
+    "recommendation": "先明确是严格协议还是兼容常见格式；若兼容，则统一用同一canonical函数构建key和解析输出，并单独报告格式失败率。",
+    "locations": [
+      {
+        "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 697,
+        "end_line": 708
+      },
+      {
+        "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+        "line": 887,
+        "end_line": 898
+      },
+      {
+        "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+        "line": 693,
+        "end_line": 704
+      },
+      {
+        "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+        "line": 585,
+        "end_line": 596
+      },
+      {
+        "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+        "line": 898,
+        "end_line": 907
+      },
+      {
+        "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+        "line": 904,
+        "end_line": 913
+      },
+      {
+        "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+        "line": 898,
+        "end_line": 907
+      },
+      {
+        "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+        "line": 336,
+        "end_line": 347
+      },
+      {
+        "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+        "line": 338,
+        "end_line": 349
+      },
+      {
+        "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+        "line": 338,
+        "end_line": 349
+      },
+      {
+        "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+        "line": 338,
+        "end_line": 349
+      },
+      {
+        "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+        "line": 347,
+        "end_line": 356
+      },
+      {
+        "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+        "line": 347,
+        "end_line": 356
+      },
+      {
+        "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+        "line": 346,
+        "end_line": 355
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+        "line": 130,
+        "end_line": 141
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+        "line": 222,
+        "end_line": 233
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+        "line": 222,
+        "end_line": 233
+      },
+      {
+        "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 113,
+        "end_line": 124
+      },
+      {
+        "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+        "line": 109,
+        "end_line": 120
+      },
+      {
+        "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+        "line": 113,
+        "end_line": 124
+      },
+      {
+        "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+        "line": 115,
+        "end_line": 126
+      },
+      {
+        "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+        "line": 118,
+        "end_line": 127
+      },
+      {
+        "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+        "line": 119,
+        "end_line": 128
+      },
+      {
+        "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+        "line": 118,
+        "end_line": 127
+      },
+      {
+        "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+        "line": 126,
+        "end_line": 137
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+        "line": 127,
+        "end_line": 138
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+        "line": 127,
+        "end_line": 138
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+        "line": 115,
+        "end_line": 126
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+        "line": 127,
+        "end_line": 138
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+        "line": 110,
+        "end_line": 121
+      },
+      {
+        "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+        "line": 136,
+        "end_line": 145
+      },
+      {
+        "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+        "line": 136,
+        "end_line": 145
+      },
+      {
+        "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+        "line": 135,
+        "end_line": 144
+      },
+      {
+        "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+        "line": 142,
+        "end_line": 151
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+        "line": 130,
+        "end_line": 141
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+        "line": 130,
+        "end_line": 141
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+        "line": 130,
+        "end_line": 141
+      },
+      {
+        "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+        "line": 114,
+        "end_line": 125
+      },
+      {
+        "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+        "line": 114,
+        "end_line": 125
+      },
+      {
+        "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+        "line": 125,
+        "end_line": 144
+      },
+      {
+        "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+        "line": 125,
+        "end_line": 144
+      },
+      {
+        "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+        "line": 125,
+        "end_line": 134
+      },
+      {
+        "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+        "line": 125,
+        "end_line": 138
+      },
+      {
+        "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+        "line": 125,
+        "end_line": 138
+      },
+      {
+        "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+        "line": 303,
+        "end_line": 319
+      },
+      {
+        "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+        "line": 303,
+        "end_line": 319
+      },
+      {
+        "file": "test1.py",
+        "line": 187,
+        "end_line": 203
+      },
+      {
+        "file": "test3.py",
+        "line": 187,
+        "end_line": 203
+      }
+    ],
+    "evidence/test": {
+      "counterexamples_in_parser_tests": 96,
+      "evidence_file": "data_parser_tests.json",
+      "classification": "Design choice/improvement, not a hard bug merely because punctuation is rejected."
+    }
+  },
+  {
+    "id": "DATA-10",
+    "title": "Yes/No宽松前缀会把普通单词或不确定输出判成投票",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "extract_yes_no/parse_yesno使用startswith(\"y\")、startswith(\"n\")或startswith(\"yes\")等前缀，未要求单词结束；Yesterday被解析为yes，Not sure被解析为no。",
+    "impact": "无效或不确定输出会被当作正常二元投票，改变候选集且无法进入unknown统计；历史触发频率不能只凭反例推断。",
+    "recommendation": "用带单词边界的严格Yes/No语法，明确单字母及中文合法形式；不确定、混合Yes/No和其他词返回unknown。",
+    "locations": [
+      {
+        "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "line": 310,
+        "end_line": 319
+      },
+      {
+        "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "line": 382,
+        "end_line": 392
+      },
+      {
+        "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 335,
+        "end_line": 345
+      },
+      {
+        "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+        "line": 288,
+        "end_line": 301
+      },
+      {
+        "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+        "line": 288,
+        "end_line": 301
+      },
+      {
+        "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "line": 337,
+        "end_line": 347
+      },
+      {
+        "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+        "line": 385,
+        "end_line": 395
+      },
+      {
+        "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+        "line": 385,
+        "end_line": 395
+      },
+      {
+        "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "line": 507,
+        "end_line": 516
+      },
+      {
+        "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 539,
+        "end_line": 548
+      },
+      {
+        "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 540,
+        "end_line": 550
+      },
+      {
+        "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 540,
+        "end_line": 550
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "line": 542,
+        "end_line": 552
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "line": 661,
+        "end_line": 671
+      },
+      {
+        "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 543,
+        "end_line": 553
+      },
+      {
+        "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "line": 543,
+        "end_line": 553
+      },
+      {
+        "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "line": 544,
+        "end_line": 554
+      },
+      {
+        "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 432,
+        "end_line": 441
+      },
+      {
+        "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 122,
+        "end_line": 131
+      },
+      {
+        "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 146,
+        "end_line": 156
+      },
+      {
+        "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 147,
+        "end_line": 157
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 147,
+        "end_line": 157
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 147,
+        "end_line": 157
+      },
+      {
+        "file": "bisection_zero_shot/bin_new_test.py",
+        "line": 147,
+        "end_line": 157
+      },
+      {
+        "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 148,
+        "end_line": 158
+      },
+      {
+        "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 148,
+        "end_line": 158
+      },
+      {
+        "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 148,
+        "end_line": 158
+      },
+      {
+        "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 148,
+        "end_line": 157
+      },
+      {
+        "file": "test1.py",
+        "line": 172,
+        "end_line": 185
+      },
+      {
+        "file": "test3.py",
+        "line": 172,
+        "end_line": 185
+      }
+    ],
+    "evidence/test": {
+      "input": "Yesterday",
+      "actual": "yes",
+      "expected": "unknown/invalid",
+      "affected_functions": 30,
+      "secondary_input": "Not sure",
+      "secondary_actual": "no",
+      "evidence_file": "data_parser_tests.json"
+    }
+  },
+  {
+    "id": "DATA-11",
+    "title": "随机基线无seed且单次结果具有抽样波动",
+    "status": "design-choice",
+    "severity": "P3",
+    "description": "random_classify.py明确不设随机种子，从23类均匀抽取一次预测；各次run保存实际预测但未定义汇总协议。",
+    "impact": "单次随机F1不具确定性，把它当精确固定门槛可能改变较弱模型是否超过随机基线的判断；均匀随机本身是合法基线。",
+    "recommendation": "固定并报告多组seed及均值/区间；或补充解析期望accuracy并明确F1采用模拟分布。保留已有run作为实现核对。",
+    "locations": [
+      {
+        "file": "random_classify/random_classify.py",
+        "line": 47,
+        "end_line": 60
+      },
+      {
+        "file": "random_classify/random_classify.py",
+        "line": 89,
+        "end_line": 96
+      }
+    ],
+    "evidence/test": {
+      "source": "pyrandom.choice(ABBR_LIST); settings note explicitly No seed set."
+    }
+  },
+  {
+    "id": "DATA-12",
+    "title": "预处理只保留type2的行却未将其提升为主标签",
+    "status": "current-risk",
+    "severity": "P3",
+    "description": "filter_rows保留恰有一个标签的行，包括ML TD Type为空、ML TD Type 2非空的行；后续分类脚本仅读取ML TD Type。",
+    "impact": "将来遇到secondary-only输入会把合法单标签保留为缺失gold；当前本地825原始CSV无该模式，不能声称已影响393条结果。",
+    "recommendation": "过滤后先把唯一非空标签合并成单一gold列，再assert非空且属于23类；写出每步ID清单。",
+    "locations": [
+      {
+        "file": "data_process.py",
+        "line": 110,
+        "end_line": 115
+      }
+    ],
+    "evidence/test": {
+      "counterexample": {
+        "ML TD Type": null,
+        "ML TD Type 2": "Abs"
+      },
+      "filter_result": "kept with primary gold still null",
+      "observed_current_dataset_secondary_only_rows": 0
+    }
+  },
+  {
+    "id": "DATA-13",
+    "title": "预测记录未保存Dataset ID，难以可靠连接及审计",
+    "status": "current-risk",
+    "severity": "P2",
+    "description": "结果行通常只包含comment、real、pred和输出文本，没有保留原CSV的Dataset ID/项目/路径/引入提交。",
+    "impact": "顺序一致时当前158个论文run可逐行核对，但排序、跳过gold或跨文件仲裁后，重复注释无法可靠区分；文本键覆盖问题已在battle实现中出现。",
+    "recommendation": "新run统一保存Dataset ID、输入行号、项目/路径/提交及原始gold；合并采用ID并assert一致；历史run保存可验证的顺序映射。",
+    "locations": [
+      {
+        "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 758,
+        "end_line": 763
+      },
+      {
+        "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 773,
+        "end_line": 778
+      },
+      {
+        "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+        "line": 943,
+        "end_line": 948
+      },
+      {
+        "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+        "line": 754,
+        "end_line": 759
+      },
+      {
+        "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+        "line": 645,
+        "end_line": 650
+      },
+      {
+        "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+        "line": 951,
+        "end_line": 956
+      },
+      {
+        "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+        "line": 957,
+        "end_line": 962
+      },
+      {
+        "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+        "line": 949,
+        "end_line": 954
+      },
+      {
+        "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 931,
+        "end_line": 936
+      },
+      {
+        "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+        "line": 397,
+        "end_line": 402
+      },
+      {
+        "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+        "line": 405,
+        "end_line": 410
+      },
+      {
+        "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+        "line": 399,
+        "end_line": 404
+      },
+      {
+        "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+        "line": 399,
+        "end_line": 404
+      },
+      {
+        "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+        "line": 399,
+        "end_line": 404
+      },
+      {
+        "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+        "line": 399,
+        "end_line": 404
+      },
+      {
+        "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+        "line": 399,
+        "end_line": 404
+      },
+      {
+        "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+        "line": 396,
+        "end_line": 401
+      },
+      {
+        "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+        "line": 402,
+        "end_line": 407
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+        "line": 239,
+        "end_line": 245
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+        "line": 331,
+        "end_line": 338
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+        "line": 331,
+        "end_line": 337
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+        "line": 386,
+        "end_line": 392
+      },
+      {
+        "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 174,
+        "end_line": 179
+      },
+      {
+        "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 183,
+        "end_line": 188
+      },
+      {
+        "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+        "line": 166,
+        "end_line": 171
+      },
+      {
+        "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+        "line": 174,
+        "end_line": 179
+      },
+      {
+        "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+        "line": 175,
+        "end_line": 180
+      },
+      {
+        "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+        "line": 168,
+        "end_line": 173
+      },
+      {
+        "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+        "line": 169,
+        "end_line": 174
+      },
+      {
+        "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+        "line": 169,
+        "end_line": 174
+      },
+      {
+        "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 220,
+        "end_line": 225
+      },
+      {
+        "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+        "line": 187,
+        "end_line": 192
+      },
+      {
+        "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+        "line": 195,
+        "end_line": 200
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+        "line": 188,
+        "end_line": 193
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+        "line": 188,
+        "end_line": 193
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+        "line": 176,
+        "end_line": 181
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+        "line": 188,
+        "end_line": 193
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+        "line": 171,
+        "end_line": 176
+      },
+      {
+        "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+        "line": 188,
+        "end_line": 193
+      },
+      {
+        "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+        "line": 188,
+        "end_line": 193
+      },
+      {
+        "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+        "line": 185,
+        "end_line": 190
+      },
+      {
+        "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+        "line": 237,
+        "end_line": 242
+      },
+      {
+        "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+        "line": 194,
+        "end_line": 199
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+        "line": 239,
+        "end_line": 245
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+        "line": 239,
+        "end_line": 246
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+        "line": 239,
+        "end_line": 245
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+        "line": 294,
+        "end_line": 300
+      },
+      {
+        "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+        "line": 201,
+        "end_line": 207
+      },
+      {
+        "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+        "line": 213,
+        "end_line": 219
+      },
+      {
+        "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+        "line": 198,
+        "end_line": 204
+      },
+      {
+        "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+        "line": 226,
+        "end_line": 232
+      },
+      {
+        "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+        "line": 226,
+        "end_line": 232
+      },
+      {
+        "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+        "line": 204,
+        "end_line": 210
+      },
+      {
+        "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+        "line": 216,
+        "end_line": 222
+      },
+      {
+        "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+        "line": 216,
+        "end_line": 222
+      },
+      {
+        "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+        "line": 254,
+        "end_line": 260
+      },
+      {
+        "file": "battle/gpt_battle.py",
+        "line": 382,
+        "end_line": 393
+      },
+      {
+        "file": "battle/test.py",
+        "line": 296,
+        "end_line": 304
+      },
+      {
+        "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "line": 437,
+        "end_line": 443
+      },
+      {
+        "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "line": 494,
+        "end_line": 500
+      },
+      {
+        "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 447,
+        "end_line": 453
+      },
+      {
+        "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+        "line": 428,
+        "end_line": 434
+      },
+      {
+        "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+        "line": 428,
+        "end_line": 434
+      },
+      {
+        "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "line": 449,
+        "end_line": 455
+      },
+      {
+        "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+        "line": 493,
+        "end_line": 499
+      },
+      {
+        "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+        "line": 493,
+        "end_line": 499
+      },
+      {
+        "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "line": 621,
+        "end_line": 627
+      },
+      {
+        "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 666,
+        "end_line": 672
+      },
+      {
+        "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 652,
+        "end_line": 658
+      },
+      {
+        "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 652,
+        "end_line": 658
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "line": 654,
+        "end_line": 660
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "line": 773,
+        "end_line": 779
+      },
+      {
+        "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 655,
+        "end_line": 661
+      },
+      {
+        "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "line": 651,
+        "end_line": 657
+      },
+      {
+        "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "line": 656,
+        "end_line": 662
+      },
+      {
+        "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 546,
+        "end_line": 552
+      },
+      {
+        "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 249,
+        "end_line": 255
+      },
+      {
+        "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 258,
+        "end_line": 264
+      },
+      {
+        "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 259,
+        "end_line": 265
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 259,
+        "end_line": 265
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 259,
+        "end_line": 265
+      },
+      {
+        "file": "bisection_zero_shot/bin_new_test.py",
+        "line": 259,
+        "end_line": 265
+      },
+      {
+        "file": "bisection_zero_shot/bin_test.py",
+        "line": 177,
+        "end_line": 183
+      },
+      {
+        "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 260,
+        "end_line": 266
+      },
+      {
+        "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 263,
+        "end_line": 269
+      },
+      {
+        "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 260,
+        "end_line": 266
+      },
+      {
+        "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 262,
+        "end_line": 268
+      },
+      {
+        "file": "original_COT.py",
+        "line": 232,
+        "end_line": 237
+      },
+      {
+        "file": "random_classify/random_classify.py",
+        "line": 55,
+        "end_line": 60
+      },
+      {
+        "file": "test1.py",
+        "line": 312,
+        "end_line": 318
+      },
+      {
+        "file": "test3.py",
+        "line": 312,
+        "end_line": 318
+      },
+      {
+        "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 519,
+        "end_line": 529
+      },
+      {
+        "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 506,
+        "end_line": 516
+      },
+      {
+        "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 521,
+        "end_line": 531
+      },
+      {
+        "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+        "line": 499,
+        "end_line": 509
+      },
+      {
+        "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+        "line": 521,
+        "end_line": 531
+      },
+      {
+        "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 509,
+        "end_line": 519
+      },
+      {
+        "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+        "line": 497,
+        "end_line": 507
+      },
+      {
+        "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+        "line": 497,
+        "end_line": 507
+      },
+      {
+        "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 417,
+        "end_line": 425
+      },
+      {
+        "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 427,
+        "end_line": 437
+      },
+      {
+        "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 414,
+        "end_line": 424
+      },
+      {
+        "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 429,
+        "end_line": 439
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 407,
+        "end_line": 417
+      },
+      {
+        "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 429,
+        "end_line": 439
+      },
+      {
+        "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 417,
+        "end_line": 427
+      },
+      {
+        "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 332,
+        "end_line": 342
+      },
+      {
+        "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 418,
+        "end_line": 428
+      },
+      {
+        "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 325,
+        "end_line": 333
+      }
+    ],
+    "evidence/test": {
+      "source_dataset_has_stable_id": true,
+      "observed_unique_ids": 392,
+      "observed_prediction_identity_field": "comment only"
+    }
+  },
+  {
+    "id": "DATA-14",
+    "title": "旧ICL固定示例含评估数据注释，须与主流程隔离",
+    "status": "needs-history",
+    "severity": "P2",
+    "description": "旧ICL固定init_prompt_for_OBrien中嵌入最终数据集13条完整注释示例；这些固定示例不随测试fold排除。当前主文方法族的活动长字符串未检出相同完整注释重叠。",
+    "impact": "复用旧ICL会把部分待测实例直接写进基础prompt；但旧文件还有运行/标签问题，且没有证据表明它们产出当前主文结果。不能据此指控主文few-shot污染。",
+    "recommendation": "隔离legacy目录；任何真实示例仅从独立训练/开发集合选择，并记录示例ID与每个fold排除清单。补交GPT-5生成示例的种子与来源清单。",
+    "locations": [
+      {
+        "file": "ICL_Ob_qwen-8b.py",
+        "line": 214,
+        "end_line": 239
+      },
+      {
+        "file": "ICL_Ob_qwen-8b_new.py",
+        "line": 157,
+        "end_line": 182
+      },
+      {
+        "file": "ICL_Ob_qwen-8b_v0.py",
+        "line": 189,
+        "end_line": 217
+      }
+    ],
+    "evidence/test": {
+      "evidence_file": "data_demo_overlap_checks.json",
+      "overlap_per_legacy_prompt": {
+        "ICL_Ob_qwen-8b.py": 13,
+        "ICL_Ob_qwen-8b_new.py": 13,
+        "ICL_Ob_qwen-8b_v0.py": 13
+      },
+      "scope": "Legacy only; no confirmed overlap in current main method-family literal prompts."
+    }
+  },
+  {
+    "id": "DATA-15",
+    "title": "旧ICL按已有fold划分仍有同ID和同文本跨集合",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "旧ICL直接采用OBrien_789_v2.csv的fold做train/test。该文件136/299个项目跨多个fold，11组相同文本及3个Dataset ID跨fold。",
+    "impact": "最近邻ICL可从训练集合取到测试实例的重复记录，且这不是跨项目划分。仅针对旧ICL复用风险，不等于当前主文零/少样本流程已经发生训练测试泄漏。",
+    "recommendation": "先按ID/规范化文本/克隆分组，再按项目分组划分；对每fold显式assert ID、重复文本和项目隔离。",
+    "locations": [
+      {
+        "file": "ICL_Ob_qwen-8b.py",
+        "line": 93,
+        "end_line": 101
+      },
+      {
+        "file": "ICL_Ob_qwen-8b_v0.py",
+        "line": 97,
+        "end_line": 105
+      },
+      {
+        "file": "dataset/OBrien_789_v2.csv",
+        "line": 1,
+        "end_line": 1
+      }
+    ],
+    "evidence/test": {
+      "repos_total": 299,
+      "repos_across_folds": 136,
+      "comment_groups_across_folds": 11,
+      "dataset_ids_across_folds": {
+        "aafedbhaj": [
+          "6",
+          "7"
+        ],
+        "aafegiafa": [
+          "0",
+          "5"
+        ],
+        "aahciiijc": [
+          "0",
+          "9"
+        ]
+      }
+    }
+  },
+  {
+    "id": "DATA-16",
+    "title": "预处理版本链无法仅从当前原始CSV和入口脚本重建",
+    "status": "needs-history",
+    "severity": "P2",
+    "description": "本地sampled_label_dataset.csv为825条，而normalized为402条，含14个不在825条中的新ID；data_process.py默认读取已经normalized的CSV，真正标准化/过滤/保存步骤在main中注释掉，删除9条TODO的步骤也未作为可运行流水线保存。",
+    "impact": "无法从当前交付源文件一键重建393条相同输入；这可能是原始版本未完整交付，而非现有结果计算错误。",
+    "recommendation": "确认用于论文的原始数据版本，保存输入/输出hash；提供独立可复现预处理入口和每步保留/排除ID及原因，不直接改写源CSV。",
+    "locations": [
+      {
+        "file": "data_process.py",
+        "line": 6,
+        "end_line": 8
+      },
+      {
+        "file": "data_process.py",
+        "line": 125,
+        "end_line": 138
+      },
+      {
+        "file": "dataset/sampled_label_dataset.csv",
+        "line": 1,
+        "end_line": 1
+      },
+      {
+        "file": "dataset/sampled_label_dataset_normalized.csv",
+        "line": 1,
+        "end_line": 1
+      }
+    ],
+    "evidence/test": {
+      "raw825_rows": 825,
+      "raw825_unlabeled": 363,
+      "raw825_dual_label": 74,
+      "raw825_single_label": 388,
+      "normalized402_new_ids_not_in_raw825": 14,
+      "normalized402_minus_final393": 9,
+      "evidence_file": "data_integrity_checks.json"
+    }
+  },
+  {
+    "id": "DATA-17",
+    "title": "部分Binary run的raw_output实际只存最终选定缩写",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "test1/test3及Qwen Binary CoT在仲裁、全标签回退等分支把final_raw设为已解析缩写，逐标签yn_raw_all虽收集但未写入预测行。",
+    "impact": "现存raw_output不能重放23个Yes/No、候选裁决及解析器；真实输出格式错误、思考未闭合和第一候选回退无法从该列完整审计。标签F1不因此自动无效，但历史错误率无法可靠恢复。",
+    "recommendation": "分别保存每阶段未处理输出、可见输出、解析结果、候选集合、fallback及token/终止状态；raw_output只用于真实原文，最终标签单独保存。",
+    "locations": [
+      {
+        "file": "test1.py",
+        "line": 312,
+        "end_line": 318
+      },
+      {
+        "file": "test3.py",
+        "line": 312,
+        "end_line": 318
+      },
+      {
+        "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+        "line": 428,
+        "end_line": 434
+      },
+      {
+        "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+        "line": 428,
+        "end_line": 434
+      }
+    ],
+    "evidence/test": {
+      "source_observation": "final_raw = picked/final_abbr; yn_raw_all not included in saved row",
+      "scope": "Four Qwen Binary scripts; other polling helpers also omit individual Y/N raw outputs, but this finding targets the strongest explicit replacement."
+    }
+  },
+  {
+    "id": "DATA-18",
+    "title": "失败回退到Data Conf并计入F1属于明确的评估策略",
+    "status": "design-choice",
+    "severity": "P2",
+    "description": "多数分类脚本把无法解析的输出替换为最大类Data Conf，再以正常预测计入classification_report。",
+    "impact": "这是可合法选择的部署策略，不能称F1公式算错；但模型自身分类能力与回退贡献混合，格式失败较多的模型可能得到部分正确预测。跨模型比较需披露该规则。",
+    "recommendation": "保留既有带回退结果用于复现，同时另报invalid-as-wrong指标、格式失败率与fallback贡献；不要在不标注新协议时直接覆盖旧表。",
+    "locations": [
+      {
+        "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 28,
+        "end_line": 28
+      },
+      {
+        "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+        "line": 28,
+        "end_line": 28
+      },
+      {
+        "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 28,
+        "end_line": 28
+      },
+      {
+        "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+        "line": 28,
+        "end_line": 28
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+        "line": 29,
+        "end_line": 29
+      },
+      {
+        "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+        "line": 22,
+        "end_line": 22
+      },
+      {
+        "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+        "line": 25,
+        "end_line": 25
+      },
+      {
+        "file": "battle/gpt_battle.py",
+        "line": 28,
+        "end_line": 28
+      },
+      {
+        "file": "battle/test.py",
+        "line": 29,
+        "end_line": 29
+      },
+      {
+        "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "line": 30,
+        "end_line": 30
+      },
+      {
+        "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "line": 32,
+        "end_line": 32
+      },
+      {
+        "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 30,
+        "end_line": 30
+      },
+      {
+        "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 32,
+        "end_line": 32
+      },
+      {
+        "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 30,
+        "end_line": 30
+      },
+      {
+        "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 32,
+        "end_line": 32
+      },
+      {
+        "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "bisection_zero_shot/bin_new_test.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 33,
+        "end_line": 33
+      },
+      {
+        "file": "original_COT.py",
+        "line": 24,
+        "end_line": 24
+      },
+      {
+        "file": "test1.py",
+        "line": 34,
+        "end_line": 34
+      },
+      {
+        "file": "test3.py",
+        "line": 34,
+        "end_line": 34
+      }
+    ],
+    "evidence/test": {
+      "current_majority_class": "Data Conf",
+      "current_majority_support": 88,
+      "current_total": 393,
+      "distinction": "Policy choice; DATA-03/DATA-04 concern incorrect logging of that policy, not the policy itself."
+    }
+  },
+  {
+    "id": "DATA-19",
+    "title": "辅助bin_test解释解析截断所有含空格的合法缩写",
+    "status": "confirmed",
+    "severity": "P2",
+    "description": "bin_test.explain的正则只允许[A-Za-z]+；合法输出Data Conf - reason不能匹配后，split(None,1)只取Data作为预测，Layer Conf、Weight Conf、HP Conf、DS Conf同样受影响。",
+    "impact": "会把合法多词缩写变成不在候选集合的词；主流程没有校验chosen合法性，confusion_matrix显式labels又不包含这些截断词。该辅助原型没有与当前主文结果建立来源关联。",
+    "recommendation": "使用共享的完整缩写映射/正则并校验候选集合；对未知输出保留invalid状态；如果不再使用该原型则隔离为legacy。",
+    "locations": [
+      {
+        "file": "bisection_zero_shot/bin_test.py",
+        "line": 128,
+        "end_line": 153
+      },
+      {
+        "file": "bisection_zero_shot/bin_test.py",
+        "line": 169,
+        "end_line": 194
+      }
+    ],
+    "evidence/test": {
+      "model_free_stub": "chat返回Data Conf - the processing step needs changes",
+      "actual_abbreviation": "Data",
+      "expected_abbreviation": "Data Conf",
+      "evidence_file": "data_auxiliary_bin_test_cases.json",
+      "scope": "Auxiliary bin_test only; not attributed to manuscript runs."
+    }
+  }
+]

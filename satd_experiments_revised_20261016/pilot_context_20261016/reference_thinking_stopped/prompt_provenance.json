@@ -1,0 +1,33 @@
+{
+  "original_source": "/Users/yizho/Desktop/satd_data/basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+  "original_source_sha256": "b68ebb846f5cf69349f9bbb2ad8de3095088cb181c5c6b4b44c9171d2b2dd1cd",
+  "frozen_prompt_sha256": "d88c3614ea09c7040778d7834c568dee8cbb830b93d4b7cd2da5b2722e73b902",
+  "extracted_assignments": [
+    "ABBR2FULL",
+    "ABBR_LOWER",
+    "ABBR_SET",
+    "LABELS",
+    "LABEL_ABBR",
+    "PROMPT_HEAD",
+    "PROMPT_TAIL"
+  ],
+  "extracted_functions": [
+    "build_prompt",
+    "simple_extract"
+  ],
+  "notes": "Only AST-selected prompt definitions and pure helpers retained. Original training/inference side effects not executed.",
+  "downloaded_checkpoint_generation_config": {
+    "bos_token_id": 151643,
+    "do_sample": true,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "pad_token_id": 151643,
+    "temperature": 0.6,
+    "top_k": 20,
+    "top_p": 0.95,
+    "transformers_version": "4.51.0"
+  },
+  "sampling_note": "Downloaded official revision has do_sample=true, matching the explicit pilot sampler. The historical experiment did not snapshot its local generation_config."
+}

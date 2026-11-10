@@ -1,0 +1,9 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/gemma-3-12b-it",
+  "model_name": "gemma-3-12b-it",
+  "run_dir": "results/run-20251021-003247-gemma-3-12b-it",
+  "max_new_tokens": 512,
+  "fallback_abbr": "Data Conf",
+  "output_format": "two-lines (Abbreviation / Reason <=12 words)"
+}

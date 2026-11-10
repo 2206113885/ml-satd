@@ -1,0 +1,155 @@
+[
+  {
+    "model": "Qwen3-8B",
+    "mode": "thinking",
+    "before_R45_overrides": {
+      "do_sample": true,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repetition_penalty": 1.0,
+      "num_beams": 1
+    },
+    "after_R46_explicit_recommendation_overrides": {
+      "do_sample": true,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0
+    },
+    "checkpoint_snapshot_added": false
+  },
+  {
+    "model": "Qwen3-8B",
+    "mode": "nonthinking",
+    "before_R45_overrides": {
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repetition_penalty": 1.0,
+      "num_beams": 1
+    },
+    "after_R46_explicit_recommendation_overrides": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0
+    },
+    "checkpoint_snapshot_added": false
+  },
+  {
+    "model": "Qwen3-14B",
+    "mode": "thinking",
+    "before_R45_overrides": {
+      "do_sample": true,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repetition_penalty": 1.0,
+      "num_beams": 1
+    },
+    "after_R46_explicit_recommendation_overrides": {
+      "do_sample": true,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0
+    },
+    "checkpoint_snapshot_added": false
+  },
+  {
+    "model": "Qwen3-14B",
+    "mode": "nonthinking",
+    "before_R45_overrides": {
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repetition_penalty": 1.0,
+      "num_beams": 1
+    },
+    "after_R46_explicit_recommendation_overrides": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0
+    },
+    "checkpoint_snapshot_added": false
+  },
+  {
+    "model": "Qwen2.5-Coder-7B-Instruct",
+    "mode": "instruct",
+    "before_R45_overrides": {
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": null,
+      "repetition_penalty": 1.1,
+      "num_beams": 1
+    },
+    "after_R46_explicit_recommendation_overrides": {},
+    "checkpoint_snapshot_added": false
+  },
+  {
+    "model": "CodeLlama-7b-Instruct-hf",
+    "mode": "instruct",
+    "before_R45_overrides": {},
+    "after_R46_explicit_recommendation_overrides": {},
+    "checkpoint_snapshot_added": true
+  },
+  {
+    "model": "Llama-3.1-8B-Instruct",
+    "mode": "instruct",
+    "before_R45_overrides": {},
+    "after_R46_explicit_recommendation_overrides": {},
+    "checkpoint_snapshot_added": true
+  },
+  {
+    "model": "codegemma-1.1-7b-it",
+    "mode": "instruct",
+    "before_R45_overrides": {},
+    "after_R46_explicit_recommendation_overrides": {},
+    "checkpoint_snapshot_added": true
+  },
+  {
+    "model": "gemma-2-9b-it",
+    "mode": "instruct",
+    "before_R45_overrides": {},
+    "after_R46_explicit_recommendation_overrides": {},
+    "checkpoint_snapshot_added": true
+  },
+  {
+    "model": "gemma-3-12b-it",
+    "mode": "instruct",
+    "before_R45_overrides": {},
+    "after_R46_explicit_recommendation_overrides": {},
+    "checkpoint_snapshot_added": true
+  },
+  {
+    "model": "gpt-oss-20b",
+    "mode": "reasoning",
+    "before_R45_overrides": {
+      "do_sample": true,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": null,
+      "repetition_penalty": 1.0,
+      "num_beams": 1,
+      "typical_p": 1.0,
+      "epsilon_cutoff": 0.0,
+      "eta_cutoff": 0.0
+    },
+    "after_R46_explicit_recommendation_overrides": {
+      "temperature": 1.0,
+      "top_p": 1.0
+    },
+    "checkpoint_snapshot_added": false
+  }
+]

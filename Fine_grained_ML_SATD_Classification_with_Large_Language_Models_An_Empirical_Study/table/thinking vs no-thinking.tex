@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption{Thinking vs No-Thinking}
+  \label{tab:model_prompt_thinking}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabular}{c c c c c c}
+    \toprule
+    \multirow{2}{*}{Models} & \multirow{2}{*}{Metric} & \multicolumn{2}{c}{Vanilla} & \multicolumn{2}{c}{Binary} \\
+    \cmidrule(lr){3-4}\cmidrule(lr){5-6}
+    & & no-thinking & thinking & no-thinking & thinking \\
+    \midrule
+    \multirow{3}{*}{Qwen3-8B} & precision & 0.210 & \textbf{0.403} & 0.315 & 0.398 \\
+    & recall & 0.196 & \textbf{0.326} & 0.237 & 0.267 \\
+    & f1 & 0.168 & \textbf{0.303} & 0.249 & 0.282 \\
+    \midrule
+    \multirow{3}{*}{Qwen3-14B} & precision & 0.379 & 0.420 & 0.387 & \textbf{0.467} \\
+    & recall & 0.305 & \textbf{0.366} & 0.280 & 0.308 \\
+    & f1 & 0.302 & \textbf{0.341} & 0.284 & 0.300 \\
+    \bottomrule
+  \end{tabular}%
+\end{table}

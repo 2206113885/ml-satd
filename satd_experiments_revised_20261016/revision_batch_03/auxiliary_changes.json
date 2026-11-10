@@ -1,0 +1,732 @@
+{
+  "scope_owner": "literature auxiliary/data/pilot",
+  "validation_policy": "Only source AST parsing, source hashing and static text/diff inspection. No experiment/model/tokenizer/data pipeline/parser/unit test executed.",
+  "changes": [
+    {
+      "file": "auxiliary_protocol.py",
+      "issues": [
+        "R14",
+        "R22",
+        "R30",
+        "R31",
+        "R37",
+        "R41"
+      ],
+      "note": "New self-contained static-safe auxiliary protocol; no historical datasets or run outputs changed.",
+      "before_sha256": null,
+      "after_sha256": "31b3fc1a998d2ed6e7cd71ea8977cd7929fbc5ffb21a9481f8ada7c7acae8585",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "shared helper: pilot/random review plus excluded prototype utilities",
+      "rerun_basis": "Only actual paper-mapped pilot/random usage may qualify; preprocessing/ICL/CoT paths are NOT rerun basis",
+      "current_R30_scope": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    },
+    {
+      "file": "data_process.py",
+      "issues": [
+        "R14",
+        "R30",
+        "R35"
+      ],
+      "note": "Explicit prospective preprocessing with source/output hashes, secondary-label promotion, conservative dedup ledger, no source rewrite; historical 393-row provenance remains unresolved.",
+      "before_sha256": "058dd65dc0d142f4ffbd52823421febd8d14d304bf0f633230644a05314a0525",
+      "after_sha256": "4c15e30a357a75c35368a2154731069de90d3a52747c2bd673e839bf639d3fc6",
+      "original_preserved_as_comments": true,
+      "validation": "AST/text only; no implementation function executed",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false,
+      "current_R30_scope": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    },
+    {
+      "file": "download_model.py",
+      "issues": [
+        "R12"
+      ],
+      "note": "Removed credential literals from active/comments and redacted this batch backup. Security exception: original credential bytes are intentionally not recoverable from revised source or backup.",
+      "before_sha256": "abf868d4a563661695e31332ea7401674f6b40bec13dd7b33b08616ebe1deca0",
+      "after_sha256": "d2499448a8647e29bc4ed198d171c8a7942c5cdc87a994d6ecd1882887faeef1",
+      "original_preserved_as_comments": true,
+      "validation": "AST/text only; no implementation function executed",
+      "security_exception": {
+        "secret_occurrences_removed": 4,
+        "before_backup_redacted": true,
+        "byte_recovery_intentionally_impossible": true,
+        "values_logged_or_stored": false
+      },
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false
+    },
+    {
+      "file": "ICL_Ob_qwen-8b.py",
+      "issues": [
+        "R38",
+        "R39",
+        "R40",
+        "R41",
+        "R42",
+        "R44"
+      ],
+      "note": "Archived whole legacy implementation as comments and disabled execution; no claim that old labels, folds or fixed examples are reusable.",
+      "before_sha256": "a541eb49467959b7c3a831da2109072af9253b26ea8e734f9b38ebcf9d81d3ba",
+      "after_sha256": "2cfb4f1d6c250dc60ce7805f515a097c4c54ba24a714db09b4e7a3a6f23a2c0e",
+      "original_preserved_as_comments": true,
+      "validation": "AST/text only; no implementation function executed",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false
+    },
+    {
+      "file": "ICL_Ob_qwen-8b_new.py",
+      "issues": [
+        "R38",
+        "R39",
+        "R40",
+        "R41",
+        "R42",
+        "R44"
+      ],
+      "note": "Archived whole legacy implementation as comments and disabled execution; no claim that old labels, folds or fixed examples are reusable.",
+      "before_sha256": "790ad6b4cf001ca6ed31191bf73e4d9b1467480fcdb1f20c7eedae9dba7cdb38",
+      "after_sha256": "0328b31066d64c201bf84e8f68bdf80b7615f9e9e475d06276d81a6351155f2e",
+      "original_preserved_as_comments": true,
+      "validation": "AST/text only; no implementation function executed",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false
+    },
+    {
+      "file": "ICL_Ob_qwen-8b_v0.py",
+      "issues": [
+        "R38",
+        "R39",
+        "R40",
+        "R41",
+        "R42",
+        "R44"
+      ],
+      "note": "Archived whole legacy implementation as comments and disabled execution; no claim that old labels, folds or fixed examples are reusable.",
+      "before_sha256": "656ceed08057c204bbbf5d8fcfef0ff51007e01ace4a691c12c670723b3808ec",
+      "after_sha256": "0be8934a463133a8b42cfd967d4a73873950ce4729cf4b2590208ed668bf8b8f",
+      "original_preserved_as_comments": true,
+      "validation": "AST/text only; no implementation function executed",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false
+    },
+    {
+      "file": "qwen_auxiliary_runtime.py",
+      "issues": [
+        "R24",
+        "R31",
+        "R43"
+      ],
+      "note": "New local-only runtime: explicit nonthinking, full input budget, all actual local checkpoint-file hashes, seed and effective config; no tokenizer/model loaded during editing.",
+      "before_sha256": null,
+      "after_sha256": "e9dabec7eb143938c2427d966ff2ea51a6dbdbae7149457649f2c6aba1532479",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false
+    },
+    {
+      "file": "icl_revised.py",
+      "issues": [
+        "R22",
+        "R24",
+        "R31",
+        "R33",
+        "R38",
+        "R39",
+        "R40",
+        "R41",
+        "R42",
+        "R44"
+      ],
+      "note": "Complete new independent TF-IDF ICL entry; requires source-bound external clone adjudication, separate cross-project train/test and validated ML gold; no old fold/fixed examples imported.",
+      "before_sha256": null,
+      "after_sha256": "f15b49c74961fc4f0f4d8ed92890f3183db52cbb8daa9038b3f38a4bd95b4999",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false
+    },
+    {
+      "file": "original_COT.py",
+      "issues": [
+        "R22",
+        "R24",
+        "R31",
+        "R33",
+        "R43"
+      ],
+      "note": "Replaced unsafe legacy prototype with complete explicit two-stage CLI; original preserved as comments, native thinking disabled, no truncation, seeds/full raw stage records and separate failure policy.",
+      "before_sha256": "1933a33fd58b85925456598975989b140850c325930e2e5de20dc90545fd5d26",
+      "after_sha256": "f34c9e70bac868e62e9266e776c8f37ac36633c1cdc184a777f15c1907684e44",
+      "original_preserved_as_comments": true,
+      "validation": "AST/text only; no implementation function executed",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false
+    },
+    {
+      "file": "random_classify/random_classify.py",
+      "issues": [
+        "R22",
+        "R37"
+      ],
+      "note": "Prospective multi-seed random baseline; individual prediction/report/confusion CSVs for every seed plus explicit uncertainty summary; historical results retained.",
+      "before_sha256": "8a0a075170ed3a4b823dd53de82e9ef48efb4ad4115acb94f3d0f4d661f7ef2f",
+      "after_sha256": "ab78c43e6a3549ffd9067e0371bc2a11034bf2cfb0efd84899e96be646de1d41",
+      "original_preserved_as_comments": true,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false,
+      "paper_prose_mapping": {
+        "file": "main.tex",
+        "lines": [
+          909,
+          1188
+        ],
+        "default_repetitions": 10,
+        "historical_seeds": "not reconstructed"
+      }
+    },
+    {
+      "file": "pilot_context_20261016/reference_revised.py",
+      "issues": [
+        "R16",
+        "R36"
+      ],
+      "note": "New reference with paired JSON comment delimiters and one whole-output case/whitespace canonical parser; historical frozen references retained unchanged.",
+      "before_sha256": null,
+      "after_sha256": "de362753003711370814da7f42a3df71c1bdbc81c70557e5011f88d14909e284",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false
+    },
+    {
+      "file": "pilot_context_20261016/run_pilot_revised.py",
+      "issues": [
+        "R16",
+        "R24",
+        "R25",
+        "R31",
+        "R36"
+      ],
+      "note": "New runner only: explicit revised output path, revised balanced prompt/parser, actual model-file hashes, context reserve, finish/length protocol; frozen references and saved results unchanged.",
+      "before_sha256": null,
+      "after_sha256": "b87e2862002563e49bd0b7d200f59d4aede41045ac12986945045df06412b6f8",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false
+    },
+    {
+      "file": "pilot_context_20261016/verified_subset_revised.py",
+      "issues": [
+        "R26",
+        "R30"
+      ],
+      "note": "Complete independent subset builder verifies cohort summary hash/size, each ID/snapshot/URL/path, actual historical evidence bytes and contexts, and prediction cohort/gold binding before writing new subset.",
+      "before_sha256": null,
+      "after_sha256": "8bc51b1b1c9a32c8d2702f72d3065b8d3512a7595f4d1ef1316f391821deb796",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false,
+      "current_R30_scope": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    },
+    {
+      "file": "pilot_context_20261016/verify_historical_revised.py",
+      "issues": [
+        "R26",
+        "R30"
+      ],
+      "note": "New explicit-cohort verifier with pinned introducing URLs and new evidence output; no history overwrite and no verification executed now.",
+      "before_sha256": null,
+      "after_sha256": "bfc7d3dd6a8dd9209a881e2eb4df7e58add9498e29a99f6a9075f15dee4a6da6",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false,
+      "current_R30_scope": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    },
+    {
+      "file": "pilot_context_20261016/prepare_pilot_revised.py",
+      "issues": [
+        "R30"
+      ],
+      "note": "Preparation now requires explicit final/context CSV inputs and a new output directory; old cohort/data untouched; selection algorithm retained.",
+      "before_sha256": null,
+      "after_sha256": "bd54c6e0a5596afe2aac0b9853d53b5ebe677bdb4634ad8275740d8639538dc5",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false,
+      "current_R30_scope": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    },
+    {
+      "file": "pilot_context_20261016/analyze_pilot_revised.py",
+      "issues": [
+        "R30"
+      ],
+      "note": "Analysis requires explicit cohort/predictions and a fresh revised output directory; old metrics/scientific analysis calculations unchanged.",
+      "before_sha256": null,
+      "after_sha256": "4a5820f196f0f7c048bf32ec85c4c7ce2c098e6de2ee6dab0175f59479254df5",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false,
+      "current_R30_scope": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    },
+    {
+      "file": "pilot_context_20261016/run_pilot.py",
+      "issues": [
+        "R16",
+        "R25",
+        "R26",
+        "R36"
+      ],
+      "note": "Disabled historical writer main entry; original helpers/evidence files unchanged and old main guard preserved inline.",
+      "before_sha256": "c32401956ce91965b8e52451f9b1616b4470925837980fa3f55c6300b5d39e4a",
+      "after_sha256": "ca0eab14478fe7740e3375f6d272c4e80b0ee42264c4302d498a1600be6d583d",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false
+    },
+    {
+      "file": "pilot_context_20261016/wait_and_run.py",
+      "issues": [
+        "R16",
+        "R25",
+        "R26",
+        "R36"
+      ],
+      "note": "Disabled historical writer main entry; original helpers/evidence files unchanged and old main guard preserved inline.",
+      "before_sha256": "2cd8ce618892cbbbefad4613a5310ecd970d9b4bcdcab104e0f8b2f170965ff0",
+      "after_sha256": "8c61dd56d3ca0557ba168956e40f229a1ca9afdb33c4e717c729fac66f0c890e",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false
+    },
+    {
+      "file": "pilot_context_20261016/prepare_pilot.py",
+      "issues": [
+        "R16",
+        "R25",
+        "R26",
+        "R36"
+      ],
+      "note": "Disabled historical writer main entry; original helpers/evidence files unchanged and old main guard preserved inline.",
+      "before_sha256": "c550be14f49e0475a3b09d285bbd1f73b8b79a2d9c0fd7a363ec51e8f8739562",
+      "after_sha256": "15413914ff61beff2ba037d62965cbcace92568aa0ce602dce09a22e1cc144aa",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false
+    },
+    {
+      "file": "pilot_context_20261016/analyze_pilot.py",
+      "issues": [
+        "R16",
+        "R25",
+        "R26",
+        "R36"
+      ],
+      "note": "Disabled historical writer main entry; original helpers/evidence files unchanged and old main guard preserved inline.",
+      "before_sha256": "92ac9b83630f97031acd03e0d99346e8f0535363dc98569e9d1d51eecdf49ac1",
+      "after_sha256": "7b6b1fb86991ce4514fba449dec86d09df3434ea8540a2f3161b8f276bc5f0ec",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false
+    },
+    {
+      "file": "pilot_context_20261016/download_model.py",
+      "issues": [
+        "R26",
+        "R30"
+      ],
+      "note": "Entire old auxiliary writer archived; no historical directories created on import.",
+      "before_sha256": "27d86c664a0eeb8867a20504c522601eb6c60c60500184f5bb5eb3910f668fbf",
+      "after_sha256": "5e03d24d2af8c1d2c656049fbf0e6694b7313f86777ad64b4f6f3b63dad213a7",
+      "original_preserved_as_comments": true,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false,
+      "current_R30_scope": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    },
+    {
+      "file": "pilot_context_20261016/verify_historical.py",
+      "issues": [
+        "R26",
+        "R30"
+      ],
+      "note": "Entire old auxiliary writer archived; no historical directories created on import.",
+      "before_sha256": "5b243fc546c6c6bf0da2b8938001a2581d1d19d15ef2c244cd0f655bf8312128",
+      "after_sha256": "d6022f5d087c5c6fbd5f65c4e66cfc871598b5f4bcc4c7b23dcae1eba06200d2",
+      "original_preserved_as_comments": true,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "pilot/random review remains in scope; paper attribution requires actual table/run mapping",
+      "scope_excluded_by_user": false,
+      "current_R30_scope": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    },
+    {
+      "file": "AUXILIARY_REVISED_PROTOCOL.md",
+      "issues": [
+        "R12",
+        "R14",
+        "R16",
+        "R22",
+        "R24",
+        "R25",
+        "R26",
+        "R30",
+        "R31",
+        "R33",
+        "R35",
+        "R36",
+        "R37",
+        "R38",
+        "R39",
+        "R40",
+        "R41",
+        "R42",
+        "R43",
+        "R44"
+      ],
+      "note": "Reviewable protocol and historical/external limitations; documents that this batch was static-only and produced no new experimental data.",
+      "before_sha256": null,
+      "after_sha256": "4aa81c68762ce2d9364766c4a4d3ad39fabc9d4538466af1ffffa41d4f30a6bb",
+      "original_preserved_as_comments": false,
+      "validation": "AST/text only; no implementation function executed",
+      "paper_scope": "mixed auxiliary documentation; user exclusion overrides broader historical descriptions",
+      "rerun_basis": "NOT an assertion that all documented entries participated in the paper",
+      "current_R30_scope": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    }
+  ],
+  "issues": [
+    {
+      "id": "R12",
+      "status": "repaired_security_exception",
+      "notes": "Credentials removed and before backup redacted; no credential bytes copied into comments/manifests.",
+      "paper_scope": "nonpaper download utility credential cleanup",
+      "paper_defect_evidence": false,
+      "rerun_basis": "NOT rerun basis"
+    },
+    {
+      "id": "R14",
+      "status": "prospective_code_repaired_historical_data_preserved",
+      "notes": "New dedup/identity ledger exists but has not run; historical duplicated CSV/scores unchanged.",
+      "paper_scope": "Dataset duplicate observations require the actual paper-input mapping; new dedup utility is nonpaper",
+      "rerun_basis": "The new preprocessing implementation is NOT rerun basis; no dataset was transformed or paper score recomputed"
+    },
+    {
+      "id": "R16",
+      "status": "new_protocol_repaired_frozen_preserved",
+      "notes": "New whole-output parser canonicalizes dictionary and output identically; historical frozen references unchanged."
+    },
+    {
+      "id": "R22",
+      "status": "new_protocol_repaired",
+      "notes": "New auxiliary predictions carry sample ID, source row, raw gold, project/path/revision.",
+      "paper_scope": "Mixed issue; excluded ICL/CoT observations are nonpaper, pilot/random observations require actual run mapping",
+      "attribution_note": "Do not transfer excluded temporary-script findings to paper experiments."
+    },
+    {
+      "id": "R24",
+      "status": "new_protocol_repaired",
+      "notes": "Full templated token budgets, context/output reserve, no silent truncation; old ICL entries disabled.",
+      "paper_scope": "Mixed issue; excluded ICL/CoT observations are nonpaper, pilot/random observations require actual run mapping",
+      "attribution_note": "Do not transfer excluded temporary-script findings to paper experiments."
+    },
+    {
+      "id": "R25",
+      "status": "new_protocol_repaired",
+      "notes": "Finish reason and token-limit policy explicit; complete valid labels may score at length limit under declared policy; no historical rescore."
+    },
+    {
+      "id": "R26",
+      "status": "new_protocol_repaired",
+      "notes": "Cohort/evidence/context/URL checks plus exact parent prompt bytes, prediction prompt hashes, supported static source reconstruction, seed/arms/selected-IDs binding; missing source/log provenance rejects reuse. Historical sources never imported/executed."
+    },
+    {
+      "id": "R30",
+      "status": "user_deprioritized_nonblocking_preprocessing_note",
+      "notes": "Retained as preprocessing context only; do not pursue historical reconstruction or require reruns from this note.",
+      "paper_scope": "Not a paper experimental-code defect or outstanding repair.",
+      "rerun_basis": "NOT a standalone rerun basis",
+      "requires_historical_followup": false
+    },
+    {
+      "id": "R31",
+      "status": "new_protocol_repaired_historical_identity_unresolved",
+      "notes": "New runtime records local file/template/config hashes, effective config, dependencies and sample seed; official/historical ancestry not inferred.",
+      "paper_scope": "Mixed issue; excluded ICL/CoT observations are nonpaper, pilot/random observations require actual run mapping",
+      "attribution_note": "Do not transfer excluded temporary-script findings to paper experiments."
+    },
+    {
+      "id": "R33",
+      "status": "new_protocol_repaired",
+      "notes": "Strict failures and separate legacy Data Conf prediction/metrics preserved for new CoT/ICL; no historical output rewrite.",
+      "paper_scope": "Mixed issue; excluded ICL/CoT observations are nonpaper, pilot/random observations require actual run mapping",
+      "attribution_note": "Do not transfer excluded temporary-script findings to paper experiments."
+    },
+    {
+      "id": "R35",
+      "status": "prospective_code_repaired",
+      "notes": "Valid secondary-only gold promoted to primary and validated before writing any fresh dataset.",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper prototype issue",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false,
+      "attribution_note": "Observed or repaired in temporary tools explicitly excluded by the user; cannot support a paper-defect/rerun claim."
+    },
+    {
+      "id": "R36",
+      "status": "new_protocol_repaired_frozen_preserved",
+      "notes": "New pilot prompt uses paired JSON string boundaries; historical frozen reference bytes unchanged."
+    },
+    {
+      "id": "R37",
+      "status": "prospective_code_repaired_historical_seed_unresolved",
+      "notes": "Per-seed outputs plus explicit seed distribution/expected accuracy; old unrecorded seeds cannot be recovered."
+    },
+    {
+      "id": "R38",
+      "status": "legacy_disabled_new_entry_repaired",
+      "notes": "No embedding tokenizer in TF-IDF ICL; generation tokenizer has a dedicated runtime.",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper prototype issue",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false,
+      "attribution_note": "Observed or repaired in temporary tools explicitly excluded by the user; cannot support a paper-defect/rerun claim."
+    },
+    {
+      "id": "R39",
+      "status": "legacy_disabled_new_entry_repaired",
+      "notes": "Old syntax-invalid implementation retained only as comments; new entry AST-valid.",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper prototype issue",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false,
+      "attribution_note": "Observed or repaired in temporary tools explicitly excluded by the user; cannot support a paper-defect/rerun claim."
+    },
+    {
+      "id": "R40",
+      "status": "legacy_disabled_new_entry_repaired",
+      "notes": "New entry uses explicit validated inputs and complete prompt/runtime builders; no add_context/INPUT undefined names reused.",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper prototype issue",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false,
+      "attribution_note": "Observed or repaired in temporary tools explicitly excluded by the user; cannot support a paper-defect/rerun claim."
+    },
+    {
+      "id": "R41",
+      "status": "legacy_disabled_new_entry_repaired",
+      "notes": "New gold explicitly ML-only, validated to 23 labels; traditional satd_type prohibited.",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper prototype issue",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false,
+      "attribution_note": "Observed or repaired in temporary tools explicitly excluded by the user; cannot support a paper-defect/rerun claim."
+    },
+    {
+      "id": "R42",
+      "status": "code_guard_repaired_external_data_required",
+      "notes": "Separate datasets and source-bound clone provenance required; cross-set ID/text/project/clone overlaps rejected; no claim that old folds are repaired.",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper prototype issue",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false,
+      "attribution_note": "Observed or repaired in temporary tools explicitly excluded by the user; cannot support a paper-defect/rerun claim."
+    },
+    {
+      "id": "R43",
+      "status": "legacy_archived_new_entry_repaired",
+      "notes": "New complete two-stage Qwen3 protocol explicitly disables native thinking and records full stage outputs.",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper prototype issue",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false,
+      "attribution_note": "Observed or repaired in temporary tools explicitly excluded by the user; cannot support a paper-defect/rerun claim."
+    },
+    {
+      "id": "R44",
+      "status": "legacy_disabled_external_history_unresolved",
+      "notes": "Old fixed examples disabled; new examples only from checked independent training input with IDs; missing historical GPT-5 generation provenance unresolved.",
+      "scope_excluded_by_user": true,
+      "paper_scope": "nonpaper prototype issue",
+      "rerun_basis": "NOT rerun basis",
+      "paper_defect_evidence": false,
+      "attribution_note": "Observed or repaired in temporary tools explicitly excluded by the user; cannot support a paper-defect/rerun claim."
+    }
+  ],
+  "historical_csv_results_reference_and_model_links_modified": false,
+  "security_exception": "Only batch03/before/download_model.py is deliberately redacted; credentials cannot be byte-restored. Original satd_data is untouched.",
+  "external_unresolved": [
+    "R44 GPT-5 demonstration generation provenance",
+    "Old unrecorded checkpoint/template/seed identity",
+    "Independent ICL train/test and clone adjudication files not provided"
+  ],
+  "new_experiments_or_csv_outputs_created": false,
+  "static_validation_summary": {
+    "python_files_ast_parsed": 22,
+    "no_experiment_or_function_tests_executed": true,
+    "secret_literal_values_printed": false,
+    "historical_source_execution_for_lineage": false
+  },
+  "security_exception_baseline_updated": true,
+  "latest_user_scope": {
+    "source": "Direct human clarification relayed by root: screenshot eight files are temporary debugging tools and did not participate in the paper",
+    "excluded_original_files": [
+      "data_process.py",
+      "download_model.py",
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py",
+      "original_COT.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "excluded_derived_implementations": [
+      "icl_revised.py",
+      "qwen_auxiliary_runtime.py"
+    ],
+    "scope_excluded_by_user": true,
+    "classification": "nonpaper",
+    "rerun_basis": "NOT rerun basis",
+    "completed_changes": "Retained as already authorized code edits; no further source expansion or changes",
+    "paper_attribution_rule": "Only actual paper table/run mapping can establish paper relevance; auxiliary entry availability is insufficient",
+    "pilot_random": "Still within requested review scope; paper relevance must be checked against actual table/run mapping",
+    "other_scope_owner": "test1.py and test3.py metadata/source handling belongs to binary owner; listed here only to record the full eight-file user clarification",
+    "additional_excluded_directories": [
+      "basic_zero_shot_CoT_output_reason",
+      "battle"
+    ]
+  },
+  "scope_freeze": {
+    "source_changes_after_latest_user_exclusion": false,
+    "new_icl_cot_preprocessing_expansion_stopped": true,
+    "update_kind": "metadata only"
+  },
+  "nonblocking_preprocessing_notes": {
+    "R30": {
+      "issue_id": "R30",
+      "source": "Direct user clarification, 2026-10-16",
+      "classification": "low_priority_nonblocking_preprocessing_note",
+      "paper_experiment_code_defect_basis": false,
+      "standalone_rerun_basis": false,
+      "requires_historical_followup": false,
+      "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+      "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+      "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+    }
+  }
+}

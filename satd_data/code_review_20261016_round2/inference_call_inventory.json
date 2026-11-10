@@ -1,0 +1,7363 @@
+[
+  {
+    "file": "ICL_Ob_qwen-8b.py",
+    "sha256": "a541eb49467959b7c3a831da2109072af9253b26ea8e734f9b38ebcf9d81d3ba",
+    "status": "reviewed-syntax-error",
+    "syntax_error": {
+      "line": 517,
+      "message": "invalid syntax"
+    },
+    "calls": []
+  },
+  {
+    "file": "ICL_Ob_qwen-8b_new.py",
+    "sha256": "790ad6b4cf001ca6ed31191bf73e4d9b1467480fcdb1f20c7eedae9dba7cdb38",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 108,
+        "end_line": 108,
+        "method": "tokenizer",
+        "function": "get_response",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "512"
+        }
+      },
+      {
+        "line": 115,
+        "end_line": 120,
+        "method": "generate",
+        "function": "get_response",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "512",
+          "repetition_penalty": "1.05"
+        }
+      },
+      {
+        "line": 124,
+        "end_line": 124,
+        "method": "decode",
+        "function": "get_response",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      },
+      {
+        "line": 313,
+        "end_line": 313,
+        "method": "tokenizer",
+        "function": "encode_sentences",
+        "factory": false,
+        "kwargs": {
+          "padding": "True",
+          "truncation": "True",
+          "return_tensors": "'pt'"
+        }
+      }
+    ],
+    "seeds": [
+      282
+    ],
+    "generation_calls": [
+      115
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "ICL_Ob_qwen-8b_v0.py",
+    "sha256": "656ceed08057c204bbbf5d8fcfef0ff51007e01ace4a691c12c670723b3808ec",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 155,
+        "end_line": 155,
+        "method": "generate",
+        "function": "get_response",
+        "factory": false,
+        "kwargs": {}
+      },
+      {
+        "line": 349,
+        "end_line": 349,
+        "method": "encode",
+        "function": "<module>",
+        "factory": false,
+        "kwargs": {
+          "show_progress_bar": "False"
+        }
+      },
+      {
+        "line": 350,
+        "end_line": 350,
+        "method": "encode",
+        "function": "<module>",
+        "factory": false,
+        "kwargs": {
+          "show_progress_bar": "False"
+        }
+      }
+    ],
+    "seeds": [
+      279
+    ],
+    "generation_calls": [
+      155
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "sha256": "e96db1bfefdbffa9ad4695578330c0f1b89bea12f86b6af8915eaaed7f65d8f0",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 722,
+        "end_line": 726,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 727,
+        "end_line": 728,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 730,
+        "end_line": 738,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 739,
+        "end_line": 740,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      730
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "sha256": "fd5ca7ccb871f50955ebcdda59e353200ce303dff7d4fd0e4aea0f6b3196c6eb",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 723,
+        "end_line": 728,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "model_kwargs": "{'torch_dtype': torch.bfloat16}",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 733,
+        "end_line": 737,
+        "method": "pipeline",
+        "function": "text_gen",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "pad_token_id": "pipeline.tokenizer.eos_token_id"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      733
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr",
+        "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 703,
+        "end_line": 715
+      }
+    ]
+  },
+  {
+    "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "sha256": "5a687765ad904bd06c413cab57e210a91f22256c9d400dda6cc29cf41a91c5d6",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 911,
+        "end_line": 916,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 917,
+        "end_line": 918,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "16384"
+        }
+      },
+      {
+        "line": 920,
+        "end_line": 923,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 924,
+        "end_line": 925,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      920
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "sha256": "27b80023955d743ade415f1d2ccebc472b1e7167f7f0dc3352eaf9b0e81fce1d",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 718,
+        "end_line": 723,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 724,
+        "end_line": 725,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 727,
+        "end_line": 734,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 735,
+        "end_line": 736,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      727
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "sha256": "93b36c40f4a732ed799053d7d72f9523398fbdeab0a4568c03d0a14534a99857",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 610,
+        "end_line": 615,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 616,
+        "end_line": 617,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 619,
+        "end_line": 625,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 626,
+        "end_line": 627,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      619
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "sha256": "87aa6db2dfbb548e00f21959a926832651f2006a808b62629084abc28f8d86a8",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 920,
+        "end_line": 922,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 923,
+        "end_line": 924,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "16384"
+        }
+      },
+      {
+        "line": 926,
+        "end_line": 932,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 933,
+        "end_line": 934,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      926
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "sha256": "d05de44b49e727e0b401922967a8e3c7590d2aeb91fc1066f9aa720d902e92ad",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 926,
+        "end_line": 928,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 929,
+        "end_line": 930,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 932,
+        "end_line": 938,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 939,
+        "end_line": 940,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      932
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "sha256": "c1e2a2343dc048493a5d74840f745d0c87053fadb91ac40c6f41d76b87d829f0",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 920,
+        "end_line": 922,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 923,
+        "end_line": 924,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "66356"
+        }
+      },
+      {
+        "line": 926,
+        "end_line": 930,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 931,
+        "end_line": 932,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      926
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+    "sha256": "709aac8ad23c93c856535618db6be33ca5725411a57537af3e4a946240a1b06e",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 872,
+        "end_line": 877,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 891,
+        "end_line": 894,
+        "method": "pipe",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      891
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr_from_text",
+        "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 847,
+        "end_line": 867
+      }
+    ]
+  },
+  {
+    "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "sha256": "613a2b1f6a62c6bc3916d205633c5a00a2fd00567648a7ec15ef3430c34d4969",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 361,
+        "end_line": 365,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 366,
+        "end_line": 367,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 369,
+        "end_line": 377,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 378,
+        "end_line": 379,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      369
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "sha256": "9e9d485a31bb0020d71ee24400758257f5d33af3f3fde976b1766c9ccfe94e32",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 361,
+        "end_line": 366,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "model_kwargs": "{'torch_dtype': torch.bfloat16}",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 371,
+        "end_line": 375,
+        "method": "pipeline",
+        "function": "text_gen",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "pad_token_id": "pipeline.tokenizer.eos_token_id"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      371
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr",
+        "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+        "line": 341,
+        "end_line": 353
+      }
+    ]
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "sha256": "f5d5ef154e7a71c50b557fea42d43aaf759a7c4a096eaf312eded370d6661173",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 362,
+        "end_line": 367,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 368,
+        "end_line": 369,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 371,
+        "end_line": 377,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 378,
+        "end_line": 379,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      371
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "sha256": "a8b0ce9f459d27c097e5712c50f2df2439f3caf1d56cba857dc5af7b3146b19c",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 362,
+        "end_line": 367,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 368,
+        "end_line": 369,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "16384"
+        }
+      },
+      {
+        "line": 371,
+        "end_line": 377,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 378,
+        "end_line": 379,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      371
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "sha256": "2df61e1bb7c275f8d45f3874e30e65659be2a2362a59d812d37344590e4f7b72",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 362,
+        "end_line": 367,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 368,
+        "end_line": 369,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "16384"
+        }
+      },
+      {
+        "line": 371,
+        "end_line": 377,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 378,
+        "end_line": 379,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      371
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "sha256": "38c57cac0eacf7f1ce9fc79e3cf88736982b0d98fc9a452bdf109bbb3cb1ae9f",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 369,
+        "end_line": 371,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 372,
+        "end_line": 373,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      },
+      {
+        "line": 375,
+        "end_line": 378,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 379,
+        "end_line": 380,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      375
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "sha256": "31001fbfc76f4e7506a03b81e45ebb83858c2d4b6d55e2639222f1817965dd4d",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 369,
+        "end_line": 371,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 372,
+        "end_line": 373,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      },
+      {
+        "line": 375,
+        "end_line": 378,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 379,
+        "end_line": 380,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      375
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "sha256": "d08e3d007d3a2fa02cdc719b88dc14e374f547e2549e6cd2769b2788eed4dcd8",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 368,
+        "end_line": 370,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 371,
+        "end_line": 372,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      },
+      {
+        "line": 374,
+        "end_line": 377,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 378,
+        "end_line": 379,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      374
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "sha256": "68929cb682d27f68b98630d930a67e59b34861f04cbab87e6ad590f63bb03003",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 343,
+        "end_line": 348,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 362,
+        "end_line": 365,
+        "method": "pipe",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      362
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr_from_text",
+        "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+        "line": 318,
+        "end_line": 338
+      }
+    ]
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "sha256": "4d8272b9befd9d9affdddc7c0331b3a6c6171facfe07e96a77cc0dabe5c75bc3",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 154,
+        "end_line": 159,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 160,
+        "end_line": 161,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 163,
+        "end_line": 169,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 170,
+        "end_line": 171,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      },
+      {
+        "line": 204,
+        "end_line": 206,
+        "method": "apply_chat_template",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 207,
+        "end_line": 208,
+        "method": "tokenizer",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 209,
+        "end_line": 215,
+        "method": "generate",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "min(REASON_MAX_TOKENS, MAX_NEW_TOKENS)",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 216,
+        "end_line": 217,
+        "method": "decode",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      163,
+      209
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_reason",
+        "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+        "line": 191,
+        "end_line": 197
+      }
+    ]
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "sha256": "f74ef2995c52f3a4e03459f9ec038dce9fa644063da01268a8be245a869ad976",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 246,
+        "end_line": 251,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 252,
+        "end_line": 253,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 255,
+        "end_line": 261,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 262,
+        "end_line": 263,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      },
+      {
+        "line": 296,
+        "end_line": 298,
+        "method": "apply_chat_template",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 299,
+        "end_line": 300,
+        "method": "tokenizer",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 301,
+        "end_line": 307,
+        "method": "generate",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "min(REASON_MAX_TOKENS, MAX_NEW_TOKENS)",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 308,
+        "end_line": 309,
+        "method": "decode",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      255,
+      301
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_reason",
+        "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+        "line": 283,
+        "end_line": 289
+      }
+    ]
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "sha256": "dad510a0517f98c864bf65d10e23743658437604cb7f0325ac405c87f536ecf4",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 246,
+        "end_line": 251,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 252,
+        "end_line": 253,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 255,
+        "end_line": 261,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 262,
+        "end_line": 263,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      },
+      {
+        "line": 296,
+        "end_line": 298,
+        "method": "apply_chat_template",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 299,
+        "end_line": 300,
+        "method": "tokenizer",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 301,
+        "end_line": 307,
+        "method": "generate",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "min(REASON_MAX_TOKENS, MAX_NEW_TOKENS)",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 308,
+        "end_line": 309,
+        "method": "decode",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      255,
+      301
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_reason",
+        "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+        "line": 283,
+        "end_line": 289
+      }
+    ]
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "sha256": "1884b42e29da7571b7e3d259dae68286e99b5ec4d8d3e8f74982a929588d505c",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 246,
+        "end_line": 251,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 313,
+        "end_line": 313,
+        "method": "pipe",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "REASON_MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 324,
+        "end_line": 324,
+        "method": "pipe",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "REASON_MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 335,
+        "end_line": 335,
+        "method": "pipe",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "REASON_MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 352,
+        "end_line": 352,
+        "method": "pipe",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      313,
+      324,
+      335,
+      352
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr_from_text",
+        "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+        "line": 227,
+        "end_line": 242
+      },
+      {
+        "name": "_extract_visible",
+        "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+        "line": 278,
+        "end_line": 285
+      },
+      {
+        "name": "parse_reason",
+        "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+        "line": 287,
+        "end_line": 304
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "sha256": "5a173899ab6e81701450a6acfa819812e7c288c362b2826d9e42e5fe68f48051",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 138,
+        "end_line": 142,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 143,
+        "end_line": 144,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 146,
+        "end_line": 154,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 155,
+        "end_line": 156,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      146
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "sha256": "1e277d5d947bcb36f1331fed51f633707d3f38ecfec0369edcb7c5957d38bf23",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 140,
+        "end_line": 145,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "model_kwargs": "{'torch_dtype': torch.bfloat16}",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 150,
+        "end_line": 154,
+        "method": "pipeline",
+        "function": "text_gen",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "pad_token_id": "pipeline.tokenizer.eos_token_id"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      150
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr",
+        "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 120,
+        "end_line": 132
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "sha256": "48045954194b5594e943e62bbe0e712c265ad1fb6a298fcb22cc3d551a64ef06",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 134,
+        "end_line": 139,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 140,
+        "end_line": 141,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 143,
+        "end_line": 146,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 147,
+        "end_line": 148,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      143
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "sha256": "26844ab0aed2307eceee5fcbbeb51a5f20f1b18e7d6a8d2259905f0ed8f530b9",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 138,
+        "end_line": 143,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 144,
+        "end_line": 145,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 147,
+        "end_line": 154,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 155,
+        "end_line": 156,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      147
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "sha256": "5c8638d37821820d538740db8b73b0bf1c5d150d4f539fd961a09fc568ef6759",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 140,
+        "end_line": 145,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 146,
+        "end_line": 147,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 149,
+        "end_line": 155,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 156,
+        "end_line": 157,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      149
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "sha256": "7f828db3594da216cc7e7efb3e9273c6b45c77c67670ea3c0c07429c9c8edfef",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 140,
+        "end_line": 142,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 143,
+        "end_line": 144,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 146,
+        "end_line": 149,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 150,
+        "end_line": 151,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      146
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "sha256": "a3aedc2f71c02129877bcb593212d042fd6dcf83432f612b7845aa39e21edeb1",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 141,
+        "end_line": 143,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 144,
+        "end_line": 145,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 147,
+        "end_line": 150,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 151,
+        "end_line": 152,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      147
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "sha256": "4300ce16199d06d022b75e6651b5c05858a0e031aaead3cea0cfd32c6cb4972f",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 140,
+        "end_line": 142,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 143,
+        "end_line": 144,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 146,
+        "end_line": 150,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 151,
+        "end_line": 152,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      146
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+    "sha256": "8cef2d07b17b73f079b557171b9e7f9cf103be56310caee74a8dac9cb0b2af1e",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 161,
+        "end_line": 166,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 180,
+        "end_line": 183,
+        "method": "pipe",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      180
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr_from_text",
+        "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 136,
+        "end_line": 156
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "sha256": "ab2c4c860ed78db405da4d84537e622bb12dd9cb13b0d76c25793ef1f7ba5fcb",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 151,
+        "end_line": 155,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 156,
+        "end_line": 157,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 159,
+        "end_line": 167,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 168,
+        "end_line": 169,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      159
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "sha256": "eab9c752fa2ac68ec04c09680bce20253a7584b0c0ec67222c72e2ff9d87a93a",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 151,
+        "end_line": 156,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "model_kwargs": "{'torch_dtype': torch.bfloat16}",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 161,
+        "end_line": 165,
+        "method": "pipeline",
+        "function": "text_gen",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "pad_token_id": "pipeline.tokenizer.eos_token_id"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      161
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr",
+        "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+        "line": 131,
+        "end_line": 143
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "sha256": "889ede043cfc3d86da3cb67d95935e2efdce4d3c9587695ed08e025b4435149b",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 151,
+        "end_line": 156,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 157,
+        "end_line": 158,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 160,
+        "end_line": 166,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 167,
+        "end_line": 168,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      160
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "sha256": "3c5f0df406af45f047a929775af1f0802a0c1ab8effe213fe1d657dce7848917",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 151,
+        "end_line": 156,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 157,
+        "end_line": 158,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 160,
+        "end_line": 166,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 167,
+        "end_line": 168,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      160
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "sha256": "6733705a2faf1d404810d1b33790270b7af781f15a712b1919aed7d6067d0a2a",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 140,
+        "end_line": 145,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 146,
+        "end_line": 147,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 149,
+        "end_line": 155,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 156,
+        "end_line": 157,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      149
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "sha256": "b68ebb846f5cf69349f9bbb2ad8de3095088cb181c5c6b4b44c9171d2b2dd1cd",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 151,
+        "end_line": 156,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 157,
+        "end_line": 158,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 160,
+        "end_line": 166,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 167,
+        "end_line": 168,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      160
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "sha256": "638dbe63959ae0751c79286e06297d2305ed1ccc6cddac08d606511d76a333f1",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 135,
+        "end_line": 140,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 141,
+        "end_line": 142,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 144,
+        "end_line": 150,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 151,
+        "end_line": 152,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      144
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "sha256": "c10ebceaf1afac421e7c1a1649da091a51713ae0773027de57064b27343f4be5",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 158,
+        "end_line": 160,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 161,
+        "end_line": 162,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      },
+      {
+        "line": 164,
+        "end_line": 167,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 168,
+        "end_line": 169,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      164
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "sha256": "5a308b09c1fc3078f53afa07ffd3faae301218dffe8b3fc421e8866387dd6316",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 158,
+        "end_line": 160,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 161,
+        "end_line": 162,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      },
+      {
+        "line": 164,
+        "end_line": 167,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 168,
+        "end_line": 169,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      164
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "sha256": "2e408e633d55110558bfa2802d39241623e45cda10ee07b0b9d1a028a9ea5b88",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 157,
+        "end_line": 159,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 160,
+        "end_line": 161,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      },
+      {
+        "line": 163,
+        "end_line": 166,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 167,
+        "end_line": 168,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      163
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "sha256": "5ee76121a18b563a1229ab35945ce2ab47a8ffd701e44bf08ea3ae84d499b0fc",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 178,
+        "end_line": 183,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 197,
+        "end_line": 200,
+        "method": "pipe",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      197
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr_from_text",
+        "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+        "line": 153,
+        "end_line": 173
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "sha256": "98e2f04508ed3f4fd9b522e9165b387ffc18ae602b0bba0cdf785b05ca582b75",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 164,
+        "end_line": 166,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 167,
+        "end_line": 168,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "8192"
+        }
+      },
+      {
+        "line": 170,
+        "end_line": 173,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 174,
+        "end_line": 175,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      170
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "sha256": "4d8272b9befd9d9affdddc7c0331b3a6c6171facfe07e96a77cc0dabe5c75bc3",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 154,
+        "end_line": 159,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 160,
+        "end_line": 161,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 163,
+        "end_line": 169,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 170,
+        "end_line": 171,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      },
+      {
+        "line": 204,
+        "end_line": 206,
+        "method": "apply_chat_template",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 207,
+        "end_line": 208,
+        "method": "tokenizer",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 209,
+        "end_line": 215,
+        "method": "generate",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "min(REASON_MAX_TOKENS, MAX_NEW_TOKENS)",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 216,
+        "end_line": 217,
+        "method": "decode",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      163,
+      209
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_reason",
+        "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+        "line": 191,
+        "end_line": 197
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "sha256": "6ac4eed3ffa9a9308331e17a0740e9e2329d14de2fb2523824d416fa88e65d03",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 154,
+        "end_line": 159,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 160,
+        "end_line": 161,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 163,
+        "end_line": 169,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 170,
+        "end_line": 171,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      },
+      {
+        "line": 204,
+        "end_line": 206,
+        "method": "apply_chat_template",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 207,
+        "end_line": 208,
+        "method": "tokenizer",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 209,
+        "end_line": 215,
+        "method": "generate",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "min(REASON_MAX_TOKENS, MAX_NEW_TOKENS)",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 216,
+        "end_line": 217,
+        "method": "decode",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      163,
+      209
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_reason",
+        "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+        "line": 191,
+        "end_line": 197
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "sha256": "c6bda67294a8f000491c7720a0d82d9e48c63281118b0dd526c30af2d431a48d",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 154,
+        "end_line": 159,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 160,
+        "end_line": 161,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 163,
+        "end_line": 169,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 170,
+        "end_line": 171,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      },
+      {
+        "line": 204,
+        "end_line": 206,
+        "method": "apply_chat_template",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 207,
+        "end_line": 208,
+        "method": "tokenizer",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 209,
+        "end_line": 215,
+        "method": "generate",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "min(REASON_MAX_TOKENS, MAX_NEW_TOKENS)",
+          "temperature": "0.6",
+          "top_p": "0.95",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 216,
+        "end_line": 217,
+        "method": "decode",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      163,
+      209
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_reason",
+        "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+        "line": 191,
+        "end_line": 197
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "sha256": "2d191747b93672b05e2b3891c42f815794a49c8c4f24e5a8663cb08ecc9e0dd5",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 154,
+        "end_line": 159,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 221,
+        "end_line": 221,
+        "method": "pipe",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "REASON_MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 232,
+        "end_line": 232,
+        "method": "pipe",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "REASON_MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 243,
+        "end_line": 243,
+        "method": "pipe",
+        "function": "generate_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "REASON_MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 260,
+        "end_line": 260,
+        "method": "pipe",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      221,
+      232,
+      243,
+      260
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr_from_text",
+        "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+        "line": 135,
+        "end_line": 150
+      },
+      {
+        "name": "_extract_visible",
+        "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+        "line": 186,
+        "end_line": 193
+      },
+      {
+        "name": "parse_reason",
+        "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+        "line": 195,
+        "end_line": 212
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "sha256": "7c706c905b4814e5fc3de7c5e7471d6a28b4f3d3d82f59c54090e653e7dac9fc",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 161,
+        "end_line": 165,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 166,
+        "end_line": 167,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 169,
+        "end_line": 176,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 177,
+        "end_line": 178,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      169
+    ],
+    "parser_functions": [
+      {
+        "name": "parse_abbr_and_reason",
+        "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+        "line": 127,
+        "end_line": 148
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "sha256": "4bc830cc99cce094ff593165599021f35916f72585c4345ba7d67ea3296d1e4f",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 168,
+        "end_line": 173,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "model_kwargs": "{'torch_dtype': torch.bfloat16}",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 176,
+        "end_line": 180,
+        "method": "pipeline",
+        "function": "text_gen",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "pad_token_id": "pipeline.tokenizer.eos_token_id"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      176
+    ],
+    "parser_functions": [
+      {
+        "name": "parse_abbr_and_reason",
+        "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+        "line": 121,
+        "end_line": 146
+      },
+      {
+        "name": "extract_abbr",
+        "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+        "line": 148,
+        "end_line": 163
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "sha256": "e2d81c82db093c861b6578c2a3c0cf3103e75c490c8c44f7128aea04e39e482f",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 161,
+        "end_line": 166,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 167,
+        "end_line": 168,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 170,
+        "end_line": 173,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 174,
+        "end_line": 175,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      170
+    ],
+    "parser_functions": [
+      {
+        "name": "parse_abbr_and_reason",
+        "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+        "line": 127,
+        "end_line": 148
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+    "sha256": "df55c489fdac9ab58a9b3ba07648a8c829cf13d7da17f9710ff5921edb7959b9",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 176,
+        "end_line": 181,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 182,
+        "end_line": 183,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 185,
+        "end_line": 191,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 192,
+        "end_line": 193,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      185
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_reason",
+        "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+        "line": 146,
+        "end_line": 163
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+    "sha256": "1081d62a784390107b726f36868490b44c179a0b9e6e327659920520b47909b9",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 176,
+        "end_line": 181,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 182,
+        "end_line": 183,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 185,
+        "end_line": 191,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 192,
+        "end_line": 193,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      185
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_reason",
+        "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+        "line": 146,
+        "end_line": 163
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "sha256": "237fe018eecbf423c15f3ccc2d037e60d65fc5d77619cba5f65a7d9342ab5d00",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 171,
+        "end_line": 173,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 174,
+        "end_line": 175,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 177,
+        "end_line": 180,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 181,
+        "end_line": 182,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      177
+    ],
+    "parser_functions": [
+      {
+        "name": "parse_abbr_and_reason",
+        "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+        "line": 136,
+        "end_line": 158
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "sha256": "5bdf4b5591a19b61cf220984044c330e2dab1081fb38b53e52c66e77163a3426",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 182,
+        "end_line": 184,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 185,
+        "end_line": 186,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 188,
+        "end_line": 191,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 192,
+        "end_line": 193,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      188
+    ],
+    "parser_functions": [
+      {
+        "name": "parse_abbr_and_reason",
+        "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+        "line": 140,
+        "end_line": 169
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "sha256": "956d161a3b090fcf1e926bc5ce2af8351f070b48c2840f148f069d37f5ad2417",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 182,
+        "end_line": 184,
+        "method": "apply_chat_template",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 185,
+        "end_line": 186,
+        "method": "tokenizer",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 188,
+        "end_line": 191,
+        "method": "generate",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 192,
+        "end_line": 193,
+        "method": "decode",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      188
+    ],
+    "parser_functions": [
+      {
+        "name": "parse_abbr_and_reason",
+        "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+        "line": 140,
+        "end_line": 169
+      }
+    ]
+  },
+  {
+    "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+    "sha256": "9722780dd61d1be80398d055ca2a41b485fcb228a9a723e2a05e03a6b9d3f03c",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 194,
+        "end_line": 199,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 212,
+        "end_line": 215,
+        "method": "pipe",
+        "function": "classify",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      212
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr_from_text",
+        "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+        "line": 141,
+        "end_line": 174
+      },
+      {
+        "name": "extract_reason_from_text",
+        "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+        "line": 176,
+        "end_line": 189
+      }
+    ]
+  },
+  {
+    "file": "battle/gpt_battle.py",
+    "sha256": "4fe931df45d7bb451a54f8669fe1a68a4697ee74f8d1032b88aafb2090f82164",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 252,
+        "end_line": 257,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 279,
+        "end_line": 279,
+        "method": "pipe",
+        "function": "arbitrate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 331,
+        "end_line": 331,
+        "method": "pipe",
+        "function": "refill_reason",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      279,
+      331
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr",
+        "file": "battle/gpt_battle.py",
+        "line": 165,
+        "end_line": 184
+      },
+      {
+        "name": "extract_reason",
+        "file": "battle/gpt_battle.py",
+        "line": 186,
+        "end_line": 206
+      }
+    ]
+  },
+  {
+    "file": "battle/test.py",
+    "sha256": "138ddec47d27cbf136371a313a942967ada729a3eaf94f44b0aad3bac178204f",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 179,
+        "end_line": 184,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 210,
+        "end_line": 210,
+        "method": "pipe",
+        "function": "choose_between",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      210
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr_from_text",
+        "file": "battle/test.py",
+        "line": 159,
+        "end_line": 175
+      }
+    ]
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "sha256": "ce1beeaf8f7df2471fbe39dbfe922befac21f4c598aa4ef6add84f19c7bf0761",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 353,
+        "end_line": 355,
+        "method": "apply_chat_template",
+        "function": "_render_with_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 366,
+        "end_line": 367,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 368,
+        "end_line": 376,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.pad_token_id"
+        }
+      },
+      {
+        "line": 377,
+        "end_line": 378,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      368
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "line": 310,
+        "end_line": 319
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "line": 321,
+        "end_line": 334
+      }
+    ]
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "sha256": "b1069720cfd242bb1d6e599e356203ed88c3fc31421250e53112a782554b34db",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 418,
+        "end_line": 420,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 421,
+        "end_line": 422,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "100000"
+        }
+      },
+      {
+        "line": 423,
+        "end_line": 432,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 433,
+        "end_line": 434,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      423
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "line": 382,
+        "end_line": 392
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "line": 394,
+        "end_line": 408
+      }
+    ]
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "sha256": "34c45663aadb395e4a83c06cd3d64afcad1a074d5071050d36d22e4598b0204d",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 371,
+        "end_line": 373,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 374,
+        "end_line": 375,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 376,
+        "end_line": 385,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 386,
+        "end_line": 387,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      376
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 335,
+        "end_line": 345
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 347,
+        "end_line": 361
+      }
+    ]
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "sha256": "ad3c2720bb724a6defb7fd649b0e58b19195c50e8692823e55ed33dd4edd1931",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 341,
+        "end_line": 346,
+        "method": "apply_chat_template",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 347,
+        "end_line": 348,
+        "method": "tokenizer",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 349,
+        "end_line": 355,
+        "method": "generate",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "temperature": "TEMPERATURE",
+          "top_p": "TOP_P",
+          "top_k": "TOP_K"
+        }
+      },
+      {
+        "line": 356,
+        "end_line": 357,
+        "method": "decode",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      349
+    ],
+    "parser_functions": [
+      {
+        "name": "_visible_only",
+        "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+        "line": 282,
+        "end_line": 286
+      },
+      {
+        "name": "parse_yesno",
+        "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+        "line": 288,
+        "end_line": 301
+      },
+      {
+        "name": "parse_abbr",
+        "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+        "line": 303,
+        "end_line": 319
+      },
+      {
+        "name": "parse_reason",
+        "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+        "line": 321,
+        "end_line": 331
+      }
+    ]
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "sha256": "f1bbec723bd95234086cfc155d367a142c8d3f6aabb5f2817beb1d293218dbcb",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 341,
+        "end_line": 346,
+        "method": "apply_chat_template",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 347,
+        "end_line": 348,
+        "method": "tokenizer",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 349,
+        "end_line": 355,
+        "method": "generate",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "temperature": "TEMPERATURE",
+          "top_p": "TOP_P",
+          "top_k": "TOP_K"
+        }
+      },
+      {
+        "line": 356,
+        "end_line": 357,
+        "method": "decode",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      349
+    ],
+    "parser_functions": [
+      {
+        "name": "_visible_only",
+        "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+        "line": 282,
+        "end_line": 286
+      },
+      {
+        "name": "parse_yesno",
+        "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+        "line": 288,
+        "end_line": 301
+      },
+      {
+        "name": "parse_abbr",
+        "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+        "line": 303,
+        "end_line": 319
+      },
+      {
+        "name": "parse_reason",
+        "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+        "line": 321,
+        "end_line": 331
+      }
+    ]
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "sha256": "e2386c56b8609b048b823ed693ef9e14a93b21817251a23cc471d23f28b15a86",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 373,
+        "end_line": 375,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 376,
+        "end_line": 377,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 378,
+        "end_line": 387,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 388,
+        "end_line": 389,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      378
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "line": 337,
+        "end_line": 347
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "line": 349,
+        "end_line": 363
+      }
+    ]
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "sha256": "7fc4b3bc47a58d6a53280e07b7963df837950df15eca37d456aad25d8254cc00",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 422,
+        "end_line": 424,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 425,
+        "end_line": 426,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 427,
+        "end_line": 431,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 432,
+        "end_line": 433,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      427
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+        "line": 385,
+        "end_line": 395
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+        "line": 397,
+        "end_line": 411
+      }
+    ]
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "sha256": "4b4d49f0213bacee5ad0af9202d165d00601c7dc985798a31e1d83328d2987ea",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 422,
+        "end_line": 424,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 425,
+        "end_line": 426,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 427,
+        "end_line": 431,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 432,
+        "end_line": 433,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      427
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+        "line": 385,
+        "end_line": 395
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+        "line": 397,
+        "end_line": 411
+      }
+    ]
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "sha256": "07faeab8f0fd7ae04d254fc2afd6155311bc1e9a3aca62a8c14f8cb552c2b077",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 535,
+        "end_line": 540,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 547,
+        "end_line": 550,
+        "method": "pipe",
+        "function": "generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      547
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "line": 507,
+        "end_line": 516
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "line": 518,
+        "end_line": 531
+      }
+    ]
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "sha256": "a87b71db198013cdb102f922e8efd734b40f87809146e6b3ff192dce17997a9e",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 582,
+        "end_line": 584,
+        "method": "apply_chat_template",
+        "function": "_render_with_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 595,
+        "end_line": 596,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 597,
+        "end_line": 605,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.pad_token_id"
+        }
+      },
+      {
+        "line": 606,
+        "end_line": 607,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      597
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 539,
+        "end_line": 548
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 550,
+        "end_line": 563
+      }
+    ]
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "sha256": "f0bdf87b9cf5e1257aac90e3b7faa2902211383d5060dfbbccbfea7848360ac5",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 576,
+        "end_line": 578,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 579,
+        "end_line": 580,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "100000"
+        }
+      },
+      {
+        "line": 581,
+        "end_line": 590,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 591,
+        "end_line": 592,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      581
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 540,
+        "end_line": 550
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 552,
+        "end_line": 566
+      }
+    ]
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "sha256": "dc0907a3330896f05944572a70034fde7f5fe0c37b3570749507601b115cff86",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 576,
+        "end_line": 578,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 579,
+        "end_line": 580,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 581,
+        "end_line": 590,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 591,
+        "end_line": 592,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      581
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 540,
+        "end_line": 550
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 552,
+        "end_line": 566
+      }
+    ]
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "sha256": "1e7b4839ecd9e5b6d9b62b8b4489021841b459f10c373054dcc368d9d1165382",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 578,
+        "end_line": 580,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 581,
+        "end_line": 582,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 583,
+        "end_line": 592,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 593,
+        "end_line": 594,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      583
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "line": 542,
+        "end_line": 552
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "line": 554,
+        "end_line": 568
+      }
+    ]
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "sha256": "adfebbda4f123b1fea1fc71a1bce3ecbe636fc50d38789f85ae8a296aea6231a",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 697,
+        "end_line": 699,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 700,
+        "end_line": 701,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 702,
+        "end_line": 711,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 712,
+        "end_line": 713,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      702
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "line": 661,
+        "end_line": 671
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "line": 673,
+        "end_line": 687
+      }
+    ]
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "sha256": "2e1efd698c524783ad17b9cf22a90326f5c3cb685e2fa418f10d7591de5ddb77",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 579,
+        "end_line": 581,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 582,
+        "end_line": 583,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 584,
+        "end_line": 593,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 594,
+        "end_line": 595,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      584
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 543,
+        "end_line": 553
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 555,
+        "end_line": 569
+      }
+    ]
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "sha256": "647b1d0aa715bd585f17bb5ff842e3766189acf7e6334f571ea0760d40f23cbf",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 580,
+        "end_line": 582,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 583,
+        "end_line": 584,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 585,
+        "end_line": 589,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 590,
+        "end_line": 591,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      585
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "line": 543,
+        "end_line": 553
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "line": 555,
+        "end_line": 569
+      }
+    ]
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "sha256": "9d78b79b80f05899f7d43927419166d653aed8bb903ea4ec1c8ae85d44efdac8",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 580,
+        "end_line": 582,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 583,
+        "end_line": 584,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "65536"
+        }
+      },
+      {
+        "line": 585,
+        "end_line": 594,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 595,
+        "end_line": 596,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      585
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "line": 544,
+        "end_line": 554
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "line": 556,
+        "end_line": 570
+      }
+    ]
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "sha256": "a91bb0825f05bbd45a209265cfa80f7eb513ae30acc3e1cb0fd244a526380191",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 460,
+        "end_line": 465,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 472,
+        "end_line": 475,
+        "method": "pipe",
+        "function": "generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      472
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 432,
+        "end_line": 441
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 443,
+        "end_line": 456
+      }
+    ]
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "sha256": "066b8b181f5c8553128a75dd2af978636b26e1671639aa3a8c4967544f1bc059",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 165,
+        "end_line": 167,
+        "method": "apply_chat_template",
+        "function": "_render_with_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 178,
+        "end_line": 179,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 180,
+        "end_line": 188,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "do_sample": "True",
+          "temperature": "0.2",
+          "top_p": "0.95",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.pad_token_id"
+        }
+      },
+      {
+        "line": 189,
+        "end_line": 190,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      180
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 122,
+        "end_line": 131
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 133,
+        "end_line": 146
+      }
+    ]
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "sha256": "aa20673b500ed572659a033279e99ade51e97b882b0027b19a67c3e8be318cf4",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 182,
+        "end_line": 184,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 185,
+        "end_line": 186,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 187,
+        "end_line": 196,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 197,
+        "end_line": 198,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      187
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 146,
+        "end_line": 156
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 158,
+        "end_line": 172
+      }
+    ]
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "sha256": "925b6529728593271ff5168d08d6d043bd5cd63fc0b13f54b21fe00bb46e6864",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 183,
+        "end_line": 185,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 186,
+        "end_line": 187,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 188,
+        "end_line": 197,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 198,
+        "end_line": 199,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      188
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 147,
+        "end_line": 157
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 159,
+        "end_line": 173
+      }
+    ]
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "sha256": "b52084abf925f48b73c71fbd43af1c8397abd7508da586c9108b5c59bdd188b9",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 183,
+        "end_line": 185,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 186,
+        "end_line": 187,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 188,
+        "end_line": 197,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "do_sample": "False",
+          "eos_token_id": "tokenizer.eos_token_id",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 198,
+        "end_line": 199,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      188
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 147,
+        "end_line": 157
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 159,
+        "end_line": 173
+      }
+    ]
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "sha256": "89df7c89801e017d8d8fead414197b68e03114b1e6d0b9db4382b2cbc018e4ee",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 183,
+        "end_line": 185,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 186,
+        "end_line": 187,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 188,
+        "end_line": 197,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 198,
+        "end_line": 199,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      188
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 147,
+        "end_line": 157
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 159,
+        "end_line": 173
+      }
+    ]
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "sha256": "a6f32fe3191784192ffbdc06c6b08e2b46aabd3140cd456a601f05a4225d29b4",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 183,
+        "end_line": 185,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 186,
+        "end_line": 187,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 188,
+        "end_line": 197,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 198,
+        "end_line": 199,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      188
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_zero_shot/bin_new_test.py",
+        "line": 147,
+        "end_line": 157
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_zero_shot/bin_new_test.py",
+        "line": 159,
+        "end_line": 173
+      }
+    ]
+  },
+  {
+    "file": "bisection_zero_shot/bin_test.py",
+    "sha256": "7650fb29cd6d6ce4fca25e9647eb07aa97c6486de88ad67d1bf7750f57711590",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 100,
+        "end_line": 100,
+        "method": "tokenizer",
+        "function": "chat",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 101,
+        "end_line": 108,
+        "method": "generate",
+        "function": "chat",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "temperature": "0.7",
+          "top_p": "0.8",
+          "top_k": "20"
+        }
+      },
+      {
+        "line": 109,
+        "end_line": 110,
+        "method": "decode",
+        "function": "chat",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      101
+    ],
+    "parser_functions": []
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "sha256": "f6dce5888ad47506b2fb4775890982e06953293ddaf581de3684f1a196aa28b4",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 184,
+        "end_line": 186,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 187,
+        "end_line": 188,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 189,
+        "end_line": 198,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 199,
+        "end_line": 200,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      189
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 148,
+        "end_line": 158
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 160,
+        "end_line": 174
+      }
+    ]
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "sha256": "3feb7a5fea1ce6960e56940e946d7b77181c5e6574c5aeace35fe8b81bfd30a1",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 192,
+        "end_line": 194,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 195,
+        "end_line": 196,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 197,
+        "end_line": 201,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 202,
+        "end_line": 203,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      197
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 148,
+        "end_line": 158
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 160,
+        "end_line": 174
+      }
+    ]
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "sha256": "fa261d7ad3ef8a2977f57f65b63d5dc59ee967c4da3a5bcd8a43b328bf3e27c2",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 184,
+        "end_line": 186,
+        "method": "apply_chat_template",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 187,
+        "end_line": 188,
+        "method": "tokenizer",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 189,
+        "end_line": 198,
+        "method": "generate",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      },
+      {
+        "line": 199,
+        "end_line": 200,
+        "method": "decode",
+        "function": "greedy_generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      189
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 148,
+        "end_line": 158
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 160,
+        "end_line": 174
+      }
+    ]
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "sha256": "217af126132cdb1892ba11f937d5c55200d04b62a1ba435f85f0c747791c8f08",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 176,
+        "end_line": 181,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 188,
+        "end_line": 191,
+        "method": "pipe",
+        "function": "generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      188
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_yes_no",
+        "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 148,
+        "end_line": 157
+      },
+      {
+        "name": "extract_abbr",
+        "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 159,
+        "end_line": 172
+      }
+    ]
+  },
+  {
+    "file": "data_process.py",
+    "sha256": "058dd65dc0d142f4ffbd52823421febd8d14d304bf0f633230644a05314a0525",
+    "status": "reviewed",
+    "calls": [],
+    "seeds": [],
+    "generation_calls": [],
+    "parser_functions": []
+  },
+  {
+    "file": "download_model.py",
+    "sha256": "f654ccd7bcb4e3d977249c6680ba93e146101473ed81b2e556c0063783cd31a5",
+    "status": "reviewed",
+    "calls": [],
+    "seeds": [],
+    "generation_calls": [],
+    "parser_functions": []
+  },
+  {
+    "file": "original_COT.py",
+    "sha256": "1933a33fd58b85925456598975989b140850c325930e2e5de20dc90545fd5d26",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 159,
+        "end_line": 164,
+        "method": "apply_chat_template",
+        "function": "_encode_chat",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 165,
+        "end_line": 166,
+        "method": "tokenizer",
+        "function": "_encode_chat",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "CTX_MAX_TOKENS"
+        }
+      },
+      {
+        "line": 170,
+        "end_line": 178,
+        "method": "generate",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "do_sample": "temperature > 0",
+          "temperature": "temperature",
+          "top_p": "top_p",
+          "top_k": "top_k",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 189,
+        "end_line": 189,
+        "method": "decode",
+        "function": "classify_one",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      },
+      {
+        "line": 193,
+        "end_line": 193,
+        "method": "decode",
+        "function": "classify_one",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      },
+      {
+        "line": 207,
+        "end_line": 207,
+        "method": "decode",
+        "function": "classify_one",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      },
+      {
+        "line": 211,
+        "end_line": 211,
+        "method": "decode",
+        "function": "classify_one",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      170
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_abbr",
+        "file": "original_COT.py",
+        "line": 118,
+        "end_line": 139
+      }
+    ]
+  },
+  {
+    "file": "random_classify/random_classify.py",
+    "sha256": "8a0a075170ed3a4b823dd53de82e9ef48efb4ad4115acb94f3d0f4d661f7ef2f",
+    "status": "reviewed",
+    "calls": [],
+    "seeds": [],
+    "generation_calls": [],
+    "parser_functions": []
+  },
+  {
+    "file": "test1.py",
+    "sha256": "32d855097bb07e340e7fb18bb9035d11cb19f52cb7994c95c5fc863959717aa9",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 225,
+        "end_line": 230,
+        "method": "apply_chat_template",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 231,
+        "end_line": 232,
+        "method": "tokenizer",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 233,
+        "end_line": 239,
+        "method": "generate",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "temperature": "TEMPERATURE",
+          "top_p": "TOP_P",
+          "top_k": "TOP_K"
+        }
+      },
+      {
+        "line": 240,
+        "end_line": 241,
+        "method": "decode",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      233
+    ],
+    "parser_functions": [
+      {
+        "name": "_visible_only",
+        "file": "test1.py",
+        "line": 166,
+        "end_line": 170
+      },
+      {
+        "name": "parse_yesno",
+        "file": "test1.py",
+        "line": 172,
+        "end_line": 185
+      },
+      {
+        "name": "parse_abbr",
+        "file": "test1.py",
+        "line": 187,
+        "end_line": 203
+      },
+      {
+        "name": "parse_reason",
+        "file": "test1.py",
+        "line": 205,
+        "end_line": 215
+      }
+    ]
+  },
+  {
+    "file": "test3.py",
+    "sha256": "ff1494af0728287d5cfefcd86b955fd186b9678cdabe22e2009681dbf3ca5d6c",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 225,
+        "end_line": 230,
+        "method": "apply_chat_template",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "True"
+        }
+      },
+      {
+        "line": 231,
+        "end_line": 232,
+        "method": "tokenizer",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "4096"
+        }
+      },
+      {
+        "line": 233,
+        "end_line": 239,
+        "method": "generate",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens",
+          "temperature": "TEMPERATURE",
+          "top_p": "TOP_P",
+          "top_k": "TOP_K"
+        }
+      },
+      {
+        "line": 240,
+        "end_line": 241,
+        "method": "decode",
+        "function": "_gen",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      233
+    ],
+    "parser_functions": [
+      {
+        "name": "_visible_only",
+        "file": "test3.py",
+        "line": 166,
+        "end_line": 170
+      },
+      {
+        "name": "parse_yesno",
+        "file": "test3.py",
+        "line": 172,
+        "end_line": 185
+      },
+      {
+        "name": "parse_abbr",
+        "file": "test3.py",
+        "line": 187,
+        "end_line": 203
+      },
+      {
+        "name": "parse_reason",
+        "file": "test3.py",
+        "line": 205,
+        "end_line": 215
+      }
+    ]
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "sha256": "382890188198c402cbf5f8bc30976a2b8a10b739dd216cbfab484ec4e3e18a1e",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 450,
+        "end_line": 452,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 455,
+        "end_line": 457,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 463,
+        "end_line": 464,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 466,
+        "end_line": 473,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "do_sample": "DO_SAMPLE",
+          "temperature": "TEMPERATURE",
+          "top_p": "TOP_P",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 474,
+        "end_line": 475,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      466
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 377,
+        "end_line": 398
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+        "line": 400,
+        "end_line": 429
+      }
+    ]
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "sha256": "0508fb7db887ccd3d089283691beba152368eac580ff58d2e149754896d88d0e",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 436,
+        "end_line": 438,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 441,
+        "end_line": 443,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 449,
+        "end_line": 450,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 452,
+        "end_line": 460,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 461,
+        "end_line": 462,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      452
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 363,
+        "end_line": 384
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+        "line": 386,
+        "end_line": 415
+      }
+    ]
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "sha256": "0394d8bad9b5d0ff7ab9de44fb71bcb0581acfe7c58a8fff59bb925de1b52686",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 450,
+        "end_line": 452,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 455,
+        "end_line": 457,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 463,
+        "end_line": 464,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 466,
+        "end_line": 475,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 476,
+        "end_line": 477,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      466
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 377,
+        "end_line": 398
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "line": 400,
+        "end_line": 429
+      }
+    ]
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "sha256": "4f6af01e5adb4b784f647af49e62164f6faa68a9d616c798c5b4db44a620055f",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 428,
+        "end_line": 430,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 433,
+        "end_line": 435,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 441,
+        "end_line": 442,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 444,
+        "end_line": 453,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "TEMPERATURE",
+          "top_p": "TOP_P",
+          "top_k": "TOP_K"
+        }
+      },
+      {
+        "line": 454,
+        "end_line": 455,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      444
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+        "line": 355,
+        "end_line": 376
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+        "line": 378,
+        "end_line": 407
+      }
+    ]
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "sha256": "2953f4e1068b961842d6ecb1759f3ba145661e6efd9583f525b53f6ca584fd45",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 450,
+        "end_line": 452,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 455,
+        "end_line": 457,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 463,
+        "end_line": 464,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 466,
+        "end_line": 475,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "TEMPERATURE",
+          "top_p": "TOP_P",
+          "top_k": "TOP_K"
+        }
+      },
+      {
+        "line": 476,
+        "end_line": 477,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      466
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+        "line": 377,
+        "end_line": 398
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+        "line": 400,
+        "end_line": 429
+      }
+    ]
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "sha256": "99802f1ff5c052297b61d41522efc59cfba874b1884be66e23cc65266d6f20c4",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 438,
+        "end_line": 440,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 443,
+        "end_line": 445,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 451,
+        "end_line": 452,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 454,
+        "end_line": 463,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 464,
+        "end_line": 465,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      454
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 365,
+        "end_line": 386
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+        "line": 388,
+        "end_line": 417
+      }
+    ]
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "sha256": "13b458c0ed161737e5127a70ace369497a42d0a90cae9b1ff25844375f05db32",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 426,
+        "end_line": 428,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 431,
+        "end_line": 433,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 439,
+        "end_line": 440,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 442,
+        "end_line": 451,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 452,
+        "end_line": 453,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      442
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+        "line": 353,
+        "end_line": 374
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+        "line": 376,
+        "end_line": 405
+      }
+    ]
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "sha256": "41336f0938b06682e8b0d691f5611a77b45e45cd85550074e0f4216f1d9a6601",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 426,
+        "end_line": 428,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 431,
+        "end_line": 433,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 439,
+        "end_line": 440,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 442,
+        "end_line": 451,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 452,
+        "end_line": 453,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      442
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+        "line": 353,
+        "end_line": 374
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+        "line": 376,
+        "end_line": 405
+      }
+    ]
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "sha256": "02eee5e877a1c7cffb8dd082f909daf2fb42c773de9d1683013968a875f6b451",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 354,
+        "end_line": 359,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 365,
+        "end_line": 368,
+        "method": "pipe",
+        "function": "generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      365
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 300,
+        "end_line": 318
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+        "line": 320,
+        "end_line": 349
+      }
+    ]
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "sha256": "2a50eec31603589fffc92d20a59879ee81dbdb3123c9a7704cba374dd7e662ff",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 358,
+        "end_line": 360,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 363,
+        "end_line": 365,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 371,
+        "end_line": 372,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 374,
+        "end_line": 381,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "do_sample": "DO_SAMPLE",
+          "temperature": "TEMPERATURE",
+          "top_p": "TOP_P",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 382,
+        "end_line": 383,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      374
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 285,
+        "end_line": 306
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+        "line": 308,
+        "end_line": 337
+      }
+    ]
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "sha256": "270dd7b00d06543e64f2895d4f21e3001d263f54c8982759fb8c2052752d5bd3",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 344,
+        "end_line": 346,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 349,
+        "end_line": 351,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 357,
+        "end_line": 358,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 360,
+        "end_line": 368,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "pad_token_id": "tokenizer.eos_token_id"
+        }
+      },
+      {
+        "line": 369,
+        "end_line": 370,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      360
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 271,
+        "end_line": 292
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "line": 294,
+        "end_line": 323
+      }
+    ]
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "sha256": "0cf4a9cef75125c0e55fa440853c8751ce26a68e579ca2acbc0c8072abe110a8",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 358,
+        "end_line": 360,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 363,
+        "end_line": 365,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 371,
+        "end_line": 372,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 374,
+        "end_line": 383,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 384,
+        "end_line": 385,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      374
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 285,
+        "end_line": 306
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "line": 308,
+        "end_line": 337
+      }
+    ]
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "sha256": "168dae55a00abe2dc71dfafecb751fccc5a8f80f538e7cdd6ef65131ceae09d3",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 336,
+        "end_line": 338,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 341,
+        "end_line": 343,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 349,
+        "end_line": 350,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 352,
+        "end_line": 361,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "TEMPERATURE",
+          "top_p": "TOP_P",
+          "top_k": "TOP_K"
+        }
+      },
+      {
+        "line": 362,
+        "end_line": 363,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      352
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 263,
+        "end_line": 284
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+        "line": 286,
+        "end_line": 315
+      }
+    ]
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "sha256": "d2be46906aca93e8b815ff93e353ac636b95fdab36a8b1a64a367a8cdf9d8df7",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 358,
+        "end_line": 360,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 363,
+        "end_line": 365,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 371,
+        "end_line": 372,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 374,
+        "end_line": 383,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS",
+          "temperature": "TEMPERATURE",
+          "top_p": "TOP_P",
+          "top_k": "TOP_K"
+        }
+      },
+      {
+        "line": 384,
+        "end_line": 385,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      374
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 285,
+        "end_line": 306
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+        "line": 308,
+        "end_line": 337
+      }
+    ]
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "sha256": "05dbb3e7a116081efa2d495ea09cc13876a5ed0842f0ccb63d65ec9ea79957bf",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 346,
+        "end_line": 348,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 351,
+        "end_line": 353,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 359,
+        "end_line": 360,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 362,
+        "end_line": 371,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 372,
+        "end_line": 373,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      362
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 273,
+        "end_line": 294
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "line": 296,
+        "end_line": 325
+      }
+    ]
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "sha256": "94bc6a75f4d5b70a11dec74c0ad09959c3350f18912c7d107a3bee3905bb02ec",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 278,
+        "end_line": 278,
+        "method": "apply_chat_template",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 279,
+        "end_line": 279,
+        "method": "encode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "add_special_tokens": "False",
+          "return_tensors": "'pt'"
+        }
+      },
+      {
+        "line": 281,
+        "end_line": 285,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "input_ids": "inputs.to(model.device)",
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 286,
+        "end_line": 286,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {}
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      281
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 213,
+        "end_line": 233
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+        "line": 235,
+        "end_line": 264
+      }
+    ]
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "sha256": "6ddb1e2d1c981aa7dae8a932635e4e4c29a65dc52d49c5b5f02f19fbbbceaa70",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 347,
+        "end_line": 349,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True",
+          "enable_thinking": "False"
+        }
+      },
+      {
+        "line": 352,
+        "end_line": 354,
+        "method": "apply_chat_template",
+        "function": "apply_template",
+        "factory": false,
+        "kwargs": {
+          "tokenize": "False",
+          "add_generation_prompt": "True"
+        }
+      },
+      {
+        "line": 360,
+        "end_line": 361,
+        "method": "tokenizer",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "return_tensors": "'pt'",
+          "truncation": "True",
+          "max_length": "max_len"
+        }
+      },
+      {
+        "line": 363,
+        "end_line": 372,
+        "method": "generate",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "MAX_NEW_TOKENS"
+        }
+      },
+      {
+        "line": 373,
+        "end_line": 374,
+        "method": "decode",
+        "function": "generate_once",
+        "factory": false,
+        "kwargs": {
+          "skip_special_tokens": "True"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      363
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 274,
+        "end_line": 295
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+        "line": 297,
+        "end_line": 326
+      }
+    ]
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "sha256": "2a424643e44d39860c66f1f2b86735e9c6978eed5050a69fc3cd1c707b98f6b4",
+    "status": "reviewed",
+    "calls": [
+      {
+        "line": 262,
+        "end_line": 267,
+        "method": "pipeline",
+        "function": "<module>",
+        "factory": true,
+        "kwargs": {
+          "model": "MODEL_PATH",
+          "torch_dtype": "'auto'",
+          "device_map": "'auto'"
+        }
+      },
+      {
+        "line": 273,
+        "end_line": 276,
+        "method": "pipe",
+        "function": "generate_first_line",
+        "factory": false,
+        "kwargs": {
+          "max_new_tokens": "max_new_tokens"
+        }
+      }
+    ],
+    "seeds": [],
+    "generation_calls": [
+      273
+    ],
+    "parser_functions": [
+      {
+        "name": "extract_coarse",
+        "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 208,
+        "end_line": 226
+      },
+      {
+        "name": "extract_fine",
+        "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+        "line": 228,
+        "end_line": 257
+      }
+    ]
+  }
+]

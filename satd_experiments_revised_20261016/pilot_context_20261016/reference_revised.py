@@ -1,0 +1,18 @@
+"""R16/R36 revised prompt/parser. Historical reference/* bytes are never changed."""
+import json
+from auxiliary_protocol import ABBREVIATIONS
+ABBR_SET = set(ABBREVIATIONS)
+PROMPT_HEAD = "There are 23 types of Machine Learning (ML) SATD (Self-Admitted Technical Debt):\n\nMACHINE LEARNING KNOWLEDGE (MLKnow): Machine-learning software carries plenty of unique challenges. Uneducated solutions by unaware developers may have to be revisited.\n\nMODEL INTERPRETABILITY (MLInter): Machine-learning models are a black box, causing poor understanding of model functionality; this can lead to unknown behaviour.\n\nMODEL CODE COMPREHENSION (MCC): Model code carries extra legibility concerns not present in traditional software (e.g., poorly-named temporary matrix variables).\n\nDUPLICATE MODEL CODE (DMC): Code duplication frequently occurs in model code.\n\nDUPLICATE FEATURE EXTRACTION CODE (DFEC): Code duplication frequently occurs in feature-extraction code.\n\nWEIGHT CONFIGURATION (Weight Conf): Editing code that involves the weights of a model, or configuring a model's weights directly.\n\nLAYER CONFIGURATION (Layer Conf): Editing code that deals with model layers, or configuring layers themselves.\n\nHYPER-PARAMETER CONFIGURATION (HP Conf): Configuring hyper-parameters of a model, or editing default values of off-the-shelf models.\n\nCODE DEPENDENCY (MLDepend): A needed change is blocked by an external dependency (library / subsystem).\n\nGLUE CODE (GC): Supporting code written to interface with other code, inhibiting improvements due to dependent peculiarities.\n\nCUSTOM DATA TYPE (CDT): Using data types provided by general-purpose packages can cause extensive inter-operability burden.\n\nMULTIPLE LANGUAGES (ML): Components written in other languages may introduce difficulties in ML development.\n\nUNNECESSARY MODEL CODE (UMC): Model code that bottlenecks execution, is unreachable / deprecated, or is unnecessary and should be removed.\n\nDATA PROCESSING CONFIGURATION (Data Conf): Configuring how data is processed, by editing the data directly or adding new processing steps.\n\nPLAIN OLD DATA TYPE (PODT): Using raw data types in ML causes confusion when interpreting processes.\n\nDATA STORAGE CONFIGURATION (DS Conf): Configuring how data is represented internally or stored externally.\n\nABSTRACTION (Abs): Lack of abstractions in ML systems causes cascading changes when a component is modified.\n\nBOUNDARY EROSION (BE): Lack of boundaries between subsystems complicates maintenance and isolates changes poorly.\n\nMODEL CODE MODIFIABILITY (MCM): Model code should enable easy maintenance and future modifications.\n\nMODEL CODE REUSABILITY (MCR): Model code should be generalised for reuse in varying situations.\n\nPREDICTION QUALITY (PQ): Workflow changes may affect performance.\n\nMACHINE LEARNING RELIABILITY (MLRelia): Model functionality depends on data quality; robustness measures should be in place.\n\nPROTOTYPE (Proto): Deploying small-scale prototypes into full systems can be dangerous."
+
+
+
+def build_prompt(comment):
+    # JSON string delimiters are paired by construction; no orphan triple quote.
+    return (PROMPT_HEAD + '\n\nClassify the target ML-SATD comment. Return exactly ONE abbreviation: ' +
+            ', '.join(ABBREVIATIONS) + '\n\nCode Comment:\n' + json.dumps(comment, ensure_ascii=False) + '\n\nAbbreviation:')
+
+
+def simple_extract(raw):
+    # One canonicalization for dictionary keys and the WHOLE output; no explanation scanning or first-line rescue.
+    canonical = ' '.join(str(raw).split()).casefold()
+    return {' '.join(label.split()).casefold(): label for label in ABBREVIATIONS}.get(canonical, '<UNK>')

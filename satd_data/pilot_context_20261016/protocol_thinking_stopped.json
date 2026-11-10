@@ -1,0 +1,25 @@
+{
+  "frozen_at": "2026-10-16T15:56:51.106125+08:00",
+  "research_question": "On the same source-aligned comments, does adding local code or the enclosing function improve fine-grained ML-SATD classification?",
+  "cohort_sha256": "7bc4d5dab574579236e190a2c1faac858d791a1f0f4e6875d6eb8e4417acbb11",
+  "samples": 100,
+  "arms": [
+    "comment_only",
+    "window",
+    "function"
+  ],
+  "primary_comparison": "function minus comment_only weighted-F1; window comparison secondary",
+  "secondary_metrics": [
+    "macro-F1 over21 supported labels",
+    "fixed23macro-F1",
+    "accuracy",
+    "class-wise recall",
+    "parse failure",
+    "token and runtime cost"
+  ],
+  "inference": "original official BF16 Qwen3-8B; frozen zero-shot CoT definitions/rules; thinking true; sampled0.6/0.95/20; fixed paired seed",
+  "analysis": "2000 within-gold-label paired bootstrap draws; original gold labels unchanged; exploratory small stratified sample",
+  "historical_sensitivity": "Repeat all paired comparisons on96 examples with exact original introducing-commit snapshot hashes",
+  "interpretation_gate": "Improved model agreement with original labels is not evidence of human label reliability or production generalization; inspect both corrected and regressed cases before proposing a new method.",
+  "human_annotation_status": "Not performed; separate blind review forms prepared."
+}

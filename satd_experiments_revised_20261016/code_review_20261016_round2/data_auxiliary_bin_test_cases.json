@@ -1,0 +1,10 @@
+{
+  "file": "bisection_zero_shot/bin_test.py",
+  "line": 128,
+  "input": "Data Conf - the processing step needs changes",
+  "result": [
+    "Data",
+    "Conf - the processing step needs changes"
+  ],
+  "model_calls": "chat stub; no real model or original module executed"
+}

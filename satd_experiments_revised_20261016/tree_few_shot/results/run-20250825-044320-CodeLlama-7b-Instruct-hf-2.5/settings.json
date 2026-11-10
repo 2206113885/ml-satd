@@ -1,0 +1,10 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/CodeLlama-7b-Instruct-hf",
+  "run_dir": "results/run-20250825-044320-CodeLlama-7b-Instruct-hf",
+  "max_new_tokens": 20,
+  "do_sample": true,
+  "two_stage": true,
+  "unknown_coarse": 1,
+  "unknown_fine": 0
+}

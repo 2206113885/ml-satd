@@ -1,0 +1,1317 @@
+--- original/basic_few_shot/CodeLlama-7b_few_shot.py
++++ revised/basic_few_shot/CodeLlama-7b_few_shot.py
+@@ -712,6 +712,15 @@
+ model = AutoModelForCausalLM.from_pretrained(MODEL_PATH, device_map="auto", torch_dtype="auto")
+ tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH, trust_remote_code=True)
+ 
++# [R01 修订] 输入预算覆盖完整提示：10-shot头、目标评论、代码上下文及聊天模板。
++# 以模型真实上下文容量为上限，另预留生成token与余量；不把预算设为10-shot头的长度。
++INPUT_TOKEN_SAFETY_MARGIN = 64
++MODEL_CONTEXT_TOKENS = getattr(model.config, "max_position_embeddings", None)
++if (not isinstance(MODEL_CONTEXT_TOKENS, int)
++        or not MAX_NEW_TOKENS + INPUT_TOKEN_SAFETY_MARGIN < MODEL_CONTEXT_TOKENS <= 1_000_000):
++    raise ValueError("[R01] 无法确定模型有效上下文长度，请核对模型配置。")
++MAX_INPUT_TOKENS = MODEL_CONTEXT_TOKENS - MAX_NEW_TOKENS - INPUT_TOKEN_SAFETY_MARGIN
++
+ 
+ # -------- 6. classify --------
+ @torch.inference_mode()
+@@ -724,8 +733,20 @@
+         tokenize=False,
+         add_generation_prompt=True,
+     )
+-    inputs = tokenizer(text, return_tensors="pt",
+-                       truncation=True, max_length=4096).to(model.device)
++    # [R01 原代码保留] 固定4096右截断会丢失10-shot末尾的目标评论及上下文。
++    # inputs = tokenizer(text, return_tensors="pt",
++    #                    truncation=True, max_length=4096).to(model.device)
++    # [R01 修订] 在全部内容和聊天模板拼接后计数，保留完整输入，不静默截断。
++    inputs = tokenizer(text, return_tensors="pt", truncation=False)
++    input_tokens = inputs["input_ids"].shape[1]
++    if input_tokens > MAX_INPUT_TOKENS:
++        raise ValueError(
++            f"[R01] 完整提示（示例、评论、代码上下文及模板）共{input_tokens} tokens，"
++            f"超过可用输入预算{MAX_INPUT_TOKENS}；"
++            f"模型上下文{MODEL_CONTEXT_TOKENS}，生成预留{MAX_NEW_TOKENS}，"
++            f"额外余量{INPUT_TOKEN_SAFETY_MARGIN}。请显式调整输入方案，禁止静默截断。"
++        )
++    inputs = inputs.to(model.device)
+ 
+     outputs = model.generate(
+         **inputs,
+@@ -808,6 +829,11 @@
+     "model": MODEL_PATH,
+     "run_dir": str(RUN_DIR),
+     "max_new_tokens": MAX_NEW_TOKENS,
++    # [R01 修订] 保存整个输入（含示例、评论、代码上下文及模板）的实际预算。
++    "max_input_tokens": MAX_INPUT_TOKENS,
++    "model_context_tokens": MODEL_CONTEXT_TOKENS,
++    "input_token_safety_margin": INPUT_TOKEN_SAFETY_MARGIN,
++    "input_length_policy": "full templated input; over-budget inputs raise an error; no truncation",
+     "fallback_abbr": FALLBACK_ABBR
+ }, indent=2))
+ 
+--- original/basic_few_shot/Llama-3.1-8B_few_shot.py
++++ revised/basic_few_shot/Llama-3.1-8B_few_shot.py
+@@ -709,9 +709,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ print("[INFO] Loading model …")
+--- original/basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py
++++ revised/basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py
+@@ -347,9 +347,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ print("[INFO] Loading model …")
+--- original/basic_zero_shot/Llama-3.1-8B_zero_shot.py
++++ revised/basic_zero_shot/Llama-3.1-8B_zero_shot.py
+@@ -126,9 +126,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ print("[INFO] Loading model …")
+--- original/basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py
++++ revised/basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py
+@@ -137,9 +137,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ print("[INFO] Loading model …")
+--- original/basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py
++++ revised/basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py
+@@ -157,9 +157,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ print("[INFO] Loading model …")
+--- original/bisection_CoT/CodeLlama-7b_few_shot.py
++++ revised/bisection_CoT/CodeLlama-7b_few_shot.py
+@@ -328,9 +328,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # ---------- 5. 加载模型 ----------
+--- original/bisection_CoT/Llama-3.1-8B_few_shot.py
++++ revised/bisection_CoT/Llama-3.1-8B_few_shot.py
+@@ -402,9 +402,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_CoT/Qwen2.5-Coder-7B_few_shot.py
++++ revised/bisection_CoT/Qwen2.5-Coder-7B_few_shot.py
+@@ -355,9 +355,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_CoT/codegemma-1.1-7b_few_shot.py
++++ revised/bisection_CoT/codegemma-1.1-7b_few_shot.py
+@@ -357,9 +357,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_CoT/gemma-2-9b_few_shot.py
++++ revised/bisection_CoT/gemma-2-9b_few_shot.py
+@@ -405,9 +405,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_CoT/gemma-3-12b_few_shot.py
++++ revised/bisection_CoT/gemma-3-12b_few_shot.py
+@@ -405,9 +405,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_CoT/gpt-oss-20b_few_shot.py
++++ revised/bisection_CoT/gpt-oss-20b_few_shot.py
+@@ -525,9 +525,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():  # 弱兜底：全称首词线索
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():  # 弱兜底：全称首词线索
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型（保留你原先的 pipeline 方式） --------
+--- original/bisection_few_shot/CodeLlama-7b_few_shot.py
++++ revised/bisection_few_shot/CodeLlama-7b_few_shot.py
+@@ -557,9 +557,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # ---------- 5. 加载模型 ----------
+--- original/bisection_few_shot/Llama-3.1-8B_few_shot.py
++++ revised/bisection_few_shot/Llama-3.1-8B_few_shot.py
+@@ -560,9 +560,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py
++++ revised/bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py
+@@ -560,9 +560,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_few_shot/Qwen3-14B_few_shot.py
++++ revised/bisection_few_shot/Qwen3-14B_few_shot.py
+@@ -562,9 +562,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_few_shot/Qwen3-8B_few_shot.py
++++ revised/bisection_few_shot/Qwen3-8B_few_shot.py
+@@ -681,9 +681,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_few_shot/codegemma-1.1-7b_few_shot.py
++++ revised/bisection_few_shot/codegemma-1.1-7b_few_shot.py
+@@ -563,9 +563,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_few_shot/gemma-2-9b_few_shot.py
++++ revised/bisection_few_shot/gemma-2-9b_few_shot.py
+@@ -563,9 +563,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_few_shot/gemma-3-12b_few_shot.py
++++ revised/bisection_few_shot/gemma-3-12b_few_shot.py
+@@ -564,9 +564,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_few_shot/gpt-oss-20b_few_shot.py
++++ revised/bisection_few_shot/gpt-oss-20b_few_shot.py
+@@ -450,9 +450,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():  # 弱兜底：全称首词线索
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():  # 弱兜底：全称首词线索
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型（保留你原先的 pipeline 方式） --------
+--- original/bisection_zero_shot/CodeLlama-7b_zero_shot.py
++++ revised/bisection_zero_shot/CodeLlama-7b_zero_shot.py
+@@ -140,9 +140,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # ---------- 5. 加载模型 ----------
+--- original/bisection_zero_shot/Llama-3.1-8B_zero_shot.py
++++ revised/bisection_zero_shot/Llama-3.1-8B_zero_shot.py
+@@ -166,9 +166,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py
++++ revised/bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py
+@@ -167,9 +167,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_zero_shot/Qwen3-14B_zero_shot.py
++++ revised/bisection_zero_shot/Qwen3-14B_zero_shot.py
+@@ -167,9 +167,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_zero_shot/Qwen3-8B_zero_shot.py
++++ revised/bisection_zero_shot/Qwen3-8B_zero_shot.py
+@@ -167,9 +167,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_zero_shot/bin_new_test.py
++++ revised/bisection_zero_shot/bin_new_test.py
+@@ -167,9 +167,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_zero_shot/codegemma-1.1-7b_zero_shot.py
++++ revised/bisection_zero_shot/codegemma-1.1-7b_zero_shot.py
+@@ -168,9 +168,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_zero_shot/gemma-2-9b_zero_shot.py
++++ revised/bisection_zero_shot/gemma-2-9b_zero_shot.py
+@@ -168,9 +168,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_zero_shot/gemma-3-12b_zero_shot.py
++++ revised/bisection_zero_shot/gemma-3-12b_zero_shot.py
+@@ -168,9 +168,17 @@
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+     # 尝试从全称首词猜测（很弱的兜底）
+-    for full, ab in LABEL_ABBR.items():
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型 --------
+--- original/bisection_zero_shot/gpt-oss-20b_zero_shot.py
++++ revised/bisection_zero_shot/gpt-oss-20b_zero_shot.py
+@@ -166,9 +166,17 @@
+     token = re.sub(r"[^a-z]", "", first.lower())
+     if token in ABBR_LOWER:
+         return ABBR_LOWER[token]
+-    for full, ab in LABEL_ABBR.items():  # 弱兜底：全称首词线索
+-        if full.split()[0].lower() in token:
+-            return ab
++    # [R03 原代码保留]
++    # for full, ab in LABEL_ABBR.items():  # 弱兜底：全称首词线索
++    #     if full.split()[0].lower() in token:
++    #         return ab
++    # [R03 修订]
++    full_name_matches = [
++        ab for full, ab in LABEL_ABBR.items()
++        if re.sub(r"[^a-z]", "", full.lower()) == token
++    ]
++    if len(full_name_matches) == 1:
++        return full_name_matches[0]
+     return "<UNK>"
+ 
+ # -------- 4. 加载模型（保留你原先的 pipeline 方式） --------
+--- original/tree_few_shot/CodeLlama-7b_few_shot.py
++++ revised/tree_few_shot/CodeLlama-7b_few_shot.py
+@@ -376,7 +376,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -399,7 +403,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_few_shot/Llama-3.1-8B_few_shot.py
++++ revised/tree_few_shot/Llama-3.1-8B_few_shot.py
+@@ -362,7 +362,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -385,7 +389,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_few_shot/Qwen2.5-Coder-7B_few_shot.py
++++ revised/tree_few_shot/Qwen2.5-Coder-7B_few_shot.py
+@@ -376,7 +376,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -399,7 +403,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_few_shot/Qwen3-14B_few_shot.py
++++ revised/tree_few_shot/Qwen3-14B_few_shot.py
+@@ -354,7 +354,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -377,7 +381,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_few_shot/Qwen3-8B_few_shot.py
++++ revised/tree_few_shot/Qwen3-8B_few_shot.py
+@@ -376,7 +376,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -399,7 +403,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_few_shot/codegemma-1.1-7b_few_shot.py
++++ revised/tree_few_shot/codegemma-1.1-7b_few_shot.py
+@@ -364,7 +364,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -387,7 +391,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_few_shot/gemma-2-9b_few_shot.py
++++ revised/tree_few_shot/gemma-2-9b_few_shot.py
+@@ -352,7 +352,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -375,7 +379,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_few_shot/gemma-3-12b_few_shot.py
++++ revised/tree_few_shot/gemma-3-12b_few_shot.py
+@@ -352,7 +352,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -375,7 +379,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_few_shot/gpt-oss-20b_few_shot.py
++++ revised/tree_few_shot/gpt-oss-20b_few_shot.py
+@@ -299,7 +299,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 '**AWR**' / 'Abbreviation: AWR' 等）。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -319,7 +323,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_zero_shot/CodeLlama-7b_zero_shot.py
++++ revised/tree_zero_shot/CodeLlama-7b_zero_shot.py
+@@ -284,7 +284,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -307,7 +311,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_zero_shot/Llama-3.1-8B_zero_shot.py
++++ revised/tree_zero_shot/Llama-3.1-8B_zero_shot.py
+@@ -270,7 +270,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -293,7 +297,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py
++++ revised/tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py
+@@ -284,7 +284,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -307,7 +311,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_zero_shot/Qwen3-14B_zero_shot.py
++++ revised/tree_zero_shot/Qwen3-14B_zero_shot.py
+@@ -262,7 +262,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -285,7 +289,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_zero_shot/Qwen3-8B_zero_shot.py
++++ revised/tree_zero_shot/Qwen3-8B_zero_shot.py
+@@ -284,7 +284,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -307,7 +311,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_zero_shot/codegemma-1.1-7b_zero_shot.py
++++ revised/tree_zero_shot/codegemma-1.1-7b_zero_shot.py
+@@ -272,7 +272,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -295,7 +299,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_zero_shot/gemma-2-9b_zero_shot.py
++++ revised/tree_zero_shot/gemma-2-9b_zero_shot.py
+@@ -234,7 +234,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留] 原入口没有处理空字符串或纯空白输出。
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订] 在读取首行前返回原有失败标记，保持后续回退策略。
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -276,16 +280,39 @@
+ def generate_once(prompt: str, max_len: int):
+     messages = [{"role": "user", "content": prompt}]
+     text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+-    inputs = tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
++    # [R02 原代码保留] 原调用丢弃模板text，且没有使用max_len。
++    # inputs = tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
++    # [R02 修订] 编码完整聊天模板；模板已包含特殊token，避免二次添加。
++    inputs = tokenizer(text, add_special_tokens=False, return_tensors="pt", truncation=False)
++    input_tokens = inputs["input_ids"].shape[1]
++    if not isinstance(max_len, int) or max_len <= 0:
++        raise ValueError("[R02] max_len必须是正整数输入预算。")
++    input_budget = max_len
++    context_limit = getattr(model.config, "max_position_embeddings", None)
++    if isinstance(context_limit, int) and 0 < context_limit <= 1_000_000:
++        input_budget = min(input_budget, context_limit - MAX_NEW_TOKENS)
++    if input_tokens > input_budget:
++        raise ValueError(
++            f"[R02] 完整模板输入共{input_tokens} tokens，超过阶段输入预算{input_budget}；"
++            "请核对max_len及模型上下文，禁止静默截断目标评论。"
++        )
++    inputs = inputs.to(model.device)
+ 
+     outputs = model.generate(
+-        input_ids=inputs.to(model.device),
++        # [R02 原代码保留]
++        # input_ids=inputs.to(model.device),
++        # [R02 修订] 同时传入模板编码所得input_ids与attention_mask。
++        **inputs,
+         max_new_tokens=MAX_NEW_TOKENS,
+ 
+     )
+-    raw = tokenizer.decode(outputs[0])
++    # [R02 原代码保留] 原处理包含输入prompt，按字符串切分可能混入提示内容。
++    # raw = tokenizer.decode(outputs[0])
+     # print(raw.split("Answer:")[-1].split("<end_of_turn>")[0].strip())
+-    return raw.split("Answer:")[-1].split("<end_of_turn>")[0].strip()
++    # return raw.split("Answer:")[-1].split("<end_of_turn>")[0].strip()
++    # [R02 修订] 仅解码新生成token，首行处理与其他层次脚本保持一致。
++    raw = tokenizer.decode(outputs[0][input_tokens:], skip_special_tokens=True).strip()
++    return re.split(r"[\r\n]", raw, maxsplit=1)[0]
+ 
+ # ========== 8. 两阶段推理 ==========
+ @torch.inference_mode()
+@@ -377,6 +404,10 @@
+     "model": MODEL_PATH,
+     "run_dir": str(RUN_DIR),
+     "max_new_tokens": MAX_NEW_TOKENS,
++    # [R02 修订] 记录已执行的阶段输入预算与模板处理策略。
++    "coarse_max_input_tokens": COARSE_MAX_LEN,
++    "fine_max_input_tokens": FINE_MAX_LEN,
++    "input_length_policy": "full chat template; over-budget inputs raise an error; no truncation",
+     "two_stage": True,
+     "unknown_coarse": unk_coarse_cnt,
+     "unknown_fine": unk_fine_cnt
+@@ -386,4 +417,4 @@
+ print(f"[INFO] Unknown coarse predictions: {unk_coarse_cnt}")
+ print(f"[INFO] Unknown fine predictions:   {unk_fine_cnt}")
+ 
+-gc.collect(); torch.cuda.empty_cache()+gc.collect(); torch.cuda.empty_cache()
+--- original/tree_zero_shot/gemma-3-12b_zero_shot.py
++++ revised/tree_zero_shot/gemma-3-12b_zero_shot.py
+@@ -273,7 +273,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 'Abbreviation: **AWR** (Awareness)' 等格式）"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -296,7 +300,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+--- original/tree_zero_shot/gpt-oss-20b_zero_shot.py
++++ revised/tree_zero_shot/gpt-oss-20b_zero_shot.py
+@@ -207,7 +207,11 @@
+ 
+ def extract_coarse(raw: str) -> str:
+     """从任意首行文本里提取粗类缩写（容忍 '**AWR**' / 'Abbreviation: AWR' 等）。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 
+@@ -227,7 +231,11 @@
+ 
+ def extract_fine(raw: str, allowed_abbr_list) -> str:
+     """从 raw 中提取细类缩写，仅允许 allowed_abbr_list 内的候选。兼容空格差异与 markdown。"""
+-    if not isinstance(raw, str):
++    # [R04 原代码保留]
++    # if not isinstance(raw, str):
++    #     return "<UNK>"
++    # [R04 修订]
++    if not isinstance(raw, str) or not raw.strip():
+         return "<UNK>"
+     s = raw.splitlines()[0].strip()
+ 

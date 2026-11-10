@@ -1,0 +1,76 @@
+[
+  {
+    "file": "pilot_context_20261016/analyze_pilot.py",
+    "sha256": "92ac9b83630f97031acd03e0d99346e8f0535363dc98569e9d1d51eecdf49ac1",
+    "status": "reviewed",
+    "scope": "模型调用、prompt、选样、配对、指标、恢复、历史来源验证及纯函数测试；归档prompt按归档角色审查",
+    "finding_ids": []
+  },
+  {
+    "file": "pilot_context_20261016/download_model.py",
+    "sha256": "27d86c664a0eeb8867a20504c522601eb6c60c60500184f5bb5eb3910f668fbf",
+    "status": "reviewed",
+    "scope": "模型调用、prompt、选样、配对、指标、恢复、历史来源验证及纯函数测试；归档prompt按归档角色审查",
+    "finding_ids": []
+  },
+  {
+    "file": "pilot_context_20261016/prepare_pilot.py",
+    "sha256": "c550be14f49e0475a3b09d285bbd1f73b8b79a2d9c0fd7a363ec51e8f8739562",
+    "status": "reviewed",
+    "scope": "模型调用、prompt、选样、配对、指标、恢复、历史来源验证及纯函数测试；归档prompt按归档角色审查",
+    "finding_ids": []
+  },
+  {
+    "file": "pilot_context_20261016/reference/frozen_prompt.py",
+    "sha256": "b94cbdf8684412cd86b0411b9a9cabf1ae24197ec36cbb066cd39e0c2f5cb256",
+    "status": "reviewed",
+    "scope": "模型调用、prompt、选样、配对、指标、恢复、历史来源验证及纯函数测试；归档prompt按归档角色审查",
+    "finding_ids": []
+  },
+  {
+    "file": "pilot_context_20261016/reference_thinking_stopped/frozen_prompt.py",
+    "sha256": "d88c3614ea09c7040778d7834c568dee8cbb830b93d4b7cd2da5b2722e73b902",
+    "status": "reviewed",
+    "scope": "模型调用、prompt、选样、配对、指标、恢复、历史来源验证及纯函数测试；归档prompt按归档角色审查",
+    "finding_ids": []
+  },
+  {
+    "file": "pilot_context_20261016/run_pilot.py",
+    "sha256": "c32401956ce91965b8e52451f9b1616b4470925837980fa3f55c6300b5d39e4a",
+    "status": "reviewed",
+    "scope": "模型调用、prompt、选样、配对、指标、恢复、历史来源验证及纯函数测试；归档prompt按归档角色审查",
+    "finding_ids": [
+      "PL01"
+    ]
+  },
+  {
+    "file": "pilot_context_20261016/test_analyze_pilot.py",
+    "sha256": "9da216f6d61b5cfc0cd83ce2c1b0ef2a5d52e3cbcdc34b5904e3e7a10cf61578",
+    "status": "reviewed",
+    "scope": "模型调用、prompt、选样、配对、指标、恢复、历史来源验证及纯函数测试；归档prompt按归档角色审查",
+    "finding_ids": []
+  },
+  {
+    "file": "pilot_context_20261016/test_runner.py",
+    "sha256": "8272fcb17c12b948097c09dbda7232d873879fb1862b0d313e2b65534d0a22bf",
+    "status": "reviewed",
+    "scope": "模型调用、prompt、选样、配对、指标、恢复、历史来源验证及纯函数测试；归档prompt按归档角色审查",
+    "finding_ids": []
+  },
+  {
+    "file": "pilot_context_20261016/verify_historical.py",
+    "sha256": "5b243fc546c6c6bf0da2b8938001a2581d1d19d15ef2c244cd0f655bf8312128",
+    "status": "reviewed",
+    "scope": "模型调用、prompt、选样、配对、指标、恢复、历史来源验证及纯函数测试；归档prompt按归档角色审查",
+    "finding_ids": []
+  },
+  {
+    "file": "pilot_context_20261016/wait_and_run.py",
+    "sha256": "2cd8ce618892cbbbefad4613a5310ecd970d9b4bcdcab104e0f8b2f170965ff0",
+    "status": "reviewed",
+    "scope": "模型调用、prompt、选样、配对、指标、恢复、历史来源验证及纯函数测试；归档prompt按归档角色审查",
+    "finding_ids": [
+      "PL02"
+    ]
+  }
+]

@@ -1,0 +1,125 @@
+**Data Conf**
+**FIXME**
+The code comment """"@TODO: need better solutions""" indicates a need for **improvement (IM
+The code comment """"@TODO: remove time usage; use it under the hood"""" belongs
+The code comment belongs to the **CDT** category (Custom Data Type).
+The code comment belongs to the **ML** category.
+The code comment indicates a need to add **argument compatibility checks**. This is a **Data Conf**
+The code comment "BETTER FIX: iterate through; if length = 0, then bump it
+The code comment "circular shift the signal (needed for correct phase)" belongs to the **ML**
+The code comment "early_stopping(index=epoch; avg_valid_loss). (TODO
+**TODO**
+**Data Conf**
+**FIXME**
+The code comment "FIXME don't l2_normalize for any metric" belongs to the
+**Weight Conf**
+**Weight Conf**
+The code comment "FIXME not sure what are those CB1 \/ CB2" is a **
+XXX
+**Weight Conf**
+The code comment is related to **MCM (Model Code Modifiability)**.
+**Layer Conf**
+The code comment "FIXME: What about the next diff entry?" belongs to the **DS Conf
+The code comment "FIXME: What if we never find a fail-high?" indicates a **
+The provided code comment indicates a "FIXME" issue related to the Numba library in Python.
+**Weight Conf**
+The code comment "Initialize model (TODO: really necessary?)" belongs to the **MCM** category
+**Data Conf**
+**Data Conf**
+The provided code comment is a question, not a technical debt. It is not related to any of
+**MLConf**
+The code comment "Pass on diff to external difftool (TODO: store in global metadata at end
+The provided code comment is a **TODO** comment.
+The code comment "self.mpc_sum(3; -5) TODO: Future work:
+**Weight Conf**
+The provided code comment indicates a need to **optimize the code**.
+The code comment belongs to the **ML** abbreviation (Machine Learning Knowledge). The comment is about sorting
+**HP Conf**
+The code comment "TODO : Any other options" indicates that the technical debt is not categorized by any
+The provided code comment indicates a **TODO** type of SATD.
+**DS Conf**
+The code comment "TODO add general Distribution" indicates a need to add a general distribution to the model
+**Data Conf**
+The code comment "TODO add introductory explanation" is a **Data Conf** SATD.
+**Data Conf**
+The code comment belongs to the **ML** category.
+The code comment "TODO change to np.partition for PERF" indicates a need for **Performance
+**Data Conf**
+**Weight Conf**
+The code comment "TODO combine these values to get a final prediction!" belongs to the **ML**
+**API**
+**UMC (Unnecessary Model Code)**
+The code comment "TODO Implement" indicates a **Model Code Modification (MCM)** debt.
+**Weight Conf**
+The provided code comment "TODO replace with Streamlines" indicates a need to **replace the current code
+The code comment "TODO Search the web or use other algorithms" belongs to the **ML** category
+**Data Conf**
+The code comment "TODO Should this stay generic? (point)" belongs to the **ML** category
+The code comment "TODO stim channel exclusion" belongs to the **ML** category.
+**HP Conf**
+The code comment "TODO this is too general; register all ops" indicates a need for **ML
+The provided code comment is a **TODO** comment, indicating a task that needs to be completed or
+**Data Conf**
+**HP Conf**
+The code comment "TODO validation_split is not used" indicates a **Data Conf** type of
+The code comment "TODO WIP temp_coherence_loss # assumes all sequences in the dataset share
+**DS Conf**
+**Weight Conf**
+The code comment "TODO(rliaw): This behavior is probably undesirable; but right now"
+**Weight Conf**
+**HP Conf**
+The code comment "TODO(vsatish): Figure out why this isn't printed." belongs
+**Data Conf**
+**HP Conf**
+The code comment "TODO: calculate this centroid" belongs to the **ML** category of Machine Learning
+The code comment "TODO: Check if self._mean_squared_error_w_precision can
+The provided code comment indicates a **TODO** for checking something, which suggests it is related to **
+The code comment "TODO: compute signed distance between walls" belongs to the **ML** category,
+The code comment indicates a **TODO** for **Model Code Configuration (MCC)**.
+**Weight Conf**
+The provided code comment indicates a **TODO** category of self-admitted technical debt (SATD
+The code comment "TODO: does it make graph?" is related to **ML** (Machine Learning
+The code comment "TODO: ensure dummy_na =False is what you want" belongs to the
+The code comment "TODO: extend to other key types" indicates a need for **MCR**
+The code comment is about **ML** (Machine Learning). The comment is about a need to understand
+The code comment "TODO: handle other participant types" belongs to the **ML** category, specifically
+The code comment "TODO: I'm not sure about this part" is a general request for
+The code comment "TODO: Implement mass downloading with a cool-off in case of 42
+**Weight Conf**
+**Data Conf**
+The code comment "TODO: list" indicates a **Data Configuration (Data Conf)** issue.
+**Weight Conf**
+The provided code comment indicates a **TODO** for future work.
+The code comment "TODO: more specific types?" indicates a need for **ML** (Machine Learning
+The code comment "TODO: need a better way" indicates a need for **improvement** in the
+The provided code comment is a **TODO** comment, which indicates a need for further discussion or decision
+**Data Conf**
+**HP Conf**
+The provided code comment "TODO: other types?" does not belong to any of the provided SATD
+**HP Conf**
+The code comment "TODO: re-implement support for constraint satisfaction method as needed" belongs to the
+**Weight Conf**
+The code comment "TODO: reward computation" is related to the **ML** (Machine Learning)
+**Data Conf**
+The code comment "TODO: should port\/ip\/mac address be ignored? yes" is a
+The code comment "TODO: should we return a LogarithmicFilteredSpectrogram?" belongs to the **
+The provided code comment "TODO: something if deep 9" is a general task that could be
+The provided code comment "TODO: Something smarter?" is a general request for improvement and does not fit
+**Weight Conf**
+**UMC (Unnecessary Model Code)**
+The code comment "TODO: Use google-diff-patch-match library" belongs to the **
+**IO**
+The code comment "TODO: verify if it is working" indicates a **MLKnow** (Machine
+**UMC (Unnecessary Model Code)**
+The code comment "TODO: would be good to add ref from source" indicates a need for **
+The code comment "todo; pass also best score" is a **MLKnow** SATD.
+**UMC (Unnecessary Model Code)**
+XXX
+The code comment "XXX Disable SimulateModels without CreateTab" belongs to the **ML** category
+XXX
+The code comment indicates a need to update a code section when matplotlib version 3.3 is the
+XXX
+The code comment "XXX: how to find \""""good\"""" values for level ?"" belongs
+XXX
+XXX
+The provided code comment "XXX: where should this be?" indicates a **Model Code Configuration (MCC

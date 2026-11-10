@@ -1,0 +1,28 @@
+{
+  "id": "google/codegemma-1.1-7b-it",
+  "sha": "9523c8dbf32bf2130e2de570c478b3bdb1d36101",
+  "gated": "manual",
+  "lastModified": "2024-08-07T18:27:19.000Z",
+  "library_name": "transformers",
+  "pipeline_tag": "text-generation",
+  "config": {
+    "architectures": [
+      "GemmaForCausalLM"
+    ],
+    "model_type": "gemma",
+    "tokenizer_config": {
+      "bos_token": "<bos>",
+      "chat_template": "{{ bos_token }}{% if messages[0]['role'] == 'system' %}{{ raise_exception('System role not supported') }}{% endif %}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if (message['role'] == 'assistant') %}{% set role = 'model' %}{% else %}{% set role = message['role'] %}{% endif %}{{ '<start_of_turn>' + role + '\n' + message['content'] | trim + '<end_of_turn>\n' }}{% endfor %}{% if add_generation_prompt %}{{'<start_of_turn>model\n'}}{% endif %}",
+      "eos_token": "<eos>",
+      "pad_token": "<pad>",
+      "unk_token": "<unk>",
+      "use_default_system_prompt": false
+    }
+  },
+  "files": [
+    "README.md",
+    "config.json",
+    "generation_config.json",
+    "tokenizer_config.json"
+  ]
+}

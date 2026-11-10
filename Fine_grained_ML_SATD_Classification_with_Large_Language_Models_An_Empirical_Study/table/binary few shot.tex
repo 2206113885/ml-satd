@@ -1,0 +1,49 @@
+\begin{table}[t!]
+  \centering
+  \caption{Few-shot result under the binary prompting setting}
+  \label{tab:binary_few_shot}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{
+    >{\centering\arraybackslash}p{1cm}
+    >{\centering\arraybackslash}p{1.2cm}
+    *{10}{>{\centering\arraybackslash}p{1.9cm}}
+  }
+    \toprule
+    & & Qwen3-8B & Qwen3-14B & Qwen2.5-Coder-7B-Instruct & gemma-2-9b & gemma-3-12b & codegemma-1.1-7b-it & Llama-3.1-8B-Instruct & CodeLlama-7b-Instruct-hf & gpt-oss-20b \\
+    \midrule
+    % --- 0-shot ---
+    \multirow{3}{*}{0} & precision & 0.315 & 0.387 & \textbf{0.406} & 0.407 & \textbf{0.404} & 0.291 & 0.301 & 0.109 & 0.397 \\
+    & recall & 0.237 & 0.280 & \textbf{0.323} & 0.293 & 0.328 & 0.183 & 0.153 & 0.048 & 0.354 \\
+    & f1 & 0.249 & 0.284 & \textbf{0.311} & 0.279 & \textbf{0.326} & 0.171 & 0.146 & 0.052 & 0.351 \\
+    \midrule
+    % --- 1-shot ---
+    \multirow{3}{*}{1} & precision & 0.316 & 0.399 & 0.333 & 0.404 & 0.404 & \textbf{0.379} & 0.276 & 0.138 & \textbf{0.412} \\
+    & recall & 0.265 & 0.282 & 0.298 & \textbf{0.300} & \textbf{0.338} & \textbf{0.234} & \textbf{0.211} & 0.061 & \textbf{0.356} \\
+    & f1 & 0.258 & 0.302 & 0.282 & \textbf{0.312} & 0.324 & \textbf{0.218} & 0.203 & 0.067 & \textbf{0.357} \\
+    \midrule
+    % --- 2-shot ---
+    \multirow{3}{*}{2} & precision & \textbf{0.352} & \textbf{0.456} & 0.354 & 0.416 & 0.383 & 0.281 & 0.369 & 0.147 & 0.397 \\
+    & recall & 0.267 & 0.316 & 0.321 & 0.298 & 0.326 & 0.219 & 0.209 & 0.079 & 0.351 \\
+    & f1 & 0.281 & 0.335 & 0.298 & 0.309 & 0.305 & 0.190 & \textbf{0.226} & 0.075 & 0.348 \\
+    \midrule
+    % --- 3-shot ---
+    \multirow{3}{*}{3} & precision & 0.333 & 0.449 & 0.347 & 0.416 & 0.363 & 0.232 & 0.374 & 0.270 & 0.395 \\
+    & recall & \textbf{0.285} & 0.316 & 0.293 & 0.290 & 0.300 & 0.209 & 0.201 & 0.089 & 0.354 \\
+    & f1 & \textbf{0.284} & 0.337 & 0.272 & 0.305 & 0.288 & 0.149 & 0.207 & 0.092 & 0.351 \\
+    \midrule
+    % --- 5-shot ---
+    \multirow{3}{*}{5} & precision & 0.346 & 0.452 & 0.377 & \textbf{0.419} & 0.402 & 0.287 & 0.348 & \textbf{0.309} & 0.405 \\
+    & recall & 0.262 & \textbf{0.318} & 0.288 & 0.277 & 0.308 & 0.224 & 0.181 & 0.097 & 0.344 \\
+    & f1 & 0.267 & \textbf{0.342} & 0.286 & 0.289 & 0.309 & 0.175 & 0.184 & 0.084 & 0.341 \\
+    \midrule
+    % --- 10-shot ---
+    \multirow{3}{*}{10} & precision & 0.340 & 0.429 & 0.264 & 0.312 & 0.397 & 0.261 & \textbf{0.379} & 0.123 & 0.381 \\
+    & recall & 0.234 & 0.285 & 0.183 & 0.186 & 0.270 & 0.173 & 0.191 & \textbf{0.122} & 0.338 \\
+    & f1 & 0.250 & 0.301 & 0.189 & 0.191 & 0.282 & 0.156 & 0.205 & \textbf{0.099} & 0.334 \\
+    \bottomrule
+  \end{tabular}%
+  }
+\end{table}

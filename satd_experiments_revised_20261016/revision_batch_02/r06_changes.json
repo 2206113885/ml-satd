@@ -1,0 +1,349 @@
+{
+  "revision": "R06",
+  "scope": "bisection_CoT prompt output contract",
+  "validation": "Static source read, AST parse and diff only. No experiment, model, tokenizer or prompt-builder function was executed.",
+  "changes": [
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "before_sha256": "d219c02bb6401fe3ba1936649a9f19d0f5b24255a9f1ee78515a92c07f1dea20",
+      "after_sha256": "26a8bbaf7587a14e7d44b47d2aeef1a8c0399ef19453ce1fafdacaa58848a00c",
+      "summary": "Separated shared internal reasoning from stage-specific output format. Original output instructions remain solely in phase builders; existing independent explanation builder unchanged.",
+      "locations": [
+        {
+          "name": "REASONING_RULES",
+          "line": 271,
+          "end_line": 289
+        },
+        {
+          "name": "build_yn_prompt",
+          "line": 291,
+          "end_line": 304
+        },
+        {
+          "name": "build_pick_from_candidates_prompt",
+          "line": 306,
+          "end_line": 320
+        },
+        {
+          "name": "build_force_pick_any_prompt",
+          "line": 322,
+          "end_line": 337
+        }
+      ],
+      "ast_parse": "passed",
+      "static_ast_diff": "Only shared prompt assignment and three classification prompt references changed.",
+      "active_PROMPT_TAIL_names": 0,
+      "changed_functions": [
+        "build_yn_prompt",
+        "build_pick_from_candidates_prompt",
+        "build_force_pick_any_prompt"
+      ],
+      "has_independent_reason_stage": false
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "c8aa9ae1d48aa31cf5147ebbea085af3daf6dc392038a0e4928199c009de5f5f",
+      "after_sha256": "19a8cb0fb65d4e67158f3f6b8de19e8b0c5aec239934130ad9f2afa96794165f",
+      "summary": "Separated shared internal reasoning from stage-specific output format. Original output instructions remain solely in phase builders; existing independent explanation builder unchanged.",
+      "locations": [
+        {
+          "name": "REASONING_RULES",
+          "line": 343,
+          "end_line": 361
+        },
+        {
+          "name": "build_yn_prompt",
+          "line": 363,
+          "end_line": 376
+        },
+        {
+          "name": "build_pick_from_candidates_prompt",
+          "line": 378,
+          "end_line": 392
+        },
+        {
+          "name": "build_force_pick_any_prompt",
+          "line": 394,
+          "end_line": 409
+        }
+      ],
+      "ast_parse": "passed",
+      "static_ast_diff": "Only shared prompt assignment and three classification prompt references changed.",
+      "active_PROMPT_TAIL_names": 0,
+      "changed_functions": [
+        "build_yn_prompt",
+        "build_pick_from_candidates_prompt",
+        "build_force_pick_any_prompt"
+      ],
+      "has_independent_reason_stage": false
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "before_sha256": "9d5a7c44678dc1020acc0e86b337dd7aa21828c67702305bb15445c9d5101263",
+      "after_sha256": "f14beda6b2573e4052736cb596760cc95712b546cdc19ea34691be243b946944",
+      "summary": "Separated shared internal reasoning from stage-specific output format. Original output instructions remain solely in phase builders; existing independent explanation builder unchanged.",
+      "locations": [
+        {
+          "name": "REASONING_RULES",
+          "line": 296,
+          "end_line": 314
+        },
+        {
+          "name": "build_yn_prompt",
+          "line": 316,
+          "end_line": 329
+        },
+        {
+          "name": "build_pick_from_candidates_prompt",
+          "line": 331,
+          "end_line": 345
+        },
+        {
+          "name": "build_force_pick_any_prompt",
+          "line": 347,
+          "end_line": 362
+        }
+      ],
+      "ast_parse": "passed",
+      "static_ast_diff": "Only shared prompt assignment and three classification prompt references changed.",
+      "active_PROMPT_TAIL_names": 0,
+      "changed_functions": [
+        "build_yn_prompt",
+        "build_pick_from_candidates_prompt",
+        "build_force_pick_any_prompt"
+      ],
+      "has_independent_reason_stage": false
+    },
+    {
+      "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+      "before_sha256": "ad3c2720bb724a6defb7fd649b0e58b19195c50e8692823e55ed33dd4edd1931",
+      "after_sha256": "730129cb797cf84f55ff06f23d8357e6291ebdc8219b744107ac5a19ac6ba4c3",
+      "summary": "Separated shared internal reasoning from stage-specific output format. Original output instructions remain solely in phase builders; existing independent explanation builder unchanged.",
+      "locations": [
+        {
+          "name": "REASONING_RULES",
+          "line": 228,
+          "end_line": 246
+        },
+        {
+          "name": "build_yn_prompt",
+          "line": 250,
+          "end_line": 262
+        },
+        {
+          "name": "build_choose_prompt",
+          "line": 265,
+          "end_line": 280
+        },
+        {
+          "name": "build_full_prompt",
+          "line": 283,
+          "end_line": 296
+        }
+      ],
+      "ast_parse": "passed",
+      "static_ast_diff": "Only shared prompt assignment and three classification prompt references changed.",
+      "active_PROMPT_TAIL_names": 0,
+      "changed_functions": [
+        "build_yn_prompt",
+        "build_choose_prompt",
+        "build_full_prompt"
+      ],
+      "has_independent_reason_stage": true
+    },
+    {
+      "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+      "before_sha256": "f1bbec723bd95234086cfc155d367a142c8d3f6aabb5f2817beb1d293218dbcb",
+      "after_sha256": "6dbcea147b54b18257947b645489ff81f2c428c8c583217a5fa000a9ec27e4aa",
+      "summary": "Separated shared internal reasoning from stage-specific output format. Original output instructions remain solely in phase builders; existing independent explanation builder unchanged.",
+      "locations": [
+        {
+          "name": "REASONING_RULES",
+          "line": 228,
+          "end_line": 246
+        },
+        {
+          "name": "build_yn_prompt",
+          "line": 250,
+          "end_line": 262
+        },
+        {
+          "name": "build_choose_prompt",
+          "line": 265,
+          "end_line": 280
+        },
+        {
+          "name": "build_full_prompt",
+          "line": 283,
+          "end_line": 296
+        }
+      ],
+      "ast_parse": "passed",
+      "static_ast_diff": "Only shared prompt assignment and three classification prompt references changed.",
+      "active_PROMPT_TAIL_names": 0,
+      "changed_functions": [
+        "build_yn_prompt",
+        "build_choose_prompt",
+        "build_full_prompt"
+      ],
+      "has_independent_reason_stage": true
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "before_sha256": "1a17e68beb24dd83596aaf829bbb591f1cceb27c5c68a55fd21cfff24296eb98",
+      "after_sha256": "19dc03af15a743479d3cb133e857acf5b43cbb1d1f71f646532c0879bbc63e8e",
+      "summary": "Separated shared internal reasoning from stage-specific output format. Original output instructions remain solely in phase builders; existing independent explanation builder unchanged.",
+      "locations": [
+        {
+          "name": "REASONING_RULES",
+          "line": 298,
+          "end_line": 316
+        },
+        {
+          "name": "build_yn_prompt",
+          "line": 318,
+          "end_line": 331
+        },
+        {
+          "name": "build_pick_from_candidates_prompt",
+          "line": 333,
+          "end_line": 347
+        },
+        {
+          "name": "build_force_pick_any_prompt",
+          "line": 349,
+          "end_line": 364
+        }
+      ],
+      "ast_parse": "passed",
+      "static_ast_diff": "Only shared prompt assignment and three classification prompt references changed.",
+      "active_PROMPT_TAIL_names": 0,
+      "changed_functions": [
+        "build_yn_prompt",
+        "build_pick_from_candidates_prompt",
+        "build_force_pick_any_prompt"
+      ],
+      "has_independent_reason_stage": false
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "before_sha256": "85595060fa8c8d6ac6daa43c383117837b8b409d4da89a0768c33c20c77c96d3",
+      "after_sha256": "7013362b049313254931c1d080e650a94429d5eaad9b1122ea7497f5b9d012d9",
+      "summary": "Separated shared internal reasoning from stage-specific output format. Original output instructions remain solely in phase builders; existing independent explanation builder unchanged.",
+      "locations": [
+        {
+          "name": "REASONING_RULES",
+          "line": 345,
+          "end_line": 363
+        },
+        {
+          "name": "build_yn_prompt",
+          "line": 366,
+          "end_line": 379
+        },
+        {
+          "name": "build_pick_from_candidates_prompt",
+          "line": 381,
+          "end_line": 395
+        },
+        {
+          "name": "build_force_pick_any_prompt",
+          "line": 397,
+          "end_line": 412
+        }
+      ],
+      "ast_parse": "passed",
+      "static_ast_diff": "Only shared prompt assignment and three classification prompt references changed.",
+      "active_PROMPT_TAIL_names": 0,
+      "changed_functions": [
+        "build_yn_prompt",
+        "build_pick_from_candidates_prompt",
+        "build_force_pick_any_prompt"
+      ],
+      "has_independent_reason_stage": false
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "before_sha256": "6f3dc64063999f9149bd392ef9bcbf5bc83b41eef0915d7ef7cbe093c889f452",
+      "after_sha256": "715b8b5b39bc28f3c0e192ba546f985c90d14f6441891ee71978d5a497de75fc",
+      "summary": "Separated shared internal reasoning from stage-specific output format. Original output instructions remain solely in phase builders; existing independent explanation builder unchanged.",
+      "locations": [
+        {
+          "name": "REASONING_RULES",
+          "line": 345,
+          "end_line": 363
+        },
+        {
+          "name": "build_yn_prompt",
+          "line": 366,
+          "end_line": 379
+        },
+        {
+          "name": "build_pick_from_candidates_prompt",
+          "line": 381,
+          "end_line": 395
+        },
+        {
+          "name": "build_force_pick_any_prompt",
+          "line": 397,
+          "end_line": 412
+        }
+      ],
+      "ast_parse": "passed",
+      "static_ast_diff": "Only shared prompt assignment and three classification prompt references changed.",
+      "active_PROMPT_TAIL_names": 0,
+      "changed_functions": [
+        "build_yn_prompt",
+        "build_pick_from_candidates_prompt",
+        "build_force_pick_any_prompt"
+      ],
+      "has_independent_reason_stage": false
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "before_sha256": "0108d53f3796a0cc9b1da14b880d0622d0bf4e948bef2fc707ad54189cc1742f",
+      "after_sha256": "3c718a06e6b9326725ed9589b9b6ad11f97182e1c7fe29db73ecb1de4400ed4b",
+      "summary": "Separated shared internal reasoning from stage-specific output format. Original output instructions remain solely in phase builders; existing independent explanation builder unchanged.",
+      "locations": [
+        {
+          "name": "REASONING_RULES",
+          "line": 466,
+          "end_line": 484
+        },
+        {
+          "name": "build_yn_prompt",
+          "line": 485,
+          "end_line": 498
+        },
+        {
+          "name": "build_pick_from_candidates_prompt",
+          "line": 500,
+          "end_line": 514
+        },
+        {
+          "name": "build_force_pick_any_prompt",
+          "line": 516,
+          "end_line": 531
+        }
+      ],
+      "ast_parse": "passed",
+      "static_ast_diff": "Only shared prompt assignment and three classification prompt references changed.",
+      "active_PROMPT_TAIL_names": 0,
+      "changed_functions": [
+        "build_yn_prompt",
+        "build_pick_from_candidates_prompt",
+        "build_force_pick_any_prompt"
+      ],
+      "has_independent_reason_stage": false
+    }
+  ],
+  "preserved": [
+    "Original PROMPT_TAIL assignment and each replaced runtime reference remain commented at their original locations.",
+    "PROMPT_HEAD label definitions, examples and shot counts.",
+    "Original route rules and tie-break rules; MCC route remains unchanged.",
+    "Stage-specific Yes/No and abbreviation output instructions.",
+    "Independent Qwen3 post-hoc REASON prompt builders.",
+    "Parsers, generation configurations and loops."
+  ],
+  "file_count": 9
+}

@@ -1,0 +1,20 @@
+DRAFT WORDING FOR REVIEW — do not claim that unresolved historical configurations have been verified.
+
+Replacement for the blanket temperature statement (main.tex:668):
+Generation settings varied across models and experimental conditions; a common zero temperature was not enforced. The principal Qwen3 non-thinking configurations used temperature 0.7, top-p 0.8, and top-k 20, whereas the thinking configurations used temperature 0.6, top-p 0.95, and top-k 20. CodeLlama used sampling with temperature 0.2 and top-p 0.95. Parameters not explicitly overridden in an inference call were inherited from the loaded checkpoint and inference implementation. Condition-specific overrides and generation limits should be listed separately.
+
+Add an explicit exception, if the historical source confirms the current implementation:
+The Qwen3-14B binary zero-shot implementation explicitly disabled sampling.
+
+Length-control wording (accurate for the current one-stage implementation):
+We capped total generated tokens to limit inference cost. This cap applied jointly to reasoning and final-answer tokens. Where supported, completed thinking blocks were removed during post-processing before extracting the predicted label. This procedure did not implement a separate thinking-token budget followed by a guaranteed final-answer stage.
+
+Comparison wording:
+The thinking and non-thinking conditions used mode-specific decoding configurations and output limits. Their comparison therefore measures the performance of the complete configurations rather than the isolated causal effect of enabling thinking.
+
+Items that must be resolved before final submission:
+1. Recover original effective checkpoint/pipeline configs and library/tokenizer versions; do not substitute today's defaults for historical values.
+2. Verify the GPT-oss rendered Harmony reasoning-effort metadata before retaining the claim that all runs used high effort.
+3. Verify whether the current Gemma2 hierarchical template bypass and CodeLlama duplicate-BOS path were present in the runs used for the paper.
+4. Do not describe the largely '<think>' auxiliary reason fields as usable explanations; they were generated after, and did not change, the selected labels.
+5. Report truncation/completion status only if supported by full saved outputs; processed label-only CSVs cannot establish it.

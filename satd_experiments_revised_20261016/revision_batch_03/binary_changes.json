@@ -1,0 +1,1798 @@
+{
+  "scope": "binary/battle owned files",
+  "changed_count": 33,
+  "changes": [
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "before_sha256": "4d4f1de21360919d56d2c6f9575f03e40a20c6f8b563c8647954ac54407fe822",
+      "after_sha256": "98ac302c57c97ada71a6e67bbe6bd127b551422591ddaf9e1518918f6c2e8be7",
+      "issues": [
+        "R09",
+        "R11",
+        "R17",
+        "R22",
+        "R24",
+        "R27",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 8,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "3ed2b41df4dac14c21e225ebd6416b0c1795001a6a6929c49ab457cb212e76b7",
+      "after_sha256": "b885b7df726653a0d04538c93a25907a738968b26b0747ee77f347d7528d535f",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R27",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 8,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "before_sha256": "718de0e34971038599530787c25069945d78effdf75e4df27811752d76599fad",
+      "after_sha256": "5c8802981ad889580185437c186140f4f1f17fce71f96c543579e59c6dfd2653",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R27",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 8,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+      "before_sha256": "d0834acf1a22f01dfc4e46bc722b5ec457743604007b3752c76cb1e9e1b88dae",
+      "after_sha256": "c235fbaecf7d0b5ce4a8e6405be1c1609e24f91d781eeb9f6aa3cc474ae70006",
+      "issues": [
+        "R11",
+        "R13",
+        "R16",
+        "R21",
+        "R22",
+        "R24",
+        "R27",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 10,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate.",
+        "settings.json output_columns_order is derived from actual prediction columns, including all identity/diagnostic fields."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+      "before_sha256": "4b09447083b17d23007323b3e3c1968f0ad1537983c5eab3ca43ab3331ffca75",
+      "after_sha256": "f05a77a9ea3150974004af9846b0eb7bd97557ca6ea1e9ec2e47fe817039984d",
+      "issues": [
+        "R11",
+        "R13",
+        "R16",
+        "R21",
+        "R22",
+        "R24",
+        "R27",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 10,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate.",
+        "settings.json output_columns_order is derived from actual prediction columns, including all identity/diagnostic fields."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "before_sha256": "2cf310c1ecbd6584b10e6da3701def799e6c3ea0f43dbbc4c91d7a33f0856d15",
+      "after_sha256": "24bc901d5133e6ce96ac00e4a324ad5e4505a4bf612ca7f2d93aeb5532eb7c9f",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R27",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 8,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "before_sha256": "cd7be8b1076c7e9e00fe2833372ac3b4ef3c3c6866773b26596b11978a0607e0",
+      "after_sha256": "c7ea2869442fe60344438b3cebea95510da93aad81554d60427193746914e39d",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R27",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 8,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "before_sha256": "5bdbbc80547657c92290fb752ea4e8edf54749117309db521887fc4e2592283e",
+      "after_sha256": "ef8a106f7a7cf190d5644a154afffc1f44bf3ca990f9d3916810d84951228cb0",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R27",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 8,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "before_sha256": "dd4a15ded07f326b8e4385670835278e820af6aec7e0864d1864c0347262a62a",
+      "after_sha256": "d8df0facb18f1d3e4a7979f976d12911ab8edb00c47e8948e3c98f22656f0c2a",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R23",
+        "R27",
+        "R29",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 8,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate.",
+        "The GPT pipeline generation_config is supplied explicitly as the base before original per-call overrides; audited runtime records model-loaded, pipeline-base and effective configurations separately."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed",
+      "pipeline_generation_config_base": "getattr(pipe, generation_config, pipe.model.generation_config); preserves pipeline task defaults without changing existing call overrides"
+    },
+    {
+      "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "before_sha256": "f9827a1a8dd779d434c666b150ba6383077a391c833ea82e33877b4fe04d4b67",
+      "after_sha256": "01f3bd156234ed7fda7eec6d75dee66da9a73623136f8e3f4a86276922993c11",
+      "issues": [
+        "R09",
+        "R11",
+        "R17",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "3f92d80b534aaefabea1326949c914a3a7bbc4f6371d87d344288acac571c60a",
+      "after_sha256": "04d5ed9d70fc41ded39036efc954e98e4c36e2bd8040c19d960df8bece7832da",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "before_sha256": "31652509bc73050e09759107c8dad77323d19e7de91aea8fd810f513078304ea",
+      "after_sha256": "01b7281550ffc10df91228c33f9aa2ac8d37335a07aef5bb395bde229668c258",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "before_sha256": "78cb59b9a0ac57c4a530666a613b2c49129ed1099347fc6e956ab0f2ee8aeccc",
+      "after_sha256": "74991ac6ff9e2f3595b4491d9dd8e697b54066a8aaf0afdcb2e994e20fe5ff62",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "before_sha256": "35e73f3998e71355d371da46ccdddf16f76c059fc8f0f7bc575185b0dfa9483c",
+      "after_sha256": "84d959307106050c0fbd6496c197b285116792f48d7f4fb6afbf4c65dcff995d",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "before_sha256": "beb7bbc13ef2a34033f26707a94d670a5188087a372c15851e5a43be6d0d6adc",
+      "after_sha256": "539a4b7a298b4bbb0ca515d24b18aca6da3193328d756f0243fb0211fc3fff23",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "before_sha256": "f6ea75f8a644d6032c354ba761072ed3b0d8e435ef2e399d900ea9041995a450",
+      "after_sha256": "6fbf56bb6f113f41fa16e06f4b7949774d32e9a9ec7d8d98bca224e4ab126e8f",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "before_sha256": "4e91e24a257c2216d85227513b39f35df67d73b2c61f0250705908bc41ef161a",
+      "after_sha256": "477729e72dfb06e675297fd57c5dccea1a6b5e1dd88b7fa5f52357018fee6da3",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "before_sha256": "edba506e1d35b2e09c375b38961654c0572ab45c7e81882a3c4cbbf7f76d34d9",
+      "after_sha256": "01c5e8f94d07f56e704c79860f6e0d0a7acd7a8f277871425e14c206f149ef4b",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R23",
+        "R29",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate.",
+        "The GPT pipeline generation_config is supplied explicitly as the base before original per-call overrides; audited runtime records model-loaded, pipeline-base and effective configurations separately."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed",
+      "pipeline_generation_config_base": "getattr(pipe, generation_config, pipe.model.generation_config); preserves pipeline task defaults without changing existing call overrides"
+    },
+    {
+      "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "before_sha256": "d1337f6ce0b2823de8c17293b517b8dc8bca51a9e5cd8104f3791b77821a32d5",
+      "after_sha256": "bb4033be29aca04455fd1a6bdf88ac9912a9a2040ad27913c480abc6f0df98f8",
+      "issues": [
+        "R09",
+        "R11",
+        "R17",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "before_sha256": "029fbf39881645327e857f547beefa36dd94ea54958c773f9d4a815117d0fee1",
+      "after_sha256": "b7038f832feaf533734f6920161586229a3a3a0a1594e76666cfe85971bca754",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "before_sha256": "af6eb94a41cfab9ef2242be4d634b5ab663181b18aa45fb3a08480856b7f5271",
+      "after_sha256": "b72f5f245db0eb9127e535d2ce356fdfa1b5b41460287a23d95bc868fc1845d7",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "before_sha256": "b39172dba2813b9921d514b6b0423e837497b7ed44d2303e0faf4e3b0326aedf",
+      "after_sha256": "1dd30256d28027acb3d6cfaa37b2ab6b51ae401f009d2a5e658618cebc2b180f",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33",
+        "R34"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "before_sha256": "371327db4868bbdcdd51e8b529348c324d41a2e330b8ad8074196cdc9d357cff",
+      "after_sha256": "cc82a2bc48c592e3c50b5db30a14da03444fdf4a5e932344a8e78052b60fed41",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/bin_new_test.py",
+      "before_sha256": "f98b065ddaa7ccae844ea544ee3de87243544353b6b742e0e503bbade1e5a193",
+      "after_sha256": "9ce8f8690d7cacc70e50805707b70b54d2dadf5ef0fb0674c56798aaf9a9e205",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "before_sha256": "91599934576b541c7b69843ba2686ce81a68b534e4c570ba3a7134674d032442",
+      "after_sha256": "5f73c6cb07083018b8284b199d68c5a305720254a46ed1ea8fd133e280ae4296",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "before_sha256": "4c5d6e08ecfcfde4a3c1767934ac3dae2ad34b891eb45d343ffc9876944c56f4",
+      "after_sha256": "2a8915ca29234b3b4f8ca3e946551d942bc8d9e1e7c098d273562e3aaf889a60",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "before_sha256": "9c31964f6dc55fb5ec053eeef4ce0fea62253e4fda0bc1e18815525fee417bdb",
+      "after_sha256": "2e4a30af490aa962f57453bc819b7d724cd7ff51e6d4bab50e1d718cd2311dfa",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "before_sha256": "1730929139474e35d7a9b63975caaf832359854a0e3955f4cc36f2dac64a3820",
+      "after_sha256": "35a0efeb6f9eff6eedbbf74b5972aafee1a9fd42f327ac9a9fe618a6b8957e39",
+      "issues": [
+        "R09",
+        "R11",
+        "R22",
+        "R23",
+        "R29",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate.",
+        "The GPT pipeline generation_config is supplied explicitly as the base before original per-call overrides; audited runtime records model-loaded, pipeline-base and effective configurations separately."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed",
+      "pipeline_generation_config_base": "getattr(pipe, generation_config, pipe.model.generation_config); preserves pipeline task defaults without changing existing call overrides"
+    },
+    {
+      "file": "test1.py",
+      "before_sha256": "c7eba3f7e33e8aa1c6c97d3f8f9d2e350b2dacb728ccccf912da3ab7498193ff",
+      "after_sha256": "1fed0476f8139370cf3c7663f83d1fac2e0d8f14a5e52f6736f23c7f6cee6bae",
+      "issues": [
+        "R11",
+        "R13",
+        "R16",
+        "R21",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 9,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate.",
+        "settings.json output_columns_order is derived from actual prediction columns, including all identity/diagnostic fields."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed",
+      "scope_status": "scope_excluded_by_user",
+      "nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false,
+      "rerun_basis_note": "NOT rerun basis: user confirms this is a temporary debugging file and did not participate in the paper.",
+      "scope_exclusion_source": "Explicit user clarification after the screenshot of eight nonpaper files.",
+      "further_changes_authorized_in_current_scope": false,
+      "existing_code_modifications_retained": true,
+      "scope_excluded_by_user": true
+    },
+    {
+      "file": "test3.py",
+      "before_sha256": "bc2593d43290e45e13e841db57e3869dfd01bed9d0cb3a59d4f659225db86822",
+      "after_sha256": "9ab5e3dcf80d553e72928dbaa283e3b17fe6b3e2f5f8d846e8b66c9d427ecb93",
+      "issues": [
+        "R11",
+        "R13",
+        "R16",
+        "R21",
+        "R22",
+        "R24",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 9,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Original replaced blocks retained in-place as per-line comments.",
+        "Complete generation raw/observed stops are new-run audit only; historical omitted raw and stopping evidence cannot be reconstructed.",
+        "Validated final answer_text is parsed with native_thinking=False; model-native completeness is enforced upstream by audited_generate.",
+        "settings.json output_columns_order is derived from actual prediction columns, including all identity/diagnostic fields."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed",
+      "scope_status": "scope_excluded_by_user",
+      "nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false,
+      "rerun_basis_note": "NOT rerun basis: user confirms this is a temporary debugging file and did not participate in the paper.",
+      "scope_exclusion_source": "Explicit user clarification after the screenshot of eight nonpaper files.",
+      "further_changes_authorized_in_current_scope": false,
+      "existing_code_modifications_retained": true,
+      "scope_excluded_by_user": true
+    },
+    {
+      "file": "bisection_zero_shot/bin_test.py",
+      "before_sha256": "7650fb29cd6d6ce4fca25e9647eb07aa97c6486de88ad67d1bf7750f57711590",
+      "after_sha256": "a6e5b69a26510f5ce10a1f669ba6054e5f2342494fedb5b512f6449f8cd142b3",
+      "issues": [
+        "R11",
+        "R18",
+        "R22",
+        "R24",
+        "R31"
+      ],
+      "replaced_blocks": 8,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Legacy label-plus-reason output remains a separate protocol; exact multiword labels are validated before policy fallback.",
+        "Unresolved votes and no-positive votes now use one full-label arbitration, with Data Conf only on final failure.",
+        "Full names replace erroneous definition-as-name mapping; original gold remains recorded."
+      ],
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed"
+    },
+    {
+      "file": "battle/test.py",
+      "before_sha256": "138ddec47d27cbf136371a313a942967ada729a3eaf94f44b0aad3bac178204f",
+      "after_sha256": "61a2e6103513be883f493ab055b16abb736252d9983819d44c18bdd425629e2f",
+      "issues": [
+        "R15",
+        "R22",
+        "R23",
+        "R29",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 7,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Prediction joins use source_row with Dataset ID validation; legacy inputs require complete verified row/comment/gold alignment.",
+        "Explicit effort follows active low declaration in battle/test.py; otherwise official medium default.",
+        "Invalid two-candidate arbitration now records failure and uses final Data Conf policy instead of silently selecting the first model.",
+        "Stored raw_output is model raw only; agree/missing-side deterministic decisions have an empty model raw plus explicit metadata.",
+        "Missing-side inputs are snapshotted before placeholders; two missing sides in deterministic test.py selection are explicitly failed before Data Conf fallback.",
+        "The GPT pipeline generation_config is supplied explicitly as the base before original per-call overrides; audited runtime records model-loaded, pipeline-base and effective configurations separately."
+      ],
+      "static_followup": "Defined generation adapter, no duplicate active return, separate input-side failure state.",
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed",
+      "pipeline_generation_config_base": "getattr(pipe, generation_config, pipe.model.generation_config); preserves pipeline task defaults without changing existing call overrides",
+      "scope_excluded_by_user": true,
+      "nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "battle/gpt_battle.py",
+      "before_sha256": "4fe931df45d7bb451a54f8669fe1a68a4697ee74f8d1032b88aafb2090f82164",
+      "after_sha256": "723bfdf452e35dddaf61e87d215b172ae60229cb2510bba505352ac779588410",
+      "issues": [
+        "R15",
+        "R22",
+        "R23",
+        "R29",
+        "R31",
+        "R33"
+      ],
+      "replaced_blocks": 8,
+      "static_ast_parse": "passed",
+      "experiments_or_tests_executed": false,
+      "notes": [
+        "Prediction joins use source_row with Dataset ID validation; legacy inputs require complete verified row/comment/gold alignment.",
+        "Explicit effort follows active low declaration in battle/test.py; otherwise official medium default.",
+        "Invalid two-candidate arbitration now records failure and uses final Data Conf policy instead of silently selecting the first model.",
+        "Stored raw_output is model raw only; agree/missing-side deterministic decisions have an empty model raw plus explicit metadata.",
+        "Missing-side inputs are snapshotted before placeholders; two missing sides in deterministic test.py selection are explicitly failed before Data Conf fallback.",
+        "The GPT pipeline generation_config is supplied explicitly as the base before original per-call overrides; audited runtime records model-loaded, pipeline-base and effective configurations separately."
+      ],
+      "static_followup": "Defined generation adapter, no duplicate active return, separate input-side failure state.",
+      "shared_protocol_improvements": [
+        "Strict complete-answer label parsing with canonical full-name/abbreviation compatibility.",
+        "Per-sample row identity and complete per-call raw/configuration/stopping evidence.",
+        "Pre-policy parse status and separate final Data Conf substitution.",
+        "Unique run directory; original result files are not overwritten."
+      ],
+      "runtime_api_static_check": "passed",
+      "pipeline_generation_config_base": "getattr(pipe, generation_config, pipe.model.generation_config); preserves pipeline task defaults without changing existing call overrides",
+      "scope_excluded_by_user": true,
+      "nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    }
+  ],
+  "status": "final stable after explicit user nonpaper scope correction",
+  "static_only": true,
+  "original_satd_data_written": false,
+  "historical_limitations": [
+    "Missing historical per-label raw, stopping evidence, seeds, checkpoint revisions and environment snapshots cannot be reconstructed by these code changes.",
+    "Existing fallback-policy results remain unchanged on disk; stricter parsing, deterministic seeds and R34 sampling define new-run protocols.",
+    "Legacy arbitration inputs without IDs are only usable after strict current-source positional verification."
+  ],
+  "issue_coverage": [
+    {
+      "issue_id": "R09",
+      "title": "Binary内部已回退，外部unk_cnt漏记真实解析失败",
+      "files": [
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Existing result files were not modified. Missing historical evidence is not reconstructed.",
+      "scope_excluded_by_user": [],
+      "remaining_review_scope_files": [
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": []
+    },
+    {
+      "issue_id": "R11",
+      "title": "binary阶段完整原始输出被舍弃",
+      "files": [
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/bin_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "test1.py",
+        "test3.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Fixes apply to future generation through audited_generate. Historical unrecorded raw text, finish causes or native effort cannot be fabricated from existing tables.",
+      "scope_excluded_by_user": [
+        "test1.py",
+        "test3.py"
+      ],
+      "remaining_review_scope_files": [
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/bin_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "test1.py",
+        "test3.py"
+      ]
+    },
+    {
+      "issue_id": "R13",
+      "title": "未闭合thinking没有统一无效状态",
+      "files": [
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "test1.py",
+        "test3.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Fixes apply to future generation through audited_generate. Historical unrecorded raw text, finish causes or native effort cannot be fabricated from existing tables.",
+      "scope_excluded_by_user": [
+        "test1.py",
+        "test3.py"
+      ],
+      "remaining_review_scope_files": [
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "test1.py",
+        "test3.py"
+      ]
+    },
+    {
+      "issue_id": "R15",
+      "title": "仲裁预测以comment作唯一键，重复注释会静默覆盖",
+      "files": [
+        "battle/gpt_battle.py",
+        "battle/test.py"
+      ],
+      "status": "excluded_by_direct_user_clarification",
+      "history_limit": "Legacy files lacking IDs require complete verified positional alignment with the current source. That check establishes a current mapping, not historical source-code/configuration provenance.",
+      "scope_excluded_by_user": [],
+      "remaining_review_scope_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py"
+      ],
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "issue_id": "R16",
+      "title": "多词缩写的兼容性归一化分支不一致",
+      "files": [
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "test1.py",
+        "test3.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Existing result files were not modified. Missing historical evidence is not reconstructed.",
+      "scope_excluded_by_user": [
+        "test1.py",
+        "test3.py"
+      ],
+      "remaining_review_scope_files": [
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "test1.py",
+        "test3.py"
+      ]
+    },
+    {
+      "issue_id": "R17",
+      "title": "CodeLlama模板后默认分词产生重复BOS",
+      "files": [
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Existing result files were not modified. Missing historical evidence is not reconstructed.",
+      "scope_excluded_by_user": [],
+      "remaining_review_scope_files": [
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": []
+    },
+    {
+      "issue_id": "R18",
+      "title": "旧binary explain丢失多词缩写",
+      "files": [
+        "bisection_zero_shot/bin_test.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Existing result files were not modified. Missing historical evidence is not reconstructed.",
+      "scope_excluded_by_user": [],
+      "remaining_review_scope_files": [
+        "bisection_zero_shot/bin_test.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": []
+    },
+    {
+      "issue_id": "R21",
+      "title": "Qwen binary事后解释大量只保存了<think>",
+      "files": [
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "test1.py",
+        "test3.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Fixes apply to future generation through audited_generate. Historical unrecorded raw text, finish causes or native effort cannot be fabricated from existing tables.",
+      "scope_excluded_by_user": [
+        "test1.py",
+        "test3.py"
+      ],
+      "remaining_review_scope_files": [
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "test1.py",
+        "test3.py"
+      ]
+    },
+    {
+      "issue_id": "R22",
+      "title": "预测记录未保存Dataset ID，难以可靠连接及审计",
+      "files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/bin_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "test1.py",
+        "test3.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Existing result files were not modified. Missing historical evidence is not reconstructed.",
+      "scope_excluded_by_user": [
+        "test1.py",
+        "test3.py"
+      ],
+      "remaining_review_scope_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/bin_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "test1.py",
+        "test3.py"
+      ]
+    },
+    {
+      "issue_id": "R23",
+      "title": "依赖未固定的pipeline内容/assistantfinal字符串约定",
+      "files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Fixes apply to future generation through audited_generate. Historical unrecorded raw text, finish causes or native effort cannot be fabricated from existing tables.",
+      "scope_excluded_by_user": [],
+      "remaining_review_scope_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py"
+      ]
+    },
+    {
+      "issue_id": "R24",
+      "title": "输入截断没有记录目标/示例保留情况",
+      "files": [
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/bin_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "test1.py",
+        "test3.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Fixes apply to future generation through audited_generate. Historical unrecorded raw text, finish causes or native effort cannot be fabricated from existing tables.",
+      "scope_excluded_by_user": [
+        "test1.py",
+        "test3.py"
+      ],
+      "remaining_review_scope_files": [
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/bin_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "test1.py",
+        "test3.py"
+      ]
+    },
+    {
+      "issue_id": "R27",
+      "title": "手写CoT路由遗漏MCC分支",
+      "files": [
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Existing result files were not modified. Missing historical evidence is not reconstructed.",
+      "scope_excluded_by_user": [],
+      "remaining_review_scope_files": [
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": []
+    },
+    {
+      "issue_id": "R29",
+      "title": "GPT-oss原生reasoning effort没有可核实的显式控制",
+      "files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+      ],
+      "status": "new_code_fixed",
+      "history_limit": "Fixes apply to future generation through audited_generate. Historical unrecorded raw text, finish causes or native effort cannot be fabricated from existing tables.",
+      "scope_excluded_by_user": [],
+      "remaining_review_scope_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py"
+      ]
+    },
+    {
+      "issue_id": "R31",
+      "title": "缺少样本级种子、完整有效配置及版本快照",
+      "files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/bin_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "test1.py",
+        "test3.py"
+      ],
+      "status": "new_runs_instrumented_history_unrecoverable",
+      "history_limit": "Effective configuration, seeds, input/template hashes and observed generation states are recorded for future runs; historical omitted seeds/configurations/revisions are not recoverable.",
+      "scope_excluded_by_user": [
+        "test1.py",
+        "test3.py"
+      ],
+      "remaining_review_scope_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/bin_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "test1.py",
+        "test3.py"
+      ]
+    },
+    {
+      "issue_id": "R33",
+      "title": "解析失败/仲裁失败被回填为正常类别",
+      "files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+        "test1.py",
+        "test3.py"
+      ],
+      "status": "policy_retained_with_explicit_diagnostics_and_additional_metrics",
+      "history_limit": "Data Conf remains the final policy fallback; raw_pred/parse_ok/fallback_used expose it and failure-as-error metrics supplement the original policy metrics.",
+      "scope_excluded_by_user": [
+        "test1.py",
+        "test3.py"
+      ],
+      "remaining_review_scope_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_CoT/Qwen3-14B_few_shot.py",
+        "bisection_CoT/Qwen3-8B_few_shot.py",
+        "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "bisection_CoT/gemma-2-9b_few_shot.py",
+        "bisection_CoT/gemma-3-12b_few_shot.py",
+        "bisection_CoT/gpt-oss-20b_few_shot.py",
+        "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "bisection_few_shot/gpt-oss-20b_few_shot.py",
+        "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "bisection_zero_shot/bin_new_test.py",
+        "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "bisection_zero_shot/gpt-oss-20b_zero_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": [
+        "battle/gpt_battle.py",
+        "battle/test.py",
+        "test1.py",
+        "test3.py"
+      ]
+    },
+    {
+      "issue_id": "R34",
+      "title": "Qwen14B binary零样本显式greedy不同于相邻条件",
+      "files": [
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py"
+      ],
+      "status": "new_protocol_changed_explicitly",
+      "history_limit": "Only the future Qwen3-14B nonthinking binary zero-shot path is changed from greedy to do_sample=True, temperature=.7, top_p=.8, top_k=20, as explicitly authorized. Historical results stay unchanged.",
+      "scope_excluded_by_user": [],
+      "remaining_review_scope_files": [
+        "bisection_zero_shot/Qwen3-14B_zero_shot.py"
+      ],
+      "paper_mapping_policy": "This is technical code coverage only. A verified active manuscript table/run mapping is required before treating any remaining auxiliary script as paper-risk or rerun evidence.",
+      "user_excluded_nonpaper_files": []
+    }
+  ],
+  "helper_contract": "revision_runtime.py API provided by root; wrappers parse only validated answer_text with native_thinking=False while full raw_text remains in RunAudit events.",
+  "validation_restriction": "Only AST, source diff and hash checks. No experimental module, model, tokenizer, experiment function or function test has been executed.",
+  "final_static_validation": {
+    "files_ast_parse": 33,
+    "current_hashes_match_manifest": 33,
+    "before_hashes_match_batch03_backup": 33,
+    "identity_failure_and_raw_columns_verified": 33,
+    "new_audited_generation_adapters": 33,
+    "direct_model_or_pipeline_inference_calls_remaining": 0,
+    "generation_override_comparisons": 30,
+    "generation_override_changes_except_authorized_R34": 0,
+    "native_qwen_nonthinking_reason_calls": 4,
+    "active_MCC_routing_added": 9,
+    "changed_original_function_lines_preserved": "passed",
+    "experimental_modules_models_tokenizers_functions_or_tests_executed": false
+  },
+  "pipeline_base_config_followup": {
+    "files": [
+      "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "battle/test.py",
+      "battle/gpt_battle.py"
+    ],
+    "count": 5,
+    "generation_call_overrides_unchanged": true,
+    "base_config": "pipeline generation_config, falling back to model generation_config only if absent",
+    "static_ast_parse": "passed",
+    "functions_models_or_tests_executed": false
+  },
+  "scope_correction_by_user": {
+    "excluded_files": [
+      "battle/gpt_battle.py",
+      "battle/test.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "classification": "temporary debugging files; nonpaper",
+    "paper_risk_basis": false,
+    "rerun_basis": "NOT rerun basis",
+    "existing_code_modifications": "retained without further expansion",
+    "historical_changed_file_count": 33,
+    "remaining_review_scope_count": 29,
+    "remaining_scope_note": "29 remaining review entries are not 29 verified paper experiments; actual manuscript/run evidence remains required.",
+    "excluded_directories": [
+      "battle"
+    ]
+  },
+  "root_output_path_finish_up": {
+    "anchored_to_revised_source_directory": true,
+    "new_output_root": "revised_outputs",
+    "excludes_user_temporary_files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py",
+      "data_process.py",
+      "download_model.py",
+      "original_COT.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "execution": "static only"
+  },
+  "latest_user_directory_clarification": {
+    "source": "Direct user clarification with screenshots, 2026-10-16",
+    "excluded_directories": [
+      "basic_zero_shot_CoT_output_reason",
+      "battle"
+    ],
+    "directory_scope": "Entire directories including scripts, result runs, and all nested files",
+    "previously_excluded_temporary_files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py",
+      "data_process.py",
+      "download_model.py",
+      "original_COT.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "newly_excluded_existing_python_files": [
+      "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+      "battle/gpt_battle.py",
+      "battle/test.py"
+    ],
+    "paper_risk_basis": false,
+    "rerun_basis": false,
+    "source_action": "Metadata only. Existing code edits retained; no source expansion or data edits.",
+    "attribution_rule": "Human clarification overrides heuristic paper-source matching."
+  }
+}

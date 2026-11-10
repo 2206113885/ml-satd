@@ -1,0 +1,2064 @@
+﻿review_id,comment,code_context,assigned_labels,evidence_sufficient,cited_evidence,confidence_1_to_5,annotator_id,notes
+95c992ff494e,TODO Figure out how to distinguish oxidation states,"        comp_style = ""{ele}_{stoic}_{charge}{sign}""
+        return self._format_style(comp_style, delim="""")
+
+    def as_poscar(self):
+        """"""Represent the structure as a POSCAR file compatible with VASP5.""""""
+        poscar = self._format_style(""{ele}{charge}{sign}"") + ""\n""
+        poscar += ""1.0\n""  # TODO Use actual lattice parameter
+        poscar += ""\n"".join("" "".join(vec) for vec in self.struct.lattice) + ""\n""
+        poscar += self._format_style(""{stoic}"") + ""\n""
+        poscar += ""Coordinates\n""
+        # TODO Figure out how to distinguish oxidation states
+        return poscar
+
+
+def cubic_perovskite(species, cell_par=[6, 6, 6, 90, 90, 90], repetitions=[1, 1, 1]):
+    """"""
+    Build a perovskite cell using the crystal function in ASE.
+
+    Args:
+        species (str): Element symbols
+        cell_par (list): Six floats/ints specifying 3 unit cell lengths and 3 unit cell angles.",,,,,,
+ed8bd16282e1,TODO: add inheritance from Graph once implemented,"        The array representing the points.
+    trilist : ``(M, 3)`` `ndarray` or `None`, optional
+        The triangle list. If `None`, a Delaunay triangulation of
+        the points will be used instead.
+    copy: `bool`, optional
+        If ``False``, the points will not be copied on assignment.
+        Any trilist will also not be copied.
+        In general this should only be used if you know what you are doing.
+    """"""
+    def __init__(self, points, trilist=None, copy=True):
+        # TODO: add inheritance from Graph once implemented
+        super(TriMesh, self).__init__(points, copy=copy)
+        if trilist is None:
+            global Delaunay
+            if Delaunay is None:
+                from scipy.spatial import Delaunay  # expensive
+            trilist = Delaunay(points).simplices
+        if not copy:
+            if not trilist.flags.c_contiguous:
+                warn('The copy flag was NOT honoured. A copy HAS been made. '
+                     'Please ensure the data you pass is C-contiguous.')",,,,,,
+7467877c90c3,TODO make paf_scored not part of self?,"        LOG.debug('initial annotations = %d', len(initial_annotations))
+
+        if self.debug_visualizer:
+            for stride, pif_i in zip(self.field_config.cif_strides, self.field_config.cif_indices):
+                self.debug_visualizer.pif_raw(fields[pif_i], stride)
+            for stride, paf_i in zip(self.field_config.caf_strides, self.field_config.caf_indices):
+                self.debug_visualizer.paf_raw(fields[paf_i], stride)
+
+        pifhr = PifHr(self.field_config).fill(fields)
+        seeds = PifSeeds(pifhr.accumulated, self.field_config).fill(fields)
+        # TODO make paf_scored not part of self?
+        self.paf_scored = PafScored(pifhr.accumulated, self.field_config, self.skeleton).fill(fields)
+        # pif init
+        if self.debug_visualizer:
+            self.debug_visualizer.pifhr(pifhr.accumulated)
+
+        occupied = Occupancy(pifhr.accumulated.shape, 2, min_scale=4)
+        annotations = []
+
+        def mark_occupied(ann):
+            for joint_i, xyv in enumerate(ann.data):",,,,,,
+f33fdae88efe,TODO: reward computation,"
+        # Generate the current camera image
+        obs = self.render_obs()
+
+        # If the maximum time step count is reached
+        if self.step_count >= self.max_episode_steps:
+            done = True
+            reward = 0
+            return obs, reward, done, {}
+
+        # TODO: reward computation
+        reward = 0
+        done = False
+
+        return obs, reward, done, {}
+
+    def _render_static():
+        """"""
+        Render the static elements of the scene into a display list.
+        Called once at the beginning of each episode.
+        """"""",,,,,,
+b4a3d2eaac97,TODO: dataframe pass needed?,"    def define_pipelines(self, pm):
+        name = 'hpat_seq'
+        pm.create_pipeline(name)
+        self.add_preprocessing_stage(pm)
+        self.add_with_handling_stage(pm)
+        self.add_pre_typing_stage(pm)
+        pm.add_stage(self.stage_inline_pass, ""inline funcs"")
+        pm.add_stage(self.stage_df_pass, ""convert DataFrames"")
+        pm.add_stage(self.stage_repeat_inline_closure, ""repeat inline closure"")
+        self.add_typing_stage(pm)
+        # TODO: dataframe pass needed?
+        pm.add_stage(self.stage_dataframe_pass, ""typed dataframe pass"")
+        pm.add_stage(self.stage_df_typed_pass, ""typed hiframes pass"")
+        pm.add_stage(self.stage_pre_parfor_pass, ""Preprocessing for parfors"")
+        if not self.flags.no_rewrites:
+            pm.add_stage(self.stage_nopython_rewrites, ""nopython rewrites"")
+        if self.flags.auto_parallel.enabled:
+            pm.add_stage(self.stage_parfor_pass, ""convert to parfors"")
+        # pm.add_stage(self.stage_distributed_pass, ""convert to distributed"")
+        pm.add_stage(self.stage_lower_parfor_seq, ""parfor seq lower"")
+        pm.add_stage(self.stage_ir_legalization,",,,,,,
+8eaaf6b2d366,"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.","            json.dump(method_level_results, f)
+
+
+def main():
+    description = ""Classify a commit""
+    parser = argparse.ArgumentParser(description=description)
+
+    parser.add_argument(""model"", help=""Which model to use for evaluation"")
+    parser.add_argument(""cache_root"", help=""Cache for repository clones."")
+    parser.add_argument(""diff_id"", help=""diff ID to analyze."", type=int)
+    # TODO: The """" choice can be removed when all users have been updated to pass a correct phabricator_deployment.
+    parser.add_argument(
+        ""phabricator_deployment"",
+        help=""Which Phabricator deployment to hit."",
+        type=str,
+        choices=["""", PHAB_PROD, PHAB_DEV],
+    )
+    parser.add_argument(
+        ""--git_repo_dir"", help=""Path where the git repository will be cloned.""
+    )
+    parser.add_argument(",,,,,,
+95ec3a9923c8,TODO Send the context back into some list maintained by,"                    )
+                )
+        else:
+            # For inputs sets that are of type BaseInputSetContext or list
+            for input_set in input_sets:
+                ctxs.append(
+                    await self.seed_inputs(ctx=ctx, input_set=input_set)
+                )
+        # TODO Add check that ctx returned is the ctx corresponding to uadd.
+        # We'll have to make uadd return the ctx so we can compare.
+        # TODO Send the context back into some list maintained by
+        # run_operations so that if there is another run_dataflow method
+        # running on the same orchestrator context it will get the context
+        # it's waiting for and return
+        # BEGIN old run_operations
+        # Set of tasks we are waiting on
+        # TODO Make some way to cap the number of context's who have operations
+        # executing. Or maybe just the number of operations. Or both.
+        tasks = set()
+        # Create tasks to wait on the results of each of the contexts submitted
+        for ctx in ctxs:",,,,,,
+c0df557ce26d,TODO: extract an eval func more robustly,"    preparfor_pass.run()
+    df_t_pass = hpat.hiframes_typed.HiFramesTyped(f_ir, typingctx, typemap, calltypes)
+    df_t_pass.run()
+    numba.rewrites.rewrite_registry.apply('after-inference', pm, f_ir)
+    parfor_pass = numba.parfor.ParforPass(f_ir, typemap,
+    calltypes, return_type, typingctx,
+    options, flags)
+    parfor_pass.run()
+    remove_dels(f_ir.blocks)
+    # make sure eval nodes are after the parfor for easier extraction
+    # TODO: extract an eval func more robustly
+    numba.parfor.maximize_fusion(f_ir, f_ir.blocks, False)
+    return f_ir, pm
+
+def get_agg_func_struct(agg_func, in_col_typ, typingctx, targetctx):
+    """"""find initialization, update, combine and final evaluation code of the
+    aggregation function. Currently assuming that the function is single block
+    and has one parfor.
+    """"""
+    f_ir, pm = compile_to_optimized_ir(
+        agg_func, tuple([in_col_typ]), typingctx)",,,,,,
+eb3b2a29bc30,TODO write a warning,"            most_corr_feats.append(featurizer.transform(geoms)[:, most_corr_idxs[-1]])
+
+        if _is_string(feat_name):
+            most_corr_labels.append('$\mathregular{%s_{%u}}$'%(feat_name, most_corr_idxs[-1]))
+        elif feat_name is None and avail_FT:
+            most_corr_labels.append([featurizer.describe()[jj] for jj in most_corr_idxs[-1]])
+
+        if avail_FT:
+            if len(featurizer.active_features) > 1:
+                pass
+                # TODO write a warning
+            else:
+                ifeat = featurizer.active_features[0]
+                most_corr_atom_idxs.append(atom_idxs_from_feature(ifeat)[most_corr_idxs[-1]])
+
+    for ii, iproj in enumerate(proj_names):
+        info.append({""lines"":[], ""name"":iproj})
+        for jj, jidx in enumerate(most_corr_idxs[ii]):
+            if avail_FT:
+                istr = 'Corr[%s|feat] = %2.1f for %-30s (feat nr. %u, atom idxs %s' % \
+                       (iproj, most_corr_vals[ii][jj], most_corr_labels[ii][jj], jidx, most_corr_atom_idxs[ii][jj])",,,,,,
+9f2fcbff91af,TODO validate and normalize to \/path\/to\/variable,"class _Path:
+
+    def __init__(self, path):
+        """"""
+        path: str
+        """"""
+        super().__init__()
+        # TODO validate and normalize to /path/to/variable
+        self._value = path
+
+    def __add__(self, other):
+        """"""
+        other: string or _Path
+        """"""
+        if isinstance(other, str):
+            return self + _Path(other)
+        elif isinstance(other, _Path):
+            return _Path(self._value + other._value)",,,,,,
+5bd2f09e3a9e,XXX: How to catch dependence cycles correctly?,"def sortvarnames(vars):
+    indep = []
+    dep = []
+    for v in list(vars.keys()):
+        if 'depend' in vars[v] and vars[v]['depend']:
+            dep.append(v)
+        else:
+            indep.append(v)
+    n = len(dep)
+    i = 0
+    while dep:  # XXX: How to catch dependence cycles correctly?
+        v = dep[0]
+        fl = 0
+        for w in dep[1:]:
+            if w in vars[v]['depend']:
+                fl = 1
+                break
+        if fl:
+            dep = dep[1:] + [v]
+            i = i + 1
+            if i > n:",,,,,,
+40db193b29ef,TODO: replace with unbatch or readout,"    def forward(self, mol_graph):
+        n_samples = mol_graph.batch_size
+
+        mol_line_graph = mol_graph.line_graph(backtracking=False, shared=True)
+
+        n_nodes = mol_graph.number_of_nodes()
+        n_edges = mol_graph.number_of_edges()
+
+        mol_graph = self.run(mol_graph, mol_line_graph)
+
+        # TODO: replace with unbatch or readout
+        g_repr = mean_nodes(mol_graph, 'h')
+
+        self.n_samples_total += n_samples
+        self.n_nodes_total += n_nodes
+        self.n_edges_total += n_edges
+        self.n_passes += 1
+
+        return g_repr
+
+    def run(self, mol_graph, mol_line_graph):",,,,,,
+5b249099cb10,TODO check for each tentacle specified if update is available (with requirements),"                            except Exception:
+                                self.logger.error(""Installation failed for module '{0}'"".format(component))
+                    if not found:
+                        self.logger.error(""Cannot find installation for module '{0}'"".format(component))
+
+    def update_parser(self, commands, command_all=False):
+        if command_all:
+            # TODO check for each tentacle installed if update is available (with requirements)
+            pass
+        else:
+            # TODO check for each tentacle specified if update is available (with requirements)
+            pass
+
+    def uninstall_parser(self, commands, command_all=False):
+        if command_all:
+            self._try_action_on_package(TentacleManagerActions.UNINSTALL, self.default_package,
+                                        EVALUATOR_DEFAULT_FOLDER)
+            for package in self.advanced_package_list:
+                self._try_action_on_package(TentacleManagerActions.UNINSTALL, package, EVALUATOR_ADVANCED_FOLDER)
+        else:
+            for component in commands:",,,,,,
+f9c244399489,XXX gs = fig.add_gridspec(15; 1),"        """"""Create channel selection dialog window.""""""
+        from matplotlib.colors import to_rgb
+        from matplotlib.widgets import RadioButtons
+        from matplotlib.gridspec import GridSpec
+        # make figure
+        fig = self._new_child_figure(figsize=(3, 7),
+                                     FigureClass=MNESelectionFigure,
+                                     fig_name='fig_selection',
+                                     window_title='Channel selection')
+        # XXX when matplotlib 3.3 is min version, replace this with
+        # XXX gs = fig.add_gridspec(15, 1)
+        gs = GridSpec(nrows=15, ncols=1)
+        # add sensor plot at top
+        fig.mne.sensor_ax = fig.add_subplot(gs[:5])
+        plot_sensors(self.mne.info, kind='select', ch_type='all', title='',
+                     axes=fig.mne.sensor_ax, ch_groups=self.mne.group_by,
+                     show=False)
+        # style the sensors so the selection is easier to distinguish
+        fig.lasso.linewidth_selected = 2
+        self._update_highlighted_sensors()
+        # add radio button axes",,,,,,
+33a20bef2df9,XXX: one could be smarter here,"Trying to generate a random sparse matrix such as the product of dimensions is
+greater than %d - this is not supported on this machine
+""""""
+        raise ValueError(msg % np.iinfo(tp).max)
+
+    # Number of non zero values
+    k = long(density * m * n)
+
+    # Generate a few more values than k so that we can get unique values
+    # afterwards.
+    # XXX: one could be smarter here
+    mlow = 5
+    fac = 1.02
+    gk = min(k + mlow, fac * k)
+
+    def _gen_unique_rand(_gk):
+        id = np.random.rand(_gk)
+        return np.unique(np.floor(id * mn))[:k]
+
+    id = _gen_unique_rand(gk)
+    while id.size < k:",,,,,,
+e2addae1d68f,FIXME: Allow some diff; e.g. on repr style text in text\/plain,"    # Get the simple and cheap stuff out of the way
+    if x is None and y is None:
+        return True
+    if x is None or y is None:
+        return False
+
+    # This only checks that the same mime types are present
+    if set(x.keys()) != set(y.keys()):
+        return False
+
+    # FIXME: Allow some diff, e.g. on repr style text in text/plain
+    dd = diff_mime_bundle(x, y)
+
+    for e in dd:
+        # Fail comparison for adds and removes
+        if e.op != DiffOp.PATCH:
+            return False
+
+        # Treat some types of difference specifically
+        if e.key == ""text/plain"":
+            if re_repr.match(x[e.key]) and re_repr.match(y[e.key]):",,,,,,
+546758de651d,"TODO: rename kwarg \""forward\"" to \""forward_additive\""","        # Forward Additive Algorithm
+        while self.n_iters < (max_iters - 1) and error > self.eps:
+            # Compute warped image with current parameters
+            IWxp = self._warp(self.image, self.template,
+                              self.optimal_transform)
+
+            # Compute the Jacobian of the warp
+            dW_dp = self.optimal_transform.jacobian(
+                self.template.mask.true_indices)
+
+            # TODO: rename kwarg ""forward"" to ""forward_additive""
+            # Compute steepest descent images, VI_dW_dp
+            self._J = self.residual.steepest_descent_images(
+                self.image, dW_dp, forward=(self.template,
+                                            self.optimal_transform,
+                                            self._warp))
+
+            # Compute Hessian and inverse
+            self._H = self.residual.calculate_hessian(self._J)
+
+            # Compute steepest descent parameter updates",,,,,,
+97ae3a35405d,todo: accurate Value,"   model = generator_unet_upsampling(img_dim, bn_mode, batch_size)
+   model.load_weights('../../models/CNN/pix2depthgen_weights_epoch%d.h5' % modelEpoch) #gen_weights_epoch45.h5
+   def GenFunction():
+       while True:
+           img, dep = gen.__next__()
+           dmap = model.predict(img)
+#           errorMap=(np.divide(np.fabs(dmap-dep), dep)<threshold)
+#           errorMap=(np.divide(np.fabs(dmap-dep), dep)<threshold).astype(int)
+           errorMap=(div0(np.fabs(dmap-dep), dep)<threshold).astype(int)
+           yield (img,errorMap)
+   return(GenFunction(),1448) #todo: accurate Value
+
+if __name__ == ""__main__"":
+	(ErrorMapGen,length) =GeneratorErrorMap(img_dim, batch_size=batch_size,modelEpoch=130, threshold=0.1)
+	(img, ErrorMap) = ErrorMapGen.__next__()
+	print(ErrorMap)
+	print(ErrorMap.shape)",,,,,,
+1be8997c219a,TODO this is too general; register all ops,"@functools.singledispatch
+def find_domain(op, *domains):
+    r""""""
+    Finds the :class:`Domain` resulting when applying ``op`` to ``domains``.
+    :param callable op: An operation.
+    :param Domain \*domains: One or more input domains.
+    """"""
+    raise NotImplementedError
+
+
+@find_domain.register(ops.Op)  # TODO this is too general, register all ops
+@find_domain.register(ops.TransformOp)  # TODO too general, may be wrong for some
+@find_domain.register(ops.ReciprocalOp)
+@find_domain.register(ops.SigmoidOp)
+@find_domain.register(ops.TanhOp)
+@find_domain.register(ops.AtanhOp)
+def _find_domain_pointwise_unary_transform(op, domain):
+    if isinstance(domain, ArrayType):
+        return Array[domain.dtype, domain.shape]
+    raise NotImplementedError
+",,,,,,
+c20df15b4264,TODO: handle other participant types,"                    db_refs['UP'] = uniprot_id
+                elif db_name.lower() == 'pubchem':
+                    chebi_id = chebi_client.get_chebi_id_from_pubchem(db_id)
+                    db_refs['CHEBI'] = chebi_id
+                elif db_name.lower() == 'hgnc':
+                    db_refs['HGNC'] = db_id
+        elif entity_type == 'protein_family':
+            name = text
+        else:
+            return None
+        # TODO: handle other participant types
+        agent = Agent(name, db_refs=db_refs)
+
+        features = participant.get('features')
+        if features:
+            for feature in features:
+                feature_type = feature.get('feature_type')
+                if feature_type == 'modification_feature':
+                    mc = self._get_mod_condition(feature)
+                    agent.mods.append(mc)
+                elif feature_type == 'binding_feature':",,,,,,
+65d955d95181,TODO remove later.,"
+    if not regression:
+        # classification
+        x = Dense(num_classes)(x)
+        x = Activation('softmax')(x)
+        output_layer = x
+        model = Model(input_layer, output_layer)
+
+        # https://github.com/keras-team/keras/pull/11373
+        # It's now in Keras@master but still not available with pip.
+        # TODO remove later.
+        def accuracy(y_true, y_pred):
+            # reshape in case it's in shape (num_samples, 1) instead of (num_samples,)
+            if K.ndim(y_true) == K.ndim(y_pred):
+                y_true = K.squeeze(y_true, -1)
+            # convert dense predictions to labels
+            y_pred_labels = K.argmax(y_pred, axis=-1)
+            y_pred_labels = K.cast(y_pred_labels, K.floatx())
+            return K.cast(K.equal(y_true, y_pred_labels), K.floatx())
+
+        model.compile(get_opt(), loss='sparse_categorical_crossentropy', metrics=[accuracy])",,,,,,
+304dd0cca5f7,FIXME: support for many evaluators; maybe event support,"        if callable(attr):
+            attr = attr()
+
+        # serialize
+        return attr
+
+
+class ClassifierReport:
+
+    def __init__(self, evaluator, template=None, style=None, env=None):
+        # FIXME: support for many evaluators, maybe event support
+        # dict like parameter
+        self.evaluator = evaluator
+
+        # here doing train returns the EvaluatorSerializer, not the
+        # Classifierevaluator
+        template = """"""
+
+        # Report on the training set
+        {{train.confusion_matrix()}}
+",,,,,,
+997a4b51925e,TODO: make efficient,"        self.mean = mean
+        self.std = std
+
+    def __call__(self, tensor):
+        """"""
+        Args:
+            tensor (Tensor): Tensor image of size (C, H, W) to be normalized.
+        Returns:
+            Tensor: Normalized image.
+        """"""
+        # TODO: make efficient
+        for t, m, s in zip(tensor, self.mean, self.std):
+            t.sub_(m).div_(s)
+        return tensor
+
+    def randomize_parameters(self):
+        pass
+
+
+class Scale(object):
+    """"""Rescale the input PIL.Image to the given size.",,,,,,
+883d34f03bcd,TODO: implement residual connection,"    """"""
+    Custom convolutional autoencoder network
+    Input dim (same as ResNet): 3x224x224
+    :param state_dim: (int)
+    """"""
+
+    def __init__(self, state_dim=3):
+        super(CNNAutoEncoder, self).__init__()
+        # Inspired from ResNet:
+        # conv3x3 followed by BatchNorm2d
+        # TODO: implement residual connection
+        self.encoderConv = nn.Sequential(
+            # 224x224x3 -> 112x112x64
+            nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3, bias=False),
+            nn.BatchNorm2d(64),
+            nn.ReLU(inplace=True),
+            nn.MaxPool2d(kernel_size=3, stride=2, padding=1),  # 56x56x64
+
+            conv3x3(in_planes=64, out_planes=64, stride=1),  # 56x56x64
+            nn.BatchNorm2d(64),
+            nn.ReLU(inplace=True),",,,,,,
+b4f15485f38f,todo; pass also best score,"        last_path = self.mp_queue.get()
+
+        # recover the weights of the processes trained in the children
+        self.__recover_child_process_weights(model, best_path, last_path)
+        return results
+
+    def __recover_child_process_weights(self, model, best_path, last_path):
+        # transfer back the best path to the trainer
+        if self.trainer.checkpoint_callback:
+            self.trainer.checkpoint_callback.best_model_path = best_path
+        # todo, pass also best score
+
+        # load last weights
+        if last_path is not None and not self.trainer.testing:
+            ckpt = torch.load(last_path, map_location=lambda storage, loc: storage)
+            model.load_state_dict(ckpt)
+
+        self.trainer.model = model
+
+    def set_world_ranks(self, process_idx):
+        self.trainer.local_rank = process_idx",,,,,,
+3745057f5ae1,TODO check results after standardizing num ft once a ml algorithm is ready to test,"        :param rp: Absolute path of the root directory of the project.
+        :param ml_algo: Machine algorithm for which the dataprep is running.
+        :param cat_type: Type of categorical class `coarse` or any of the 6 main classes.
+                                        (`abbr` | `desc` | `enty` | `hum` | `loc` | `num`)
+    :return:
+        boolean_flag: True for successful operation.
+        x_all_ft: numpy array of features to be feed to a Machine Learning algorithm.
+    """"""
+    all_num_ft = ann_hashed_ft(data_type, rp, cat_type)
+    x_num_ft = hstack(tuple(all_num_ft))
+    # TODO check results after standardizing num ft once a ml algorithm is ready to test
+    w_ft = text_ft_vec(data_type, rp, ""word"", ml_algo, cat_type)
+    n_ft = text_ft_vec(data_type, rp, ""ner"", ml_algo, cat_type)
+    x_text_ft = hstack((w_ft, n_ft))
+    x_all_ft = hstack((x_num_ft, x_text_ft))
+    return x_all_ft",,,,,,
+a14979aa2457,XXX: not handling dictionnaries,"    Parameters
+    ============
+    estimator: estimator object, or list, tuple or set of objects
+        The estimator or group of estimators to be cloned
+    safe: boolean, optional
+        If safe is false, clone will fall back to a deepcopy on objects
+        that are not estimators.
+
+    """"""
+    estimator_type = type(estimator)
+    # XXX: not handling dictionnaries
+    if estimator_type in (list, tuple, set, frozenset):
+         return estimator_type([clone(e, safe=safe) for e in estimator])
+    elif not hasattr(estimator, '_get_params'):
+        if not safe:
+            return copy.deepcopy(estimator)
+        else:
+            raise ValueError(""Cannot clone object '%s' (type %s): ""
+                    ""it does not seem to be a scikit-learn estimator as ""
+                    ""it does not implement a '_get_params' methods.""
+                    % (repr(estimator), type(estimator)))",,,,,,
+9caed223b729,todo sweep,"        :param step: the transform/learner to append
+        """"""
+        if self._is_fitted:
+            raise RuntimeError(
+                ""Model is fitted and cannot be modified. You should ""
+                ""clone it and then modify."")
+        if self.steps is None:
+            self.steps = []
+        self.steps.append(step)
+
+    def insert(self, pos, step):  # todo sweep
+        """"""
+        Inserts a transform/learner into the pipeline.
+
+        :param pos: position to insert, should be integers
+        :param step: the transform/learner to insert
+
+        Example: ``pipe.insert(1, FastLinearRegressor())``.
+
+        Example: ``pipe.insert(1, (""learner"", FastLinearRegressor()))``.
+        """"""",,,,,,
+0454a6f8f2bd,TODO: extend to other key types,"    send_counts = cgutils.alloca_once(builder, lir.IntType(8).as_pointer())
+    recv_counts = cgutils.alloca_once(builder, lir.IntType(8).as_pointer())
+    send_disp = cgutils.alloca_once(builder, lir.IntType(8).as_pointer())
+    recv_disp = cgutils.alloca_once(builder, lir.IntType(8).as_pointer())
+
+    # prepare key array args
+    key_arr = make_array(sig.args[0])(context, builder, args[0])
+    # XXX: assuming key arr is 1D
+    assert key_arr.shape.type.count == 1
+    arr_len = builder.extract_value(key_arr.shape, 0)
+    # TODO: extend to other key types
+    assert sig.args[0].dtype == types.intp
+    key_typ_enum = _h5_typ_table[sig.args[0].dtype]
+    key_typ_arg = builder.load(cgutils.alloca_once_value(builder,
+                                lir.Constant(lir.IntType(32), key_typ_enum)))
+    key_arr_data = builder.bitcast(key_arr.data, lir.IntType(8).as_pointer())
+
+    call_args = [send_counts, recv_counts, send_disp, recv_disp, arr_len,
+                                                    key_typ_arg, key_arr_data]
+
+    fnty = lir.FunctionType(lir.IntType(64), [pointer_to_cbuffer_typ] * 4",,,,,,
+4b0612a320cc,FIXME non-uniform sample weights not yet supported,"        X, y, X_mean, y_mean, X_std = LinearModel._center_data(X, y,
+                self.fit_intercept, self.normalize, self.copy_X)
+        
+        gcv_mode = self.gcv_mode
+        if self.gcv_mode is None or self.gcv_mode == 'auto':
+            if n_samples > n_features:
+                gcv_mode = 'svd'
+            else:
+                gcv_mode = 'eigen'
+        if len(np.shape(sample_weight)):
+            # FIXME non-uniform sample weights not yet supported
+            warnings.warn(""non-uniform sample weights unsupported for svd, ""
+                ""forcing usage of eigen"")
+            gcv_mode = 'eigen'
+        if gcv_mode == 'eigen':
+            _pre_compute = self._pre_compute
+            _errors = self._errors
+            _values = self._values
+        elif gcv_mode == 'svd':
+            # assert n_samples >= n_features
+            _pre_compute = self._pre_compute_svd",,,,,,
+c7f3f9f96466,TODO confirm that multiple eigenvalues of 1 means the rotation,"        below_margin = np.abs(real_eval) < (1 + error)
+        above_margin = (1 - error) < np.abs(real_eval)
+        re_unit_eval_mask = np.logical_and(below_margin, above_margin)
+        evec_with_real_unitary_eval = evec_with_real_eval[:, re_unit_eval_mask]
+        # all the eigenvectors with real unitary eigenvalues are now all
+        # equally 'valid' if multiple remain that probably means that this
+        # rotation is actually a no op (i.e. rotate by 360 degrees about any
+        #  axis is an invariant transform) but need to check this. For now,
+        # just take the first
+        if evec_with_real_unitary_eval.shape[1] != 1:
+            # TODO confirm that multiple eigenvalues of 1 means the rotation
+            #  does nothing
+            return None, None
+        axis = evec_with_real_unitary_eval[:, 0]
+        axis /= np.sqrt((axis ** 2).sum())  # normalize to unit vector
+        # to find the angle of rotation, build a new unit vector perpendicular
+        # to the axis, and see how it rotates
+        axis_temp_vector = axis - np.random.rand(axis.size)
+        perpendicular_vector = np.cross(axis, axis_temp_vector)
+        perpendicular_vector /= np.sqrt((perpendicular_vector ** 2).sum())
+        transformed_vector = np.dot(self.rotation_matrix,",,,,,,
+a85e39ec6e2e,XXX offset type is uint32,"    if data_t == string_array_type:
+        int32_typ_enum = np.int32(_h5_typ_table[types.int32])
+        char_typ_enum = np.int32(_h5_typ_table[types.uint8])
+
+        def gatherv_str_arr_impl(data):
+            rank = hpat.distributed_api.get_rank()
+            n_loc = len(data)
+            n_all_chars = num_total_chars(data)
+
+            # allocate send lens arrays
+            send_arr_lens = np.empty(n_loc, np.uint32)  # XXX offset type is uint32
+            send_data_ptr = get_data_ptr(data)
+
+            for i in range(n_loc):
+                _str = data[i]
+                send_arr_lens[i] = len(_str)
+                del_str(_str)
+
+            recv_counts = gather_scalar(np.int32(n_loc))
+            recv_counts_char = gather_scalar(np.int32(n_all_chars))
+            n_total = recv_counts.sum()",,,,,,
+9bba4924e8a6,Freeze weights - TODO: NOT IMPLEMENTED!,"        self.save_encoder = params.get('save_encoder', False)
+        self.load_encoder = params.get('load_encoder', '') # Path+filename to encoder.
+
+        # Create the Encoder cell.
+        self.encoder = MAECell(params)
+
+        # Load and freeze encoder - if required.
+        if self.load_encoder != '':
+            self.encoder.load_state_dict(torch.load(self.load_encoder, map_location=lambda storage, loc: storage))
+            logger.info(""Encoder imported from {}"".format(self.load_encoder))  
+            # Freeze weights - TODO: NOT IMPLEMENTED!
+            self.encoder.freeze()  
+
+        # Create the Solver for first task.
+        self.solver1 = MASCell(params)
+
+        # Create the Solver for the second task.
+        #self.solver2 = MASCell(params)
+
+        # Operation modes.
+        self.modes = Enum('Modes', ['Encode', 'Solve1', 'Solve2'])",,,,,,
+5a2404fba971,TODO: Add this to configuration framework,"        x = """".join(x)
+    if isinstance(y, list):
+        y = """".join(y)
+
+    # TODO: Review whether this is wanted.
+    #       The motivation is to align tiny
+    #       strings in outputs such as a single number.
+    # Allow aligning short strings without comparison
+    nx = len(x)
+    ny = len(y)
+    shortlen = 10  # TODO: Add this to configuration framework
+    if nx < shortlen and ny < shortlen:
+        return True
+
+    return compare_strings_approximate(x, y, threshold=0.7)
+
+
+def compare_text_strict(x, y):
+    # TODO: Doesn't have to be 100% equal here?
+    if isinstance(x, list):
+        x = """".join(x)",,,,,,
+6c8bd58cb064,h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,"        cnn = self.conv_layers_return_2d_great(input_x, 'conv_layer',reuse_flag=False)  # [batch_size,sequence_length-filter_size + 1,num_filters]
+
+        # 2.2 additiona features(optional): try to use data mining features from sample where its label doing poorly
+        h_feature = tf.layers.dense(self.input_feature, self.hidden_size/4, activation=tf.nn.relu, use_bias=True) #[batch_size, hidden_size/4]<---[batch_size,feature_length]
+        h_feature = tf.nn.dropout(h_feature,keep_prob=self.dropout_keep_prob)  # [batch_size, hidden_size/2]
+
+        # 3. concat feature
+        h=tf.concat([cnn,h_feature],axis=-1) #[batch_size, dimension]
+
+        # 4.classifier
+        #h = tf.layers.dense(h, self.hidden_size * 2, activation=tf.nn.relu, use_bias=True) #4 TODO
+        #h = tf.nn.dropout(h,keep_prob=self.dropout_keep_prob)  # [batch_size,sequence_length - filter_size + 1,num_filters] TODO
+        logits_list = self.project_tasks(h)
+        return logits_list
+
+    def inference_deep_pyramid_cnn(self):
+        """"""
+        deep pyramid cnn for text categorization
+        region embedding-->two layers of convs-->repeat of building block(Pooling,/2-->conv-->conv)--->pooling
+        for more check: http://www.aclweb.org/anthology/P/P17/P17-1052.pdf
+        :return: logits_list",,,,,,
+d60fc889f2be,TODO(tokunaga): the number of processes should be configurable,"def _xorshift32(r):
+    r = r ^ (r << 13 & 0xFFFFFFFF)
+    r = r ^ (r >> 17 & 0xFFFFFFFF)
+    r = r ^ (r << 5 & 0xFFFFFFFF)
+    return r & 0xFFFFFFFF
+
+
+class _MultiProcessDatasetPrefetchThread(threading.Thread):
+    def __init__(self, dataset, result_queue, seed):
+        super().__init__()
+        # TODO(tokunaga): the number of processes should be configurable
+        self.seed = seed + 1  # seed must not be 0
+        self.support_getitem = hasattr(dataset, ""__getitem__"")
+        self.pool = Pool(processes=8, initializer=_prefetch_setup,
+                         initargs=(dataset, self.seed, not self.support_getitem))
+        self.result_queue = result_queue
+        self.batch_size = dataset.batch_size
+        self.dataset = dataset
+        self.data_ids = []
+        self.terminate = False
+        self.setDaemon(True)",,,,,,
+0bda9e1c49b7,TODO: ensure x data shape matches model._ph['x'] shape (only if fit),"            # Get the columns
+            x = data.ix[:,x].values
+
+        else:
+            raise TypeError('data must be None or a pandas DataFrame')
+
+    # Make data at least 2 dimensional (0th dim should be N)
+    if x.ndim == 1:
+        x = np.expand_dims(x, 1)
+
+    # TODO: ensure x data shape matches model._ph['x'] shape (only if fit)
+
+    return x
+
+
+def process_xy_data(self, x=None, y=None, data=None):
+    """"""Process and validate both x and y data""""""
+
+    # Both or neither of x and y should be passed
+    if x is None and y is not None or y is None and x is not None:
+        raise TypeError('x and y should both be set or both be None')",,,,,,
+232eea6d4776,TODO(dbieber): Move this logic into the dataset definition.,"  This lets us fail fast if we accidentally put in configs that will lead to all
+  examples being filtered out, rather than silently succeeding but never making
+  progress.
+
+  Args:
+    dataset_name: The name of the dataset being loaded.
+    info: The dataset info object.
+    config: The config for the model.
+  """"""
+  if dataset_name.startswith('control_flow_programs'):
+    # TODO(dbieber): Move this logic into the dataset definition.
+    length = info.program_generator_config.length
+    tokens_per_statement = info.program_encoder.tokens_per_statement
+    assert (
+        not config.dataset.max_length
+        or config.dataset.max_length >= tokens_per_statement * length)
+
+
+def cannot_set_task(**kwargs):
+  """"""Use this as the set_task fn when no curriculum is permitted.""""""
+  del kwargs  # Unused.",,,,,,
+3930363da3a5,TODO refactor second part of if statement when implementing live model prediction,"            txt_file_path = doc._.file_name
+            metamapped_path = _get_metamapped_path(txt_file_path)
+            if not os.path.isfile(metamapped_path):
+                warnings.warn(
+                    f""No metamapped file was found for '{txt_file_path}'; attempting to run MetaMap over document (results in slower runtime); ensure MetaMap is running"")
+                metamap_json = self.metamap.map_text(str(doc))
+            else:
+                # This branch of the decision tree is reached if the file is already metamapped
+                metamap_json = self.metamap.load(metamapped_path)
+
+        # TODO refactor second part of if statement when implementing live model prediction
+        if metamap_json == '' or metamap_json['metamap'] is None:
+            if hasattr(doc._, 'file_name'):
+                warnings.warn(f""MetaMap produced no output for given file: {doc._.file_name}"")
+            warnings.warn(""MetaMap failed"")
+            return doc
+
+        mapped_terms = self.metamap.extract_mapped_terms(metamap_json)  # parse terms out of mappings dictionary
+
+        spans = []  # for displaying NER output with displacy
+",,,,,,
+7264719b6ef5,TODO: delete this method when no longer needed,"        if DEBUG:
+            keyword = ""({0:.4f}) : {1}"".format(score, keyword)
+        keywords.append(keyword)
+    return keywords
+
+
+
+
+def get_test_graph(path):
+    """"""Method to run test on the interpreter """"""
+    # TODO: delete this method when no longer needed
+    with open(path) as file:
+        text = file.read()
+
+    tokens = clean_text_by_word(text)
+    split_text = list(tokenize_by_word(text))
+
+    # Creates the graph and adds the edges
+    graph = get_graph(tokens.values())
+    set_graph_edges(graph, tokens, split_text)
+",,,,,,
+a9abdac28fb0,TODO: list,"    def resolve_append(self, ary, args, kws):
+        # TODO: ignore_index
+        assert not kws
+        arr_typ = if_series_to_array_type(ary)
+        other, = args
+        if isinstance(other, (SeriesType, types.Array)):
+            all_arrs = types.Tuple((arr_typ, if_series_to_array_type(other)))
+        elif isinstance(other, types.BaseTuple):
+            all_arrs = types.Tuple((arr_typ, *[if_series_to_array_type(a) for a in other.types]))
+
+        # TODO: list
+        # call np.concatenate to handle type promotion e.g. int, float -> float
+        ret_typ = self.context.resolve_function_type(np.concatenate, (all_arrs,), kws).return_type
+        ret_typ = if_arr_to_series_type(ret_typ)
+        return signature(ret_typ, *args)
+
+
+# TODO: use ops logic from pandas/core/ops.py
+# # called from numba/numpy_support.py:resolve_output_type
+# # similar to SmartArray (targets/smartarray.py)
+# @type_callable('__array_wrap__')",,,,,,
+d4df8b1c0c3b,TODO: I cannot get good results with this yet,"    l1_loss = 0.5 * masked_l1(y_hat, y, mask=mask) + 0.5 * l1(y_hat, y)
+    if priority_bin is not None and priority_w > 0:
+        priority_loss = 0.5 * masked_l1(
+            y_hat[:, :, :priority_bin], y[:, :, :priority_bin], mask=mask) \
+            + 0.5 * l1(y_hat[:, :, :priority_bin], y[:, :, :priority_bin])
+        l1_loss = (1 - priority_w) * l1_loss + priority_w * priority_loss
+
+    if hparams.binary_divergence_weight <= 0:
+        binary_div = Variable(y.data.new(1).zero_())
+    else:
+        # TODO: I cannot get good results with this yet
+        y_hat_logits = logit(y_hat)
+        z = -y * y_hat_logits + torch.log(1 + torch.exp(y_hat_logits))
+        binary_div = 0.5 * masked_mean(z, mask) + 0.5 * z.mean()
+
+    return l1_loss, binary_div
+
+
+@jit(nopython=True)
+def guided_attention(N, max_N, T, max_T, g):
+    W = np.zeros((max_N, max_T), dtype=np.float32)",,,,,,
+457f836c7d17,TODO: At the moment LHUC is RNN specific. We should support other models as well.,"                              action=""store_true"",
+                              default=False,
+                              help=""Add residual connections to stacked RNNs. (see Wu ETAL'16). Default: %(default)s."")
+    model_params.add_argument('--rnn-first-residual-layer',
+                              type=int_greater_or_equal(2),
+                              default=2,
+                              help='First RNN layer to have a residual connection. Default: %(default)s.')
+    model_params.add_argument('--rnn-context-gating', action=""store_true"",
+                              help=""Enables a context gate which adaptively weighs the RNN decoder input against the ""
+                                   ""source context vector before each update of the decoder hidden state."")
+    # TODO: At the moment LHUC is RNN specific. We should support other models as well.
+    model_params.add_argument('--lhuc',
+                              nargs=""+"",
+                              default=None,
+                              choices=C.LHUC_CHOICES,
+                              metavar=""COMPONENT"",
+                              help=""Use LHUC (Vilar 2018). Include an amplitude parameter to hidden units for""
+                              "" domain adaptation. Needs a pre-trained model. Valid values: {values}. Currently only""
+                              "" supported for RNN models. Default: %(default)s."".format(
+                                  values="", "".join(C.LHUC_CHOICES)))
+",,,,,,
+493ac9033e86,TODO: Repeat_elements and tf.split doesn't support dynamic splits.,"    # _, conv_height, conv_width, _ = K.int_shape(feats)
+    # conv_dims = K.variable([conv_width, conv_height])
+
+    # Dynamic implementation of conv dims for fully convolutional model.
+    conv_dims = K.shape(feats)[1:3]  # assuming channels last
+    # In YOLO the height index is the inner most iteration.
+    conv_height_index = K.arange(0, stop=conv_dims[0])
+    conv_width_index = K.arange(0, stop=conv_dims[1])
+    conv_height_index = K.tile(conv_height_index, [conv_dims[1]])
+
+    # TODO: Repeat_elements and tf.split doesn't support dynamic splits.
+    # conv_width_index = K.repeat_elements(conv_width_index, conv_dims[1], axis=0)
+    conv_width_index = K.tile(K.expand_dims(conv_width_index, 0), [conv_dims[0], 1])
+    conv_width_index = K.flatten(K.transpose(conv_width_index))
+    conv_index = K.transpose(K.stack([conv_height_index, conv_width_index]))
+    conv_index = K.reshape(conv_index, [1, conv_dims[0], conv_dims[1], 1, 2])
+    conv_index = K.cast(conv_index, K.dtype(feats))
+    
+    feats = K.reshape(feats, [-1, conv_dims[0], conv_dims[1], num_anchors, num_classes + 5])
+    conv_dims = K.cast(K.reshape(conv_dims, [1, 1, 1, 1, 2]), K.dtype(feats))
+",,,,,,
+782f5addcd03,TODO: refactor as independent function,"    if debug:
+        for info in tqdm(list_data_prep, position=0, desc=f""Validating presence of {params['global']['num_classes']} ""
+                                                          f""classes in attribute \""{info['attribute_name']}\"" for vector ""
+                                                          f""file \""{Path(info['gpkg']).stem}\""""):
+            validate_num_classes(info['gpkg'], params['global']['num_classes'], info['attribute_name'], ignore_index)
+
+        with tqdm(list_data_prep, position=0, desc=f""Checking validity of features in vector files"") as _tqdm:
+            invalid_features = {}
+            for info in _tqdm:
+                # Extract vector features to burn in the raster image
+                with fiona.open(info['gpkg'], 'r') as src:  # TODO: refactor as independent function
+                    lst_vector = [vector for vector in src]
+                shapes = lst_ids(list_vector=lst_vector, attr_name=info['attribute_name'])
+                for index, item in enumerate(tqdm([v for vecs in shapes.values() for v in vecs], leave=False, position=1)):
+                    # geom must be a valid GeoJSON geometry type and non-empty
+                    geom, value = item
+                    geom = getattr(geom, '__geo_interface__', None) or geom
+                    if not is_valid_geom(geom):
+                        gpkg_stem = str(Path(info['gpkg']).stem)
+                        if gpkg_stem not in invalid_features.keys(): # create key with name of gpkg
+                            invalid_features[gpkg_stem] = []",,,,,,
+d2393c84746c,TODO: Replace Lambda with custom Keras layer for loss.,"
+    if freeze_body:
+        for layer in topless_yolo.layers:
+            layer.trainable = False
+    final_layer = Conv2D(len(anchors)*(5+len(class_names)), (1, 1), activation='linear')(topless_yolo.output)
+
+    model_body = Model(image_input, final_layer)
+
+    # Place model loss on CPU to reduce GPU memory usage.
+    with tf.device('/cpu:0'):
+        # TODO: Replace Lambda with custom Keras layer for loss.
+        model_loss = Lambda(
+            yolo_loss,
+            output_shape=(1, ),
+            name='yolo_loss',
+            arguments={'anchors': anchors,
+                       'num_classes': len(class_names)})([
+                           model_body.output, boxes_input,
+                           detectors_mask_input, matching_boxes_input
+                       ])
+",,,,,,
+158e744f090b,TODO replace whole pandas data container as input argument with separated metadata container,"
+        Parameters
+        ----------
+        metadata : pandas.DataFrame
+            Metadata container
+
+        Returns
+        -------
+        self : an instance of self
+        """"""
+        # TODO replace whole pandas data container as input argument with separated metadata container
+
+        # only set metadata if metadata is not already set, otherwise raise error
+        if self._metadata is not None:
+            raise AttributeError('Metadata is already set and can only be set once, create a new task for different '
+                                 'metadata')
+
+        # check for consistency of information provided in task with given metadata
+        self.check_data_compatibility(metadata)
+
+        # set default feature information (all columns but target) using metadata",,,,,,
+eb40109bce75,TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,"     - Swish-1, also called Sigmoid-Weighted Linear Unit (SiLU): Ramachandran et
+       al. (https://arxiv.org/pdf/1710.05941.pdf), Elfwing et al.
+       (https://arxiv.org/pdf/1702.03118.pdf)
+     - Gaussian Error Linear Unit (GELU): Hendrycks and Gimpel
+       (https://arxiv.org/pdf/1606.08415.pdf)
+
+    :param data: input Symbol of any shape.
+    :param act_type: Type of activation.
+    :return: output Symbol with same shape as input.
+    """"""
+    # TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.
+    if act_type == C.SWISH1:
+        return data * mx.sym.Activation(data, act_type=""sigmoid"")
+    elif act_type == C.GELU:
+        # Approximation of x * gaussian_cdf(x) used by Hendrycks and Gimpel
+        return 0.5 * data * (1 + mx.sym.Activation((math.sqrt(2 / math.pi) * (data + (0.044715 * (data**3)))),
+                                                   act_type=""tanh""))
+    else:
+        return mx.sym.Activation(data, act_type=act_type)
+
+",,,,,,
+b25448a9e2d7,TODO: check for series\/dict\/list input,"            numba.ir_utils.replace_arg_nodes(f_block, args)
+            nodes += f_block.body[:-2]
+            out_df_map[cname] = nodes[-1].target
+
+        self._create_df(lhs.name, out_df_map, label)
+        return nodes
+
+    def _handle_df_append(self, lhs, rhs, df_var, label):
+        other = self._get_arg('append', rhs.args, dict(rhs.kws), 0, 'other')
+        # only handles df or list of df input
+        # TODO: check for series/dict/list input
+        # TODO: enforce ignore_index=True?
+        # single df case
+        if self._is_df_var(other):
+            return self._handle_concat_df(lhs, [df_var, other], label)
+        # list of dfs
+        df_list = guard(numba.ir_utils.get_definition, self.state.func_ir, other)
+        if len(df_list.items) > 0 and self._is_df_var(df_list.items[0]):
+            return self._handle_concat_df(lhs, [df_var] + df_list.items, label)
+        raise ValueError(""invalid df.append() input. Only dataframe and list of dataframes supported"")
+",,,,,,
+e9eddd362d1e,TODO: handle channel modalities later,"            inputs (Tensor | dict): Either the input images  (as a regulary
+                pytorch BxCxHxW Tensor) or a dictionary mapping input
+                modalities to the input imges.
+
+        Returns:
+             Dict[str, Tensor]: model output wrapped in a dictionary so its
+                 clear what the return type is. In this case ""energy"" is class
+                 probabilities **before** softmax / normalization is applied.
+        """"""
+        if isinstance(inputs, dict):
+            # TODO: handle channel modalities later
+            assert len(inputs) == 1, (
+                'only support one value channel mode now')
+            im = ub.peek(inputs.values())
+        else:
+            im = inputs
+
+        im = self.input_norm(im)
+        class_energy = self.model(im)
+        outputs = {
+            'class_energy': class_energy,",,,,,,
+baec17c405dc,TODO: make the dtype configurable; see __init__(),"
+        Returns
+        -------
+        data : numpy array
+            Audio data as numpy array.
+        flag : PortAudio callback flag
+            Indicate whether to continue the stream.
+
+        """"""
+        # get the data from the stream
+        # TODO: make the dtype configurable; see __init__()
+        data = np.fromstring(data, 'int16').astype(self.dtype)
+        # save the data
+        if self.buffer is None:
+            # if it is the first data to arrive just save it
+            self.buffer = data
+        else:
+            # append the new data to the old one
+            self.buffer = np.concatenate((self.buffer, data))
+        # truncate the buffer to the size of a frame
+        self.buffer = self.buffer[-self.frame_size:]",,,,,,
+240166d831b1,TODO(fstahlberg): Move to config,"                                               pop_id)
+        if not model_name or not problem_name or not hparams_set_name:
+            logging.fatal(
+                ""Please specify t2t_model, t2t_problem, and t2t_hparams_set!"")
+            raise AttributeError
+        if trg_vocab_size >= EditT2TPredictor.POS_FACTOR:
+            logging.fatal(""Target vocabulary size (%d) must be less than %d!""
+                          % (trg_vocab_size, EditT2TPredictor.POS_FACTOR))
+            raise AttributeError
+        self.beam_size = max(1, beam_size // 10) + 1
+        self.batch_size = 2048 # TODO(fstahlberg): Move to config
+        self.initial_trg_sentences = None
+        if trg_test_file: 
+            self.initial_trg_sentences = []
+            with open(trg_test_file) as f:
+                for line in f:
+                    self.initial_trg_sentences.append(utils.oov_to_unk(
+                       [int(w) for w in line.strip().split()] + [utils.EOS_ID],
+                       self.trg_vocab_size, self._t2t_unk_id))
+        predictor_graph = tf.Graph()
+        with predictor_graph.as_default() as g:",,,,,,
+8304f42f6d48,TODO: write index,"            else:                
+                alignment.append((None,None,None,None,False)) #no alignment found        
+        
+        return alignment   
+
+    def reset(self):
+        self.f = codecs.open(self.filename,self.mode, self.encoding)
+
+
+    def write(self, sentence):
+        #TODO: write index
+        for word, lemma, pos in sentence:
+           if not word: word = ""NONE""
+           if not lemma: lemma = ""NONE""
+           if not pos: pos = ""NONE""
+           self.f.write( word + ""\t"" + lemma + ""\t"" + pos + ""\n"" )                
+        ",,,,,,
+08587ca81219,TODO: replace with (stable) Draft6Validator; if available,"    random.seed(seed)
+    numpy.random.seed(seed)
+    if cupy is not None:
+        cupy.random.seed(seed)
+
+
+def get_json_validator(schema):
+    # We're using a helper function here to make it easier to change the
+    # validator that's used (e.g. different draft implementation), without
+    # having to change it all across the codebase.
+    # TODO: replace with (stable) Draft6Validator, if available
+    if jsonschema is None:
+        raise ValueError(Errors.E136)
+    return jsonschema.Draft4Validator(schema)
+
+
+def validate_schema(schema):
+    """"""Validate a given schema. This just checks if the schema itself is valid.""""""
+    validator = get_json_validator(schema)
+    validator.check_schema(schema)
+",,,,,,
+70912554ca9d,TODO implement generic method,"
+    def act(self, state):
+        '''Standard act method from algorithm.'''
+        return self.algorithm.act(state)
+
+    def update(self, reward, state):
+        '''
+        Update per timestep after env transitions,
+        e.g. memory, algorithm, update agent params, train net
+        '''
+        # TODO implement generic method
+        # self.memory.update()
+        # self.net.train()
+        self.algorithm.update()
+        return
+
+    def close(self):
+        '''Close agent at the end of a session, e.g. save model'''
+        # TODO save model
+        model_for_loading_next_trial = 'not implemented'
+        return model_for_loading_next_trial",,,,,,
+36dd78f0ad9f,todo: this is O(N^2) and maybe too slow for large graphs.,"
+        for keep_id in retained_ids:
+            unique_ind = self.array_id_to_unique_index[keep_id]
+            array_info = self.unique_array_infos[unique_ind]
+            array_info.retain = True
+            # Note: the following line is not actually needed.
+            # array_info.array = array_info.weak_ref()
+
+        delete_hooks = []
+        for unique_ind, ar_info in enumerate(self.unique_array_infos):
+            # todo: this is O(N^2) and maybe too slow for large graphs.
+            # Optimize it later.
+            if ar_info.was_deleted():
+                if ar_info.dynamic_deletion_index is None:
+                    if self.verbosity_level >= 2:
+                        print('Adding delete hook:')
+                    delete_hooks.append(unique_ind)
+                    ar_info.dynamic_deletion_index = last_sched_info_ind + 1
+                    ar_info.dynamic_deletion_pass_depth = self.pass_depth
+
+        # Call the `@static_code`-decorated function.",,,,,,
+76d79a931dc3,Random Warp # TODO change masks to have a input mask and a warped target mask,"        if not self._training_opts[""no_flip""]:
+            batch = self._processing.random_flip(batch)
+
+        # Add samples to output if this is for display
+        if self._processing.is_display:
+            processed[""samples""] = batch[..., :3].astype(""float32"") / 255.0
+
+        # Get Targets
+        processed.update(self._processing.get_targets(batch))
+
+        # Random Warp # TODO change masks to have a input mask and a warped target mask
+        processed[""feed""] = [self._processing.warp(batch[..., :3],
+                                                   self._training_opts[""warp_to_landmarks""],
+                                                   **warp_kwargs)]
+
+        logger.trace(""Processed batch: (filenames: %s, side: '%s', processed: %s)"",
+                     filenames,
+                     side,
+                     {k: v.shape if isinstance(v, np.ndarray) else[i.shape for i in v]
+                      for k, v in processed.items()})
+",,,,,,
+8854352998c8,TODO(rliaw): This behavior is probably undesirable; but right now,"        self.assertTrue(self.trial_executor.has_resources(gpu_only.resources))
+
+    def testHeadBlocking(self):
+        def create_trial(cpu, gpu=0):
+            return Trial(""__fake"", resources=Resources(cpu=cpu, gpu=gpu))
+
+        gpu_trial = create_trial(1, 1)
+        self.assertTrue(self.trial_executor.has_resources(gpu_trial.resources))
+        self.trial_executor.start_trial(gpu_trial)
+
+        # TODO(rliaw): This behavior is probably undesirable, but right now
+        # trials with different resource requirements is not often used.
+        cpu_only_trial = create_trial(1, 0)
+        self.assertFalse(
+            self.trial_executor.has_resources(cpu_only_trial.resources))
+
+        self.cluster.add_node(num_cpus=1, num_gpus=1)
+        self.cluster.wait_for_nodes()
+
+        self.assertTrue(
+            self.trial_executor.has_resources(cpu_only_trial.resources))",,,,,,
+50595bef1ae2,FIXME: What if we never find a fail-high?,"        return nullscore
+    # Check for stalemate. If best move loses king, but not doing anything
+    # would save us. Not at all a perfect check.
+    if depth > 0 and best <= -MATE_VALUE and nullscore > -MATE_VALUE:
+        best = 0
+
+    # We save the found move together with the score, so we can retrieve it in
+    # the play loop. We also trim the transposition table in FILO order.
+    # We prefer fail-high moves, as they are the ones we can build our pv from.
+    # bmove doesn't really mean anything when fail-low?
+    # FIXME: What if we never find a fail-high?
+    entry = tp.get(pos) # We may have been removed at this point
+    if entry is None or depth >= entry.depth and best >= gamma:
+        if len(tp) == TABLE_SIZE:
+            tp.popitem(last=True)
+        assert bmove is not None
+        tp[pos] = Entry(depth, best, gamma, bmove)
+    return best
+
+
+def search(pos, maxn=NODES_SEARCHED):",,,,,,
+b4bacad0ea7a,self.clearChanges() #TODO perhaps?,"    def clearAnnotation(self):
+        self.annotation = None
+        self.clearChanges()
+        self.deselectAllObjects()
+        self.clearPolygon()
+        self.config.currentLabelFile = """"
+
+    def clearCorrections(self):
+        self.correctionXML = None
+        self.corrections  = []
+        #self.clearChanges() #TODO perhaps?
+        #self.clearPolygon()
+        self.config.currentCorrectionFile = """"
+
+    # Get the filename where to load/save labels
+    # Returns empty string if not possible
+    # Set the createDirs to true, if you want to create needed directories
+    def getLabelFilename( self , createDirs = False ):
+        # We need the name of the current city
+        if not self.config.cityName:
+            return """"",,,,,,
+fde08cb55573,TODO replace with Streamlines,"        self.model_bundle = model_bundle
+        self.cluster_model_bundle(model_clust_thr=model_clust_thr)
+        success = self.reduce_search_space(
+            reduction_thr=reduction_thr,
+            reduction_distance=reduction_distance)
+        if not success:
+            self.pruned_streamlines = None
+            self.transf_streamlines = None
+            self.transf_matrix = None
+            self.labels = []
+            # TODO replace with Streamlines
+            return ArraySequence([]), ArraySequence([]), ArraySequence([])
+        if slr:
+            self.register_neighb_to_model(metric=slr_metric,
+                                          x0=slr_x0,
+                                          bounds=slr_bounds,
+                                          select_model=slr_select[0],
+                                          select_target=slr_select[1],
+                                          method=slr_method)
+        else:
+            self.transf_streamlines = self.neighb_streamlines",,,,,,
+771ae8d537a0,should be WeightNorm here TODO.,"        A tuple where the first element is the residual model layer, and the second
+        is the skip connection.
+    """"""
+    original_x = x
+
+    for k in range(2):
+        x = Conv1D(filters=nb_filters,
+                   kernel_size=kernel_size,
+                   dilation_rate=dilation_rate,
+                   padding=padding)(x)
+        x = BatchNormalization()(x)  # should be WeightNorm here TODO.
+        x = Activation('relu')(x)
+        x = SpatialDropout1D(rate=dropout_rate)(x)
+
+    # 1x1 conv.
+    x = Convolution1D(nb_filters, 1, padding='same')(x)
+    res_x = keras.layers.add([original_x, x])
+    return res_x, x
+
+
+def process_dilations(dilations):",,,,,,
+fb2e53d2cd24,TODO design an API interface for advanced access as an importable package,"
+    return method_names, dataset_paths_file
+
+
+def run():
+    """"""
+    Main entry point.
+    
+    """"""
+
+    # TODO design an API interface for advanced access as an importable package
+
+    metadatafile, outdir, userdir, fsdir, \
+        train_perc, num_rep_cv, \
+        positiveclass = parse_args()
+
+    subjects, classes = get_metadata(metadatafile)
+
+    positiveclass = validate_class_set(classes, positiveclass)
+
+    # let's start with one method/feature set for now",,,,,,
+cc2aed0644d8,TODO replace this code with the following commented out code after viz is fixed,"        d_z = self.discriminator(latent_sample1)
+
+        # clamping to 0 because TC cannot be negative : TEST
+        # change sign because sigmoid(-x) = 1 - sigmoid(x)
+        #tc_loss = (F.logsigmoid(d_z) - F.logsigmoid(- d_z)).clamp(0).mean()
+        tc_loss = (d_z[:, 0:1] - d_z[:, 1:2]).mean()
+
+        anneal_rec = (linear_annealing(0, 1, self.n_train_steps, self.steps_anneal)
+                      if model.training else 1)
+
+        # TODO replace this code with the following commented out code after viz is fixed
+        # https://github.com/YannDubs/disentangling-vae/pull/25#issuecomment-473535863
+        if self.is_mutual_info:
+            # return vae loss
+            vae_loss = rec_loss + anneal_rec * (kl_loss + self.gamma * tc_loss)
+        else:
+            # return vae loss without mutual information term
+            # change latent dist to torch.tensor (could probably avoid this)
+            latent_dist = torch.stack((latent_dist[0], latent_dist[1]), dim=2)
+            # calculate log p(z)
+            prior_params = torch.zeros(half_batch_size, latent_dist.size(1), 2).to(self.device)",,,,,,
+f494f9ab0571,TODO: ignore non-numerics,"
+    return _impl
+
+def mean_dummy(df, n):
+    return df
+
+@infer_global(mean_dummy)
+class MeanDummyTyper(AbstractTemplate):
+    def generic(self, args, kws):
+        df = args[0]
+        # TODO: ignore non-numerics
+        # output is float64 series with original data as string index
+        out = SeriesType(
+            types.float64, types.Array(types.float64, 1, 'C'),
+            string_array_type)
+        return signature(out, *args)
+
+@lower_builtin(mean_dummy, types.VarArg(types.Any))
+def lower_mean_dummy(context, builder, sig, args):
+    out_obj = cgutils.create_struct_proxy(
+        sig.return_type)(context, builder)",,,,,,
+c8879dbdfb6d,DEPRICATE? I don't think this is needed anymore,"                'NON-FINITE WEIGHTS weights.sum() = {!r}'.format(weight_sum))
+
+
+@register_mixin
+class CoreCallbacks:
+    """"""
+    We encourage you to overwrite these methods
+    """"""
+
+    def _tovar(harn, data):
+        # DEPRICATE? I don't think this is needed anymore
+        # handle cases when labels are unstructured
+        if isinstance(data, list):
+            # handle one level of nesting
+            return [harn.xpu.variable(d) for d in data]
+        else:
+            return harn.xpu.variable(data)
+
+    def after_initialize(harn):
+        """"""
+        Perform a custom initialization step (not usually needed)",,,,,,
+80f4cd2cc5e0,TODO: min,"                    if isinstance(func_def, ir.Global) and isinstance(func_def.value, StencilFunc):
+                        return [assign]
+                    warnings.warn(
+                        ""function call couldn't be found for initial analysis"")
+                    return [assign]
+                else:
+                    func_name, func_mod = fdef
+
+                # replace _get_type_max_value(arr.dtype) since parfors
+                # arr.dtype transformation produces invalid code for dt64
+                # TODO: min
+                if fdef == ('_get_type_max_value', 'hpat.hiframes_typed'):
+                    if self.typemap[rhs.args[0].name] == types.DType(types.NPDatetime('ns')):
+                        return self._replace_func(
+                            lambda: hpat.pd_timestamp_ext.integer_to_dt64(
+                                numba.targets.builtins.get_type_max_value(
+                                    numba.types.int64)), [])
+                    return self._replace_func(
+                        lambda d: numba.targets.builtins.get_type_max_value(
+                                    d), rhs.args)
+",,,,,,
+7ecd7ca584cb,TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,"        :return: output torch.Tensor        
+        """"""
+        if not isinstance(inputs, list):
+                inputs = [inputs]
+        bs = inputs[0][0]
+        if self._input_networks is not None:
+            models=self._input_networks
+            outputs = []
+            for model, x in zip(models, inputs):
+                outputs.append(model(x))
+                #TODO: Use tablemodules NEW: https://github.com/torch/nn/blob/master/doc/table.md
+            network_output = self._forward(torch.s(outputs, dim=1)) # Ref:https://github.com/torch/torch7/blob/master/doc/maths.md
+        else:
+            network_output = self._forward((inputs[0]))
+        
+        if self._num_classes:
+            class_output = self.network_tail(network_output)
+            return class_output
+        else:
+            return network_output
+        ",,,,,,
+ccb152ed1dfe,TODO: handle record value which are lists; at least error,"        data = [data]
+
+    if record_path is None:
+        if any([[isinstance(x, dict)
+                for x in compat.itervalues(y)] for y in data]):
+            # naive normalization, this is idempotent for flat records
+            # and potentially will inflate the data considerably for
+            # deeply nested structures:
+            #  {VeryLong: { b: 1,c:2}} -> {VeryLong.b:1 ,VeryLong.c:@}
+            #
+            # TODO: handle record value which are lists, at least error
+            #       reasonably
+            data = nested_to_record(data, sep=sep)
+        return DataFrame(data)
+    elif not isinstance(record_path, list):
+        record_path = [record_path]
+
+    if meta is None:
+        meta = []
+    elif not isinstance(meta, list):
+        meta = [meta]",,,,,,
+4cfa6f5760c6,TODO: remove hard-coded sizes and make relative to parent?,"class NodeGraph:
+    """"""
+    Basic graphical representation of a node. Should not be used directly but through one of its child classes.
+    """"""
+
+    def __init__(self, parent, node):
+        self.parent = parent
+        self.node = node
+        self.mouse_x = self.mouse_y = None
+
+        # TODO: remove hard-coded sizes and make relative to parent?
+        self.w = 125
+        self.h = 75
+
+        # Keybinds
+        self.parent.canvas.tag_bind(self.node.uid, ""<B1-Motion>"", self.drag)
+        self.parent.canvas.tag_bind(
+            self.node.uid, ""<ButtonPress-1>"", self.on_mouse_down
+        )
+        self.parent.canvas.tag_bind(
+            self.node.uid, ""<ButtonRelease-1>"", self.on_mouse_up",,,,,,
+0dbec054d284,TODO checkpoints; incremental save,"        
+        # Wishlist : Multiple pipelines can be chained together
+        
+    def save(self):
+        pass
+    
+    def train(self):
+        data = self.fetch()
+        data = self.preprocess(data)
+        self.save()
+        # TODO checkpoints, incremental save
+        self.learner.train(data)
+        self.save()
+        
+    
+    def activate(self,data):
+        data = self.preprocess(data)
+        return self.learner(data)",,,,,,
+c88066054b57,TODO: (sven) rename to simply stats_fn to match eager and torch.,"                self.model.inference_view_requirements.keys())
+
+        TFPolicy._initialize_loss(self, loss, [(k, v)
+                                               for k, v in train_batch.items()
+                                               if k in all_accessed_keys])
+
+        if ""is_training"" in self._loss_input_dict:
+            del self._loss_input_dict[""is_training""]
+
+        # Call the grads stats fn.
+        # TODO: (sven) rename to simply stats_fn to match eager and torch.
+        if self._grad_stats_fn:
+            self._stats_fetches.update(
+                self._grad_stats_fn(self, train_batch, self._grads))
+
+        # Add new columns automatically to view-reqs.
+        if self.config[""_use_trajectory_view_api""] and \
+                auto_remove_unneeded_view_reqs:
+            # Add those needed for postprocessing and training.
+            all_accessed_keys = train_batch.accessed_keys | \
+                                batch_for_postproc.accessed_keys",,,,,,
+4a2782bbe3a0,ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,"    return stmt_list
+
+#'cleavage',
+#'proteolytic cleavage',
+
+
+def _stmts_from_op_rlint(rlint_list):
+    """"""rlint_list is a list of receptor-ligand interactions""""""
+    stmt_list = []
+    for entry in rlint_list:
+        # ToDo handle when source and/or target is COMPLEX:ID1_ID2_...
+        source = _agent_from_up_id(entry['source'])
+        target = _agent_from_up_id(entry['target'])
+
+        # Todo add to annotations if interesting
+        is_directed = entry['is_directed']
+        is_stimulation = entry['is_stimulation']
+        is_inhibition = entry['is_inhibition']
+
+        # We don't know the pairing of source db with PMID, so add sources
+        # to all of them",,,,,,
+88f5655560fd,TODO: compare the performance!,"        else:
+            raise NotImplementedError(""Not implement %s loss"" % self.loss_type)
+
+        if mode == ""valid"":
+            tf.logging.info(""Building valid network..."")
+            self.valid_features = tf.placeholder(tf.float32, shape=[None, None, dim], name=""valid_features"")
+            self.valid_labels = tf.placeholder(tf.int32, shape=[None,], name=""valid_labels"")
+            with tf.name_scope(""valid"") as scope:
+                # We can adjust some parameters in the config when we do validation
+                # TODO: I'm not sure whether it is necssary to change the margin for the valid set.
+                # TODO: compare the performance!
+                # Change the margin for the valid set.
+                if loss_type == ""softmax"":
+                    pass
+                elif loss_type == ""asoftmax"":
+                    train_margin = self.params.asoftmax_m
+                    self.params.asoftmax_m = 1
+                elif loss_type == ""additive_margin_softmax"":
+                    train_margin = self.params.amsoftmax_m
+                    self.params.amsoftmax_m = 0
+                elif loss_type == ""additive_angular_margin_softmax"":",,,,,,
+307000d4a0d7,FIXME: this is kind of hackish; but being able to simply set,"        kwargs['fps'] = self.fps = 100
+        # processing chain
+        sig = SignalProcessor(num_channels=1, sample_rate=44100, **kwargs)
+        stack = StackSpectrogramProcessor(frame_size=[1024, 2048, 4096],
+                                          online=False, bands=3,
+                                          norm_filters=True, log=True, mul=1,
+                                          add=1, diff_ratio=0.5,
+                                          stack_diffs=True, **kwargs)
+        if nn_ref_files is not None:
+            if nn_ref_files is True:
+                # FIXME: this is kind of hackish, but being able to simply set
+                #        the nn_ref_files to 'True' makes the arguments stuff
+                #        for the MMBeatTracker much simpler
+                nn_ref_files = nn_files
+            if nn_ref_files == nn_files:
+                # if we don't have nn_ref_files given or they are the same as
+                # the nn_files, set num_ref_predictions to 0
+                num_ref_predictions = 0
+            else:
+                # set the number of reference files according to the length
+                num_ref_predictions = len(nn_ref_files)",,,,,,
+794167eb1e7d,TODO if without momentum; weights should not change too,"    # ...
+    loss.backward()
+    optim.step()
+    assert_trained(model, loss)
+    '''
+    pre_weights = [param.clone() for param in pre_model.parameters()]
+
+    def assert_trained(post_model, loss):
+        post_weights = [param.clone() for param in post_model.parameters()]
+        if loss == 0:
+            # TODO if without momentum, weights should not change too
+            for p_name, param in post_model.named_parameters():
+                assert param.grad.norm() == 0
+        else:
+            assert not all(torch.equal(w1, w2) for w1, w2 in zip(pre_weights, post_weights)), 'Model parameter is not updated in training_step(), check if your tensor is detached from graph.'
+            min_norm = 0
+            max_norm = 1e5
+            for p_name, param in post_model.named_parameters():
+                try:
+                    assert min_norm < param.grad.norm() < max_norm, f'Gradient norm fails the extreme value check {min_norm} < {p_name}:{param.grad.norm()} < {max_norm}, which is bad. Loss: {loss}. Check your network and loss computation. Consider using the ""clip_grad"" and ""clip_grad_val"" net parameter.'
+                except Exception as e:",,,,,,
+88a0c8f98d86,TODO Option for string lenght,"def save_to_grp(arr:np.ndarray, grp:h5py.Group, name:str) -> None:
+    r'''
+    Save Numpy array as a dataset in an h5py Group
+    
+    Arguments:
+        arr: array to be saved
+        grp: group in which to save arr
+        name: name of dataset to create
+    '''
+
+    # TODO Option for string lenght
+
+    ds = grp.create_dataset(name, shape=arr.shape, dtype=arr.dtype.name if arr.dtype.name != 'object' else 'S16')
+    ds[...] = arr if arr.dtype.name != 'object' else arr.astype('S16')
+
+
+def fold2foldfile(df:pd.DataFrame, out_file:h5py.File, fold_idx:int,
+                  cont_feats:List[str], cat_feats:List[str], targ_feats:Union[str,List[str]], targ_type:Any,
+                  misc_feats:Optional[List[str]]=None, wgt_feat:Optional[str]=None) -> None:
+    r'''
+    Save fold of data into an h5py Group",,,,,,
+9a9e9f0e3718,FIXME homogeneize the meaning of margin parameter,"
+    def __init__(self, duration: float = 1.0,
+                       per_turn: int = 1,
+                       per_label: int = 1,
+                       per_fold: int = 32,
+                       per_epoch: float = None,
+                       label_min_duration: float = 0.,
+                       # FIXME create a Literal type for metric
+                       # FIXME maybe in pyannote.core.utils.distance
+                       metric: str = 'cosine',
+                       # FIXME homogeneize the meaning of margin parameter
+                       # FIXME it has a different meaning in ArcFace, right?
+                       margin: float = 0.2):
+
+        super().__init__(duration=duration,
+                         per_turn=per_turn,
+                         per_label=per_label,
+                         per_fold=per_fold,
+                         per_epoch=per_epoch,
+                         label_min_duration=label_min_duration)
+",,,,,,
+a8aca25b7c06,TODO: Log message,"        }
+
+        self._check_input_params()
+
+        # load model once all checks OK
+        self.model_fp = self._build_fasttext_filepath()
+        if not self._is_model_present() or self.overwrite:
+            self.download_fasttext_models()
+        elif self._is_model_present() and not self.overwrite:
+            message = f""Model for '{self.iso_code}' / '{self.training_set}' / '{self.model_type}' already present at '{self.model_fp}' and ``overwrite=False``.""
+            # TODO: Log message
+        self.model = self._load_model()
+
+    def _is_model_present(self):
+        """"""Check if model in an otherwise valid filepath.""""""
+
+        if os.path.isfile(self.model_fp):
+            return True
+        else:
+            return False
+",,,,,,
+f2ed2a820dc1,FIXME: need to implement sample_weight in Ridge,"        if cv is None:
+            cv_gen = RidgeLOO(self.alphas, self.fit_intercept,
+                                    self.score_func, self.loss_func)
+            cv_gen.fit(X, y, sample_weight)
+            self.coef_ = cv_gen.coef_
+            self.intercept_ = cv_gen.intercept_
+        else:
+            parameters = {'alpha': self.alphas}
+            self.cv_gen = GridSearchCV(svr, parameters)
+            self.cv_gen.fit(X, y, cv)
+            # FIXME: need to implement sample_weight in Ridge
+            self.coef_ = cv_gen.best_estimator.coef_
+            self.intercept_ = cv_gen.best_estimator.intercept_
+
+        return self
+
+class RidgeClassifierLOO(RidgeLOO):
+
+    def fit(self, X, y, sample_weight=1.0, class_weight={}):
+        """"""
+        Fit the ridge classifier.",,,,,,
+20b2d2a9699e,TODO: do this better,"
+    self.global_step = global_step
+    self.inc_global_step = self.global_step.assign_add(1)
+
+    self.target_network_lag = target_network_lag
+    self.sample_from = sample_from
+
+    self.policy = get_policy()
+    self.baseline = get_baseline()
+    self.objective = get_objective()
+    self.baseline.eps_lambda = self.objective.eps_lambda  # TODO: do this better
+    self.trust_region_policy_opt = get_trust_region_p_opt()
+    self.value_opt = get_value_opt()
+
+  def setup_placeholders(self):
+    """"""Create the Tensorflow placeholders.""""""
+    # summary placeholder
+    self.avg_episode_reward = tf.placeholder(
+        tf.float32, [], 'avg_episode_reward')
+
+    # sampling placeholders",,,,,,
+aac82c8b563b,TODO: write a function to do this..,"    float: reflective correlation coefficient
+    """"""
+    return T.sum(y_true*y_pred, axis=axis)/T.sqrt(T.sum(y_true**2, axis=axis)*T.sum(y_pred**2, axis=axis))
+
+
+def covariance(y_true, y_pred, axis=None):
+    centered_true = T.mean(y_true, axis=axis)
+    centered_pred = T.mean(y_pred, axis=axis)
+
+    if axis is not None:
+        # TODO: write a function to do this..
+        shape = list(T.shape(y_true))
+        shape[axis] = 1
+        centered_true = T.reshape(centered_true, shape)
+        shape = list(T.shape(y_pred))
+        shape[axis] = 1
+        centered_pred = T.reshape(centered_pred, shape)
+
+    return T.mean((y_true - centered_true)*(y_pred - centered_pred), axis=axis)
+
+",,,,,,
+1363929a8b86,In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,"  Optimal_perturbation = argmax_{eta, ||eta||_{ord} < eps} dot(eta, grad)
+
+  :param grad: tf tensor containing a batch of gradients
+  :param eps: float scalar specifying size of constraint region
+  :param ord: int specifying order of norm
+  :returns:
+    tf tensor containing optimal perturbation
+  """"""
+
+  # In Python 2, the `list` call in the following line is redundant / harmless.
+  # In Python 3, the `list` call is needed to convert the iterator returned by `range` into a list.
+  red_ind = list(range(1, len(grad.get_shape())))
+  avoid_zero_div = 1e-12
+  if ord == np.inf:
+    # Take sign of gradient
+    optimal_perturbation = tf.sign(grad)
+    # The following line should not change the numerical results.
+    # It applies only because `optimal_perturbation` is the output of
+    # a `sign` op, which has zero derivative anyway.
+    # It should not be applied for the other norms, where the
+    # perturbation has a non-zero derivative.",,,,,,
+68c447c855a3,It's only needed for a specific purpose in the short term; will go.,"  return np.reshape(x, (x.shape[:n_axes_to_keep] + (-1,)))
+
+
+class Dropout(base.Layer):
+  """"""Dropout.""""""
+
+  def __init__(self, rate=0.0, name='dropout', mode='train'):
+    super(Dropout, self).__init__()
+    self._initial_rate = rate
+    # TODO(lukaszkaiser): remove the name property by the end of September'19.
+    # It's only needed for a specific purpose in the short term, will go.
+    self._name = 'dropout_' + name
+    self._mode = mode
+
+  def new_parameters(self, input_shape, input_dtype, rng):
+    """"""Initialize dropout parameters and state.""""""
+    del input_shape, input_dtype, rng
+    return (), {self._name: np.array(self._initial_rate)}
+
+  def call(self, x, params, state, rng=None, **unused_kwargs):
+    """"""Execute dropout.""""""",,,,,,
+ba34b118d90d,tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,"        return tf.keras.optimizers.Adagrad()
+    elif optimizer_type == 'adagradda':
+        return None # tf.train.AdagradDAOptimizer  todo appears tf.keras.optimizers does not support
+    elif optimizer_type == 'momentum':
+        return None # tf.train.MomentumOptimizer  todo appears tf.keras.optimizers does not support
+    elif optimizer_type == 'ftrl':
+        return tf.keras.optimizers.Ftrl()
+    elif optimizer_type == 'proximalgd':
+        return None #tf.train.ProximalGradientDescentOptimizer todo appears tf.keras.optimizers does not support
+    elif optimizer_type == 'proximaladagrad':
+        return None #tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support
+    elif optimizer_type == 'rmsprop':
+        return tf.keras.optimizers.RMSprop()
+    else:
+        raise ValueError('Invalid optimizer_type: ' + optimizer_type)
+
+",,,,,,
+0eab9e18795a,TODO make threshold a variable,"        # training happens in regularizer
+        gate = tf.stop_gradient(gate)
+        # register gate sparsity for printing
+        self.register_update('mayo.gates', gate, self._gate_sparsity)
+        # actual gating
+        return output * gate
+
+    def instantiate_gate(self, tensor, params):
+        gate_scope = '{}/gate'.format(params['scope'])
+        subsample = self._gate_subsample(tensor, gate_scope)
+        # TODO make threshold a variable
+        gate = tf.cast(subsample > params['threshold'], tf.float32)
+        self.register_update('mayo.gates', gate, self._gate_sparsity)
+        # gating
+        return tensor * tf.stop_gradient(gate)",,,,,,
+82a7458fd5ce,TODO: num pad examples is not set here if fillup strategy would be padding,"        src_graphs = self.data.src_graphs[i][j:j + batch_size]
+        src_positions = self.data.src_positions[i][j:j + batch_size]
+        data = [source, target, src_graphs, src_positions]
+        label = [self.data.label[i][j:j + batch_size]]
+
+        provide_data = [mx.io.DataDesc(name=n, shape=x.shape, layout=C.BATCH_MAJOR) for n, x in
+                        zip(self.data_names, data)]
+        provide_label = [mx.io.DataDesc(name=n, shape=x.shape, layout=C.BATCH_MAJOR) for n, x in
+                         zip(self.label_names, label)]
+
+        # TODO: num pad examples is not set here if fillup strategy would be padding
+        return mx.io.DataBatch(data, label,
+                               pad=0, index=None, bucket_key=self.buckets[i],
+                               provide_data=provide_data, provide_label=provide_label)
+
+    def save_state(self, fname: str):
+        """"""
+        Saves the current state of iterator to a file, so that iteration can be
+        continued. Note that the data is not saved, i.e. the iterator must be
+        initialized with the same parameters as in the first call.
+",,,,,,
+8f7233513ae8,FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,"    ]
+    return [MergeDecision(
+        common_path=prefix,
+        action=""custom"",
+        conflict=True,
+        local_diff=local_diff,
+        remote_diff=remote_diff,
+        custom_diff=custom_diff,
+    )]
+def resolve_strategy_inline_source(base_path, base, unresolved_conflicts, decisions):
+    pass # FIXME XXX: Implement by rewriting functions above copied from autoresolve.py, search for resolve_strategy_inline_source above in this file
+
+
+def wrap_subconflicts(key, subconflicts):
+    unresolved_conflicts = []
+    for conf in subconflicts:
+        (path, ld, rd, strategy) = conf
+        assert path[-1] == key
+        path = path[:-1]
+        ld = [op_patch(key, ld)]
+        rd = [op_patch(key, rd)]",,,,,,
+982030acb27b,Initialize model (TODO: really necessary?),"                          self.config['dec_embed'],
+                          self.config['dec_nhids'],
+                          self.config['enc_nhids'] * 2)
+        cost = decoder.cost(
+                encoder.apply(source_sentence, source_sentence_mask),
+                source_sentence_mask, target_sentence, target_sentence_mask)
+    
+        logging.info('Creating computational graph')
+        cg = ComputationGraph(cost)
+    
+        # Initialize model (TODO: really necessary?)
+        logging.info('Initializing model')
+        encoder.weights_init = decoder.weights_init = IsotropicGaussian(
+            self.config['weight_scale'])
+        encoder.biases_init = decoder.biases_init = Constant(0)
+        encoder.push_initialization_config()
+        decoder.push_initialization_config()
+        encoder.bidir.prototype.weights_init = Orthogonal()
+        decoder.transition.weights_init = Orthogonal()
+        encoder.initialize()
+        decoder.initialize()",,,,,,
+93e162503ddf,todo: should save tpot model here,"                          n_jobs=8,
+                          verbosity=2)
+
+        X_train, X_test, y_train, y_test = train_test_split(
+            df.drop(self.target_key, axis=1).values, df[self.target_key],
+            test_size=self.test_frac)
+
+        tpot.fit(X_train, y_train)
+        validation_score = tpot.score(X_test, y_test)
+
+        # todo: should save tpot model here
+        return {""top_model_scores"": tpot.get_top_models(return_scores=True),
+                ""best_model_validation_score"": validation_score}
+
+    def predict(self, predict_df):
+        """"""
+        Using the data in df, makes predictions with an automated pipeline.
+
+        Args:
+            predict_df: The dataframe containing
+",,,,,,
+892d0b401659,early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),"                # I - the loss is < threshold (only when curriculum learning is finished if set.)
+                # We check that condition only in validation step!
+                if self.curric_done or not self.must_finish_curriculum:
+
+                    # Check the Full Validation loss.
+                    if (self.validation_stat_agg[""loss""] < self.loss_stop):
+                        termination_cause = ""Full Validation Loss want below Loss Stop threshold (model converged)""
+                        break
+
+                # II. Early stopping is set and loss hasn't improved by delta in n epochs.
+                # early_stopping(index=epoch, avg_valid_loss). (TODO: coming in next release)
+                # termination_cause = 'Early Stopping.'
+
+                # IV. The epoch number limit has been reached, condition is already made in for loop.
+
+            '''
+            End of main training and validation loop. Perform final full validation.
+            '''
+            self.logger.info('Training finished because {}'.format(termination_cause))
+            # Check visualization flag - turn on visualization for last validation if needed.
+            if (self.flags.visualize == 3):",,,,,,
+69a73bbb4854,#TODO: improve the copying of parameters,"        if rem == 0:
+            fold_seq.append(fold_len)
+        else:
+            fold_seq.append(fold_len+rem)  # last one is the longest if unequal
+
+        dataset_splits = data.random_split(data_loader.dataset,
+                                           fold_seq)
+
+        batch_size = data_loader.batch_size
+
+        # #TODO: improve the copying of parameters
+        # Set to true if RandomSampler exists.
+        shuffle = isinstance(data_loader.sampler, data.sampler.RandomSampler)
+
+        try:
+            for fold in range(k):
+
+                # TODO: this may break on different devices?? test.
+                # TODO: Re-initialize instead of deepcopy?
+                cross_val_network = copy.deepcopy(network)
+",,,,,,
+8ee9b66797ed,TODO: Change the optimizer to the appropriate Optimizer class,"                      log_folder=os.path.join(paths.output_dir_path, 'logs')
+                      )
+
+    # Get the trajectory from the environment
+    traj = env.trajectory
+
+    # NOTE: Innerloop simulator
+    optimizee = FunctionOptimizee(traj, 'rastrigin')
+
+    # NOTE: Outerloop optimizer initialization
+    # TODO: Change the optimizer to the appropriate Optimizer class
+    n_grid_divs_per_axis = 30
+    parameters = GridSearchParameters()
+    optimizer = GridSearchOptimizer(traj, optimizee_create_individual=optimizee.create_individual,
+                                          optimizee_fitness_weights=(-0.1,),
+                                          parameters=parameters,
+                                          optimizee_param_grid={
+                                              'coords': (optimizee.bound[0], optimizee.bound[1], n_grid_divs_per_axis)
+                                          })
+
+    # Add post processing",,,,,,
+e2c72af89486,TODO max in one tensor,"    return x
+
+def _avg_pool2d(raw,input, kernel_size, stride = None, padding = 0, ceil_mode = False, count_include_pad = True):
+    x = raw(input, kernel_size, stride, padding, ceil_mode, count_include_pad)
+    _pool('ave',input, x, kernel_size, stride, padding,ceil_mode)
+    return x
+
+def _max(raw,*args):
+    x=raw(*args)
+    if len(args)==1:
+        # TODO max in one tensor
+        assert NotImplementedError
+    else:
+        bottom_blobs=[]
+        for arg in args:
+            bottom_blobs.append(log.blobs(arg))
+        layer_name=log.add_layer(name='max')
+        top_blobs=log.add_blobs([x],name='max_blob')
+        layer=caffe_net.Layer_param(name=layer_name,type='Eltwise',
+                                    bottom=bottom_blobs,top=top_blobs)
+        layer.param.eltwise_param.operation =2",,,,,,
+949d3a3e4fcd,TODO: do not replace unless explicitly noticed + add 'only hangul' option,"        (u'“', u'""'), # \u201c
+        (u'”', u'""'), # \u201d
+        (u'「', u'<'), # \u300c
+        (u'」', u'>')] # \u300d
+
+def concat(phrase):
+    return phrase.replace(os.linesep, ' ')
+
+def select(phrase):
+    # FIXME: last eojeol gets truncated (hotfixed)
+    # TODO: do not replace unless explicitly noticed + add 'only hangul' option
+    for a, b in replace_set:
+        phrase = phrase.replace(a, b)
+    return phrase + ' .'
+
+def preprocess(phrase):
+    return select(concat(phrase))
+
+def char2hex(c):
+    # u'음' -> '0xc74c'
+    return hex(ord(c))",,,,,,
+cfa6af22bccd,TODO: deprecate?,"            try:
+                env = self._load_single_environment(env, trial_id)
+            except TrialIDNotFoundError:
+                msg = ('Unable to load saved environment: '
+                       '(key: {}, trial id: {})')
+                logger.error(msg.format(env.key, trial_id))
+                raise
+            return env.output_detail()
+
+    def get_python_packages(self, trial_id=None):
+        # TODO: deprecate?
+        return self.get_environment(trial_id=trial_id,
+                                    category='requirements')",,,,,,
+b5c7f9887a1d,TODO: add a complete frame_size; to cover the whole audio signal?,"        else:
+            raise TypeError(""Invalid argument type."")
+
+    # len() should return the number of frames, since it iterates over frames
+    def __len__(self):
+        return self.num_frames
+
+    @property
+    def num_frames(self):
+        """"""Number of frames.""""""
+        # TODO: add a complete frame_size, to cover the whole audio signal?
+        # modifications to signal_frame() needed
+        #return int(np.ceil(((np.shape(self.signal)[0]) + self.frame_size) / self.hop_size))
+        return int(np.ceil((np.shape(self.signal)[0]) / self.hop_size))
+
+    @property
+    def fps(self):
+        """"""Frames per second.""""""
+        return float(self.wav.samplerate) / float(self.hop_size)
+
+    @property",,,,,,
+dfac9e286c97,XXX: unify Series\/Array as Array,"            elif self.index != types.none:
+                new_index = self.index
+
+            # If dtype matches or other.dtype is undefined (inferred)
+            if other.dtype == self.dtype or not other.dtype.is_precise():
+                return SeriesType(
+                    self.dtype,
+                    self.data.unify(typingctx, other.data),
+                    new_index)
+
+        # XXX: unify Series/Array as Array
+        return super(SeriesType, self).unify(typingctx, other)
+
+    def can_convert_to(self, typingctx, other):
+        # same as types.Array
+        if (isinstance(other, SeriesType) and other.dtype == self.dtype):
+            # called for overload selection sometimes
+            # TODO: fix index
+            if self.index == types.none and other.index == types.none:
+                return self.data.can_convert_to(typingctx, other.data)
+            if self.index != types.none and other.index != types.none:",,,,,,
+f8ee95e5a717,TODO: Remove hardcoding of downscaling calculations.,"    detectors_mask : array
+        0/1 mask for detectors in [conv_height, conv_width, num_anchors, 1]
+        that should be compared with a matching ground truth box.
+    matching_true_boxes: array
+        Same shape as detectors_mask with the corresponding ground truth box
+        adjusted for comparison with predicted parameters at training time.
+    """"""
+    height, width = image_size
+    num_anchors = len(anchors)
+    # Downsampling factor of 5x 2-stride max_pools == 32.
+    # TODO: Remove hardcoding of downscaling calculations.
+    assert height % 32 == 0, 'Image sizes in YOLO_v2 must be multiples of 32.'
+    assert width % 32 == 0, 'Image sizes in YOLO_v2 must be multiples of 32.'
+    conv_height = height // 32
+    conv_width = width // 32
+    num_box_params = true_boxes.shape[1]
+    detectors_mask = np.zeros(
+        (conv_height, conv_width, num_anchors, 1), dtype=np.float32)
+    matching_true_boxes = np.zeros(
+        (conv_height, conv_width, num_anchors, num_box_params),
+        dtype=np.float32)",,,,,,
+a18978c87da6,TODO: black box attacks,"
+    :param model: an object of Model class
+    :param x: Symbolic input to the attack.
+    :param attack_type: A string that is the name of an attack.
+    :param sess: Tensorflow session.
+    :param dataset: The name of the dataset as a string to use for default
+                   params.
+    :param y: (optional) a symbolic variable for the labels.
+    :param kwargs: (optional) additional parameters to be passed to the attack.
+    """"""
+    # TODO: black box attacks
+    attack_names = {'FGSM': FastGradientMethod,
+                    'MadryEtAl': MadryEtAl,
+                    'MadryEtAl_y': MadryEtAl,
+                    'MadryEtAl_multigpu': MadryEtAlMultiGPU,
+                    'MadryEtAl_y_multigpu': MadryEtAlMultiGPU,
+                    }
+
+    if attack_type not in attack_names:
+        raise Exception('Attack %s not defined.' % attack_type)
+",,,,,,

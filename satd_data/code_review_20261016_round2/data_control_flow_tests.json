@@ -1,0 +1,376 @@
+{
+  "binary": [
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "line": 383,
+      "end_line": 420,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "line": 439,
+      "end_line": 477,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "line": 392,
+      "end_line": 430,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "line": 394,
+      "end_line": 432,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "line": 438,
+      "end_line": 476,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "line": 438,
+      "end_line": 476,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "line": 558,
+      "end_line": 604,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "line": 612,
+      "end_line": 649,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "line": 597,
+      "end_line": 635,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "line": 597,
+      "end_line": 635,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "line": 599,
+      "end_line": 637,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "line": 718,
+      "end_line": 756,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "line": 600,
+      "end_line": 638,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "line": 596,
+      "end_line": 634,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "line": 601,
+      "end_line": 639,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "line": 483,
+      "end_line": 529,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "line": 195,
+      "end_line": 232,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "line": 203,
+      "end_line": 241,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "line": 204,
+      "end_line": 242,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "line": 204,
+      "end_line": 242,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "line": 204,
+      "end_line": 242,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_zero_shot/bin_new_test.py",
+      "line": 204,
+      "end_line": 242,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "line": 205,
+      "end_line": 243,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "line": 208,
+      "end_line": 246,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "line": 205,
+      "end_line": 243,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    },
+    {
+      "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "line": 199,
+      "end_line": 245,
+      "invalid_all_model_outputs": true,
+      "returned_label": "Data Conf",
+      "post_return_unknown_check_would_count": false
+    }
+  ],
+  "hierarchical": [
+    {
+      "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "line": 480,
+      "end_line": 501,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "line": 467,
+      "end_line": 488,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "line": 482,
+      "end_line": 503,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "line": 460,
+      "end_line": 481,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "line": 482,
+      "end_line": 503,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "line": 470,
+      "end_line": 491,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+      "line": 458,
+      "end_line": 479,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+      "line": 458,
+      "end_line": 479,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "line": 376,
+      "end_line": 399,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "line": 388,
+      "end_line": 409,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "line": 375,
+      "end_line": 396,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "line": 390,
+      "end_line": 411,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "line": 368,
+      "end_line": 389,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "line": 390,
+      "end_line": 411,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "line": 378,
+      "end_line": 399,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "line": 292,
+      "end_line": 314,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "line": 379,
+      "end_line": 400,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    },
+    {
+      "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+      "line": 284,
+      "end_line": 307,
+      "invalid_both_model_outputs": true,
+      "coarse": "<UNK>",
+      "returned_fine": "Data Conf",
+      "post_return_unknown_fine_check_would_count": false
+    }
+  ]
+}

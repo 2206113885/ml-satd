@@ -1,0 +1,23 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+  "run_dir": "results/run-20251018-001208-Qwen3-14B-ynpoll",
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "max_new_tokens": {
+    "yn": 2048,
+    "choose": 2048,
+    "full": 2048,
+    "reason": 96
+  },
+  "fallback_abbr": "Data Conf",
+  "output_columns_order": [
+    "comment",
+    "real",
+    "pred",
+    "raw_output",
+    "reason"
+  ],
+  "method": "per-label yes/no polling + candidate arbitration + full-label fallback"
+}

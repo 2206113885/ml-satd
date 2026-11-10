@@ -1,0 +1,6461 @@
+{
+  "scope": "114 original Python files; inference/config/control-flow/parsing/reproducibility. No model inference and no original file changes.",
+  "definitions": {
+    "confirmed": "source defect or observed output directly established",
+    "current-risk": "reachable risky path; actual affected historical count unavailable",
+    "needs-history": "requires original checkpoint/environment/raw logs",
+    "design-choice": "valid policy requiring explicit reporting, not automatically a bug"
+  },
+  "findings": [
+    {
+      "id": "INF-01",
+      "title": "Gemma2层次零样本丢弃聊天模板且忽略max_len",
+      "status": "confirmed",
+      "severity": "P1",
+      "description": "generate_once计算text后实际编码prompt；max_len未传入tokenizer，且解码完整输入输出再按Answer:切分。",
+      "impact": "该条件未按其他层次脚本的聊天模板和输入预算运行；全量解码/分隔符也不能证明只解析了新生成内容。",
+      "recommendation": "实际编码text并执行max_len；仅解码outputs中输入长度之后的新token，去除对提示文本分隔符的依赖。复核对应Gemma2层次结果。",
+      "locations": [
+        {
+          "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 276,
+          "end_line": 288
+        }
+      ],
+      "evidence": {
+        "method": "source control-flow inspection",
+        "max_len_used_in_function_body": false
+      }
+    },
+    {
+      "id": "INF-02",
+      "title": "首词兜底将不同完整类名映射成同一类",
+      "status": "confirmed",
+      "severity": "P1",
+      "description": "使用full.split()[0]是否在输出中出现判类，Model和Data分别对应多个不同标签。",
+      "impact": "合法完整类名可能映射为首个共享首词的类别；拒答也可能被常见子串误认。",
+      "recommendation": "删除首词/任意包含兜底；使用完整名称精确归一化或唯一缩写匹配，歧义/拒答保留解析失败。",
+      "locations": [
+        {
+          "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 703,
+          "end_line": 715
+        },
+        {
+          "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "line": 341,
+          "end_line": 353
+        },
+        {
+          "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 120,
+          "end_line": 132
+        },
+        {
+          "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "line": 131,
+          "end_line": 143
+        },
+        {
+          "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+          "line": 148,
+          "end_line": 163
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 321,
+          "end_line": 334
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 394,
+          "end_line": 408
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 347,
+          "end_line": 361
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 349,
+          "end_line": 363
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 397,
+          "end_line": 411
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 397,
+          "end_line": 411
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 518,
+          "end_line": 531
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 550,
+          "end_line": 563
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 552,
+          "end_line": 566
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 552,
+          "end_line": 566
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "line": 554,
+          "end_line": 568
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "line": 673,
+          "end_line": 687
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 555,
+          "end_line": 569
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "line": 555,
+          "end_line": 569
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "line": 556,
+          "end_line": 570
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 443,
+          "end_line": 456
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 133,
+          "end_line": 146
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 158,
+          "end_line": 172
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 159,
+          "end_line": 173
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 159,
+          "end_line": 173
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 159,
+          "end_line": 173
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "line": 159,
+          "end_line": 173
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 160,
+          "end_line": 174
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 160,
+          "end_line": 174
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 160,
+          "end_line": 174
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 159,
+          "end_line": 172
+        }
+      ],
+      "evidence": [
+        {
+          "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 703,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 703,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "function": "extract_abbr",
+          "line": 341,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "function": "extract_abbr",
+          "line": 341,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 120,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 120,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "function": "extract_abbr",
+          "line": 131,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "function": "extract_abbr",
+          "line": 131,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 148,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 148,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 321,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 321,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 394,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 394,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 347,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 347,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 349,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 349,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 397,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 397,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 397,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 397,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 518,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 518,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 550,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 550,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 552,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 552,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 552,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 552,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 554,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 554,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 673,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "function": "extract_abbr",
+          "line": 673,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 555,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 555,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 555,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 555,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 556,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 556,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 443,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "function": "extract_abbr",
+          "line": 443,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 133,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 133,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 158,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 158,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 159,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 159,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 159,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 159,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 159,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 159,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "function": "extract_abbr",
+          "line": 159,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "function": "extract_abbr",
+          "line": 159,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 160,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 160,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 160,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 160,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 160,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 160,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 159,
+          "input": "Data Storage Configuration",
+          "expected": "DS Conf",
+          "actual": "Data Conf",
+          "kind": "full_name",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "function": "extract_abbr",
+          "line": 159,
+          "input": "Model Code Reusability",
+          "expected": "MCR",
+          "actual": "MLInter",
+          "kind": "full_name",
+          "synthetic": true
+        }
+      ]
+    },
+    {
+      "id": "INF-03",
+      "title": "多词缩写归一化与字典键不一致",
+      "status": "confirmed",
+      "severity": "P2",
+      "description": "将输入去掉空白/标点后用仍保留空格的ABBR_LOWER查找，导致data conf和**Data Conf**等形式被拒绝。",
+      "impact": "格式差异进入默认类别回填，和语义判错混在一起；单词缩写与多词缩写待遇不一致。",
+      "recommendation": "以同一个canonical函数构建标签字典和处理输出；单独记录非规范格式，避免静默改成Data Conf。",
+      "locations": [
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 697,
+          "end_line": 708
+        },
+        {
+          "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+          "line": 887,
+          "end_line": 898
+        },
+        {
+          "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+          "line": 693,
+          "end_line": 704
+        },
+        {
+          "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+          "line": 585,
+          "end_line": 596
+        },
+        {
+          "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+          "line": 898,
+          "end_line": 907
+        },
+        {
+          "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+          "line": 904,
+          "end_line": 913
+        },
+        {
+          "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+          "line": 898,
+          "end_line": 907
+        },
+        {
+          "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 336,
+          "end_line": 347
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 338,
+          "end_line": 349
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 338,
+          "end_line": 349
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 338,
+          "end_line": 349
+        },
+        {
+          "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "line": 347,
+          "end_line": 356
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+          "line": 347,
+          "end_line": 356
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+          "line": 346,
+          "end_line": 355
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 130,
+          "end_line": 141
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 222,
+          "end_line": 233
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 222,
+          "end_line": 233
+        },
+        {
+          "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 113,
+          "end_line": 124
+        },
+        {
+          "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "line": 109,
+          "end_line": 120
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+          "line": 113,
+          "end_line": 124
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+          "line": 115,
+          "end_line": 126
+        },
+        {
+          "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+          "line": 118,
+          "end_line": 127
+        },
+        {
+          "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+          "line": 119,
+          "end_line": 128
+        },
+        {
+          "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+          "line": 118,
+          "end_line": 127
+        },
+        {
+          "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 126,
+          "end_line": 137
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 127,
+          "end_line": 138
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 127,
+          "end_line": 138
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+          "line": 115,
+          "end_line": 126
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 127,
+          "end_line": 138
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+          "line": 110,
+          "end_line": 121
+        },
+        {
+          "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "line": 136,
+          "end_line": 145
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+          "line": 136,
+          "end_line": 145
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+          "line": 135,
+          "end_line": 144
+        },
+        {
+          "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+          "line": 142,
+          "end_line": 151
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 130,
+          "end_line": 141
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 130,
+          "end_line": 141
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 130,
+          "end_line": 141
+        },
+        {
+          "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+          "line": 114,
+          "end_line": 125
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "line": 114,
+          "end_line": 125
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+          "line": 125,
+          "end_line": 144
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+          "line": 125,
+          "end_line": 144
+        },
+        {
+          "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+          "line": 125,
+          "end_line": 134
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+          "line": 125,
+          "end_line": 138
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+          "line": 125,
+          "end_line": 138
+        }
+      ],
+      "evidence": [
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "function": "simple_extract",
+          "line": 697,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "function": "simple_extract",
+          "line": 697,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 887,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 887,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 693,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 693,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 585,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 585,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 898,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 898,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 904,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 904,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 898,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+          "function": "simple_extract",
+          "line": 898,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 336,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 336,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 338,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 338,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 338,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 338,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 338,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 338,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 347,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 347,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 347,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 347,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 346,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 346,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "function": "simple_extract",
+          "line": 130,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "function": "simple_extract",
+          "line": 130,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "function": "simple_extract",
+          "line": 222,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "function": "simple_extract",
+          "line": 222,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "function": "simple_extract",
+          "line": 222,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "function": "simple_extract",
+          "line": 222,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+          "function": "simple_extract",
+          "line": 113,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+          "function": "simple_extract",
+          "line": 113,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 109,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 109,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 113,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 113,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 115,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 115,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 118,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 118,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 119,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 119,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 118,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 118,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 126,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 126,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 127,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 127,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 127,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 127,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+          "function": "simple_extract",
+          "line": 115,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+          "function": "simple_extract",
+          "line": 115,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 127,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+          "function": "simple_extract",
+          "line": 127,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+          "function": "simple_extract",
+          "line": 110,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+          "function": "simple_extract",
+          "line": 110,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 136,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 136,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 136,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 136,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 135,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 135,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 142,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+          "function": "simple_extract",
+          "line": 142,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "function": "simple_extract",
+          "line": 130,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "function": "simple_extract",
+          "line": 130,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "function": "simple_extract",
+          "line": 130,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "function": "simple_extract",
+          "line": 130,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "function": "simple_extract",
+          "line": 130,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "function": "simple_extract",
+          "line": 130,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+          "function": "simple_extract",
+          "line": 114,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+          "function": "simple_extract",
+          "line": 114,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 114,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 114,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+          "function": "simple_extract",
+          "line": 125,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+          "function": "simple_extract",
+          "line": 125,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+          "function": "simple_extract",
+          "line": 125,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+          "function": "simple_extract",
+          "line": 125,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 125,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 125,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 125,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 125,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 125,
+          "input": "data conf",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "case_normalization",
+          "synthetic": true
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+          "function": "simple_extract",
+          "line": 125,
+          "input": "**Data Conf**",
+          "expected": "Data Conf",
+          "actual": "<UNK>",
+          "kind": "markdown_normalization",
+          "synthetic": true
+        }
+      ]
+    },
+    {
+      "id": "INF-04",
+      "title": "未闭合thinking没有统一无效状态",
+      "status": "current-risk",
+      "severity": "P1",
+      "description": "思考块结束后切割或只删除完整块，均未在缺少结束标记时明确拒绝；binary解析会搜索剩余全文的yes/no及标签。",
+      "impact": "生成触及合理预算而仍未完成思考时，可能把中间候选当答案；并非预算本身有错。旧分类原文丢失，实际污染数未知。",
+      "recommendation": "解析前验证thinking是否正常闭合及最终段是否存在；未完成保存为独立失败，记录finish_reason和完整raw，不从思考中搜索答案。",
+      "locations": [
+        {
+          "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 358,
+          "end_line": 383
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 358,
+          "end_line": 383
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 242,
+          "end_line": 267
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 242,
+          "end_line": 267
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 147,
+          "end_line": 172
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+          "line": 136,
+          "end_line": 160
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 147,
+          "end_line": 172
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+          "line": 131,
+          "end_line": 155
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 150,
+          "end_line": 175
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 150,
+          "end_line": 175
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 282,
+          "end_line": 286
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 282,
+          "end_line": 286
+        },
+        {
+          "file": "test1.py",
+          "line": 166,
+          "end_line": 170
+        },
+        {
+          "file": "test3.py",
+          "line": 166,
+          "end_line": 170
+        }
+      ],
+      "evidence": [
+        {
+          "type": "normal_complete_pair",
+          "raw": "<think>The answer could be yes, but that is ruled out.</think>\nNo",
+          "source_parser_result": "no",
+          "expected_final_answer": "no",
+          "synthetic_counterexample_not_an_actual_model_prediction": true
+        },
+        {
+          "type": "closing_marker_only",
+          "raw": "The answer could be yes, but that is ruled out.\n</think>\nNo",
+          "source_parser_result": "yes",
+          "expected_final_answer": "no",
+          "synthetic_counterexample_not_an_actual_model_prediction": true
+        },
+        {
+          "type": "truncated_unclosed_thinking",
+          "raw": "<think>The answer could be yes, but further examination is needed",
+          "source_parser_result": "yes",
+          "expected_final_answer": null,
+          "synthetic_counterexample_not_an_actual_model_prediction": true
+        }
+      ]
+    },
+    {
+      "id": "INF-05",
+      "title": "解析失败/仲裁失败被回填为正常类别",
+      "status": "design-choice",
+      "severity": "P1",
+      "description": "多处将UNK改成Data Conf、粗类默认子类或yes_candidates[0]，报告只评估替代后的类别。",
+      "impact": "掩盖格式失败、无答案与真实预测之间的差别，仲裁首候选还引入标签顺序偏好；不能仅凭有fallback否定原实验，但需披露。",
+      "recommendation": "保留parsed_label、parse_status、fallback_label、最终策略预测分别列；主表报告失败计错及可选原回填策略敏感性结果。",
+      "locations": [
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 757,
+          "end_line": 757
+        },
+        {
+          "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 772,
+          "end_line": 772
+        },
+        {
+          "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+          "line": 942,
+          "end_line": 942
+        },
+        {
+          "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+          "line": 753,
+          "end_line": 753
+        },
+        {
+          "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+          "line": 644,
+          "end_line": 644
+        },
+        {
+          "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+          "line": 950,
+          "end_line": 950
+        },
+        {
+          "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+          "line": 956,
+          "end_line": 956
+        },
+        {
+          "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+          "line": 948,
+          "end_line": 948
+        },
+        {
+          "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 929,
+          "end_line": 929
+        },
+        {
+          "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 396,
+          "end_line": 396
+        },
+        {
+          "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "line": 404,
+          "end_line": 404
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 398,
+          "end_line": 398
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 398,
+          "end_line": 398
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 398,
+          "end_line": 398
+        },
+        {
+          "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "line": 398,
+          "end_line": 398
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+          "line": 398,
+          "end_line": 398
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+          "line": 395,
+          "end_line": 395
+        },
+        {
+          "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+          "line": 400,
+          "end_line": 400
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 229,
+          "end_line": 229
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 321,
+          "end_line": 321
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 321,
+          "end_line": 321
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 380,
+          "end_line": 380
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 381,
+          "end_line": 381
+        },
+        {
+          "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 173,
+          "end_line": 173
+        },
+        {
+          "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 182,
+          "end_line": 182
+        },
+        {
+          "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "line": 165,
+          "end_line": 165
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+          "line": 173,
+          "end_line": 173
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+          "line": 174,
+          "end_line": 174
+        },
+        {
+          "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+          "line": 167,
+          "end_line": 167
+        },
+        {
+          "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+          "line": 168,
+          "end_line": 168
+        },
+        {
+          "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+          "line": 168,
+          "end_line": 168
+        },
+        {
+          "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 218,
+          "end_line": 218
+        },
+        {
+          "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 186,
+          "end_line": 186
+        },
+        {
+          "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "line": 194,
+          "end_line": 194
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 187,
+          "end_line": 187
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 187,
+          "end_line": 187
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+          "line": 175,
+          "end_line": 175
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 187,
+          "end_line": 187
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+          "line": 170,
+          "end_line": 170
+        },
+        {
+          "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "line": 187,
+          "end_line": 187
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+          "line": 187,
+          "end_line": 187
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+          "line": 184,
+          "end_line": 184
+        },
+        {
+          "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+          "line": 235,
+          "end_line": 235
+        },
+        {
+          "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+          "line": 193,
+          "end_line": 193
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 229,
+          "end_line": 229
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 229,
+          "end_line": 229
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 229,
+          "end_line": 229
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 288,
+          "end_line": 288
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 289,
+          "end_line": 289
+        },
+        {
+          "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+          "line": 200,
+          "end_line": 200
+        },
+        {
+          "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+          "line": 212,
+          "end_line": 212
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "line": 197,
+          "end_line": 197
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+          "line": 222,
+          "end_line": 222
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+          "line": 222,
+          "end_line": 222
+        },
+        {
+          "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+          "line": 203,
+          "end_line": 203
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+          "line": 214,
+          "end_line": 214
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+          "line": 214,
+          "end_line": 214
+        },
+        {
+          "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+          "line": 251,
+          "end_line": 251
+        },
+        {
+          "file": "battle/gpt_battle.py",
+          "line": 380,
+          "end_line": 380
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 398,
+          "end_line": 398
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 454,
+          "end_line": 454
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 407,
+          "end_line": 407
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 392,
+          "end_line": 392
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 403,
+          "end_line": 403
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 414,
+          "end_line": 414
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 392,
+          "end_line": 392
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 403,
+          "end_line": 403
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 414,
+          "end_line": 414
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 409,
+          "end_line": 409
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 453,
+          "end_line": 453
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 453,
+          "end_line": 453
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 576,
+          "end_line": 576
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 627,
+          "end_line": 627
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 612,
+          "end_line": 612
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 612,
+          "end_line": 612
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "line": 614,
+          "end_line": 614
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "line": 733,
+          "end_line": 733
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 615,
+          "end_line": 615
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "line": 611,
+          "end_line": 611
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "line": 616,
+          "end_line": 616
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 501,
+          "end_line": 501
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 210,
+          "end_line": 210
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 218,
+          "end_line": 218
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 219,
+          "end_line": 219
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 219,
+          "end_line": 219
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 219,
+          "end_line": 219
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "line": 219,
+          "end_line": 219
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 220,
+          "end_line": 220
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 223,
+          "end_line": 223
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 220,
+          "end_line": 220
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 217,
+          "end_line": 217
+        },
+        {
+          "file": "original_COT.py",
+          "line": 229,
+          "end_line": 229
+        },
+        {
+          "file": "test1.py",
+          "line": 276,
+          "end_line": 276
+        },
+        {
+          "file": "test1.py",
+          "line": 287,
+          "end_line": 287
+        },
+        {
+          "file": "test1.py",
+          "line": 298,
+          "end_line": 298
+        },
+        {
+          "file": "test3.py",
+          "line": 276,
+          "end_line": 276
+        },
+        {
+          "file": "test3.py",
+          "line": 287,
+          "end_line": 287
+        },
+        {
+          "file": "test3.py",
+          "line": 298,
+          "end_line": 298
+        },
+        {
+          "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 499,
+          "end_line": 499
+        },
+        {
+          "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 486,
+          "end_line": 486
+        },
+        {
+          "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 501,
+          "end_line": 501
+        },
+        {
+          "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+          "line": 479,
+          "end_line": 479
+        },
+        {
+          "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+          "line": 501,
+          "end_line": 501
+        },
+        {
+          "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 489,
+          "end_line": 489
+        },
+        {
+          "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+          "line": 477,
+          "end_line": 477
+        },
+        {
+          "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+          "line": 477,
+          "end_line": 477
+        },
+        {
+          "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 397,
+          "end_line": 397
+        },
+        {
+          "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 407,
+          "end_line": 407
+        },
+        {
+          "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 394,
+          "end_line": 394
+        },
+        {
+          "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 409,
+          "end_line": 409
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 387,
+          "end_line": 387
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 409,
+          "end_line": 409
+        },
+        {
+          "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 397,
+          "end_line": 397
+        },
+        {
+          "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 312,
+          "end_line": 312
+        },
+        {
+          "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 398,
+          "end_line": 398
+        },
+        {
+          "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 305,
+          "end_line": 305
+        }
+      ],
+      "evidence": {
+        "method": "AST assignment/control-flow inspection",
+        "policy": "合理回退策略可以保留，但必须单独统计其贡献，勿把所有回退当成模型自主答案。"
+      }
+    },
+    {
+      "id": "INF-06",
+      "title": "层次脚本记录DO_SAMPLE=False但调用没有传入",
+      "status": "confirmed",
+      "severity": "P1",
+      "description": "DO_SAMPLE写入settings，实际generate参数do_sample=DO_SAMPLE被注释；涉及多个模型而非只有Qwen。",
+      "impact": "effective配置可能来自模型generation_config，与保存的false不符；不能按注释或settings倒推历史解码。",
+      "recommendation": "按实验意图显式传参，并保存合并后的model.generation_config和调用覆盖值；历史文件保留原样并标记不确定。",
+      "locations": [
+        {
+          "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 455,
+          "end_line": 455
+        },
+        {
+          "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 554,
+          "end_line": 554
+        },
+        {
+          "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 469,
+          "end_line": 469
+        },
+        {
+          "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 569,
+          "end_line": 569
+        },
+        {
+          "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+          "line": 447,
+          "end_line": 447
+        },
+        {
+          "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+          "line": 547,
+          "end_line": 547
+        },
+        {
+          "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+          "line": 469,
+          "end_line": 469
+        },
+        {
+          "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+          "line": 569,
+          "end_line": 569
+        },
+        {
+          "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 457,
+          "end_line": 457
+        },
+        {
+          "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 557,
+          "end_line": 557
+        },
+        {
+          "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+          "line": 445,
+          "end_line": 445
+        },
+        {
+          "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+          "line": 545,
+          "end_line": 545
+        },
+        {
+          "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+          "line": 445,
+          "end_line": 445
+        },
+        {
+          "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+          "line": 545,
+          "end_line": 545
+        },
+        {
+          "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 363,
+          "end_line": 363
+        },
+        {
+          "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 462,
+          "end_line": 462
+        },
+        {
+          "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 377,
+          "end_line": 377
+        },
+        {
+          "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 477,
+          "end_line": 477
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 355,
+          "end_line": 355
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 455,
+          "end_line": 455
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 377,
+          "end_line": 377
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 477,
+          "end_line": 477
+        },
+        {
+          "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 365,
+          "end_line": 365
+        },
+        {
+          "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 465,
+          "end_line": 465
+        },
+        {
+          "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 366,
+          "end_line": 366
+        },
+        {
+          "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 466,
+          "end_line": 466
+        }
+      ],
+      "evidence": {
+        "method": "unused-parameter and settings inspection",
+        "official_Qwen_configs_do_sample": true
+      }
+    },
+    {
+      "id": "INF-07",
+      "title": "Qwen14B binary零样本显式greedy不同于相邻条件",
+      "status": "confirmed",
+      "severity": "P2",
+      "description": "Qwen3-14B binary零样本明确do_sample=False；8B等条件未覆盖且官方原配置为采样。",
+      "impact": "模型/提示对比包含解码策略差异，结果不宜解释成仅提示造成。",
+      "recommendation": "披露该条件实际策略；如需控制变量比较，仅重评受影响条件并固定/记录有效配置。",
+      "locations": [
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 191,
+          "end_line": 191
+        }
+      ],
+      "evidence": {
+        "official_source_artifact": "../paper_generation_audit_20261016/qwen_official_audit.json",
+        "historical_effective_config": "conditional on original server checkpoint config"
+      }
+    },
+    {
+      "id": "INF-08",
+      "title": "binary阶段完整原始输出被舍弃",
+      "status": "confirmed",
+      "severity": "P1",
+      "description": "A类4个Qwen3 binary-CoT/native源文件把最终raw_output压成缩写；B类其余binary源文件通常保留最终选择文本或候选，但不持久化各标签阶段1原文，旧bin_test甚至只保存布尔候选和解释。阶段完成原因均未记录。",
+      "impact": "A类不能恢复最终生成，A/B类均不能离线重放全部yes/no解析；并非所有binary的最终raw都仅有缩写。",
+      "recommendation": "每个样本保存各标签调用、候选、仲裁、回退、完整原文和finish_reason；现有缩写字段改名parsed_output。",
+      "locations": [
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 391,
+          "end_line": 391
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 437,
+          "end_line": 437
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 447,
+          "end_line": 447
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 494,
+          "end_line": 494
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 400,
+          "end_line": 400
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 447,
+          "end_line": 447
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 382,
+          "end_line": 382
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 432,
+          "end_line": 432
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 382,
+          "end_line": 382
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 432,
+          "end_line": 432
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 402,
+          "end_line": 402
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 449,
+          "end_line": 449
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 446,
+          "end_line": 446
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 493,
+          "end_line": 493
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 446,
+          "end_line": 446
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 493,
+          "end_line": 493
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 569,
+          "end_line": 569
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 621,
+          "end_line": 621
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 620,
+          "end_line": 620
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 666,
+          "end_line": 666
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 605,
+          "end_line": 605
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 652,
+          "end_line": 652
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 605,
+          "end_line": 605
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 652,
+          "end_line": 652
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "line": 607,
+          "end_line": 607
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "line": 654,
+          "end_line": 654
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "line": 726,
+          "end_line": 726
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "line": 773,
+          "end_line": 773
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 608,
+          "end_line": 608
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 655,
+          "end_line": 655
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "line": 604,
+          "end_line": 604
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "line": 651,
+          "end_line": 651
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "line": 609,
+          "end_line": 609
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "line": 656,
+          "end_line": 656
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 494,
+          "end_line": 494
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 546,
+          "end_line": 546
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 203,
+          "end_line": 203
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 249,
+          "end_line": 249
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 211,
+          "end_line": 211
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 258,
+          "end_line": 258
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 212,
+          "end_line": 212
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 259,
+          "end_line": 259
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 212,
+          "end_line": 212
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 259,
+          "end_line": 259
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 212,
+          "end_line": 212
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 259,
+          "end_line": 259
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "line": 212,
+          "end_line": 212
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "line": 259,
+          "end_line": 259
+        },
+        {
+          "file": "bisection_zero_shot/bin_test.py",
+          "line": 114,
+          "end_line": 114
+        },
+        {
+          "file": "bisection_zero_shot/bin_test.py",
+          "line": 177,
+          "end_line": 177
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 213,
+          "end_line": 213
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 260,
+          "end_line": 260
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 216,
+          "end_line": 216
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 263,
+          "end_line": 263
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 213,
+          "end_line": 213
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 260,
+          "end_line": 260
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 210,
+          "end_line": 210
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 262,
+          "end_line": 262
+        },
+        {
+          "file": "test1.py",
+          "line": 266,
+          "end_line": 266
+        },
+        {
+          "file": "test1.py",
+          "line": 316,
+          "end_line": 316
+        },
+        {
+          "file": "test3.py",
+          "line": 266,
+          "end_line": 266
+        },
+        {
+          "file": "test3.py",
+          "line": 316,
+          "end_line": 316
+        }
+      ],
+      "evidence": {
+        "A_label_only": [
+          {
+            "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+            "line": 382,
+            "end_line": 382
+          },
+          {
+            "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+            "line": 432,
+            "end_line": 432
+          },
+          {
+            "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+            "line": 382,
+            "end_line": 382
+          },
+          {
+            "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+            "line": 432,
+            "end_line": 432
+          },
+          {
+            "file": "test1.py",
+            "line": 266,
+            "end_line": 266
+          },
+          {
+            "file": "test1.py",
+            "line": 316,
+            "end_line": 316
+          },
+          {
+            "file": "test3.py",
+            "line": 266,
+            "end_line": 266
+          },
+          {
+            "file": "test3.py",
+            "line": 316,
+            "end_line": 316
+          }
+        ],
+        "B_stage1_raw_missing": [
+          {
+            "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+            "line": 391,
+            "end_line": 391
+          },
+          {
+            "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+            "line": 437,
+            "end_line": 437
+          },
+          {
+            "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+            "line": 447,
+            "end_line": 447
+          },
+          {
+            "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+            "line": 494,
+            "end_line": 494
+          },
+          {
+            "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+            "line": 400,
+            "end_line": 400
+          },
+          {
+            "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+            "line": 447,
+            "end_line": 447
+          },
+          {
+            "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+            "line": 402,
+            "end_line": 402
+          },
+          {
+            "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+            "line": 449,
+            "end_line": 449
+          },
+          {
+            "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+            "line": 446,
+            "end_line": 446
+          },
+          {
+            "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+            "line": 493,
+            "end_line": 493
+          },
+          {
+            "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+            "line": 446,
+            "end_line": 446
+          },
+          {
+            "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+            "line": 493,
+            "end_line": 493
+          },
+          {
+            "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+            "line": 569,
+            "end_line": 569
+          },
+          {
+            "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+            "line": 621,
+            "end_line": 621
+          },
+          {
+            "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+            "line": 620,
+            "end_line": 620
+          },
+          {
+            "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+            "line": 666,
+            "end_line": 666
+          },
+          {
+            "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+            "line": 605,
+            "end_line": 605
+          },
+          {
+            "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+            "line": 652,
+            "end_line": 652
+          },
+          {
+            "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+            "line": 605,
+            "end_line": 605
+          },
+          {
+            "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+            "line": 652,
+            "end_line": 652
+          },
+          {
+            "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+            "line": 607,
+            "end_line": 607
+          },
+          {
+            "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+            "line": 654,
+            "end_line": 654
+          },
+          {
+            "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+            "line": 726,
+            "end_line": 726
+          },
+          {
+            "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+            "line": 773,
+            "end_line": 773
+          },
+          {
+            "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+            "line": 608,
+            "end_line": 608
+          },
+          {
+            "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+            "line": 655,
+            "end_line": 655
+          },
+          {
+            "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+            "line": 604,
+            "end_line": 604
+          },
+          {
+            "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+            "line": 651,
+            "end_line": 651
+          },
+          {
+            "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+            "line": 609,
+            "end_line": 609
+          },
+          {
+            "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+            "line": 656,
+            "end_line": 656
+          },
+          {
+            "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+            "line": 494,
+            "end_line": 494
+          },
+          {
+            "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+            "line": 546,
+            "end_line": 546
+          },
+          {
+            "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+            "line": 203,
+            "end_line": 203
+          },
+          {
+            "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+            "line": 249,
+            "end_line": 249
+          },
+          {
+            "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+            "line": 211,
+            "end_line": 211
+          },
+          {
+            "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+            "line": 258,
+            "end_line": 258
+          },
+          {
+            "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+            "line": 212,
+            "end_line": 212
+          },
+          {
+            "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+            "line": 259,
+            "end_line": 259
+          },
+          {
+            "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+            "line": 212,
+            "end_line": 212
+          },
+          {
+            "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+            "line": 259,
+            "end_line": 259
+          },
+          {
+            "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+            "line": 212,
+            "end_line": 212
+          },
+          {
+            "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+            "line": 259,
+            "end_line": 259
+          },
+          {
+            "file": "bisection_zero_shot/bin_new_test.py",
+            "line": 212,
+            "end_line": 212
+          },
+          {
+            "file": "bisection_zero_shot/bin_new_test.py",
+            "line": 259,
+            "end_line": 259
+          },
+          {
+            "file": "bisection_zero_shot/bin_test.py",
+            "line": 114,
+            "end_line": 114
+          },
+          {
+            "file": "bisection_zero_shot/bin_test.py",
+            "line": 177,
+            "end_line": 177
+          },
+          {
+            "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+            "line": 213,
+            "end_line": 213
+          },
+          {
+            "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+            "line": 260,
+            "end_line": 260
+          },
+          {
+            "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+            "line": 216,
+            "end_line": 216
+          },
+          {
+            "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+            "line": 263,
+            "end_line": 263
+          },
+          {
+            "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+            "line": 213,
+            "end_line": 213
+          },
+          {
+            "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+            "line": 260,
+            "end_line": 260
+          },
+          {
+            "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+            "line": 210,
+            "end_line": 210
+          },
+          {
+            "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+            "line": 262,
+            "end_line": 262
+          }
+        ],
+        "Qwen_binary_CoT_runs": 8,
+        "n": 3144,
+        "observed_Qwen_CoT_all_raw_output_already_parsed": true,
+        "source_artifact": "../paper_generation_audit_20261016/qwen_official_audit.json"
+      }
+    },
+    {
+      "id": "INF-09",
+      "title": "依赖未固定的pipeline内容/assistantfinal字符串约定",
+      "status": "current-risk",
+      "severity": "P2",
+      "description": "GPT-OSS路径假定generated_text是消息列表并用assistantfinal字符串切分；没有统一校验消息role、channel及最终答案是否存在。",
+      "impact": "不同Transformers/Harmony输出结构或未完成final时，可能异常或把analysis/其他内容送入宽松标签搜索。标准pipeline消息结构本身并非错误。",
+      "recommendation": "固定Transformers版本，保存结构化完整响应；明确提取最后assistant final内容，缺失final标记为失败。加入正常及截断结构的纯解析测试。",
+      "locations": [
+        {
+          "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 898,
+          "end_line": 898
+        },
+        {
+          "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+          "line": 369,
+          "end_line": 369
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 284,
+          "end_line": 284
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 354,
+          "end_line": 354
+        },
+        {
+          "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 187,
+          "end_line": 187
+        },
+        {
+          "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+          "line": 204,
+          "end_line": 204
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 192,
+          "end_line": 192
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 262,
+          "end_line": 262
+        },
+        {
+          "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+          "line": 219,
+          "end_line": 219
+        },
+        {
+          "file": "battle/gpt_battle.py",
+          "line": 195,
+          "end_line": 195
+        },
+        {
+          "file": "battle/gpt_battle.py",
+          "line": 281,
+          "end_line": 281
+        },
+        {
+          "file": "battle/gpt_battle.py",
+          "line": 333,
+          "end_line": 333
+        },
+        {
+          "file": "battle/test.py",
+          "line": 212,
+          "end_line": 212
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 553,
+          "end_line": 553
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 478,
+          "end_line": 478
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 194,
+          "end_line": 194
+        },
+        {
+          "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 371,
+          "end_line": 371
+        },
+        {
+          "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 279,
+          "end_line": 279
+        }
+      ],
+      "evidence": {
+        "status_boundary": "需原包版本和结构化输出确认实际是否发生；本次仅证实源码缺少校验，未运行模型。"
+      }
+    },
+    {
+      "id": "INF-10",
+      "title": "缺少样本级种子、完整有效配置及版本快照",
+      "status": "needs-history",
+      "severity": "P2",
+      "description": "生成调用常省略可从checkpoint继承的采样值，未固定revision/环境；多数生成脚本没有设置随机种子。",
+      "impact": "不能仅凭当前脚本重建历史实际配置；省略do_sample不等于greedy。单次随机结果缺少跨种子不确定性。",
+      "recommendation": "保存每臂有效generation_config、模板/输入hash、checkpoint revision、依赖版本、seed、原始长度和设备。对新随机结果使用预先约定的重复/配对分析。",
+      "locations": [
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 730,
+          "end_line": 738
+        },
+        {
+          "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 733,
+          "end_line": 737
+        },
+        {
+          "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+          "line": 920,
+          "end_line": 923
+        },
+        {
+          "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+          "line": 727,
+          "end_line": 734
+        },
+        {
+          "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+          "line": 619,
+          "end_line": 625
+        },
+        {
+          "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+          "line": 926,
+          "end_line": 932
+        },
+        {
+          "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+          "line": 932,
+          "end_line": 938
+        },
+        {
+          "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+          "line": 926,
+          "end_line": 930
+        },
+        {
+          "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 891,
+          "end_line": 894
+        },
+        {
+          "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 369,
+          "end_line": 377
+        },
+        {
+          "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "line": 371,
+          "end_line": 375
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 371,
+          "end_line": 377
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 371,
+          "end_line": 377
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 371,
+          "end_line": 377
+        },
+        {
+          "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "line": 375,
+          "end_line": 378
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+          "line": 375,
+          "end_line": 378
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+          "line": 374,
+          "end_line": 377
+        },
+        {
+          "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+          "line": 362,
+          "end_line": 365
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 163,
+          "end_line": 169
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 209,
+          "end_line": 215
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 255,
+          "end_line": 261
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 301,
+          "end_line": 307
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 255,
+          "end_line": 261
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 301,
+          "end_line": 307
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 313,
+          "end_line": 313
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 324,
+          "end_line": 324
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 335,
+          "end_line": 335
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 352,
+          "end_line": 352
+        },
+        {
+          "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 146,
+          "end_line": 154
+        },
+        {
+          "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 150,
+          "end_line": 154
+        },
+        {
+          "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "line": 143,
+          "end_line": 146
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+          "line": 147,
+          "end_line": 154
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+          "line": 149,
+          "end_line": 155
+        },
+        {
+          "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+          "line": 146,
+          "end_line": 149
+        },
+        {
+          "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+          "line": 147,
+          "end_line": 150
+        },
+        {
+          "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+          "line": 146,
+          "end_line": 150
+        },
+        {
+          "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 180,
+          "end_line": 183
+        },
+        {
+          "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 159,
+          "end_line": 167
+        },
+        {
+          "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "line": 161,
+          "end_line": 165
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 160,
+          "end_line": 166
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 160,
+          "end_line": 166
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+          "line": 149,
+          "end_line": 155
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 160,
+          "end_line": 166
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+          "line": 144,
+          "end_line": 150
+        },
+        {
+          "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "line": 164,
+          "end_line": 167
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+          "line": 164,
+          "end_line": 167
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+          "line": 163,
+          "end_line": 166
+        },
+        {
+          "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+          "line": 197,
+          "end_line": 200
+        },
+        {
+          "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+          "line": 170,
+          "end_line": 173
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 163,
+          "end_line": 169
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 209,
+          "end_line": 215
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 163,
+          "end_line": 169
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 209,
+          "end_line": 215
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 163,
+          "end_line": 169
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 209,
+          "end_line": 215
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 221,
+          "end_line": 221
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 232,
+          "end_line": 232
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 243,
+          "end_line": 243
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+          "line": 260,
+          "end_line": 260
+        },
+        {
+          "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+          "line": 169,
+          "end_line": 176
+        },
+        {
+          "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+          "line": 176,
+          "end_line": 180
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "line": 170,
+          "end_line": 173
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+          "line": 185,
+          "end_line": 191
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+          "line": 185,
+          "end_line": 191
+        },
+        {
+          "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+          "line": 177,
+          "end_line": 180
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+          "line": 188,
+          "end_line": 191
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+          "line": 188,
+          "end_line": 191
+        },
+        {
+          "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+          "line": 212,
+          "end_line": 215
+        },
+        {
+          "file": "battle/gpt_battle.py",
+          "line": 279,
+          "end_line": 279
+        },
+        {
+          "file": "battle/gpt_battle.py",
+          "line": 331,
+          "end_line": 331
+        },
+        {
+          "file": "battle/test.py",
+          "line": 210,
+          "end_line": 210
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 368,
+          "end_line": 376
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 423,
+          "end_line": 432
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 376,
+          "end_line": 385
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 349,
+          "end_line": 355
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 349,
+          "end_line": 355
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 378,
+          "end_line": 387
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 427,
+          "end_line": 431
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 427,
+          "end_line": 431
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 547,
+          "end_line": 550
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 597,
+          "end_line": 605
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 581,
+          "end_line": 590
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 581,
+          "end_line": 590
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "line": 583,
+          "end_line": 592
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "line": 702,
+          "end_line": 711
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 584,
+          "end_line": 593
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "line": 585,
+          "end_line": 589
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "line": 585,
+          "end_line": 594
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 472,
+          "end_line": 475
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 180,
+          "end_line": 188
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 187,
+          "end_line": 196
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 188,
+          "end_line": 197
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 188,
+          "end_line": 197
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 188,
+          "end_line": 197
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "line": 188,
+          "end_line": 197
+        },
+        {
+          "file": "bisection_zero_shot/bin_test.py",
+          "line": 101,
+          "end_line": 108
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 189,
+          "end_line": 198
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 197,
+          "end_line": 201
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 189,
+          "end_line": 198
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 188,
+          "end_line": 191
+        },
+        {
+          "file": "original_COT.py",
+          "line": 170,
+          "end_line": 178
+        },
+        {
+          "file": "test1.py",
+          "line": 233,
+          "end_line": 239
+        },
+        {
+          "file": "test3.py",
+          "line": 233,
+          "end_line": 239
+        },
+        {
+          "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 466,
+          "end_line": 473
+        },
+        {
+          "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 452,
+          "end_line": 460
+        },
+        {
+          "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 466,
+          "end_line": 475
+        },
+        {
+          "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+          "line": 444,
+          "end_line": 453
+        },
+        {
+          "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+          "line": 466,
+          "end_line": 475
+        },
+        {
+          "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 454,
+          "end_line": 463
+        },
+        {
+          "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+          "line": 442,
+          "end_line": 451
+        },
+        {
+          "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+          "line": 442,
+          "end_line": 451
+        },
+        {
+          "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 365,
+          "end_line": 368
+        },
+        {
+          "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 374,
+          "end_line": 381
+        },
+        {
+          "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 360,
+          "end_line": 368
+        },
+        {
+          "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 374,
+          "end_line": 383
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 352,
+          "end_line": 361
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 374,
+          "end_line": 383
+        },
+        {
+          "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 362,
+          "end_line": 371
+        },
+        {
+          "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 281,
+          "end_line": 285
+        },
+        {
+          "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 363,
+          "end_line": 372
+        },
+        {
+          "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 273,
+          "end_line": 276
+        }
+      ],
+      "evidence": {
+        "seedless_generation_call_locations": 121,
+        "unpinned_loader_locations": [
+          {
+            "file": "ICL_Ob_qwen-8b_new.py",
+            "line": 62,
+            "end_line": 62
+          },
+          {
+            "file": "ICL_Ob_qwen-8b_new.py",
+            "line": 65,
+            "end_line": 65
+          },
+          {
+            "file": "ICL_Ob_qwen-8b_new.py",
+            "line": 304,
+            "end_line": 304
+          },
+          {
+            "file": "ICL_Ob_qwen-8b_new.py",
+            "line": 305,
+            "end_line": 305
+          },
+          {
+            "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+            "line": 712,
+            "end_line": 712
+          },
+          {
+            "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+            "line": 713,
+            "end_line": 713
+          },
+          {
+            "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+            "line": 723,
+            "end_line": 728
+          },
+          {
+            "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+            "line": 902,
+            "end_line": 902
+          },
+          {
+            "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+            "line": 903,
+            "end_line": 903
+          },
+          {
+            "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+            "line": 708,
+            "end_line": 708
+          },
+          {
+            "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+            "line": 709,
+            "end_line": 709
+          },
+          {
+            "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+            "line": 600,
+            "end_line": 600
+          },
+          {
+            "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+            "line": 601,
+            "end_line": 601
+          },
+          {
+            "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+            "line": 911,
+            "end_line": 911
+          },
+          {
+            "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+            "line": 912,
+            "end_line": 912
+          },
+          {
+            "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+            "line": 917,
+            "end_line": 917
+          },
+          {
+            "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+            "line": 918,
+            "end_line": 918
+          },
+          {
+            "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+            "line": 911,
+            "end_line": 911
+          },
+          {
+            "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+            "line": 912,
+            "end_line": 912
+          },
+          {
+            "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+            "line": 872,
+            "end_line": 877
+          },
+          {
+            "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+            "line": 351,
+            "end_line": 351
+          },
+          {
+            "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+            "line": 352,
+            "end_line": 352
+          },
+          {
+            "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+            "line": 361,
+            "end_line": 366
+          },
+          {
+            "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+            "line": 353,
+            "end_line": 353
+          },
+          {
+            "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+            "line": 354,
+            "end_line": 354
+          },
+          {
+            "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+            "line": 353,
+            "end_line": 353
+          },
+          {
+            "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+            "line": 354,
+            "end_line": 354
+          },
+          {
+            "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+            "line": 353,
+            "end_line": 353
+          },
+          {
+            "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+            "line": 354,
+            "end_line": 354
+          },
+          {
+            "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+            "line": 360,
+            "end_line": 360
+          },
+          {
+            "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+            "line": 361,
+            "end_line": 361
+          },
+          {
+            "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+            "line": 360,
+            "end_line": 360
+          },
+          {
+            "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+            "line": 361,
+            "end_line": 361
+          },
+          {
+            "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+            "line": 359,
+            "end_line": 359
+          },
+          {
+            "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+            "line": 360,
+            "end_line": 360
+          },
+          {
+            "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+            "line": 343,
+            "end_line": 348
+          },
+          {
+            "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+            "line": 145,
+            "end_line": 145
+          },
+          {
+            "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+            "line": 146,
+            "end_line": 146
+          },
+          {
+            "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+            "line": 237,
+            "end_line": 237
+          },
+          {
+            "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+            "line": 238,
+            "end_line": 238
+          },
+          {
+            "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+            "line": 237,
+            "end_line": 237
+          },
+          {
+            "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+            "line": 238,
+            "end_line": 238
+          },
+          {
+            "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+            "line": 246,
+            "end_line": 251
+          },
+          {
+            "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+            "line": 128,
+            "end_line": 128
+          },
+          {
+            "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+            "line": 129,
+            "end_line": 129
+          },
+          {
+            "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+            "line": 140,
+            "end_line": 145
+          },
+          {
+            "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+            "line": 124,
+            "end_line": 124
+          },
+          {
+            "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+            "line": 125,
+            "end_line": 125
+          },
+          {
+            "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+            "line": 128,
+            "end_line": 128
+          },
+          {
+            "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+            "line": 129,
+            "end_line": 129
+          },
+          {
+            "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+            "line": 130,
+            "end_line": 130
+          },
+          {
+            "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+            "line": 131,
+            "end_line": 131
+          },
+          {
+            "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+            "line": 131,
+            "end_line": 131
+          },
+          {
+            "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+            "line": 132,
+            "end_line": 132
+          },
+          {
+            "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+            "line": 132,
+            "end_line": 132
+          },
+          {
+            "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+            "line": 133,
+            "end_line": 133
+          },
+          {
+            "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+            "line": 131,
+            "end_line": 131
+          },
+          {
+            "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+            "line": 132,
+            "end_line": 132
+          },
+          {
+            "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+            "line": 161,
+            "end_line": 166
+          },
+          {
+            "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+            "line": 141,
+            "end_line": 141
+          },
+          {
+            "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+            "line": 142,
+            "end_line": 142
+          },
+          {
+            "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+            "line": 151,
+            "end_line": 156
+          },
+          {
+            "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+            "line": 142,
+            "end_line": 142
+          },
+          {
+            "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+            "line": 143,
+            "end_line": 143
+          },
+          {
+            "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+            "line": 142,
+            "end_line": 142
+          },
+          {
+            "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+            "line": 143,
+            "end_line": 143
+          },
+          {
+            "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+            "line": 130,
+            "end_line": 130
+          },
+          {
+            "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+            "line": 131,
+            "end_line": 131
+          },
+          {
+            "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+            "line": 142,
+            "end_line": 142
+          },
+          {
+            "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+            "line": 143,
+            "end_line": 143
+          },
+          {
+            "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+            "line": 125,
+            "end_line": 125
+          },
+          {
+            "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+            "line": 126,
+            "end_line": 126
+          },
+          {
+            "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+            "line": 149,
+            "end_line": 149
+          },
+          {
+            "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+            "line": 150,
+            "end_line": 150
+          },
+          {
+            "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+            "line": 149,
+            "end_line": 149
+          },
+          {
+            "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+            "line": 150,
+            "end_line": 150
+          },
+          {
+            "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+            "line": 148,
+            "end_line": 148
+          },
+          {
+            "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+            "line": 149,
+            "end_line": 149
+          },
+          {
+            "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+            "line": 178,
+            "end_line": 183
+          },
+          {
+            "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+            "line": 155,
+            "end_line": 155
+          },
+          {
+            "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+            "line": 156,
+            "end_line": 156
+          },
+          {
+            "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+            "line": 145,
+            "end_line": 145
+          },
+          {
+            "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+            "line": 146,
+            "end_line": 146
+          },
+          {
+            "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+            "line": 145,
+            "end_line": 145
+          },
+          {
+            "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+            "line": 146,
+            "end_line": 146
+          },
+          {
+            "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+            "line": 145,
+            "end_line": 145
+          },
+          {
+            "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+            "line": 146,
+            "end_line": 146
+          },
+          {
+            "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+            "line": 154,
+            "end_line": 159
+          },
+          {
+            "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+            "line": 152,
+            "end_line": 152
+          },
+          {
+            "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+            "line": 153,
+            "end_line": 153
+          },
+          {
+            "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+            "line": 168,
+            "end_line": 173
+          },
+          {
+            "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+            "line": 152,
+            "end_line": 152
+          },
+          {
+            "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+            "line": 153,
+            "end_line": 153
+          },
+          {
+            "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+            "line": 167,
+            "end_line": 167
+          },
+          {
+            "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+            "line": 168,
+            "end_line": 168
+          },
+          {
+            "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+            "line": 167,
+            "end_line": 167
+          },
+          {
+            "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+            "line": 168,
+            "end_line": 168
+          },
+          {
+            "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+            "line": 162,
+            "end_line": 162
+          },
+          {
+            "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+            "line": 163,
+            "end_line": 163
+          },
+          {
+            "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+            "line": 173,
+            "end_line": 173
+          },
+          {
+            "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+            "line": 174,
+            "end_line": 174
+          },
+          {
+            "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+            "line": 173,
+            "end_line": 173
+          },
+          {
+            "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+            "line": 174,
+            "end_line": 174
+          },
+          {
+            "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+            "line": 194,
+            "end_line": 199
+          },
+          {
+            "file": "battle/gpt_battle.py",
+            "line": 252,
+            "end_line": 257
+          },
+          {
+            "file": "battle/test.py",
+            "line": 179,
+            "end_line": 184
+          },
+          {
+            "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+            "line": 338,
+            "end_line": 342
+          },
+          {
+            "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+            "line": 343,
+            "end_line": 343
+          },
+          {
+            "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+            "line": 412,
+            "end_line": 412
+          },
+          {
+            "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+            "line": 413,
+            "end_line": 413
+          },
+          {
+            "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+            "line": 365,
+            "end_line": 365
+          },
+          {
+            "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+            "line": 366,
+            "end_line": 366
+          },
+          {
+            "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+            "line": 336,
+            "end_line": 336
+          },
+          {
+            "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+            "line": 337,
+            "end_line": 337
+          },
+          {
+            "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+            "line": 336,
+            "end_line": 336
+          },
+          {
+            "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+            "line": 337,
+            "end_line": 337
+          },
+          {
+            "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+            "line": 367,
+            "end_line": 367
+          },
+          {
+            "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+            "line": 368,
+            "end_line": 368
+          },
+          {
+            "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+            "line": 415,
+            "end_line": 415
+          },
+          {
+            "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+            "line": 416,
+            "end_line": 416
+          },
+          {
+            "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+            "line": 415,
+            "end_line": 415
+          },
+          {
+            "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+            "line": 416,
+            "end_line": 416
+          },
+          {
+            "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+            "line": 535,
+            "end_line": 540
+          },
+          {
+            "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+            "line": 567,
+            "end_line": 571
+          },
+          {
+            "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+            "line": 572,
+            "end_line": 572
+          },
+          {
+            "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+            "line": 570,
+            "end_line": 570
+          },
+          {
+            "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+            "line": 571,
+            "end_line": 571
+          },
+          {
+            "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+            "line": 570,
+            "end_line": 570
+          },
+          {
+            "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+            "line": 571,
+            "end_line": 571
+          },
+          {
+            "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+            "line": 572,
+            "end_line": 572
+          },
+          {
+            "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+            "line": 573,
+            "end_line": 573
+          },
+          {
+            "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+            "line": 691,
+            "end_line": 691
+          },
+          {
+            "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+            "line": 692,
+            "end_line": 692
+          },
+          {
+            "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+            "line": 573,
+            "end_line": 573
+          },
+          {
+            "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+            "line": 574,
+            "end_line": 574
+          },
+          {
+            "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+            "line": 573,
+            "end_line": 573
+          },
+          {
+            "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+            "line": 574,
+            "end_line": 574
+          },
+          {
+            "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+            "line": 574,
+            "end_line": 574
+          },
+          {
+            "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+            "line": 575,
+            "end_line": 575
+          },
+          {
+            "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+            "line": 460,
+            "end_line": 465
+          },
+          {
+            "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+            "line": 150,
+            "end_line": 154
+          },
+          {
+            "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+            "line": 155,
+            "end_line": 155
+          },
+          {
+            "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+            "line": 176,
+            "end_line": 176
+          },
+          {
+            "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+            "line": 177,
+            "end_line": 177
+          },
+          {
+            "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+            "line": 177,
+            "end_line": 177
+          },
+          {
+            "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+            "line": 178,
+            "end_line": 178
+          },
+          {
+            "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+            "line": 177,
+            "end_line": 177
+          },
+          {
+            "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+            "line": 178,
+            "end_line": 178
+          },
+          {
+            "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+            "line": 177,
+            "end_line": 177
+          },
+          {
+            "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+            "line": 178,
+            "end_line": 178
+          },
+          {
+            "file": "bisection_zero_shot/bin_new_test.py",
+            "line": 177,
+            "end_line": 177
+          },
+          {
+            "file": "bisection_zero_shot/bin_new_test.py",
+            "line": 178,
+            "end_line": 178
+          },
+          {
+            "file": "bisection_zero_shot/bin_test.py",
+            "line": 161,
+            "end_line": 161
+          },
+          {
+            "file": "bisection_zero_shot/bin_test.py",
+            "line": 162,
+            "end_line": 162
+          },
+          {
+            "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+            "line": 178,
+            "end_line": 178
+          },
+          {
+            "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+            "line": 179,
+            "end_line": 179
+          },
+          {
+            "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+            "line": 178,
+            "end_line": 178
+          },
+          {
+            "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+            "line": 179,
+            "end_line": 179
+          },
+          {
+            "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+            "line": 178,
+            "end_line": 178
+          },
+          {
+            "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+            "line": 179,
+            "end_line": 179
+          },
+          {
+            "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+            "line": 176,
+            "end_line": 181
+          },
+          {
+            "file": "original_COT.py",
+            "line": 143,
+            "end_line": 143
+          },
+          {
+            "file": "original_COT.py",
+            "line": 150,
+            "end_line": 154
+          },
+          {
+            "file": "test1.py",
+            "line": 220,
+            "end_line": 220
+          },
+          {
+            "file": "test1.py",
+            "line": 221,
+            "end_line": 221
+          },
+          {
+            "file": "test3.py",
+            "line": 220,
+            "end_line": 220
+          },
+          {
+            "file": "test3.py",
+            "line": 221,
+            "end_line": 221
+          },
+          {
+            "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+            "line": 433,
+            "end_line": 433
+          },
+          {
+            "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+            "line": 434,
+            "end_line": 434
+          },
+          {
+            "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+            "line": 419,
+            "end_line": 419
+          },
+          {
+            "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+            "line": 420,
+            "end_line": 420
+          },
+          {
+            "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+            "line": 433,
+            "end_line": 433
+          },
+          {
+            "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+            "line": 434,
+            "end_line": 434
+          },
+          {
+            "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+            "line": 411,
+            "end_line": 411
+          },
+          {
+            "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+            "line": 412,
+            "end_line": 412
+          },
+          {
+            "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+            "line": 433,
+            "end_line": 433
+          },
+          {
+            "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+            "line": 434,
+            "end_line": 434
+          },
+          {
+            "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+            "line": 421,
+            "end_line": 421
+          },
+          {
+            "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+            "line": 422,
+            "end_line": 422
+          },
+          {
+            "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+            "line": 409,
+            "end_line": 409
+          },
+          {
+            "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+            "line": 410,
+            "end_line": 410
+          },
+          {
+            "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+            "line": 409,
+            "end_line": 409
+          },
+          {
+            "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+            "line": 410,
+            "end_line": 410
+          },
+          {
+            "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+            "line": 354,
+            "end_line": 359
+          },
+          {
+            "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+            "line": 341,
+            "end_line": 341
+          },
+          {
+            "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+            "line": 342,
+            "end_line": 342
+          },
+          {
+            "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+            "line": 327,
+            "end_line": 327
+          },
+          {
+            "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+            "line": 328,
+            "end_line": 328
+          },
+          {
+            "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+            "line": 341,
+            "end_line": 341
+          },
+          {
+            "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+            "line": 342,
+            "end_line": 342
+          },
+          {
+            "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+            "line": 319,
+            "end_line": 319
+          },
+          {
+            "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+            "line": 320,
+            "end_line": 320
+          },
+          {
+            "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+            "line": 341,
+            "end_line": 341
+          },
+          {
+            "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+            "line": 342,
+            "end_line": 342
+          },
+          {
+            "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+            "line": 329,
+            "end_line": 329
+          },
+          {
+            "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+            "line": 330,
+            "end_line": 330
+          },
+          {
+            "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+            "line": 268,
+            "end_line": 268
+          },
+          {
+            "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+            "line": 269,
+            "end_line": 269
+          },
+          {
+            "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+            "line": 330,
+            "end_line": 330
+          },
+          {
+            "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+            "line": 331,
+            "end_line": 331
+          },
+          {
+            "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+            "line": 262,
+            "end_line": 267
+          }
+        ],
+        "exception": "非零temperature以及合理max_new_tokens本身均不列为bug。"
+      }
+    },
+    {
+      "id": "INF-11",
+      "title": "输入截断没有记录目标/示例保留情况",
+      "status": "current-risk",
+      "severity": "P2",
+      "description": "多个调用启用truncation=True但没有保存原始token数、截断方向及目标所在位置；少数脚本预算512。",
+      "impact": "右截断超长类别定义/示例提示可能丢掉末尾目标，左截断可能丢规则/示例；仅看到cap不能断言实际已截断。",
+      "recommendation": "在生成前统计真实token长度并验证目标和输出指令保留；超限时显式压缩示例/上下文或跳出计为输入预算失败。",
+      "locations": [
+        {
+          "file": "ICL_Ob_qwen-8b_new.py",
+          "line": 108,
+          "end_line": 108
+        },
+        {
+          "file": "ICL_Ob_qwen-8b_new.py",
+          "line": 313,
+          "end_line": 313
+        },
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 727,
+          "end_line": 728
+        },
+        {
+          "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+          "line": 917,
+          "end_line": 918
+        },
+        {
+          "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+          "line": 724,
+          "end_line": 725
+        },
+        {
+          "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+          "line": 616,
+          "end_line": 617
+        },
+        {
+          "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+          "line": 923,
+          "end_line": 924
+        },
+        {
+          "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+          "line": 929,
+          "end_line": 930
+        },
+        {
+          "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+          "line": 923,
+          "end_line": 924
+        },
+        {
+          "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 366,
+          "end_line": 367
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 368,
+          "end_line": 369
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 368,
+          "end_line": 369
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 368,
+          "end_line": 369
+        },
+        {
+          "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "line": 372,
+          "end_line": 373
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+          "line": 372,
+          "end_line": 373
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+          "line": 371,
+          "end_line": 372
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 160,
+          "end_line": 161
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 207,
+          "end_line": 208
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 252,
+          "end_line": 253
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 299,
+          "end_line": 300
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 252,
+          "end_line": 253
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 299,
+          "end_line": 300
+        },
+        {
+          "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 143,
+          "end_line": 144
+        },
+        {
+          "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "line": 140,
+          "end_line": 141
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+          "line": 144,
+          "end_line": 145
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+          "line": 146,
+          "end_line": 147
+        },
+        {
+          "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+          "line": 143,
+          "end_line": 144
+        },
+        {
+          "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+          "line": 144,
+          "end_line": 145
+        },
+        {
+          "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+          "line": 143,
+          "end_line": 144
+        },
+        {
+          "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 156,
+          "end_line": 157
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 157,
+          "end_line": 158
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 157,
+          "end_line": 158
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+          "line": 146,
+          "end_line": 147
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 157,
+          "end_line": 158
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+          "line": 141,
+          "end_line": 142
+        },
+        {
+          "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "line": 161,
+          "end_line": 162
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+          "line": 161,
+          "end_line": 162
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+          "line": 160,
+          "end_line": 161
+        },
+        {
+          "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+          "line": 167,
+          "end_line": 168
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 160,
+          "end_line": 161
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 207,
+          "end_line": 208
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 160,
+          "end_line": 161
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 207,
+          "end_line": 208
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 160,
+          "end_line": 161
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 207,
+          "end_line": 208
+        },
+        {
+          "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+          "line": 166,
+          "end_line": 167
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "line": 167,
+          "end_line": 168
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+          "line": 182,
+          "end_line": 183
+        },
+        {
+          "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+          "line": 182,
+          "end_line": 183
+        },
+        {
+          "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+          "line": 174,
+          "end_line": 175
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+          "line": 185,
+          "end_line": 186
+        },
+        {
+          "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+          "line": 185,
+          "end_line": 186
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 366,
+          "end_line": 367
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 421,
+          "end_line": 422
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 374,
+          "end_line": 375
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 347,
+          "end_line": 348
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 347,
+          "end_line": 348
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 376,
+          "end_line": 377
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 425,
+          "end_line": 426
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 425,
+          "end_line": 426
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 595,
+          "end_line": 596
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 579,
+          "end_line": 580
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 579,
+          "end_line": 580
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "line": 581,
+          "end_line": 582
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "line": 700,
+          "end_line": 701
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 582,
+          "end_line": 583
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "line": 583,
+          "end_line": 584
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "line": 583,
+          "end_line": 584
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 178,
+          "end_line": 179
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 185,
+          "end_line": 186
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 186,
+          "end_line": 187
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 186,
+          "end_line": 187
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 186,
+          "end_line": 187
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "line": 186,
+          "end_line": 187
+        },
+        {
+          "file": "bisection_zero_shot/bin_test.py",
+          "line": 100,
+          "end_line": 100
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 187,
+          "end_line": 188
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 195,
+          "end_line": 196
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 187,
+          "end_line": 188
+        },
+        {
+          "file": "original_COT.py",
+          "line": 165,
+          "end_line": 166
+        },
+        {
+          "file": "test1.py",
+          "line": 231,
+          "end_line": 232
+        },
+        {
+          "file": "test3.py",
+          "line": 231,
+          "end_line": 232
+        },
+        {
+          "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 463,
+          "end_line": 464
+        },
+        {
+          "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 449,
+          "end_line": 450
+        },
+        {
+          "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 463,
+          "end_line": 464
+        },
+        {
+          "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+          "line": 441,
+          "end_line": 442
+        },
+        {
+          "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+          "line": 463,
+          "end_line": 464
+        },
+        {
+          "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 451,
+          "end_line": 452
+        },
+        {
+          "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+          "line": 439,
+          "end_line": 440
+        },
+        {
+          "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+          "line": 439,
+          "end_line": 440
+        },
+        {
+          "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 371,
+          "end_line": 372
+        },
+        {
+          "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 357,
+          "end_line": 358
+        },
+        {
+          "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 371,
+          "end_line": 372
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 349,
+          "end_line": 350
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 371,
+          "end_line": 372
+        },
+        {
+          "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 359,
+          "end_line": 360
+        },
+        {
+          "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 360,
+          "end_line": 361
+        }
+      ],
+      "evidence": {
+        "method": "AST tokenization call inventory",
+        "historical_boundary": "实际截断比例需当时完整prompt/tokenizer恢复；未据cap大小判定所有条件有错。"
+      }
+    },
+    {
+      "id": "INF-12",
+      "title": "下载工具硬编码认证信息",
+      "status": "confirmed",
+      "severity": "P1",
+      "description": "模型下载工具把认证信息作为字符串字面量传入。此问题属于辅助工具维护范围。",
+      "impact": "源码复制/共享时可能一并传播认证信息；审查产物不包含其值。",
+      "recommendation": "手动移除字面量，改从环境变量或已有Hugging Face登录缓存读取；不要在日志或配置产物中写入认证值。",
+      "locations": [
+        {
+          "file": "download_model.py",
+          "line": 32,
+          "end_line": 32
+        }
+      ],
+      "evidence": {
+        "method": "AST detects string-literal authentication keyword; value intentionally redacted"
+      }
+    },
+    {
+      "id": "INF-13",
+      "title": "旧ICL工具的生成tokenizer被检索tokenizer覆盖",
+      "status": "confirmed",
+      "severity": "P1",
+      "description": "全局tokenizer最初属于Qwen，随后被all-MiniLM-L6-v2的tokenizer覆盖，最终再次传给Qwen生成函数。仅涉及旧ICL工具。",
+      "impact": "如修复启动问题继续执行，输入token ID及特殊标记与生成模型不匹配。不能据此推断论文九模型主实验受影响。",
+      "recommendation": "分别使用generation_tokenizer和embedding_tokenizer，显式传给各自函数；记录各自模型标识。",
+      "locations": [
+        {
+          "file": "ICL_Ob_qwen-8b_new.py",
+          "line": 65,
+          "end_line": 65
+        },
+        {
+          "file": "ICL_Ob_qwen-8b_new.py",
+          "line": 304,
+          "end_line": 305
+        },
+        {
+          "file": "ICL_Ob_qwen-8b_new.py",
+          "line": 413,
+          "end_line": 413
+        }
+      ],
+      "evidence": {
+        "method": "global name rebinding and call-site inspection",
+        "scope": "legacy auxiliary ICL prototype"
+      }
+    },
+    {
+      "id": "INF-14",
+      "title": "Y/N解析把不确定答复当作No",
+      "status": "confirmed",
+      "severity": "P2",
+      "description": "部分Y/N解析使用startswith(\"no\")或更宽的startswith(\"n\")；Not sure被判为no，更宽版本还把Neither option等不确定输出判为no。",
+      "impact": "模型拒答/不确定变成负类投票，影响候选集及后续仲裁路径，无法单独统计格式失败。",
+      "recommendation": "仅接受完整规范化yes/no（可允许严格定义的标点）；不确定、双答案和解释前缀记录unknown。",
+      "locations": [
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 310,
+          "end_line": 319
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 382,
+          "end_line": 392
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 335,
+          "end_line": 345
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 288,
+          "end_line": 301
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 288,
+          "end_line": 301
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 337,
+          "end_line": 347
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 385,
+          "end_line": 395
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 385,
+          "end_line": 395
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 507,
+          "end_line": 516
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 539,
+          "end_line": 548
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 540,
+          "end_line": 550
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 540,
+          "end_line": 550
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "line": 542,
+          "end_line": 552
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "line": 661,
+          "end_line": 671
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 543,
+          "end_line": 553
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "line": 543,
+          "end_line": 553
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "line": 544,
+          "end_line": 554
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 432,
+          "end_line": 441
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 122,
+          "end_line": 131
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 146,
+          "end_line": 156
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 147,
+          "end_line": 157
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 147,
+          "end_line": 157
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 147,
+          "end_line": 157
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "line": 147,
+          "end_line": 157
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 148,
+          "end_line": 158
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 148,
+          "end_line": 158
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 148,
+          "end_line": 158
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 148,
+          "end_line": 157
+        },
+        {
+          "file": "test1.py",
+          "line": 172,
+          "end_line": 185
+        },
+        {
+          "file": "test3.py",
+          "line": 172,
+          "end_line": 185
+        }
+      ],
+      "evidence": [
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 310,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 310,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 382,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 382,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 335,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 335,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "function": "parse_yesno",
+          "line": 288,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "function": "parse_yesno",
+          "line": 288,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 337,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 337,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 385,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 385,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 385,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 385,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 507,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 507,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 539,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 539,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 540,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 540,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 540,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 540,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 542,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 542,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 661,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 661,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 543,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 543,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 543,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 543,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 544,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 544,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 432,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "function": "extract_yes_no",
+          "line": 432,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 122,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 122,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 146,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 146,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 147,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 147,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 147,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 147,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 147,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 147,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "function": "extract_yes_no",
+          "line": 147,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "function": "extract_yes_no",
+          "line": 147,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 148,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 148,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 148,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 148,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 148,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 148,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 148,
+          "input": "Neither option can be determined.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "function": "extract_yes_no",
+          "line": 148,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "test1.py",
+          "function": "parse_yesno",
+          "line": 172,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        },
+        {
+          "file": "test3.py",
+          "function": "parse_yesno",
+          "line": 172,
+          "input": "Not sure.",
+          "expected": "unknown/unk",
+          "actual": "no",
+          "kind": "uncertain_yesno",
+          "synthetic": true
+        }
+      ]
+    },
+    {
+      "id": "INF-15",
+      "title": "旧显式CoT工具没有关闭Qwen3原生thinking",
+      "status": "current-risk",
+      "severity": "P2",
+      "description": "original_COT.py声称使用显式自然语言CoT，但_encode_chat没有传enable_thinking=False，生成阶段又显式采用greedy；当前官方Qwen3模板默认开启thinking。",
+      "impact": "在未修改的官方模板下，阶段2的64-token分类预算可能仍生成原生思考；这是意图与模式控制不一致，非预算本身错误。历史本地模板未知。",
+      "recommendation": "若设计为两阶段显式CoT，明确关闭原生thinking并保留原始输出；若设计为原生thinking，则相应记录模式并验证final段存在。",
+      "locations": [
+        {
+          "file": "original_COT.py",
+          "line": 156,
+          "end_line": 177
+        },
+        {
+          "file": "original_COT.py",
+          "line": 205,
+          "end_line": 213
+        }
+      ],
+      "evidence": {
+        "scope": "legacy auxiliary prototype",
+        "condition": "official unmodified Qwen3 template defaults enable_thinking=True",
+        "no_model_execution": true
+      }
+    }
+  ]
+}

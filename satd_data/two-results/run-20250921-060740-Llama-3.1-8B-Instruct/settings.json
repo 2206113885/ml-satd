@@ -1,0 +1,8 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/Llama-3.1-8B-Instruct",
+  "model_name": "Llama-3.1-8B-Instruct",
+  "run_dir": "results/run-20250921-060740-Llama-3.1-8B-Instruct",
+  "max_new_tokens": 20,
+  "fallback_abbr": "Data Conf"
+}

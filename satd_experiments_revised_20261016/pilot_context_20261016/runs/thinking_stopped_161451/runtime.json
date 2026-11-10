@@ -1,0 +1,16 @@
+{
+  "device": {
+    "device_name": "Apple M3 Max",
+    "max_recommended_working_set_size": 30150672384,
+    "memory_size": 38654705664,
+    "architecture": "applegpu_g15s",
+    "max_buffer_length": 22613000192,
+    "resource_limit": 499000
+  },
+  "parameter_tensor_dtypes": {
+    "mlx.core.bfloat16": 399
+  },
+  "model_weight_bytes": 16381470720,
+  "loaded_at": "2026-10-16T16:08:05.588448+08:00",
+  "common_prefix_prefill_seconds": 3.505003707949072
+}

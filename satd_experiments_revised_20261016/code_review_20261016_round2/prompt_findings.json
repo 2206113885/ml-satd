@@ -1,0 +1,988 @@
+{
+  "scope_count": 114,
+  "findings": [
+    {
+      "id": "PROMPT-01",
+      "title": "CodeLlama few-shot右截断丢弃待分类注释",
+      "status": "confirmed",
+      "severity": "P1",
+      "description": "活跃头为每类10例，共230例；原编码上限4096，未设置左截断。当前官方分词器同路径复现后，尾部comment及答案指令被截掉。历史影响取决于当时prompt/tokenizer。",
+      "impact": "当前路径预测可能不依赖待测comment，不能作为该comment的有效few-shot测量。",
+      "recommendation": "按token预算选择示例并保留任务和注释；运行前断言query在最终input_ids中，优先核对并修复该路径。",
+      "locations": [
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 379,
+          "end_line": 681
+        },
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 727,
+          "end_line": 728
+        }
+      ],
+      "evidence": {
+        "test_file": "codellama_prompt_token_tests.json",
+        "transformers": "5.20.0",
+        "full_tokens": 7752,
+        "truncated_tokens": 4096,
+        "truncation_side": "right",
+        "truncated_has_query": false,
+        "no_weights_loaded": true
+      }
+    },
+    {
+      "id": "PROMPT-02",
+      "title": "Binary CoT同时要求缩写和Yes/No",
+      "status": "confirmed",
+      "severity": "P2",
+      "description": "本轮build_yn_prompt拼入PROMPT_TAIL的“output exactly ONE abbreviation”，又要求“Answer strictly with Yes or No”。",
+      "impact": "同一次输出无法同时遵循两份契约，可能污染Yes/No候选集合。",
+      "recommendation": "拆分推理规则与输出格式；Yes/No轮只保留Yes/No政策，候选裁决轮才要求缩写。",
+      "locations": [
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 248,
+          "end_line": 268
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 270,
+          "end_line": 280
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 320,
+          "end_line": 340
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 342,
+          "end_line": 352
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 273,
+          "end_line": 293
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 295,
+          "end_line": 305
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 205,
+          "end_line": 225
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 229,
+          "end_line": 238
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 205,
+          "end_line": 225
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 229,
+          "end_line": 238
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 275,
+          "end_line": 295
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 297,
+          "end_line": 307
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 322,
+          "end_line": 342
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 345,
+          "end_line": 355
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 322,
+          "end_line": 342
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 345,
+          "end_line": 355
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 443,
+          "end_line": 463
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 464,
+          "end_line": 474
+        }
+      ],
+      "evidence": {
+        "pure_render_tests": "prompt_static_evaluation.json",
+        "affected_files": 9,
+        "measured_generation_impact": false
+      }
+    },
+    {
+      "id": "PROMPT-03",
+      "title": "Gemma2层次零样本编码原始prompt而非模板text",
+      "status": "confirmed",
+      "severity": "P1",
+      "description": "第278行渲染为text，279行却tokenizer.encode(prompt,add_special_tokens=False)，模板/BOS未送入；max_len形参也未使用。",
+      "impact": "当前代码没有执行声称使用的聊天格式和长度限制。",
+      "recommendation": "编码text并关闭二次special tokens，或直接模板分词；执行输入预算限制。",
+      "locations": [
+        {
+          "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 276,
+          "end_line": 285
+        }
+      ],
+      "evidence": {
+        "render_variable": "text",
+        "encoded_variable": "prompt",
+        "historical_limit": "没有历史源码hash证明当前文件产生论文某个结果。"
+      }
+    },
+    {
+      "id": "PROMPT-04",
+      "title": "CodeLlama模板后默认分词产生重复BOS",
+      "status": "confirmed",
+      "severity": "P2",
+      "description": "10个脚本先模板渲染tokenize=False，再默认tokenizer(text)。当前官方模板已有BOS且tokenizer自动再加。",
+      "impact": "多一个起始token；历史运行和指标影响仍需版本与结果关联证据。",
+      "recommendation": "二次分词设置add_special_tokens=False，或使用模板直接分词。",
+      "locations": [
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 722,
+          "end_line": 726
+        },
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 727,
+          "end_line": 728
+        },
+        {
+          "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 361,
+          "end_line": 365
+        },
+        {
+          "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 366,
+          "end_line": 367
+        },
+        {
+          "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 138,
+          "end_line": 142
+        },
+        {
+          "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 143,
+          "end_line": 144
+        },
+        {
+          "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 151,
+          "end_line": 155
+        },
+        {
+          "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 156,
+          "end_line": 157
+        },
+        {
+          "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+          "line": 161,
+          "end_line": 165
+        },
+        {
+          "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+          "line": 166,
+          "end_line": 167
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 353,
+          "end_line": 355
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 366,
+          "end_line": 367
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 582,
+          "end_line": 584
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 595,
+          "end_line": 596
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 165,
+          "end_line": 167
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 178,
+          "end_line": 179
+        },
+        {
+          "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 450,
+          "end_line": 452
+        },
+        {
+          "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 455,
+          "end_line": 457
+        },
+        {
+          "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 463,
+          "end_line": 464
+        },
+        {
+          "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 358,
+          "end_line": 360
+        },
+        {
+          "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 363,
+          "end_line": 365
+        },
+        {
+          "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 371,
+          "end_line": 372
+        }
+      ],
+      "evidence": {
+        "reproduction": "../paper_generation_audit_20261016/nonqwen_sources/codellama_bos_reproduction.json",
+        "current_first_ids": [
+          1,
+          1,
+          29961,
+          25580,
+          29962
+        ],
+        "direct_template_ids": [
+          1,
+          29961,
+          25580,
+          29962
+        ],
+        "weights_loaded": false
+      }
+    },
+    {
+      "id": "PROMPT-05",
+      "title": "手写CoT路由遗漏MCC分支",
+      "status": "current-risk",
+      "severity": "P2",
+      "description": "33份同源手写规则只明确覆盖22类主信号，遗漏Model Code Comprehension/MCC；允许列表及类别定义仍包含MCC。",
+      "impact": "属于提示偏置风险，不能说MCC无法输出。",
+      "recommendation": "在理解/可读性分支加入MCC，并自动比对路由与23标签集合。",
+      "locations": [
+        {
+          "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 305,
+          "end_line": 325
+        },
+        {
+          "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "line": 311,
+          "end_line": 331
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 307,
+          "end_line": 327
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 307,
+          "end_line": 327
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 307,
+          "end_line": 327
+        },
+        {
+          "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "line": 317,
+          "end_line": 337
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+          "line": 317,
+          "end_line": 337
+        },
+        {
+          "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+          "line": 316,
+          "end_line": 336
+        },
+        {
+          "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+          "line": 288,
+          "end_line": 308
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 99,
+          "end_line": 119
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 191,
+          "end_line": 211
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 191,
+          "end_line": 211
+        },
+        {
+          "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 95,
+          "end_line": 115
+        },
+        {
+          "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+          "line": 101,
+          "end_line": 121
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 96,
+          "end_line": 116
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 96,
+          "end_line": 116
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 96,
+          "end_line": 116
+        },
+        {
+          "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+          "line": 106,
+          "end_line": 126
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+          "line": 106,
+          "end_line": 126
+        },
+        {
+          "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+          "line": 105,
+          "end_line": 125
+        },
+        {
+          "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+          "line": 123,
+          "end_line": 143
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 99,
+          "end_line": 119
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 99,
+          "end_line": 119
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 99,
+          "end_line": 119
+        },
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 248,
+          "end_line": 268
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 320,
+          "end_line": 340
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 273,
+          "end_line": 293
+        },
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 205,
+          "end_line": 225
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 205,
+          "end_line": 225
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 275,
+          "end_line": 295
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 322,
+          "end_line": 342
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 322,
+          "end_line": 342
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 443,
+          "end_line": 463
+        }
+      ],
+      "evidence": {
+        "manual_route_labels": 22,
+        "missing_route": "MCC",
+        "allowed_label_present": true
+      }
+    },
+    {
+      "id": "PROMPT-06",
+      "title": "层次细类示例HP Conf可能超出候选集合",
+      "status": "current-risk",
+      "severity": "P2",
+      "description": "所有build_prompt_fine都限制allowed，却固定示范“e.g., HP Conf”；AWR允许的MLKnow/MLInter不包括该示例。",
+      "impact": "模型可能复制非法候选再触发默认类，实际发生率待查raw_fine。",
+      "recommendation": "删除固定示例或使用allowed[0]，测试所有9个粗类提示。",
+      "locations": [
+        {
+          "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 368,
+          "end_line": 372
+        },
+        {
+          "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 354,
+          "end_line": 358
+        },
+        {
+          "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 368,
+          "end_line": 372
+        },
+        {
+          "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+          "line": 346,
+          "end_line": 350
+        },
+        {
+          "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+          "line": 368,
+          "end_line": 372
+        },
+        {
+          "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 356,
+          "end_line": 360
+        },
+        {
+          "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+          "line": 344,
+          "end_line": 348
+        },
+        {
+          "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+          "line": 344,
+          "end_line": 348
+        },
+        {
+          "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 286,
+          "end_line": 292
+        },
+        {
+          "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 276,
+          "end_line": 280
+        },
+        {
+          "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 262,
+          "end_line": 266
+        },
+        {
+          "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 276,
+          "end_line": 280
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 254,
+          "end_line": 258
+        },
+        {
+          "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 276,
+          "end_line": 280
+        },
+        {
+          "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 264,
+          "end_line": 268
+        },
+        {
+          "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 204,
+          "end_line": 208
+        },
+        {
+          "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 265,
+          "end_line": 269
+        },
+        {
+          "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 194,
+          "end_line": 200
+        }
+      ],
+      "evidence": {
+        "test_coarse": "AWR",
+        "allowed": [
+          "MLKnow",
+          "MLInter"
+        ],
+        "out_of_set_example": "HP Conf",
+        "files": 18
+      }
+    },
+    {
+      "id": "PROMPT-07",
+      "title": "Reason-first提示与首行标签解析不匹配",
+      "status": "confirmed",
+      "severity": "P1",
+      "description": "提示要求先#Reason后#Answer，classify却仅取首行交给纯缩写解析。",
+      "impact": "合法两行输出也成为UNK并触发默认类。",
+      "recommendation": "统一两行或JSON契约，锚定#Answer解析；增加合法输出固定样例测试。",
+      "locations": [
+        {
+          "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+          "line": 129,
+          "end_line": 132
+        },
+        {
+          "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+          "line": 160,
+          "end_line": 179
+        }
+      ],
+      "evidence": {
+        "valid_output": "#Reason: Preprocessing is hardcoded.\n#Answer: Data Conf",
+        "first_line_parse": "<UNK>",
+        "scope": "辅助目录，未证明进入论文结果。"
+      }
+    },
+    {
+      "id": "PROMPT-08",
+      "title": "旧binary explain丢失多词缩写",
+      "status": "confirmed",
+      "severity": "P2",
+      "description": "bin_test.py的[A-Za-z]+正则不接受Data Conf等5个带空格缩写，fallback只取第1词。",
+      "impact": "合法输出变为Data/Weight/Layer/HP/DS等非法标签。",
+      "recommendation": "从完整允许缩写集合构造解析规则，或分隔符前保留完整字符串再校验。",
+      "locations": [
+        {
+          "file": "bisection_zero_shot/bin_test.py",
+          "line": 153,
+          "end_line": 162
+        }
+      ],
+      "evidence": {
+        "input": "Data Conf - preprocessing",
+        "regex_match": null,
+        "fallback_abbr": "Data",
+        "scope": "辅助旧脚本"
+      }
+    },
+    {
+      "id": "PROMPT-09",
+      "title": "Gemma2命名few-shot脚本实际选择Gemma3",
+      "status": "confirmed",
+      "severity": "P2",
+      "description": "MODEL_PATH为gemma-3-12b-it，与文件名不同。",
+      "impact": "按文件名调度或归档可能错认模型；历史结果需查实际model字段。",
+      "recommendation": "核对预期模型，修改路径或名称，记录真实模型id和revision。",
+      "locations": [
+        {
+          "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+          "line": 14,
+          "end_line": 16
+        }
+      ],
+      "evidence": {
+        "actual_model": "gemma-3-12b-it",
+        "historical_association_verified": false
+      }
+    },
+    {
+      "id": "PROMPT-10",
+      "title": "宽松Yes/No解析优先搜yes可翻转否定答案",
+      "status": "current-risk",
+      "severity": "P2",
+      "description": "首行无直接前缀时先全文搜yes再搜no，反例“Answer: No. Yes would be incorrect.”返回yes。",
+      "impact": "非标准否定输出可能加入正候选；严格单词答案不受影响。",
+      "recommendation": "剥除受支持前缀后锚定Yes/No；模糊或双词非标准输出标unknown。",
+      "locations": [
+        {
+          "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+          "line": 288,
+          "end_line": 301
+        },
+        {
+          "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+          "line": 288,
+          "end_line": 301
+        },
+        {
+          "file": "test1.py",
+          "line": 172,
+          "end_line": 185
+        },
+        {
+          "file": "test3.py",
+          "line": 172,
+          "end_line": 185
+        }
+      ],
+      "evidence": {
+        "input": "Answer: No. Yes would be incorrect.",
+        "actual": "yes",
+        "pure_parser_test": true
+      }
+    },
+    {
+      "id": "PROMPT-11",
+      "title": "单字母前缀把不确定输出当作No",
+      "status": "current-risk",
+      "severity": "P3",
+      "description": "extract_yes_no接受任意n/y开头字符串，Not enough information被当作no。",
+      "impact": "未知输出进入确定No，unknown率不可靠。",
+      "recommendation": "完整匹配Y/N或Yes/No，拒绝其他前缀字符串并保存invalid原因。",
+      "locations": [
+        {
+          "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+          "line": 310,
+          "end_line": 319
+        },
+        {
+          "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+          "line": 382,
+          "end_line": 392
+        },
+        {
+          "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 335,
+          "end_line": 345
+        },
+        {
+          "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+          "line": 337,
+          "end_line": 347
+        },
+        {
+          "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+          "line": 385,
+          "end_line": 395
+        },
+        {
+          "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+          "line": 385,
+          "end_line": 395
+        },
+        {
+          "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+          "line": 507,
+          "end_line": 516
+        },
+        {
+          "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 539,
+          "end_line": 548
+        },
+        {
+          "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+          "line": 540,
+          "end_line": 550
+        },
+        {
+          "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+          "line": 540,
+          "end_line": 550
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+          "line": 542,
+          "end_line": 552
+        },
+        {
+          "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+          "line": 661,
+          "end_line": 671
+        },
+        {
+          "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+          "line": 543,
+          "end_line": 553
+        },
+        {
+          "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+          "line": 543,
+          "end_line": 553
+        },
+        {
+          "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+          "line": 544,
+          "end_line": 554
+        },
+        {
+          "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+          "line": 432,
+          "end_line": 441
+        },
+        {
+          "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 122,
+          "end_line": 131
+        },
+        {
+          "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+          "line": 146,
+          "end_line": 156
+        },
+        {
+          "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+          "line": 147,
+          "end_line": 157
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+          "line": 147,
+          "end_line": 157
+        },
+        {
+          "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+          "line": 147,
+          "end_line": 157
+        },
+        {
+          "file": "bisection_zero_shot/bin_new_test.py",
+          "line": 147,
+          "end_line": 157
+        },
+        {
+          "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+          "line": 148,
+          "end_line": 158
+        },
+        {
+          "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+          "line": 148,
+          "end_line": 158
+        },
+        {
+          "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+          "line": 148,
+          "end_line": 158
+        },
+        {
+          "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+          "line": 148,
+          "end_line": 157
+        }
+      ],
+      "evidence": {
+        "input": "Not enough information",
+        "actual": "no",
+        "pure_parser_test": true
+      }
+    },
+    {
+      "id": "PROMPT-12",
+      "title": "注释块只有结尾三引号",
+      "status": "current-risk",
+      "severity": "P3",
+      "description": "24份build_prompt缺少开头三引号，却在comment后追加结束三引号。",
+      "impact": "边界格式不平衡；没有性能影响证据。",
+      "recommendation": "补齐开头界定符或统一成对围栏，并测试平衡性。",
+      "locations": [
+        {
+          "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+          "line": 689,
+          "end_line": 694
+        },
+        {
+          "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+          "line": 878,
+          "end_line": 884
+        },
+        {
+          "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+          "line": 685,
+          "end_line": 690
+        },
+        {
+          "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+          "line": 576,
+          "end_line": 582
+        },
+        {
+          "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 328,
+          "end_line": 333
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 330,
+          "end_line": 335
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 330,
+          "end_line": 335
+        },
+        {
+          "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 330,
+          "end_line": 335
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 122,
+          "end_line": 127
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 214,
+          "end_line": 219
+        },
+        {
+          "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 214,
+          "end_line": 219
+        },
+        {
+          "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+          "line": 105,
+          "end_line": 110
+        },
+        {
+          "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+          "line": 100,
+          "end_line": 106
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+          "line": 105,
+          "end_line": 110
+        },
+        {
+          "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+          "line": 106,
+          "end_line": 112
+        },
+        {
+          "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+          "line": 118,
+          "end_line": 123
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+          "line": 119,
+          "end_line": 124
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+          "line": 119,
+          "end_line": 124
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+          "line": 106,
+          "end_line": 112
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+          "line": 119,
+          "end_line": 124
+        },
+        {
+          "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+          "line": 101,
+          "end_line": 107
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+          "line": 122,
+          "end_line": 127
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+          "line": 122,
+          "end_line": 127
+        },
+        {
+          "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+          "line": 122,
+          "end_line": 127
+        }
+      ],
+      "evidence": {
+        "pure_render_test": "odd triple-quote delimiter count",
+        "files": 24
+      }
+    }
+  ],
+  "non_bug_observations": {
+    "label_maps_checked": 108,
+    "label_dictionary_missing_or_misspelled_labels_found": false,
+    "hierarchy_files_checked": 18,
+    "hierarchy_inverse_map_errors": 0,
+    "cot_rules_reach_prompt": true,
+    "cot_route_missing_MCC_is_bias_risk_not_inaccessible_label": true,
+    "shot_note": "当前例子是静态字面量，没有统一运行时数量开关；手工改数量属于设计选择。当前basic few=5/10，basic few+CoT多为2/GPT1，binary few多为10/GPT1，binaryCoT=0/1/3，hierarchy few=3；不能据当前文件推定历史n-shot设置。",
+    "example_semantics": "未确认客观的标签调换。跨类语义重叠和合成样例合理性须领域人工裁决，不作为硬代码bug。"
+  },
+  "originals_modified": false,
+  "model_inference_performed": false
+}

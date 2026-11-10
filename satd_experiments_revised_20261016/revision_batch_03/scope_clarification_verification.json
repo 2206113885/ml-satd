@@ -1,0 +1,25 @@
+{
+  "metadata_update_only": true,
+  "experimental_code_files_hash_checked": 134,
+  "experimental_code_files_changed": [],
+  "excluded_directories": [
+    "basic_zero_shot_CoT_output_reason",
+    "battle"
+  ],
+  "all_user_excluded_existing_python_files": [
+    "ICL_Ob_qwen-8b.py",
+    "ICL_Ob_qwen-8b_new.py",
+    "ICL_Ob_qwen-8b_v0.py",
+    "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "battle/gpt_battle.py",
+    "battle/test.py",
+    "data_process.py",
+    "download_model.py",
+    "original_COT.py",
+    "test1.py",
+    "test3.py"
+  ],
+  "excluded_paths_in_rerun_candidates": false,
+  "remaining_paper_candidate_count": 70,
+  "models_tokenizers_experiments_or_tests_executed": false
+}

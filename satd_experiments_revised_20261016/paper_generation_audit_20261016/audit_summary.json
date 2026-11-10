@@ -1,0 +1,200 @@
+{
+  "date": "2026-10-16",
+  "original_script_count": 114,
+  "generation_call_count": 126,
+  "active_prf_triples": 224,
+  "matched_active_prf_triples": 224,
+  "active_unique_runs": 158,
+  "metric_match_is_historical_source_proof": false,
+  "no_original_script_was_executed": true,
+  "original_script_hash_changes": [],
+  "gptoss_original_scripts_including_arbiter": 14,
+  "models": [
+    [
+      "Qwen3-8B / Qwen3-14B",
+      "主要 non-thinking：T=.7, p=.8, k=20；thinking：T=.6, p=.95, k=20。",
+      "与官方分模式建议一致；并非温度 0。14B binary zero-shot 有显式 greedy 例外。"
+    ],
+    [
+      "Qwen2.5-Coder-7B-Instruct",
+      "省略参数的调用依赖配置；部分 CoT 显式 .6/.95/20。",
+      "官方随附配置是采样 .7/.8/20。自定义参数可以使用，但不能称为统一默认；enable_thinking 对该官方模板不生效。"
+    ],
+    [
+      "CodeLlama-7B-Instruct",
+      "10 个脚本均显式 do_sample=True, T=.2, p=.95。",
+      "与官方参考示例一致（示例不是强制标准）。另有重复 BOS 格式问题。"
+    ],
+    [
+      "CodeGemma-1.1-7B-it",
+      "多数调用未显式覆盖采样参数。",
+      "未找到统一强制温度。官方完整配置访问受限，不能确认历史有效默认值。"
+    ],
+    [
+      "Gemma-2-9B-it",
+      "多数调用未显式覆盖采样参数。",
+      "同上；层次零样本当前代码实际绕过聊天模板。"
+    ],
+    [
+      "Gemma-3-12B-it",
+      "多数调用未显式覆盖采样参数。",
+      "同上；官方示例中的 greedy 不等于所有实验必须 greedy。"
+    ],
+    [
+      "Llama-3.1-8B-Instruct",
+      "多数调用未显式覆盖采样参数。",
+      "官方示例允许 pipeline 继承配置；本地历史配置未恢复，不能写成确定温度 0。"
+    ],
+    [
+      "GPT-oss-20B",
+      "pipeline 调用未显式覆盖 T/p/k/do_sample；部分消息正文写 Reasoning: low/high。",
+      "自动聊天模板路线有官方支持。正文文字不足以证明原生 high 级别已配置；未找到唯一强制温度。"
+    ]
+  ],
+  "findings": [
+    {
+      "id": "A01",
+      "category": "论文表述可纠正",
+      "finding": "论文 main.tex:668 的“全部默认且温度为0”与当前显式参数矛盾。",
+      "evidence": "basic_zero_shot/Qwen3-8B_zero_shot_re.py:140; basic_zero_shot_CoT/Qwen3-8B-CoT-new.py:151",
+      "action": "改为按模型、模式、方法报告实际设置；去掉以统一温度0保证复现的说法。"
+    },
+    {
+      "id": "A02",
+      "category": "有效参数待核实",
+      "finding": "tree 多个脚本声明并保存 DO_SAMPLE=False，但传给 generate 的对应参数已注释；日志不等于有效配置。",
+      "evidence": "tree_zero_shot/Qwen3-8B_zero_shot.py; qwen_official_audit.json Q03; nonqwen_official_audit.json NQ3",
+      "action": "恢复原服务器配置、环境版本及源文件；保留旧日志，不把缺失值补写成0或False。"
+    },
+    {
+      "id": "A03",
+      "category": "合法但条件不同",
+      "finding": "Qwen3-14B binary zero-shot 显式 do_sample=False，而相邻8B条件使用采样配置。",
+      "evidence": "bisection_zero_shot/Qwen3-14B_zero_shot.py:188",
+      "action": "可如实披露；若声称只改变策略或模型的受控比较，需针对该条件核实或补充对照。"
+    },
+    {
+      "id": "A04",
+      "category": "预算与截断",
+      "finding": "max_new_tokens 是思考与答案共享的总输出上限；现有代码没有统一的“结束思考后继续生成最终答案”机制。不同上限本身不是bug。",
+      "evidence": "bisection_CoT/Qwen3-8B_few_shot.py:339; test3.py:225",
+      "action": "准确报告512/2048/32768等实际条件；若需限制思考，应另留答案预算并验证最终答案是否完成。"
+    },
+    {
+      "id": "A05",
+      "category": "确认解释失败；分类影响未知",
+      "finding": "8组 binary-CoT 的3144条事后解释中3139条仅为<think>；另2组native binary thinking各393条解释含未闭合标记。解释在标签之后生成，不反馈预测。",
+      "evidence": "qwen_official_audit.json binary_cot_output_evidence; local_observations.json; bisection_CoT/Qwen3-8B_few_shot.py:421",
+      "action": "不能把这些字段用作有效解释；不据此宣称F1失效。未闭合思考仍可能被分类parser扫描，历史完整分类raw缺失，无法量化。"
+    },
+    {
+      "id": "A06",
+      "category": "当前分词器已复现",
+      "finding": "CodeLlama先render模板再默认tokenizer编码，出现双BOS。原basic prompt为889 tokens，对照直接模板分词为888，前缀分别[1,1,...]和[1,...]。",
+      "evidence": "nonqwen_sources/codellama_bos_reproduction.json; basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "action": "复现基于官方分词器和Transformers5.20.0；先确认历史分词器/版本。仅改温度描述不能解决输入格式差异，影响幅度尚未测量。"
+    },
+    {
+      "id": "A07",
+      "category": "当前源码确认格式问题",
+      "finding": "Gemma2层次零样本渲染text后实际编码原始prompt，绕过chat template；max_len形参也未使用。",
+      "evidence": "tree_zero_shot/gemma-2-9b_zero_shot.py:278",
+      "action": "恢复对应历史源文件与运行配置；若论文该结果由此实现产生，需修正实现后针对该条件验证。"
+    },
+    {
+      "id": "A08",
+      "category": "原生模式表述待核实",
+      "finding": "GPT-oss正文Reasoning:high并非原生Harmony级别配置的充分证据；Qwen2.5模板中的enable_thinking=True也不启用原生模式。",
+      "evidence": "gptoss_official_audit.json; qwen_official_audit.json Q05; main.tex:878",
+      "action": "核对渲染后prompt与原生元数据；将提示式推理与原生thinking分开描述。"
+    },
+    {
+      "id": "A09",
+      "category": "比较结论边界",
+      "finding": "Qwen3 thinking比较同时改变温度、top-p和输出上限；manual CoT同时启用native thinking。",
+      "evidence": "qwen_official_audit.json Q04",
+      "action": "可描述为各模式配置的整体比较；不能将差异全部因果归于thinking开关或手写规则。"
+    },
+    {
+      "id": "A10",
+      "category": "历史复现记录不足",
+      "finding": "论文指标映射到158个run，12个无settings；146份settings只有8份记录do_sample、10份记录T/p/k，未记录seed及原生模式参数。",
+      "evidence": "local_observations.json",
+      "action": "先回收原服务器generation_config/tokenizer_config、软件版本与源文件；不能由当前官方默认值反推全部历史值。"
+    },
+    {
+      "id": "A11",
+      "category": "覆盖边界",
+      "finding": "GPT-5示例合成来自交互工作流，缺少生成代码及机器可读参数；不能纳入本地推理参数已验证的结论。",
+      "evidence": "workflow_coverage.json; main.tex:779",
+      "action": "补充真实工作流和可取得的记录，不捏造温度。"
+    },
+    {
+      "id": "A12",
+      "category": "辅助或旧代码",
+      "finding": "tree_few_shot中Gemma2命名脚本实际选择Gemma3；根ICL_Ob_qwen-8b.py末尾多余de导致SyntaxError。",
+      "evidence": "tree_few_shot/gemma-2-9b_few_shot.py:14; ICL_Ob_qwen-8b.py:517",
+      "action": "当前没有直接证据将这两个文件关联到活跃论文指标；不要自动算作论文结果失败。"
+    }
+  ],
+  "official_sources": [
+    [
+      "Qwen3-8B 官方模型卡：分模式采样建议",
+      "https://huggingface.co/Qwen/Qwen3-8B"
+    ],
+    [
+      "Qwen3-14B 官方模型卡",
+      "https://huggingface.co/Qwen/Qwen3-14B"
+    ],
+    [
+      "Qwen2.5-Coder 官方生成配置",
+      "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/blob/c03e6d358207e414f1eca0bb1891e29f1db0e242/generation_config.json"
+    ],
+    [
+      "Qwen 官方 thinking budget：限制思考后继续生成答案",
+      "https://qwen.readthedocs.io/en/v3.0/getting_started/thinking_budget.html"
+    ],
+    [
+      "Transformers 生成配置：max_new_tokens 与采样",
+      "https://huggingface.co/docs/transformers/main_classes/text_generation"
+    ],
+    [
+      "Transformers 4.51.3 聊天模板：避免重复特殊 token",
+      "https://huggingface.co/docs/transformers/v4.51.3/en/chat_templating"
+    ],
+    [
+      "CodeLlama 官方参考示例：温度 0.2 / top-p 0.95",
+      "https://github.com/meta-llama/codellama/blob/main/example_instructions.py"
+    ],
+    [
+      "GPT-oss 官方 Transformers 指南",
+      "https://developers.openai.com/cookbook/articles/gpt-oss/run-transformers"
+    ],
+    [
+      "OpenAI Harmony：推理级别与消息格式",
+      "https://developers.openai.com/cookbook/articles/openai-harmony"
+    ],
+    [
+      "codellama/CodeLlama-7b-Instruct-hf 官方模型卡",
+      "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf/blob/22cb240e0292b0b5ab4c17ccd97aa3a2f799cbed/README.md"
+    ],
+    [
+      "google/codegemma-1.1-7b-it 官方模型卡",
+      "https://huggingface.co/google/codegemma-1.1-7b-it/blob/9523c8dbf32bf2130e2de570c478b3bdb1d36101/README.md"
+    ],
+    [
+      "google/gemma-2-9b-it 官方模型卡",
+      "https://huggingface.co/google/gemma-2-9b-it/blob/11c9b309abf73637e4b6f9a3fa1e92e615547819/README.md"
+    ],
+    [
+      "google/gemma-3-12b-it 官方模型卡",
+      "https://huggingface.co/google/gemma-3-12b-it/blob/96b6f1eccf38110c56df3a15bffe176da04bfd80/README.md"
+    ],
+    [
+      "meta-llama/Llama-3.1-8B-Instruct 官方模型卡",
+      "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/0e9e39f249a16976918f6564b8830bc894c89659/README.md"
+    ]
+  ],
+  "decision": "温度问题主要是论文表述不符，没有仅因非零温度而全量重跑的依据。但模板、有效配置日志及模式识别存在独立问题，不能保证只改一段文字就完成。",
+  "truncation_clarification": "限制长输出合理。生成后删除思考，不等于限制思考预算；max_new_tokens会停止整个生成。必须区分事后解释失败与主分类答案未完成，后者历史发生率无法由已解析CSV恢复。"
+}

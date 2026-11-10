@@ -1,0 +1,22 @@
+{
+  "existing_model_free_tests": "10 passed (test_runner + test_analyze_pilot)",
+  "new_counterexample": {
+    "length_case": [
+      "Data Conf",
+      true,
+      "Data Conf",
+      null
+    ],
+    "normal_stop_case": [
+      "Data Conf",
+      true,
+      "Data Conf",
+      null
+    ]
+  },
+  "predictions": 300,
+  "finish_reason_counts": {
+    "stop": 300
+  },
+  "history_manifest_matches_current_cohort": true
+}

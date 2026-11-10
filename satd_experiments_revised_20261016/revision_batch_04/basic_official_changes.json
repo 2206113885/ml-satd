@@ -1,0 +1,667 @@
+{
+  "files": [
+    {
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "before_sha256": "2cbd7992ac59a57dfaaa778391b9c8c738d5851f7373a3a34e11c76fdca9fb41",
+      "after_sha256": "105e6768b07140f52b27c2803ed37741ccea377814a5fe761328cf787273485c",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "734414de5a4f2ad1f7bf7720e56a5b099c39a1b2310b02473d25dbdb747a6de9",
+      "after_sha256": "8a48c6b79df4956435eae8b81b919f5f4319fa0a402a4126fdd9ffa9d2b996c8",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+      "before_sha256": "62ee9b3d2e283ea87f0252b0a39c8351a358f0f16e4b4b55a60c6a9e369388de",
+      "after_sha256": "83326303d68e56769355f5fe5f8e9e5a1a11c56982e8c12a7dbfdb7e48a6247e",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "before_sha256": "2c70c2f4e64fdc14e0cad838bb70d1aa300e1fd3d85813e11cbfcad9d80e318d",
+      "after_sha256": "5cade37bb0bece651225a1adb7c35e73fd564ab2f478e5dab2e33f6424c34574",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+      "before_sha256": "2445bfdd4169265206e10cd090b4162afe3d670afccc4ffc2fa2025b6b5a9d19",
+      "after_sha256": "460cb22c0fd8a73e527037561b74ac32fb9ba24d2ee15c434d193d1200658305",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+      "before_sha256": "2207f634f33c74a77720ff52565039cf2887d76d09679606ee114bbb525e2e0d",
+      "after_sha256": "18d796498bb47160a68d5f4bdb960617d417c82c20488e2e45fce6baabfde599",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+      "before_sha256": "fe91d48abeb9763ab780c832fc7b43c773ac003c17eec7c579ce9d094df48f0c",
+      "after_sha256": "64ce6f75e320fdeaa642983446e0f25c16ae690e9d2da4072d3aada484baa2f4",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+      "before_sha256": "0d415b5c17393495659447d3812bb88ca8318bd8955bca89355ca92dbc5b749c",
+      "after_sha256": "5db7964d0295af6662547b6e5e784fa526faaffd08e241224b842f0fbc476415",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+      "before_sha256": "c9d7fbdd571d41d4fbc862c1c6a0ca6661e8dc031065b6cef005de7bf627097f",
+      "after_sha256": "b20f9c8af2579296ef1f82f50870df031ed95c8e706072c293972b5581d5e7fe",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "before_sha256": "b821ed3b5f7a2dff74d4773961c67a378f9651bffe96b756087b8c5a0411e877",
+      "after_sha256": "d858ff8753f1fdd089201fad2be203544d99e65dc3b8f20e295f6f664abc4342",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "before_sha256": "9e5711fc07a2fd36117b91202734b0acbb0b78779dd5e903e0405f329c322444",
+      "after_sha256": "b9a1847b23cd568141d57dc18bcf31bb08e77fad19c52d10b0d48fbbfdf9829d",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "before_sha256": "bb82dd53200ab178cd18a154f9ca86adb12c6826bec8cdda59a1480f1843d2a0",
+      "after_sha256": "9edffbfeb1341d46cec1ccce11d9181163395f9b17ffbb5da5317947b4b64809",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "before_sha256": "36b1486abe8cb372d60bba6a7bcfae6a3900f6e4991bbc332d2317ad7f17f6d3",
+      "after_sha256": "3fc8c65834cdc3e4a771130a6765e6acc873f73b02e2b19bfd51a4439f49f39b",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+      "before_sha256": "97f0f6f215adcb3536d0796273e77da76b83903d28b7c4dc9d9f36a626985499",
+      "after_sha256": "3a84b6169e59650adc0319b7c55110216ba01d2ac53f5daaf2005954a07deb65",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "before_sha256": "77612634f111d31704475851bb71d97b08124440da79c3608dfe99de6952c4cf",
+      "after_sha256": "d8b5991d043857a1eda4aa2426f68e0ec034c9daf607fdbaa35907c26218f63a",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+      "before_sha256": "6e822772d4b5d038ee8205ab3680eefbdaa66672b9d0fed8c4f99392df8544b9",
+      "after_sha256": "53e3a3c97106daf5a2fb56f3dd2549b10747a59493825369976e0bf5641c7dd8",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+      "before_sha256": "16a28d14c64ca4d8a9ba4c6cda9c0dd5710c0eefbba0c067089d8a7a3db8c3f6",
+      "after_sha256": "ac366281af35e5365323619dd8e249a2d1965cc9703443f1a53fadada65b072e",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "before_sha256": "538d2506fa7650b8a802de3b8e1750bee447edd79d8cefcde09c71ddc371d3f4",
+      "after_sha256": "0dd73f79dcd33832625516a51c462e6cda94d2be25dae4fb5a12d92e64b8f3bd",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "before_sha256": "9f098988101c96775babffced854824d107e2de2f680a3ddf6fed6e7796248ea",
+      "after_sha256": "aed66f4119e2b03eb9e622f01400ad7c10ac3ed0ced9c1354af4e3538a688451",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "before_sha256": "5588e58e39908a3536b1310de758b441db8af3dcbc97030a2902e77a2f7956d3",
+      "after_sha256": "973bcc493667692d0d643b1cd80f8d2697b077a463cf22cdc9b544e58e91dd8a",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "before_sha256": "373a3e8ae998c6a668ca380e86927214f76efc224930b0c5fc192cc890bf65a8",
+      "after_sha256": "a1767c225d02fb8f5c205324d4381d17232707816efe6bdd8c51f86ae679417b",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "before_sha256": "5ef744e028949be7b081b569a553c7d7bb4f78342055cc6f6ad628c4f99ac5a1",
+      "after_sha256": "4281d25365c28a302d3c51eb3a948ba17fb7901bb7bbd011447461edb11b0e90",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "before_sha256": "2bc3781d9c08e3463d624c1aa3408c700b4e5392f140cd501f16c08575946c0c",
+      "after_sha256": "9c251ab03b435cf2c53207dfd3f7ea52da12b4b806a4cb9733b4053a60bd5fbc",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "before_sha256": "380279138678d7eae2fa48745770d3b2f59eb3abdfa7f88990325582ecefee14",
+      "after_sha256": "843096b137b70af428789930e74203a934dae9ddaf49dba37ff0c5b8c3a8c290",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "before_sha256": "6f5907c9c808f4030724007b52f2218969b8672a7b793c6f0ee437ef2004cac8",
+      "after_sha256": "86bfaf57181bd845e75123491b3756f9731ee107b68fc356909f4b3cc29a8f2b",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "before_sha256": "f8f3ae0796c8a6e43f41904048a3454ae9a0652d84ceda281019f5424a342be6",
+      "after_sha256": "4d0f1b942add0eed2ac31b1ed8d2541f2bf2a0cef438650a8c20b09faa53b903",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+      "before_sha256": "8eec529b20d4ea02d9036e89f93bcb93ee8b6e406a5cbd438ee41d777e04af94",
+      "after_sha256": "c7673855c31d58f76621300ea05310fb881c6d6745a9a5695282fe5a917154ae",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+      "before_sha256": "a2d23bf1cf2dc13b96f2810346a81c5e08346ce607f84c02dc5dde93a863e9f3",
+      "after_sha256": "943d97aed5bf73f68488c388b1d9fa0c1ab12d9b0a99d8bd4a16f7ab0199a5aa",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+      "before_sha256": "d127e41df1087e924b6f1f3fdf3d29e93d6d72c31c4a3b2ce3bab7b135e89996",
+      "after_sha256": "fa02085d04fb3d734fae7ea617e24ac891ae1df273eda3d75295593c3e5a79e0",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+      "before_sha256": "de355e910e6ed5f54720952048e7229599f36cd28ecfeb15cfe486753801ab7a",
+      "after_sha256": "38edce41baedf001859ad5ea18010f1ffad2355d184779ec18392207642ab219",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "before_sha256": "b3bf204314826b99a354ddc7bd471e88d4c80f373b77be2af88d189ca4c22e9b",
+      "after_sha256": "c257e4928f3d0ca5066c6a7ba062088971a22018f42c0a7303f1eac94b0469ed",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "before_sha256": "07a89d8ad30f70b0d424bf38b8add14b6ae8a3867312012ba8bea4884ec0a301",
+      "after_sha256": "53d240b38c5589accacb6a2f805cf6cbeb657b4e38da0e92376b93333357a09f",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "before_sha256": "ddb6b28fd4e4adbfdf44c8b481bee152ae47a5f4af4ddd69100e4b8ba9a9ecfa",
+      "after_sha256": "daef316638a9fdd7054cf781ea22fd0f70be1065dd6584c9121b63c93026e585",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "before_sha256": "372f56e4629157246ea207ce554a802d398f04b12eb04f8961665d83f542cbaf",
+      "after_sha256": "19cbdf7ae39969d852d4fe61b6ae500d719be875e2729521bf63bf0050dc9606",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "before_sha256": "94a72c56df2a1540eb3bccf275bef1bbc89b6346fd3a159b581b4bf72eacd21e",
+      "after_sha256": "aba47078d387d939a2ece09f298d0adbba19f207312ea0cb57c7c1228778e3ee",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "before_sha256": "9f67a56b1091989da11fe4dffe2289390c7cdecffdf5734a59e48263c3663117",
+      "after_sha256": "6767ff38c8748f28ac7272fe0d90860006a2c70fe52a08c1fc4ca23c4533e27c",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+      "before_sha256": "4cc30ee0556fa329d335d22bbbf998390d03e722642d55ab0a972cf7150bf4eb",
+      "after_sha256": "5eab705fd9c6b18b39b7733ffc393ecc4202974f3e96306fbb7bb7ae2ed9c9d9",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+      "before_sha256": "31b48fb97a9fea7be593b21a17c569237411dcf22b510bb783eb23def08a30b9",
+      "after_sha256": "f9135a4d9b501d7f19135761342075a0160b333126bbfb44a9517ffd986bfdd8",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "before_sha256": "957f2dfdec9a58e4757d5a8cf6e62e71fb22717f452b473e39d9efd11c7b1d29",
+      "after_sha256": "5907258d74a219399a6f5c623d15001379461f627774dbcd0ea65737d7fa0e3e",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+      "before_sha256": "6020b7712ae088eed2587e3929a40ff87b83b565be48cb88eb19d1b645b8a092",
+      "after_sha256": "213fe011353bd2ac17cdff3008acc6f8ef5409f92c2a2a46f27c547c77a77909",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+      "before_sha256": "bf8eaffd89c3faa18365b1274af0f332260939aa19b79924a22d0f10103bf3ae",
+      "after_sha256": "31cbb938c23ed740db5ade82a415e736c5d271fdf10ae44431e989ae49e80fa1",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "before_sha256": "93fb3ef16bd752c8f062899bc660490f2141197982cc9045de59f7bb0409570f",
+      "after_sha256": "6c8a280fcde7cb27985502ba8984a118dd927d95841451791a2f40006876ba2d",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "before_sha256": "9f098988101c96775babffced854824d107e2de2f680a3ddf6fed6e7796248ea",
+      "after_sha256": "aed66f4119e2b03eb9e622f01400ad7c10ac3ed0ced9c1354af4e3538a688451",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "before_sha256": "a94c62039279548b90d0a5cff5b55c058eb595b27bef5084ffbfbf2c0dbba6a2",
+      "after_sha256": "d1736771ec8a9904e8c2ae3f50e720482a1bb87359d607405a56a030cf23f499",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "before_sha256": "bd1fef3f7f6ec93c02c3684b6283707ac433bfde9b708539c36e0c22173af2cf",
+      "after_sha256": "6e55281655783d135c6c3cb92fba2b431bdece2fa6bd9a8bcb92383aa478abe8",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "before_sha256": "02a006e92604ee9c981498123e0194e7e5619893a006694a16b3e6d36145323c",
+      "after_sha256": "7c5aa311d5b81f7207922ae2c14fc318ee5c15073f30d36c71670f1d1901f3d6",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+      "before_sha256": "8f6e917921800dbc18f3d6f13692f7bca969b4bf3a3bf78deb7f28a9297f52db",
+      "after_sha256": "cf29e12cec7c67abce4d38ddab867817af84df6add0994e8ecd4193c9861987c",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+      "before_sha256": "9e1d92cd4e20bfb251d3b42e5f715e71d04e8c9696a2d9be9d679917ba033e9a",
+      "after_sha256": "19d80a651d6c6c2b9ee94802634e04fc3bbbe2b332f44b0f7b430407aba4c4c9",
+      "generation_calls_updated": 2,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "before_sha256": "74cc258b2b998af623674be20dd71915b8dace82eaf14418d75aa19d029a7b9e",
+      "after_sha256": "1483dda8fb73735a674337eb79305de785077e8e432f117cbbb00a36fe6f4fa7",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "before_sha256": "72f0b7658283da73c2e5c16a53692c98b2b2e7f22ad225eaab87f1cce16f503f",
+      "after_sha256": "320b156edb60ff89fd57df1649a85eb60b21c3357ab29c3465e84105d8508566",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+      "before_sha256": "63a6ed5e9177dce131ba8902b2c2606292a7d2b6329eec4a7b1e27bbf01def14",
+      "after_sha256": "74956c0edc9acbdeb4187a0101b82bd306dbf1e664ef2352be9cdc3b3cf6a24c",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+      "before_sha256": "4c04132e1f154334abf5daa8f1befc9c53a6db07f5b22d68d9d25ad9f36f6506",
+      "after_sha256": "7ac7bab800ac3fb4fc502f5d4df638e3919fc39b5e00fb75c4af987e5e4fc181",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+      "before_sha256": "718ec63f2bfd95feb96890a49202897bf324cab98218af5e4f7137c82739b26e",
+      "after_sha256": "513fe86ca40105b297fce22e7067d9aefe9e532f65ae6099737fcda29ba205d2",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+      "before_sha256": "a8648b2524bcfe3b9872aab8d414c4bf17eb4294277497a58caf2f6694958f6b",
+      "after_sha256": "0ed28d7ff0b5cacf4a58e049d5e1796d6c95c37f8b0693e922617cbf514d9288",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    },
+    {
+      "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+      "before_sha256": "99557b21cf166029836bdec299ab4f3c0eb4a2bb9f16a0e9189c4e0cb500ead5",
+      "after_sha256": "881770f8fdbe9361d07c14c513e0c8b303e76c4c2539d58ac77a7479180baf2a",
+      "generation_calls_updated": 1,
+      "changes": [
+        "Opt in to central official model/mode profile",
+        "Only original max_new_tokens override retained",
+        "Actual profile audit policy saved",
+        "Previous blocks commented in place"
+      ]
+    }
+  ],
+  "file_count": 55,
+  "call_count": 68,
+  "execution": "Static AST/text only; no experiment/test/model/tokenizer executed."
+}

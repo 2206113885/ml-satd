@@ -1,0 +1,394 @@
+comment,real,pred,reason,raw_output
+!TODO: In some cases; US is not enough to hold the complete number,Machine Learning Knowledge,Data Processing Configuration,,"MLKnow, MLInter"
+# reverse bw; before concat TODO,Layer Configuration,Machine Learning Knowledge,"The code comment is related to machine learning knowledge, specifically the need for developers to have a good understanding of machine learning concepts and techniques in order to write high-quality machine learning code.",MLKnow
+# TODO : load landmarks in validation and test set also. I'm too sleepy to do it today -_- zzz... zzz...,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+## elif (): ## FIXME: handle other bases here,Prototype,Machine Learning Knowledge,,MLKnow
+#TODO: improve the copying of parameters,Hyper-parameter Configuration,Data Processing Configuration,,"MLKnow, MCC"
+@todo nrows is for testing only!,Boundary Erosion,Machine Learning Knowledge,The code comment is a reminder to the developer that the code is for testing purposes only and should not be used in the final model.,MLKnow
+@todo: arabtex and iso8859-6 need individual handling because in some cases using one-two mapping,Data Processing Configuration,Data Processing Configuration,,"MLInter: The comment mentions the lack of understanding of model functionality, which is a common issue in machine learning. The comment also mentions that the code is a black box, which can make it difficult to understand how the model works."
+@TODO: need better solutions,Machine Learning Knowledge,Data Processing Configuration,,"MLKnow, MLInter"
+@TODO: remove time usage; use it under the hood,Unnecessary Model Code,Data Processing Configuration,,"MLKnow, MLInter"
+[todo]: this is a bug; predict_proba should not change,Model Code Modifiability,Data Processing Configuration,,MLKnow: The comment mentions that the code is a bug and that predict_proba should not change. This suggests that the code is not functioning as intended and that there is a problem with the model's functionality.
+"\""\""\"" || Corpus in CSV format. TODO: still serializes to SVMLight format; feel free to change this. || \""\""\""",Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+"\""\""\"" || Simple Gaussian Mixture model plotting example ||  || TODO: use the faithful dataset || \""\""\""",Data Processing Configuration,Data Processing Configuration,,"MLInter: The code comment is describing the functionality of a machine learning model, which is a black box and can be difficult to understand."
+"\""\""\"" Turn compiler.ast structures back into executable python code. ||  ||     The unparse method takes a compiler.ast tree and transforms it back into ||     valid python code.  It is incomplete and currently only works for ||     import statements; function calls; function definitions; assignments; and ||     basic expressions. ||  ||     Inspired by python-2.5-svn\/Demo\/parser\/unparse.py ||  ||     fixme: We may want to move to using _ast trees because the compiler for ||            them is about 6 times faster than compiler.compile. || \""\""\""",Custom Data Type,Machine Learning Knowledge,,MLKnow
+"\""\""\""Converts legacy encodings into Unicode || TODO for replacer.py: ||  - add perseus-style iota subscript and diaeresis || \""\""\""",Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+"\""\""\""Converts legacy encodings into Unicode. ||  || TODO: Rm regex dependency || TODO: Add tests || \""\""\""",Code Dependency,Machine Learning Knowledge,,MLKnow
+"\""\""\""Models. ||  || Models are objects which take Tensor(s) as input; perform some computation on  || those Tensor(s); and output probability distributions. ||  || TODO: more... ||  || * :func:`.Model` || * :func:`.ContinuousModel` || * :func:`.DiscreteModel` || * :func:`.CategoricalModel` || * :func:`.save_model` || * :func:`.load_model` ||  || ---------- ||  || \""\""\""",Model Code Modifiability,Machine Learning Knowledge,,MLKnow
+"\""\""\""Module dedicated to extraction of Model Based Metafeatures. ||  || Todo: ||     * Implement metafeatures. ||     * Improve documentation. || \""\""\""",Data Processing Configuration,Data Processing Configuration,,"MLInter: The code comment is describing the functionality of the module and the tasks that need to be completed. It does not provide any information about the model's interpretability, which is the focus of the MLInter SATD."
+"\""\""\""Process downloaded or local corpora from one format into another. || Some formatting can happen here; or invoke language-specific formatters in || other files. ||  || #TODO: Add TLG & PHI text cleaners from KJ's IPython notebooks || #TODO: Add non-ascii stripper || #TODO: Add generic HTML stripper || \""\""\""",Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+"\""\""\""The Imperial Aramaic alphabet; plus simple script to transform || a Hebrew transcription of an Imperial Aramaic text to its own Unicode block. ||  || TODO: Add Hebrew-to-Aramaic converter || \""\""\""",Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+\/\/TODO in future add arguments compatibility check,Hyper-parameter Configuration,Machine Learning Knowledge,"The comment is a reminder to add arguments compatibility check in the future, which is a MLKnow issue.",MLKnow
+apparently package_deps are broken in 3.4,Code Dependency,Code Dependency,"The code comment mentions a problem with package dependencies in Python 3.4, which is a type of technical debt related to the management of dependencies in software development.",MLDepend
+BETTER FIX: iterate through; if length = 0; then bump it up to 0.125,Prototype,Machine Learning Knowledge,,MLKnow
+circular shift the signal (needed for correct phase),Data Processing Configuration,Data Processing Configuration,,"MLInter: The code comment describes the need to shift a signal in a circular manner, which is a common operation in machine learning."
+DEPRICATE? I don't think this is needed anymore,Unnecessary Model Code,Unnecessary Model Code,"This code comment suggests that the code is no longer needed and should be removed, which is a common issue with machine learning models.",UMC
+Double newlines seem to mess with the rendering,Data Processing Configuration,Machine Learning Knowledge,The comment is discussing the challenges of machine learning software and how it can be difficult to understand.,MLKnow
+early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),Prediction Quality,Data Processing Configuration,,"MLKnow: The comment mentions a ""TODO"" task that will be implemented in a future release, which suggests that the code is not yet complete and may require further development."
+else:  # TODO check that the variation wasn't already in there,Prototype,Data Processing Configuration,,"MLKnow, MLInter"
+env = ScaledFloatFrame(env)  # TODO: use for dqn?,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+find out why prefix neg_ is needed,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+FIXME : adhoc (answer being last word); not ignoring single question,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+FIXME annoying hack for batching different sized shapes;,Model Code Reusability,Unnecessary Model Code,"This code comment is a hack to work around a limitation in the code, and it is not a sustainable solution. It is a sign of unmaintainable code and should be removed.",UMC
+FIXME don't l2_normalize for any metric,Data Processing Configuration,Data Processing Configuration,,"MLKnow, PQ"
+FIXME homogeneize the meaning of margin parameter,Hyper-parameter Configuration,Data Processing Configuration,,MLKnow: The comment is requesting for a better understanding of the machine-learning model's functionality.
+FIXME non-uniform sample weights not yet supported,Weight Configuration,Machine Learning Knowledge,"The comment is a statement of a limitation or a known issue in the code, which is a common issue in machine learning software development.",MLKnow
+FIXME not sure what are those CB1 \/ CB2,Machine Learning Knowledge,Model Interpretability,"The code comment mentions that the code is not interpretable, which is a common issue in machine learning models.",MLInter
+FIXME This will make sense when all controllers are in one file (like task.py),Data Storage Configuration,Machine Learning Knowledge,"This comment is a MLKnow comment because it is a comment that is related to the knowledge of the machine learning software. The comment is suggesting that the code will make sense when all controllers are in one file, which is a knowledge-related issue.",MLKnow
+FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,Glue Code,Data Processing Configuration,,"MLKnow, MLInter"
+FIXME: Allow some diff; e.g. on repr style text in text\/plain,Prototype,Machine Learning Knowledge,The comment is a reminder that machine-learning software carries unique challenges and that unaware developers may need to revisit their solutions.,MLKnow
+FIXME: Handle execution_count (always change to None?),Machine Learning Knowledge,Data Processing Configuration,,"MLKnow, MLInter"
+FIXME: Hardcoded usually sucks,Data Storage Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+FIXME: if we inherit from scipy.io.netcdf.NetCDFFile and omit the self.nc,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+FIXME: INDRA's section_type entry is meant to contain,Custom Data Type,Data Processing Configuration,,MLKnow: The comment is a reminder that machine-learning software carries unique challenges and that unaware developers may need to revisit their solutions.
+FIXME: Need to check if mod is the equivalent of floorMod in NumPy,Machine Learning Knowledge,Data Processing Configuration,,"MLInter: The comment is a reminder to check if the mod function is equivalent to floorMod in NumPy, which is a common library used in machine learning."
+FIXME: need to implement sample_weight in Ridge,Weight Configuration,Data Processing Configuration,,"MLKnow, UMC"
+FIXME: Only keeping the first label,Data Processing Configuration,Machine Learning Knowledge,"The comment is a FIXME comment, which is a common practice in software development to indicate that a piece of code is not yet complete or is a temporary fix.",MLKnow
+FIXME: pixel_classes dict needs to be populated with classes obtained from target,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+"FIXME: Return type \""None\"" of \""fit\"" incompatible with return type \""float\"" in supertype \""Model\""",Plain Old Data Type,Data Processing Configuration,,"MLKnow, MLInter"
+FIXME: support for many evaluators; maybe event support,Prototype,Data Processing Configuration,,"MLKnow, MLInter"
+FIXME: The code works with EpisodicReplayBuffer,Custom Data Type,Machine Learning Knowledge,"The code comment is a self-admitted technical debt because it is a comment that is not up to date with the current state of the code. The comment is referring to a specific piece of code that is not working as intended, which suggests that the code is not properly maintained.",MLKnow
+FIXME: this is kind of hackish; but being able to simply set,Model Code Comprehension,Data Processing Configuration,,"MLKnow, MLInter"
+FIXME: this needs to become more generic; we need to find the actual so in the python root,Model Code Reusability,Data Processing Configuration,,"MLKnow, MLInter"
+FIXME: this representation of covars is going to lose for caching,Data Storage Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+FIXME: Use linebased diff of some types of outputs:,Data Processing Configuration,Data Processing Configuration,,"MLInter, MLKnow"
+FIXME: What about the next diff entry?,Machine Learning Knowledge,Code Dependency,"The code comment mentions a ""diff entry"" and suggests that the next diff entry might be relevant to the current issue. This suggests that the code is not properly decoupled from external dependencies, which is a common problem in machine learning code.",MLDepend
+FIXME: What if we never find a fail-high?,Machine Learning Knowledge,Machine Learning Knowledge,The comment is a reminder that the software carries unique challenges and that unaware developers may need to revisit their solutions.,MLKnow
+FIXME_Numba#5157: remove np.asarray and return as list,Data Storage Configuration,Unnecessary Model Code,,UMC
+Force shrinking of the mask if needed (and possible),Data Processing Configuration,Data Processing Configuration,,"MLKnow: The comment is a statement of knowledge about the machine learning software, specifically that the software may need to shrink the mask if it is possible to do so."
+Freeze weights - TODO: NOT IMPLEMENTED!,Weight Configuration,Machine Learning Knowledge,"The code comment is a reminder to implement a feature that has not yet been implemented, which is a common issue in machine learning software development.",MLKnow
+h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,Hyper-parameter Configuration,Machine Learning Knowledge,,MLKnow
+handle BoxedSeries and list\/set of BoxedSeries; TODO: others?,Custom Data Type,Machine Learning Knowledge,,MLKnow
+if this is needed.,Machine Learning Knowledge,Machine Learning Knowledge,This code comment is related to Machine Learning Knowledge (MLKnow) as it is asking if the code is needed.,MLKnow
+IMPORTANT: keep matrices in suitable order for matrix products; failing to do so gives 8x lower performance :(,Model Code Reusability,Data Processing Configuration,,"MLKnow: The comment mentions the importance of keeping matrices in the right order for matrix products, which is a common issue in machine learning."
+In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,Plain Old Data Type,Data Processing Configuration,,"MLKnow, MLInter"
+in_dim=(4; 8; 8; 8); # TODO: Needs fix when giving a randon in_dim,Model Code Reusability,Data Processing Configuration,,"MLKnow: The code comment mentions that the code needs to be fixed when giving a random in_dim, which suggests that the code is not well-understood and may require revisiting."
+Initialize model (TODO: really necessary?),Machine Learning Knowledge,Machine Learning Knowledge,"This code comment is a self-admitted technical debt in the category of ""Machine Learning Knowledge"" because it is a comment that acknowledges a lack of understanding of the machine learning model and its inner workings. The comment suggests that the code may not be necessary and that the developer should consider whether it is really necessary to initialize the model. This is a common issue in machine learning development, where developers may not fully understand the model's behavior or the imp",MLKnow
+It's only needed for a specific purpose in the short term; will go.,Layer Configuration,Unnecessary Model Code,"This code comment is a sign of unnecessary model code, as it suggests that the code is only needed for a specific purpose in the short term and will be removed in the future.",UMC
+needed so command completion and help can use it,Data Storage Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+needed to sklearn comparability,Code Dependency,Data Processing Configuration,,"MLKnow, MLInter"
+needed to sklearn comparability,Code Dependency,Machine Learning Knowledge,"The code comment mentions the need for ""sklearn comparability,"" which is a common problem in machine learning. The comment is a sign of MLKnowledge, as it highlights a lack of understanding of the underlying technology and its limitations.",MLKnow
+needed?,Unnecessary Model Code,Machine Learning Knowledge,"The comment is asking if the code needs to be rewritten, which is a MLKnow SATD.",MLKnow
+normed_cross_entropy # TODO,Hyper-parameter Configuration,Model Interpretability,,MLInter
+NOTE: probably more efficient to sort then stride by nt_regions,Data Processing Configuration,Machine Learning Knowledge,"The code comment is related to machine learning knowledge, as it mentions the potential for unaware developers to make poorly educated solutions and the need for revisiting existing solutions.",MLKnow
+nv by ns dot ns by m -> nv by m  # TODO: Change to CSC for speed?,Data Processing Configuration,Data Processing Configuration,"The comment is a self-admitted technical debt, as it is a reminder for the developer to consider the performance implications of the code change, which is a common issue in machine learning software development.",MLKnow: The comment is a reminder for the developer to consider the performance implications of the code change.
+once they are no longer needed in the schedule or by,Data Storage Configuration,Data Processing Configuration,"The comment mentions ""no longer needed"" and ""by"" which suggests that the code is not being used anymore and should be removed.",MLKnow: The comment is discussing the need to remove unused code from the model.
+Pass on diff to external difftool (TODO: store in global metadata at end instead of in separate diff dicts?),Data Storage Configuration,Data Processing Configuration,,"MLDepend, MLInter"
+probably not needed; transition,Unnecessary Model Code,Data Processing Configuration,,"MLKnow, MLInter"
+"r\""\""\""Run inference on random sequences many times; saving the top results. ||  || This module is designed to run inference on a trained aptamers TF model || to score many sequences and then write out the top scoring sequences to || be used in other analysis. For example; these top predicted sequences || can read in the colab picking sequences in order || to validate the TF model. ||  || This module uses the standard aptamers tensorflow infrastructure to run || the inference. This is the inferer class defined in || learning\/eval_feedforward and described in the Aptamers TensorFlow Doc. ||  || Inference is generally run in batches of sequences; so a MapFlat function || is used to combine the results of interference into a flattened list || of (sequence; score) pairs. (In other words; each map function returns || a list of (sequence; score) pairs and these results are combined into || one list of pairs. Using a standard Map function would result in a || list of lists which is not what we want.) From there; the Top.Of || combiner returns only the top results; sorted by highest score. These || are then written to a text file. ||  || For now; each batch creates its own inferer; causing each map function || to have more overhead. Because of this;batch sizes around the default of || 10000 are performant. Fixing this in the future means converting the || MapFlat to a ParDo and initializing the inferer in start_bundle. || This module runs inference 1 billion times in 50 minutes so it || is sufficient for now ||  || Run locally with: ||  ||   :search_inference -- --flume_exec_mode=UNOPT \\ ||   --target_name='target' \\ ||   --model_dir=xxx \\ ||    --checkpoint_path='model.ckpt-312500' \\ ||    --output_name=xxx\/base30_1B_inference_top2k ||  || \""\""\""",Custom Data Type,Machine Learning Knowledge,,MLKnow
+Random Warp # TODO change masks to have a input mask and a warped target mask,Hyper-parameter Configuration,Data Processing Configuration,,MLInter: This code comment is related to model interpretability. The comment suggests that the model is not interpretable and that the masks used in the code should be changed to have an input mask and a warped target mask.
+seem out of place. If you were able to do better; feel free to share your,Prediction Quality,Data Processing Configuration,,"MLKnow, MLInter"
+self.clearChanges() #TODO perhaps?,Data Storage Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+self.mpc_sum(3; -5) TODO: Future work: how to handle gracefully minus numbers,Machine Learning Knowledge,Data Processing Configuration,,"MLKnow, MLInter"
+should be WeightNorm here TODO.,Layer Configuration,Machine Learning Knowledge,,MLKnow
+tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,Code Dependency,Data Processing Configuration,,"MLKnow, MLInter"
+this importing of matplotlib is needed to run on the cluster,Code Dependency,Machine Learning Knowledge,,MLKnow
+This is a hack to allows inference when the <go> token,Model Code Modifiability,Data Processing Configuration,,"MLInter: This code comment is related to model interpretability. It describes a hack that allows inference when the ""go"" token is used."
+THIS IS A VERY UGLY FUNCTION because it has hardcoded 0\/4\/5 integers for each of the metric. I need to make an enumerated class for this!,Model Code Comprehension,Machine Learning Knowledge,"This code comment is a self-admitted technical debt because it is a sign of a lack of knowledge or understanding of machine learning. The comment suggests that the code is ""ugly"" and that the author should create an enumerated class to make the code more maintainable and scalable. This is an example of machine learning knowledge SATD, as the author is not familiar with best practices for machine learning software development.",MLKnow
+time to fix. TODO: optimize the crap out of this,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO - can remove one of these m0 restores if A and B both TLU,Machine Learning Knowledge,Machine Learning Knowledge,"This code comment is related to machine learning knowledge, as it mentions ""TODO"" and ""m0"" which are related to machine learning.",MLKnow
+TODO - does this handle N-dim tensors correctly?,Machine Learning Knowledge,Data Processing Configuration,,"MLInter - The comment is discussing the interpretability of the model, and whether it handles N-dim tensors correctly."
+TODO - in the code it is different - why?,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO (pradeep): Sort the indices and do intersections in order; so that we can return the,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO (ytz): really; we want at least one active and inactive in both scenarios.,Data Processing Configuration,Data Processing Configuration,,"MLInter: The comment is discussing the lack of interpretability of machine learning models, specifically the difficulty in understanding how the models work and how they make predictions."
+TODO : add these in the options. (None; None) => no limit,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO : Any other options,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO : market value,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO : removal,Unnecessary Model Code,Unnecessary Model Code,"The code comment is requesting the removal of unnecessary model code, which is a type of ML Self-Admitted Technical Debt (SATD) known as Unnecessary Model Code (UMC).",UMC
+TODO : this is quite bad in term of execution speed. We need to fix this.,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLRelia"
+"TODO accept_sparse=\""csc\""",Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO add general Distribution,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO add index to xls file,Data Processing Configuration,Machine Learning Knowledge,The comment is related to machine learning knowledge and the need for developers to have a good understanding of the machine learning concepts and techniques used in the code.,MLKnow
+TODO add introductory explanation,Data Processing Configuration,Machine Learning Knowledge,This code comment is a ML Self-Admitted Technical Debt (SATD) of type MLKnow.,MLKnow
+TODO add support for other metrics (ex. euclidean; angular),Prototype,Data Processing Configuration,,"MLKnow, MLInter"
+TODO add test for keypoints once their handling was improved in Convolve,Code Dependency,Machine Learning Knowledge,,MLKnow
+TODO add vertical gradient alpha to have fog only at skylevel\/groundlevel,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO anticipate multi-agents for AEB space,Data Storage Configuration,Machine Learning Knowledge,This code comment belongs to the MLKnow SATD. It is a comment that is written by a developer to remind themselves or others of a piece of knowledge that they need to have in order to understand the code.,MLKnow
+TODO change as soon as svhn has a val set :),Data Storage Configuration,Machine Learning Knowledge,"This code comment is related to machine learning knowledge, as it mentions that the code is a black box and that the functionality of the model is not well understood.",MLKnow
+TODO change the way attns is returned dict => list or tuple (onnx),Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO change to np.partition for PERF,Data Storage Configuration,Data Processing Configuration,,"MLKnow, PQ"
+TODO check for each tentacle specified if update is available (with requirements),Code Dependency,Data Processing Configuration,,"MLKnow, MLInter"
+TODO check results after standardizing num ft once a ml algorithm is ready to test,Code Dependency,Machine Learning Knowledge,,MLKnow
+TODO checkpoints; incremental save,Prototype,Machine Learning Knowledge,,MLKnow
+TODO combine these values to get a final prediction!,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO confirm that multiple eigenvalues of 1 means the rotation,Machine Learning Knowledge,Data Processing Configuration,,"MLInter: The comment is discussing the interpretation of the results of a machine learning model, specifically the eigenvalues of 1."
+ToDo consider 3D case --> do that by using tag->size,Data Processing Configuration,Data Processing Configuration,,"MLInter: The code comment mentions the need to consider a 3D case, which suggests that the model is not handling 3D data properly. The comment also mentions using a tag to identify the size of the data, which suggests that the model is not handling different sizes of data properly."
+TODO cpickle vs json,Data Storage Configuration,Machine Learning Knowledge,,MLKnow
+TODO Dehaze with 1\/t,Data Processing Configuration,Machine Learning Knowledge,"The code comment is a reminder to the developer to educate themselves on the machine learning software they are working with, as they may not be aware of the unique challenges it carries.",MLKnow
+TODO design an API interface for advanced access as an importable package,Abstraction,Machine Learning Knowledge,,MLKnow
+TODO double num_filters,Hyper-parameter Configuration,Machine Learning Knowledge,,MLKnow
+TODO Figure out how to distinguish oxidation states,Machine Learning Knowledge,Data Processing Configuration,,"MLInter: The code comment is related to model interpretability, as it discusses how to distinguish oxidation states."
+TODO figure out what exactly size does,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO ForceSign,Hyper-parameter Configuration,Machine Learning Knowledge,,MLKnow
+TODO generalise to columns with series of unequal length,Model Code Reusability,Machine Learning Knowledge,"The comment is a general comment about the software, not specific to a particular ML model or implementation.",MLKnow
+TODO generalise to series-to-series functions and function kwargs,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO handle 1d series; not only 2d dataframes,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,Abstraction,Model Interpretability,"This code comment is related to model interpretability, as it discusses how to handle complex data types when working with machine learning models.",MLInter
+TODO if without momentum; weights should not change too,Weight Configuration,Data Processing Configuration,,"MLKnow: The comment suggests that the developer is not aware of the potential issues with the model and its weights, which could lead to poor performance or unknown behavior."
+TODO Implement,Hyper-parameter Configuration,Machine Learning Knowledge,"The code comment is a reminder to implement the machine learning model, which is a self-admitted technical debt in the category of machine learning knowledge.",MLKnow
+TODO implement generic method,Abstraction,Machine Learning Knowledge,"The comment is a reminder to implement a generic method, which is a common ML SATD.",MLKnow
+TODO implement multi-gpu training and compare performance,Prototype,Machine Learning Knowledge,,MLKnow
+TODO improve the regex here,Data Processing Configuration,Data Processing Configuration,,"MLInter: The code comment is suggesting that the model's interpretability is poor, which is a common issue in machine learning."
+"TODO last token include: \""&& $last_token[...]\""",Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO make paf_scored not part of self?,Abstraction,Machine Learning Knowledge,,MLKnow
+TODO make threshold a variable,Custom Data Type,Data Processing Configuration,,"MLKnow, MLInter"
+TODO max in one tensor,Layer Configuration,Machine Learning Knowledge,,MLKnow
+TODO move these registrations to backend-specific files,Prototype,Code Dependency,,MLDepend
+TODO normalice to make sum up to 1?,Data Processing Configuration,Machine Learning Knowledge,"The comment is a reminder to normalize the model to make the sum up to 1, which is a common practice in machine learning.",MLKnow
+todo not support dense,Unnecessary Model Code,Machine Learning Knowledge,,MLKnow
+TODO Option for string lenght,Data Storage Configuration,Machine Learning Knowledge,"The comment is a reminder to revisit the model's functionality, as it is a black box and may have unknown behavior.",MLKnow
+TODO Promote this to a Funsor subclass.,Model Code Reusability,Machine Learning Knowledge,,MLKnow
+TODO refactor second part of if statement when implementing live model prediction,Model Code Comprehension,Machine Learning Knowledge,,MLKnow
+TODO remove,Unnecessary Model Code,Unnecessary Model Code,"This code comment is a TODO comment, which is a reminder to remove the code that is not needed or is redundant. It is not related to any of the other types of ML Self-Admitted Technical Debt listed in the question.",UMC
+TODO remove later.,Unnecessary Model Code,Machine Learning Knowledge,This code comment belongs to the MLKnow SATD.,MLKnow
+TODO remove this,Unnecessary Model Code,Machine Learning Knowledge,This code comment is a reminder to revisit the model code to ensure it is properly understood and functioning as intended.,MLKnow
+TODO replace this code with the following commented out code after viz is fixed,Code Dependency,Machine Learning Knowledge,,MLKnow
+TODO replace this speedup implementation with nni.compression.torch.ModelSpeedup,Layer Configuration,Machine Learning Knowledge,,MLKnow
+TODO replace whole pandas data container as input argument with separated metadata container,Data Storage Configuration,Machine Learning Knowledge,,MLKnow
+TODO replace with Streamlines,Custom Data Type,Machine Learning Knowledge,,MLKnow
+TODO save all the results to a json inside the experiment's folder,Data Storage Configuration,Machine Learning Knowledge,,MLKnow
+TODO Search the web or use other algorithms,Machine Learning Knowledge,Data Processing Configuration,,"MLKnow, MLInter"
+TODO Send the context back into some list maintained by,Data Storage Configuration,Machine Learning Knowledge,,MLKnow
+TODO Set bioassembly info,Data Processing Configuration,Machine Learning Knowledge,This code comment is related to Machine Learning Knowledge (MLKnow) because it is a comment that is related to the knowledge of machine learning.,MLKnow
+TODO Should this stay generic? (point),Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO stim channel exclusion,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO support recursive parfor; multi-D; mutiple body blocks,Prototype,Machine Learning Knowledge,"This code comment belongs to the MLKnow type of Self-Admitted Technical Debt (SATD) because it is a statement of a problem or a challenge that the developer recognizes and acknowledges, but does not provide a solution or a plan to address it. The comment mentions the need to support recursive parallel for loops, multi-dimensional arrays, and multiple body blocks, which are all challenging features in machine learning code.",MLKnow
+todo sweep,Model Code Modifiability,Data Processing Configuration,,"MLKnow, MLInter"
+TODO switch similar statements to work inplace (w\/o making a copy),Model Code Reusability,Machine Learning Knowledge,,MLKnow
+TODO These ratios can't be hardcoded,Model Code Reusability,Machine Learning Knowledge,,MLKnow
+TODO this code is currently necessary for the async_fit method in websocket_client.py,Hyper-parameter Configuration,Machine Learning Knowledge,,MLKnow
+TODO this is too general; register all ops,Prototype,Data Processing Configuration,,"MLKnow, MLInter"
+TODO this is wrong for other entitiey types nor appearing in the edge,Custom Data Type,Machine Learning Knowledge,"This code comment is related to machine learning knowledge, as it is a comment that is related to the knowledge of machine learning software.",MLKnow
+TODO this vector is very sparse; we can make it more memory efficient,Data Storage Configuration,Data Processing Configuration,,"MLKnow, MLRelia"
+TODO to be modified,Model Code Modifiability,Machine Learning Knowledge,"The comment is a reminder for the developer to revisit the model and its implementation, as the current solution may not be the best one.",MLKnow
+TODO Update and move now this isn't used here,Unnecessary Model Code,Data Processing Configuration,,"MLKnow, MLInter"
+TODO update these - the sklearn transformation class should be able,Custom Data Type,Machine Learning Knowledge,"This code comment belongs to the MLKnow type of Self-Admitted Technical Debt (SATD) because it is a comment that suggests that the code needs to be updated or improved, specifically suggesting that the sklearn transformation class should be able to perform certain tasks.",MLKnow
+TODO validate and normalize to \/path\/to\/variable,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO validate configuration and set defaults,Data Storage Configuration,Machine Learning Knowledge,This code comment belongs to the MLKnow SATD. It is a comment that is written by a developer to remind themselves or others of the importance of validating the configuration and setting defaults for a machine learning model.,MLKnow
+TODO validation_split is not used,Unnecessary Model Code,Machine Learning Knowledge,,MLKnow
+TODO WIP temp_coherence_loss # assumes all sequences in the dataset share at least one same 3D pos of Baxter arm,Hyper-parameter Configuration,Machine Learning Knowledge,,MLKnow
+TODO wouldn't it be better with a set rather than a list?,Data Storage Configuration,Machine Learning Knowledge,,MLKnow
+TODO write a warning,Model Interpretability,Data Processing Configuration,,"MLKnow, MLInter"
+"TODO(ahundt) difference between \""redundant\"" and regular proto parsing; figure out how to deal with grasp_success rename properly",Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO(ahundt) make more efficient,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO(ahundt) maybe the rotation component of this needs to be inverted due to sva implementation?,Machine Learning Knowledge,Data Processing Configuration,,"MLInter: The comment mentions that the model is a ""black box"" and that it is difficult to understand how it works, which is a common issue in machine learning."
+TODO(b\/119775953): fix the circular dependencies.,Code Dependency,Code Dependency,"The code comment mentions a ""circular dependency"" issue, which is a common problem in machine learning code that can cause issues with model performance and interpretability.",MLDepend
+TODO(beam2d): Fix after supporting correct dtype promotion.,Custom Data Type,Machine Learning Knowledge,,MLKnow
+TODO(crcrpar): Improve resource computation\/allocation algorithm.,Data Storage Configuration,Machine Learning Knowledge,,MLKnow
+TODO(dbieber): Move this logic into the dataset definition.,Boundary Erosion,Machine Learning Knowledge,,MLKnow
+TODO(fstahlberg): Move to config,Model Code Modifiability,Machine Learning Knowledge,,MLKnow
+TODO(rbharath): The script expects that all columns in xlsx\/csv files,Prototype,Machine Learning Knowledge,,MLKnow
+TODO(rliaw): This behavior is probably undesirable; but right now,Prototype,Machine Learning Knowledge,,MLKnow
+TODO(sonots): Implement in C++,Multiple Languages,Machine Learning Knowledge,,MLKnow
+TODO(sven): Add once ModelV1 is deprecated and we no longer cause circular,Code Dependency,Data Processing Configuration,,"MLKnow, MLInter"
+TODO(tokunaga): the number of processes should be configurable,Model Code Modifiability,Machine Learning Knowledge,,MLKnow
+TODO(vsatish): Figure out why this isn't printed.,Machine Learning Knowledge,Data Processing Configuration,,MLInter: The code comment is asking why the model is not printing the output.
+TODO. get rid of from_model_pt,Unnecessary Model Code,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: (sven) rename to simply stats_fn to match eager and torch.,Abstraction,Machine Learning Knowledge,,MLKnow
+TODO: @trask @theo could you take a look at this if you have better ideas on how to get these parameters,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+todo: accurate Value,Machine Learning Reliability,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: add a complete frame_size; to cover the whole audio signal?,Machine Learning Knowledge,Data Processing Configuration,,"MLKnow: The comment is a statement of a problem or a question that is related to the machine learning knowledge. It is not a technical debt, but rather a statement of a problem that needs to be addressed."
+TODO: add backward images also.,Data Processing Configuration,Machine Learning Knowledge,The comment is a reminder to revisit the code to ensure it is well-educated and functional.,MLKnow
+TODO: add datetype conversion,Data Storage Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: add inheritance from Graph once implemented,Code Dependency,Machine Learning Knowledge,,MLKnow
+TODO: add more tags based on the scikit-learn,Prototype,Machine Learning Knowledge,,MLKnow
+TODO: Add this to configuration framework,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: arbitrary threshold is problematic,Model Code Reusability,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: assertWarns exist only for Python 3.2+; test in all versions,Code Dependency,Data Processing Configuration,,"MLInter: The comment mentions the lack of understanding of model functionality, which is a common issue in machine learning."
+TODO: At the moment LHUC is RNN specific. We should support other models as well.,Model Code Reusability,Machine Learning Knowledge,"The comment is a statement of a problem or opportunity for improvement in the code, specifically related to the machine learning model.",MLKnow
+TODO: auto detect dtype,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: Basically identical to `test_intra_cv_target_transform` except for repeated KFold,Duplicate Model Code,Model Interpretability,,MLInter
+TODO: black box attacks,Machine Learning Reliability,Data Processing Configuration,,"MLInter: The comment mentions that the model is a black box, which can make it difficult to understand how it works and can lead to unknown behavior."
+"TODO: calculate this centroid\""",Data Processing Configuration,Data Processing Configuration,,"MLKnow, MCC"
+TODO: calibration dataset,Hyper-parameter Configuration,Machine Learning Knowledge,,MLKnow
+todo: change the feature_na_method!,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: Change the optimizer to the appropriate Optimizer class,Hyper-parameter Configuration,Machine Learning Knowledge,,MLKnow
+TODO: change this logic when there is a git pretty-format,Code Dependency,Machine Learning Knowledge,,MLKnow
+TODO: check `other` is Series after a circular import of SeriesType fixed,Code Dependency,Data Processing Configuration,,MLKnow: The comment is discussing the need to revisit the solution to a problem caused by a lack of understanding of machine learning concepts.
+TODO: Check behavior if this is a single mrc file (no '@'),Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO: check CAPTALIZED WORDS as their lower case counterparts before saving,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: check for series\/dict\/list input,Plain Old Data Type,Machine Learning Knowledge,,MLKnow
+TODO: Check if self._mean_squared_error_w_precision can be used here,Machine Learning Knowledge,Model Interpretability,"The code comment suggests that the developer is interested in improving the interpretability of the model, which is a key aspect of machine learning. The comment mentions the use of a specific function, `self._mean_squared_error_w_precision`, which suggests that the developer is looking to improve the model's accuracy and understandability.",MLInter
+TODO: check if stride of 2 causes alignment issues if the featuremap,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO: check whether the model is QuartzNet,Custom Data Type,Data Processing Configuration,,"MLInter: The comment is discussing the model's interpretability, specifically whether it is a QuartzNet model."
+TODO: check why there's an IF,Machine Learning Knowledge,Machine Learning Knowledge,The comment is a reminder to check the knowledge of the developer about machine learning.,MLKnow
+TODO: clip polygons,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: compare the performance!,Prediction Quality,Model Interpretability,"The code comment is related to model interpretability, as it suggests comparing the performance of the model.",MLInter
+TODO: compute signed distance between walls,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+ToDo: consider go\/no-go with following modification,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,Multiple Languages,Machine Learning Knowledge,,MLKnow
+TODO: Could be implemented as optimization option in LK???,Machine Learning Knowledge,Machine Learning Knowledge,"This code comment belongs to the MLKnow SATD. It is a self-admitted technical debt because it is a comment that is not yet implemented in the code, but it could be implemented as an optimization option in the future.",MLKnow
+TODO: Could check if QSettings.Format stores type info.,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO: Currently this turns any upregulation associated with,Custom Data Type,Machine Learning Knowledge,,MLKnow
+TODO: Currently we don't look at source text; but we may want to,Data Processing Configuration,Data Processing Configuration,,"MLInter: The comment mentions that the model is a black box, which suggests that the code is not well-understood."
+TODO: dataframe pass needed?,Machine Learning Knowledge,Code Dependency,"The comment mentions a need for a dataframe to be passed to a function, which suggests that the function is dependent on a specific data structure.",MLDepend
+TODO: delete this method when no longer needed,Unnecessary Model Code,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: deprecate?,Unnecessary Model Code,Machine Learning Knowledge,This code comment is a reminder to the developer to revisit the model and consider deprecating it if it is no longer needed or if there are better alternatives available.,MLKnow
+TODO: determine if requiring same sense is too string; i.e.,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: Do below `y_lie` lines directly calculate min\/max\/mean on `opt.yi` when it could also contain times?,Machine Learning Knowledge,Data Processing Configuration,,"MLInter: The comment suggests that the code could be more interpretable if it directly calculates the minimum, maximum, and mean of the `opt.yi` variable, which could also contain time values."
+TODO: do more to protect against race conditions. File lock?,Data Storage Configuration,Data Processing Configuration,,"MLKnow, MLRelia"
+TODO: do not replace unless explicitly noticed + add 'only hangul' option,Model Code Modifiability,Machine Learning Knowledge,,MLKnow
+TODO: do the transpose as a DataLoaderTransformer instead of in host,Data Storage Configuration,Machine Learning Knowledge,The comment suggests that the code is not well-understood and may need to be revisited.,MLKnow
+TODO: do this better,Hyper-parameter Configuration,Machine Learning Knowledge,This code comment is a reminder to the developer to improve the machine learning knowledge and understanding of the software.,MLKnow
+TODO: do we need this?!,Unnecessary Model Code,Machine Learning Knowledge,,MLKnow
+TODO: does it make graph?,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO: don't make these a constant initializer because we,Data Storage Configuration,Machine Learning Knowledge,,MLKnow
+TODO: don't need this w\/ py.test,Unnecessary Model Code,Data Processing Configuration,,"MLDepend, GC"
+TODO: double check if this is still true in 1.9.0,Machine Learning Knowledge,Machine Learning Knowledge,"This code comment is related to machine learning knowledge, as it mentions that the code is a black box and that unaware developers may have to be revisited.",MLKnow
+TODO: dtype,Custom Data Type,Machine Learning Knowledge,,MLKnow
+TODO: ensure dummy_na =False is what you want,Machine Learning Knowledge,Machine Learning Knowledge,"This code comment is a reminder for the developer to ensure that the dummy_na=False is set correctly, which is a common issue in machine learning.",MLKnow
+TODO: ensure x data shape matches model._ph['x'] shape (only if fit),Model Code Reusability,Machine Learning Knowledge,"The code comment is a reminder for the developer to ensure that the data shape matches the model's internal data shape, which is only relevant if the model has been fit. This comment falls under the category of ""Machine Learning Knowledge"" because it requires a deep understanding of the model's inner workings and the data it processes.",MLKnow
+TODO: Extend to multifidelity problems by adding training_points = {'approx': {}},Prototype,Machine Learning Knowledge,,MLKnow
+TODO: extend to other key types,Custom Data Type,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: extract an eval func more robustly,Machine Learning Reliability,Machine Learning Knowledge,,MLKnow
+TODO: figure out how why the result of einsum requires reshape,Machine Learning Knowledge,Data Processing Configuration,why the result of einsum requires reshape.,"MLInter: The comment is describing the need to understand the functionality of a machine learning model, specifically the reason why the result of einsum requires reshape."
+TODO: figure out why some machines prefer one of these options,Machine Learning Knowledge,Data Processing Configuration,,"MLInter: The comment mentions ""model functionality"" and ""unknown behaviour"", which are both related to model interpretability."
+TODO: figure out why this happens.,Machine Learning Knowledge,Machine Learning Knowledge,"This code comment belongs to the MLKnow SATD. The comment is a statement of intent to improve the understanding of the machine learning model, which is a key aspect of the MLKnow SATD.",MLKnow
+TODO: Formats should not be specified; just saving all the materialized formats,Data Storage Configuration,Machine Learning Knowledge,The comment is a reminder that machine-learning software carries unique challenges and that uneducated solutions by unaware developers may need to be revisited.,MLKnow
+TODO: Get rid of this,Unnecessary Model Code,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: handle boolean scalars properly,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: handle channel modalities later,Model Code Reusability,Data Processing Configuration,,"MLInter: This code comment is related to model interpretability, as it mentions the need to handle channel modalities later."
+TODO: handle other participant types,Model Code Reusability,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: handle record value which are lists; at least error,Plain Old Data Type,Data Processing Configuration,,"MLKnow: The comment mentions that the code carries unique challenges, which is related to the first SATD type: MLKnowledge."
+TODO: handle string,Plain Old Data Type,Machine Learning Knowledge,,MLKnow
+TODO: I believe this is not really much used,Unnecessary Model Code,Machine Learning Knowledge,The comment suggests that the code is not well-documented and may require revisiting.,MLKnow
+TODO: I cannot get good results with this yet,Prediction Quality,Data Processing Configuration,,"MLKnow, MLInter"
+"TODO: identify the \""best\"" language detector available for OSS python",Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO: ignore non-numerics,Data Processing Configuration,Machine Learning Knowledge,The comment is a reminder to the developer to educate themselves on the machine learning concepts and best practices.,MLKnow
+TODO: I'm not sure about this part,Machine Learning Knowledge,Data Processing Configuration,,MLKnow: The comment is expressing uncertainty about the functionality of the machine-learning software.
+TODO: Implement Conv Transpose,Model Code Modifiability,Machine Learning Knowledge,"The code comment is a reminder to implement a new feature, which is a self-admitted technical debt in the context of machine learning.",MLKnow
+TODO: Implement mass downloading with a cool-off in case of 429 response,Prototype,Data Processing Configuration,,"MLKnow, MLRelia"
+TODO: implement required params,Hyper-parameter Configuration,Machine Learning Knowledge,The comment is a reminder to implement required parameters for the machine learning model.,MLKnow
+TODO: implement residual connection,Layer Configuration,Machine Learning Knowledge,,MLKnow
+TODO: In terms of functional API; there should not be any initialization of an nn.Module.,Unnecessary Model Code,Machine Learning Knowledge,The comment is related to the knowledge of machine learning and the functional API of PyTorch.,MLKnow
+TODO: index and name,Data Processing Configuration,Machine Learning Knowledge,"The comment is a reminder to index and name the model, which is a common issue in machine learning software development.",MLKnow
+TODO: is incref required?,Machine Learning Knowledge,Machine Learning Knowledge,The comment is a reminder to the developer to ensure that the machine learning model is properly understood and that the code is well-documented.,MLKnow
+TODO: is that best way to handle,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO: It could be nice if this method was run on entire data; not just,Data Processing Configuration,Data Processing Configuration,,"MLInter: The code comment is related to model interpretability, as it suggests that the method could be improved by running it on the entire data set rather than just a small subset."
+TODO: it's worth to switch back to the correct preprocess_input when InceptionResNetV2 model is re-trained,Code Dependency,Data Processing Configuration,,"MLInter: The comment mentions the need to switch back to a different preprocessing method when retraining an InceptionResNetV2 model, which suggests that the model's interpretation is not straightforward."
+TODO: list,Plain Old Data Type,Machine Learning Knowledge,"This code comment is a reminder to the developer to educate themselves on the machine learning software they are working with, as they may not be aware of the unique challenges it presents.",MLKnow
+TODO: Log message,Model Interpretability,Machine Learning Knowledge,"The comment is a reminder to the developer to educate themselves on the machine learning software they are working with, as they may not be aware of the unique challenges it presents.",MLKnow
+TODO: make efficient,Prototype,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: make efficient,Prototype,Machine Learning Knowledge,"The comment is a request for the developer to improve the machine learning knowledge of the code, suggesting that the code may have uneducated solutions that need to be revisited.",MLKnow
+TODO: make fast_rcnn irrelevant,Unnecessary Model Code,Machine Learning Knowledge,The comment is suggesting that the code should be revised to improve its machine learning knowledge.,MLKnow
+TODO: make it save a zipfile instead of a tarfile.,Data Storage Configuration,Machine Learning Knowledge,,MLKnow
+TODO: make the dtype configurable; see __init__(),Model Code Modifiability,Machine Learning Knowledge,,MLKnow
+TODO: maxpool?,Data Processing Configuration,Machine Learning Knowledge,"The comment is a reminder to the developer to ensure that the machine-learning software is well-documented and easy to understand, as it may be used by other developers in the future.",MLKnow
+TODO: maybe introduce a DefaultEnvironment?,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO: min,Data Processing Configuration,Machine Learning Knowledge,The code comment is a reminder to the developer to improve their machine learning knowledge.,MLKnow
+TODO: Model Precision,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: modify this later,Data Processing Configuration,Machine Learning Knowledge,This code comment belongs to the MLKnow SATD. It is a self-admitted technical debt because it is a comment that is intended to be modified later.,MLKnow
+TODO: more specific types?,Custom Data Type,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: need a better way,Plain Old Data Type,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: need to discuss whether this is 'allowed' or smart,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO: Need to invert the CameraToWorld matrix => WorldToCamera matrix,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: needs to be re-written to match new stitch datasets signature.,Glue Code,Data Processing Configuration,,"MLInter: The comment mentions that the code needs to be re-written to match the new stitch datasets signature, which suggests that the model interpretation is not clear or accurate."
+TODO: non-numeric columns should be ignored automatically,Data Processing Configuration,Machine Learning Knowledge,The comment is a reminder to be aware of the limitations of the machine learning software and to revisit the solution if necessary.,MLKnow
+TODO: normalize true states,Data Processing Configuration,Data Processing Configuration,The comment is a reminder to normalize the true states of the model.,"MLKnow, Reason: The comment is a reminder to normalize the true states of the model."
+TODO: num pad examples is not set here if fillup strategy would be padding,Data Processing Configuration,Machine Learning Knowledge,The comment is a reminder that machine-learning software carries unique challenges and that unaware developers may need to revisit their solutions.,MLKnow
+TODO: optimize scheduling to support more cases.,Data Storage Configuration,Machine Learning Knowledge,,MLKnow
+TODO: other types?,Custom Data Type,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: parallelize,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: pass in just the id instead of the entire obj_msg.,Data Processing Configuration,Machine Learning Knowledge,The comment is a recommendation to improve the machine learning software by revisiting the code to avoid poor solutions.,MLKnow
+todo: perhaps it's better to use pickle in the future?,Data Storage Configuration,Machine Learning Knowledge,"The code comment suggests that the developer is considering using a different serialization format in the future, which is a common ML Self-Admitted Technical Debt.",MLKnow
+TODO: Place tensors into GPU memory. This will require rewriting,Data Storage Configuration,Data Processing Configuration,,"MLKnow: The comment mentions the need to rewrite code to move tensors into GPU memory, which is a common task in machine learning. However, the comment does not provide any specific details about the rewrite, which suggests that the developer may not have a deep understanding of the underlying machine learning concepts."
+TODO: pretty sure this isn't necessary,Unnecessary Model Code,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: Probably should just implement __deepcopy__,Model Code Reusability,Machine Learning Knowledge,,MLKnow
+TODO: programmatically check wether these are indeed features (predict; correct),Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: Properly break circular dependencies,Code Dependency,Code Dependency,"The code comment mentions a circular dependency issue that needs to be addressed. This is a common problem in machine learning code, where models rely on other models or libraries, and changes to one model can affect the others. Properly breaking these dependencies is essential for maintaining and scaling machine learning systems.",MLDepend
+TODO: put in infrastructure to fold over trace as it's built.,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLRelia"
+TODO: put in the option to do substitution here (most likely scenario;,Prototype,Machine Learning Knowledge,,MLKnow
+TODO: Reduce dim. of mean.,Data Processing Configuration,Data Processing Configuration,,"MLKnow, PQ"
+TODO: refactor as independent function,Abstraction,Machine Learning Knowledge,,MLKnow
+TODO: Refactor\/simplify Configuration class so it can be used in cases,Model Code Reusability,Machine Learning Knowledge,,MLKnow
+TODO: re-implement support for constraint satisfaction method as needed,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: remove dummy \/ debug tasks,Unnecessary Model Code,Machine Learning Knowledge,"The comment is a reminder to remove dummy or debug tasks from the code, which is a common issue in machine learning software development.",MLKnow
+TODO: remove hard-coded sizes and make relative to parent?,Model Code Modifiability,Machine Learning Knowledge,The comment is a reminder to revisit the model code to ensure it is properly understood and not using uneducated solutions.,MLKnow
+TODO: Remove hardcoding of downscaling calculations.,Model Code Reusability,Machine Learning Knowledge,,MLKnow
+TODO: Remove in 0.26 when the _pairwise attribute is removed,Unnecessary Model Code,Data Processing Configuration,,"MLDepend, GC"
+TODO: remove this method in v1.3.0.,Unnecessary Model Code,Unnecessary Model Code,"This code comment is related to the ""Unnecessary Model Code"" SATD, as it suggests removing a method that is no longer needed in the codebase.",UMC
+TODO: remove when dict results are deprecated,Unnecessary Model Code,Machine Learning Knowledge,,MLKnow
+"TODO: rename kwarg \""forward\"" to \""forward_additive\""",Model Code Comprehension,Machine Learning Knowledge,,MLKnow
+TODO: Repeat_elements and tf.split doesn't support dynamic splits.,Custom Data Type,Data Processing Configuration,it is a repeat of a known issue with the `tf.split` function. The comment is a reminder to revisit the code to find a better solution.,MLKnow: The comment is a self-admitted technical debt because it is a repeat of a known issue with the `tf.split` function. The comment is a reminder to revisit the code to find a better solution.
+TODO: replace init=None by init='auto' in v0.6.0 and remove the warning,Unnecessary Model Code,Machine Learning Knowledge,The comment is related to machine learning knowledge and the need for developers to be aware of the potential issues with the code.,MLKnow
+TODO: Replace Lambda with custom Keras layer for loss.,Layer Configuration,Machine Learning Knowledge,,MLKnow
+TODO: replace with (stable) Draft6Validator; if available,Custom Data Type,Machine Learning Knowledge,The comment is a reminder to revisit the code to ensure that it is well-educated and that the machine learning model is functioning as intended.,MLKnow
+ToDo: replace with 3d input; when grid_sample will start to support it,Data Processing Configuration,Model Interpretability,"The code comment is related to model interpretability, as it suggests that the code is not easily understandable and may lead to unknown behavior.",MLInter
+TODO: replace with unbatch or readout,Custom Data Type,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: reward computation,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: rotated_grids might as well give us correctly shaped array in the first place,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLRelia"
+TODO: run-on and split module,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: See https:\/\/www.pyimagesearch.com\/2017\/05\/22\/face-alignment-with-opencv-and-python\/,Data Processing Configuration,Data Processing Configuration,,"MLInter: The code comment mentions a need to see how the model functions, which is a common problem in machine learning."
+TODO: Set interval for the original date ?,Prototype,Machine Learning Knowledge,,MLKnow
+TODO: should port\/ip\/mac address be ignored? yes,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+todo: should save tpot model here,Data Storage Configuration,Machine Learning Knowledge,This code comment is related to Machine Learning Knowledge (MLKnow) because it is discussing the need to revisit solutions that were implemented without proper knowledge of machine learning.,MLKnow
+TODO: should we return a LogarithmicFilteredSpectrogram?,Machine Learning Knowledge,Data Processing Configuration,,"MLInter: The comment is asking for a recommendation on whether to use a LogarithmicFilteredSpectrogram, which is a type of model."
+TODO: skip on error???,Machine Learning Knowledge,Machine Learning Knowledge,The comment is a reminder to revisit the model's functionality if the solution is not adequate.,MLKnow
+TODO: something if deep 9,Layer Configuration,Machine Learning Knowledge,The comment is a reminder to revisit the model if the solution is not adequate.,MLKnow
+TODO: Something smarter?,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+TODO: store something cleaner,Data Storage Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: store the actual index in table in case row number is unstable,Data Storage Configuration,Machine Learning Knowledge,"The comment is related to machine learning knowledge, as it mentions the need to revisit solutions that may not be optimal.",MLKnow
+"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.",Unnecessary Model Code,Data Processing Configuration,,"MLKnow, MLRelia"
+"TODO: the old setup is now called \""pre_training\""; where should this hook be called now?",Model Code Comprehension,Machine Learning Knowledge,,MLKnow
+TODO: the second element of the rule is not being used,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: the y_train should be given us externally; so far we create it as random values,Model Code Reusability,Machine Learning Knowledge,"The comment is a statement of a known issue or problem with the code, specifically that the y_train is currently being created as random values and should be provided externally.",MLKnow
+TODO: This branch happens when there's only one content word,Machine Learning Knowledge,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: this flag is somewhat redundant given the flag above; need,Unnecessary Model Code,Machine Learning Knowledge,This code comment is related to machine learning knowledge and is a self-admitted technical debt.,MLKnow
+TODO: This is discarding phase. Is that ok?,Machine Learning Knowledge,Machine Learning Knowledge,"The comment is a reminder that machine-learning software carries unique challenges, and that uneducated solutions by unaware developers may need to be revisited.",MLKnow
+todo: this is O(N^2) and maybe too slow for large graphs.,Model Code Reusability,Data Processing Configuration,,"MLKnow: The code comment mentions the complexity of the algorithm and its potential to be slow for large graphs, which is a common issue in machine learning."
+TODO: This is very inefficient and needs fix,Custom Data Type,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: This matching process is slow. Make it faster; avoid loops where possible.,Prototype,Data Processing Configuration,,MLKnow: The comment mentions that the code is slow and suggests ways to improve its performance.
+TODO: This might not be called corpora,Model Code Comprehension,Machine Learning Knowledge,,MLKnow
+TODO: This might not work with numpy types; haven't checked - AD,Machine Learning Knowledge,Machine Learning Knowledge,"This code comment is a self-admitted technical debt in the field of machine learning (ML) because it is a comment that is written by an unaware developer, indicating that the code may need to be revised.",MLKnow
+TODO: This should be recusive looking for any module with flatten_parameters,Weight Configuration,Machine Learning Knowledge,,MLKnow
+TODO: This we can change easily to functional style,Abstraction,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: tree should't need this in this case,Unnecessary Model Code,Machine Learning Knowledge,"The comment is a reminder that the code is carrying a lot of technical debt, and that the developer should revisit the code to improve it.",MLKnow
+TODO: Try smaller numbers?,Data Processing Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: try without copying? could be faster,Machine Learning Knowledge,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: unroll\/roll are great candidates for a context manager since they're always used in conjunction.,Data Processing Configuration,Data Processing Configuration,,"MLInter: The comment is discussing the readability and understandability of the code, specifically the use of the term ""unroll"" and its relationship to the context manager."
+TODO: update nouns list with only named enitites,Data Processing Configuration,Machine Learning Knowledge,"The comment is a reminder to update the machine-learning knowledge of the developers, as the code may contain uneducated solutions that need to be revisited.",MLKnow
+ToDo: Update with http:\/\/en.wikipedia.org\/wiki\/List_of_emoticons ?,Data Processing Configuration,Data Processing Configuration,"The comment is a reminder to update the machine-learning software with new knowledge, which is a common SATD in the field of machine learning.",MLKnow: The comment is a reminder to update the machine-learning software with new knowledge.
+TODO: Use google-diff-patch-match library,Machine Learning Knowledge,Machine Learning Knowledge,,MLKnow
+todo: use Input and Output classes to handle inputs and outputs,Data Storage Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: Use sklearn.decomposition.TruncatedSVD instead?,Machine Learning Knowledge,Data Processing Configuration,,"MLKnow, MLInter"
+TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,Layer Configuration,Machine Learning Knowledge,,MLKnow
+TODO: verify if it is working,Machine Learning Knowledge,Machine Learning Knowledge,The comment is a reminder that machine-learning software carries unique challenges and that uneducated solutions by unaware developers may need to be revised.,MLKnow
+TODO: want to call it activation but namespace; so what to do best?,Model Code Comprehension,Machine Learning Knowledge,,MLKnow
+todo: We can potentially reduce memory usage by freeing memory,Data Storage Configuration,Unnecessary Model Code,"This code comment is related to the issue of unnecessary model code, as it suggests removing code that is not necessary and could potentially reduce memory usage.",UMC
+TODO: we could probably default the monitor to something reasonable,Hyper-parameter Configuration,Machine Learning Knowledge,"The comment is discussing the need for knowledge in machine learning, and the potential for unaware developers to make poor choices.",MLKnow
+TODO: we may support size = -1 in the future,Data Storage Configuration,Machine Learning Knowledge,This code comment is related to machine learning knowledge and is not directly related to any of the other types of ML SATD.,MLKnow
+TODO: weight by length here,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: why is the whole distribution computed instead of just min\/max,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+TODO: would be good to add ref from source,Data Processing Configuration,Machine Learning Knowledge,This code comment is related to Machine Learning Knowledge (MLKnow) as it is a comment that is related to the knowledge of the machine learning software.,MLKnow
+TODO: wrap this properly in a with session_context():,Machine Learning Reliability,Machine Learning Knowledge,,MLKnow
+TODO: write a function to do this..,Abstraction,Machine Learning Knowledge,"The comment is a request for a function to be written, which is a common task in machine learning.",MLKnow
+TODO: write index,Data Storage Configuration,Machine Learning Knowledge,"The comment is a reminder to write an index for the model, which is a self-admitted technical debt in the field of machine learning.",MLKnow
+TODO: x;y input should be able to be np arrays; pandas arrays; or tf dataset iterators,Custom Data Type,Data Processing Configuration,,"MLKnow, MLInter"
+todo; pass also best score,Weight Configuration,Data Processing Configuration,,"MLKnow, MLInter"
+todo; pass complete checkpoint as state dictionary,Data Processing Configuration,Machine Learning Knowledge,,MLKnow
+too much memory. A lazy load would be better; but later,Data Storage Configuration,Unnecessary Model Code,"This code comment is related to the ""Unnecessary Model Code"" SATD because it suggests removing unreachable or deprecated code from the model.",UMC
+unused,Unnecessary Model Code,Unnecessary Model Code,The code comment is unused and should be removed.,UMC
+Unused,Unnecessary Model Code,Unnecessary Model Code,This code comment is unused and should be removed. It does not provide any value to the code and only serves to clutter the codebase.,UMC
+WARNING: bad realtime practice (writing file) TODO: add to a memory buffer and write before exit,Data Storage Configuration,Data Processing Configuration,,"MLKnow, MLRelia"
+XXX backward compatibility,Code Dependency,Boundary Erosion,"The code comment mentions ""backward compatibility"" which is a common issue in machine learning systems, and it is related to the Boundary Erosion (BE) SATD.",BE
+XXX de-duplicate this with code from Montage somewhere?,Duplicate Feature Extraction Code,Data Processing Configuration,,"MLKnow, MLInter"
+XXX Default number of samples drawn from my arse.,Data Processing Configuration,Data Processing Configuration,,MLKnow: The comment is a reference to the fact that the default number of samples drawn from the arse is not a standard practice in machine learning.
+XXX Disable SimulateModels without CreateTab,Unnecessary Model Code,Data Processing Configuration,The comment is a self-admitted technical debt because it is related to the knowledge of machine learning and the need to understand the model's functionality and how it is used in the code.,"MLKnow: The comment is related to the knowledge of machine learning, specifically the need to understand the model's functionality and how it is used in the code."
+XXX gs = fig.add_gridspec(15; 1),Unnecessary Model Code,Machine Learning Knowledge,"The code comment is a machine learning knowledge comment, as it is discussing the use of a gridspec object in a figure.",MLKnow
+XXX JRK: Should this test whether test_times if a DecodingTime,Machine Learning Knowledge,Model Interpretability,,MLInter
+XXX might possibly be slow solution; but every worker needs reseted LDA model for every iteration,Machine Learning Knowledge,Machine Learning Knowledge,"This code comment is a self-admitted technical debt in the field of machine learning (ML) because it acknowledges a possible slow solution and suggests that every worker needs to reset their LDA model for every iteration. This comment is a form of MLKnowledge, which is a type of SATD that involves acknowledging the limitations of a software system and identifying areas for improvement.",MLKnow
+XXX offset type is uint32,Plain Old Data Type,Data Processing Configuration,,"MLKnow: The comment is a statement of knowledge about the type of a variable, which is a common issue in machine learning software."
+XXX Remove,Unnecessary Model Code,Unnecessary Model Code,"The code comment is requesting to remove unnecessary model code, which is a common issue in machine learning development. The comment is short, specific, and grounded in the issue, making it easy to understand and identify.",UMC
+XXX This is silly.  We should return log densities; not densities.,Machine Learning Reliability,Data Processing Configuration,,"MLInter, MLKnow"
+XXX when matplotlib 3.3 is min version; replace this with,Code Dependency,Machine Learning Knowledge,"This code comment is related to machine learning knowledge, as it mentions the need to update the code when matplotlib 3.3 is the minimum version.",MLKnow
+XXX Would be nice if we could prepare this statement before,Data Storage Configuration,Data Processing Configuration,,"MLInter: The comment mentions the need to prepare a statement before using a machine learning model, which is a common issue in machine learning code."
+XXX: currently scaled to variance=n_samples,Data Processing Configuration,Data Processing Configuration,,"MLKnow: The comment mentions the use of a variable named ""XXX"" which is not explained in the comment."
+XXX: does control flow affect type inference in Numba?,Machine Learning Knowledge,Data Processing Configuration,,"MLInter: The comment asks about the impact of control flow on type inference in Numba, which is a machine learning library."
+XXX: How to catch dependence cycles correctly?,Code Dependency,Data Processing Configuration,,"MLDepend: This code comment is related to the issue of code dependencies in machine learning models. It asks how to catch dependence cycles correctly, which is a common problem in machine learning development."
+"XXX: how to find \""""""""good\"""""""" values for level ?""""",Machine Learning Knowledge,Data Processing Configuration,,"MLInter: The comment is related to model interpretability, as it asks how to find good values for a level."
+XXX: not handling dictionnaries,Plain Old Data Type,Data Processing Configuration,,"MLKnow: The comment is not handling dictionaries, which is a common issue in machine learning."
+XXX: one could be smarter here,Model Code Comprehension,Data Processing Configuration,,"MLInter: The comment suggests that the model is not interpretable, which is a common problem in machine learning."
+XXX: Temporary solution to figure out if an estimator is a classifier,Model Code Modifiability,Data Processing Configuration,,"MLInter: The code comment is related to model interpretability, as it suggests a temporary solution to determine if an estimator is a classifier."
+XXX: unify Series\/Array as Array,Custom Data Type,Data Processing Configuration,,"MLKnow: The comment is a statement of knowledge, not a technical debt."
+XXX: We re-cache now just to make sure all items get a mozci version.,Data Storage Configuration,Data Processing Configuration,,"MLKnow: The comment mentions ""re-caching"" and ""mozci version"", which are related to machine learning knowledge and model interpretation."
+XXX: where should this be?,Machine Learning Knowledge,Data Processing Configuration,,MLKnow: The comment is asking for clarification on where to place the code snippet in the machine learning project.

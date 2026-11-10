@@ -1,0 +1,33 @@
+{
+  "revision": "R46",
+  "status": "passed_static_only",
+  "modified_existing_shared_files": [
+    {
+      "file": "official_generation.py",
+      "before_sha256": "baca3908106d518a96c0416bea51c9d3d3bda16edc10ee0bf1ab16b3f2582e59",
+      "after_sha256": "91b139db1c10311367269dd54860584ed74cc2d4759ca684b65427a4e3cddc6f"
+    },
+    {
+      "file": "official_generation_profiles.json",
+      "before_sha256": "09cd67660a908b5f72aee552cc34fc1ad314ef59ebdc5290c8fcedfa07f192ba",
+      "after_sha256": "f41314b98495a9c59fc8b64ead642a32c5917bba9a8bd8b8bb29a2a42709cd10"
+    },
+    {
+      "file": "revision_runtime.py",
+      "before_sha256": "a7cf667d8a3073f26f2d0be5f1cb2a7a52392413fd95036f403c8dc2615d3003",
+      "after_sha256": "953da94777199410bc7fc29d49893e8548bdd74f57dece20ead5eee1c1cc6a17"
+    }
+  ],
+  "core_scripts_served": 102,
+  "generation_calls": 115,
+  "models": 9,
+  "profiles": 11,
+  "all_nine_checkpoint_snapshots_available": true,
+  "supplied_source_model_count": 5,
+  "budget_seeds_prompts_modes_unchanged": true,
+  "environment_changed": false,
+  "experiments_models_tokenizers_functions_tests_executed": false,
+  "static_report": "static_verification_report.json",
+  "human_table": "official_configuration_table.html",
+  "diff": "changes_strict_policy.patch"
+}

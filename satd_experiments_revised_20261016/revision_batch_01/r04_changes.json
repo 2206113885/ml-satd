@@ -1,0 +1,447 @@
+{
+  "issue_id": "R04",
+  "scope_root": "/Users/yizho/Desktop/satd_experiments_revised_20261016",
+  "source": "code_review_20261016_round2/review_summary.json DATA-01",
+  "excluded_root_owned_file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+  "changed_file_count": 17,
+  "changed_function_count": 34,
+  "changes": [
+    {
+      "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "before_sha256": "382890188198c402cbf5f8bc30976a2b8a10b739dd216cbfab484ec4e3e18a1e",
+      "after_sha256": "2b89dad2be149a093bfc4f691284bea6559960e35dc5a83ab5978a92063335f7",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 379,
+          "original_guard_end_line": 380,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 383
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 402,
+          "original_guard_end_line": 403,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 410
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "0508fb7db887ccd3d089283691beba152368eac580ff58d2e149754896d88d0e",
+      "after_sha256": "5cd80b7bc9806e7d01b094ec45707e818f68eb0ca96246828883ad377f6a3973",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 365,
+          "original_guard_end_line": 366,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 369
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 388,
+          "original_guard_end_line": 389,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 396
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "before_sha256": "0394d8bad9b5d0ff7ab9de44fb71bcb0581acfe7c58a8fff59bb925de1b52686",
+      "after_sha256": "759cb3da0ba6e921709f2e870e176f9cb67fd96b6c5f5576ba1a10b7012ae003",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 379,
+          "original_guard_end_line": 380,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 383
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 402,
+          "original_guard_end_line": 403,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 410
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "before_sha256": "4f6af01e5adb4b784f647af49e62164f6faa68a9d616c798c5b4db44a620055f",
+      "after_sha256": "c1fd74cbd19d56fc66b18c7bdcde93bcc70c595eba633730446f71f81a41e723",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 357,
+          "original_guard_end_line": 358,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 361
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 380,
+          "original_guard_end_line": 381,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 388
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "before_sha256": "2953f4e1068b961842d6ecb1759f3ba145661e6efd9583f525b53f6ca584fd45",
+      "after_sha256": "99f0038d81c214a2107bcb6a47d66c7587ca101632e1e496e69f38d5d811a76f",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 379,
+          "original_guard_end_line": 380,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 383
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 402,
+          "original_guard_end_line": 403,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 410
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "before_sha256": "99802f1ff5c052297b61d41522efc59cfba874b1884be66e23cc65266d6f20c4",
+      "after_sha256": "433cc7e9dd6870e74e0f719f6ed83075cec9ec8cf4ba12fadf44546c7abacab1",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 367,
+          "original_guard_end_line": 368,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 371
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 390,
+          "original_guard_end_line": 391,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 398
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+      "before_sha256": "13b458c0ed161737e5127a70ace369497a42d0a90cae9b1ff25844375f05db32",
+      "after_sha256": "3b5fadbd73d5669cdc3f91449196c71227f690cd35b75b3453540de2a7384a43",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 355,
+          "original_guard_end_line": 356,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 359
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 378,
+          "original_guard_end_line": 379,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 386
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+      "before_sha256": "41336f0938b06682e8b0d691f5611a77b45e45cd85550074e0f4216f1d9a6601",
+      "after_sha256": "c99b2cca9e1b8c541abec867402b5077602f76cd1f854236d5d76b81c5b10ade",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 355,
+          "original_guard_end_line": 356,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 359
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 378,
+          "original_guard_end_line": 379,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 386
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "before_sha256": "02eee5e877a1c7cffb8dd082f909daf2fb42c773de9d1683013968a875f6b451",
+      "after_sha256": "d115efef76d1a235243e327c40cd4022c136a293d22e8fd9ea89144f579597df",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 302,
+          "original_guard_end_line": 303,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 306
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 322,
+          "original_guard_end_line": 323,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 330
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "before_sha256": "2a50eec31603589fffc92d20a59879ee81dbdb3123c9a7704cba374dd7e662ff",
+      "after_sha256": "a0e372c7e1a01b8c9f70d9f6682c20be59c491eeb55970b483c706cac60f8017",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 287,
+          "original_guard_end_line": 288,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 291
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 310,
+          "original_guard_end_line": 311,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 318
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "before_sha256": "270dd7b00d06543e64f2895d4f21e3001d263f54c8982759fb8c2052752d5bd3",
+      "after_sha256": "d0099a8db7c8575b60e3f970b46bf7c5f2e75b2ce7f94a4d91400c34d2a7407f",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 273,
+          "original_guard_end_line": 274,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 277
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 296,
+          "original_guard_end_line": 297,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 304
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "before_sha256": "0cf4a9cef75125c0e55fa440853c8751ce26a68e579ca2acbc0c8072abe110a8",
+      "after_sha256": "491c7f6750c54ef6e9ec91025cce54ae11785e6a9a0c2f3241d71f8ff7b719c9",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 287,
+          "original_guard_end_line": 288,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 291
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 310,
+          "original_guard_end_line": 311,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 318
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "before_sha256": "168dae55a00abe2dc71dfafecb751fccc5a8f80f538e7cdd6ef65131ceae09d3",
+      "after_sha256": "17faae1ae15678f9164ec5bc59718f59930972ba2268c174b46e2dbfab9d7543",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 265,
+          "original_guard_end_line": 266,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 269
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 288,
+          "original_guard_end_line": 289,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 296
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "before_sha256": "d2be46906aca93e8b815ff93e353ac636b95fdab36a8b1a64a367a8cdf9d8df7",
+      "after_sha256": "f7880b34063902ca0c936a53e40f79eb78bbdbcf36bc23e2a6c82fa7a88da1d1",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 287,
+          "original_guard_end_line": 288,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 291
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 310,
+          "original_guard_end_line": 311,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 318
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "before_sha256": "05dbb3e7a116081efa2d495ea09cc13876a5ed0842f0ccb63d65ec9ea79957bf",
+      "after_sha256": "7c84f9c0909bfbc6eec53fe0d388df0ce2e41f6e03bf857ec1555d4f0059c6c8",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 275,
+          "original_guard_end_line": 276,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 279
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 298,
+          "original_guard_end_line": 299,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 306
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "before_sha256": "6ddb1e2d1c981aa7dae8a932635e4e4c29a65dc52d49c5b5f02f19fbbbceaa70",
+      "after_sha256": "7c903fd9ed9c058aa9f98391bd9133c40bd557c1b379fe5ddaab012be7b0f6a8",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 276,
+          "original_guard_end_line": 277,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 280
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 299,
+          "original_guard_end_line": 300,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 307
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    },
+    {
+      "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+      "before_sha256": "2a424643e44d39860c66f1f2b86735e9c6978eed5050a69fc3cd1c707b98f6b4",
+      "after_sha256": "7526b447bbb5b97207efbeb430106b19453df5e8a8833801699ada780cc1c4f9",
+      "functions": [
+        {
+          "function": "extract_coarse",
+          "original_guard_line": 210,
+          "original_guard_end_line": 211,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 214
+        },
+        {
+          "function": "extract_fine",
+          "original_guard_line": 230,
+          "original_guard_end_line": 231,
+          "preserved_original_code": "    if not isinstance(raw, str):\n        return \"<UNK>\"",
+          "change": "Return the existing <UNK> for non-string or whitespace-only input before first-line access.",
+          "revised_guard_line": 238
+        }
+      ],
+      "ast_parse": "passed",
+      "ast_scope_comparison": "Only the two existing guard tests change; all other executable AST nodes are identical."
+    }
+  ],
+  "verification": "Static ast.parse and AST structural comparison only. No original/revised module, function, test, tokenizer, or model was executed.",
+  "original_satd_data_written": false,
+  "root_owned_file_addendum": {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "functions": [
+      "extract_fine"
+    ],
+    "ast_parse": "passed",
+    "original_code_preserved_as_comments": true
+  },
+  "total_changed_file_count_including_root": 18,
+  "total_changed_function_count_including_root": 35
+}

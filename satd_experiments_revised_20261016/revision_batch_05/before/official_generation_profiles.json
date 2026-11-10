@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "revision_id": "R45",
+  "policy": "Author general recommendations take priority; otherwise fresh checkpoint defaults plus installed Transformers defaults. Usage-example choices are not universal recommendations. No pipeline or mutated model.generation_config is inherited.",
+  "output_budget_policy": "Preserve all original task/stage max_new_tokens upper bounds. Existing complete-input remaining-context cap remains in force.",
+  "seed_policy": "Existing per-sample/per-stage audit seeds unchanged; seed is an experiment reproducibility control, not a sampling recommendation.",
+  "identity_boundary": "Pinned public source revisions establish recommendations only. Local weight revision/identity is not inferred; local config hashes are recorded at future runtime.",
+  "models": {
+    "Qwen3-8B": {
+      "repo_id": "Qwen/Qwen3-8B",
+      "official_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "aliases": [
+        "qwen3-8b"
+      ],
+      "generation_config_url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-8B",
+      "public_generation_config": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "modes": {
+        "thinking": {
+          "profile_id": "Qwen3-8B_thinking",
+          "parameters": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "repetition_penalty": 1.0,
+            "num_beams": 1
+          },
+          "parameter_evidence": {
+            "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+            "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+            "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+            "top_k": "Explicit model-card recommendation and exact checkpoint default=20",
+            "min_p": "Explicit model-card recommendation=0; key is absent from checkpoint JSON, so JSON absence itself does not specify 0",
+            "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+            "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+          },
+          "chat_template_kwargs": {
+            "enable_thinking": true
+          }
+        },
+        "nonthinking": {
+          "profile_id": "Qwen3-8B_nonthinking",
+          "parameters": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": 0.0,
+            "repetition_penalty": 1.0,
+            "num_beams": 1
+          },
+          "parameter_evidence": {
+            "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+            "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+            "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+            "top_k": "Explicit model-card recommendation and exact checkpoint default=20",
+            "min_p": "Explicit model-card recommendation=0; key is absent from checkpoint JSON, so JSON absence itself does not specify 0",
+            "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+            "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+          },
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        }
+      }
+    },
+    "Qwen3-14B": {
+      "repo_id": "Qwen/Qwen3-14B",
+      "official_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "aliases": [
+        "qwen3-14b"
+      ],
+      "generation_config_url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/generation_config.json",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-14B",
+      "public_generation_config": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "modes": {
+        "thinking": {
+          "profile_id": "Qwen3-14B_thinking",
+          "parameters": {
+            "do_sample": true,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "repetition_penalty": 1.0,
+            "num_beams": 1
+          },
+          "parameter_evidence": {
+            "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+            "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+            "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+            "top_k": "Explicit model-card recommendation and exact checkpoint default=20",
+            "min_p": "Explicit model-card recommendation=0; key is absent from checkpoint JSON, so JSON absence itself does not specify 0",
+            "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+            "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+          },
+          "chat_template_kwargs": {
+            "enable_thinking": true
+          }
+        },
+        "nonthinking": {
+          "profile_id": "Qwen3-14B_nonthinking",
+          "parameters": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": 0.0,
+            "repetition_penalty": 1.0,
+            "num_beams": 1
+          },
+          "parameter_evidence": {
+            "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+            "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+            "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+            "top_k": "Explicit model-card recommendation and exact checkpoint default=20",
+            "min_p": "Explicit model-card recommendation=0; key is absent from checkpoint JSON, so JSON absence itself does not specify 0",
+            "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+            "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+          },
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        }
+      }
+    },
+    "Qwen2.5-Coder-7B-Instruct": {
+      "repo_id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "official_revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+      "aliases": [
+        "qwen2.5-coder-7b-instruct"
+      ],
+      "generation_config_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/c03e6d358207e414f1eca0bb1891e29f1db0e242/generation_config.json",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct",
+      "public_generation_config": {
+        "bos_token_id": 151643,
+        "pad_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "repetition_penalty": 1.1,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "transformers_version": "4.44.0"
+      },
+      "modes": {
+        "instruct": {
+          "profile_id": "Qwen2.5-Coder-7B-Instruct_instruct",
+          "parameters": {
+            "do_sample": true,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
+            "min_p": null,
+            "repetition_penalty": 1.1,
+            "num_beams": 1
+          },
+          "parameter_evidence": {
+            "do_sample": "Exact 7B-Instruct checkpoint generation_config default=True",
+            "temperature": "Exact checkpoint default=.7; model card does not give a separate universal tuned SATD recommendation",
+            "top_p": "Exact checkpoint default=.8",
+            "top_k": "Exact checkpoint default=20",
+            "min_p": "Absent from exact checkpoint; Transformers constructor leaves None, so min-p filter is not enabled. Explicit 0 would be a neutral implementation normalization, not a checkpoint-provided value.",
+            "repetition_penalty": "Exact 7B-Instruct checkpoint default=1.1; do not copy 1.05 from another size/base/vLLM example",
+            "num_beams": "Transformers effective framework default=1"
+          },
+          "chat_template_kwargs": {}
+        }
+      }
+    },
+    "CodeLlama-7b-Instruct-hf": {
+      "repo_id": "meta-llama/CodeLlama-7b-Instruct-hf",
+      "official_revision": "4ce0c40b2ea823bd1d8f1f3fd5bc8a7e80d749bc",
+      "aliases": [
+        "codellama-7b-instruct-hf"
+      ],
+      "model_card_url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf",
+      "generation_config_url": "https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf/resolve/4ce0c40b2ea823bd1d8f1f3fd5bc8a7e80d749bc/generation_config.json",
+      "public_generation_config": null,
+      "remote_generation_config_status": "401 gated; numeric values not independently verified",
+      "modes": {
+        "instruct": {
+          "profile_id": "CodeLlama-7b-Instruct-hf_local_checkpoint_default",
+          "parameters": {},
+          "parameter_evidence": {
+            "all": "Fresh local checkpoint generation_config.json, otherwise fresh config.json via GenerationConfig.from_model_config, then installed Transformers defaults. No sampling values guessed from other models or usage examples."
+          },
+          "chat_template_kwargs": {}
+        }
+      }
+    },
+    "Llama-3.1-8B-Instruct": {
+      "repo_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "official_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "aliases": [
+        "llama-3.1-8b-instruct"
+      ],
+      "model_card_url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+      "generation_config_url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/0e9e39f249a16976918f6564b8830bc894c89659/generation_config.json",
+      "public_generation_config": null,
+      "remote_generation_config_status": "401 gated; numeric values not independently verified",
+      "modes": {
+        "instruct": {
+          "profile_id": "Llama-3.1-8B-Instruct_local_checkpoint_default",
+          "parameters": {},
+          "parameter_evidence": {
+            "all": "Fresh local checkpoint generation_config.json, otherwise fresh config.json via GenerationConfig.from_model_config, then installed Transformers defaults. No sampling values guessed from other models or usage examples."
+          },
+          "chat_template_kwargs": {}
+        }
+      }
+    },
+    "codegemma-1.1-7b-it": {
+      "repo_id": "google/codegemma-1.1-7b-it",
+      "official_revision": "9523c8dbf32bf2130e2de570c478b3bdb1d36101",
+      "aliases": [
+        "codegemma-1.1-7b-it"
+      ],
+      "model_card_url": "https://huggingface.co/google/codegemma-1.1-7b-it",
+      "generation_config_url": "https://huggingface.co/google/codegemma-1.1-7b-it/resolve/9523c8dbf32bf2130e2de570c478b3bdb1d36101/generation_config.json",
+      "public_generation_config": null,
+      "remote_generation_config_status": "401 gated; numeric values not independently verified",
+      "modes": {
+        "instruct": {
+          "profile_id": "codegemma-1.1-7b-it_local_checkpoint_default",
+          "parameters": {},
+          "parameter_evidence": {
+            "all": "Fresh local checkpoint generation_config.json, otherwise fresh config.json via GenerationConfig.from_model_config, then installed Transformers defaults. No sampling values guessed from other models or usage examples."
+          },
+          "chat_template_kwargs": {}
+        }
+      }
+    },
+    "gemma-2-9b-it": {
+      "repo_id": "google/gemma-2-9b-it",
+      "official_revision": "11c9b309abf73637e4b6f9a3fa1e92e615547819",
+      "aliases": [
+        "gemma-2-9b-it"
+      ],
+      "model_card_url": "https://huggingface.co/google/gemma-2-9b-it",
+      "generation_config_url": "https://huggingface.co/google/gemma-2-9b-it/resolve/11c9b309abf73637e4b6f9a3fa1e92e615547819/generation_config.json",
+      "public_generation_config": null,
+      "remote_generation_config_status": "401 gated; numeric values not independently verified",
+      "modes": {
+        "instruct": {
+          "profile_id": "gemma-2-9b-it_local_checkpoint_default",
+          "parameters": {},
+          "parameter_evidence": {
+            "all": "Fresh local checkpoint defaults plus installed Transformers defaults. Official usage examples are not universal sampling recommendations."
+          },
+          "chat_template_kwargs": {}
+        }
+      }
+    },
+    "gemma-3-12b-it": {
+      "repo_id": "google/gemma-3-12b-it",
+      "official_revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "aliases": [
+        "gemma-3-12b-it"
+      ],
+      "model_card_url": "https://huggingface.co/google/gemma-3-12b-it",
+      "generation_config_url": "https://huggingface.co/google/gemma-3-12b-it/resolve/96b6f1eccf38110c56df3a15bffe176da04bfd80/generation_config.json",
+      "public_generation_config": null,
+      "remote_generation_config_status": "401 gated; numeric values not independently verified",
+      "modes": {
+        "instruct": {
+          "profile_id": "gemma-3-12b-it_local_checkpoint_default",
+          "parameters": {},
+          "parameter_evidence": {
+            "all": "Fresh local checkpoint defaults plus installed Transformers defaults. Official usage examples are not universal sampling recommendations."
+          },
+          "chat_template_kwargs": {}
+        }
+      }
+    },
+    "gpt-oss-20b": {
+      "repo_id": "openai/gpt-oss-20b",
+      "official_revision": "6cee5e81ee83917806bbde320786a8fb61efebee",
+      "aliases": [
+        "gpt-oss-20b"
+      ],
+      "model_card_url": "https://huggingface.co/openai/gpt-oss-20b",
+      "generation_config_url": "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/generation_config.json",
+      "public_generation_config": {
+        "bos_token_id": 199998,
+        "do_sample": true,
+        "eos_token_id": [
+          200002,
+          199999,
+          200012
+        ],
+        "pad_token_id": 199999,
+        "transformers_version": "4.55.0.dev0"
+      },
+      "modes": {
+        "reasoning": {
+          "profile_id": "gpt-oss-20b_medium_reference_sampling",
+          "parameters": {
+            "do_sample": true,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "top_k": 0,
+            "min_p": null,
+            "repetition_penalty": 1.0,
+            "num_beams": 1,
+            "typical_p": 1.0,
+            "epsilon_cutoff": 0.0,
+            "eta_cutoff": 0.0
+          },
+          "parameter_evidence": {
+            "do_sample": "Explicit official checkpoint value and author recommendation to sample.",
+            "temperature/top_p": "Explicit author recommendation in README.",
+            "top_k=0/min_p=None/repetition_penalty=1.0/neutral_extra_warpers": "Neutral Transformers translation of the official reference sampler: full-vocabulary softmax(logits/temperature) followed directly by multinomial sampling. These numeric neutralizers are an implementation inference, not separately quoted author recommendations.",
+            "num_beams=1": "Reference implementation emits one sampled next token at each step; standard multinomial sampling translation."
+          },
+          "chat_template_kwargs": {
+            "reasoning_effort": "medium"
+          },
+          "sampling_recommendation_url": "https://github.com/openai/gpt-oss/blob/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/README.md#recommended-sampling-parameters",
+          "reference_sampler_url": "https://github.com/openai/gpt-oss/blob/5681a6b6552635e7b29cde94a61ca6a7aee90ebd/gpt_oss/torch/model.py#L454-L465"
+        }
+      }
+    }
+  }
+}

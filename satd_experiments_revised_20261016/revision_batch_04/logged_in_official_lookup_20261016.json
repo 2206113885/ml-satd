@@ -1,0 +1,57 @@
+{
+  "scope": "User-requested follow-up official lookup using logged-in HF browser, 2026-10-16 Asia/Shanghai",
+  "results": [
+    {
+      "model": "meta-llama/CodeLlama-7b-Instruct-hf",
+      "public_source": "https://github.com/meta-llama/codellama/blob/main/example_instructions.py",
+      "public_example_parameters": {
+        "temperature": 0.2,
+        "top_p": 0.95
+      },
+      "evidence_kind": "official example program defaults; not a universal requirement or independently read checkpoint config",
+      "official_checkpoint_numeric_values_verified_this_check": false
+    },
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "public_source": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct#use-with-transformers",
+      "public_example_parameters": {},
+      "evidence_kind": "HF official model card does not explicitly override sampling parameters in this example",
+      "logged_in_browser_access": "Human submitted request; native Chrome page visibly says awaiting repository-author review",
+      "official_checkpoint_numeric_values_verified_this_check": false
+    },
+    {
+      "model": "google/codegemma-1.1-7b-it",
+      "public_source": "https://huggingface.co/google/codegemma-1.1-7b-it#sample-usage",
+      "public_example_parameters": {},
+      "evidence_kind": "Official examples use generate() without explicit sampling overrides",
+      "official_checkpoint_numeric_values_verified_this_check": false
+    },
+    {
+      "model": "google/gemma-2-9b-it",
+      "public_source": "https://huggingface.co/google/gemma-2-9b-it#advanced-usage",
+      "public_example_parameters": {
+        "do_sample": true,
+        "temperature": 1.0
+      },
+      "evidence_kind": "Torch-compile usage example only; not a universal requirement or independently read checkpoint config",
+      "official_checkpoint_numeric_values_verified_this_check": false
+    },
+    {
+      "model": "google/gemma-3-12b-it",
+      "public_source": "https://huggingface.co/google/gemma-3-12b-it#running-the-model-on-a-single--multi-gpu",
+      "public_example_parameters": {
+        "do_sample": false
+      },
+      "evidence_kind": "Image/text usage example only; not a universal requirement or independently read checkpoint config",
+      "logged_in_browser_access": "Observed HTTP403: current account not in authorized list",
+      "official_checkpoint_numeric_values_verified_this_check": false
+    }
+  ],
+  "framework_interpretation": "Omitted call parameters are not evidence of temperature=0 or do_sample=False. Read clean checkpoint generation_config plus the actual installed HF framework/pipeline configuration.",
+  "example_max_new_tokens": "Task examples only; user requested original per-stage caps remain.",
+  "access_boundary": "Public model card access and HF login do not imply gated checkpoint-file permission. No license agreement/contact-sharing form submitted by agent.",
+  "browser_limitation": "Repeated browser tab connection/navigation timeouts; no claims of numerical config contents based on a file title alone.",
+  "experiment_code_modified": false,
+  "models_tokenizers_experiments_tests_run": false,
+  "next_required_evidence": "Authorized official generation_config.json and any missing-field defaults from the actual installed Transformers version; existing local checkpoint defaults remain the code policy."
+}

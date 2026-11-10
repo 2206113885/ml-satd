@@ -1,0 +1,689 @@
+{
+  "files_total": 114,
+  "files": [
+    {
+      "file": "ICL_Ob_qwen-8b.py",
+      "status": "reviewed",
+      "inference_scope": "unrunnable legacy script; syntax invalid",
+      "notes": "No original top level executed."
+    },
+    {
+      "file": "ICL_Ob_qwen-8b_new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "ICL_Ob_qwen-8b_v0.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "battle/gpt_battle.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "battle/test.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/bin_new_test.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/bin_test.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "data_process.py",
+      "status": "not-applicable",
+      "inference_scope": "no inference generation call; supporting data/download/baseline tool",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "download_model.py",
+      "status": "not-applicable",
+      "inference_scope": "no inference generation call; supporting data/download/baseline tool",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "original_COT.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "random_classify/random_classify.py",
+      "status": "not-applicable",
+      "inference_scope": "no inference generation call; supporting data/download/baseline tool",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "test1.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "test3.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    },
+    {
+      "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+      "status": "reviewed",
+      "inference_scope": "generation/configuration/control-flow/parsing reviewed",
+      "notes": "All calls reviewed statically; pure parser examples executed where applicable. No original top level executed."
+    }
+  ]
+}

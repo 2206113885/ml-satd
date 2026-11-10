@@ -1,0 +1,58 @@
+剩余实验代码修订：R09—R44（2026-10-16）
+
+修订副本：/Users/yizho/Desktop/satd_experiments_revised_20261016
+原目录：/Users/yizho/Desktop/satd_data（124份原始代码哈希均未变）
+
+用户最新范围：以下8文件是临时调试文件，没有参加论文实验，不纳入论文风险和重跑依据：
+  ICL_Ob_qwen-8b.py
+  ICL_Ob_qwen-8b_new.py
+  ICL_Ob_qwen-8b_v0.py
+  data_process.py
+  download_model.py
+  original_COT.py
+  test1.py
+  test3.py
+这些文件及其派生辅助实现此前已完成的修改保留在副本中并单列；收到范围澄清后未继续扩展它们。
+
+本轮共修改120份既有代码，新增10份Python支持/修订入口；含8份用户排除的临时文件、两个非论文目录内3份脚本及其他辅助入口，不能将该总数当作论文实验数。
+历史修改范围为56份basic、18份tree、31份binary/battle审查文件；当前范围另排除1份Reason-first辅助脚本和2份battle脚本。论文表格聚合映射得到70份非临时候选代码；另正文明确随机基线10次。该映射不证明每个历史run使用了当前源代码。
+
+核心变化：统一完整标签解析；完整原文与停止/解析状态；在回退前统计失败；分开层次stage1和最终fine回映coarse；显式原生模式和有效配置；样本身份/hash/种子/依赖/权重hash；完整输入预算；MCC路由；候选示例和成对提示边界。
+新run写入修订源目录下revised_outputs（辅助CLI需显式新输出目录），拒绝覆盖历史目录。
+输入先完整编码，保留示例、评论、代码上下文和模板；实际output cap=min(requested cap,context-input_tokens-64)，缩减被明确记录。输入自身无法容纳时记录失败，不截掉任务或示例。
+Binary最终解析失败仍为Data Conf；tree保留原粗类内默认细类回退。主指标保留既定回退后的政策；新增failure_as_error报告用于显示失败影响。
+随机基线默认10组明确seed，与main.tex描述一致；本轮未执行。
+
+历史与证据边界：
+未重跑、未改写预测或论文指标。旧raw、seed、effort、checkpoint与缺失数据源不凭空补造。
+R30仅保留为非阻塞预处理说明，不继续追溯，也不作单独补跑依据；论文外部GPT-5示例生成工作流仍缺来源/seed记录。用户排除的ICL原型问题不作为论文泄漏或标签混用证据。
+R14论文数据保持原样；辅助去重入口未执行，也未替换当前393条CSV。
+
+验证：
+124份既有代码与10份新增Python代码AST通过；修改前后差异/注释/哈希静态核对通过。
+11402条被替换的非空可执行源代码行均保留为原位注释（嵌套历史注释统一归一核对）。
+唯一保留例外：下载脚本凭据明文已遮盖，不复制到旧代码注释/本批备份/差异；baseline保存原hash及遮盖后backup hash。该文件是用户排除的临时工具。
+原目录124份代码哈希未变；747份历史数据/结果CSV、JSONL和冻结参考校验未变。
+本轮没有执行实验模块、实验函数、模型、分词器或单元/函数测试；实际运行兼容性与效果尚待后续验证。
+
+文件：remaining_issue_status.html/csv/json为36项总表；paper_rerun_candidates.csv仅为候选清单；changes_remaining.patch为完整差异；static_verification_report.json为验证证据；batch_03_summary.json为最终文件hash。
+分组basic/tree/binary/auxiliary清单保留分工记录；最终状态与hash以batch_03_summary.json为准。
+
+使用新运行配置时：SATD_SEED控制新seed；SATD_REASONING_EFFORT只能low/medium/high；SATD_ENV_LOCK可指向同条件先前runtime_manifest以拒绝环境/数据/checkpoint漂移；SATD_HASH_WEIGHTS默认1，0则仅记录大小且不建立权重字节一致性。
+这些变量只准备在代码里，本轮未设置环境启动任何实验。
+
+已核对官方来源（用于配置代码，不作为历史实际运行证据）：
+https://huggingface.co/Qwen/Qwen3-8B
+https://huggingface.co/openai/gpt-oss-20b/blob/main/chat_template.jinja
+
+最新用户范围补充（2026-10-16）：
+  basic_zero_shot_CoT_output_reason/ 整个目录与论文数据无关。
+  battle/ 整个目录与论文数据无关，包含gpt_battle.py、test.py和历史run结果。
+  R05和R15均不作为论文缺陷或重跑依据。
+  此次只更新清单和说明，没有修改实验代码或数据。
+  当前范围记录：/Users/yizho/Desktop/satd_experiments_revised_20261016/revision_scope.json
+
+用户范围补充：R30只涉及数据集预处理，按低优先级非阻塞说明保留；不列为论文实验代码缺陷、本轮未完成修复项或单独重跑依据，不继续追查历史版本链。此次仅更新清单，未执行预处理或改动数据。
+
+
+R45 当前政策补充（revision_batch_04）：用户选择保留各阶段输出上限，只统一模型生成参数。102份核心脚本采用official_generation.py与official_generation_profiles.json；GPT-OSS effort现固定medium，核心脚本不再用SATD_REASONING_EFFORT覆盖。本文此前所述low/medium/high控制仅为第3批历史状态。新配置实际值/来源/版本写入事件与runtime_manifest，详情以revision_batch_04/official_configuration_table.html和batch_04_summary.json为准。此次未运行实验。

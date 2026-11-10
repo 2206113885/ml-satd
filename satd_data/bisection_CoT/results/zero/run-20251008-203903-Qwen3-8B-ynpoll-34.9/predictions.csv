@@ -1,0 +1,394 @@
+comment,real,pred,raw_output,reason
+!TODO: In some cases; US is not enough to hold the complete number,Machine Learning Knowledge,Plain Old Data Type,PODT,<think>
+# reverse bw; before concat TODO,Layer Configuration,Data Processing Configuration,Data Conf,<think>
+# TODO : load landmarks in validation and test set also. I'm too sleepy to do it today -_- zzz... zzz...,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+## elif (): ## FIXME: handle other bases here,Prototype,Model Code Modifiability,MCM,<think>
+#TODO: improve the copying of parameters,Hyper-parameter Configuration,Weight Configuration,Weight Conf,<think>
+@todo nrows is for testing only!,Boundary Erosion,Unnecessary Model Code,UMC,<think>
+@todo: arabtex and iso8859-6 need individual handling because in some cases using one-two mapping,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+@TODO: need better solutions,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+@TODO: remove time usage; use it under the hood,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+[todo]: this is a bug; predict_proba should not change,Model Code Modifiability,Prediction Quality,PQ,<think>
+"\""\""\"" || Corpus in CSV format. TODO: still serializes to SVMLight format; feel free to change this. || \""\""\""",Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+"\""\""\"" || Simple Gaussian Mixture model plotting example ||  || TODO: use the faithful dataset || \""\""\""",Data Processing Configuration,Prototype,Proto,<think>
+"\""\""\"" Turn compiler.ast structures back into executable python code. ||  ||     The unparse method takes a compiler.ast tree and transforms it back into ||     valid python code.  It is incomplete and currently only works for ||     import statements; function calls; function definitions; assignments; and ||     basic expressions. ||  ||     Inspired by python-2.5-svn\/Demo\/parser\/unparse.py ||  ||     fixme: We may want to move to using _ast trees because the compiler for ||            them is about 6 times faster than compiler.compile. || \""\""\""",Custom Data Type,Model Code Comprehension,MCC,<think>
+"\""\""\""Converts legacy encodings into Unicode || TODO for replacer.py: ||  - add perseus-style iota subscript and diaeresis || \""\""\""",Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+"\""\""\""Converts legacy encodings into Unicode. ||  || TODO: Rm regex dependency || TODO: Add tests || \""\""\""",Code Dependency,Code Dependency,MLDepend,<think>
+"\""\""\""Models. ||  || Models are objects which take Tensor(s) as input; perform some computation on  || those Tensor(s); and output probability distributions. ||  || TODO: more... ||  || * :func:`.Model` || * :func:`.ContinuousModel` || * :func:`.DiscreteModel` || * :func:`.CategoricalModel` || * :func:`.save_model` || * :func:`.load_model` ||  || ---------- ||  || \""\""\""",Model Code Modifiability,Abstraction,Abs,<think>
+"\""\""\""Module dedicated to extraction of Model Based Metafeatures. ||  || Todo: ||     * Implement metafeatures. ||     * Improve documentation. || \""\""\""",Data Processing Configuration,Unnecessary Model Code,UMC,<think>
+"\""\""\""Process downloaded or local corpora from one format into another. || Some formatting can happen here; or invoke language-specific formatters in || other files. ||  || #TODO: Add TLG & PHI text cleaners from KJ's IPython notebooks || #TODO: Add non-ascii stripper || #TODO: Add generic HTML stripper || \""\""\""",Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+"\""\""\""The Imperial Aramaic alphabet; plus simple script to transform || a Hebrew transcription of an Imperial Aramaic text to its own Unicode block. ||  || TODO: Add Hebrew-to-Aramaic converter || \""\""\""",Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+\/\/TODO in future add arguments compatibility check,Hyper-parameter Configuration,Model Code Modifiability,MCM,<think>
+apparently package_deps are broken in 3.4,Code Dependency,Code Dependency,MLDepend,<think>
+BETTER FIX: iterate through; if length = 0; then bump it up to 0.125,Prototype,Data Processing Configuration,Data Conf,<think>
+circular shift the signal (needed for correct phase),Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+DEPRICATE? I don't think this is needed anymore,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+Double newlines seem to mess with the rendering,Data Processing Configuration,Model Code Comprehension,MCC,<think>
+early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),Prediction Quality,Hyper-parameter Configuration,HP Conf,<think>
+else:  # TODO check that the variation wasn't already in there,Prototype,Duplicate Model Code,DMC,<think>
+env = ScaledFloatFrame(env)  # TODO: use for dqn?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+find out why prefix neg_ is needed,Machine Learning Knowledge,Model Code Comprehension,MCC,<think>
+FIXME : adhoc (answer being last word); not ignoring single question,Data Processing Configuration,Model Code Modifiability,MCM,<think>
+FIXME annoying hack for batching different sized shapes;,Model Code Reusability,Unnecessary Model Code,UMC,<think>
+FIXME don't l2_normalize for any metric,Data Processing Configuration,Hyper-parameter Configuration,HP Conf,<think>
+FIXME homogeneize the meaning of margin parameter,Hyper-parameter Configuration,Hyper-parameter Configuration,HP Conf,<think>
+FIXME non-uniform sample weights not yet supported,Weight Configuration,Data Processing Configuration,Data Conf,<think>
+FIXME not sure what are those CB1 \/ CB2,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+FIXME This will make sense when all controllers are in one file (like task.py),Data Storage Configuration,Abstraction,Abs,<think>
+FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,Glue Code,Duplicate Model Code,DMC,<think>
+FIXME: Allow some diff; e.g. on repr style text in text\/plain,Prototype,Plain Old Data Type,PODT,<think>
+FIXME: Handle execution_count (always change to None?),Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+FIXME: Hardcoded usually sucks,Data Storage Configuration,Model Code Modifiability,MCM,<think>
+FIXME: if we inherit from scipy.io.netcdf.NetCDFFile and omit the self.nc,Machine Learning Knowledge,Code Dependency,MLDepend,<think>
+FIXME: INDRA's section_type entry is meant to contain,Custom Data Type,Data Processing Configuration,Data Conf,<think>
+FIXME: Need to check if mod is the equivalent of floorMod in NumPy,Machine Learning Knowledge,Model Code Comprehension,MCC,<think>
+FIXME: need to implement sample_weight in Ridge,Weight Configuration,Hyper-parameter Configuration,HP Conf,<think>
+FIXME: Only keeping the first label,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+FIXME: pixel_classes dict needs to be populated with classes obtained from target,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+"FIXME: Return type \""None\"" of \""fit\"" incompatible with return type \""float\"" in supertype \""Model\""",Plain Old Data Type,Abstraction,Abs,<think>
+FIXME: support for many evaluators; maybe event support,Prototype,Model Code Reusability,MCR,<think>
+FIXME: The code works with EpisodicReplayBuffer,Custom Data Type,Glue Code,GC,<think>
+FIXME: this is kind of hackish; but being able to simply set,Model Code Comprehension,Weight Configuration,Weight Conf,<think>
+FIXME: this needs to become more generic; we need to find the actual so in the python root,Model Code Reusability,Model Code Reusability,MCR,<think>
+FIXME: this representation of covars is going to lose for caching,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+FIXME: Use linebased diff of some types of outputs:,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+FIXME: What about the next diff entry?,Machine Learning Knowledge,Abstraction,Abs,<think>
+FIXME: What if we never find a fail-high?,Machine Learning Knowledge,Machine Learning Reliability,MLRelia,<think>
+FIXME_Numba#5157: remove np.asarray and return as list,Data Storage Configuration,Custom Data Type,CDT,<think>
+Force shrinking of the mask if needed (and possible),Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+Freeze weights - TODO: NOT IMPLEMENTED!,Weight Configuration,Weight Configuration,Weight Conf,<think>
+h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,Hyper-parameter Configuration,Layer Configuration,Layer Conf,<think>
+handle BoxedSeries and list\/set of BoxedSeries; TODO: others?,Custom Data Type,Custom Data Type,CDT,<think>
+if this is needed.,Machine Learning Knowledge,Unnecessary Model Code,UMC,<think>
+IMPORTANT: keep matrices in suitable order for matrix products; failing to do so gives 8x lower performance :(,Model Code Reusability,Data Processing Configuration,Data Conf,<think>
+In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,Plain Old Data Type,Model Code Comprehension,MCC,<think>
+in_dim=(4; 8; 8; 8); # TODO: Needs fix when giving a randon in_dim,Model Code Reusability,Hyper-parameter Configuration,HP Conf,<think>
+Initialize model (TODO: really necessary?),Machine Learning Knowledge,Unnecessary Model Code,UMC,<think>
+It's only needed for a specific purpose in the short term; will go.,Layer Configuration,Unnecessary Model Code,UMC,<think>
+needed so command completion and help can use it,Data Storage Configuration,Glue Code,GC,<think>
+needed to sklearn comparability,Code Dependency,Data Processing Configuration,Data Conf,<think>
+needed to sklearn comparability,Code Dependency,Data Processing Configuration,Data Conf,<think>
+needed?,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+normed_cross_entropy # TODO,Hyper-parameter Configuration,Unnecessary Model Code,UMC,<think>
+NOTE: probably more efficient to sort then stride by nt_regions,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+nv by ns dot ns by m -> nv by m  # TODO: Change to CSC for speed?,Data Processing Configuration,Data Storage Configuration,DS Conf,<think>
+once they are no longer needed in the schedule or by,Data Storage Configuration,Unnecessary Model Code,UMC,<think>
+Pass on diff to external difftool (TODO: store in global metadata at end instead of in separate diff dicts?),Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+probably not needed; transition,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+"r\""\""\""Run inference on random sequences many times; saving the top results. ||  || This module is designed to run inference on a trained aptamers TF model || to score many sequences and then write out the top scoring sequences to || be used in other analysis. For example; these top predicted sequences || can read in the colab picking sequences in order || to validate the TF model. ||  || This module uses the standard aptamers tensorflow infrastructure to run || the inference. This is the inferer class defined in || learning\/eval_feedforward and described in the Aptamers TensorFlow Doc. ||  || Inference is generally run in batches of sequences; so a MapFlat function || is used to combine the results of interference into a flattened list || of (sequence; score) pairs. (In other words; each map function returns || a list of (sequence; score) pairs and these results are combined into || one list of pairs. Using a standard Map function would result in a || list of lists which is not what we want.) From there; the Top.Of || combiner returns only the top results; sorted by highest score. These || are then written to a text file. ||  || For now; each batch creates its own inferer; causing each map function || to have more overhead. Because of this;batch sizes around the default of || 10000 are performant. Fixing this in the future means converting the || MapFlat to a ParDo and initializing the inferer in start_bundle. || This module runs inference 1 billion times in 50 minutes so it || is sufficient for now ||  || Run locally with: ||  ||   :search_inference -- --flume_exec_mode=UNOPT \\ ||   --target_name='target' \\ ||   --model_dir=xxx \\ ||    --checkpoint_path='model.ckpt-312500' \\ ||    --output_name=xxx\/base30_1B_inference_top2k ||  || \""\""\""",Custom Data Type,Model Code Modifiability,MCM,<think>
+Random Warp # TODO change masks to have a input mask and a warped target mask,Hyper-parameter Configuration,Data Processing Configuration,Data Conf,<think>
+seem out of place. If you were able to do better; feel free to share your,Prediction Quality,Unnecessary Model Code,UMC,<think>
+self.clearChanges() #TODO perhaps?,Data Storage Configuration,Unnecessary Model Code,UMC,<think>
+self.mpc_sum(3; -5) TODO: Future work: how to handle gracefully minus numbers,Machine Learning Knowledge,Machine Learning Reliability,MLRelia,<think>
+should be WeightNorm here TODO.,Layer Configuration,Weight Configuration,Weight Conf,<think>
+tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,Code Dependency,Code Dependency,MLDepend,<think>
+this importing of matplotlib is needed to run on the cluster,Code Dependency,Code Dependency,MLDepend,<think>
+This is a hack to allows inference when the <go> token,Model Code Modifiability,Machine Learning Knowledge,MLKnow,<think>
+THIS IS A VERY UGLY FUNCTION because it has hardcoded 0\/4\/5 integers for each of the metric. I need to make an enumerated class for this!,Model Code Comprehension,Abstraction,Abs,<think>
+time to fix. TODO: optimize the crap out of this,Data Processing Configuration,Unnecessary Model Code,UMC,<think>
+TODO - can remove one of these m0 restores if A and B both TLU,Machine Learning Knowledge,Duplicate Model Code,DMC,<think>
+TODO - does this handle N-dim tensors correctly?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+TODO - in the code it is different - why?,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+TODO (pradeep): Sort the indices and do intersections in order; so that we can return the,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO (ytz): really; we want at least one active and inactive in both scenarios.,Data Processing Configuration,Data Storage Configuration,DS Conf,<think>
+TODO : add these in the options. (None; None) => no limit,Data Processing Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO : Any other options,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+TODO : market value,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO : removal,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO : this is quite bad in term of execution speed. We need to fix this.,Data Processing Configuration,Unnecessary Model Code,UMC,<think>
+"TODO accept_sparse=\""csc\""",Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO add general Distribution,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO add index to xls file,Data Processing Configuration,Data Storage Configuration,DS Conf,<think>
+TODO add introductory explanation,Data Processing Configuration,Model Code Comprehension,MCC,<think>
+TODO add support for other metrics (ex. euclidean; angular),Prototype,Data Processing Configuration,Data Conf,<think>
+TODO add test for keypoints once their handling was improved in Convolve,Code Dependency,Model Code Modifiability,MCM,<think>
+TODO add vertical gradient alpha to have fog only at skylevel\/groundlevel,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO anticipate multi-agents for AEB space,Data Storage Configuration,Model Code Modifiability,MCM,<think>
+TODO change as soon as svhn has a val set :),Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+TODO change the way attns is returned dict => list or tuple (onnx),Data Processing Configuration,Data Storage Configuration,DS Conf,<think>
+TODO change to np.partition for PERF,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+TODO check for each tentacle specified if update is available (with requirements),Code Dependency,Code Dependency,MLDepend,<think>
+TODO check results after standardizing num ft once a ml algorithm is ready to test,Code Dependency,Data Processing Configuration,Data Conf,<think>
+TODO checkpoints; incremental save,Prototype,Model Code Modifiability,MCM,<think>
+TODO combine these values to get a final prediction!,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO confirm that multiple eigenvalues of 1 means the rotation,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+ToDo consider 3D case --> do that by using tag->size,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO cpickle vs json,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+TODO Dehaze with 1\/t,Data Processing Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO design an API interface for advanced access as an importable package,Abstraction,Model Code Reusability,MCR,<think>
+TODO double num_filters,Hyper-parameter Configuration,Layer Configuration,Layer Conf,<think>
+TODO Figure out how to distinguish oxidation states,Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+TODO figure out what exactly size does,Machine Learning Knowledge,Model Code Comprehension,MCC,<think>
+TODO ForceSign,Hyper-parameter Configuration,Weight Configuration,Weight Conf,<think>
+TODO generalise to columns with series of unequal length,Model Code Reusability,Abstraction,Abs,<think>
+TODO generalise to series-to-series functions and function kwargs,Data Processing Configuration,Model Code Reusability,MCR,<think>
+TODO handle 1d series; not only 2d dataframes,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,Abstraction,Custom Data Type,CDT,<think>
+TODO if without momentum; weights should not change too,Weight Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO Implement,Hyper-parameter Configuration,Prototype,Proto,<think>
+TODO implement generic method,Abstraction,Model Code Reusability,MCR,<think>
+TODO implement multi-gpu training and compare performance,Prototype,Data Processing Configuration,Data Conf,<think>
+TODO improve the regex here,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+"TODO last token include: \""&& $last_token[...]\""",Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO make paf_scored not part of self?,Abstraction,Unnecessary Model Code,UMC,<think>
+TODO make threshold a variable,Custom Data Type,Hyper-parameter Configuration,HP Conf,<think>
+TODO max in one tensor,Layer Configuration,Data Processing Configuration,Data Conf,<think>
+TODO move these registrations to backend-specific files,Prototype,Duplicate Model Code,DMC,<think>
+TODO normalice to make sum up to 1?,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+todo not support dense,Unnecessary Model Code,Layer Configuration,Layer Conf,<think>
+TODO Option for string lenght,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+TODO Promote this to a Funsor subclass.,Model Code Reusability,Model Code Reusability,MCR,<think>
+TODO refactor second part of if statement when implementing live model prediction,Model Code Comprehension,Model Code Modifiability,MCM,<think>
+TODO remove,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO remove later.,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO remove this,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO replace this code with the following commented out code after viz is fixed,Code Dependency,Unnecessary Model Code,UMC,<think>
+TODO replace this speedup implementation with nni.compression.torch.ModelSpeedup,Layer Configuration,Unnecessary Model Code,UMC,<think>
+TODO replace whole pandas data container as input argument with separated metadata container,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+TODO replace with Streamlines,Custom Data Type,Unnecessary Model Code,UMC,<think>
+TODO save all the results to a json inside the experiment's folder,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+TODO Search the web or use other algorithms,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+TODO Send the context back into some list maintained by,Data Storage Configuration,Glue Code,GC,<think>
+TODO Set bioassembly info,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO Should this stay generic? (point),Machine Learning Knowledge,Model Code Reusability,MCR,<think>
+TODO stim channel exclusion,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO support recursive parfor; multi-D; mutiple body blocks,Prototype,Model Code Modifiability,MCM,<think>
+todo sweep,Model Code Modifiability,Unnecessary Model Code,UMC,<think>
+TODO switch similar statements to work inplace (w\/o making a copy),Model Code Reusability,Duplicate Model Code,DMC,<think>
+TODO These ratios can't be hardcoded,Model Code Reusability,Hyper-parameter Configuration,HP Conf,<think>
+TODO this code is currently necessary for the async_fit method in websocket_client.py,Hyper-parameter Configuration,Unnecessary Model Code,UMC,<think>
+TODO this is too general; register all ops,Prototype,Data Processing Configuration,Data Conf,<think>
+TODO this is wrong for other entitiey types nor appearing in the edge,Custom Data Type,Data Processing Configuration,Data Conf,<think>
+TODO this vector is very sparse; we can make it more memory efficient,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+TODO to be modified,Model Code Modifiability,Model Code Modifiability,MCM,<think>
+TODO Update and move now this isn't used here,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO update these - the sklearn transformation class should be able,Custom Data Type,Data Processing Configuration,Data Conf,<think>
+TODO validate and normalize to \/path\/to\/variable,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO validate configuration and set defaults,Data Storage Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO validation_split is not used,Unnecessary Model Code,Data Processing Configuration,Data Conf,<think>
+TODO WIP temp_coherence_loss # assumes all sequences in the dataset share at least one same 3D pos of Baxter arm,Hyper-parameter Configuration,Data Processing Configuration,Data Conf,<think>
+TODO wouldn't it be better with a set rather than a list?,Data Storage Configuration,Duplicate Model Code,DMC,<think>
+TODO write a warning,Model Interpretability,Data Processing Configuration,Data Conf,<think>
+"TODO(ahundt) difference between \""redundant\"" and regular proto parsing; figure out how to deal with grasp_success rename properly",Machine Learning Knowledge,Prototype,Proto,<think>
+TODO(ahundt) make more efficient,Data Processing Configuration,Unnecessary Model Code,UMC,<think>
+TODO(ahundt) maybe the rotation component of this needs to be inverted due to sva implementation?,Machine Learning Knowledge,Layer Configuration,Layer Conf,<think>
+TODO(b\/119775953): fix the circular dependencies.,Code Dependency,Boundary Erosion,BE,<think>
+TODO(beam2d): Fix after supporting correct dtype promotion.,Custom Data Type,Data Processing Configuration,Data Conf,<think>
+TODO(crcrpar): Improve resource computation\/allocation algorithm.,Data Storage Configuration,Model Code Modifiability,MCM,<think>
+TODO(dbieber): Move this logic into the dataset definition.,Boundary Erosion,Data Processing Configuration,Data Conf,<think>
+TODO(fstahlberg): Move to config,Model Code Modifiability,Model Code Modifiability,MCM,<think>
+TODO(rbharath): The script expects that all columns in xlsx\/csv files,Prototype,Data Processing Configuration,Data Conf,<think>
+TODO(rliaw): This behavior is probably undesirable; but right now,Prototype,Machine Learning Knowledge,MLKnow,<think>
+TODO(sonots): Implement in C++,Multiple Languages,Multiple Languages,ML,<think>
+TODO(sven): Add once ModelV1 is deprecated and we no longer cause circular,Code Dependency,Unnecessary Model Code,UMC,<think>
+TODO(tokunaga): the number of processes should be configurable,Model Code Modifiability,Hyper-parameter Configuration,HP Conf,<think>
+TODO(vsatish): Figure out why this isn't printed.,Machine Learning Knowledge,Model Code Comprehension,MCC,<think>
+TODO. get rid of from_model_pt,Unnecessary Model Code,Weight Configuration,Weight Conf,<think>
+TODO: (sven) rename to simply stats_fn to match eager and torch.,Abstraction,Model Code Comprehension,MCC,<think>
+TODO: @trask @theo could you take a look at this if you have better ideas on how to get these parameters,Machine Learning Knowledge,Hyper-parameter Configuration,HP Conf,<think>
+todo: accurate Value,Machine Learning Reliability,Model Code Comprehension,MCC,<think>
+TODO: add a complete frame_size; to cover the whole audio signal?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+TODO: add backward images also.,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: add datetype conversion,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: add inheritance from Graph once implemented,Code Dependency,Abstraction,Abs,<think>
+TODO: add more tags based on the scikit-learn,Prototype,Data Processing Configuration,Data Conf,<think>
+TODO: Add this to configuration framework,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: arbitrary threshold is problematic,Model Code Reusability,Hyper-parameter Configuration,HP Conf,<think>
+TODO: assertWarns exist only for Python 3.2+; test in all versions,Code Dependency,Code Dependency,MLDepend,<think>
+TODO: At the moment LHUC is RNN specific. We should support other models as well.,Model Code Reusability,Model Code Reusability,MCR,<think>
+TODO: auto detect dtype,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: Basically identical to `test_intra_cv_target_transform` except for repeated KFold,Duplicate Model Code,Duplicate Feature Extraction Code,DFEC,<think>
+TODO: black box attacks,Machine Learning Reliability,Model Interpretability,MLInter,<think>
+"TODO: calculate this centroid\""",Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: calibration dataset,Hyper-parameter Configuration,Machine Learning Reliability,MLRelia,<think>
+todo: change the feature_na_method!,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: Change the optimizer to the appropriate Optimizer class,Hyper-parameter Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO: change this logic when there is a git pretty-format,Code Dependency,Data Processing Configuration,Data Conf,<think>
+TODO: check `other` is Series after a circular import of SeriesType fixed,Code Dependency,Data Processing Configuration,Data Conf,<think>
+TODO: Check behavior if this is a single mrc file (no '@'),Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+TODO: check CAPTALIZED WORDS as their lower case counterparts before saving,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: check for series\/dict\/list input,Plain Old Data Type,Data Processing Configuration,Data Conf,<think>
+TODO: Check if self._mean_squared_error_w_precision can be used here,Machine Learning Knowledge,Model Code Reusability,MCR,<think>
+TODO: check if stride of 2 causes alignment issues if the featuremap,Machine Learning Knowledge,Layer Configuration,Layer Conf,<think>
+TODO: check whether the model is QuartzNet,Custom Data Type,Hyper-parameter Configuration,HP Conf,<think>
+TODO: check why there's an IF,Machine Learning Knowledge,Unnecessary Model Code,UMC,<think>
+TODO: clip polygons,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: compare the performance!,Prediction Quality,Prediction Quality,PQ,<think>
+TODO: compute signed distance between walls,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+ToDo: consider go\/no-go with following modification,Data Processing Configuration,Model Code Modifiability,MCM,<think>
+TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,Multiple Languages,Code Dependency,MLDepend,<think>
+TODO: Could be implemented as optimization option in LK???,Machine Learning Knowledge,Unnecessary Model Code,UMC,<think>
+TODO: Could check if QSettings.Format stores type info.,Machine Learning Knowledge,Data Storage Configuration,DS Conf,<think>
+TODO: Currently this turns any upregulation associated with,Custom Data Type,Weight Configuration,Weight Conf,<think>
+TODO: Currently we don't look at source text; but we may want to,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: dataframe pass needed?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+TODO: delete this method when no longer needed,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: deprecate?,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: determine if requiring same sense is too string; i.e.,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: Do below `y_lie` lines directly calculate min\/max\/mean on `opt.yi` when it could also contain times?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+TODO: do more to protect against race conditions. File lock?,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+TODO: do not replace unless explicitly noticed + add 'only hangul' option,Model Code Modifiability,Data Processing Configuration,Data Conf,<think>
+TODO: do the transpose as a DataLoaderTransformer instead of in host,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: do this better,Hyper-parameter Configuration,Model Code Modifiability,MCM,<think>
+TODO: do we need this?!,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: does it make graph?,Machine Learning Knowledge,Layer Configuration,Layer Conf,<think>
+TODO: don't make these a constant initializer because we,Data Storage Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO: don't need this w\/ py.test,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: double check if this is still true in 1.9.0,Machine Learning Knowledge,Code Dependency,MLDepend,<think>
+TODO: dtype,Custom Data Type,Data Storage Configuration,DS Conf,<think>
+TODO: ensure dummy_na =False is what you want,Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+TODO: ensure x data shape matches model._ph['x'] shape (only if fit),Model Code Reusability,Data Processing Configuration,Data Conf,<think>
+TODO: Extend to multifidelity problems by adding training_points = {'approx': {}},Prototype,Data Processing Configuration,Data Conf,<think>
+TODO: extend to other key types,Custom Data Type,Model Code Reusability,MCR,<think>
+TODO: extract an eval func more robustly,Machine Learning Reliability,Machine Learning Reliability,MLRelia,<think>
+TODO: figure out how why the result of einsum requires reshape,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+TODO: figure out why some machines prefer one of these options,Machine Learning Knowledge,Model Interpretability,MLInter,<think>
+TODO: figure out why this happens.,Machine Learning Knowledge,Prediction Quality,PQ,<think>
+TODO: Formats should not be specified; just saving all the materialized formats,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: Get rid of this,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: handle boolean scalars properly,Data Processing Configuration,Plain Old Data Type,PODT,<think>
+TODO: handle channel modalities later,Model Code Reusability,Data Processing Configuration,Data Conf,<think>
+TODO: handle other participant types,Model Code Reusability,Model Code Modifiability,MCM,<think>
+TODO: handle record value which are lists; at least error,Plain Old Data Type,Data Processing Configuration,Data Conf,<think>
+TODO: handle string,Plain Old Data Type,Data Processing Configuration,Data Conf,<think>
+TODO: I believe this is not really much used,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: I cannot get good results with this yet,Prediction Quality,Prediction Quality,PQ,<think>
+"TODO: identify the \""best\"" language detector available for OSS python",Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+TODO: ignore non-numerics,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: I'm not sure about this part,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+TODO: Implement Conv Transpose,Model Code Modifiability,Layer Configuration,Layer Conf,<think>
+TODO: Implement mass downloading with a cool-off in case of 429 response,Prototype,Data Processing Configuration,Data Conf,<think>
+TODO: implement required params,Hyper-parameter Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO: implement residual connection,Layer Configuration,Layer Configuration,Layer Conf,<think>
+TODO: In terms of functional API; there should not be any initialization of an nn.Module.,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: index and name,Data Processing Configuration,Model Code Comprehension,MCC,<think>
+TODO: is incref required?,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+TODO: is that best way to handle,Machine Learning Knowledge,Model Code Modifiability,MCM,<think>
+TODO: It could be nice if this method was run on entire data; not just,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: it's worth to switch back to the correct preprocess_input when InceptionResNetV2 model is re-trained,Code Dependency,Data Processing Configuration,Data Conf,<think>
+TODO: list,Plain Old Data Type,Data Processing Configuration,Data Conf,<think>
+TODO: Log message,Model Interpretability,Data Processing Configuration,Data Conf,<think>
+TODO: make efficient,Prototype,Unnecessary Model Code,UMC,<think>
+TODO: make efficient,Prototype,Data Processing Configuration,Data Conf,<think>
+TODO: make fast_rcnn irrelevant,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: make it save a zipfile instead of a tarfile.,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+TODO: make the dtype configurable; see __init__(),Model Code Modifiability,Data Storage Configuration,DS Conf,<think>
+TODO: maxpool?,Data Processing Configuration,Layer Configuration,Layer Conf,<think>
+TODO: maybe introduce a DefaultEnvironment?,Machine Learning Knowledge,Model Code Reusability,MCR,<think>
+TODO: min,Data Processing Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO: Model Precision,Data Processing Configuration,Prediction Quality,PQ,<think>
+TODO: modify this later,Data Processing Configuration,Unnecessary Model Code,UMC,<think>
+TODO: more specific types?,Custom Data Type,Plain Old Data Type,PODT,<think>
+TODO: need a better way,Plain Old Data Type,Duplicate Model Code,DMC,<think>
+TODO: need to discuss whether this is 'allowed' or smart,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+TODO: Need to invert the CameraToWorld matrix => WorldToCamera matrix,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: needs to be re-written to match new stitch datasets signature.,Glue Code,Data Processing Configuration,Data Conf,<think>
+TODO: non-numeric columns should be ignored automatically,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: normalize true states,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: num pad examples is not set here if fillup strategy would be padding,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: optimize scheduling to support more cases.,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: other types?,Custom Data Type,Machine Learning Knowledge,MLKnow,<think>
+TODO: parallelize,Data Processing Configuration,Model Code Modifiability,MCM,<think>
+TODO: pass in just the id instead of the entire obj_msg.,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+todo: perhaps it's better to use pickle in the future?,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+TODO: Place tensors into GPU memory. This will require rewriting,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: pretty sure this isn't necessary,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: Probably should just implement __deepcopy__,Model Code Reusability,Model Code Modifiability,MCM,<think>
+TODO: programmatically check wether these are indeed features (predict; correct),Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: Properly break circular dependencies,Code Dependency,Boundary Erosion,BE,<think>
+TODO: put in infrastructure to fold over trace as it's built.,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: put in the option to do substitution here (most likely scenario;,Prototype,Duplicate Model Code,DMC,<think>
+TODO: Reduce dim. of mean.,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: refactor as independent function,Abstraction,Model Code Reusability,MCR,<think>
+TODO: Refactor\/simplify Configuration class so it can be used in cases,Model Code Reusability,Model Code Reusability,MCR,<think>
+TODO: re-implement support for constraint satisfaction method as needed,Data Processing Configuration,Model Code Modifiability,MCM,<think>
+TODO: remove dummy \/ debug tasks,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: remove hard-coded sizes and make relative to parent?,Model Code Modifiability,Layer Configuration,Layer Conf,<think>
+TODO: Remove hardcoding of downscaling calculations.,Model Code Reusability,Unnecessary Model Code,UMC,<think>
+TODO: Remove in 0.26 when the _pairwise attribute is removed,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: remove this method in v1.3.0.,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: remove when dict results are deprecated,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+"TODO: rename kwarg \""forward\"" to \""forward_additive\""",Model Code Comprehension,Model Code Comprehension,MCC,<think>
+TODO: Repeat_elements and tf.split doesn't support dynamic splits.,Custom Data Type,Data Processing Configuration,Data Conf,<think>
+TODO: replace init=None by init='auto' in v0.6.0 and remove the warning,Unnecessary Model Code,Hyper-parameter Configuration,HP Conf,<think>
+TODO: Replace Lambda with custom Keras layer for loss.,Layer Configuration,Layer Configuration,Layer Conf,<think>
+TODO: replace with (stable) Draft6Validator; if available,Custom Data Type,Code Dependency,MLDepend,<think>
+ToDo: replace with 3d input; when grid_sample will start to support it,Data Processing Configuration,Code Dependency,MLDepend,<think>
+TODO: replace with unbatch or readout,Custom Data Type,Data Processing Configuration,Data Conf,<think>
+TODO: reward computation,Data Processing Configuration,Unnecessary Model Code,UMC,<think>
+TODO: rotated_grids might as well give us correctly shaped array in the first place,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: run-on and split module,Data Processing Configuration,Model Code Modifiability,MCM,<think>
+TODO: See https:\/\/www.pyimagesearch.com\/2017\/05\/22\/face-alignment-with-opencv-and-python\/,Data Processing Configuration,Machine Learning Knowledge,MLKnow,<think>
+TODO: Set interval for the original date ?,Prototype,Data Processing Configuration,Data Conf,<think>
+TODO: should port\/ip\/mac address be ignored? yes,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+todo: should save tpot model here,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+TODO: should we return a LogarithmicFilteredSpectrogram?,Machine Learning Knowledge,Custom Data Type,CDT,<think>
+TODO: skip on error???,Machine Learning Knowledge,Model Code Modifiability,MCM,<think>
+TODO: something if deep 9,Layer Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO: Something smarter?,Machine Learning Knowledge,Machine Learning Knowledge,MLKnow,<think>
+TODO: store something cleaner,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+TODO: store the actual index in table in case row number is unstable,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.",Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+"TODO: the old setup is now called \""pre_training\""; where should this hook be called now?",Model Code Comprehension,Data Processing Configuration,Data Conf,<think>
+TODO: the second element of the rule is not being used,Data Processing Configuration,Unnecessary Model Code,UMC,<think>
+TODO: the y_train should be given us externally; so far we create it as random values,Model Code Reusability,Data Processing Configuration,Data Conf,<think>
+TODO: This branch happens when there's only one content word,Machine Learning Knowledge,Prediction Quality,PQ,<think>
+TODO: this flag is somewhat redundant given the flag above; need,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: This is discarding phase. Is that ok?,Machine Learning Knowledge,Unnecessary Model Code,UMC,<think>
+todo: this is O(N^2) and maybe too slow for large graphs.,Model Code Reusability,Prediction Quality,PQ,<think>
+TODO: This is very inefficient and needs fix,Custom Data Type,Unnecessary Model Code,UMC,<think>
+TODO: This matching process is slow. Make it faster; avoid loops where possible.,Prototype,Data Processing Configuration,Data Conf,<think>
+TODO: This might not be called corpora,Model Code Comprehension,Model Code Comprehension,MCC,<think>
+TODO: This might not work with numpy types; haven't checked - AD,Machine Learning Knowledge,Code Dependency,MLDepend,<think>
+TODO: This should be recusive looking for any module with flatten_parameters,Weight Configuration,Layer Configuration,Layer Conf,<think>
+TODO: This we can change easily to functional style,Abstraction,Model Code Modifiability,MCM,<think>
+TODO: tree should't need this in this case,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+TODO: Try smaller numbers?,Data Processing Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO: try without copying? could be faster,Machine Learning Knowledge,Duplicate Model Code,DMC,<think>
+TODO: unroll\/roll are great candidates for a context manager since they're always used in conjunction.,Data Processing Configuration,Duplicate Model Code,DMC,<think>
+TODO: update nouns list with only named enitites,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+ToDo: Update with http:\/\/en.wikipedia.org\/wiki\/List_of_emoticons ?,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: Use google-diff-patch-match library,Machine Learning Knowledge,Duplicate Model Code,DMC,<think>
+todo: use Input and Output classes to handle inputs and outputs,Data Storage Configuration,Abstraction,Abs,<think>
+TODO: Use sklearn.decomposition.TruncatedSVD instead?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,Layer Configuration,Layer Configuration,Layer Conf,<think>
+TODO: verify if it is working,Machine Learning Knowledge,Machine Learning Reliability,MLRelia,<think>
+TODO: want to call it activation but namespace; so what to do best?,Model Code Comprehension,Model Code Comprehension,MCC,<think>
+todo: We can potentially reduce memory usage by freeing memory,Data Storage Configuration,Unnecessary Model Code,UMC,<think>
+TODO: we could probably default the monitor to something reasonable,Hyper-parameter Configuration,Hyper-parameter Configuration,HP Conf,<think>
+TODO: we may support size = -1 in the future,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: weight by length here,Data Processing Configuration,Weight Configuration,Weight Conf,<think>
+TODO: why is the whole distribution computed instead of just min\/max,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: would be good to add ref from source,Data Processing Configuration,Model Code Comprehension,MCC,<think>
+TODO: wrap this properly in a with session_context():,Machine Learning Reliability,Model Code Modifiability,MCM,<think>
+TODO: write a function to do this..,Abstraction,Machine Learning Knowledge,MLKnow,<think>
+TODO: write index,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+TODO: x;y input should be able to be np arrays; pandas arrays; or tf dataset iterators,Custom Data Type,Data Processing Configuration,Data Conf,<think>
+todo; pass also best score,Weight Configuration,Unnecessary Model Code,UMC,<think>
+todo; pass complete checkpoint as state dictionary,Data Processing Configuration,Weight Configuration,Weight Conf,<think>
+too much memory. A lazy load would be better; but later,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+unused,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+Unused,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+WARNING: bad realtime practice (writing file) TODO: add to a memory buffer and write before exit,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+XXX backward compatibility,Code Dependency,Glue Code,GC,<think>
+XXX de-duplicate this with code from Montage somewhere?,Duplicate Feature Extraction Code,Duplicate Model Code,DMC,<think>
+XXX Default number of samples drawn from my arse.,Data Processing Configuration,Hyper-parameter Configuration,HP Conf,<think>
+XXX Disable SimulateModels without CreateTab,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+XXX gs = fig.add_gridspec(15; 1),Unnecessary Model Code,Data Processing Configuration,Data Conf,<think>
+XXX JRK: Should this test whether test_times if a DecodingTime,Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+XXX might possibly be slow solution; but every worker needs reseted LDA model for every iteration,Machine Learning Knowledge,Prediction Quality,PQ,<think>
+XXX offset type is uint32,Plain Old Data Type,Data Storage Configuration,DS Conf,<think>
+XXX Remove,Unnecessary Model Code,Unnecessary Model Code,UMC,<think>
+XXX This is silly.  We should return log densities; not densities.,Machine Learning Reliability,Machine Learning Knowledge,MLKnow,<think>
+XXX when matplotlib 3.3 is min version; replace this with,Code Dependency,Code Dependency,MLDepend,<think>
+XXX Would be nice if we could prepare this statement before,Data Storage Configuration,Data Processing Configuration,Data Conf,<think>
+XXX: currently scaled to variance=n_samples,Data Processing Configuration,Data Processing Configuration,Data Conf,<think>
+XXX: does control flow affect type inference in Numba?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,<think>
+XXX: How to catch dependence cycles correctly?,Code Dependency,Boundary Erosion,BE,<think>
+"XXX: how to find \""""""""good\"""""""" values for level ?""""",Machine Learning Knowledge,Hyper-parameter Configuration,HP Conf,<think>
+XXX: not handling dictionnaries,Plain Old Data Type,Plain Old Data Type,PODT,<think>
+XXX: one could be smarter here,Model Code Comprehension,Machine Learning Knowledge,MLKnow,<think>
+XXX: Temporary solution to figure out if an estimator is a classifier,Model Code Modifiability,Machine Learning Knowledge,MLKnow,<think>
+XXX: unify Series\/Array as Array,Custom Data Type,Duplicate Model Code,DMC,<think>
+XXX: We re-cache now just to make sure all items get a mozci version.,Data Storage Configuration,Data Storage Configuration,DS Conf,<think>
+XXX: where should this be?,Machine Learning Knowledge,Model Code Modifiability,MCM,<think>

@@ -1,0 +1,43 @@
+{
+  "google/gemma-2-9b-it": {
+    "official_model_card_url": "https://huggingface.co/google/gemma-2-9b-it",
+    "pinned_revision": "11c9b309abf73637e4b6f9a3fa1e92e615547819",
+    "pinned_card_url": "https://huggingface.co/google/gemma-2-9b-it/blob/11c9b309abf73637e4b6f9a3fa1e92e615547819/README.md",
+    "source_snapshot": "paper_generation_audit_20261016/nonqwen_sources/google__gemma-2-9b-it__README.md",
+    "source_sha256": "8a652ed735e12e4d8241edad2d974aa64ff6e13e8327ec17c9922d9577e9b216",
+    "repository_revision_rechecked": true,
+    "excerpts": [
+      {
+        "lines": [
+          249,
+          249
+        ],
+        "text": "    outputs = model.generate(**model_inputs, past_key_values=past_key_values, do_sample=True, temperature=1.0, max_new_tokens=128)"
+      },
+      {
+        "lines": [
+          253,
+          253
+        ],
+        "text": "outputs = model.generate(**model_inputs, past_key_values=past_key_values, do_sample=True, temperature=1.0, max_new_tokens=128)"
+      }
+    ]
+  },
+  "google/gemma-3-12b-it": {
+    "official_model_card_url": "https://huggingface.co/google/gemma-3-12b-it",
+    "pinned_revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+    "pinned_card_url": "https://huggingface.co/google/gemma-3-12b-it/blob/96b6f1eccf38110c56df3a15bffe176da04bfd80/README.md",
+    "source_snapshot": "paper_generation_audit_20261016/nonqwen_sources/google__gemma-3-12b-it__README.md",
+    "source_sha256": "bcd00f0d73a59772e5cac6a98519e8f5eca15f1354cd3889c916e45ba16d8c2e",
+    "repository_revision_rechecked": true,
+    "excerpts": [
+      {
+        "lines": [
+          151,
+          151
+        ],
+        "text": "    generation = model.generate(**inputs, max_new_tokens=100, do_sample=False)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,923 @@
+{
+  "files_changed": 56,
+  "validation": "Static AST/source editing only; no experiment/module/function/model/tokenizer/test execution",
+  "changes": [
+    {
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "sha256_before": "79bbd73fca25e205edb14d5e3a0b30949eb73317e489f84d7c142c20d58d7f0e",
+      "sha256_after": "2cbd7992ac59a57dfaaa778391b9c8c738d5851f7373a3a34e11c76fdca9fb41",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "do_sample": "True",
+        "temperature": "0.2",
+        "top_p": "0.95",
+        "pad_token_id": "tokenizer.eos_token_id"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "sha256_before": "bc28f332877b7cb337803d8d064db03e5bbbdd6cc6184937803bf7ce2c5729ca",
+      "sha256_after": "734414de5a4f2ad1f7bf7720e56a5b099c39a1b2310b02473d25dbdb747a6de9",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "pad_token_id": "pipeline.tokenizer.eos_token_id"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+      "sha256_before": "5a687765ad904bd06c413cab57e210a91f22256c9d400dda6cc29cf41a91c5d6",
+      "sha256_after": "62ee9b3d2e283ea87f0252b0a39c8351a358f0f16e4b4b55a60c6a9e369388de",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "sha256_before": "27b80023955d743ade415f1d2ccebc472b1e7167f7f0dc3352eaf9b0e81fce1d",
+      "sha256_after": "2c70c2f4e64fdc14e0cad838bb70d1aa300e1fd3d85813e11cbfcad9d80e318d",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.7",
+        "top_p": "0.8",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+      "sha256_before": "93b36c40f4a732ed799053d7d72f9523398fbdeab0a4568c03d0a14534a99857",
+      "sha256_after": "2445bfdd4169265206e10cd090b4162afe3d670afccc4ffc2fa2025b6b5a9d19",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.7",
+        "top_p": "0.8",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+      "sha256_before": "87aa6db2dfbb548e00f21959a926832651f2006a808b62629084abc28f8d86a8",
+      "sha256_after": "2207f634f33c74a77720ff52565039cf2887d76d09679606ee114bbb525e2e0d",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+      "sha256_before": "d05de44b49e727e0b401922967a8e3c7590d2aeb91fc1066f9aa720d902e92ad",
+      "sha256_after": "fe91d48abeb9763ab780c832fc7b43c773ac003c17eec7c579ce9d094df48f0c",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+      "sha256_before": "c1e2a2343dc048493a5d74840f745d0c87053fadb91ac40c6f41d76b87d829f0",
+      "sha256_after": "0d415b5c17393495659447d3812bb88ca8318bd8955bca89355ca92dbc5b749c",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+      "sha256_before": "709aac8ad23c93c856535618db6be33ca5725411a57537af3e4a946240a1b06e",
+      "sha256_after": "c9d7fbdd571d41d4fbc862c1c6a0ca6661e8dc031065b6cef005de7bf627097f",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": "high",
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "sha256_before": "613a2b1f6a62c6bc3916d205633c5a00a2fd00567648a7ec15ef3430c34d4969",
+      "sha256_after": "b821ed3b5f7a2dff74d4773961c67a378f9651bffe96b756087b8c5a0411e877",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "do_sample": "True",
+        "temperature": "0.2",
+        "top_p": "0.95",
+        "pad_token_id": "tokenizer.eos_token_id"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "sha256_before": "da59e080cf1234e039690d7327e92809fd87b2673cb7d3bc43323a5a1686eceb",
+      "sha256_after": "9e5711fc07a2fd36117b91202734b0acbb0b78779dd5e903e0405f329c322444",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "pad_token_id": "pipeline.tokenizer.eos_token_id"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "sha256_before": "f5d5ef154e7a71c50b557fea42d43aaf759a7c4a096eaf312eded370d6661173",
+      "sha256_after": "bb82dd53200ab178cd18a154f9ca86adb12c6826bec8cdda59a1480f1843d2a0",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "sha256_before": "a8b0ce9f459d27c097e5712c50f2df2439f3caf1d56cba857dc5af7b3146b19c",
+      "sha256_after": "36b1486abe8cb372d60bba6a7bcfae6a3900f6e4991bbc332d2317ad7f17f6d3",
+      "native_thinking": true,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+      "sha256_before": "2df61e1bb7c275f8d45f3874e30e65659be2a2362a59d812d37344590e4f7b72",
+      "sha256_after": "97f0f6f215adcb3536d0796273e77da76b83903d28b7c4dc9d9f36a626985499",
+      "native_thinking": true,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "sha256_before": "38c57cac0eacf7f1ce9fc79e3cf88736982b0d98fc9a452bdf109bbb3cb1ae9f",
+      "sha256_after": "77612634f111d31704475851bb71d97b08124440da79c3608dfe99de6952c4cf",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+      "sha256_before": "31001fbfc76f4e7506a03b81e45ebb83858c2d4b6d55e2639222f1817965dd4d",
+      "sha256_after": "6e822772d4b5d038ee8205ab3680eefbdaa66672b9d0fed8c4f99392df8544b9",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+      "sha256_before": "d08e3d007d3a2fa02cdc719b88dc14e374f547e2549e6cd2769b2788eed4dcd8",
+      "sha256_after": "16a28d14c64ca4d8a9ba4c6cda9c0dd5710c0eefbba0c067089d8a7a3db8c3f6",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "sha256_before": "68929cb682d27f68b98630d930a67e59b34861f04cbab87e6ad590f63bb03003",
+      "sha256_after": "538d2506fa7650b8a802de3b8e1750bee447edd79d8cefcde09c71ddc371d3f4",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": "high",
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "sha256_before": "4d8272b9befd9d9affdddc7c0331b3a6c6171facfe07e96a77cc0dabe5c75bc3",
+      "sha256_after": "9f098988101c96775babffced854824d107e2de2f680a3ddf6fed6e7796248ea",
+      "native_thinking": false,
+      "posthoc_reason": true,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "sha256_before": "f74ef2995c52f3a4e03459f9ec038dce9fa644063da01268a8be245a869ad976",
+      "sha256_after": "5588e58e39908a3536b1310de758b441db8af3dcbc97030a2902e77a2f7956d3",
+      "native_thinking": true,
+      "posthoc_reason": true,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "sha256_before": "dad510a0517f98c864bf65d10e23743658437604cb7f0325ac405c87f536ecf4",
+      "sha256_after": "373a3e8ae998c6a668ca380e86927214f76efc224930b0c5fc192cc890bf65a8",
+      "native_thinking": true,
+      "posthoc_reason": true,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "sha256_before": "1884b42e29da7571b7e3d259dae68286e99b5ec4d8d3e8f74982a929588d505c",
+      "sha256_after": "5ef744e028949be7b081b569a553c7d7bb4f78342055cc6f6ad628c4f99ac5a1",
+      "native_thinking": false,
+      "posthoc_reason": true,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": "high",
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "sha256_before": "5a173899ab6e81701450a6acfa819812e7c288c362b2826d9e42e5fe68f48051",
+      "sha256_after": "2bc3781d9c08e3463d624c1aa3408c700b4e5392f140cd501f16c08575946c0c",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "do_sample": "True",
+        "temperature": "0.2",
+        "top_p": "0.95",
+        "pad_token_id": "tokenizer.eos_token_id"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "sha256_before": "16c3d32ea447f65c8a715dabaa299b9144af11eb7b863cbdb21a5565b39386a3",
+      "sha256_after": "380279138678d7eae2fa48745770d3b2f59eb3abdfa7f88990325582ecefee14",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "pad_token_id": "pipeline.tokenizer.eos_token_id"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "sha256_before": "48045954194b5594e943e62bbe0e712c265ad1fb6a298fcb22cc3d551a64ef06",
+      "sha256_after": "6f5907c9c808f4030724007b52f2218969b8672a7b793c6f0ee437ef2004cac8",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "sha256_before": "26844ab0aed2307eceee5fcbbeb51a5f20f1b18e7d6a8d2259905f0ed8f530b9",
+      "sha256_after": "f8f3ae0796c8a6e43f41904048a3454ae9a0652d84ceda281019f5424a342be6",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.7",
+        "top_p": "0.8",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+      "sha256_before": "5c8638d37821820d538740db8b73b0bf1c5d150d4f539fd961a09fc568ef6759",
+      "sha256_after": "8eec529b20d4ea02d9036e89f93bcb93ee8b6e406a5cbd438ee41d777e04af94",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.7",
+        "top_p": "0.8",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+      "sha256_before": "7f828db3594da216cc7e7efb3e9273c6b45c77c67670ea3c0c07429c9c8edfef",
+      "sha256_after": "a2d23bf1cf2dc13b96f2810346a81c5e08346ce607f84c02dc5dde93a863e9f3",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+      "sha256_before": "a3aedc2f71c02129877bcb593212d042fd6dcf83432f612b7845aa39e21edeb1",
+      "sha256_after": "d127e41df1087e924b6f1f3fdf3d29e93d6d72c31c4a3b2ce3bab7b135e89996",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+      "sha256_before": "4300ce16199d06d022b75e6651b5c05858a0e031aaead3cea0cfd32c6cb4972f",
+      "sha256_after": "de355e910e6ed5f54720952048e7229599f36cd28ecfeb15cfe486753801ab7a",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "sha256_before": "8cef2d07b17b73f079b557171b9e7f9cf103be56310caee74a8dac9cb0b2af1e",
+      "sha256_after": "b3bf204314826b99a354ddc7bd471e88d4c80f373b77be2af88d189ca4c22e9b",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": "low",
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "sha256_before": "ab2c4c860ed78db405da4d84537e622bb12dd9cb13b0d76c25793ef1f7ba5fcb",
+      "sha256_after": "07a89d8ad30f70b0d424bf38b8add14b6ae8a3867312012ba8bea4884ec0a301",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "do_sample": "True",
+        "temperature": "0.2",
+        "top_p": "0.95",
+        "pad_token_id": "tokenizer.eos_token_id"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "sha256_before": "2ff12b7ab78ed6ecc63759021afa3b47544de5a621493dc62146e084dd03fd33",
+      "sha256_after": "ddb6b28fd4e4adbfdf44c8b481bee152ae47a5f4af4ddd69100e4b8ba9a9ecfa",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "pad_token_id": "pipeline.tokenizer.eos_token_id"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "sha256_before": "889ede043cfc3d86da3cb67d95935e2efdce4d3c9587695ed08e025b4435149b",
+      "sha256_after": "372f56e4629157246ea207ce554a802d398f04b12eb04f8961665d83f542cbaf",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "sha256_before": "3c5f0df406af45f047a929775af1f0802a0c1ab8effe213fe1d657dce7848917",
+      "sha256_after": "94a72c56df2a1540eb3bccf275bef1bbc89b6346fd3a159b581b4bf72eacd21e",
+      "native_thinking": true,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "sha256_before": "6733705a2faf1d404810d1b33790270b7af781f15a712b1919aed7d6067d0a2a",
+      "sha256_after": "9f67a56b1091989da11fe4dffe2289390c7cdecffdf5734a59e48263c3663117",
+      "native_thinking": true,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+      "sha256_before": "b68ebb846f5cf69349f9bbb2ad8de3095088cb181c5c6b4b44c9171d2b2dd1cd",
+      "sha256_after": "4cc30ee0556fa329d335d22bbbf998390d03e722642d55ab0a972cf7150bf4eb",
+      "native_thinking": true,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+      "sha256_before": "638dbe63959ae0751c79286e06297d2305ed1ccc6cddac08d606511d76a333f1",
+      "sha256_after": "31b48fb97a9fea7be593b21a17c569237411dcf22b510bb783eb23def08a30b9",
+      "native_thinking": true,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "sha256_before": "c10ebceaf1afac421e7c1a1649da091a51713ae0773027de57064b27343f4be5",
+      "sha256_after": "957f2dfdec9a58e4757d5a8cf6e62e71fb22717f452b473e39d9efd11c7b1d29",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+      "sha256_before": "5a308b09c1fc3078f53afa07ffd3faae301218dffe8b3fc421e8866387dd6316",
+      "sha256_after": "6020b7712ae088eed2587e3929a40ff87b83b565be48cb88eb19d1b645b8a092",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+      "sha256_before": "2e408e633d55110558bfa2802d39241623e45cda10ee07b0b9d1a028a9ea5b88",
+      "sha256_after": "bf8eaffd89c3faa18365b1274af0f332260939aa19b79924a22d0f10103bf3ae",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "sha256_before": "5ee76121a18b563a1229ab35945ce2ab47a8ffd701e44bf08ea3ae84d499b0fc",
+      "sha256_after": "93fb3ef16bd752c8f062899bc660490f2141197982cc9045de59f7bb0409570f",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": "low",
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+      "sha256_before": "cec64e05b7fe6779293c482e5b9aed15ef337638a60f465eb28e44970ec4787b",
+      "sha256_after": "b7df32e411aa92a3fd49f96ccd54b5997d42130522d302c2c14c966e59222766",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": true,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true,
+      "scope_excluded_by_user": true,
+      "nonpaper": true,
+      "paper_risk_basis": false,
+      "rerun_basis": false
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "sha256_before": "4d8272b9befd9d9affdddc7c0331b3a6c6171facfe07e96a77cc0dabe5c75bc3",
+      "sha256_after": "9f098988101c96775babffced854824d107e2de2f680a3ddf6fed6e7796248ea",
+      "native_thinking": false,
+      "posthoc_reason": true,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "sha256_before": "6ac4eed3ffa9a9308331e17a0740e9e2329d14de2fb2523824d416fa88e65d03",
+      "sha256_after": "a94c62039279548b90d0a5cff5b55c058eb595b27bef5084ffbfbf2c0dbba6a2",
+      "native_thinking": true,
+      "posthoc_reason": true,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "sha256_before": "c6bda67294a8f000491c7720a0d82d9e48c63281118b0dd526c30af2d431a48d",
+      "sha256_after": "bd1fef3f7f6ec93c02c3684b6283707ac433bfde9b708539c36e0c22173af2cf",
+      "native_thinking": true,
+      "posthoc_reason": true,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.6",
+        "top_p": "0.95",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "sha256_before": "2d191747b93672b05e2b3891c42f815794a49c8c4f24e5a8663cb08ecc9e0dd5",
+      "sha256_after": "02a006e92604ee9c981498123e0194e7e5619893a006694a16b3e6d36145323c",
+      "native_thinking": false,
+      "posthoc_reason": true,
+      "inline_reason": false,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": "high",
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+      "sha256_before": "7c706c905b4814e5fc3de7c5e7471d6a28b4f3d3d82f59c54090e653e7dac9fc",
+      "sha256_after": "8f6e917921800dbc18f3d6f13692f7bca969b4bf3a3bf78deb7f28a9297f52db",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": true,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "do_sample": "True",
+        "temperature": "0.2",
+        "top_p": "0.95",
+        "pad_token_id": "tokenizer.eos_token_id"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+      "sha256_before": "16cd37710b001e6936a3323f9b8d556bc0fef349a2ef6bb6cc65641357203bd5",
+      "sha256_after": "9e1d92cd4e20bfb251d3b42e5f715e71d04e8c9696a2d9be9d679917ba033e9a",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": true,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "pad_token_id": "pipeline.tokenizer.eos_token_id"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "sha256_before": "e2d81c82db093c861b6578c2a3c0cf3103e75c490c8c44f7128aea04e39e482f",
+      "sha256_after": "74cc258b2b998af623674be20dd71915b8dace82eaf14418d75aa19d029a7b9e",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": true,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "sha256_before": "df55c489fdac9ab58a9b3ba07648a8c829cf13d7da17f9710ff5921edb7959b9",
+      "sha256_after": "72f0b7658283da73c2e5c16a53692c98b2b2e7f22ad225eaab87f1cce16f503f",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": true,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.7",
+        "top_p": "0.8",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+      "sha256_before": "1081d62a784390107b726f36868490b44c179a0b9e6e327659920520b47909b9",
+      "sha256_after": "63a6ed5e9177dce131ba8902b2c2606292a7d2b6329eec4a7b1e27bbf01def14",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": true,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS",
+        "temperature": "0.7",
+        "top_p": "0.8",
+        "top_k": "20",
+        "do_sample": "True",
+        "min_p": "0.0"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+      "sha256_before": "237fe018eecbf423c15f3ccc2d037e60d65fc5d77619cba5f65a7d9342ab5d00",
+      "sha256_after": "4c04132e1f154334abf5daa8f1befc9c53a6db07f5b22d68d9d25ad9f36f6506",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": true,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+      "sha256_before": "5bdf4b5591a19b61cf220984044c330e2dab1081fb38b53e52c66e77163a3426",
+      "sha256_after": "718ec63f2bfd95feb96890a49202897bf324cab98218af5e4f7137c82739b26e",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": true,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+      "sha256_before": "956d161a3b090fcf1e926bc5ce2af8351f070b48c2840f148f069d37f5ad2417",
+      "sha256_after": "a8648b2524bcfe3b9872aab8d414c4bf17eb4294277497a58caf2f6694958f6b",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": true,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": null,
+      "original_code_commented_in_place": true
+    },
+    {
+      "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+      "sha256_before": "9722780dd61d1be80398d055ca2a41b485fcb228a9a723e2a05e03a6b9d3f03c",
+      "sha256_after": "99557b21cf166029836bdec299ab4f3c0eb4a2bb9f16a0e9189c4e0cb500ead5",
+      "native_thinking": false,
+      "posthoc_reason": false,
+      "inline_reason": true,
+      "generation_kwargs": {
+        "max_new_tokens": "MAX_NEW_TOKENS"
+      },
+      "gpt_effort_default": "low",
+      "original_code_commented_in_place": true
+    }
+  ],
+  "R36_paired_delimiters_fixed": [
+    "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py"
+  ],
+  "root_output_path_finish_up": {
+    "anchored_to_revised_source_directory": true,
+    "new_output_root": "revised_outputs",
+    "excludes_user_temporary_files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py",
+      "data_process.py",
+      "download_model.py",
+      "original_COT.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "execution": "static only"
+  },
+  "latest_user_directory_clarification": {
+    "source": "Direct user clarification with screenshots, 2026-10-16",
+    "excluded_directories": [
+      "basic_zero_shot_CoT_output_reason",
+      "battle"
+    ],
+    "directory_scope": "Entire directories including scripts, result runs, and all nested files",
+    "previously_excluded_temporary_files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py",
+      "data_process.py",
+      "download_model.py",
+      "original_COT.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "newly_excluded_existing_python_files": [
+      "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+      "battle/gpt_battle.py",
+      "battle/test.py"
+    ],
+    "paper_risk_basis": false,
+    "rerun_basis": false,
+    "source_action": "Metadata only. Existing code edits retained; no source expansion or data edits.",
+    "attribution_rule": "Human clarification overrides heuristic paper-source matching."
+  }
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "id": "PL01",
+    "title": "先导实验解析器未使用生成结束原因",
+    "status": "current-risk",
+    "severity": "P2",
+    "description": "parse_response 接受 finish_reason 参数却不检查；length 与正常停止时同一标签都会被判有效，与settings中“unfinished output counts as wrong”的笼统说明不一致。",
+    "impact": "未来输出耗尽上限时可能没有完成标记却被接受。当前300条记录均为正常stop，不改变本轮已保存分数。有效缩写已完整但缺EOS是否计失败，应由协议明确规定。",
+    "recommendation": "保存并检查hit_limit/结束状态；明确截断但已有完整合法标签的计分规则，并使parse_response和settings说明一致。不要仅因finish_reason=length就推断缩写一定错误。",
+    "locations": [
+      {
+        "file": "pilot_context_20261016/run_pilot.py",
+        "line": 75,
+        "end_line": 82
+      },
+      {
+        "file": "pilot_context_20261016/run_pilot.py",
+        "line": 167,
+        "end_line": 167
+      }
+    ],
+    "evidence": {
+      "length_case": [
+        "Data Conf",
+        true,
+        "Data Conf",
+        null
+      ],
+      "normal_stop_case": [
+        "Data Conf",
+        true,
+        "Data Conf",
+        null
+      ],
+      "current_run_finish_reasons": {
+        "stop": 300
+      }
+    }
+  },
+  {
+    "id": "PL02",
+    "title": "历史核验子集只按ID复用旧核验记录",
+    "status": "current-risk",
+    "severity": "P2",
+    "description": "wait_and_run 从历史manifest选择full_snapshot_identical的sample_id，但没有核对该manifest的cohort哈希或每条local_snapshot_sha256与当前cohort一致。",
+    "impact": "重新准备cohort后若保留旧核验文件，同一ID的新上下文可能被错误纳入“已历史核验”子集。当前cohort及所有核验snapshot哈希一致，未发现现有结果受影响。",
+    "recommendation": "构建子集前校验historical summary的cohort_sha256和当前cohort哈希；逐条校验sample_id、local_snapshot_sha256及introducing_url，失配时拒绝复用并重新核验。",
+    "locations": [
+      {
+        "file": "pilot_context_20261016/wait_and_run.py",
+        "line": 82,
+        "end_line": 100
+      }
+    ],
+    "evidence": {
+      "current_cohort_hash_matches_history_summary": true,
+      "current_per_record_snapshot_hashes_match": true
+    }
+  }
+]

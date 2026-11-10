@@ -1,0 +1,63 @@
+\begin{table*}[ht]
+\centering
+\scriptsize
+\caption{Definitions and Examples of the 23 Identified ML SATD Types: Awareness (AWR), Readability (RDB), Duplicate Code Elimination (DCE), Configurable Options (CFO), Code Dependency (CDD), Data Dependency (DTD), Modularity (MDL), Performance (PRF), and Scalability (SCL).}
+\label{tab:ml_satd_types}
+\begin{tabular}{
+    >{\centering\arraybackslash}p{0.5cm}  % Dim. Name：短文本，居中
+    >{\centering\arraybackslash}p{2cm}   % Type：稍长，居中
+    p{7cm}                              % Definition：最长，左对齐，给足宽度
+    p{2.8cm}                            % Example：较短，左对齐
+}
+\hline
+\textbf{Dim. Name} & \textbf{Type} & \textbf{Definition} & \textbf{Example} \\
+\hline
+\multirow{2}{*}{AWR} & Machine Learning Knowledge & Machine learning software carries plenty of unique challenges. Uneducated solutions by unaware developers may have to be revisited. Machine learning models are a black box, causing poor understanding of model's functionality. This can lead to unknown behavior. & FIXME: can I backprop error through both TODO: Model Precision \\
+\cline{2-4}
+ & Model Interpretability & Machine learning models are a black box, causing poor understanding
+of model’s functionality. This can lead to unknown behavior. & TODO: Model Precision \\
+\hline
+RDB & Model Code Comprehension & Model code carries extra legibility concerns that do not occur in traditional software. (i.e., poorly named temporary matrix variables). & TODO refactor second part of if statement when implementing live model prediction \\
+\hline
+\multirow{2}{*}{DCE} & Duplicate Model Code & Code duplication frequently occurs in model code. & TODO: Basically identical to 'test\_intra\_cv\_target\_transform' except for repeated KFold \\
+\cline{2-4}
+ & Duplicate Feature Extraction Code & Code duplication frequently occurs in feature extraction code. & XXX de-duplicate this with code from Montage somewhere? \\
+\hline
+\multirow{3}{*}{CFO} & Weight Configuration & Editing code that involves the weights of a ML model, or configuring a ML model's weights directly. & FIXME non-uniform sample weights not yet supported \\
+\cline{2-4}
+ & Layer Configuration & Editing code that deals with ML models' layers, or configuring a ML model's layers itself. & TODO: experiment with more layers \\
+\cline{2-4}
+ & Hyper-parameter Configuration & Configuring hyper-parameters of ML model, or editing the default values of off-the-shelf model. & TODO convert this to x/y params? \\
+\hline
+\multirow{5}{*}{CDD} & Machine Learning Dependency & When a needed change in ML software occurs because of its dependency on an external library or other piece of the ML software system. Usually indicates a condition that is waiting to be met before removal. & TODO add test for keypoints once their handling was improved in Convolve \\
+\cline{2-4}
+ & Glue Code & Supporting code written to interface with other code, inhibiting improvements due to peculiarities of dependent code. & FIXME XXX: Implement by rewriting functions above copied from autoresolve.py \\
+ \cline{2-4}
+ & Custom Data Type & Using data types provided by general-purpose packages can cause extensive inter-operating with external libraries. & TODO: Repeat\_elements and tf.split doesn't support dynamic splits. \\
+ \cline{2-4}
+ & Multiple Languages & Components written in other languages may introduce difficulties in ML development. & TODO(sonots): Implement in C++ \\
+ \cline{2-4}
+ & Unnecessary Model Code & Model code that either bottlenecks performance, is unreachable or deprecated, or is unnecessary and should be removed. & DEPRICATE? I don't think this is needed anymore \\
+\hline
+\multirow{3}{*}{DTD} & Data Processing Configuration & Configuring the way that data is processed either by editing the data directly, or by adding in new processing steps. & TODO: normalize true states \\
+ \cline{2-4}
+ & Plain Old Data Type & Using raw data types in ML causes confusion when interpreting processes. & TODO: handle record value which are lists; at least error \\
+  \cline{2-4}
+ & Data Storage Configuration & Configuring how data is represented within the source code (data structure) or how data is stored externally (database). & TODO json? \\
+\hline
+\multirow{4}{*}{MDL} & Abstraction & Lack of abstractions in ML systems and subsystems cause cascading changes when changes are introduced to one component. & TODO Split into separate functions \\
+ \cline{2-4}
+ & Boundary Erosion & Lack of boundaries between subsystems, creating difficulties when maintaining software and isolating changes made in ML software. & @todo nrows is for testing only! \\
+  \cline{2-4}
+ & Model Code Modifiability & Model code should be implemented in ways that enable easy maintenance and future modifications. & TODO init this somewhere else in a more principled way \\
+  \cline{2-4}
+ & Model Code Reusability & Model code should be generalized to be able to be reused in varying situations. & TODO: At the moment LHUC is RNN specific. \\
+\hline
+\multirow{2}{*}{PRF} & Prediction Quality & Previous work in evaluating ML workflows shows that changes may affect performance. & TODO: compare the performance! \\
+ \cline{2-4}
+ & Machine Learning Reliability & Machine learning models' functionalities are determined by the quality of their data, measures should be in place to ensure robustness. & TODO: extract an eval func more robustly \\
+\hline
+SCL & Prototype & Small-scale prototypes being deployed into full systems can be dangerous. & TODO: This matching process is slow. Make it faster; avoid loops where possible. \\
+\hline
+\end{tabular}
+\end{table*}

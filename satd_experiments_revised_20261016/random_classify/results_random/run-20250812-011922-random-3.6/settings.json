@@ -1,0 +1,7 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "UNIFORM_RANDOM_BASELINE",
+  "model_name": "random",
+  "run_dir": "results/run-20250812-011922-random",
+  "note": "No seed set; results vary each run. No fallback to Data Conf."
+}

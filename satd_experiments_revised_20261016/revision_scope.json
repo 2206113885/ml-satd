@@ -1,0 +1,40 @@
+{
+  "source": "Direct user clarification with screenshots, 2026-10-16",
+  "excluded_directories": [
+    "basic_zero_shot_CoT_output_reason",
+    "battle"
+  ],
+  "directory_scope": "Entire directories including scripts, result runs, and all nested files",
+  "previously_excluded_temporary_files": [
+    "ICL_Ob_qwen-8b.py",
+    "ICL_Ob_qwen-8b_new.py",
+    "ICL_Ob_qwen-8b_v0.py",
+    "data_process.py",
+    "download_model.py",
+    "original_COT.py",
+    "test1.py",
+    "test3.py"
+  ],
+  "newly_excluded_existing_python_files": [
+    "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "battle/gpt_battle.py",
+    "battle/test.py"
+  ],
+  "paper_risk_basis": false,
+  "rerun_basis": false,
+  "source_action": "Metadata only. Existing code edits retained; no source expansion or data edits.",
+  "attribution_rule": "Human clarification overrides heuristic paper-source matching.",
+  "user_deprioritized_issues": {
+    "R30": {
+      "issue_id": "R30",
+      "source": "Direct user clarification, 2026-10-16",
+      "classification": "low_priority_nonblocking_preprocessing_note",
+      "paper_experiment_code_defect_basis": false,
+      "standalone_rerun_basis": false,
+      "requires_historical_followup": false,
+      "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+      "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+      "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+    }
+  }
+}

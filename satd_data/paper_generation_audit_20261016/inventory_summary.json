@@ -1,0 +1,40 @@
+{
+  "script_count": 114,
+  "parse_status_counts": {
+    "syntax_error_prefix_parsed_not_runnable": 1,
+    "ok": 113
+  },
+  "generation_calls": 126,
+  "pipeline_factory_or_invocation_calls": 19,
+  "script_role_counts": {
+    "root_experimental_or_legacy_candidate_not_run_linked": 6,
+    "method_family_result_producer_candidate": 103,
+    "arbiter_experiment_not_in_active_manuscript_tables": 2,
+    "data_preprocessing_utility": 1,
+    "model_download_utility_auth_values_redacted": 1,
+    "random_baseline_result_producer": 1
+  },
+  "report_metric_rows": 889,
+  "run_records": 234,
+  "runs_missing_settings": 23,
+  "table_rows_total_including_inactive": 299,
+  "table_rows_active": 224,
+  "active_mapping_status_counts": {
+    "unique_expected_family_metric_match": 224
+  },
+  "report_errors": [
+    {
+      "report": "basic_zero_shot_reason/results/run-20251021-002452-gemma-2-9b-it/report.csv",
+      "error": "empty_report_file"
+    }
+  ],
+  "original_files_read_only": true,
+  "auth_values_redacted": true,
+  "limitations": [
+    "No original script was executed or imported.",
+    "No effective sampling mode is inferred solely from a temperature argument when do_sample is absent.",
+    "No historical script hashes or full prompts are available for most original runs.",
+    "Observed final-only raw output cannot establish that internal thinking did not occur.",
+    "Table comparison uses weighted P/R/F1 rounded to three decimals, never folder accuracy suffixes."
+  ]
+}

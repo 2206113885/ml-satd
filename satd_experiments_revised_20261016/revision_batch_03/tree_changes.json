@@ -1,0 +1,2943 @@
+{
+  "scope": [
+    "tree_zero_shot",
+    "tree_few_shot"
+  ],
+  "issues": [
+    "R10",
+    "R16",
+    "R17",
+    "R19",
+    "R22",
+    "R23",
+    "R24",
+    "R28",
+    "R29",
+    "R31",
+    "R32",
+    "R33"
+  ],
+  "validation_policy": "Static AST/diff/hash only. No experiment, model, tokenizer, module import, helper invocation, or function test executed.",
+  "files": [
+    {
+      "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "before_sha256": "2b89dad2be149a093bfc4f691284bea6559960e35dc5a83ab5978a92063335f7",
+      "after_sha256": "4be43dd70b358b55ad649e334e32d886c3511d4db1ea3d4c8a336a033bdac433",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R23",
+            "R31"
+          ],
+          "old_range": [
+            3,
+            12
+          ],
+          "description": "Replace outdated parser/output documentation with the current audited protocol."
+        },
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 21,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 30,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            368,
+            372
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            377,
+            402
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            404,
+            437
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R17",
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            468,
+            484
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            488,
+            509
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            512,
+            585
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 119,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": false,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            393,
+            400
+          ],
+          "extract_coarse": [
+            433,
+            435
+          ],
+          "extract_fine": [
+            473,
+            475
+          ],
+          "generate_once": [
+            525,
+            532
+          ],
+          "classify_two_stage": [
+            560,
+            590
+          ]
+        },
+        "main": [
+          669,
+          786
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            40,
+            41
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "672a96f5dd4f039e43c410fffaa0e3513806ecdccfcfa4b7334dbd1cb5a34019",
+      "after_sha256": "56a89e4b5c1a90be657b1a2d0132f6cf9c92fe80a80d22a2254ecf6aa8f8b194",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 11,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 21,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            359,
+            363
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            368,
+            393
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            395,
+            428
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            477,
+            500
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            504,
+            525
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            528,
+            610
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 114,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            378,
+            385
+          ],
+          "extract_coarse": [
+            418,
+            420
+          ],
+          "extract_fine": [
+            458,
+            460
+          ],
+          "generate_once": [
+            535,
+            542
+          ],
+          "classify_two_stage": [
+            570,
+            600
+          ]
+        },
+        "main": [
+          688,
+          805
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            25,
+            26
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "before_sha256": "3cf5023bc27df5538f1f16f76ca06e13addc7d3f7445c101091d2c93fcb89e29",
+      "after_sha256": "f32e45319684790a919bedcb08c2cd6940545d7ae41229831e74ce52b0276438",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R23",
+            "R31"
+          ],
+          "old_range": [
+            3,
+            12
+          ],
+          "description": "Replace outdated parser/output documentation with the current audited protocol."
+        },
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 23,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 32,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            377,
+            381
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            386,
+            411
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            413,
+            446
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            494,
+            518
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            522,
+            543
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            546,
+            628
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 121,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            402,
+            409
+          ],
+          "extract_coarse": [
+            442,
+            444
+          ],
+          "extract_fine": [
+            482,
+            484
+          ],
+          "generate_once": [
+            559,
+            566
+          ],
+          "classify_two_stage": [
+            594,
+            624
+          ]
+        },
+        "main": [
+          712,
+          829
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            42,
+            43
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "before_sha256": "00b5463c6f78d269115abffc0792dcfe7dc15d92a49f46f20b136bd9619fcc69",
+      "after_sha256": "4cb3edfd04d8d5fc033f0dadc703d1f4fd8b8b796345764accef6d9b5db610e4",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R23",
+            "R31"
+          ],
+          "old_range": [
+            3,
+            12
+          ],
+          "description": "Replace outdated parser/output documentation with the current audited protocol."
+        },
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 23,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 32,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            355,
+            359
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            364,
+            389
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            391,
+            424
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            472,
+            496
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            500,
+            521
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            524,
+            606
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 121,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            380,
+            387
+          ],
+          "extract_coarse": [
+            420,
+            422
+          ],
+          "extract_fine": [
+            460,
+            462
+          ],
+          "generate_once": [
+            537,
+            544
+          ],
+          "classify_two_stage": [
+            572,
+            602
+          ]
+        },
+        "main": [
+          690,
+          807
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            42,
+            43
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "before_sha256": "a97448a2d18a6523b38b2611e9fcded17d0fd2a8aa9cab2ff80a528d08fdc6f0",
+      "after_sha256": "203a4792c368eb4fdb8b2f27c74379312469083ea72726d37fb67bdab3abcf9e",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R23",
+            "R31"
+          ],
+          "old_range": [
+            3,
+            12
+          ],
+          "description": "Replace outdated parser/output documentation with the current audited protocol."
+        },
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 23,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 32,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            377,
+            381
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            386,
+            411
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            413,
+            446
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            494,
+            518
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            522,
+            543
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            546,
+            628
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 121,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            402,
+            409
+          ],
+          "extract_coarse": [
+            442,
+            444
+          ],
+          "extract_fine": [
+            482,
+            484
+          ],
+          "generate_once": [
+            559,
+            566
+          ],
+          "classify_two_stage": [
+            594,
+            624
+          ]
+        },
+        "main": [
+          712,
+          829
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            42,
+            43
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "before_sha256": "17b1b6fbae1eeea38c8e898bb7b97814cb73ce22902c4cf4fa64021901e09228",
+      "after_sha256": "a8c817fc1b8b13f521b381331628d44560f98d27460a57dea25f64f5b8c8ab3d",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 10,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 20,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            361,
+            365
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            370,
+            395
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            397,
+            430
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            478,
+            502
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            506,
+            527
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            530,
+            612
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 114,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            380,
+            387
+          ],
+          "extract_coarse": [
+            420,
+            422
+          ],
+          "extract_fine": [
+            460,
+            462
+          ],
+          "generate_once": [
+            537,
+            544
+          ],
+          "classify_two_stage": [
+            572,
+            602
+          ]
+        },
+        "main": [
+          690,
+          807
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            24,
+            25
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+      "before_sha256": "bee23d8eed0f20eaacf28fd05d9aa548f3649a6ea2aa4ea7df24f02f77f9b888",
+      "after_sha256": "505e0a400e5679a86f1a61fdd17fb4c9bc1e5507b398a634bd3e110dfcdb2aec",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 11,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 21,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            349,
+            353
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            358,
+            383
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            385,
+            418
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R19"
+          ],
+          "old_range": [
+            17,
+            17
+          ],
+          "description": "Correct the Gemma2 filename-to-checkpoint mismatch; historical loaded weights remain unverified."
+        },
+        {
+          "issues": [
+            "R19"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 422,
+          "description": "Fail explicitly if the corrected path resolves to a different model architecture."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            466,
+            490
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            494,
+            515
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            518,
+            600
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 115,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            371,
+            378
+          ],
+          "extract_coarse": [
+            411,
+            413
+          ],
+          "extract_fine": [
+            451,
+            453
+          ],
+          "generate_once": [
+            531,
+            538
+          ],
+          "classify_two_stage": [
+            566,
+            596
+          ]
+        },
+        "main": [
+          684,
+          802
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            28,
+            29
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+      "before_sha256": "57c4f2461d7c1f30398c3c0e87b02d47929969669b59cbce1f88c84439693f5e",
+      "after_sha256": "a155cf8cf430114e4c17ded428a369414a8564ec15ec9b4f7ded8e9b70b81b2a",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 11,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 21,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            349,
+            353
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            358,
+            383
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            385,
+            418
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            466,
+            490
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            494,
+            515
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            518,
+            600
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 114,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            368,
+            375
+          ],
+          "extract_coarse": [
+            408,
+            410
+          ],
+          "extract_fine": [
+            448,
+            450
+          ],
+          "generate_once": [
+            525,
+            532
+          ],
+          "classify_two_stage": [
+            560,
+            590
+          ]
+        },
+        "main": [
+          678,
+          795
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            25,
+            26
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "before_sha256": "d115efef76d1a235243e327c40cd4022c136a293d22e8fd9ea89144f579597df",
+      "after_sha256": "4c6b96fd89c43c66810cf278cb47703694ba961e179da7aa183c28cb27c141b5",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R23",
+            "R31"
+          ],
+          "old_range": [
+            3,
+            13
+          ],
+          "description": "Replace outdated parser/output documentation with the current audited protocol."
+        },
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 22,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 32,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            286,
+            292
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            300,
+            322
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            324,
+            357
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R23",
+            "R24",
+            "R29",
+            "R31"
+          ],
+          "old_range": [
+            372,
+            380
+          ],
+          "description": "Replace implicit pipeline content/string slicing with audited generation and native final-channel extraction, retaining loaded generation defaults and original output cap."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            384,
+            407
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            410,
+            485
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 119,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": false,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            317,
+            324
+          ],
+          "extract_coarse": [
+            357,
+            359
+          ],
+          "extract_fine": [
+            397,
+            399
+          ],
+          "generate_first_line": [
+            425,
+            433
+          ],
+          "classify_two_stage": [
+            463,
+            499
+          ]
+        },
+        "main": [
+          580,
+          698
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            42,
+            43
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "before_sha256": "a0e372c7e1a01b8c9f70d9f6682c20be59c491eeb55970b483c706cac60f8017",
+      "after_sha256": "c32bead4f8e045353c27364322ba8fab1a4da3d6ae68528250e9cfed26455156",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R23",
+            "R31"
+          ],
+          "old_range": [
+            3,
+            12
+          ],
+          "description": "Replace outdated parser/output documentation with the current audited protocol."
+        },
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 21,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 30,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            276,
+            280
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            285,
+            310
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            312,
+            345
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R17",
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            376,
+            392
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            396,
+            417
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            420,
+            493
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 119,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": false,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            301,
+            308
+          ],
+          "extract_coarse": [
+            341,
+            343
+          ],
+          "extract_fine": [
+            381,
+            383
+          ],
+          "generate_once": [
+            433,
+            440
+          ],
+          "classify_two_stage": [
+            468,
+            498
+          ]
+        },
+        "main": [
+          577,
+          694
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            40,
+            41
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "before_sha256": "279cc1d1f11c7e6046836679f857ed1ad0970ea6a70cdba77e44cc319f5d140e",
+      "after_sha256": "3ed764823599b8ec21599e579758a33a0b1f02bc52a4ed7b51ada09c718fecfd",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 11,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 21,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            267,
+            271
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            276,
+            301
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            303,
+            336
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            385,
+            408
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            412,
+            433
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            436,
+            518
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 114,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            286,
+            293
+          ],
+          "extract_coarse": [
+            326,
+            328
+          ],
+          "extract_fine": [
+            366,
+            368
+          ],
+          "generate_once": [
+            443,
+            450
+          ],
+          "classify_two_stage": [
+            478,
+            508
+          ]
+        },
+        "main": [
+          596,
+          713
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            25,
+            26
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "before_sha256": "9b38712998f3f81a67c53ab145f08ed3da53ea89c852a8b4c4db2be2fa14256a",
+      "after_sha256": "6de0da1979df866af397306551a5cde33f238567eb871d3f58a4e3e563a3fa5c",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R23",
+            "R31"
+          ],
+          "old_range": [
+            3,
+            12
+          ],
+          "description": "Replace outdated parser/output documentation with the current audited protocol."
+        },
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 23,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 32,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            285,
+            289
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            294,
+            319
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            321,
+            354
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            402,
+            426
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            430,
+            451
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            454,
+            536
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 121,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            310,
+            317
+          ],
+          "extract_coarse": [
+            350,
+            352
+          ],
+          "extract_fine": [
+            390,
+            392
+          ],
+          "generate_once": [
+            467,
+            474
+          ],
+          "classify_two_stage": [
+            502,
+            532
+          ]
+        },
+        "main": [
+          620,
+          737
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            42,
+            43
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "before_sha256": "2178b24f529cdf347e78aa33412784a673ae5663fd7fbb0f85d5810dbd00be9f",
+      "after_sha256": "a1d37d9455d353feca85a0a254b236c0c387987be4bd3bd68058464cbc8a9bc3",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R23",
+            "R31"
+          ],
+          "old_range": [
+            3,
+            12
+          ],
+          "description": "Replace outdated parser/output documentation with the current audited protocol."
+        },
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 23,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 32,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            263,
+            267
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            272,
+            297
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            299,
+            332
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            380,
+            404
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            408,
+            429
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            432,
+            514
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 121,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            288,
+            295
+          ],
+          "extract_coarse": [
+            328,
+            330
+          ],
+          "extract_fine": [
+            368,
+            370
+          ],
+          "generate_once": [
+            445,
+            452
+          ],
+          "classify_two_stage": [
+            480,
+            510
+          ]
+        },
+        "main": [
+          598,
+          715
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            42,
+            43
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "before_sha256": "b54ea804f343d1a988eb1a3915c88c5c60c3d0066f7609399a6325fbae70151d",
+      "after_sha256": "1438f1e41465336f162280c633a54cba189731c623c70d07863c26e1322d03a7",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R23",
+            "R31"
+          ],
+          "old_range": [
+            3,
+            12
+          ],
+          "description": "Replace outdated parser/output documentation with the current audited protocol."
+        },
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 23,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 32,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            285,
+            289
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            294,
+            319
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            321,
+            354
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            402,
+            426
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            430,
+            451
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            454,
+            536
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 121,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            310,
+            317
+          ],
+          "extract_coarse": [
+            350,
+            352
+          ],
+          "extract_fine": [
+            390,
+            392
+          ],
+          "generate_once": [
+            467,
+            474
+          ],
+          "classify_two_stage": [
+            502,
+            532
+          ]
+        },
+        "main": [
+          620,
+          737
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            42,
+            43
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "before_sha256": "96d6f4137ef8976ddaf3ea03f2d1ca676016f11f32307f4cc476b9dafd4640ee",
+      "after_sha256": "f81b4d1180a8d7297e746c6ad38ad7802609f62c4770bd5d9ba21848c7696761",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 10,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 20,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            269,
+            273
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            278,
+            303
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            305,
+            338
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            386,
+            410
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            414,
+            435
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            438,
+            520
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 114,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            288,
+            295
+          ],
+          "extract_coarse": [
+            328,
+            330
+          ],
+          "extract_fine": [
+            368,
+            370
+          ],
+          "generate_once": [
+            445,
+            452
+          ],
+          "classify_two_stage": [
+            480,
+            510
+          ]
+        },
+        "main": [
+          598,
+          715
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            24,
+            25
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "before_sha256": "a0d5765a318bb35678d124d35e0beb50d87b7284f653f6c0d5c198daf06ef42f",
+      "after_sha256": "afe2a5003314477cd6428d00a8f862d38b378561968fc1c745b6c8be65070fe8",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 8,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 18,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            204,
+            208
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            213,
+            233
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            235,
+            268
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            280,
+            315
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            319,
+            341
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            344,
+            420
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 120,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": false,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            223,
+            230
+          ],
+          "extract_coarse": [
+            258,
+            260
+          ],
+          "extract_fine": [
+            298,
+            300
+          ],
+          "generate_once": [
+            350,
+            357
+          ],
+          "classify_two_stage": [
+            386,
+            416
+          ]
+        },
+        "main": [
+          498,
+          615
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            22,
+            23
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "before_sha256": "150410e95c535c0d8c5fe111e52c1cdf57d6be815ce93ab083c900aa7a076ec1",
+      "after_sha256": "eacbd1aeec987ac74650d59397448613658b030171afb80e1457178c9ddd6086",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 11,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 21,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            270,
+            274
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            279,
+            304
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            306,
+            339
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R24",
+            "R31"
+          ],
+          "old_range": [
+            387,
+            411
+          ],
+          "description": "Use full untruncated template input with add_special_tokens=False in the shared runtime; retain R02/R07 generation behavior and actual model context checks."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            415,
+            436
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            439,
+            521
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 114,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": true,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            289,
+            296
+          ],
+          "extract_coarse": [
+            329,
+            331
+          ],
+          "extract_fine": [
+            369,
+            371
+          ],
+          "generate_once": [
+            446,
+            453
+          ],
+          "classify_two_stage": [
+            481,
+            511
+          ]
+        },
+        "main": [
+          599,
+          716
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            25,
+            26
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    },
+    {
+      "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+      "before_sha256": "7526b447bbb5b97207efbeb430106b19453df5e8a8833801699ada780cc1c4f9",
+      "after_sha256": "4c827f19fdb234936f123fdc60168cd85ce064f7a0d436d2477e6f3445627886",
+      "changes": [
+        {
+          "issues": [
+            "R16",
+            "R23",
+            "R31"
+          ],
+          "old_range": [
+            3,
+            13
+          ],
+          "description": "Replace outdated parser/output documentation with the current audited protocol."
+        },
+        {
+          "issues": [
+            "R16",
+            "R22",
+            "R24",
+            "R31",
+            "R33"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 22,
+          "description": "Import the shared static-reviewed revision runtime using the script location."
+        },
+        {
+          "issues": [
+            "R22",
+            "R29",
+            "R31"
+          ],
+          "old_range": null,
+          "insert_after_old_line": 32,
+          "description": "Create a per-run audit with explicit reproducible seed; GPT-OSS uses native template effort metadata."
+        },
+        {
+          "issues": [
+            "R28"
+          ],
+          "old_range": [
+            194,
+            200
+          ],
+          "description": "Use an example abbreviation belonging to the actual stage-2 candidate set."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            208,
+            230
+          ],
+          "description": "Remove substring matching and use the shared unique complete-label parser; R04 empty protection is subsumed."
+        },
+        {
+          "issues": [
+            "R16"
+          ],
+          "old_range": [
+            232,
+            265
+          ],
+          "description": "Use the same complete canonical parser for full names and multi-word abbreviations, retaining candidate restrictions."
+        },
+        {
+          "issues": [
+            "R23",
+            "R24",
+            "R29",
+            "R31"
+          ],
+          "old_range": [
+            280,
+            288
+          ],
+          "description": "Replace implicit pipeline content/string slicing with audited generation and native final-channel extraction, retaining loaded generation defaults and original output cap."
+        },
+        {
+          "issues": [
+            "R10",
+            "R16",
+            "R31",
+            "R33"
+          ],
+          "old_range": [
+            292,
+            315
+          ],
+          "description": "Retain each stage raw answer and pre-fallback parse status; count failures before replacing labels while preserving the existing fallback policy."
+        },
+        {
+          "issues": [
+            "R10",
+            "R22",
+            "R31",
+            "R32",
+            "R33"
+          ],
+          "old_range": [
+            318,
+            393
+          ],
+          "description": "Persist source identity and all stage states, count failures before fallback, retain policy metrics and add failure-as-error metrics plus separate stage-1 coarse evaluation."
+        }
+      ],
+      "static_validation": {
+        "ast_parse": true,
+        "replaced_executable_lines": 119,
+        "old_code_comment_omissions": [],
+        "r07_config_retained": false,
+        "direct_unaudited_generation_calls": 0,
+        "fresh_output_directory": true
+      },
+      "execution_status": "not executed",
+      "historical_status": "Code repair for future runs; impact on historical reported results has not been established by rerunning.",
+      "new_active_ranges": {
+        "functions": {
+          "build_prompt_fine": [
+            225,
+            232
+          ],
+          "extract_coarse": [
+            265,
+            267
+          ],
+          "extract_fine": [
+            305,
+            307
+          ],
+          "generate_first_line": [
+            333,
+            341
+          ],
+          "classify_two_stage": [
+            371,
+            407
+          ]
+        },
+        "main": [
+          488,
+          606
+        ]
+      },
+      "finish_up_changes": [
+        {
+          "issue": "R31",
+          "old_range_before_finish_up": [
+            42,
+            43
+          ],
+          "description": "Microsecond run ID and exist_ok=False prevent silent reuse/overwrite; old lines remain commented."
+        },
+        {
+          "issue": "R24",
+          "description": "Update settings description to the shared runtime dynamic remaining-context output cap policy."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "files": 18,
+    "ast_parse_passed": 18,
+    "old_code_comment_omissions": 0,
+    "executed_experiments": 0,
+    "executed_models": 0,
+    "executed_tokenizers": 0,
+    "executed_function_tests": 0,
+    "replaced_executable_lines": 2121,
+    "shared_runtime_api_checked_by_ast_and_source": true,
+    "fresh_run_directory_files": 18
+  },
+  "issue_resolution": {
+    "R10": {
+      "code_status": "fixed_static",
+      "implementation": "Each stage returns parse status before fallback; counters use the pre-fallback boolean, and fallback_used/fallback_reason are persisted.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R16": {
+      "code_status": "fixed_static",
+      "implementation": "Both parsers use the shared complete canonical full-name/abbreviation matcher; ambiguity and candidate violations fail explicitly.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R17": {
+      "code_status": "fixed_static",
+      "implementation": "The two CodeLlama wrappers call shared full-template encoding with add_special_tokens=False, preventing template BOS from being added twice.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R19": {
+      "code_status": "fixed_static",
+      "implementation": "Gemma2 few-shot points to gemma-2-9b-it and checks actual config.model_type == gemma2; no historical checkpoint identity is inferred.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R22": {
+      "code_status": "fixed_static",
+      "implementation": "Source identity, full original record, CSV hash, row index and raw gold are recorded for future runs.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R23": {
+      "code_status": "fixed_static",
+      "implementation": "GPT-OSS generation preserves full new token stream; final extraction is delegated to the shared validated Harmony parser, rather than assistantfinal string splitting.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R24": {
+      "code_status": "fixed_static",
+      "implementation": "Full input is encoded without truncation. The original requested output cap remains an upper bound; actual effective cap is min(requested, finite context-input tokens-64), with both values and any adjustment recorded. Only exhausted input/context budgets are rejected.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R28": {
+      "code_status": "fixed_static",
+      "implementation": "The fine-stage format example is always taken from allowed[0], so AWR and all other routes have an in-candidate example.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R29": {
+      "code_status": "fixed_static",
+      "implementation": "Both GPT-OSS scripts explicitly set native reasoning_effort via the template; default medium can be preconfigured using SATD_REASONING_EFFORT.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R31": {
+      "code_status": "fixed_static_with_runtime_observation_pending",
+      "implementation": "RunAudit records source identities, sample/stage seeds, full generation configs, template/prompt hashes, installed versions and actual checkpoint metadata; no runtime was executed. Future run directories include microseconds and reject existing destinations.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R32": {
+      "code_status": "fixed_static",
+      "implementation": "Independent stage1_coarse_pred report and confusion matrix are added; legacy coarse report is explicitly final_fine_aggregated_coarse.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    },
+    "R33": {
+      "code_status": "fixed_static",
+      "implementation": "Original fallback policy metrics remain primary, while pre-fallback labels/status and additional failure-as-error metrics are preserved.",
+      "historical_status": "Not re-evaluated. The revision does not establish how much any previous paper result was affected."
+    }
+  },
+  "fallback_policy_boundary": {
+    "tree": "Preserve FALLBACK_FINE_BY_COARSE for a valid coarse stage; if coarse is invalid preserve original Data Conf default. Original policy predictions remain primary.",
+    "binary": "The binary family uses its existing final Data Conf policy. Tree category-specific defaults are intentionally distinct, not silently unified.",
+    "additional_metrics": "Pre-fallback failures are separately counted and failure-as-error metrics are additional; no historical result is overwritten."
+  },
+  "root_output_path_finish_up": {
+    "anchored_to_revised_source_directory": true,
+    "new_output_root": "revised_outputs",
+    "excludes_user_temporary_files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py",
+      "data_process.py",
+      "download_model.py",
+      "original_COT.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "execution": "static only"
+  }
+}

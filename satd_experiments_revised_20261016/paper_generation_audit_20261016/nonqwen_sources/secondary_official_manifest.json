@@ -1,0 +1,44 @@
+[
+  {
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/hf_v4.51.3_chat_templating.md",
+    "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.51.3/docs/source/en/chat_templating.md",
+    "status": "ok",
+    "sha256": "dee69316770fa6f777d526decccb25bfa14b6ecbe76bd51ca9eb228f27200f0f"
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/hf_v4.51.3_tokenization_codellama.py",
+    "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.51.3/src/transformers/models/code_llama/tokenization_code_llama.py",
+    "status": "ok",
+    "sha256": "3b452526d778d36d71314a3e759e0fb1792308a0dea1d756febe512af84045af"
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama_README.md",
+    "url": "https://raw.githubusercontent.com/meta-llama/codellama/main/README.md",
+    "status": "ok",
+    "sha256": "2683e58a65e8fd64993c3dc10a6a8d15a00d2c8fccf49578f3d5858b8ed8af41"
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/codellama_example_instructions.py",
+    "url": "https://raw.githubusercontent.com/meta-llama/codellama/main/example_instructions.py",
+    "status": "ok",
+    "sha256": "526d1ee47cc0805fb52ba1e61a0d0cc175bdffa16e5b00ff6241205dbe646e97"
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/llama3_example_chat_completion.py",
+    "url": "https://raw.githubusercontent.com/meta-llama/llama3/main/example_chat_completion.py",
+    "status": "ok",
+    "sha256": "605af05afe636e886e709b408e030e873f1cd6a6fe7ac0b36108f540bb9d335e"
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/hf_v4.51.3_auto_causal_mapping.py",
+    "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.51.3/src/transformers/models/auto/modeling_auto.py",
+    "status": "ok",
+    "sha256": "ad58aa15600b5f71a07700639c93c5aba4a83a5b2106abd25e284236f61f1262"
+  },
+  {
+    "path": "/Users/yizho/Desktop/satd_data/paper_generation_audit_20261016/nonqwen_sources/hf_v4.51.3_gemma3_model.py",
+    "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.51.3/src/transformers/models/gemma3/modeling_gemma3.py",
+    "status": "ok",
+    "sha256": "d8b16ebb0150cb621cfc115bee538873a90d6a531202987862d2da13cc507bc1"
+  }
+]

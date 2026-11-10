@@ -1,0 +1,92 @@
+**TODO**
+**HP Conf**
+**HP Conf**
+**TODO**
+**FIXME**
+The code comment "FIXME: What about the next diff entry?" belongs to the **BE**
+**Weight Conf**
+**TODO**
+The code comment "needed?" is a question and not a technical debt. It is not included in
+**Weight Conf**
+**Weight Conf**
+The code comment belongs to the **ML** (Multiple Languages) category.
+**TODO**
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+The code comment "TODO : market value" indicates a need to add a market value to the model
+The code comment "TODO : removal" indicates a **UMC (Unnecessary Model Code)** type
+**Data Conf**
+**Data Conf**
+**API**
+**Data Conf**
+The code comment "TODO ForceSign" indicates a need to **force sign** something. This is
+The code comment "TODO Implement" indicates a need to implement something new or missing functionality. This suggests
+**HP Conf**
+**HP Conf**
+**HP Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+The code comment "TODO stim channel exclusion" indicates a need to **modify model code (MCM)**
+The code comment "TODO support recursive parfor; multi-D; mutiple body blocks" belongs
+**HP Conf**
+**TODO**
+**Data Conf**
+**HP Conf**
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+**HP Conf**
+**HP Conf**
+**Data Conf**
+**Layer Conf**
+**Config**
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+The code comment "TODO: clip polygons" indicates a need to **modify the model code (MCM
+**Data Conf**
+**UMC (Unnecessary Model Code)**
+**Data Conf**
+**Data Conf**
+The code comment "TODO: handle channel modalities later" belongs to the **MCR** category of
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+The provided code comment "TODO: list" indicates a **ML** (Multiple Languages) SATD
+**UMC (Unnecessary Model Code)**
+**UMC (Unnecessary Model Code)**
+**Weight Conf**
+**Weight Conf**
+The code comment "TODO: min" indicates a need to **minimize** something in the code.
+**UMC (Unnecessary Model Code)**
+The code comment "TODO: need a better way" indicates a need for **improvement (IMPR
+**Weight Conf**
+**Data Conf**
+**Data Conf**
+**HP Conf**
+The provided code comment "TODO: other types?" indicates that the technical debt is of an **un
+**Weight Conf**
+**Config**
+**Weight Conf**
+**Weight Conf**
+**UMC (Unnecessary Model Code)**
+**Data Conf**
+The code comment "TODO: something if deep 9" indicates a **Layer Conf** type of
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+**UMC (Unnecessary Model Code)**
+**Data Conf**
+**Weight Conf**
+**UMC (Unnecessary Model Code)**
+**Data Conf**
+**Weight Conf**
+**Weight Conf**
+**Data Conf**
+**Weight Conf**
+**XXX**
+The code comment "XXX: how to find \""""good\"""" values for level ?"" belongs
+The code comment "XXX: one could be smarter here" belongs to the **MCM** (Model

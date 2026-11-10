@@ -1,0 +1,10 @@
+{
+  "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/generation_config.json",
+  "pinned_revision": null,
+  "evidence_kind": "user_download_from_author_repository",
+  "user_supplied_path": "/Users/yizho/Downloads/generation_config.json",
+  "archived_relative_path": "revision_batch_05/sources/Llama-3.1-8B-Instruct/generation_config.json",
+  "download_sha256": "189fb0c0d7fd8a527db217c0a60a0e013f0394cd8800f9697a666a9e75e5f7fd",
+  "retrieved_on": "2026-10-16",
+  "verification_boundary": "Exact supplied bytes archived. Association with Llama3.1 follows the ongoing official-file request and user download; browser could not independently extract the file. Main-branch file is not claimed to match the previously queried pinned revision."
+}

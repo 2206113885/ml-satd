@@ -1,0 +1,394 @@
+comment,real,pred,raw_output,yes_candidates
+!TODO: In some cases; US is not enough to hold the complete number,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;MCC;DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM;PQ
+# reverse bw; before concat TODO,Layer Configuration,Data Storage Configuration,DS Conf,
+# TODO : load landmarks in validation and test set also. I'm too sleepy to do it today -_- zzz... zzz...,Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,DFEC
+## elif (): ## FIXME: handle other bases here,Prototype,Code Dependency,MLDepend,DMC;MLDepend;UMC;MCM
+#TODO: improve the copying of parameters,Hyper-parameter Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;Data Conf
+@todo nrows is for testing only!,Boundary Erosion,Code Dependency,MLDepend,MLDepend;Data Conf
+@todo: arabtex and iso8859-6 need individual handling because in some cases using one-two mapping,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;UMC;Data Conf;DS Conf;Abs;BE;MCM;MCR;PQ;MLRelia
+@TODO: need better solutions,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;DS Conf;Abs;PQ
+@TODO: remove time usage; use it under the hood,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC;Data Conf
+[todo]: this is a bug; predict_proba should not change,Model Code Modifiability,Unnecessary Model Code,UMC,MLDepend;UMC;Abs;BE;MCM;PQ
+"\""\""\"" || Corpus in CSV format. TODO: still serializes to SVMLight format; feel free to change this. || \""\""\""",Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,MCC;DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM;MCR;PQ;MLRelia
+"\""\""\"" || Simple Gaussian Mixture model plotting example ||  || TODO: use the faithful dataset || \""\""\""",Data Processing Configuration,Code Dependency,MLDepend,Weight Conf;Layer Conf;HP Conf;MLDepend;UMC;Abs;BE;MCM;PQ;MLRelia
+"\""\""\"" Turn compiler.ast structures back into executable python code. ||  ||     The unparse method takes a compiler.ast tree and transforms it back into ||     valid python code.  It is incomplete and currently only works for ||     import statements; function calls; function definitions; assignments; and ||     basic expressions. ||  ||     Inspired by python-2.5-svn\/Demo\/parser\/unparse.py ||  ||     fixme: We may want to move to using _ast trees because the compiler for ||            them is about 6 times faster than compiler.compile. || \""\""\""",Custom Data Type,Model Code Comprehension,MCC,MLInter;MCC;DFEC;Weight Conf;Layer Conf;MLDepend;GC;CDT;UMC;Data Conf;Abs;BE;MCM;MCR;Proto
+"\""\""\""Converts legacy encodings into Unicode || TODO for replacer.py: ||  - add perseus-style iota subscript and diaeresis || \""\""\""",Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;MLDepend;CDT;UMC;Data Conf;Abs;BE;MCM
+"\""\""\""Converts legacy encodings into Unicode. ||  || TODO: Rm regex dependency || TODO: Add tests || \""\""\""",Code Dependency,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM
+"\""\""\""Models. ||  || Models are objects which take Tensor(s) as input; perform some computation on  || those Tensor(s); and output probability distributions. ||  || TODO: more... ||  || * :func:`.Model` || * :func:`.ContinuousModel` || * :func:`.DiscreteModel` || * :func:`.CategoricalModel` || * :func:`.save_model` || * :func:`.load_model` ||  || ---------- ||  || \""\""\""",Model Code Modifiability,Model Interpretability,MLInter,MLKnow;MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;CDT;UMC;DS Conf;Abs;BE;MCM;MCR;PQ;MLRelia
+"\""\""\""Module dedicated to extraction of Model Based Metafeatures. ||  || Todo: ||     * Implement metafeatures. ||     * Improve documentation. || \""\""\""",Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,DMC;DFEC;UMC;Data Conf;Abs;BE;MCM
+"\""\""\""Process downloaded or local corpora from one format into another. || Some formatting can happen here; or invoke language-specific formatters in || other files. ||  || #TODO: Add TLG & PHI text cleaners from KJ's IPython notebooks || #TODO: Add non-ascii stripper || #TODO: Add generic HTML stripper || \""\""\""",Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,MLInter;DMC;DFEC;Layer Conf;MLDepend;ML;UMC;Data Conf;DS Conf;Abs;BE;MCM;MCR
+"\""\""\""The Imperial Aramaic alphabet; plus simple script to transform || a Hebrew transcription of an Imperial Aramaic text to its own Unicode block. ||  || TODO: Add Hebrew-to-Aramaic converter || \""\""\""",Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;MLDepend;UMC;Data Conf;BE;MCM
+\/\/TODO in future add arguments compatibility check,Hyper-parameter Configuration,Model Code Modifiability,MCM,Abs;BE;MCM
+apparently package_deps are broken in 3.4,Code Dependency,Code Dependency,MLDepend,DMC;DFEC;Layer Conf;MLDepend;GC;ML;UMC;Data Conf;BE;MCM
+BETTER FIX: iterate through; if length = 0; then bump it up to 0.125,Prototype,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM;PQ
+circular shift the signal (needed for correct phase),Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;MLDepend;Data Conf;MCM
+DEPRICATE? I don't think this is needed anymore,Unnecessary Model Code,Unnecessary Model Code,UMC,DMC;UMC;Data Conf;BE;MCM;MLRelia
+Double newlines seem to mess with the rendering,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;BE;PQ;MLRelia
+early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),Prediction Quality,Layer Configuration,Layer Conf,Layer Conf;MLDepend;PQ
+else:  # TODO check that the variation wasn't already in there,Prototype,Unnecessary Model Code,UMC,Layer Conf;UMC
+env = ScaledFloatFrame(env)  # TODO: use for dqn?,Machine Learning Knowledge,Layer Configuration,Layer Conf,Layer Conf
+find out why prefix neg_ is needed,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;DMC;DFEC;Layer Conf;MLDepend;CDT;ML;UMC;Data Conf;Abs;BE;MCM
+FIXME : adhoc (answer being last word); not ignoring single question,Data Processing Configuration,Model Interpretability,MLInter,
+FIXME annoying hack for batching different sized shapes;,Model Code Reusability,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;UMC;Data Conf;Abs;BE;MCM
+FIXME don't l2_normalize for any metric,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DFEC;Weight Conf;Layer Conf;HP Conf;UMC;Data Conf;BE
+FIXME homogeneize the meaning of margin parameter,Hyper-parameter Configuration,Layer Configuration,Layer Conf,Layer Conf;UMC;Data Conf;Abs;BE;MCM
+FIXME non-uniform sample weights not yet supported,Weight Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;UMC;Data Conf;BE;PQ;MLRelia
+FIXME not sure what are those CB1 \/ CB2,Machine Learning Knowledge,Duplicate Feature Extraction Code,MLInter,DFEC;Layer Conf;UMC;Data Conf;Abs;BE;PQ;MLRelia
+FIXME This will make sense when all controllers are in one file (like task.py),Data Storage Configuration,Duplicate Model Code,DMC,DMC;UMC;Abs;MCM
+FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,Glue Code,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;Abs;PQ
+FIXME: Allow some diff; e.g. on repr style text in text\/plain,Prototype,Unnecessary Model Code,UMC,Weight Conf;UMC;MCM
+FIXME: Handle execution_count (always change to None?),Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;Layer Conf;UMC;Data Conf;MCM
+FIXME: Hardcoded usually sucks,Data Storage Configuration,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;UMC;Abs;MCM
+FIXME: if we inherit from scipy.io.netcdf.NetCDFFile and omit the self.nc,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;DFEC;MLDepend;UMC;Data Conf;Abs;BE
+FIXME: INDRA's section_type entry is meant to contain,Custom Data Type,Model Interpretability,MLInter,MLKnow;MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;CDT;ML;UMC;Data Conf;Abs;BE;MCM;MCR;Proto
+FIXME: Need to check if mod is the equivalent of floorMod in NumPy,Machine Learning Knowledge,Duplicate Feature Extraction Code,DFEC,DFEC;MLDepend;UMC;BE;MCM
+FIXME: need to implement sample_weight in Ridge,Weight Configuration,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM;MLRelia
+FIXME: Only keeping the first label,Data Processing Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;MLDepend;UMC;BE
+FIXME: pixel_classes dict needs to be populated with classes obtained from target,Data Processing Configuration,Unnecessary Model Code,UMC,UMC;Data Conf
+"FIXME: Return type \""None\"" of \""fit\"" incompatible with return type \""float\"" in supertype \""Model\""",Plain Old Data Type,Duplicate Model Code,DMC,DMC;Weight Conf;Layer Conf;HP Conf;MLDepend;UMC;MCM
+FIXME: support for many evaluators; maybe event support,Prototype,Code Dependency,MLDepend,MLDepend;UMC;Abs;BE;MCM
+FIXME: The code works with EpisodicReplayBuffer,Custom Data Type,Code Dependency,MLDepend,MLDepend;MCM
+FIXME: this is kind of hackish; but being able to simply set,Model Code Comprehension,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;GC;CDT;UMC;Data Conf;DS Conf;Abs;BE;MCM;MCR;PQ;MLRelia;Proto
+FIXME: this needs to become more generic; we need to find the actual so in the python root,Model Code Reusability,Duplicate Model Code,DMC,DMC
+FIXME: this representation of covars is going to lose for caching,Data Storage Configuration,Duplicate Model Code,DMC,DMC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM
+FIXME: Use linebased diff of some types of outputs:,Data Processing Configuration,Duplicate Model Code,DMC,DMC;Weight Conf;Layer Conf;Data Conf
+FIXME: What about the next diff entry?,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;DMC;Layer Conf;MLDepend;UMC;BE
+FIXME: What if we never find a fail-high?,Machine Learning Knowledge,Model Code Modifiability,MCM,MCM
+FIXME_Numba#5157: remove np.asarray and return as list,Data Storage Configuration,Code Dependency,MLDepend,MLDepend;CDT;UMC;Data Conf;Abs;BE;MCM
+Force shrinking of the mask if needed (and possible),Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;MLDepend;Data Conf;Abs;BE;MCM
+Freeze weights - TODO: NOT IMPLEMENTED!,Weight Configuration,Weight Configuration,Weight Conf,Weight Conf;Layer Conf;HP Conf;UMC;Data Conf;BE
+h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,Hyper-parameter Configuration,Layer Configuration,Layer Conf,Layer Conf;UMC;MCM
+handle BoxedSeries and list\/set of BoxedSeries; TODO: others?,Custom Data Type,Duplicate Feature Extraction Code,DFEC,DFEC;Weight Conf;Layer Conf;UMC;Data Conf;BE;MCM
+if this is needed.,Machine Learning Knowledge,Unnecessary Model Code,UMC,UMC
+IMPORTANT: keep matrices in suitable order for matrix products; failing to do so gives 8x lower performance :(,Model Code Reusability,Duplicate Model Code,DMC,DMC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;BE;MCM
+In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,Plain Old Data Type,Code Dependency,MLDepend,Layer Conf;MLDepend
+in_dim=(4; 8; 8; 8); # TODO: Needs fix when giving a randon in_dim,Model Code Reusability,Data Processing Configuration,Data Conf,Layer Conf;MLDepend;Data Conf
+Initialize model (TODO: really necessary?),Machine Learning Knowledge,Layer Configuration,Layer Conf,Layer Conf;UMC;Abs;MCM
+It's only needed for a specific purpose in the short term; will go.,Layer Configuration,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;UMC;Data Conf;MCM;Proto
+needed so command completion and help can use it,Data Storage Configuration,Code Dependency,MLDepend,MLDepend;Data Conf;DS Conf;BE;MCM
+needed to sklearn comparability,Code Dependency,Code Dependency,MLDepend,MLDepend;Data Conf;Abs;BE;MCR
+needed to sklearn comparability,Code Dependency,Multiple Languages,ML,Weight Conf;Layer Conf;ML;Data Conf;Abs;MCM;MLRelia
+needed?,Unnecessary Model Code,Model Interpretability,MLInter,MLInter;DFEC;Layer Conf;UMC;BE;MCM;PQ;MLRelia
+normed_cross_entropy # TODO,Hyper-parameter Configuration,Model Code Comprehension,MCC,
+NOTE: probably more efficient to sort then stride by nt_regions,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;MLDepend;ML;UMC;Data Conf;DS Conf;BE;MCM;MCR
+nv by ns dot ns by m -> nv by m  # TODO: Change to CSC for speed?,Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;MLDepend;DS Conf;BE
+once they are no longer needed in the schedule or by,Data Storage Configuration,Duplicate Model Code,DMC,MLKnow;MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;GC;CDT;ML;UMC;Data Conf;DS Conf;Abs;BE;MCM;MCR;PQ;MLRelia;Proto
+Pass on diff to external difftool (TODO: store in global metadata at end instead of in separate diff dicts?),Data Storage Configuration,Layer Configuration,DFEC,Layer Conf;UMC;Data Conf;BE;MCM
+probably not needed; transition,Unnecessary Model Code,Layer Configuration,Layer Conf,Layer Conf;MLDepend;UMC;Data Conf;BE;MCM
+"r\""\""\""Run inference on random sequences many times; saving the top results. ||  || This module is designed to run inference on a trained aptamers TF model || to score many sequences and then write out the top scoring sequences to || be used in other analysis. For example; these top predicted sequences || can read in the colab picking sequences in order || to validate the TF model. ||  || This module uses the standard aptamers tensorflow infrastructure to run || the inference. This is the inferer class defined in || learning\/eval_feedforward and described in the Aptamers TensorFlow Doc. ||  || Inference is generally run in batches of sequences; so a MapFlat function || is used to combine the results of interference into a flattened list || of (sequence; score) pairs. (In other words; each map function returns || a list of (sequence; score) pairs and these results are combined into || one list of pairs. Using a standard Map function would result in a || list of lists which is not what we want.) From there; the Top.Of || combiner returns only the top results; sorted by highest score. These || are then written to a text file. ||  || For now; each batch creates its own inferer; causing each map function || to have more overhead. Because of this;batch sizes around the default of || 10000 are performant. Fixing this in the future means converting the || MapFlat to a ParDo and initializing the inferer in start_bundle. || This module runs inference 1 billion times in 50 minutes so it || is sufficient for now ||  || Run locally with: ||  ||   :search_inference -- --flume_exec_mode=UNOPT \\ ||   --target_name='target' \\ ||   --model_dir=xxx \\ ||    --checkpoint_path='model.ckpt-312500' \\ ||    --output_name=xxx\/base30_1B_inference_top2k ||  || \""\""\""",Custom Data Type,Duplicate Feature Extraction Code,DFEC,DFEC;Weight Conf;Data Conf;DS Conf;Abs;PQ;MLRelia
+Random Warp # TODO change masks to have a input mask and a warped target mask,Hyper-parameter Configuration,Layer Configuration,Layer Conf,Layer Conf
+seem out of place. If you were able to do better; feel free to share your,Prediction Quality,Model Interpretability,MLInter,MLKnow;MLInter;MCC;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;GC;CDT;ML;UMC;Data Conf;PODT;DS Conf;Abs;BE;MCM;MCR;PQ;MLRelia;Proto
+self.clearChanges() #TODO perhaps?,Data Storage Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;UMC;BE
+self.mpc_sum(3; -5) TODO: Future work: how to handle gracefully minus numbers,Machine Learning Knowledge,Unnecessary Model Code,UMC,UMC;Abs
+should be WeightNorm here TODO.,Layer Configuration,Weight Configuration,Weight Conf,Weight Conf;BE
+tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,Code Dependency,Duplicate Model Code,DMC,DMC;Weight Conf;Layer Conf;HP Conf;MLDepend;CDT;UMC;Data Conf;Abs;BE;MCM;MCR;PQ;MLRelia
+this importing of matplotlib is needed to run on the cluster,Code Dependency,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC
+This is a hack to allows inference when the <go> token,Model Code Modifiability,Model Interpretability,MLInter,MLInter;Layer Conf;UMC;Data Conf;Abs;BE
+THIS IS A VERY UGLY FUNCTION because it has hardcoded 0\/4\/5 integers for each of the metric. I need to make an enumerated class for this!,Model Code Comprehension,Model Code Comprehension,MCC,MCC;DMC;Layer Conf;MLDepend;CDT;UMC;Data Conf;Abs;BE;MCM;PQ;MLRelia
+time to fix. TODO: optimize the crap out of this,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;UMC;Abs;BE;MCM;PQ
+TODO - can remove one of these m0 restores if A and B both TLU,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;Data Conf;BE;PQ
+TODO - does this handle N-dim tensors correctly?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,Layer Conf;Data Conf
+TODO - in the code it is different - why?,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;Layer Conf;UMC;Data Conf
+TODO (pradeep): Sort the indices and do intersections in order; so that we can return the,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Layer Conf;HP Conf;MLDepend;ML;UMC;Data Conf;Abs;MLRelia
+TODO (ytz): really; we want at least one active and inactive in both scenarios.,Data Processing Configuration,Unnecessary Model Code,UMC,UMC
+TODO : add these in the options. (None; None) => no limit,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;MLDepend;CDT;UMC;Data Conf;DS Conf;BE;MCM;PQ
+TODO : Any other options,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;DFEC;Layer Conf;UMC;Data Conf;Abs;BE;MCM;PQ
+TODO : market value,Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;MLDepend;UMC;Data Conf;DS Conf;PQ
+TODO : removal,Unnecessary Model Code,Unnecessary Model Code,UMC,DMC;Layer Conf;UMC;Data Conf
+TODO : this is quite bad in term of execution speed. We need to fix this.,Data Processing Configuration,Code Dependency,MLDepend,MLDepend;UMC;Abs;BE
+"TODO accept_sparse=\""csc\""",Data Processing Configuration,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;ML;UMC;Data Conf;DS Conf;Abs;BE;MCM
+TODO add general Distribution,Data Processing Configuration,Machine Learning Reliability,MLRelia,Layer Conf;UMC;Data Conf;MLRelia
+TODO add index to xls file,Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;ML;UMC;Data Conf;DS Conf;BE;PQ;MLRelia
+TODO add introductory explanation,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf
+TODO add support for other metrics (ex. euclidean; angular),Prototype,Boundary Erosion,BE,Layer Conf;UMC;BE
+TODO add test for keypoints once their handling was improved in Convolve,Code Dependency,Boundary Erosion,BE,Layer Conf;UMC;BE
+TODO add vertical gradient alpha to have fog only at skylevel\/groundlevel,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;UMC;Data Conf;BE
+TODO anticipate multi-agents for AEB space,Data Storage Configuration,Abstraction,Abs,Abs;BE
+TODO change as soon as svhn has a val set :),Data Storage Configuration,Code Dependency,MLDepend,MLDepend;Data Conf;BE
+TODO change the way attns is returned dict => list or tuple (onnx),Data Processing Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;MLDepend;UMC;MCM
+TODO change to np.partition for PERF,Data Storage Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;Data Conf;Abs;MCM;PQ
+TODO check for each tentacle specified if update is available (with requirements),Code Dependency,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;ML;Data Conf;Abs;BE;MCM
+TODO check results after standardizing num ft once a ml algorithm is ready to test,Code Dependency,Model Interpretability,MLInter,MLInter;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE
+TODO checkpoints; incremental save,Prototype,Boundary Erosion,BE,Weight Conf;Layer Conf;UMC;BE
+TODO combine these values to get a final prediction!,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DFEC;Weight Conf;Layer Conf;MLDepend;CDT;Data Conf;BE
+TODO confirm that multiple eigenvalues of 1 means the rotation,Machine Learning Knowledge,Weight Configuration,MLKnow,Weight Conf;Layer Conf;Abs;MCM;PQ
+ToDo consider 3D case --> do that by using tag->size,Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;UMC;Data Conf;BE;PQ
+TODO cpickle vs json,Data Storage Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf
+TODO Dehaze with 1\/t,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Layer Conf;UMC;Data Conf;Abs;MCM
+TODO design an API interface for advanced access as an importable package,Abstraction,Boundary Erosion,BE,BE
+TODO double num_filters,Hyper-parameter Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE
+TODO Figure out how to distinguish oxidation states,Machine Learning Knowledge,Code Dependency,MLDepend,MLDepend;UMC;Abs;BE
+TODO figure out what exactly size does,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;UMC;Data Conf;DS Conf;Abs;BE;PQ
+TODO ForceSign,Hyper-parameter Configuration,Duplicate Model Code,DMC,DMC;DFEC;UMC;Data Conf;Abs;PQ
+TODO generalise to columns with series of unequal length,Model Code Reusability,Duplicate Feature Extraction Code,DFEC,DMC;DFEC;UMC;Abs;MCM;MLRelia
+TODO generalise to series-to-series functions and function kwargs,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;UMC
+TODO handle 1d series; not only 2d dataframes,Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;MLDepend;Data Conf;Abs;BE
+ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,Abstraction,Duplicate Model Code,DMC,DMC;DFEC;MLDepend;ML;UMC;Data Conf;Abs;BE;MCM
+TODO if without momentum; weights should not change too,Weight Configuration,Unnecessary Model Code,UMC,Weight Conf;Layer Conf;UMC;Data Conf;MCM
+TODO Implement,Hyper-parameter Configuration,Unnecessary Model Code,UMC,UMC;Data Conf;MCM
+TODO implement generic method,Abstraction,Layer Configuration,Layer Conf,Layer Conf;MLDepend;UMC;Data Conf;MCM
+TODO implement multi-gpu training and compare performance,Prototype,Layer Configuration,Layer Conf,Layer Conf;MLDepend;Abs;BE
+TODO improve the regex here,Data Processing Configuration,Duplicate Model Code,DMC,DMC
+"TODO last token include: \""&& $last_token[...]\""",Data Processing Configuration,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;HP Conf;MLDepend;UMC;Data Conf;Abs;BE
+TODO make paf_scored not part of self?,Abstraction,Duplicate Model Code,DMC,DMC;Layer Conf;MLDepend;UMC;Data Conf;MCM
+TODO make threshold a variable,Custom Data Type,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC;Data Conf;Abs;BE
+TODO max in one tensor,Layer Configuration,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;UMC;Data Conf;Abs
+TODO move these registrations to backend-specific files,Prototype,Layer Configuration,Layer Conf,Layer Conf;MCM
+TODO normalice to make sum up to 1?,Data Processing Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;MLDepend;UMC;Data Conf;DS Conf;Abs;BE;MCM;PQ
+todo not support dense,Unnecessary Model Code,Model Interpretability,MLInter,MLKnow;MLInter;DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;DS Conf;Abs;BE;PQ;MLRelia;Proto
+TODO Option for string lenght,Data Storage Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Abs;BE;Proto
+TODO Promote this to a Funsor subclass.,Model Code Reusability,Layer Configuration,Layer Conf,Layer Conf;Data Conf;BE
+TODO refactor second part of if statement when implementing live model prediction,Model Code Comprehension,Data Processing Configuration,Data Conf,Layer Conf;Data Conf;MCM
+TODO remove,Unnecessary Model Code,Model Interpretability,MLInter,MLInter;DMC;Layer Conf;CDT;BE
+TODO remove later.,Unnecessary Model Code,Unnecessary Model Code,UMC,Layer Conf;MLDepend;UMC
+TODO remove this,Unnecessary Model Code,Unnecessary Model Code,UMC,DMC;DFEC;Weight Conf;Layer Conf;UMC;PQ
+TODO replace this code with the following commented out code after viz is fixed,Code Dependency,Duplicate Model Code,DMC,DMC;Weight Conf;UMC;Data Conf
+TODO replace this speedup implementation with nni.compression.torch.ModelSpeedup,Layer Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;Data Conf;BE;MCM
+TODO replace whole pandas data container as input argument with separated metadata container,Data Storage Configuration,Data Processing Configuration,Data Conf,Layer Conf;Data Conf;BE;MCM
+TODO replace with Streamlines,Custom Data Type,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;Data Conf;Abs
+TODO save all the results to a json inside the experiment's folder,Data Storage Configuration,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;BE;PQ
+TODO Search the web or use other algorithms,Machine Learning Knowledge,Machine Learning Reliability,MLRelia,Layer Conf;UMC;BE;MLRelia
+TODO Send the context back into some list maintained by,Data Storage Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;CDT;ML;UMC;Data Conf;DS Conf;Abs;BE;MCM;MCR;PQ;MLRelia
+TODO Set bioassembly info,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf
+TODO Should this stay generic? (point),Machine Learning Knowledge,Unnecessary Model Code,UMC,UMC;Abs
+TODO stim channel exclusion,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;MLDepend;UMC;Data Conf;BE;PQ
+TODO support recursive parfor; multi-D; mutiple body blocks,Prototype,Model Code Modifiability,MCM,Layer Conf;MCM
+todo sweep,Model Code Modifiability,Layer Configuration,Layer Conf,Layer Conf;UMC;Data Conf;PQ
+TODO switch similar statements to work inplace (w\/o making a copy),Model Code Reusability,Duplicate Model Code,DMC,DMC;Layer Conf;MLDepend;UMC;MCM
+TODO These ratios can't be hardcoded,Model Code Reusability,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;ML;UMC;Abs;BE;MCM;PQ
+TODO this code is currently necessary for the async_fit method in websocket_client.py,Hyper-parameter Configuration,Layer Configuration,Layer Conf,Layer Conf
+TODO this is too general; register all ops,Prototype,Layer Configuration,Layer Conf,Layer Conf;MLDepend;UMC;Abs;MCM
+TODO this is wrong for other entitiey types nor appearing in the edge,Custom Data Type,Data Processing Configuration,Data Conf,Data Conf;BE
+TODO this vector is very sparse; we can make it more memory efficient,Data Storage Configuration,Duplicate Model Code,DMC,DMC;DFEC;MLDepend;UMC;Data Conf;Abs;MLRelia
+TODO to be modified,Model Code Modifiability,Model Interpretability,MLInter,MLInter;DFEC;Weight Conf;Layer Conf;MLDepend;UMC
+TODO Update and move now this isn't used here,Unnecessary Model Code,Model Interpretability,MLInter,MLInter;DMC;DFEC;Layer Conf;UMC;Data Conf
+TODO update these - the sklearn transformation class should be able,Custom Data Type,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;UMC;Data Conf;PQ
+TODO validate and normalize to \/path\/to\/variable,Data Processing Configuration,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;DS Conf
+TODO validate configuration and set defaults,Data Storage Configuration,Layer Configuration,Layer Conf,Weight Conf;Layer Conf;Data Conf
+TODO validation_split is not used,Unnecessary Model Code,Data Processing Configuration,Data Conf,Data Conf;BE;PQ
+TODO WIP temp_coherence_loss # assumes all sequences in the dataset share at least one same 3D pos of Baxter arm,Hyper-parameter Configuration,Layer Configuration,Layer Conf,Layer Conf;MLDepend;UMC;BE;MCM
+TODO wouldn't it be better with a set rather than a list?,Data Storage Configuration,Model Interpretability,MLInter,MLInter;DMC;Weight Conf;MLDepend;UMC;Abs;BE;PQ
+TODO write a warning,Model Interpretability,Unnecessary Model Code,UMC,UMC;Abs;BE
+"TODO(ahundt) difference between \""redundant\"" and regular proto parsing; figure out how to deal with grasp_success rename properly",Machine Learning Knowledge,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC;BE
+TODO(ahundt) make more efficient,Data Processing Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;Data Conf;Abs;BE
+TODO(ahundt) maybe the rotation component of this needs to be inverted due to sva implementation?,Machine Learning Knowledge,Layer Configuration,Layer Conf,Layer Conf;UMC
+TODO(b\/119775953): fix the circular dependencies.,Code Dependency,Code Dependency,MLDepend,DMC;MLDepend;UMC;Data Conf;Abs;BE
+TODO(beam2d): Fix after supporting correct dtype promotion.,Custom Data Type,Unnecessary Model Code,UMC,Weight Conf;UMC;Data Conf
+TODO(crcrpar): Improve resource computation\/allocation algorithm.,Data Storage Configuration,Data Storage Configuration,DS Conf,
+TODO(dbieber): Move this logic into the dataset definition.,Boundary Erosion,Layer Configuration,Layer Conf,Layer Conf;Data Conf
+TODO(fstahlberg): Move to config,Model Code Modifiability,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC;Data Conf
+TODO(rbharath): The script expects that all columns in xlsx\/csv files,Prototype,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;CDT;ML;UMC;Data Conf;DS Conf;Abs;BE;MCM;MLRelia
+TODO(rliaw): This behavior is probably undesirable; but right now,Prototype,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;Abs;MCM;PQ;MLRelia
+TODO(sonots): Implement in C++,Multiple Languages,Duplicate Feature Extraction Code,DFEC,DFEC;MLDepend;ML;UMC;BE
+TODO(sven): Add once ModelV1 is deprecated and we no longer cause circular,Code Dependency,Code Dependency,MLDepend,MLDepend;UMC;MCM;PQ;MLRelia
+TODO(tokunaga): the number of processes should be configurable,Model Code Modifiability,Layer Configuration,Layer Conf,Layer Conf;MLDepend;Data Conf;BE
+TODO(vsatish): Figure out why this isn't printed.,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;BE
+TODO. get rid of from_model_pt,Unnecessary Model Code,Code Dependency,MLDepend,Weight Conf;Layer Conf;MLDepend;CDT;UMC;Abs;BE
+TODO: (sven) rename to simply stats_fn to match eager and torch.,Abstraction,Layer Configuration,Layer Conf,Layer Conf
+TODO: @trask @theo could you take a look at this if you have better ideas on how to get these parameters,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;DMC;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;PQ;Proto
+todo: accurate Value,Machine Learning Reliability,Model Interpretability,MLInter,MLInter;DMC;Layer Conf;UMC;Data Conf;BE
+TODO: add a complete frame_size; to cover the whole audio signal?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,
+TODO: add backward images also.,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;CDT;UMC;Data Conf;Abs;BE;PQ;Proto
+TODO: add datetype conversion,Data Storage Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;MLDepend;CDT;BE
+TODO: add inheritance from Graph once implemented,Code Dependency,Machine Learning Knowledge,MLKnow,
+TODO: add more tags based on the scikit-learn,Prototype,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC;Data Conf
+TODO: Add this to configuration framework,Data Processing Configuration,Machine Learning Reliability,MLRelia,Data Conf;BE;MLRelia
+TODO: arbitrary threshold is problematic,Model Code Reusability,Model Interpretability,MLInter,MLInter;DMC;DFEC;Layer Conf;MLDepend;UMC;Data Conf;DS Conf;Abs;BE;MCM;PQ;MLRelia
+TODO: assertWarns exist only for Python 3.2+; test in all versions,Code Dependency,Model Interpretability,MLInter,
+TODO: At the moment LHUC is RNN specific. We should support other models as well.,Model Code Reusability,Layer Configuration,Layer Conf,Layer Conf;Abs
+TODO: auto detect dtype,Data Processing Configuration,Data Processing Configuration,Data Conf,Layer Conf;MLDepend;UMC;Data Conf;DS Conf;Abs
+TODO: Basically identical to `test_intra_cv_target_transform` except for repeated KFold,Duplicate Model Code,Layer Configuration,Layer Conf,Layer Conf
+TODO: black box attacks,Machine Learning Reliability,Layer Configuration,MLInter,Layer Conf;UMC;Abs;BE
+"TODO: calculate this centroid\""",Data Processing Configuration,Duplicate Model Code,DMC,DMC;MLDepend;UMC;Abs
+TODO: calibration dataset,Hyper-parameter Configuration,Layer Configuration,Layer Conf,Layer Conf;MCM
+todo: change the feature_na_method!,Data Processing Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;HP Conf;Data Conf;BE;MCM
+TODO: Change the optimizer to the appropriate Optimizer class,Hyper-parameter Configuration,Layer Configuration,Layer Conf,Weight Conf;Layer Conf;MCM
+TODO: change this logic when there is a git pretty-format,Code Dependency,Duplicate Model Code,DMC,DMC
+TODO: check `other` is Series after a circular import of SeriesType fixed,Code Dependency,Boundary Erosion,BE,BE
+TODO: Check behavior if this is a single mrc file (no '@'),Machine Learning Knowledge,Code Dependency,MLDepend,Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;MCR
+TODO: check CAPTALIZED WORDS as their lower case counterparts before saving,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;Weight Conf;Layer Conf;MLDepend;PQ
+TODO: check for series\/dict\/list input,Plain Old Data Type,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;CDT;UMC;Data Conf;DS Conf;Abs;BE;MCM
+TODO: Check if self._mean_squared_error_w_precision can be used here,Machine Learning Knowledge,Model Code Comprehension,MCC,
+TODO: check if stride of 2 causes alignment issues if the featuremap,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;UMC;Data Conf;Abs;BE
+TODO: check whether the model is QuartzNet,Custom Data Type,Abstraction,Abs,Abs
+TODO: check why there's an IF,Machine Learning Knowledge,Layer Configuration,Layer Conf,Layer Conf;Data Conf
+TODO: clip polygons,Data Processing Configuration,Duplicate Model Code,DMC,DMC;UMC
+TODO: compare the performance!,Prediction Quality,Prediction Quality,PQ,PQ
+TODO: compute signed distance between walls,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;BE
+ToDo: consider go\/no-go with following modification,Data Processing Configuration,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC;Abs;BE;MCM;PQ;MLRelia
+TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,Multiple Languages,Model Interpretability,MLInter,MLInter;Layer Conf;CDT;UMC;BE;MCM
+TODO: Could be implemented as optimization option in LK???,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;DFEC;UMC;Data Conf;DS Conf;Abs;BE;MCM
+TODO: Could check if QSettings.Format stores type info.,Machine Learning Knowledge,Data Processing Configuration,Data Conf,Data Conf
+TODO: Currently this turns any upregulation associated with,Custom Data Type,Duplicate Model Code,DMC,DMC;Weight Conf;Layer Conf;UMC;Data Conf;DS Conf;BE;PQ;MLRelia;Proto
+TODO: Currently we don't look at source text; but we may want to,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;ML;UMC;DS Conf;BE;MCM;PQ;MLRelia
+TODO: dataframe pass needed?,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;HP Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM;PQ
+TODO: delete this method when no longer needed,Unnecessary Model Code,Duplicate Feature Extraction Code,DFEC,DFEC;UMC
+TODO: deprecate?,Unnecessary Model Code,Code Dependency,MLDepend,MLInter;DMC;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM
+TODO: determine if requiring same sense is too string; i.e.,Data Processing Configuration,Model Interpretability,MLInter,MLInter;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;BE;MCM;PQ;MLRelia
+TODO: Do below `y_lie` lines directly calculate min\/max\/mean on `opt.yi` when it could also contain times?,Machine Learning Knowledge,Duplicate Feature Extraction Code,DFEC,DFEC;Data Conf;BE
+TODO: do more to protect against race conditions. File lock?,Data Storage Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;Abs;MCM;MLRelia
+TODO: do not replace unless explicitly noticed + add 'only hangul' option,Model Code Modifiability,Layer Configuration,MLDepend,Layer Conf;Data Conf;BE
+TODO: do the transpose as a DataLoaderTransformer instead of in host,Data Storage Configuration,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM
+TODO: do this better,Hyper-parameter Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;Data Conf
+TODO: do we need this?!,Unnecessary Model Code,Machine Learning Knowledge,MLKnow,
+TODO: does it make graph?,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;MCC;Weight Conf;Layer Conf;MLDepend;ML;UMC;Data Conf;BE;MCM;Proto
+TODO: don't make these a constant initializer because we,Data Storage Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;CDT;UMC;Data Conf;DS Conf;Abs;BE;MCM;MCR;PQ;MLRelia;Proto
+TODO: don't need this w\/ py.test,Unnecessary Model Code,Unnecessary Model Code,UMC,Layer Conf;UMC;Data Conf
+TODO: double check if this is still true in 1.9.0,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;Layer Conf;MLDepend;UMC;Data Conf
+TODO: dtype,Custom Data Type,Duplicate Model Code,DMC,MLInter;DMC;Layer Conf;Data Conf;DS Conf;Abs;BE
+TODO: ensure dummy_na =False is what you want,Machine Learning Knowledge,Data Processing Configuration,Data Conf,Layer Conf;Data Conf
+TODO: ensure x data shape matches model._ph['x'] shape (only if fit),Model Code Reusability,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;Data Conf;BE;MCM
+TODO: Extend to multifidelity problems by adding training_points = {'approx': {}},Prototype,Data Processing Configuration,Data Conf,Layer Conf;Data Conf
+TODO: extend to other key types,Custom Data Type,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;Abs;BE;MLRelia
+TODO: extract an eval func more robustly,Machine Learning Reliability,Unnecessary Model Code,UMC,UMC;Data Conf;BE;PQ
+TODO: figure out how why the result of einsum requires reshape,Machine Learning Knowledge,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM
+TODO: figure out why some machines prefer one of these options,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;DFEC;Weight Conf;Layer Conf;UMC;Data Conf;DS Conf;Abs;BE;PQ
+TODO: figure out why this happens.,Machine Learning Knowledge,Model Interpretability,MLInter,
+TODO: Formats should not be specified; just saving all the materialized formats,Data Storage Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;UMC;Data Conf;BE;MCM;PQ;MLRelia
+TODO: Get rid of this,Unnecessary Model Code,Unnecessary Model Code,UMC,Layer Conf;MLDepend;UMC
+TODO: handle boolean scalars properly,Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;MLDepend;UMC;Data Conf;BE
+TODO: handle channel modalities later,Model Code Reusability,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC;Data Conf;BE
+TODO: handle other participant types,Model Code Reusability,Code Dependency,MLDepend,DFEC;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM
+TODO: handle record value which are lists; at least error,Plain Old Data Type,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;CDT;UMC;Data Conf;MLRelia;Proto
+TODO: handle string,Plain Old Data Type,Unnecessary Model Code,UMC,MLDepend;UMC;Data Conf
+TODO: I believe this is not really much used,Unnecessary Model Code,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;PQ
+TODO: I cannot get good results with this yet,Prediction Quality,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;UMC;Data Conf;DS Conf;Abs;BE;MCM;PQ;MLRelia
+"TODO: identify the \""best\"" language detector available for OSS python",Machine Learning Knowledge,Code Dependency,MLDepend,MLDepend;CDT;ML;Data Conf
+TODO: ignore non-numerics,Data Processing Configuration,Model Interpretability,MLInter,MLInter;UMC
+TODO: I'm not sure about this part,Machine Learning Knowledge,Code Dependency,MLDepend,Layer Conf;MLDepend;BE
+TODO: Implement Conv Transpose,Model Code Modifiability,Code Dependency,MLDepend,MLDepend
+TODO: Implement mass downloading with a cool-off in case of 429 response,Prototype,Unnecessary Model Code,UMC,UMC
+TODO: implement required params,Hyper-parameter Configuration,Unnecessary Model Code,UMC,Layer Conf;UMC
+TODO: implement residual connection,Layer Configuration,Layer Configuration,Layer Conf,Layer Conf;UMC;Abs
+TODO: In terms of functional API; there should not be any initialization of an nn.Module.,Unnecessary Model Code,Code Dependency,MLDepend,MLDepend;Abs;BE;MCM
+TODO: index and name,Data Processing Configuration,Unnecessary Model Code,UMC,UMC;BE
+TODO: is incref required?,Machine Learning Knowledge,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC
+TODO: is that best way to handle,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;ML;UMC;Data Conf;Abs;BE;MCM;PQ;MLRelia
+TODO: It could be nice if this method was run on entire data; not just,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;CDT;UMC;Data Conf;DS Conf;Abs;BE;MCM;MCR;PQ;MLRelia
+TODO: it's worth to switch back to the correct preprocess_input when InceptionResNetV2 model is re-trained,Code Dependency,Unnecessary Model Code,UMC,UMC;Abs
+TODO: list,Plain Old Data Type,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;MLDepend;UMC
+TODO: Log message,Model Interpretability,Machine Learning Knowledge,MLKnow,
+TODO: make efficient,Prototype,Duplicate Feature Extraction Code,DFEC,DFEC;Weight Conf;Layer Conf;BE
+TODO: make efficient,Prototype,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;UMC;BE;MCM
+TODO: make fast_rcnn irrelevant,Unnecessary Model Code,Unnecessary Model Code,UMC,UMC
+TODO: make it save a zipfile instead of a tarfile.,Data Storage Configuration,Weight Configuration,MLDepend,Weight Conf;Layer Conf;Abs
+TODO: make the dtype configurable; see __init__(),Model Code Modifiability,Data Processing Configuration,Data Conf,MLDepend;Data Conf
+TODO: maxpool?,Data Processing Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;UMC;Data Conf
+TODO: maybe introduce a DefaultEnvironment?,Machine Learning Knowledge,Data Processing Configuration,Data Conf,Data Conf
+TODO: min,Data Processing Configuration,Duplicate Feature Extraction Code,TODO: min,DFEC;Weight Conf;Layer Conf;MLDepend;CDT;UMC;Data Conf;Abs;BE;MCM
+TODO: Model Precision,Data Processing Configuration,Prediction Quality,PQ,Layer Conf;Abs;PQ
+TODO: modify this later,Data Processing Configuration,Machine Learning Knowledge,MLKnow,
+TODO: more specific types?,Custom Data Type,Unnecessary Model Code,UMC,Layer Conf;UMC;Data Conf;BE
+TODO: need a better way,Plain Old Data Type,Unnecessary Model Code,UMC,Layer Conf;UMC
+TODO: need to discuss whether this is 'allowed' or smart,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;Weight Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM;MLRelia
+TODO: Need to invert the CameraToWorld matrix => WorldToCamera matrix,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;MLDepend;BE
+TODO: needs to be re-written to match new stitch datasets signature.,Glue Code,Duplicate Model Code,DMC,DMC;Layer Conf;ML;UMC;Data Conf;Abs;MCM
+TODO: non-numeric columns should be ignored automatically,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Layer Conf;ML;UMC;Abs;BE;MCM
+TODO: normalize true states,Data Processing Configuration,Model Interpretability,MLInter,MLInter;Layer Conf;UMC;Abs;MCM;PQ
+TODO: num pad examples is not set here if fillup strategy would be padding,Data Processing Configuration,Duplicate Model Code,DMC,DMC;Layer Conf
+TODO: optimize scheduling to support more cases.,Data Storage Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;MLDepend;UMC;BE;MCM
+TODO: other types?,Custom Data Type,Code Dependency,MLDepend,DMC;Weight Conf;Layer Conf;MLDepend;ML;Abs;BE
+TODO: parallelize,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;Abs;BE;MCM
+TODO: pass in just the id instead of the entire obj_msg.,Data Processing Configuration,Weight Configuration,MLDepend,Weight Conf;Layer Conf
+todo: perhaps it's better to use pickle in the future?,Data Storage Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: Place tensors into GPU memory. This will require rewriting,Data Storage Configuration,Layer Configuration,Layer Conf,Layer Conf;MLDepend;Data Conf;Abs;BE
+TODO: pretty sure this isn't necessary,Unnecessary Model Code,Unnecessary Model Code,UMC,Layer Conf;UMC
+TODO: Probably should just implement __deepcopy__,Model Code Reusability,Code Dependency,MLDepend,MLDepend;UMC;Data Conf;MCM
+TODO: programmatically check wether these are indeed features (predict; correct),Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM;MCR;PQ;MLRelia
+TODO: Properly break circular dependencies,Code Dependency,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM
+TODO: put in infrastructure to fold over trace as it's built.,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;Abs;BE;MCM
+TODO: put in the option to do substitution here (most likely scenario;,Prototype,Duplicate Feature Extraction Code,DFEC,DFEC;MLDepend;UMC;Abs
+TODO: Reduce dim. of mean.,Data Processing Configuration,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;UMC;Data Conf;BE;MCM
+TODO: refactor as independent function,Abstraction,Duplicate Feature Extraction Code,DFEC,DMC;DFEC;Weight Conf;Data Conf;Abs;BE
+TODO: Refactor\/simplify Configuration class so it can be used in cases,Model Code Reusability,Machine Learning Reliability,MLRelia,Weight Conf;Layer Conf;HP Conf;Data Conf;BE;MCM;MLRelia
+TODO: re-implement support for constraint satisfaction method as needed,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;Abs;BE
+TODO: remove dummy \/ debug tasks,Unnecessary Model Code,Unnecessary Model Code,UMC,
+TODO: remove hard-coded sizes and make relative to parent?,Model Code Modifiability,Model Interpretability,MLInter,MLInter;Weight Conf;Layer Conf;MLDepend;Data Conf;Abs;BE;MCM;PQ
+TODO: Remove hardcoding of downscaling calculations.,Model Code Reusability,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;UMC;MCM
+TODO: Remove in 0.26 when the _pairwise attribute is removed,Unnecessary Model Code,Code Dependency,MLDepend,DMC;Layer Conf;MLDepend;UMC;BE;MLRelia
+TODO: remove this method in v1.3.0.,Unnecessary Model Code,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;UMC;Abs;BE;MCM
+TODO: remove when dict results are deprecated,Unnecessary Model Code,Duplicate Feature Extraction Code,DFEC,DFEC;UMC
+"TODO: rename kwarg \""forward\"" to \""forward_additive\""",Model Code Comprehension,Code Dependency,MLDepend,MLDepend
+TODO: Repeat_elements and tf.split doesn't support dynamic splits.,Custom Data Type,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;UMC;Data Conf
+TODO: replace init=None by init='auto' in v0.6.0 and remove the warning,Unnecessary Model Code,Code Dependency,MLDepend,
+TODO: Replace Lambda with custom Keras layer for loss.,Layer Configuration,Layer Configuration,Layer Conf,Layer Conf;Abs;MCM
+TODO: replace with (stable) Draft6Validator; if available,Custom Data Type,Code Dependency,MLDepend,MLDepend;UMC;BE;MCM
+ToDo: replace with 3d input; when grid_sample will start to support it,Data Processing Configuration,Data Processing Configuration,Data Conf,Data Conf
+TODO: replace with unbatch or readout,Custom Data Type,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;Data Conf;Abs;MCM
+TODO: reward computation,Data Processing Configuration,Code Dependency,MLDepend,Weight Conf;Layer Conf;MLDepend;Data Conf
+TODO: rotated_grids might as well give us correctly shaped array in the first place,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DFEC;Layer Conf;MLDepend;UMC;BE;MCM
+TODO: run-on and split module,Data Processing Configuration,Unnecessary Model Code,UMC,Layer Conf;UMC;Data Conf;PQ
+TODO: See https:\/\/www.pyimagesearch.com\/2017\/05\/22\/face-alignment-with-opencv-and-python\/,Data Processing Configuration,Model Interpretability,MLInter,
+TODO: Set interval for the original date ?,Prototype,Duplicate Feature Extraction Code,DFEC,DFEC;Weight Conf;MLDepend;UMC;Data Conf;Abs;BE;PQ;MLRelia
+TODO: should port\/ip\/mac address be ignored? yes,Data Processing Configuration,Code Dependency,MLDepend,DMC;Layer Conf;MLDepend;UMC;BE
+todo: should save tpot model here,Data Storage Configuration,Unnecessary Model Code,UMC,Weight Conf;Layer Conf;UMC
+TODO: should we return a LogarithmicFilteredSpectrogram?,Machine Learning Knowledge,Model Interpretability,MLInter,
+TODO: skip on error???,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;DMC;DFEC;Layer Conf;MLDepend;UMC;Abs;BE;MLRelia
+TODO: something if deep 9,Layer Configuration,Model Interpretability,MLInter,MLInter;Layer Conf;MLDepend;PQ
+TODO: Something smarter?,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;Layer Conf;UMC;Data Conf
+TODO: store something cleaner,Data Storage Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;MLDepend;UMC;BE;MCM
+TODO: store the actual index in table in case row number is unstable,Data Storage Configuration,Weight Configuration,MLDepend,Weight Conf;Layer Conf;CDT;UMC;Abs;BE;PQ
+"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.",Unnecessary Model Code,Duplicate Feature Extraction Code,DFEC,DFEC;MLDepend;UMC;Abs;BE
+"TODO: the old setup is now called \""pre_training\""; where should this hook be called now?",Model Code Comprehension,Boundary Erosion,BE,BE
+TODO: the second element of the rule is not being used,Data Processing Configuration,Unnecessary Model Code,UMC,UMC
+TODO: the y_train should be given us externally; so far we create it as random values,Model Code Reusability,Code Dependency,MLDepend,MLDepend
+TODO: This branch happens when there's only one content word,Machine Learning Knowledge,Unnecessary Model Code,UMC,UMC
+TODO: this flag is somewhat redundant given the flag above; need,Unnecessary Model Code,Model Interpretability,MLInter,MLInter;DFEC;Layer Conf;MLDepend;UMC;Data Conf;DS Conf;Abs;BE;PQ
+TODO: This is discarding phase. Is that ok?,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM;PQ;Proto
+todo: this is O(N^2) and maybe too slow for large graphs.,Model Code Reusability,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE
+TODO: This is very inefficient and needs fix,Custom Data Type,Duplicate Model Code,DMC,DMC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM
+TODO: This matching process is slow. Make it faster; avoid loops where possible.,Prototype,Duplicate Model Code,DMC,DMC;Layer Conf;UMC;Data Conf;BE
+TODO: This might not be called corpora,Model Code Comprehension,Duplicate Model Code,DMC,DMC;Weight Conf;PQ
+TODO: This might not work with numpy types; haven't checked - AD,Machine Learning Knowledge,Abstraction,Abs,Abs
+TODO: This should be recusive looking for any module with flatten_parameters,Weight Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Weight Conf;Layer Conf;MLDepend;BE;MCM
+TODO: This we can change easily to functional style,Abstraction,Code Dependency,MLDepend,Layer Conf;MLDepend;BE;MCM
+TODO: tree should't need this in this case,Unnecessary Model Code,Duplicate Model Code,DMC,DMC;Layer Conf;UMC;Data Conf;MCM
+TODO: Try smaller numbers?,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;MLDepend;CDT;ML;UMC;Data Conf;Abs;BE;MCM;PQ;MLRelia;Proto
+TODO: try without copying? could be faster,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;Layer Conf;MLDepend;UMC;Data Conf
+TODO: unroll\/roll are great candidates for a context manager since they're always used in conjunction.,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf
+TODO: update nouns list with only named enitites,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf
+ToDo: Update with http:\/\/en.wikipedia.org\/wiki\/List_of_emoticons ?,Data Processing Configuration,Model Interpretability,MLInter,MLInter;DFEC;Weight Conf;Layer Conf;UMC;Data Conf;DS Conf;BE;MCM;PQ
+TODO: Use google-diff-patch-match library,Machine Learning Knowledge,Layer Configuration,Layer Conf,Layer Conf;Data Conf;BE
+todo: use Input and Output classes to handle inputs and outputs,Data Storage Configuration,Unnecessary Model Code,UMC,UMC;Abs
+TODO: Use sklearn.decomposition.TruncatedSVD instead?,Machine Learning Knowledge,Layer Configuration,Layer Conf,Layer Conf;Data Conf
+TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,Layer Configuration,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf
+TODO: verify if it is working,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;Weight Conf;MLDepend;Data Conf
+TODO: want to call it activation but namespace; so what to do best?,Model Code Comprehension,Boundary Erosion,BE,BE
+todo: We can potentially reduce memory usage by freeing memory,Data Storage Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Layer Conf;HP Conf;UMC;Data Conf;Abs;BE;MCM
+TODO: we could probably default the monitor to something reasonable,Hyper-parameter Configuration,Duplicate Model Code,DMC,DMC;DFEC;Data Conf;BE
+TODO: we may support size = -1 in the future,Data Storage Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;MLDepend;UMC
+TODO: weight by length here,Data Processing Configuration,Duplicate Feature Extraction Code,DFEC,DFEC;Weight Conf;Layer Conf
+TODO: why is the whole distribution computed instead of just min\/max,Data Processing Configuration,Model Interpretability,MLInter,MLKnow;MLInter;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;UMC;Data Conf;Abs;BE;PQ;MLRelia;Proto
+TODO: would be good to add ref from source,Data Processing Configuration,Duplicate Model Code,DMC,DMC;Layer Conf;BE;MCM
+TODO: wrap this properly in a with session_context():,Machine Learning Reliability,Layer Configuration,Layer Conf,Layer Conf
+TODO: write a function to do this..,Abstraction,Model Interpretability,MLInter,MLInter;Weight Conf;Layer Conf;MLDepend;Data Conf;Abs
+TODO: write index,Data Storage Configuration,Machine Learning Knowledge,MLKnow,
+TODO: x;y input should be able to be np arrays; pandas arrays; or tf dataset iterators,Custom Data Type,Data Processing Configuration,Data Conf,MLDepend;Data Conf;DS Conf;BE;MCM
+todo; pass also best score,Weight Configuration,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;ML;UMC;Data Conf;Abs;MCM;PQ;MLRelia
+todo; pass complete checkpoint as state dictionary,Data Processing Configuration,Data Processing Configuration,Data Conf,Weight Conf;Layer Conf;UMC;Data Conf;Abs;BE
+too much memory. A lazy load would be better; but later,Data Storage Configuration,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;DS Conf;BE;MCM;PQ;MLRelia
+unused,Unnecessary Model Code,Layer Configuration,Layer Conf,Layer Conf
+Unused,Unnecessary Model Code,Unnecessary Model Code,UMC,
+WARNING: bad realtime practice (writing file) TODO: add to a memory buffer and write before exit,Data Storage Configuration,Code Dependency,MLDepend,Layer Conf;MLDepend;UMC;Data Conf;Abs;BE;MCM
+XXX backward compatibility,Code Dependency,Boundary Erosion,BE,BE
+XXX de-duplicate this with code from Montage somewhere?,Duplicate Feature Extraction Code,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;GC;UMC;Data Conf;Abs;BE;MCR
+XXX Default number of samples drawn from my arse.,Data Processing Configuration,Duplicate Model Code,DMC,DMC;UMC
+XXX Disable SimulateModels without CreateTab,Unnecessary Model Code,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;CDT;UMC;Data Conf;Abs;BE;MCM
+XXX gs = fig.add_gridspec(15; 1),Unnecessary Model Code,Duplicate Feature Extraction Code,DFEC,DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf
+XXX JRK: Should this test whether test_times if a DecodingTime,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;UMC;Data Conf;BE
+XXX might possibly be slow solution; but every worker needs reseted LDA model for every iteration,Machine Learning Knowledge,Duplicate Model Code,DMC,DMC;DFEC;Weight Conf;Layer Conf;MLDepend;UMC;Data Conf;DS Conf;BE;MCM;MLRelia
+XXX offset type is uint32,Plain Old Data Type,Data Processing Configuration,Data Conf,Layer Conf;CDT;Data Conf
+XXX Remove,Unnecessary Model Code,Model Interpretability,MLInter,MLInter;DMC;DFEC;Weight Conf;Layer Conf;MLDepend;GC;CDT;UMC;Data Conf;Abs;BE;MCM;PQ;MLRelia
+XXX This is silly.  We should return log densities; not densities.,Machine Learning Reliability,Unnecessary Model Code,UMC,UMC;Data Conf;Abs;BE;PQ
+XXX when matplotlib 3.3 is min version; replace this with,Code Dependency,Code Dependency,MLDepend,MLKnow;MLInter;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;GC;CDT;UMC;Data Conf;DS Conf;Abs;BE;MCM;MCR;PQ;MLRelia;Proto
+XXX Would be nice if we could prepare this statement before,Data Storage Configuration,Duplicate Model Code,DMC,DMC;DFEC;Layer Conf;MLDepend;ML;UMC;Data Conf;Abs;BE;PQ
+XXX: currently scaled to variance=n_samples,Data Processing Configuration,Layer Configuration,Layer Conf,Layer Conf;UMC;Data Conf;Abs;BE;MCM
+XXX: does control flow affect type inference in Numba?,Machine Learning Knowledge,Code Dependency,MLDepend,MLDepend;CDT;Data Conf;Abs;BE;MCM;PQ
+XXX: How to catch dependence cycles correctly?,Code Dependency,Boundary Erosion,BE,MLDepend;BE;MCM
+"XXX: how to find \""""""""good\"""""""" values for level ?""""",Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;MCC;DMC;DFEC;Weight Conf;Layer Conf;HP Conf;MLDepend;UMC;Data Conf;DS Conf;Abs;BE;MCM;PQ;MLRelia
+XXX: not handling dictionnaries,Plain Old Data Type,Duplicate Model Code,DMC,DMC;MLDepend;CDT;UMC;Data Conf;Abs;BE;MCM
+XXX: one could be smarter here,Model Code Comprehension,Model Interpretability,MLInter,MLInter;DMC;DFEC;UMC;Abs;BE;MCM
+XXX: Temporary solution to figure out if an estimator is a classifier,Model Code Modifiability,Layer Configuration,Layer Conf,Layer Conf;MLDepend;Data Conf
+XXX: unify Series\/Array as Array,Custom Data Type,Duplicate Feature Extraction Code,DFEC,DMC;DFEC;MLDepend;UMC;Data Conf;DS Conf;Abs;BE;MCM
+XXX: We re-cache now just to make sure all items get a mozci version.,Data Storage Configuration,Duplicate Feature Extraction Code,DFEC,DFEC
+XXX: where should this be?,Machine Learning Knowledge,Model Interpretability,MLInter,MLInter;DMC;DFEC;Layer Conf;MLDepend;GC;UMC;DS Conf;Abs;BE;MLRelia

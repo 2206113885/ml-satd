@@ -1,0 +1,90 @@
+实验代码修订记录：第5—8项（2026-10-16）
+
+修改目录：/Users/yizho/Desktop/satd_experiments_revised_20261016
+原始目录：/Users/yizho/Desktop/satd_data（124份实验代码哈希均未变）
+本轮修改前备份：/Users/yizho/Desktop/satd_experiments_revised_20261016/revision_batch_02/before
+
+范围：R05 1份、R06 9份、R07 13份、R08 30份，共44份不同文件。R06的9份同时属于R08。
+与原目录相比，累计55份实验代码已修订，69份仍逐字节相同。
+
+第5项 R05：辅助Reason-first实验（当前没有论文结果映射，低优先级）
+完整保留解码输出，从唯一、独立行的#Answer字段提取合法缩写。提示明确#Reason之后另起一行#Answer，答案行只含一个缩写。
+空、缺失、多重或非法答案字段返回<UNK>，沿用原最终Data Conf回退；不再把#Reason首行当标签。
+
+第6项 R06：二分类CoT提示冲突
+把分类推理规则放入REASONING_RULES，各阶段分别给输出指令：逐标签只答Yes/No，候选或全类别选择只答缩写。
+保留类定义、示例、推理规则和现有输入/输出预算；没有为这些脚本补改其他未授权审计项。
+
+第7项 R07：层次分类的生成参数与日志一致性
+6份Qwen非思考脚本显式do_sample=True、temperature=0.7、top_p=0.8、top_k=20；其他参数继续继承加载配置。
+其余7份Llama/Gemma/CodeGemma脚本从加载的model.generation_config读取采样字段，不臆造官方数值，也不声称已核实历史服务器默认值。
+复制加载配置，合并明确覆盖值；generate调用与settings使用同一个合并配置。保存loaded_generation_config、generation_call_overrides、effective_generation_config及unused_generation_kwargs。
+保留原MAX_NEW_TOKENS、模板、输入上限、原Llama PAD覆盖，其余EOS/PAD继承；Qwen2.5的repetition_penalty不额外覆盖。
+6份带shebang/编码头的Qwen脚本保持原头部和模块docstring顺序。
+官方依据沿用本项目paper_generation_audit_20261016/qwen_sources中已保存的官方模型卡/生成配置快照；其他本地checkpoint是否被人为改过仍由运行时配置记录反映。
+
+第8项 R08：严格Yes/No与不确定票处理（会改变方法行为）
+整段匹配Yes/No/Y/N；原已支持的中文精确答案继续兼容，允许已有Markdown外层和简单句末标点。Not sure、Yesterday、普通前缀词或矛盾多行答案不再算有效票。
+23份原先先截首行的wrapper增加return_full_text=False；仅Y/N调用传True，其他阶段保持原首行行为。其余7份原本就返回完整输出。实际生成/分词参数不变，无逐标签重试。
+有任何Unknown时，记录unknown_labels，进入已有全类别选择一次；无Unknown时维持原0/1/多Yes路径。全类别选择仍无法解析，才回退到既定最大类Data Conf。
+多候选选择失败也统一回退Data Conf，替换旧“第一个候选”策略。这是评估协议变化，后续重跑和论文方法说明需使用这一规则。
+CSV新增unknown_labels与fallback_reason；26份helper仍返回原3元组，仅增加默认None的可选diagnostics参数；4份Qwen内联脚本同步追加固定列序及列说明。
+本轮未改一般失败计数口径、其他标签解析、思考截断/闭合处理或一般原始输出存储策略；诊断列用于追溯本项回退。
+
+验证与保留
+仅进行AST语法、静态调用/作用域差异与文件哈希核对。44/44修改文件语法通过，124份范围检查无额外脚本变更。
+1293条被替换的非空可执行源代码行均能在新增注释中对应找到（扣除了修改前已有注释），原替换段仍留在原位置。
+本批涉及前轮修订的52个标签解析函数保持AST不变；R06的27个提示构造器也未被R08覆盖。
+没有执行实验模块、实验函数、单元/函数测试，没有加载模型或分词器，没有生成新预测或重算论文指标。运行兼容性与效果留待后续获准重跑时验证。
+
+文件说明
+changes_R05-R08.patch：相对本轮修改前备份的完整差异。
+batch_02_summary.json：最终逐文件哈希、修改项与修订标记行号。
+static_verification_report.json：静态核对证据。
+r05_changes.json、r06_changes.json、r07_changes.json、r08_changes.json：各项的分阶段记录（R06早于R08，最终哈希以batch_02_summary为准）。
+
+本轮44份文件（括号为涉及的修订项）
+basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py (R05)
+bisection_CoT/CodeLlama-7b_few_shot.py (R06, R08)
+bisection_CoT/Llama-3.1-8B_few_shot.py (R06, R08)
+bisection_CoT/Qwen2.5-Coder-7B_few_shot.py (R06, R08)
+bisection_CoT/Qwen3-14B_few_shot.py (R06, R08)
+bisection_CoT/Qwen3-8B_few_shot.py (R06, R08)
+bisection_CoT/codegemma-1.1-7b_few_shot.py (R06, R08)
+bisection_CoT/gemma-2-9b_few_shot.py (R06, R08)
+bisection_CoT/gemma-3-12b_few_shot.py (R06, R08)
+bisection_CoT/gpt-oss-20b_few_shot.py (R06, R08)
+bisection_few_shot/CodeLlama-7b_few_shot.py (R08)
+bisection_few_shot/Llama-3.1-8B_few_shot.py (R08)
+bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py (R08)
+bisection_few_shot/Qwen3-14B_few_shot.py (R08)
+bisection_few_shot/Qwen3-8B_few_shot.py (R08)
+bisection_few_shot/codegemma-1.1-7b_few_shot.py (R08)
+bisection_few_shot/gemma-2-9b_few_shot.py (R08)
+bisection_few_shot/gemma-3-12b_few_shot.py (R08)
+bisection_few_shot/gpt-oss-20b_few_shot.py (R08)
+bisection_zero_shot/CodeLlama-7b_zero_shot.py (R08)
+bisection_zero_shot/Llama-3.1-8B_zero_shot.py (R08)
+bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py (R08)
+bisection_zero_shot/Qwen3-14B_zero_shot.py (R08)
+bisection_zero_shot/Qwen3-8B_zero_shot.py (R08)
+bisection_zero_shot/bin_new_test.py (R08)
+bisection_zero_shot/codegemma-1.1-7b_zero_shot.py (R08)
+bisection_zero_shot/gemma-2-9b_zero_shot.py (R08)
+bisection_zero_shot/gemma-3-12b_zero_shot.py (R08)
+bisection_zero_shot/gpt-oss-20b_zero_shot.py (R08)
+test1.py (R08)
+test3.py (R08)
+tree_few_shot/Llama-3.1-8B_few_shot.py (R07)
+tree_few_shot/Qwen2.5-Coder-7B_few_shot.py (R07)
+tree_few_shot/Qwen3-14B_few_shot.py (R07)
+tree_few_shot/Qwen3-8B_few_shot.py (R07)
+tree_few_shot/codegemma-1.1-7b_few_shot.py (R07)
+tree_few_shot/gemma-2-9b_few_shot.py (R07)
+tree_few_shot/gemma-3-12b_few_shot.py (R07)
+tree_zero_shot/Llama-3.1-8B_zero_shot.py (R07)
+tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py (R07)
+tree_zero_shot/Qwen3-14B_zero_shot.py (R07)
+tree_zero_shot/Qwen3-8B_zero_shot.py (R07)
+tree_zero_shot/codegemma-1.1-7b_zero_shot.py (R07)
+tree_zero_shot/gemma-3-12b_zero_shot.py (R07)

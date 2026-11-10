@@ -1,0 +1,10 @@
+{
+  "csv": "/data/yangzhifei/pro/ML_SATD/dataset/sampled_label_dataset_normalized_rmvtodo.csv",
+  "model": "/data/yangzhifei/pro/ML_SATD/models/Qwen3-14B",
+  "run_dir": "results/run-20250910-113803-Qwen3-14B",
+  "max_new_tokens": 32768,
+  "reason_max_tokens": 512,
+  "fallback_abbr": "Data Conf",
+  "thinking_mode_for_classification": true,
+  "reason_generated_in_second_pass": true
+}

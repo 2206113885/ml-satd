@@ -1,0 +1,12 @@
+{
+  "url": "https://huggingface.co/google/codegemma-1.1-7b-it/blob/main/generation_config.json",
+  "pinned_revision": null,
+  "evidence_kind": "transcribed_user_screenshot_of_author_repository",
+  "visible_file_commit_short": "8a9aefb",
+  "user_supplied_path": "/var/folders/86/m0fnnjf57dgf01bwzd5xc8xr0000gn/T/codex-clipboard-3d65e8a0-48be-4344-821c-320991dfa94f.png",
+  "archived_screenshot_relative_path": "revision_batch_05/sources/codegemma-1.1-7b-it/official_generation_config_screenshot.png",
+  "screenshot_sha256": "6e13dbc8285c0aa7eb3a61111a53ad312886844ce00d82f9fa66682de74ef964",
+  "archived_transcription_relative_path": "revision_batch_05/sources/codegemma-1.1-7b-it/generation_config.json",
+  "retrieved_on": "2026-10-16",
+  "verification_boundary": "Complete visible JSON transcribed from user screenshot showing codegemma-1.1-7b-it and generation_config.json; official Google repository association follows the ongoing request. No byte-for-byte original download or full revision match claimed."
+}

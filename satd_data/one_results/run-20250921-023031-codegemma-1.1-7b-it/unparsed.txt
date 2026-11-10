@@ -1,0 +1,142 @@
+**Data Conf**
+**FIXME**
+The provided code comment indicates a need for better solutions, which suggests the SATD type is **UM
+**DS Conf**
+**Metafeatures**
+**HP Conf**
+**Data Conf**
+The code comment "circular shift the signal (needed for correct phase)" is related to **Data Conf
+**FIXME**
+The code comment "FIXME annoying hack for batching different sized shapes;" belongs to the **DF
+**FIXME**
+**Weight Conf**
+**FIXME**
+XXX
+**Data Conf**
+**FIXME**
+**Weight Conf**
+**FIXME**
+The code comment "FIXME: The code works with EpisodicReplayBuffer" indicates that the code
+The provided code comment does not mention any of the given abbreviations, so I cannot determine the type of
+**FIXME**
+The code comment "FIXME: What about the next diff entry?" indicates a **Proto** type
+**Weight Conf**
+The provided code comment does not provide enough context to determine which type of ML SATD it belongs to
+The code comment "normed_cross_entropy # TODO" indicates a **Model Code Configuration (
+**Data Conf**
+**Data Conf**
+**MW**
+The provided code comment does not mention any of the 23 ML SATD abbreviations provided in the
+**Weight Conf**
+The code comment indicates a need to understand why the code is different from the expected behavior. This suggests
+**Data Conf**
+The code comment "TODO : add these in the options. (None; None) => no limit
+The code comment "TODO : Any other options" does not belong to any of the 23
+The provided code comment "TODO : market value" does not belong to any of the 23
+**DS Conf**
+**Data Conf**
+**Data Conf**
+**AT**
+**Perf**
+**DS Conf**
+**API**
+**Size**
+The code comment "TODO Implement" does not fit any of the provided abbreviations for ML SATD.
+**MP**
+**Data Conf**
+**PAF**
+**HP Conf**
+**Data Conf**
+The code comment "TODO Option for string lenght" belongs to the **HP Conf** category.
+**Funsor**
+**Weight Conf**
+The code comment "TODO replace with Streamlines" indicates a need to **replace the existing code with
+**Data Conf**
+**Data Conf**
+**Weight Conf**
+**Data Conf**
+The code comment "TODO stim channel exclusion" indicates a need to address a problem related to **DF
+The code comment "TODO support recursive parfor; multi-D; mutiple body blocks" belongs
+The provided code comment "todo sweep" does not match any of the provided abbreviations for ML SATD
+**Data Conf**
+The code comment "TODO to be modified" indicates a general need for code modification, which is not
+**HP Conf**
+**HP Conf**
+**Data Conf**
+**DS Conf**
+**Weight Conf**
+**Data Conf**
+**HP Conf**
+**HP Conf**
+**Data Conf**
+The code comment "TODO: add backward images also." indicates a need for **UMC (Un
+**Data Conf**
+The code comment "TODO: calculate this centroid" belongs to the **UMC** category of Machine
+**Data Conf**
+**Weight Conf**
+The code comment "TODO: compute signed distance between walls" belongs to the **UMC** category
+**HP Conf**
+**QSettings**
+**Data Conf**
+**Data Conf**
+**Data Conf**
+The code comment "TODO: does it make graph?" belongs to the **MLInter** category of
+**Weight Conf**
+**Data Conf**
+**HP Conf**
+**Data Conf**
+**Eval**
+**Data Conf**
+The code comment "TODO: handle channel modalities later" indicates a need to address **UMC (
+The code comment "TODO: handle string" indicates a need to address the **CDT** (CUSTOM
+**Conv Transpose**
+The code comment "TODO: is incref required?" belongs to the **MCC** (Model Code
+**Data Conf**
+**Data Conf**
+The provided code comment does not mention any of the given abbreviations, so I cannot determine the type of
+**Data Storage Configuration (DS Conf)**
+**Weight Conf**
+**Data Conf**
+The code comment "TODO: min" is a placeholder for a specific action that needs to be taken
+The provided code comment "TODO: more specific types?" does not fit any of the given abbreviations for
+The provided code comment "TODO: need a better way" indicates a need for **improvement** in
+**Data Conf**
+**Data Conf**
+**HP Conf**
+The provided code comment does not mention any of the given abbreviations, so I cannot determine the type of
+**Parallelize**
+**Weight Conf**
+**__deepcopy__**
+**HP Conf**
+**Config**
+**Data Conf**
+**Weight Conf**
+**Weight Conf**
+**Draft6Validator**
+The code comment "TODO: reward computation" belongs to the **PQ** abbreviation for **PREDICTION
+**Data Conf**
+**Data Conf**
+**DS Conf**
+The provided code comment does not mention any of the given abbreviations, so I am unable to determine the
+The provided code comment does not specify the type of ML SATD it belongs to. Therefore, I
+**Data Conf**
+**Data Conf**
+**Data Conf**
+The code comment "TODO: Try smaller numbers?" indicates a **Data Conf** type of ML SAT
+**IO**
+**DS Conf**
+**TableConf**
+**HP Conf**
+**Data Conf**
+**Session Context**
+**Index**
+**DS Conf**
+The provided code comment does not mention any of the given abbreviations, so I cannot determine the type of
+**Data Conf**
+The provided code comment "XXX Remove" does not indicate the type of ML SATD. It is
+**Weight Conf**
+The provided code comment does not mention any of the given abbreviations, so I cannot determine the type of
+The code comment "XXX: How to catch dependence cycles correctly?" indicates a **MLDepend** type
+**Weight Conf**
+The code comment "XXX: We re-cache now just to make sure all items get a moz
+The provided code comment does not mention any of the given abbreviations, so I cannot determine the type of

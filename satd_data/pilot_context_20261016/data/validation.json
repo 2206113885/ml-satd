@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "sample_count": 100,
+  "arm_rows": 300,
+  "source_alignment_verified": 100,
+  "original_gold_preserved": 100,
+  "span_and_innermost_ast_verified": 100,
+  "comment_or_string_token_verified": 100,
+  "unique_comment_count": 100,
+  "all_outputs_byte_identical_on_rerun": true,
+  "source_hashes_match_manifest": true,
+  "cohort_sha256": "7bc4d5dab574579236e190a2c1faac858d791a1f0f4e6875d6eb8e4417acbb11"
+}

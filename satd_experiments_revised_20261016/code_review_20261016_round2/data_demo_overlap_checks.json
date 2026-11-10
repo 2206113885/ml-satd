@@ -1,0 +1,67 @@
+{
+  "method": "Active top-level literal prompt strings only; whitespace and known CSV serialization normalized; complete target comment >=20 characters required.",
+  "hits": [
+    {
+      "file": "ICL_Ob_qwen-8b.py",
+      "line": 214,
+      "end_line": 239,
+      "matching_final_dataset_ids": [
+        "aahdfibcf",
+        "aaahbfbhe",
+        "aafegjcei",
+        "aadgecacc",
+        "aajahjjch",
+        "aaaefgdbc",
+        "aaeidjjhd",
+        "aahjdcjgg",
+        "aagafeacd",
+        "aagagihei",
+        "aadagdejg",
+        "aafdiegjf",
+        "aajgefiaf"
+      ]
+    },
+    {
+      "file": "ICL_Ob_qwen-8b_new.py",
+      "line": 157,
+      "end_line": 182,
+      "matching_final_dataset_ids": [
+        "aahdfibcf",
+        "aaahbfbhe",
+        "aafegjcei",
+        "aadgecacc",
+        "aajahjjch",
+        "aaaefgdbc",
+        "aaeidjjhd",
+        "aahjdcjgg",
+        "aagafeacd",
+        "aagagihei",
+        "aadagdejg",
+        "aafdiegjf",
+        "aajgefiaf"
+      ]
+    },
+    {
+      "file": "ICL_Ob_qwen-8b_v0.py",
+      "line": 189,
+      "end_line": 217,
+      "matching_final_dataset_ids": [
+        "aahdfibcf",
+        "aaahbfbhe",
+        "aafegjcei",
+        "aadgecacc",
+        "aajahjjch",
+        "aaaefgdbc",
+        "aaeidjjhd",
+        "aahjdcjgg",
+        "aagafeacd",
+        "aagagihei",
+        "aadagdejg",
+        "aafdiegjf",
+        "aajgefiaf"
+      ]
+    }
+  ],
+  "current_main_method_family_hits": [],
+  "limitation": "No overlap in embedded strings does not prove synthetic-generation seed independence or model pretraining independence."
+}

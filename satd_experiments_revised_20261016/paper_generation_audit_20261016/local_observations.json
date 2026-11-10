@@ -1,0 +1,134 @@
+{
+  "active_prf_triples": 224,
+  "all_active_triples_have_unique_expected_family_metric_match": true,
+  "active_unique_run_dirs": 158,
+  "active_runs_without_settings": 12,
+  "all_run_dirs": 234,
+  "all_runs_without_settings": 23,
+  "active_settings_key_presence": {
+    "csv": 146,
+    "model": 146,
+    "run_dir": 146,
+    "max_new_tokens": 82,
+    "fallback_abbr": 138,
+    "model_name": 91,
+    "temperature": 10,
+    "top_p": 10,
+    "top_k": 10,
+    "output_columns_order": 10,
+    "method": 74,
+    "max_yn_tokens": 64,
+    "max_pick_tokens": 64,
+    "max_fallback_tokens": 64,
+    "do_sample": 8,
+    "two_stage": 8,
+    "unknown_coarse": 8,
+    "unknown_fine": 8
+  },
+  "all_generation_call_do_sample_observations": {
+    "OMITTED": 114,
+    "True": 10,
+    "False": 1,
+    "{'expression': 'temperature > 0'}": 1
+  },
+  "active_reason_fields_contain_unclosed_think_markers": [
+    {
+      "run_dir": "bisection_CoT/results/one/run-20251014-002944-Qwen3-8B-ynpoll",
+      "field": "reason",
+      "nonempty": 393,
+      "contains_open_think": 391,
+      "contains_close_think": 0,
+      "starts_analysis_channel_marker": 0,
+      "max_characters": 32
+    },
+    {
+      "run_dir": "bisection_CoT/results/one/run-20251014-003018-Qwen3-14B-ynpoll",
+      "field": "reason",
+      "nonempty": 393,
+      "contains_open_think": 393,
+      "contains_close_think": 0,
+      "starts_analysis_channel_marker": 0,
+      "max_characters": 7
+    },
+    {
+      "run_dir": "bisection_CoT/results/three/run-20251018-001115-Qwen3-14B-ynpoll",
+      "field": "reason",
+      "nonempty": 393,
+      "contains_open_think": 392,
+      "contains_close_think": 0,
+      "starts_analysis_channel_marker": 0,
+      "max_characters": 60
+    },
+    {
+      "run_dir": "bisection_CoT/results/three/run-20251018-001136-Qwen3-8B-ynpoll",
+      "field": "reason",
+      "nonempty": 393,
+      "contains_open_think": 392,
+      "contains_close_think": 0,
+      "starts_analysis_channel_marker": 0,
+      "max_characters": 36
+    },
+    {
+      "run_dir": "bisection_CoT/results/two/run-20251014-192700-Qwen3-8B-ynpoll",
+      "field": "reason",
+      "nonempty": 393,
+      "contains_open_think": 392,
+      "contains_close_think": 0,
+      "starts_analysis_channel_marker": 0,
+      "max_characters": 30
+    },
+    {
+      "run_dir": "bisection_CoT/results/two/run-20251018-001208-Qwen3-14B-ynpoll",
+      "field": "reason",
+      "nonempty": 393,
+      "contains_open_think": 393,
+      "contains_close_think": 0,
+      "starts_analysis_channel_marker": 0,
+      "max_characters": 7
+    },
+    {
+      "run_dir": "bisection_CoT/results/zero/run-20251008-203903-Qwen3-8B-ynpoll-34.9",
+      "field": "reason",
+      "nonempty": 393,
+      "contains_open_think": 393,
+      "contains_close_think": 0,
+      "starts_analysis_channel_marker": 0,
+      "max_characters": 7
+    },
+    {
+      "run_dir": "bisection_CoT/results/zero/run-20251008-203934-Qwen3-14B-ynpoll-33.6",
+      "field": "reason",
+      "nonempty": 393,
+      "contains_open_think": 393,
+      "contains_close_think": 0,
+      "starts_analysis_channel_marker": 0,
+      "max_characters": 7
+    },
+    {
+      "run_dir": "results/run-20251110-003832-Qwen3-14B-ynpoll",
+      "field": "reason",
+      "nonempty": 393,
+      "contains_open_think": 393,
+      "contains_close_think": 0,
+      "starts_analysis_channel_marker": 0,
+      "max_characters": 7
+    },
+    {
+      "run_dir": "results/run-20251110-004616-Qwen3-8B-ynpoll",
+      "field": "reason",
+      "nonempty": 393,
+      "contains_open_think": 393,
+      "contains_close_think": 0,
+      "starts_analysis_channel_marker": 0,
+      "max_characters": 7
+    }
+  ],
+  "all_script_source_hashes_currently_match": true,
+  "no_auth_token_literals_detected_in_generated_inventory": true,
+  "notes": [
+    "A metric match is not a historical source-code hash match.",
+    "Reason-field think markers concern the separately generated explanation and alone do not invalidate classification predictions.",
+    "Most saved raw fields are postprocessed visible text, so missing think markers do not establish absence of reasoning.",
+    "Table10 contains class-level coarse outcomes and repeats three weighted rows already in Table11; the layered-hybrid caption alone does not establish another independent run."
+  ]
+}

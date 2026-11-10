@@ -1,0 +1,926 @@
+{
+  "title": "Current official Qwen generation profiles: recommendations vs exact checkpoint defaults vs examples",
+  "verified_at_utc": "2026-10-16T11:31:09.906130+00:00",
+  "scope": "Qwen3-8B/14B both native modes; Qwen2.5-Coder-7B-Instruct only. Read-only source verification; no experiment source changes.",
+  "profiles": [
+    {
+      "repo_id": "Qwen/Qwen3-8B",
+      "official_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "checkpoint_generation_config": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "checkpoint_generation_config_url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/README.md",
+      "model_card_human_url": "https://huggingface.co/Qwen/Qwen3-8B",
+      "snapshot_files": [
+        "sources/Qwen3-8B.README.md",
+        "sources/Qwen3-8B.generation_config.json",
+        "sources/Qwen3-8B.config.json",
+        "sources/Qwen3-8B.tokenizer_config.json"
+      ],
+      "config_max_position_embeddings": 40960,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "pad_token_id": 151643,
+      "bos_token_id": 151643,
+      "local_server_or_historical_checkpoint_identity": "NOT VERIFIED; current public official snapshot only",
+      "profile_id": "Qwen3-8B_thinking",
+      "mode": "thinking",
+      "chat_template_kwargs": {
+        "enable_thinking": true,
+        "add_generation_prompt": true
+      },
+      "explicit_decode_profile": {
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repetition_penalty": 1.0,
+        "num_beams": 1
+      },
+      "parameter_evidence": {
+        "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+        "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+        "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+        "top_k": "Explicit model-card recommendation and exact checkpoint default=20",
+        "min_p": "Explicit model-card recommendation=0; key is absent from checkpoint JSON, so JSON absence itself does not specify 0",
+        "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+        "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+      },
+      "output_length": {
+        "general_model_card_recommendation": 32768,
+        "complex_math_or_programming_competition_suggestion": 38912,
+        "basis_kind": "Explicit Best Practices recommendation; not just a Quickstart example",
+        "scope": "Card says most queries and does not separately specify a nonthinking-only budget. It is not a minimum or a requirement to emit that many tokens; EOS can finish sooner.",
+        "checkpoint_max_new_tokens_key_present": false,
+        "satd_specific_recommended_cap_found": false,
+        "implementation_caution": "If using these output caps, reserve output tokens within actual total context. 32768 output + typical 8192 prompt fits card stated 40960 config; preserve safety margin as implementation policy. Smaller SATD task caps must be labeled an experimental task-budget choice, not the official output recommendation."
+      },
+      "mandatory_or_strong_guidance": [
+        "Keep thinking/nonthinking template mode explicit and separate; enable_thinking is a chat-template argument, not a generate() decoding key.",
+        "Official card strongly advises against greedy in thinking mode. Recommendations are performance guidance, not a claim that other valid settings cannot execute."
+      ],
+      "repetition_guidance": {
+        "presence_penalty_optional_range": [
+          0,
+          2
+        ],
+        "interpretation": "Optional tuning in supported frameworks; not a mandate to choose a nonzero value and not the same parameter as repetition_penalty."
+      },
+      "source_locations": [
+        {
+          "line": 129,
+          "text": "> For thinking mode, use `Temperature=0.6`, `TopP=0.95`, `TopK=20`, and `MinP=0` (the default setting in `generation_config.json`). **DO NOT use greedy decoding**, as it can lead to performance degradation and endless repetitions. For more detailed guidance, please refer to the [Best Practices](#best-practices) section."
+        },
+        {
+          "line": 148,
+          "text": "> For non-thinking mode, we suggest using `Temperature=0.7`, `TopP=0.8`, `TopK=20`, and `MinP=0`. For more detailed guidance, please refer to the [Best Practices](#best-practices) section."
+        },
+        {
+          "line": 317,
+          "text": "> The default `max_position_embeddings` in `config.json` is set to 40,960. This allocation includes reserving 32,768 tokens for outputs and 8,192 tokens for typical prompts, which is sufficient for most scenarios involving short text processing. If the average context length does not exceed 32,768 tokens, we do not recommend enabling YaRN in this scenario, as it may potentially degrade model performance."
+        },
+        {
+          "line": 327,
+          "text": "   - For thinking mode (`enable_thinking=True`), use `Temperature=0.6`, `TopP=0.95`, `TopK=20`, and `MinP=0`. **DO NOT use greedy decoding**, as it can lead to performance degradation and endless repetitions."
+        },
+        {
+          "line": 328,
+          "text": "   - For non-thinking mode (`enable_thinking=False`), we suggest using `Temperature=0.7`, `TopP=0.8`, `TopK=20`, and `MinP=0`."
+        },
+        {
+          "line": 329,
+          "text": "   - For supported frameworks, you can adjust the `presence_penalty` parameter between 0 and 2 to reduce endless repetitions. However, using a higher value may occasionally result in language mixing and a slight decrease in model performance."
+        },
+        {
+          "line": 331,
+          "text": "2. **Adequate Output Length**: We recommend using an output length of 32,768 tokens for most queries. For benchmarking on highly complex problems, such as those found in math and programming competitions, we suggest setting the max output length to 38,912 tokens. This provides the model with sufficient space to generate detailed and comprehensive responses, thereby enhancing its overall performance."
+        }
+      ],
+      "status": "CURRENT OFFICIAL RECOMMENDATION / CHECKPOINT / FRAMEWORK DEFAULTS DISTINGUISHED"
+    },
+    {
+      "repo_id": "Qwen/Qwen3-8B",
+      "official_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "checkpoint_generation_config": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "checkpoint_generation_config_url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/README.md",
+      "model_card_human_url": "https://huggingface.co/Qwen/Qwen3-8B",
+      "snapshot_files": [
+        "sources/Qwen3-8B.README.md",
+        "sources/Qwen3-8B.generation_config.json",
+        "sources/Qwen3-8B.config.json",
+        "sources/Qwen3-8B.tokenizer_config.json"
+      ],
+      "config_max_position_embeddings": 40960,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "pad_token_id": 151643,
+      "bos_token_id": 151643,
+      "local_server_or_historical_checkpoint_identity": "NOT VERIFIED; current public official snapshot only",
+      "profile_id": "Qwen3-8B_nonthinking",
+      "mode": "nonthinking",
+      "chat_template_kwargs": {
+        "enable_thinking": false,
+        "add_generation_prompt": true
+      },
+      "explicit_decode_profile": {
+        "do_sample": true,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repetition_penalty": 1.0,
+        "num_beams": 1
+      },
+      "parameter_evidence": {
+        "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+        "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+        "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+        "top_k": "Explicit model-card recommendation and exact checkpoint default=20",
+        "min_p": "Explicit model-card recommendation=0; key is absent from checkpoint JSON, so JSON absence itself does not specify 0",
+        "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+        "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+      },
+      "output_length": {
+        "general_model_card_recommendation": 32768,
+        "complex_math_or_programming_competition_suggestion": 38912,
+        "basis_kind": "Explicit Best Practices recommendation; not just a Quickstart example",
+        "scope": "Card says most queries and does not separately specify a nonthinking-only budget. It is not a minimum or a requirement to emit that many tokens; EOS can finish sooner.",
+        "checkpoint_max_new_tokens_key_present": false,
+        "satd_specific_recommended_cap_found": false,
+        "implementation_caution": "If using these output caps, reserve output tokens within actual total context. 32768 output + typical 8192 prompt fits card stated 40960 config; preserve safety margin as implementation policy. Smaller SATD task caps must be labeled an experimental task-budget choice, not the official output recommendation."
+      },
+      "mandatory_or_strong_guidance": [
+        "Keep thinking/nonthinking template mode explicit and separate; enable_thinking is a chat-template argument, not a generate() decoding key.",
+        "Official card strongly advises against greedy in thinking mode. Recommendations are performance guidance, not a claim that other valid settings cannot execute."
+      ],
+      "repetition_guidance": {
+        "presence_penalty_optional_range": [
+          0,
+          2
+        ],
+        "interpretation": "Optional tuning in supported frameworks; not a mandate to choose a nonzero value and not the same parameter as repetition_penalty."
+      },
+      "source_locations": [
+        {
+          "line": 129,
+          "text": "> For thinking mode, use `Temperature=0.6`, `TopP=0.95`, `TopK=20`, and `MinP=0` (the default setting in `generation_config.json`). **DO NOT use greedy decoding**, as it can lead to performance degradation and endless repetitions. For more detailed guidance, please refer to the [Best Practices](#best-practices) section."
+        },
+        {
+          "line": 148,
+          "text": "> For non-thinking mode, we suggest using `Temperature=0.7`, `TopP=0.8`, `TopK=20`, and `MinP=0`. For more detailed guidance, please refer to the [Best Practices](#best-practices) section."
+        },
+        {
+          "line": 317,
+          "text": "> The default `max_position_embeddings` in `config.json` is set to 40,960. This allocation includes reserving 32,768 tokens for outputs and 8,192 tokens for typical prompts, which is sufficient for most scenarios involving short text processing. If the average context length does not exceed 32,768 tokens, we do not recommend enabling YaRN in this scenario, as it may potentially degrade model performance."
+        },
+        {
+          "line": 327,
+          "text": "   - For thinking mode (`enable_thinking=True`), use `Temperature=0.6`, `TopP=0.95`, `TopK=20`, and `MinP=0`. **DO NOT use greedy decoding**, as it can lead to performance degradation and endless repetitions."
+        },
+        {
+          "line": 328,
+          "text": "   - For non-thinking mode (`enable_thinking=False`), we suggest using `Temperature=0.7`, `TopP=0.8`, `TopK=20`, and `MinP=0`."
+        },
+        {
+          "line": 329,
+          "text": "   - For supported frameworks, you can adjust the `presence_penalty` parameter between 0 and 2 to reduce endless repetitions. However, using a higher value may occasionally result in language mixing and a slight decrease in model performance."
+        },
+        {
+          "line": 331,
+          "text": "2. **Adequate Output Length**: We recommend using an output length of 32,768 tokens for most queries. For benchmarking on highly complex problems, such as those found in math and programming competitions, we suggest setting the max output length to 38,912 tokens. This provides the model with sufficient space to generate detailed and comprehensive responses, thereby enhancing its overall performance."
+        }
+      ],
+      "status": "CURRENT OFFICIAL RECOMMENDATION / CHECKPOINT / FRAMEWORK DEFAULTS DISTINGUISHED"
+    },
+    {
+      "repo_id": "Qwen/Qwen3-14B",
+      "official_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "checkpoint_generation_config": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "checkpoint_generation_config_url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/generation_config.json",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/README.md",
+      "model_card_human_url": "https://huggingface.co/Qwen/Qwen3-14B",
+      "snapshot_files": [
+        "sources/Qwen3-14B.README.md",
+        "sources/Qwen3-14B.generation_config.json",
+        "sources/Qwen3-14B.config.json",
+        "sources/Qwen3-14B.tokenizer_config.json"
+      ],
+      "config_max_position_embeddings": 40960,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "pad_token_id": 151643,
+      "bos_token_id": 151643,
+      "local_server_or_historical_checkpoint_identity": "NOT VERIFIED; current public official snapshot only",
+      "profile_id": "Qwen3-14B_thinking",
+      "mode": "thinking",
+      "chat_template_kwargs": {
+        "enable_thinking": true,
+        "add_generation_prompt": true
+      },
+      "explicit_decode_profile": {
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repetition_penalty": 1.0,
+        "num_beams": 1
+      },
+      "parameter_evidence": {
+        "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+        "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+        "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+        "top_k": "Explicit model-card recommendation and exact checkpoint default=20",
+        "min_p": "Explicit model-card recommendation=0; key is absent from checkpoint JSON, so JSON absence itself does not specify 0",
+        "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+        "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+      },
+      "output_length": {
+        "general_model_card_recommendation": 32768,
+        "complex_math_or_programming_competition_suggestion": 38912,
+        "basis_kind": "Explicit Best Practices recommendation; not just a Quickstart example",
+        "scope": "Card says most queries and does not separately specify a nonthinking-only budget. It is not a minimum or a requirement to emit that many tokens; EOS can finish sooner.",
+        "checkpoint_max_new_tokens_key_present": false,
+        "satd_specific_recommended_cap_found": false,
+        "implementation_caution": "If using these output caps, reserve output tokens within actual total context. 32768 output + typical 8192 prompt fits card stated 40960 config; preserve safety margin as implementation policy. Smaller SATD task caps must be labeled an experimental task-budget choice, not the official output recommendation."
+      },
+      "mandatory_or_strong_guidance": [
+        "Keep thinking/nonthinking template mode explicit and separate; enable_thinking is a chat-template argument, not a generate() decoding key.",
+        "Official card strongly advises against greedy in thinking mode. Recommendations are performance guidance, not a claim that other valid settings cannot execute."
+      ],
+      "repetition_guidance": {
+        "presence_penalty_optional_range": [
+          0,
+          2
+        ],
+        "interpretation": "Optional tuning in supported frameworks; not a mandate to choose a nonzero value and not the same parameter as repetition_penalty."
+      },
+      "source_locations": [
+        {
+          "line": 129,
+          "text": "> For thinking mode, use `Temperature=0.6`, `TopP=0.95`, `TopK=20`, and `MinP=0` (the default setting in `generation_config.json`). **DO NOT use greedy decoding**, as it can lead to performance degradation and endless repetitions. For more detailed guidance, please refer to the [Best Practices](#best-practices) section."
+        },
+        {
+          "line": 148,
+          "text": "> For non-thinking mode, we suggest using `Temperature=0.7`, `TopP=0.8`, `TopK=20`, and `MinP=0`. For more detailed guidance, please refer to the [Best Practices](#best-practices) section."
+        },
+        {
+          "line": 317,
+          "text": "> The default `max_position_embeddings` in `config.json` is set to 40,960. This allocation includes reserving 32,768 tokens for outputs and 8,192 tokens for typical prompts, which is sufficient for most scenarios involving short text processing. If the average context length does not exceed 32,768 tokens, we do not recommend enabling YaRN in this scenario, as it may potentially degrade model performance."
+        },
+        {
+          "line": 327,
+          "text": "   - For thinking mode (`enable_thinking=True`), use `Temperature=0.6`, `TopP=0.95`, `TopK=20`, and `MinP=0`. **DO NOT use greedy decoding**, as it can lead to performance degradation and endless repetitions."
+        },
+        {
+          "line": 328,
+          "text": "   - For non-thinking mode (`enable_thinking=False`), we suggest using `Temperature=0.7`, `TopP=0.8`, `TopK=20`, and `MinP=0`."
+        },
+        {
+          "line": 329,
+          "text": "   - For supported frameworks, you can adjust the `presence_penalty` parameter between 0 and 2 to reduce endless repetitions. However, using a higher value may occasionally result in language mixing and a slight decrease in model performance."
+        },
+        {
+          "line": 331,
+          "text": "2. **Adequate Output Length**: We recommend using an output length of 32,768 tokens for most queries. For benchmarking on highly complex problems, such as those found in math and programming competitions, we suggest setting the max output length to 38,912 tokens. This provides the model with sufficient space to generate detailed and comprehensive responses, thereby enhancing its overall performance."
+        }
+      ],
+      "status": "CURRENT OFFICIAL RECOMMENDATION / CHECKPOINT / FRAMEWORK DEFAULTS DISTINGUISHED"
+    },
+    {
+      "repo_id": "Qwen/Qwen3-14B",
+      "official_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "checkpoint_generation_config": {
+        "bos_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95,
+        "transformers_version": "4.51.0"
+      },
+      "checkpoint_generation_config_url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/generation_config.json",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/README.md",
+      "model_card_human_url": "https://huggingface.co/Qwen/Qwen3-14B",
+      "snapshot_files": [
+        "sources/Qwen3-14B.README.md",
+        "sources/Qwen3-14B.generation_config.json",
+        "sources/Qwen3-14B.config.json",
+        "sources/Qwen3-14B.tokenizer_config.json"
+      ],
+      "config_max_position_embeddings": 40960,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "pad_token_id": 151643,
+      "bos_token_id": 151643,
+      "local_server_or_historical_checkpoint_identity": "NOT VERIFIED; current public official snapshot only",
+      "profile_id": "Qwen3-14B_nonthinking",
+      "mode": "nonthinking",
+      "chat_template_kwargs": {
+        "enable_thinking": false,
+        "add_generation_prompt": true
+      },
+      "explicit_decode_profile": {
+        "do_sample": true,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": 0.0,
+        "repetition_penalty": 1.0,
+        "num_beams": 1
+      },
+      "parameter_evidence": {
+        "do_sample": "True in exact official checkpoint. Thinking recommendation explicitly rejects greedy. True is also needed to make nonthinking temperature/top-p/top-k sampling operative.",
+        "temperature": "Explicit model-card Best Practices recommendation, mode-specific",
+        "top_p": "Explicit model-card Best Practices recommendation, mode-specific",
+        "top_k": "Explicit model-card recommendation and exact checkpoint default=20",
+        "min_p": "Explicit model-card recommendation=0; key is absent from checkpoint JSON, so JSON absence itself does not specify 0",
+        "repetition_penalty": "Absent from Qwen3 checkpoint/model-card recommendation; effective Transformers framework default=1.0, not a Qwen3-specific tuned recommendation",
+        "num_beams": "Transformers framework default=1; not a model-card tuned recommendation"
+      },
+      "output_length": {
+        "general_model_card_recommendation": 32768,
+        "complex_math_or_programming_competition_suggestion": 38912,
+        "basis_kind": "Explicit Best Practices recommendation; not just a Quickstart example",
+        "scope": "Card says most queries and does not separately specify a nonthinking-only budget. It is not a minimum or a requirement to emit that many tokens; EOS can finish sooner.",
+        "checkpoint_max_new_tokens_key_present": false,
+        "satd_specific_recommended_cap_found": false,
+        "implementation_caution": "If using these output caps, reserve output tokens within actual total context. 32768 output + typical 8192 prompt fits card stated 40960 config; preserve safety margin as implementation policy. Smaller SATD task caps must be labeled an experimental task-budget choice, not the official output recommendation."
+      },
+      "mandatory_or_strong_guidance": [
+        "Keep thinking/nonthinking template mode explicit and separate; enable_thinking is a chat-template argument, not a generate() decoding key.",
+        "Official card strongly advises against greedy in thinking mode. Recommendations are performance guidance, not a claim that other valid settings cannot execute."
+      ],
+      "repetition_guidance": {
+        "presence_penalty_optional_range": [
+          0,
+          2
+        ],
+        "interpretation": "Optional tuning in supported frameworks; not a mandate to choose a nonzero value and not the same parameter as repetition_penalty."
+      },
+      "source_locations": [
+        {
+          "line": 129,
+          "text": "> For thinking mode, use `Temperature=0.6`, `TopP=0.95`, `TopK=20`, and `MinP=0` (the default setting in `generation_config.json`). **DO NOT use greedy decoding**, as it can lead to performance degradation and endless repetitions. For more detailed guidance, please refer to the [Best Practices](#best-practices) section."
+        },
+        {
+          "line": 148,
+          "text": "> For non-thinking mode, we suggest using `Temperature=0.7`, `TopP=0.8`, `TopK=20`, and `MinP=0`. For more detailed guidance, please refer to the [Best Practices](#best-practices) section."
+        },
+        {
+          "line": 317,
+          "text": "> The default `max_position_embeddings` in `config.json` is set to 40,960. This allocation includes reserving 32,768 tokens for outputs and 8,192 tokens for typical prompts, which is sufficient for most scenarios involving short text processing. If the average context length does not exceed 32,768 tokens, we do not recommend enabling YaRN in this scenario, as it may potentially degrade model performance."
+        },
+        {
+          "line": 327,
+          "text": "   - For thinking mode (`enable_thinking=True`), use `Temperature=0.6`, `TopP=0.95`, `TopK=20`, and `MinP=0`. **DO NOT use greedy decoding**, as it can lead to performance degradation and endless repetitions."
+        },
+        {
+          "line": 328,
+          "text": "   - For non-thinking mode (`enable_thinking=False`), we suggest using `Temperature=0.7`, `TopP=0.8`, `TopK=20`, and `MinP=0`."
+        },
+        {
+          "line": 329,
+          "text": "   - For supported frameworks, you can adjust the `presence_penalty` parameter between 0 and 2 to reduce endless repetitions. However, using a higher value may occasionally result in language mixing and a slight decrease in model performance."
+        },
+        {
+          "line": 331,
+          "text": "2. **Adequate Output Length**: We recommend using an output length of 32,768 tokens for most queries. For benchmarking on highly complex problems, such as those found in math and programming competitions, we suggest setting the max output length to 38,912 tokens. This provides the model with sufficient space to generate detailed and comprehensive responses, thereby enhancing its overall performance."
+        }
+      ],
+      "status": "CURRENT OFFICIAL RECOMMENDATION / CHECKPOINT / FRAMEWORK DEFAULTS DISTINGUISHED"
+    },
+    {
+      "repo_id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "official_revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+      "checkpoint_generation_config": {
+        "bos_token_id": 151643,
+        "pad_token_id": 151643,
+        "do_sample": true,
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "repetition_penalty": 1.1,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "transformers_version": "4.44.0"
+      },
+      "checkpoint_generation_config_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/c03e6d358207e414f1eca0bb1891e29f1db0e242/generation_config.json",
+      "model_card_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/c03e6d358207e414f1eca0bb1891e29f1db0e242/README.md",
+      "model_card_human_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct",
+      "snapshot_files": [
+        "sources/Qwen2.5-Coder-7B-Instruct.README.md",
+        "sources/Qwen2.5-Coder-7B-Instruct.generation_config.json",
+        "sources/Qwen2.5-Coder-7B-Instruct.config.json",
+        "sources/Qwen2.5-Coder-7B-Instruct.tokenizer_config.json"
+      ],
+      "config_max_position_embeddings": 32768,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "pad_token_id": 151643,
+      "bos_token_id": 151643,
+      "local_server_or_historical_checkpoint_identity": "NOT VERIFIED; current public official snapshot only",
+      "profile_id": "Qwen2.5-Coder-7B-Instruct_instruct",
+      "mode": "instruct (no Qwen3 native thinking switch)",
+      "chat_template_kwargs": {
+        "add_generation_prompt": true
+      },
+      "explicit_decode_profile": {
+        "do_sample": true,
+        "temperature": 0.7,
+        "top_p": 0.8,
+        "top_k": 20,
+        "min_p": null,
+        "repetition_penalty": 1.1,
+        "num_beams": 1
+      },
+      "parameter_evidence": {
+        "do_sample": "Exact 7B-Instruct checkpoint generation_config default=True",
+        "temperature": "Exact checkpoint default=.7; model card does not give a separate universal tuned SATD recommendation",
+        "top_p": "Exact checkpoint default=.8",
+        "top_k": "Exact checkpoint default=20",
+        "min_p": "Absent from exact checkpoint; Transformers constructor leaves None, so min-p filter is not enabled. Explicit 0 would be a neutral implementation normalization, not a checkpoint-provided value.",
+        "repetition_penalty": "Exact 7B-Instruct checkpoint default=1.1; do not copy 1.05 from another size/base/vLLM example",
+        "num_beams": "Transformers effective framework default=1"
+      },
+      "output_length": {
+        "universal_generation_recommendation_found": false,
+        "checkpoint_max_new_tokens_key_present": false,
+        "card_quickstart_example": 512,
+        "other_official_instruct_streaming_example": 2048,
+        "basis_kind": "Examples, not universal recommended output caps; exact checkpoint supplies no output cap",
+        "context_boundary": 32768,
+        "extended_context_with_yarn": 131072,
+        "implementation_caution": "Task-specific output caps must be declared separately; context capacity is input plus output, not an output recommendation. Do not label max_new_tokens512 as an official universal default."
+      },
+      "source_locations": [
+        {
+          "line": 40,
+          "text": "- Context Length: Full 131,072 tokens"
+        },
+        {
+          "line": 84,
+          "text": "    max_new_tokens=512"
+        },
+        {
+          "line": 95,
+          "text": "The current `config.json` is set for context length up to 32,768 tokens."
+        }
+      ],
+      "status": "EXACT CHECKPOINT DEFAULTS PREFERRED OVER OTHER-MODEL EXAMPLES"
+    }
+  ],
+  "framework_defaults": {
+    "official_source_v4_url": "https://raw.githubusercontent.com/huggingface/transformers/v4.51.3/src/transformers/generation/configuration_utils.py",
+    "official_source_v5_url": "https://raw.githubusercontent.com/huggingface/transformers/v5.20.0/src/transformers/generation/configuration_utils.py",
+    "constructor_4_51_3_defaults": {
+      "do_sample": false,
+      "num_beams": 1,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 50,
+      "min_p": null,
+      "repetition_penalty": 1.0,
+      "max_length": 20,
+      "max_new_tokens": null
+    },
+    "effective_5_20_0_defaults_when_unset": {
+      "do_sample": false,
+      "num_beams": 1,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 50,
+      "min_p": null,
+      "repetition_penalty": 1.0,
+      "max_length": 20,
+      "max_new_tokens": null
+    },
+    "version_boundary": "In5.20 many constructor fields remain None and are resolved by _get_default_generation_params during generate. Do not claim raw loaded GenerationConfig.to_dict alone is the fully resolved effective configuration.",
+    "precedence": "Explicit generation-call values override the loaded model GenerationConfig. Model-specific checkpoint values override generic framework fallback. No library/model/tokenizer was imported or instantiated for this evidence.",
+    "v4_source_locations": [
+      {
+        "line": 397,
+        "text": "        self.max_length = kwargs.pop(\"max_length\", 20)"
+      },
+      {
+        "line": 398,
+        "text": "        self.max_new_tokens = kwargs.pop(\"max_new_tokens\", None)"
+      },
+      {
+        "line": 406,
+        "text": "        self.do_sample = kwargs.pop(\"do_sample\", False)"
+      },
+      {
+        "line": 407,
+        "text": "        self.num_beams = kwargs.pop(\"num_beams\", 1)"
+      },
+      {
+        "line": 424,
+        "text": "        self.temperature = kwargs.pop(\"temperature\", 1.0)"
+      },
+      {
+        "line": 425,
+        "text": "        self.top_k = kwargs.pop(\"top_k\", 50)"
+      },
+      {
+        "line": 426,
+        "text": "        self.top_p = kwargs.pop(\"top_p\", 1.0)"
+      },
+      {
+        "line": 427,
+        "text": "        self.min_p = kwargs.pop(\"min_p\", None)"
+      },
+      {
+        "line": 432,
+        "text": "        self.repetition_penalty = kwargs.pop(\"repetition_penalty\", 1.0)"
+      },
+      {
+        "line": 544,
+        "text": "        elif self.num_beams == 1:"
+      },
+      {
+        "line": 671,
+        "text": "            self.num_beams = 1"
+      },
+      {
+        "line": 673,
+        "text": "        if self.num_beams == 1:"
+      },
+      {
+        "line": 753,
+        "text": "            if self.num_beams == 1:"
+      }
+    ],
+    "v5_source_locations": [
+      {
+        "line": 397,
+        "text": "        self.max_new_tokens = kwargs.pop(\"max_new_tokens\", None)"
+      },
+      {
+        "line": 406,
+        "text": "        self.num_beams = kwargs.pop(\"num_beams\", None)"
+      },
+      {
+        "line": 419,
+        "text": "        self.min_p = kwargs.pop(\"min_p\", None)"
+      },
+      {
+        "line": 424,
+        "text": "        self.repetition_penalty = kwargs.pop(\"repetition_penalty\", None)"
+      },
+      {
+        "line": 555,
+        "text": "        elif self.num_beams is None or self.num_beams == 1:"
+      },
+      {
+        "line": 617,
+        "text": "            \"do_sample\": False,"
+      },
+      {
+        "line": 620,
+        "text": "            \"num_beams\": 1,"
+      },
+      {
+        "line": 621,
+        "text": "            \"temperature\": 1.0,"
+      },
+      {
+        "line": 622,
+        "text": "            \"top_k\": 50,"
+      },
+      {
+        "line": 623,
+        "text": "            \"top_p\": 1.0,"
+      },
+      {
+        "line": 625,
+        "text": "            \"repetition_penalty\": 1.0,"
+      },
+      {
+        "line": 770,
+        "text": "        if self.num_beams is None or self.num_beams == 1:"
+      },
+      {
+        "line": 795,
+        "text": "            if self.num_beams is None or self.num_beams == 1:"
+      }
+    ],
+    "v5_generation_behavior_note": "5.20.0 _prepare_generation_config unconditionally fills None attributes from model.generation_config before generic fallback; use_model_defaults switch no longer exists. Clean generation-base isolation is required to preserve intentional disabled None values when the loaded model config may be modified."
+  },
+  "source_priority": [
+    "Exact model card explicit mode-specific recommendation",
+    "Exact official repo pinned generation_config.json",
+    "Versioned Transformers generic fallback only for unspecified fields",
+    "Example snippets do not establish a universal default"
+  ],
+  "conflicts_and_nontransferable_examples": [
+    {
+      "url": "https://qwen.readthedocs.io/en/latest/inference/transformers.html",
+      "observation": "Current tutorial illustrates top_k=2 in an allegedly equivalent-default pipeline snippet, while exact Qwen3 cards and checkpoint JSON both say20.",
+      "resolution": "Use exact model card + pinned checkpoint top_k20. Do not copy the conflicting tutorial snippet into the profile."
+    },
+    {
+      "url": "https://github.com/QwenLM/Qwen3-Coder/blob/main/examples/Qwen2.5-Coder-Instruct.md",
+      "observation": "Document is explicitly a32B-Instruct example and uses512/2048 output caps in examples.",
+      "resolution": "These are examples, not7B model-wide default caps."
+    },
+    {
+      "url": "https://github.com/QwenLM/Qwen3-Coder/blob/main/examples/Qwen2.5-Coder.md",
+      "observation": "A base32B/vLLM example uses repetition_penalty1.05.",
+      "resolution": "Not transferred to7B-Instruct; its exact checkpoint says1.1."
+    }
+  ],
+  "templates": [
+    {
+      "repo_id": "Qwen/Qwen3-8B",
+      "file": "sources/Qwen3-8B.tokenizer_config.json",
+      "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "has_enable_thinking_switch": true,
+      "default_thinking_for_qwen3": "True by documented default; disable explicitly via enable_thinking=False",
+      "evaluated_or_loaded": false
+    },
+    {
+      "repo_id": "Qwen/Qwen3-14B",
+      "file": "sources/Qwen3-14B.tokenizer_config.json",
+      "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "has_enable_thinking_switch": true,
+      "default_thinking_for_qwen3": "True by documented default; disable explicitly via enable_thinking=False",
+      "evaluated_or_loaded": false
+    },
+    {
+      "repo_id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "file": "sources/Qwen2.5-Coder-7B-Instruct.tokenizer_config.json",
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "has_enable_thinking_switch": false,
+      "default_thinking_for_qwen3": "Not applicable: not a native dual-mode Qwen3 checkpoint",
+      "evaluated_or_loaded": false
+    }
+  ],
+  "source_index": "qwen_source_index.json",
+  "sources": [
+    {
+      "repo": "Qwen/Qwen3-8B",
+      "kind": "official_model_api",
+      "url": "https://huggingface.co/api/models/Qwen/Qwen3-8B",
+      "final_url": "https://huggingface.co/api/models/Qwen/Qwen3-8B",
+      "file": "sources/Qwen3-8B.api_model_info.json",
+      "sha256": "97300594c1722fe1908a5d50e3cb35267fae38f06e77e5e64d1a2b19dc5decfc",
+      "bytes": 9546,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "kind": "README.md",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/README.md",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/README.md?%2FQwen%2FQwen3-8B%2Fresolve%2Fb968826d9c46dd6066d109eabc6255188de91218%2FREADME.md=&etag=%22ecc3ebd0849aa08d9484bd911dddfd5261b10d30%22",
+      "file": "sources/Qwen3-8B.README.md",
+      "sha256": "0f36caaff9c2516411a7738db384606263ba653c1e63e61d72f511606164d5a6",
+      "bytes": 16660,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "kind": "generation_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json?%2FQwen%2FQwen3-8B%2Fresolve%2Fb968826d9c46dd6066d109eabc6255188de91218%2Fgeneration_config.json=&etag=%2220a8a9156fc8c3f25295ca067f61fdf120d517c5%22",
+      "file": "sources/Qwen3-8B.generation_config.json",
+      "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+      "bytes": 239,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "kind": "config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/config.json",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/config.json?%2FQwen%2FQwen3-8B%2Fresolve%2Fb968826d9c46dd6066d109eabc6255188de91218%2Fconfig.json=&etag=%22d46195ac87f837ad233d02b2f80f148bf7c005e0%22",
+      "file": "sources/Qwen3-8B.config.json",
+      "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "bytes": 728,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "kind": "tokenizer_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-8B/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json?%2FQwen%2FQwen3-8B%2Fresolve%2Fb968826d9c46dd6066d109eabc6255188de91218%2Ftokenizer_config.json=&etag=%22417d038a63fa3de29cfde265caedae14d1a58d92%22",
+      "file": "sources/Qwen3-8B.tokenizer_config.json",
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+      "bytes": 9732,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen3-14B",
+      "kind": "official_model_api",
+      "url": "https://huggingface.co/api/models/Qwen/Qwen3-14B",
+      "final_url": "https://huggingface.co/api/models/Qwen/Qwen3-14B",
+      "file": "sources/Qwen3-14B.api_model_info.json",
+      "sha256": "9938a11306ebf953620218043637505c62758a2d62aedcb0dcdb81dbbf08808c",
+      "bytes": 9492,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen3-14B",
+      "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "kind": "README.md",
+      "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/README.md",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-14B/40c069824f4251a91eefaf281ebe4c544efd3e18/README.md?%2FQwen%2FQwen3-14B%2Fresolve%2F40c069824f4251a91eefaf281ebe4c544efd3e18%2FREADME.md=&etag=%223f1eaf4222cee3d84fdb3c6611afd7ff3a11dd8c%22",
+      "file": "sources/Qwen3-14B.README.md",
+      "sha256": "7ef503e68996a4e32007fedc7d8e198846e9b1f36620d38a79b89934100b1250",
+      "bytes": 16670,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen3-14B",
+      "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "kind": "generation_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/generation_config.json",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-14B/40c069824f4251a91eefaf281ebe4c544efd3e18/generation_config.json?%2FQwen%2FQwen3-14B%2Fresolve%2F40c069824f4251a91eefaf281ebe4c544efd3e18%2Fgeneration_config.json=&etag=%2220a8a9156fc8c3f25295ca067f61fdf120d517c5%22",
+      "file": "sources/Qwen3-14B.generation_config.json",
+      "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+      "bytes": 239,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen3-14B",
+      "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "kind": "config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/config.json",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-14B/40c069824f4251a91eefaf281ebe4c544efd3e18/config.json?%2FQwen%2FQwen3-14B%2Fresolve%2F40c069824f4251a91eefaf281ebe4c544efd3e18%2Fconfig.json=&etag=%2237e7491082573462e8545299cdf6938e8b684e31%22",
+      "file": "sources/Qwen3-14B.config.json",
+      "sha256": "e73c3664ca09b10a673fef0c22e8a6b456201d49bd4713c9691f775720e8857a",
+      "bytes": 728,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen3-14B",
+      "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "kind": "tokenizer_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-14B/resolve/40c069824f4251a91eefaf281ebe4c544efd3e18/tokenizer_config.json",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-14B/40c069824f4251a91eefaf281ebe4c544efd3e18/tokenizer_config.json?%2FQwen%2FQwen3-14B%2Fresolve%2F40c069824f4251a91eefaf281ebe4c544efd3e18%2Ftokenizer_config.json=&etag=%22417d038a63fa3de29cfde265caedae14d1a58d92%22",
+      "file": "sources/Qwen3-14B.tokenizer_config.json",
+      "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+      "bytes": 9732,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "kind": "official_model_api",
+      "url": "https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-7B-Instruct",
+      "final_url": "https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-7B-Instruct",
+      "file": "sources/Qwen2.5-Coder-7B-Instruct.api_model_info.json",
+      "sha256": "a4c1b519ef5010622da159e8847991c19744e096007f78fcb0bf8a69742d90f6",
+      "bytes": 8095,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+      "kind": "README.md",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/c03e6d358207e414f1eca0bb1891e29f1db0e242/README.md",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242/README.md?%2FQwen%2FQwen2.5-Coder-7B-Instruct%2Fresolve%2Fc03e6d358207e414f1eca0bb1891e29f1db0e242%2FREADME.md=&etag=%22f29baca4ff38a69df22ec441e22f7ac8dfac277b%22",
+      "file": "sources/Qwen2.5-Coder-7B-Instruct.README.md",
+      "sha256": "3c090be37f829adc1e4cdb78733667437732541470430ab2cd785d7f0d460077",
+      "bytes": 6392,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+      "kind": "generation_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/c03e6d358207e414f1eca0bb1891e29f1db0e242/generation_config.json",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242/generation_config.json?%2FQwen%2FQwen2.5-Coder-7B-Instruct%2Fresolve%2Fc03e6d358207e414f1eca0bb1891e29f1db0e242%2Fgeneration_config.json=&etag=%22b7849b3dad857bc1e227afd6ca21d1e4cb3f8f82%22",
+      "file": "sources/Qwen2.5-Coder-7B-Instruct.generation_config.json",
+      "sha256": "1a628a5775bc69cde01c6749a531150ca4d3189652c618a174f7077923acf3b1",
+      "bytes": 242,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+      "kind": "config.json",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/c03e6d358207e414f1eca0bb1891e29f1db0e242/config.json",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242/config.json?%2FQwen%2FQwen2.5-Coder-7B-Instruct%2Fresolve%2Fc03e6d358207e414f1eca0bb1891e29f1db0e242%2Fconfig.json=&etag=%221a2ea88621f4248fccfb575beaf64c1ea5d9587f%22",
+      "file": "sources/Qwen2.5-Coder-7B-Instruct.config.json",
+      "sha256": "c0242402ad6a13b331ea320feea8c7e3776ffb7a4eff0757b9cd667e116d9a28",
+      "bytes": 663,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+      "kind": "tokenizer_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/c03e6d358207e414f1eca0bb1891e29f1db0e242/tokenizer_config.json",
+      "final_url": "https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242/tokenizer_config.json?%2FQwen%2FQwen2.5-Coder-7B-Instruct%2Fresolve%2Fc03e6d358207e414f1eca0bb1891e29f1db0e242%2Ftokenizer_config.json=&etag=%22acee076f49bf3c0298e15de0909d1da7b392f0c3%22",
+      "file": "sources/Qwen2.5-Coder-7B-Instruct.tokenizer_config.json",
+      "sha256": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4",
+      "bytes": 7305,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "kind": "official_document_or_library_source",
+      "url": "https://qwen.readthedocs.io/en/latest/inference/transformers.html",
+      "final_url": "https://qwen.readthedocs.io/en/latest/inference/transformers.html",
+      "file": "sources/Qwen.transformers_latest.html",
+      "sha256": "bb9f58df81dba5faa5ba4d6990ccedc1313a924f26488dcd7a0124b67a71b2ef",
+      "bytes": 53545,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "kind": "official_document_or_library_source",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.51.3/src/transformers/generation/configuration_utils.py",
+      "final_url": "https://raw.githubusercontent.com/huggingface/transformers/v4.51.3/src/transformers/generation/configuration_utils.py",
+      "file": "sources/Transformers_v4.51.3_configuration_utils.py",
+      "sha256": "79f90d88a378ae11a3d346b491a509690a51856895a67e9adc92c564fe36f203",
+      "bytes": 85393,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "kind": "official_document_or_library_source",
+      "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-Coder/main/examples/Qwen2.5-Coder-Instruct.md",
+      "final_url": "https://raw.githubusercontent.com/QwenLM/Qwen3-Coder/main/examples/Qwen2.5-Coder-Instruct.md",
+      "file": "sources/Qwen2.5-Coder_official_instruct_examples.md",
+      "sha256": "6e286f8e6e17507c82e3f44490bae7a1eee66fd10c79efad2c4bc25bc3e71343",
+      "bytes": 4004,
+      "retrieved_at_utc": "2026-10-16T11:31:09.906130+00:00"
+    },
+    {
+      "kind": "official_library_source",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.20.0/src/transformers/generation/configuration_utils.py",
+      "file": "sources/Transformers_v5.20.0_configuration_utils.py",
+      "sha256": "90fe297384c13a66eaaaba398705fd372774d5bac77da8b69b90ac017256589f",
+      "bytes": 103514,
+      "retrieved_at_utc": "2026-10-16T11:32:49.513022+00:00"
+    },
+    {
+      "kind": "official_library_generation_source",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v5.20.0/src/transformers/generation/utils.py",
+      "file": "sources/Transformers_v5.20.0_generation_utils.py",
+      "sha256": "7944240ff1ee27a7b3acc16571b7a480cc14f16e7222aeb1a79d289ebc96e3ea",
+      "bytes": 242701,
+      "retrieved_at_utc": "2026-10-16T11:49:48.372019+00:00"
+    }
+  ],
+  "limits": [
+    "Current official public snapshots do not prove historical local server checkpoint/template/config hashes.",
+    "Generation length recommendations and experimental per-task budgets are separate; a shorter classification budget must be transparently declared.",
+    "No support is inferred for using Qwen3 enable_thinking switch on Qwen2.5-Coder.",
+    "No weights, vocabularies, tokenizer models or full model checkpoints were downloaded. Only small public metadata/docs/source files were retrieved."
+  ]
+}

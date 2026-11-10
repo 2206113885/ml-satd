@@ -1,0 +1,378 @@
+{
+  "cohort_n": 100,
+  "complete": true,
+  "common_paired_n": 100,
+  "labels": [
+    "MLKnow",
+    "MLInter",
+    "MCC",
+    "DMC",
+    "DFEC",
+    "Weight Conf",
+    "Layer Conf",
+    "HP Conf",
+    "MLDepend",
+    "GC",
+    "CDT",
+    "ML",
+    "UMC",
+    "Data Conf",
+    "PODT",
+    "DS Conf",
+    "Abs",
+    "BE",
+    "MCM",
+    "MCR",
+    "PQ",
+    "MLRelia",
+    "Proto"
+  ],
+  "cohort_support": {
+    "UMC": 6,
+    "Data Conf": 6,
+    "DS Conf": 6,
+    "MLKnow": 6,
+    "HP Conf": 6,
+    "MLDepend": 6,
+    "MCM": 6,
+    "Proto": 6,
+    "MCR": 6,
+    "Abs": 7,
+    "CDT": 7,
+    "MLRelia": 3,
+    "PODT": 6,
+    "PQ": 3,
+    "Layer Conf": 6,
+    "GC": 1,
+    "BE": 1,
+    "MCC": 4,
+    "MLInter": 2,
+    "ML": 1,
+    "Weight Conf": 5
+  },
+  "macro_policy": "macro_* averages labels with gold support in common paired cohort; macro_*_23 fixes all 23 original labels (zero for absent labels).",
+  "primary_common_cohort": {
+    "comment_only": {
+      "n": 100,
+      "accuracy": 0.21,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.21805415499533146,
+      "weighted_recall": 0.21,
+      "weighted_f1": 0.1833854382332643,
+      "macro_precision": 0.2412120403717042,
+      "macro_recall": 0.22460317460317458,
+      "macro_f1": 0.20343011600775573,
+      "macro_precision_23": 0.2202370803393821,
+      "macro_recall_23": 0.20507246376811594,
+      "macro_f1_23": 0.18574054070273352,
+      "mean_elapsed_seconds": 0.349512,
+      "total_elapsed_seconds": 34.9512,
+      "mean_prompt_tokens": 697.36,
+      "mean_completion_tokens": 2.96
+    },
+    "window": {
+      "n": 100,
+      "accuracy": 0.17,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.20606162464985994,
+      "weighted_recall": 0.17,
+      "weighted_f1": 0.13386580086580085,
+      "macro_precision": 0.21040416166466586,
+      "macro_recall": 0.18492063492063493,
+      "macro_f1": 0.1543908472479901,
+      "macro_precision_23": 0.19210814760686884,
+      "macro_recall_23": 0.16884057971014493,
+      "macro_f1_23": 0.14096555618294748,
+      "mean_elapsed_seconds": 0.743599,
+      "total_elapsed_seconds": 74.3599,
+      "mean_prompt_tokens": 934.35,
+      "mean_completion_tokens": 2.89
+    },
+    "function": {
+      "n": 100,
+      "accuracy": 0.16,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.15885930735930737,
+      "weighted_recall": 0.16,
+      "weighted_f1": 0.11900273469071422,
+      "macro_precision": 0.12938569367140795,
+      "macro_recall": 0.13458049886621315,
+      "macro_f1": 0.09983382022110557,
+      "macro_precision_23": 0.1181347637869377,
+      "macro_recall_23": 0.12287784679089027,
+      "macro_f1_23": 0.09115261846274857,
+      "mean_elapsed_seconds": 1.24742,
+      "total_elapsed_seconds": 124.742,
+      "mean_prompt_tokens": 1227.16,
+      "mean_completion_tokens": 2.88
+    }
+  },
+  "primary_ci_95": {
+    "comment_only": {
+      "accuracy": [
+        0.15,
+        0.28
+      ],
+      "weighted_precision": [
+        0.1197640963203463,
+        0.29424577067669166
+      ],
+      "weighted_recall": [
+        0.15,
+        0.27999999999999997
+      ],
+      "weighted_f1": [
+        0.11935367871685006,
+        0.24047992709045338
+      ],
+      "macro_precision": [
+        0.14194489334195215,
+        0.30127422180993607
+      ],
+      "macro_recall": [
+        0.17061507936507936,
+        0.2849404761904761
+      ],
+      "macro_f1": [
+        0.1430854832097645,
+        0.2538511002828045
+      ],
+      "macro_f1_23": [
+        0.13064326727848063,
+        0.23177709156256063
+      ]
+    },
+    "window": {
+      "accuracy": [
+        0.12,
+        0.22
+      ],
+      "weighted_precision": [
+        0.07488141911965442,
+        0.23454797655904452
+      ],
+      "weighted_recall": [
+        0.12,
+        0.22
+      ],
+      "weighted_f1": [
+        0.0836092086834734,
+        0.1764762519002736
+      ],
+      "macro_precision": [
+        0.104306672163815,
+        0.23663048250153051
+      ],
+      "macro_recall": [
+        0.14283730158730157,
+        0.22857142857142856
+      ],
+      "macro_f1": [
+        0.11199736148864055,
+        0.1920691945169296
+      ],
+      "macro_f1_23": [
+        0.10225846048962833,
+        0.17536752542850095
+      ]
+    },
+    "function": {
+      "accuracy": [
+        0.11,
+        0.22
+      ],
+      "weighted_precision": [
+        0.06243082579185521,
+        0.20199349681849676
+      ],
+      "weighted_recall": [
+        0.10999999999999999,
+        0.22
+      ],
+      "weighted_f1": [
+        0.06732940993446962,
+        0.16684126984126985
+      ],
+      "macro_precision": [
+        0.05352862415362415,
+        0.16362099253403597
+      ],
+      "macro_recall": [
+        0.0888718820861678,
+        0.18379818594104302
+      ],
+      "macro_f1": [
+        0.05759599764830232,
+        0.13807834117817985
+      ],
+      "macro_f1_23": [
+        0.052587650026710814,
+        0.12607152890181642
+      ]
+    }
+  },
+  "all_available_per_arm": {
+    "comment_only": {
+      "n": 100,
+      "accuracy": 0.21,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.21805415499533146,
+      "weighted_recall": 0.21,
+      "weighted_f1": 0.1833854382332643,
+      "macro_precision": 0.2412120403717042,
+      "macro_recall": 0.22460317460317458,
+      "macro_f1": 0.20343011600775573,
+      "macro_precision_23": 0.2202370803393821,
+      "macro_recall_23": 0.20507246376811594,
+      "macro_f1_23": 0.18574054070273352
+    },
+    "window": {
+      "n": 100,
+      "accuracy": 0.17,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.20606162464985994,
+      "weighted_recall": 0.17,
+      "weighted_f1": 0.13386580086580085,
+      "macro_precision": 0.21040416166466586,
+      "macro_recall": 0.18492063492063493,
+      "macro_f1": 0.1543908472479901,
+      "macro_precision_23": 0.19210814760686884,
+      "macro_recall_23": 0.16884057971014493,
+      "macro_f1_23": 0.14096555618294748
+    },
+    "function": {
+      "n": 100,
+      "accuracy": 0.16,
+      "parse_failures": 0,
+      "labels_with_support": 21,
+      "weighted_precision": 0.15885930735930737,
+      "weighted_recall": 0.16,
+      "weighted_f1": 0.11900273469071422,
+      "macro_precision": 0.12938569367140795,
+      "macro_recall": 0.13458049886621315,
+      "macro_f1": 0.09983382022110557,
+      "macro_precision_23": 0.1181347637869377,
+      "macro_recall_23": 0.12287784679089027,
+      "macro_f1_23": 0.09115261846274857
+    }
+  },
+  "comparisons": {
+    "window": {
+      "n": 100,
+      "corrected": 2,
+      "regressed": 6,
+      "changed_predictions": 49,
+      "metric_differences": {
+        "accuracy": -0.03999999999999998,
+        "weighted_precision": -0.011992530345471514,
+        "weighted_recall": -0.03999999999999998,
+        "weighted_f1": -0.049519637367463454,
+        "macro_precision": -0.030807878707038355,
+        "macro_recall": -0.03968253968253965,
+        "macro_f1": -0.049039268759765636,
+        "macro_f1_23": -0.04477498451978604
+      },
+      "difference_ci_95": {
+        "accuracy": [
+          -0.09,
+          0.010000000000000009
+        ],
+        "weighted_precision": [
+          -0.11708462499832467,
+          0.03955472764660739
+        ],
+        "weighted_recall": [
+          -0.09,
+          0.010000000000000009
+        ],
+        "weighted_f1": [
+          -0.09220460042535124,
+          -0.0036842783429161335
+        ],
+        "macro_precision": [
+          -0.1157588852152928,
+          0.03139528559171403
+        ],
+        "macro_recall": [
+          -0.08730158730158727,
+          0.0
+        ],
+        "macro_f1": [
+          -0.09036597293404974,
+          -0.0010869042836694463
+        ],
+        "macro_f1_23": [
+          -0.08250806224413237,
+          -0.0009923908676981966
+        ]
+      },
+      "mcnemar_exact_p": 0.2890625,
+      "p_value_note": "Exploratory, no adjustment for multiple comparisons."
+    },
+    "function": {
+      "n": 100,
+      "corrected": 4,
+      "regressed": 9,
+      "changed_predictions": 58,
+      "metric_differences": {
+        "accuracy": -0.04999999999999999,
+        "weighted_precision": -0.05919484763602409,
+        "weighted_recall": -0.04999999999999999,
+        "weighted_f1": -0.06438270354255009,
+        "macro_precision": -0.11182634670029626,
+        "macro_recall": -0.09002267573696143,
+        "macro_f1": -0.10359629578665017,
+        "macro_f1_23": -0.09458792223998495
+      },
+      "difference_ci_95": {
+        "accuracy": [
+          -0.11000000000000001,
+          0.010000000000000009
+        ],
+        "weighted_precision": [
+          -0.16431189611817634,
+          0.021776623837486988
+        ],
+        "weighted_recall": [
+          -0.11000000000000001,
+          0.010000000000000009
+        ],
+        "weighted_f1": [
+          -0.12163146048893385,
+          -0.0049681824860850375
+        ],
+        "macro_precision": [
+          -0.19364761400569433,
+          -0.030201193899225928
+        ],
+        "macro_recall": [
+          -0.14444444444444443,
+          -0.03560090702947846
+        ],
+        "macro_f1": [
+          -0.15381391487019835,
+          -0.048126606390050446
+        ],
+        "macro_f1_23": [
+          -0.14043879183800723,
+          -0.043941684095263445
+        ]
+      },
+      "mcnemar_exact_p": 0.266845703125,
+      "p_value_note": "Exploratory, no adjustment for multiple comparisons."
+    }
+  },
+  "bootstrap": {
+    "repeats": 2000,
+    "seed": 20261016,
+    "method": "paired within-gold-label percentile bootstrap"
+  },
+  "parse_policy": "Invalid/missing parsed label counts as incorrect; no majority-class fallback.",
+  "scope": "Conditional on selected stratified cohort. Not a population estimate, independent replication, or cross-project validation.",
+  "warnings": []
+}

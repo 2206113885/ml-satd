@@ -1,0 +1,1248 @@
+{
+  "issue_id": "R08",
+  "scope_root": "/Users/yizho/Desktop/satd_experiments_revised_20261016",
+  "changed_file_count": 30,
+  "helper_files": 26,
+  "inline_qwen_files": 4,
+  "changes": [
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "before_sha256": "26a8bbaf7587a14e7d44b47d2aeef1a8c0399ef19453ce1fafdacaa58848a00c",
+      "after_sha256": "4d4f1de21360919d56d2c6f9575f03e40a20c6f8b563c8647954ac54407fe822",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 446,
+      "source_before_parser_line": 340,
+      "revised_parser_line": 352,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 416,
+        "before_return_line": 431,
+        "before_yn_call_line": 483,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "19a8cb0fb65d4e67158f3f6b8de19e8b0c5aec239934130ad9f2afa96794165f",
+      "after_sha256": "3ed2b41df4dac14c21e225ebd6416b0c1795001a6a6929c49ab457cb212e76b7",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 503,
+      "source_before_parser_line": 412,
+      "revised_parser_line": 425,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 469,
+        "before_return_line": 487,
+        "before_yn_call_line": 540,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "before_sha256": "f14beda6b2573e4052736cb596760cc95712b546cdc19ea34691be243b946944",
+      "after_sha256": "718de0e34971038599530787c25069945d78effdf75e4df27811752d76599fad",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 456,
+      "source_before_parser_line": 365,
+      "revised_parser_line": 378,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 422,
+        "before_return_line": 440,
+        "before_yn_call_line": 493,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+      "before_sha256": "730129cb797cf84f55ff06f23d8357e6291ebdc8219b744107ac5a19ac6ba4c3",
+      "after_sha256": "d0834acf1a22f01dfc4e46bc722b5ec457743604007b3752c76cb1e9e1b88dae",
+      "parser": "parse_yesno",
+      "preserved_failure_sentinel": "unknown",
+      "supports_existing_exact_chinese_answers": false,
+      "control_flow": "inline_qwen_preserved_existing_output_column_order_plus_diagnostics",
+      "source_before_arbitration_failure_line": 433,
+      "source_before_parser_line": 318,
+      "revised_parser_line": 334,
+      "preserved_original_blocks": 4,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": true,
+      "readability_formatting": [
+        "poll_diagnostics dictionary",
+        "rows.append dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Existing Qwen _gen full visible response; no wrapper changes."
+    },
+    {
+      "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+      "before_sha256": "6dbcea147b54b18257947b645489ff81f2c428c8c583217a5fa000a9ec27e4aa",
+      "after_sha256": "4b09447083b17d23007323b3e3c1968f0ad1537983c5eab3ca43ab3331ffca75",
+      "parser": "parse_yesno",
+      "preserved_failure_sentinel": "unknown",
+      "supports_existing_exact_chinese_answers": false,
+      "control_flow": "inline_qwen_preserved_existing_output_column_order_plus_diagnostics",
+      "source_before_arbitration_failure_line": 433,
+      "source_before_parser_line": 318,
+      "revised_parser_line": 334,
+      "preserved_original_blocks": 4,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": true,
+      "readability_formatting": [
+        "poll_diagnostics dictionary",
+        "rows.append dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Existing Qwen _gen full visible response; no wrapper changes."
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "before_sha256": "19dc03af15a743479d3cb133e857acf5b43cbb1d1f71f646532c0879bbc63e8e",
+      "after_sha256": "2cf310c1ecbd6584b10e6da3701def799e6c3ea0f43dbbc4c91d7a33f0856d15",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 458,
+      "source_before_parser_line": 367,
+      "revised_parser_line": 380,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 424,
+        "before_return_line": 442,
+        "before_yn_call_line": 495,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "before_sha256": "7013362b049313254931c1d080e650a94429d5eaad9b1122ea7497f5b9d012d9",
+      "after_sha256": "cd7be8b1076c7e9e00fe2833372ac3b4ef3c3c6866773b26596b11978a0607e0",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 502,
+      "source_before_parser_line": 415,
+      "revised_parser_line": 428,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 472,
+        "before_return_line": 486,
+        "before_yn_call_line": 539,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "before_sha256": "715b8b5b39bc28f3c0e192ba546f985c90d14f6441891ee71978d5a497de75fc",
+      "after_sha256": "5bdbbc80547657c92290fb752ea4e8edf54749117309db521887fc4e2592283e",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 502,
+      "source_before_parser_line": 415,
+      "revised_parser_line": 428,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 472,
+        "before_return_line": 486,
+        "before_yn_call_line": 539,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "before_sha256": "3c718a06e6b9326725ed9589b9b6ad11f97182e1c7fe29db73ecb1de4400ed4b",
+      "after_sha256": "dd4a15ded07f326b8e4385670835278e820af6aec7e0864d1864c0347262a62a",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 627,
+      "source_before_parser_line": 537,
+      "revised_parser_line": 549,
+      "preserved_original_blocks": 3,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": true,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Existing GPT-oss generate_first_line already returns full raw_answer; no wrapper changes."
+    },
+    {
+      "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "before_sha256": "25f60385567ef19ca7f603a871cdffd600bd205e3b71bbaeb655b5057c59e2ba",
+      "after_sha256": "f9827a1a8dd779d434c666b150ba6383077a391c833ea82e33877b4fe04d4b67",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 645,
+      "source_before_parser_line": 539,
+      "revised_parser_line": 551,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 615,
+        "before_return_line": 630,
+        "before_yn_call_line": 682,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "f9eedc7f4279a5393df48d74dd279c2e36b6341d1ffb4b4ce22a72ff6cb0c31b",
+      "after_sha256": "3f92d80b534aaefabea1326949c914a3a7bbc4f6371d87d344288acac571c60a",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 631,
+      "source_before_parser_line": 540,
+      "revised_parser_line": 553,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 597,
+        "before_return_line": 615,
+        "before_yn_call_line": 668,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "before_sha256": "46a838f41393d974d5381ff735bc7c99e01751185bb349c90b40ea4a4edb825c",
+      "after_sha256": "31652509bc73050e09759107c8dad77323d19e7de91aea8fd810f513078304ea",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 631,
+      "source_before_parser_line": 540,
+      "revised_parser_line": 553,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 597,
+        "before_return_line": 615,
+        "before_yn_call_line": 668,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "before_sha256": "39fece9d12fc3e328f48431eb88bb9916f0d80ea61435973a85075b0b67ea3ea",
+      "after_sha256": "78cb59b9a0ac57c4a530666a613b2c49129ed1099347fc6e956ab0f2ee8aeccc",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 633,
+      "source_before_parser_line": 542,
+      "revised_parser_line": 555,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 599,
+        "before_return_line": 617,
+        "before_yn_call_line": 670,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "before_sha256": "c899bdb9a38101b0bfcc286b7fc5bea6d629f1f7acef11ddbd3608396d00fc11",
+      "after_sha256": "35e73f3998e71355d371da46ccdddf16f76c059fc8f0f7bc575185b0dfa9483c",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 752,
+      "source_before_parser_line": 661,
+      "revised_parser_line": 674,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 718,
+        "before_return_line": 736,
+        "before_yn_call_line": 789,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "before_sha256": "855dce35319d2987857661df3e2a77bdd80b86cee294f30ae5bed0596a651fa1",
+      "after_sha256": "beb7bbc13ef2a34033f26707a94d670a5188087a372c15851e5a43be6d0d6adc",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 634,
+      "source_before_parser_line": 543,
+      "revised_parser_line": 556,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 600,
+        "before_return_line": 618,
+        "before_yn_call_line": 671,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "before_sha256": "0f4f785e9607c2be6920a7361f76ae03e9a283e1770e2c1ab46ac247d55ea2d0",
+      "after_sha256": "f6ea75f8a644d6032c354ba761072ed3b0d8e435ef2e399d900ea9041995a450",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 630,
+      "source_before_parser_line": 543,
+      "revised_parser_line": 556,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 600,
+        "before_return_line": 614,
+        "before_yn_call_line": 667,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "before_sha256": "ea8b33cf287629afea9cf8b88c86fea9071d0d42cfa754416fb0406b87fbcc6b",
+      "after_sha256": "4e91e24a257c2216d85227513b39f35df67d73b2c61f0250705908bc41ef161a",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 635,
+      "source_before_parser_line": 544,
+      "revised_parser_line": 557,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 601,
+        "before_return_line": 619,
+        "before_yn_call_line": 672,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "before_sha256": "161326cea4699333df33a75aeefb49aac4def75f5e730416a153799e906e37de",
+      "after_sha256": "edba506e1d35b2e09c375b38961654c0572ab45c7e81882a3c4cbbf7f76d34d9",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 522,
+      "source_before_parser_line": 432,
+      "revised_parser_line": 444,
+      "preserved_original_blocks": 3,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": true,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Existing GPT-oss generate_first_line already returns full raw_answer; no wrapper changes."
+    },
+    {
+      "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "before_sha256": "c6dea267a9f823f2f0aa285fefb168f7bf97c3f893ee9d41cfc7ff12eeb298af",
+      "after_sha256": "d1337f6ce0b2823de8c17293b517b8dc8bca51a9e5cd8104f3791b77821a32d5",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 228,
+      "source_before_parser_line": 122,
+      "revised_parser_line": 134,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 198,
+        "before_return_line": 213,
+        "before_yn_call_line": 265,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "before_sha256": "6b78002ce7b1e1360677b109df7e4906916e79e623db8c634795d337a7fb50b7",
+      "after_sha256": "029fbf39881645327e857f547beefa36dd94ea54958c773f9d4a815117d0fee1",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 237,
+      "source_before_parser_line": 146,
+      "revised_parser_line": 159,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 203,
+        "before_return_line": 221,
+        "before_yn_call_line": 274,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "before_sha256": "323cb3ddd22baa66f07aad08e6aa8cfe192d86cfeb1998a9b90113d6556c6668",
+      "after_sha256": "af6eb94a41cfab9ef2242be4d634b5ab663181b18aa45fb3a08480856b7f5271",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 238,
+      "source_before_parser_line": 147,
+      "revised_parser_line": 160,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 204,
+        "before_return_line": 222,
+        "before_yn_call_line": 275,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "before_sha256": "8f82f9bd5ee46849640a574c1b061b15af9c325f67583bf54638c17356d3ab32",
+      "after_sha256": "b39172dba2813b9921d514b6b0423e837497b7ed44d2303e0faf4e3b0326aedf",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 238,
+      "source_before_parser_line": 147,
+      "revised_parser_line": 160,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 204,
+        "before_return_line": 222,
+        "before_yn_call_line": 275,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "before_sha256": "f16c8ef5c8da5bf62f98fc244ac351c2873d0f7c955bc812cc4a90e3a0544846",
+      "after_sha256": "371327db4868bbdcdd51e8b529348c324d41a2e330b8ad8074196cdc9d357cff",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 238,
+      "source_before_parser_line": 147,
+      "revised_parser_line": 160,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 204,
+        "before_return_line": 222,
+        "before_yn_call_line": 275,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_zero_shot/bin_new_test.py",
+      "before_sha256": "2acbc89a9fc5d4df96f97af50494ab4660487c8cfb5be7a1e8fc3d19104fa558",
+      "after_sha256": "f98b065ddaa7ccae844ea544ee3de87243544353b6b742e0e503bbade1e5a193",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 238,
+      "source_before_parser_line": 147,
+      "revised_parser_line": 160,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_zero_shot/bin_new_test.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 204,
+        "before_return_line": 222,
+        "before_yn_call_line": 275,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "before_sha256": "85b67cf5c74e3a78a89dfa42dc54c67a6fc85816bac27436b838f7b6abaef8a0",
+      "after_sha256": "91599934576b541c7b69843ba2686ce81a68b534e4c570ba3a7134674d032442",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 239,
+      "source_before_parser_line": 148,
+      "revised_parser_line": 161,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 205,
+        "before_return_line": 223,
+        "before_yn_call_line": 276,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "before_sha256": "1bccc082def9f367e38cda22a43d6f71196d4a07a601b9361964914347db665a",
+      "after_sha256": "4c5d6e08ecfcfde4a3c1767934ac3dae2ad34b891eb45d343ffc9876944c56f4",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 242,
+      "source_before_parser_line": 148,
+      "revised_parser_line": 161,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 205,
+        "before_return_line": 226,
+        "before_yn_call_line": 279,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "before_sha256": "b4ee0e9e0a05b263c91764189a9b4459e486852c99289cf7c985a70967ac5dde",
+      "after_sha256": "9c31964f6dc55fb5ec053eeef4ce0fea62253e4fda0bc1e18815525fee417bdb",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 239,
+      "source_before_parser_line": 148,
+      "revised_parser_line": 161,
+      "preserved_original_blocks": 5,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": false,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Y/N requests full raw response; wrapper defaults to original first-line behavior for other stages.",
+      "wrapper_full_response_amendment": {
+        "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+        "wrapper": "greedy_generate_first_line",
+        "original_default": "First line only",
+        "new_optional_parameter": "return_full_text: bool = False",
+        "yn_call": "return_full_text=True",
+        "pick_and_full_label_calls": "Optional argument omitted; original first-line return retained.",
+        "before_wrapper_line": 205,
+        "before_return_line": 223,
+        "before_yn_call_line": 276,
+        "generation_and_tokenizer_call_parameters_unchanged": true,
+        "static_ast_comparison": "passed"
+      },
+      "other_functions_unchanged_except_authorized_full_response_wrapper": true,
+      "other_functions_note": "Original R08 parser/polling exclusions plus the explicitly authorized greedy_generate_first_line optional return selection; all other functions unchanged."
+    },
+    {
+      "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "before_sha256": "c773136e6681eca5ddd01896e66deb4ede52be340117b729e8625aaf5f4f428f",
+      "after_sha256": "1730929139474e35d7a9b63975caaf832359854a0e3955f4cc36f2dac64a3820",
+      "parser": "extract_yes_no",
+      "preserved_failure_sentinel": "unk",
+      "supports_existing_exact_chinese_answers": true,
+      "control_flow": "helper_optional_diagnostics_original_three_return_values",
+      "source_before_arbitration_failure_line": 238,
+      "source_before_parser_line": 148,
+      "revised_parser_line": 160,
+      "preserved_original_blocks": 3,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": true,
+      "readability_formatting": [
+        "rows.append dictionary",
+        "diagnostics.update dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Existing GPT-oss generate_first_line already returns full raw_answer; no wrapper changes."
+    },
+    {
+      "file": "test1.py",
+      "before_sha256": "32d855097bb07e340e7fb18bb9035d11cb19f52cb7994c95c5fc863959717aa9",
+      "after_sha256": "c7eba3f7e33e8aa1c6c97d3f8f9d2e350b2dacb728ccccf912da3ab7498193ff",
+      "parser": "parse_yesno",
+      "preserved_failure_sentinel": "unknown",
+      "supports_existing_exact_chinese_answers": false,
+      "control_flow": "inline_qwen_preserved_existing_output_column_order_plus_diagnostics",
+      "source_before_arbitration_failure_line": 287,
+      "source_before_parser_line": 172,
+      "revised_parser_line": 188,
+      "preserved_original_blocks": 4,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": true,
+      "readability_formatting": [
+        "poll_diagnostics dictionary",
+        "rows.append dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Existing Qwen _gen full visible response; no wrapper changes."
+    },
+    {
+      "file": "test3.py",
+      "before_sha256": "ff1494af0728287d5cfefcd86b955fd186b9678cdabe22e2009681dbf3ca5d6c",
+      "after_sha256": "bc2593d43290e45e13e841db57e3869dfd01bed9d0cb3a59d4f659225db86822",
+      "parser": "parse_yesno",
+      "preserved_failure_sentinel": "unknown",
+      "supports_existing_exact_chinese_answers": false,
+      "control_flow": "inline_qwen_preserved_existing_output_column_order_plus_diagnostics",
+      "source_before_arbitration_failure_line": 287,
+      "source_before_parser_line": 172,
+      "revised_parser_line": 188,
+      "preserved_original_blocks": 4,
+      "diagnostic_csv_columns": [
+        "unknown_labels",
+        "fallback_reason"
+      ],
+      "static_ast_scope_comparison": "passed",
+      "generation_tokenizer_calls_unchanged": true,
+      "general_counter_updates_unchanged": true,
+      "other_functions_unchanged": true,
+      "readability_formatting": [
+        "poll_diagnostics dictionary",
+        "rows.append dictionary"
+      ],
+      "formatting_ast_behavior_unchanged": true,
+      "yn_response_selection": "Existing Qwen _gen full visible response; no wrapper changes."
+    }
+  ],
+  "protocol_changes": [
+    "Strict full-output matching of case-insensitive Yes/No/Y/N; existing outer Markdown and one sentence-ending punctuation mark supported; exact Chinese yes/no forms retained only where originally supported.",
+    "Unknown votes remain unresolved and route to the existing full-label selection once, rather than being treated as No; no per-label retry is added.",
+    "With no Unknown votes, the original zero/one/multiple Yes candidate paths remain, except invalid multi-candidate arbitration now returns Data Conf instead of the first candidate.",
+    "A valid full-label selection is kept; invalid full-label selection returns Data Conf.",
+    "Save semicolon-separated unknown_labels and fallback_reason in every prediction; original helper three-value return remains, with an optional diagnostics=None parameter.",
+    "For 23 truncating generic wrappers, add return_full_text=False and use True only for Y/N, so strict parsing sees cross-line conflicts. Three GPT-oss wrappers and four Qwen paths already returning full visible text are unchanged."
+  ],
+  "fallback_reason_values": {
+    "": "No fallback route used.",
+    "unresolved_votes_full_label": "At least one undecided vote triggered existing full-label selection.",
+    "no_positive_votes_full_label": "No Yes votes and no undecided votes triggered existing full-label selection.",
+    "candidate_arbitration_invalid": "Multi-candidate arbitration invalid/outside candidates; final Data Conf.",
+    ";full_label_parse_failed": "Suffix appended when full-label selection is invalid; final Data Conf."
+  },
+  "not_changed": [
+    "model paths and loading",
+    "generation sampling, token budgets, chat templates",
+    "prompt text including prior R06 changes",
+    "other label parsers including prior R03 changes",
+    "R09 general failure counters",
+    "R10 general raw-output storage policy"
+  ],
+  "validation": "Static ast.parse, AST structure/scope comparison and source diff only; no experimental module, function, tests, tokenizer, or model executed.",
+  "original_satd_data_written": false,
+  "readability_formatting": {
+    "expanded_dictionary_counts": {
+      "rows_append": 30,
+      "qwen_poll_diagnostics": 4,
+      "helper_diagnostics_update": 26
+    },
+    "preserved_comment_lines_unchanged": true,
+    "entire_file_ast_unchanged_by_formatting": true,
+    "function_or_model_tests_executed": false
+  },
+  "yn_full_response_amendment": {
+    "affected_file_count": 23,
+    "affected_files": [
+      "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "bisection_CoT/gemma-2-9b_few_shot.py",
+      "bisection_CoT/gemma-3-12b_few_shot.py",
+      "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "bisection_zero_shot/bin_new_test.py",
+      "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "bisection_zero_shot/gemma-3-12b_zero_shot.py"
+    ],
+    "already_full_response_files": [
+      "bisection_CoT/Qwen3-14B_few_shot.py",
+      "bisection_CoT/Qwen3-8B_few_shot.py",
+      "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "selection": "Only the Y/N call opts into full response. Pick/full-label calls preserve their former first-line handling.",
+    "generation_and_tokenizer_call_parameters_unchanged": true,
+    "static_ast_scope_comparison": "passed",
+    "function_or_model_tests_executed": false
+  },
+  "final_readback_validation": {
+    "files": 30,
+    "ast_parse": "passed",
+    "source_hashes": "passed",
+    "optional_wrapper_defaults_and_call_sites": "passed for 23 amended wrappers",
+    "diagnostic_row_columns": "passed",
+    "experiment_function_model_tokenizer_or_tests_executed": false
+  }
+}

@@ -1,0 +1,3410 @@
+[
+  {
+    "file": "ICL_Ob_qwen-8b.py",
+    "status": "reviewed",
+    "sha256": "a541eb49467959b7c3a831da2109072af9253b26ea8e734f9b38ebcf9d81d3ba",
+    "syntax_error": {
+      "line": 517,
+      "message": "invalid syntax"
+    },
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 0,
+    "dataset_read_lines": [
+      65
+    ],
+    "metric_lines": [
+      188,
+      507,
+      498,
+      508,
+      499
+    ],
+    "prediction_save_lines": [],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "ICL_Ob_qwen-8b_new.py",
+    "status": "reviewed",
+    "sha256": "790ad6b4cf001ca6ed31191bf73e4d9b1467480fcdb1f20c7eedae9dba7cdb38",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 0,
+    "dataset_read_lines": [
+      27
+    ],
+    "metric_lines": [
+      131,
+      450,
+      441,
+      451,
+      442
+    ],
+    "prediction_save_lines": [
+      460
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "ICL_Ob_qwen-8b_v0.py",
+    "status": "reviewed",
+    "sha256": "656ceed08057c204bbbf5d8fcfef0ff51007e01ace4a691c12c670723b3808ec",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 0,
+    "dataset_read_lines": [
+      69
+    ],
+    "metric_lines": [
+      163,
+      406,
+      397,
+      407,
+      398
+    ],
+    "prediction_save_lines": [
+      416
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "e96db1bfefdbffa9ad4695578330c0f1b89bea12f86b6af8915eaaed7f65d8f0",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      745
+    ],
+    "metric_lines": [
+      768,
+      783,
+      778
+    ],
+    "prediction_save_lines": [
+      774,
+      777,
+      803
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "fd5ca7ccb871f50955ebcdda59e353200ce303dff7d4fd0e4aea0f6b3196c6eb",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      761
+    ],
+    "metric_lines": [
+      783,
+      798,
+      793
+    ],
+    "prediction_save_lines": [
+      789,
+      792,
+      804
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "status": "reviewed",
+    "sha256": "5a687765ad904bd06c413cab57e210a91f22256c9d400dda6cc29cf41a91c5d6",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      930
+    ],
+    "metric_lines": [
+      953,
+      968,
+      963
+    ],
+    "prediction_save_lines": [
+      959,
+      962,
+      988
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "status": "reviewed",
+    "sha256": "27b80023955d743ade415f1d2ccebc472b1e7167f7f0dc3352eaf9b0e81fce1d",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      741
+    ],
+    "metric_lines": [
+      764,
+      779,
+      774
+    ],
+    "prediction_save_lines": [
+      770,
+      773,
+      799
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "status": "reviewed",
+    "sha256": "93b36c40f4a732ed799053d7d72f9523398fbdeab0a4568c03d0a14534a99857",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      632
+    ],
+    "metric_lines": [
+      655,
+      670,
+      665
+    ],
+    "prediction_save_lines": [
+      661,
+      664,
+      690
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "status": "reviewed",
+    "sha256": "87aa6db2dfbb548e00f21959a926832651f2006a808b62629084abc28f8d86a8",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      939
+    ],
+    "metric_lines": [
+      961,
+      976,
+      971
+    ],
+    "prediction_save_lines": [
+      967,
+      970,
+      992
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "status": "reviewed",
+    "sha256": "d05de44b49e727e0b401922967a8e3c7590d2aeb91fc1066f9aa720d902e92ad",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      945
+    ],
+    "metric_lines": [
+      967,
+      982,
+      977
+    ],
+    "prediction_save_lines": [
+      973,
+      976,
+      998
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "status": "reviewed",
+    "sha256": "c1e2a2343dc048493a5d74840f745d0c87053fadb91ac40c6f41d76b87d829f0",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      937
+    ],
+    "metric_lines": [
+      959,
+      974,
+      969
+    ],
+    "prediction_save_lines": [
+      965,
+      968,
+      990
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "709aac8ad23c93c856535618db6be33ca5725411a57537af3e4a946240a1b06e",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      905
+    ],
+    "metric_lines": [
+      946,
+      956,
+      960
+    ],
+    "prediction_save_lines": [
+      953,
+      957,
+      982
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "613a2b1f6a62c6bc3916d205633c5a00a2fd00567648a7ec15ef3430c34d4969",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      384
+    ],
+    "metric_lines": [
+      407,
+      422,
+      417
+    ],
+    "prediction_save_lines": [
+      413,
+      416,
+      442
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "9e9d485a31bb0020d71ee24400758257f5d33af3f3fde976b1766c9ccfe94e32",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      393
+    ],
+    "metric_lines": [
+      415,
+      430,
+      425
+    ],
+    "prediction_save_lines": [
+      421,
+      424,
+      436
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "f5d5ef154e7a71c50b557fea42d43aaf759a7c4a096eaf312eded370d6661173",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      386
+    ],
+    "metric_lines": [
+      409,
+      424,
+      419
+    ],
+    "prediction_save_lines": [
+      415,
+      418,
+      439
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "a8b0ce9f459d27c097e5712c50f2df2439f3caf1d56cba857dc5af7b3146b19c",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      386
+    ],
+    "metric_lines": [
+      409,
+      424,
+      419
+    ],
+    "prediction_save_lines": [
+      415,
+      418,
+      439
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "2df61e1bb7c275f8d45f3874e30e65659be2a2362a59d812d37344590e4f7b72",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      386
+    ],
+    "metric_lines": [
+      409,
+      424,
+      419
+    ],
+    "prediction_save_lines": [
+      415,
+      418,
+      439
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "38c57cac0eacf7f1ce9fc79e3cf88736982b0d98fc9a452bdf109bbb3cb1ae9f",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      387
+    ],
+    "metric_lines": [
+      409,
+      424,
+      419
+    ],
+    "prediction_save_lines": [
+      415,
+      418,
+      440
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "31001fbfc76f4e7506a03b81e45ebb83858c2d4b6d55e2639222f1817965dd4d",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      387
+    ],
+    "metric_lines": [
+      409,
+      424,
+      419
+    ],
+    "prediction_save_lines": [
+      415,
+      418,
+      440
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "d08e3d007d3a2fa02cdc719b88dc14e374f547e2549e6cd2769b2788eed4dcd8",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      384
+    ],
+    "metric_lines": [
+      406,
+      421,
+      416
+    ],
+    "prediction_save_lines": [
+      412,
+      415,
+      437
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "68929cb682d27f68b98630d930a67e59b34861f04cbab87e6ad590f63bb03003",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      376
+    ],
+    "metric_lines": [
+      417,
+      427,
+      431
+    ],
+    "prediction_save_lines": [
+      424,
+      428,
+      453
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "status": "reviewed",
+    "sha256": "4d8272b9befd9d9affdddc7c0331b3a6c6171facfe07e96a77cc0dabe5c75bc3",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      221
+    ],
+    "metric_lines": [
+      250,
+      265,
+      260
+    ],
+    "prediction_save_lines": [
+      256,
+      259,
+      280
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "status": "reviewed",
+    "sha256": "f74ef2995c52f3a4e03459f9ec038dce9fa644063da01268a8be245a869ad976",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      313
+    ],
+    "metric_lines": [
+      343,
+      358,
+      353
+    ],
+    "prediction_save_lines": [
+      349,
+      352,
+      373
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "status": "reviewed",
+    "sha256": "dad510a0517f98c864bf65d10e23743658437604cb7f0325ac405c87f536ecf4",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      313
+    ],
+    "metric_lines": [
+      342,
+      357,
+      352
+    ],
+    "prediction_save_lines": [
+      348,
+      351,
+      372
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "status": "reviewed",
+    "sha256": "1884b42e29da7571b7e3d259dae68286e99b5ec4d8d3e8f74982a929588d505c",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      359
+    ],
+    "metric_lines": [
+      400,
+      408,
+      411
+    ],
+    "prediction_save_lines": [
+      406,
+      409,
+      433
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "5a173899ab6e81701450a6acfa819812e7c288c362b2826d9e42e5fe68f48051",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      161
+    ],
+    "metric_lines": [
+      184,
+      199,
+      194
+    ],
+    "prediction_save_lines": [
+      190,
+      193,
+      219
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "1e277d5d947bcb36f1331fed51f633707d3f38ecfec0369edcb7c5957d38bf23",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      171
+    ],
+    "metric_lines": [
+      193,
+      208,
+      203
+    ],
+    "prediction_save_lines": [
+      199,
+      202,
+      214
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "status": "reviewed",
+    "sha256": "48045954194b5594e943e62bbe0e712c265ad1fb6a298fcb22cc3d551a64ef06",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      153
+    ],
+    "metric_lines": [
+      176,
+      191,
+      186
+    ],
+    "prediction_save_lines": [
+      182,
+      185,
+      211
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "status": "reviewed",
+    "sha256": "26844ab0aed2307eceee5fcbbeb51a5f20f1b18e7d6a8d2259905f0ed8f530b9",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      161
+    ],
+    "metric_lines": [
+      184,
+      199,
+      194
+    ],
+    "prediction_save_lines": [
+      190,
+      193,
+      219
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "status": "reviewed",
+    "sha256": "5c8638d37821820d538740db8b73b0bf1c5d150d4f539fd961a09fc568ef6759",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      162
+    ],
+    "metric_lines": [
+      185,
+      200,
+      195
+    ],
+    "prediction_save_lines": [
+      191,
+      194,
+      220
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "status": "reviewed",
+    "sha256": "7f828db3594da216cc7e7efb3e9273c6b45c77c67670ea3c0c07429c9c8edfef",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      156
+    ],
+    "metric_lines": [
+      178,
+      193,
+      188
+    ],
+    "prediction_save_lines": [
+      184,
+      187,
+      209
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "status": "reviewed",
+    "sha256": "a3aedc2f71c02129877bcb593212d042fd6dcf83432f612b7845aa39e21edeb1",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      157
+    ],
+    "metric_lines": [
+      179,
+      194,
+      189
+    ],
+    "prediction_save_lines": [
+      185,
+      188,
+      210
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "status": "reviewed",
+    "sha256": "4300ce16199d06d022b75e6651b5c05858a0e031aaead3cea0cfd32c6cb4972f",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      157
+    ],
+    "metric_lines": [
+      179,
+      194,
+      189
+    ],
+    "prediction_save_lines": [
+      185,
+      188,
+      210
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "8cef2d07b17b73f079b557171b9e7f9cf103be56310caee74a8dac9cb0b2af1e",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      194
+    ],
+    "metric_lines": [
+      235,
+      245,
+      249
+    ],
+    "prediction_save_lines": [
+      242,
+      246,
+      271
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "ab2c4c860ed78db405da4d84537e622bb12dd9cb13b0d76c25793ef1f7ba5fcb",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      174
+    ],
+    "metric_lines": [
+      197,
+      212,
+      207
+    ],
+    "prediction_save_lines": [
+      203,
+      206,
+      232
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "eab9c752fa2ac68ec04c09680bce20253a7584b0c0ec67222c72e2ff9d87a93a",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      183
+    ],
+    "metric_lines": [
+      205,
+      220,
+      215
+    ],
+    "prediction_save_lines": [
+      211,
+      214,
+      226
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "889ede043cfc3d86da3cb67d95935e2efdce4d3c9587695ed08e025b4435149b",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      175
+    ],
+    "metric_lines": [
+      198,
+      213,
+      208
+    ],
+    "prediction_save_lines": [
+      204,
+      207,
+      228
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "3c5f0df406af45f047a929775af1f0802a0c1ab8effe213fe1d657dce7848917",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      175
+    ],
+    "metric_lines": [
+      198,
+      213,
+      208
+    ],
+    "prediction_save_lines": [
+      204,
+      207,
+      228
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "status": "reviewed",
+    "sha256": "6733705a2faf1d404810d1b33790270b7af781f15a712b1919aed7d6067d0a2a",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      163
+    ],
+    "metric_lines": [
+      186,
+      201,
+      196
+    ],
+    "prediction_save_lines": [
+      192,
+      195,
+      221
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "b68ebb846f5cf69349f9bbb2ad8de3095088cb181c5c6b4b44c9171d2b2dd1cd",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      175
+    ],
+    "metric_lines": [
+      198,
+      213,
+      208
+    ],
+    "prediction_save_lines": [
+      204,
+      207,
+      228
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "status": "reviewed",
+    "sha256": "638dbe63959ae0751c79286e06297d2305ed1ccc6cddac08d606511d76a333f1",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      158
+    ],
+    "metric_lines": [
+      181,
+      196,
+      191
+    ],
+    "prediction_save_lines": [
+      187,
+      190,
+      216
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "c10ebceaf1afac421e7c1a1649da091a51713ae0773027de57064b27343f4be5",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      176
+    ],
+    "metric_lines": [
+      198,
+      213,
+      208
+    ],
+    "prediction_save_lines": [
+      204,
+      207,
+      229
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "5a308b09c1fc3078f53afa07ffd3faae301218dffe8b3fc421e8866387dd6316",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      176
+    ],
+    "metric_lines": [
+      198,
+      213,
+      208
+    ],
+    "prediction_save_lines": [
+      204,
+      207,
+      229
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "2e408e633d55110558bfa2802d39241623e45cda10ee07b0b9d1a028a9ea5b88",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      173
+    ],
+    "metric_lines": [
+      195,
+      210,
+      205
+    ],
+    "prediction_save_lines": [
+      201,
+      204,
+      226
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "5ee76121a18b563a1229ab35945ce2ab47a8ffd701e44bf08ea3ae84d499b0fc",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      211
+    ],
+    "metric_lines": [
+      252,
+      262,
+      266
+    ],
+    "prediction_save_lines": [
+      259,
+      263,
+      288
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "status": "reviewed",
+    "sha256": "98e2f04508ed3f4fd9b522e9165b387ffc18ae602b0bba0cdf785b05ca582b75",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      182
+    ],
+    "metric_lines": [
+      204,
+      219,
+      214
+    ],
+    "prediction_save_lines": [
+      210,
+      213,
+      235
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "status": "reviewed",
+    "sha256": "4d8272b9befd9d9affdddc7c0331b3a6c6171facfe07e96a77cc0dabe5c75bc3",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      221
+    ],
+    "metric_lines": [
+      250,
+      265,
+      260
+    ],
+    "prediction_save_lines": [
+      256,
+      259,
+      280
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "status": "reviewed",
+    "sha256": "6ac4eed3ffa9a9308331e17a0740e9e2329d14de2fb2523824d416fa88e65d03",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      221
+    ],
+    "metric_lines": [
+      251,
+      266,
+      261
+    ],
+    "prediction_save_lines": [
+      257,
+      260,
+      281
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "status": "reviewed",
+    "sha256": "c6bda67294a8f000491c7720a0d82d9e48c63281118b0dd526c30af2d431a48d",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      221
+    ],
+    "metric_lines": [
+      250,
+      265,
+      260
+    ],
+    "prediction_save_lines": [
+      256,
+      259,
+      280
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "status": "reviewed",
+    "sha256": "2d191747b93672b05e2b3891c42f815794a49c8c4f24e5a8663cb08ecc9e0dd5",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      267
+    ],
+    "metric_lines": [
+      308,
+      316,
+      319
+    ],
+    "prediction_save_lines": [
+      314,
+      317,
+      341
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "7c706c905b4814e5fc3de7c5e7471d6a28b4f3d3d82f59c54090e653e7dac9fc",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      188
+    ],
+    "metric_lines": [
+      212,
+      227,
+      222
+    ],
+    "prediction_save_lines": [
+      218,
+      221,
+      243
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "4bc830cc99cce094ff593165599021f35916f72585c4345ba7d67ea3296d1e4f",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      201
+    ],
+    "metric_lines": [
+      224,
+      239,
+      234
+    ],
+    "prediction_save_lines": [
+      230,
+      233,
+      245
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "status": "reviewed",
+    "sha256": "e2d81c82db093c861b6578c2a3c0cf3103e75c490c8c44f7128aea04e39e482f",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      185
+    ],
+    "metric_lines": [
+      209,
+      224,
+      219
+    ],
+    "prediction_save_lines": [
+      215,
+      218,
+      240
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "df55c489fdac9ab58a9b3ba07648a8c829cf13d7da17f9710ff5921edb7959b9",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      210
+    ],
+    "metric_lines": [
+      237,
+      252,
+      247
+    ],
+    "prediction_save_lines": [
+      243,
+      246,
+      268
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "1081d62a784390107b726f36868490b44c179a0b9e6e327659920520b47909b9",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      210
+    ],
+    "metric_lines": [
+      237,
+      252,
+      247
+    ],
+    "prediction_save_lines": [
+      243,
+      246,
+      268
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "status": "reviewed",
+    "sha256": "237fe018eecbf423c15f3ccc2d037e60d65fc5d77619cba5f65a7d9342ab5d00",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      192
+    ],
+    "metric_lines": [
+      215,
+      230,
+      225
+    ],
+    "prediction_save_lines": [
+      221,
+      224,
+      246
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "status": "reviewed",
+    "sha256": "5bdf4b5591a19b61cf220984044c330e2dab1081fb38b53e52c66e77163a3426",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      203
+    ],
+    "metric_lines": [
+      227,
+      242,
+      237
+    ],
+    "prediction_save_lines": [
+      233,
+      236,
+      258
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "status": "reviewed",
+    "sha256": "956d161a3b090fcf1e926bc5ce2af8351f070b48c2840f148f069d37f5ad2417",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      203
+    ],
+    "metric_lines": [
+      227,
+      242,
+      237
+    ],
+    "prediction_save_lines": [
+      233,
+      236,
+      258
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "9722780dd61d1be80398d055ca2a41b485fcb228a9a723e2a05e03a6b9d3f03c",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      227
+    ],
+    "metric_lines": [
+      270,
+      280,
+      284
+    ],
+    "prediction_save_lines": [
+      277,
+      281,
+      306
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "battle/gpt_battle.py",
+    "status": "reviewed",
+    "sha256": "4fe931df45d7bb451a54f8669fe1a68a4697ee74f8d1032b88aafb2090f82164",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      338,
+      221
+    ],
+    "metric_lines": [
+      401,
+      409,
+      412
+    ],
+    "prediction_save_lines": [
+      407,
+      410,
+      435
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "battle/test.py",
+    "status": "reviewed",
+    "sha256": "138ddec47d27cbf136371a313a942967ada729a3eaf94f44b0aad3bac178204f",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      255,
+      226
+    ],
+    "metric_lines": [
+      312,
+      321,
+      324
+    ],
+    "prediction_save_lines": [
+      319,
+      322,
+      347
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "ce1beeaf8f7df2471fbe39dbfe922befac21f4c598aa4ef6add84f19c7bf0761",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      423
+    ],
+    "metric_lines": [
+      448,
+      463,
+      458
+    ],
+    "prediction_save_lines": [
+      454,
+      457,
+      471
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "b1069720cfd242bb1d6e599e356203ed88c3fc31421250e53112a782554b34db",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      480
+    ],
+    "metric_lines": [
+      505,
+      520,
+      515
+    ],
+    "prediction_save_lines": [
+      511,
+      514,
+      528
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "34c45663aadb395e4a83c06cd3d64afcad1a074d5071050d36d22e4598b0204d",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      433
+    ],
+    "metric_lines": [
+      458,
+      473,
+      468
+    ],
+    "prediction_save_lines": [
+      464,
+      467,
+      481
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "ad3c2720bb724a6defb7fd649b0e58b19195c50e8692823e55ed33dd4edd1931",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      364
+    ],
+    "metric_lines": [
+      441,
+      450,
+      453
+    ],
+    "prediction_save_lines": [
+      448,
+      451,
+      469
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "f1bbec723bd95234086cfc155d367a142c8d3f6aabb5f2817beb1d293218dbcb",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      364
+    ],
+    "metric_lines": [
+      441,
+      450,
+      453
+    ],
+    "prediction_save_lines": [
+      448,
+      451,
+      469
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "e2386c56b8609b048b823ed693ef9e14a93b21817251a23cc471d23f28b15a86",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      435
+    ],
+    "metric_lines": [
+      460,
+      475,
+      470
+    ],
+    "prediction_save_lines": [
+      466,
+      469,
+      483
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "7fc4b3bc47a58d6a53280e07b7963df837950df15eca37d456aad25d8254cc00",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      479
+    ],
+    "metric_lines": [
+      504,
+      519,
+      514
+    ],
+    "prediction_save_lines": [
+      510,
+      513,
+      527
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "4b4d49f0213bacee5ad0af9202d165d00601c7dc985798a31e1d83328d2987ea",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      479
+    ],
+    "metric_lines": [
+      504,
+      519,
+      514
+    ],
+    "prediction_save_lines": [
+      510,
+      513,
+      527
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "07faeab8f0fd7ae04d254fc2afd6155311bc1e9a3aca62a8c14f8cb552c2b077",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      607
+    ],
+    "metric_lines": [
+      632,
+      647,
+      642
+    ],
+    "prediction_save_lines": [
+      638,
+      641,
+      655
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "a87b71db198013cdb102f922e8efd734b40f87809146e6b3ff192dce17997a9e",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      652
+    ],
+    "metric_lines": [
+      677,
+      692,
+      687
+    ],
+    "prediction_save_lines": [
+      683,
+      686,
+      700
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "f0bdf87b9cf5e1257aac90e3b7faa2902211383d5060dfbbccbfea7848360ac5",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      638
+    ],
+    "metric_lines": [
+      663,
+      678,
+      673
+    ],
+    "prediction_save_lines": [
+      669,
+      672,
+      686
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "dc0907a3330896f05944572a70034fde7f5fe0c37b3570749507601b115cff86",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      638
+    ],
+    "metric_lines": [
+      663,
+      678,
+      673
+    ],
+    "prediction_save_lines": [
+      669,
+      672,
+      686
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "1e7b4839ecd9e5b6d9b62b8b4489021841b459f10c373054dcc368d9d1165382",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      640
+    ],
+    "metric_lines": [
+      665,
+      680,
+      675
+    ],
+    "prediction_save_lines": [
+      671,
+      674,
+      688
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "adfebbda4f123b1fea1fc71a1bce3ecbe636fc50d38789f85ae8a296aea6231a",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      759
+    ],
+    "metric_lines": [
+      784,
+      799,
+      794
+    ],
+    "prediction_save_lines": [
+      790,
+      793,
+      807
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "2e1efd698c524783ad17b9cf22a90326f5c3cb685e2fa418f10d7591de5ddb77",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      641
+    ],
+    "metric_lines": [
+      666,
+      681,
+      676
+    ],
+    "prediction_save_lines": [
+      672,
+      675,
+      689
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "647b1d0aa715bd585f17bb5ff842e3766189acf7e6334f571ea0760d40f23cbf",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      637
+    ],
+    "metric_lines": [
+      662,
+      677,
+      672
+    ],
+    "prediction_save_lines": [
+      668,
+      671,
+      685
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "9d78b79b80f05899f7d43927419166d653aed8bb903ea4ec1c8ae85d44efdac8",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      642
+    ],
+    "metric_lines": [
+      667,
+      682,
+      677
+    ],
+    "prediction_save_lines": [
+      673,
+      676,
+      690
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "a91bb0825f05bbd45a209265cfa80f7eb513ae30acc3e1cb0fd244a526380191",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      532
+    ],
+    "metric_lines": [
+      557,
+      572,
+      567
+    ],
+    "prediction_save_lines": [
+      563,
+      566,
+      580
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "066b8b181f5c8553128a75dd2af978636b26e1671639aa3a8c4967544f1bc059",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      235
+    ],
+    "metric_lines": [
+      260,
+      275,
+      270
+    ],
+    "prediction_save_lines": [
+      266,
+      269,
+      283
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "aa20673b500ed572659a033279e99ade51e97b882b0027b19a67c3e8be318cf4",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      244
+    ],
+    "metric_lines": [
+      269,
+      284,
+      279
+    ],
+    "prediction_save_lines": [
+      275,
+      278,
+      292
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "925b6529728593271ff5168d08d6d043bd5cd63fc0b13f54b21fe00bb46e6864",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      245
+    ],
+    "metric_lines": [
+      270,
+      285,
+      280
+    ],
+    "prediction_save_lines": [
+      276,
+      279,
+      293
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "b52084abf925f48b73c71fbd43af1c8397abd7508da586c9108b5c59bdd188b9",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      245
+    ],
+    "metric_lines": [
+      270,
+      285,
+      280
+    ],
+    "prediction_save_lines": [
+      276,
+      279,
+      293
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "89df7c89801e017d8d8fead414197b68e03114b1e6d0b9db4382b2cbc018e4ee",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      245
+    ],
+    "metric_lines": [
+      270,
+      285,
+      280
+    ],
+    "prediction_save_lines": [
+      276,
+      279,
+      293
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/bin_new_test.py",
+    "status": "reviewed",
+    "sha256": "a6f32fe3191784192ffbdc06c6b08e2b46aabd3140cd456a601f05a4225d29b4",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      245
+    ],
+    "metric_lines": [
+      270,
+      285,
+      280
+    ],
+    "prediction_save_lines": [
+      276,
+      279,
+      293
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/bin_test.py",
+    "status": "reviewed",
+    "sha256": "7650fb29cd6d6ce4fca25e9647eb07aa97c6486de88ad67d1bf7750f57711590",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 0,
+    "dataset_read_lines": [
+      156
+    ],
+    "metric_lines": [
+      188,
+      193
+    ],
+    "prediction_save_lines": [
+      192,
+      193
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "f6dce5888ad47506b2fb4775890982e06953293ddaf581de3684f1a196aa28b4",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      246
+    ],
+    "metric_lines": [
+      271,
+      286,
+      281
+    ],
+    "prediction_save_lines": [
+      277,
+      280,
+      294
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "3feb7a5fea1ce6960e56940e946d7b77181c5e6574c5aeace35fe8b81bfd30a1",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      249
+    ],
+    "metric_lines": [
+      274,
+      289,
+      284
+    ],
+    "prediction_save_lines": [
+      280,
+      283,
+      297
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "fa261d7ad3ef8a2977f57f65b63d5dc59ee967c4da3a5bcd8a43b328bf3e27c2",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      246
+    ],
+    "metric_lines": [
+      271,
+      286,
+      281
+    ],
+    "prediction_save_lines": [
+      277,
+      280,
+      294
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "217af126132cdb1892ba11f937d5c55200d04b62a1ba435f85f0c747791c8f08",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      248
+    ],
+    "metric_lines": [
+      273,
+      288,
+      283
+    ],
+    "prediction_save_lines": [
+      279,
+      282,
+      296
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "data_process.py",
+    "status": "reviewed",
+    "sha256": "058dd65dc0d142f4ffbd52823421febd8d14d304bf0f633230644a05314a0525",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 0,
+    "dataset_read_lines": [
+      6,
+      8,
+      137
+    ],
+    "metric_lines": [],
+    "prediction_save_lines": [],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "download_model.py",
+    "status": "not_applicable",
+    "reason": "Model download utility; no classification gold, parser, metrics, or prediction saving. Authentication content not extracted."
+  },
+  {
+    "file": "original_COT.py",
+    "status": "reviewed",
+    "sha256": "1933a33fd58b85925456598975989b140850c325930e2e5de20dc90545fd5d26",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 6,
+    "dataset_read_lines": [
+      217
+    ],
+    "metric_lines": [
+      245,
+      260,
+      255
+    ],
+    "prediction_save_lines": [
+      251,
+      254,
+      267
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "random_classify/random_classify.py",
+    "status": "reviewed",
+    "sha256": "8a0a075170ed3a4b823dd53de82e9ef48efb4ad4115acb94f3d0f4d661f7ef2f",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 0,
+    "dataset_read_lines": [
+      47
+    ],
+    "metric_lines": [
+      65,
+      82,
+      77
+    ],
+    "prediction_save_lines": [
+      73,
+      76,
+      87
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "test1.py",
+    "status": "reviewed",
+    "sha256": "32d855097bb07e340e7fb18bb9035d11cb19f52cb7994c95c5fc863959717aa9",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      248
+    ],
+    "metric_lines": [
+      325,
+      334,
+      337
+    ],
+    "prediction_save_lines": [
+      332,
+      335,
+      353
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "test3.py",
+    "status": "reviewed",
+    "sha256": "ff1494af0728287d5cfefcd86b955fd186b9678cdabe22e2009681dbf3ca5d6c",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      248
+    ],
+    "metric_lines": [
+      325,
+      334,
+      337
+    ],
+    "prediction_save_lines": [
+      332,
+      335,
+      353
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "382890188198c402cbf5f8bc30976a2b8a10b739dd216cbfab484ec4e3e18a1e",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      504
+    ],
+    "metric_lines": [
+      535,
+      542,
+      550,
+      555
+    ],
+    "prediction_save_lines": [
+      547,
+      549,
+      554
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "0508fb7db887ccd3d089283691beba152368eac580ff58d2e149754896d88d0e",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      491
+    ],
+    "metric_lines": [
+      522,
+      529,
+      537,
+      542
+    ],
+    "prediction_save_lines": [
+      534,
+      536,
+      541
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "0394d8bad9b5d0ff7ab9de44fb71bcb0581acfe7c58a8fff59bb925de1b52686",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      506
+    ],
+    "metric_lines": [
+      537,
+      544,
+      552,
+      557
+    ],
+    "prediction_save_lines": [
+      549,
+      551,
+      556
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "4f6af01e5adb4b784f647af49e62164f6faa68a9d616c798c5b4db44a620055f",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      484
+    ],
+    "metric_lines": [
+      515,
+      522,
+      530,
+      535
+    ],
+    "prediction_save_lines": [
+      527,
+      529,
+      534
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+    "status": "reviewed",
+    "sha256": "2953f4e1068b961842d6ecb1759f3ba145661e6efd9583f525b53f6ca584fd45",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      506
+    ],
+    "metric_lines": [
+      537,
+      544,
+      552,
+      557
+    ],
+    "prediction_save_lines": [
+      549,
+      551,
+      556
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "99802f1ff5c052297b61d41522efc59cfba874b1884be66e23cc65266d6f20c4",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      494
+    ],
+    "metric_lines": [
+      525,
+      532,
+      540,
+      545
+    ],
+    "prediction_save_lines": [
+      537,
+      539,
+      544
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "13b458c0ed161737e5127a70ace369497a42d0a90cae9b1ff25844375f05db32",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      482
+    ],
+    "metric_lines": [
+      513,
+      520,
+      528,
+      533
+    ],
+    "prediction_save_lines": [
+      525,
+      527,
+      532
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "41336f0938b06682e8b0d691f5611a77b45e45cd85550074e0f4216f1d9a6601",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      482
+    ],
+    "metric_lines": [
+      513,
+      520,
+      528,
+      533
+    ],
+    "prediction_save_lines": [
+      525,
+      527,
+      532
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+    "status": "reviewed",
+    "sha256": "02eee5e877a1c7cffb8dd082f909daf2fb42c773de9d1683013968a875f6b451",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      402
+    ],
+    "metric_lines": [
+      431,
+      440,
+      450,
+      455
+    ],
+    "prediction_save_lines": [
+      447,
+      449,
+      454
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "2a50eec31603589fffc92d20a59879ee81dbdb3123c9a7704cba374dd7e662ff",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      412
+    ],
+    "metric_lines": [
+      443,
+      450,
+      458,
+      463
+    ],
+    "prediction_save_lines": [
+      455,
+      457,
+      462
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "270dd7b00d06543e64f2895d4f21e3001d263f54c8982759fb8c2052752d5bd3",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      399
+    ],
+    "metric_lines": [
+      430,
+      437,
+      445,
+      450
+    ],
+    "prediction_save_lines": [
+      442,
+      444,
+      449
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "0cf4a9cef75125c0e55fa440853c8751ce26a68e579ca2acbc0c8072abe110a8",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      414
+    ],
+    "metric_lines": [
+      445,
+      452,
+      460,
+      465
+    ],
+    "prediction_save_lines": [
+      457,
+      459,
+      464
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "168dae55a00abe2dc71dfafecb751fccc5a8f80f538e7cdd6ef65131ceae09d3",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      392
+    ],
+    "metric_lines": [
+      423,
+      430,
+      438,
+      443
+    ],
+    "prediction_save_lines": [
+      435,
+      437,
+      442
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "d2be46906aca93e8b815ff93e353ac636b95fdab36a8b1a64a367a8cdf9d8df7",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      414
+    ],
+    "metric_lines": [
+      445,
+      452,
+      460,
+      465
+    ],
+    "prediction_save_lines": [
+      457,
+      459,
+      464
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "05dbb3e7a116081efa2d495ea09cc13876a5ed0842f0ccb63d65ec9ea79957bf",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      402
+    ],
+    "metric_lines": [
+      433,
+      440,
+      448,
+      453
+    ],
+    "prediction_save_lines": [
+      445,
+      447,
+      452
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "94bc6a75f4d5b70a11dec74c0ad09959c3350f18912c7d107a3bee3905bb02ec",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      317
+    ],
+    "metric_lines": [
+      348,
+      355,
+      363,
+      368
+    ],
+    "prediction_save_lines": [
+      360,
+      362,
+      367
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "6ddb1e2d1c981aa7dae8a932635e4e4c29a65dc52d49c5b5f02f19fbbbceaa70",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      403
+    ],
+    "metric_lines": [
+      434,
+      441,
+      449,
+      454
+    ],
+    "prediction_save_lines": [
+      446,
+      448,
+      453
+    ],
+    "sample_id_preserved_in_output": false
+  },
+  {
+    "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+    "status": "reviewed",
+    "sha256": "2a424643e44d39860c66f1f2b86735e9c6978eed5050a69fc3cd1c707b98f6b4",
+    "syntax_error": null,
+    "review_method": "Read relevant label/parser/dataset/evaluation/save AST; group identical helpers; model-free extracted-parser tests; inspect method-specific control flow.",
+    "areas": [
+      "gold and candidate label mapping",
+      "unknown/fallback control flow",
+      "metric labels and denominators",
+      "data alignment and duplicate identity",
+      "CSV/report write order and run naming",
+      "pure parser behavior"
+    ],
+    "parser_test_count": 12,
+    "dataset_read_lines": [
+      310
+    ],
+    "metric_lines": [
+      339,
+      348,
+      358,
+      363
+    ],
+    "prediction_save_lines": [
+      355,
+      357,
+      362
+    ],
+    "sample_id_preserved_in_output": false
+  }
+]

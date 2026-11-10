@@ -1,0 +1,519 @@
+{
+  "user_policy": [
+    "Explicit author general recommendation",
+    "Fresh checkpoint generation_config.json",
+    "Installed framework defaults for omitted fields"
+  ],
+  "caps": "Preserve all original task/stage caps",
+  "execution": "Static AST/source/hash/diff only; do not execute experiments/models/tokenizers/tests",
+  "files": [
+    {
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "sha256": "105e6768b07140f52b27c2803ed37741ccea377814a5fe761328cf787273485c"
+    },
+    {
+      "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "sha256": "8a48c6b79df4956435eae8b81b919f5f4319fa0a402a4126fdd9ffa9d2b996c8"
+    },
+    {
+      "file": "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+      "sha256": "83326303d68e56769355f5fe5f8e9e5a1a11c56982e8c12a7dbfdb7e48a6247e"
+    },
+    {
+      "file": "basic_few_shot/Qwen3-14B_few_shot_re.py",
+      "sha256": "5cade37bb0bece651225a1adb7c35e73fd564ab2f478e5dab2e33f6424c34574"
+    },
+    {
+      "file": "basic_few_shot/Qwen3-8B_few_shot_re.py",
+      "sha256": "460cb22c0fd8a73e527037561b74ac32fb9ba24d2ee15c434d193d1200658305"
+    },
+    {
+      "file": "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+      "sha256": "18d796498bb47160a68d5f4bdb960617d417c82c20488e2e45fce6baabfde599"
+    },
+    {
+      "file": "basic_few_shot/gemma-2-9b_few_shot_re.py",
+      "sha256": "64ce6f75e320fdeaa642983446e0f25c16ae690e9d2da4072d3aada484baa2f4"
+    },
+    {
+      "file": "basic_few_shot/gemma-3-12b_few_shot_re.py",
+      "sha256": "5db7964d0295af6662547b6e5e784fa526faaffd08e241224b842f0fbc476415"
+    },
+    {
+      "file": "basic_few_shot/gpt-oss-20b_few_shot.py",
+      "sha256": "b20f9c8af2579296ef1f82f50870df031ed95c8e706072c293972b5581d5e7fe"
+    },
+    {
+      "file": "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "sha256": "d858ff8753f1fdd089201fad2be203544d99e65dc3b8f20e295f6f664abc4342"
+    },
+    {
+      "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "sha256": "b9a1847b23cd568141d57dc18bcf31bb08e77fad19c52d10b0d48fbbfdf9829d"
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "sha256": "9edffbfeb1341d46cec1ccce11d9181163395f9b17ffbb5da5317947b4b64809"
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+      "sha256": "3fc8c65834cdc3e4a771130a6765e6acc873f73b02e2b19bfd51a4439f49f39b"
+    },
+    {
+      "file": "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+      "sha256": "3a84b6169e59650adc0319b7c55110216ba01d2ac53f5daaf2005954a07deb65"
+    },
+    {
+      "file": "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "sha256": "d8b5991d043857a1eda4aa2426f68e0ec034c9daf607fdbaa35907c26218f63a"
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+      "sha256": "53e3a3c97106daf5a2fb56f3dd2549b10747a59493825369976e0bf5641c7dd8"
+    },
+    {
+      "file": "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+      "sha256": "ac366281af35e5365323619dd8e249a2d1965cc9703443f1a53fadada65b072e"
+    },
+    {
+      "file": "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "sha256": "0dd73f79dcd33832625516a51c462e6cda94d2be25dae4fb5a12d92e64b8f3bd"
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "sha256": "aed66f4119e2b03eb9e622f01400ad7c10ac3ed0ced9c1354af4e3538a688451"
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "sha256": "973bcc493667692d0d643b1cd80f8d2697b077a463cf22cdc9b544e58e91dd8a"
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "sha256": "a1767c225d02fb8f5c205324d4381d17232707816efe6bdd8c51f86ae679417b"
+    },
+    {
+      "file": "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "sha256": "4281d25365c28a302d3c51eb3a948ba17fb7901bb7bbd011447461edb11b0e90"
+    },
+    {
+      "file": "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+      "sha256": "9c251ab03b435cf2c53207dfd3f7ea52da12b4b806a4cb9733b4053a60bd5fbc"
+    },
+    {
+      "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "sha256": "843096b137b70af428789930e74203a934dae9ddaf49dba37ff0c5b8c3a8c290"
+    },
+    {
+      "file": "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "sha256": "86bfaf57181bd845e75123491b3756f9731ee107b68fc356909f4b3cc29a8f2b"
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+      "sha256": "4d0f1b942add0eed2ac31b1ed8d2541f2bf2a0cef438650a8c20b09faa53b903"
+    },
+    {
+      "file": "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+      "sha256": "c7673855c31d58f76621300ea05310fb881c6d6745a9a5695282fe5a917154ae"
+    },
+    {
+      "file": "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+      "sha256": "943d97aed5bf73f68488c388b1d9fa0c1ab12d9b0a99d8bd4a16f7ab0199a5aa"
+    },
+    {
+      "file": "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+      "sha256": "fa02085d04fb3d734fae7ea617e24ac891ae1df273eda3d75295593c3e5a79e0"
+    },
+    {
+      "file": "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+      "sha256": "38edce41baedf001859ad5ea18010f1ffad2355d184779ec18392207642ab219"
+    },
+    {
+      "file": "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+      "sha256": "c257e4928f3d0ca5066c6a7ba062088971a22018f42c0a7303f1eac94b0469ed"
+    },
+    {
+      "file": "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+      "sha256": "53d240b38c5589accacb6a2f805cf6cbeb657b4e38da0e92376b93333357a09f"
+    },
+    {
+      "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "sha256": "daef316638a9fdd7054cf781ea22fd0f70be1065dd6584c9121b63c93026e585"
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+      "sha256": "19cbdf7ae39969d852d4fe61b6ae500d719be875e2729521bf63bf0050dc9606"
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+      "sha256": "aba47078d387d939a2ece09f298d0adbba19f207312ea0cb57c7c1228778e3ee"
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+      "sha256": "6767ff38c8748f28ac7272fe0d90860006a2c70fe52a08c1fc4ca23c4533e27c"
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+      "sha256": "5eab705fd9c6b18b39b7733ffc393ecc4202974f3e96306fbb7bb7ae2ed9c9d9"
+    },
+    {
+      "file": "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+      "sha256": "f9135a4d9b501d7f19135761342075a0160b333126bbfb44a9517ffd986bfdd8"
+    },
+    {
+      "file": "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+      "sha256": "5907258d74a219399a6f5c623d15001379461f627774dbcd0ea65737d7fa0e3e"
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+      "sha256": "213fe011353bd2ac17cdff3008acc6f8ef5409f92c2a2a46f27c547c77a77909"
+    },
+    {
+      "file": "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+      "sha256": "31cbb938c23ed740db5ade82a415e736c5d271fdf10ae44431e989ae49e80fa1"
+    },
+    {
+      "file": "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+      "sha256": "6c8a280fcde7cb27985502ba8984a118dd927d95841451791a2f40006876ba2d"
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+      "sha256": "aed66f4119e2b03eb9e622f01400ad7c10ac3ed0ced9c1354af4e3538a688451"
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+      "sha256": "d1736771ec8a9904e8c2ae3f50e720482a1bb87359d607405a56a030cf23f499"
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+      "sha256": "6e55281655783d135c6c3cb92fba2b431bdece2fa6bd9a8bcb92383aa478abe8"
+    },
+    {
+      "file": "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+      "sha256": "7c5aa311d5b81f7207922ae2c14fc318ee5c15073f30d36c71670f1d1901f3d6"
+    },
+    {
+      "file": "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+      "sha256": "cf29e12cec7c67abce4d38ddab867817af84df6add0994e8ecd4193c9861987c"
+    },
+    {
+      "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+      "sha256": "19d80a651d6c6c2b9ee94802634e04fc3bbbe2b332f44b0f7b430407aba4c4c9"
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+      "sha256": "1483dda8fb73735a674337eb79305de785077e8e432f117cbbb00a36fe6f4fa7"
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+      "sha256": "320b156edb60ff89fd57df1649a85eb60b21c3357ab29c3465e84105d8508566"
+    },
+    {
+      "file": "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+      "sha256": "74956c0edc9acbdeb4187a0101b82bd306dbf1e664ef2352be9cdc3b3cf6a24c"
+    },
+    {
+      "file": "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+      "sha256": "7ac7bab800ac3fb4fc502f5d4df638e3919fc39b5e00fb75c4af987e5e4fc181"
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+      "sha256": "513fe86ca40105b297fce22e7067d9aefe9e532f65ae6099737fcda29ba205d2"
+    },
+    {
+      "file": "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+      "sha256": "0ed28d7ff0b5cacf4a58e049d5e1796d6c95c37f8b0693e922617cbf514d9288"
+    },
+    {
+      "file": "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+      "sha256": "881770f8fdbe9361d07c14c513e0c8b303e76c4c2539d58ac77a7479180baf2a"
+    },
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "sha256": "65482e8fbe8d66e7c9a2334a526d323e8788b542c511a81c4cfd175285bbb9ab"
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "sha256": "45a7e6b3793af17c8ab79f94ec3e6df386a968de6ee245d40ab87a5e18ff1d19"
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "sha256": "59ff8713e41379c8977d35eed751f9861b86c05dcc3321b244d1966f2cbd621b"
+    },
+    {
+      "file": "bisection_CoT/Qwen3-14B_few_shot.py",
+      "sha256": "4cbf83a159cbfbc0795fd27d7442a1b6a154808e5cffe4b066d51b6deac78ffe"
+    },
+    {
+      "file": "bisection_CoT/Qwen3-8B_few_shot.py",
+      "sha256": "43a5e7d14c47a27ff3d61a98124cf71fbb7ecb8eb238e0e5450150e4fe670a06"
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "sha256": "c3eb91ecce6bb4884a07f685fe137d2390ca2d4695228a23d31d4689b49c2c6b"
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "sha256": "9b19471911d21bc24a20b2b92eb5e86b0f73dd24b29bdc1bebe8d421ee89b82b"
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "sha256": "d99ac89655064dadfc1ce982ac31525e21143ccadbd793ec9d59721e4cfa2d56"
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "sha256": "e53b9a28e424d73f4ba24790e4881b09e1fa4b69759b14ad779e0d04fe7c81ab"
+    },
+    {
+      "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "sha256": "590523bdfa7e49dcd6046682bfc42c1217d7c4221c774e887e89f2a52adf35ca"
+    },
+    {
+      "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "sha256": "78c40380766d544ddaa7d02b53e20ee9ddd6768f47f976643fe338b2f69c88a6"
+    },
+    {
+      "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "sha256": "41da964eab2f612beaf074c743af34828a6050dd65ba20e835b8e69d51bda867"
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "sha256": "0dd4ddf13a8c6a16dbd258c4fc75dfc9b5aba6422fa43544ef4825462cd2f92e"
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "sha256": "cc862eed7cf3101b0fe7a25167cb9787d2c71813802381f43e1cfd2d33c9874c"
+    },
+    {
+      "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "sha256": "7eb46417e1f66d9e157e433219f86c1b4ee869fb19f3f76428c3c5f6364e8f49"
+    },
+    {
+      "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "sha256": "5ec4d249eb772388b203280252c13966ac1ca8a92ab70eff1bd25c15abbe1279"
+    },
+    {
+      "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "sha256": "2d4fda0074cce81205cbc8057a2899f4cb52af29f308223742c587bed50f9647"
+    },
+    {
+      "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "sha256": "bb2e2f5de08bb9ac11cffd17222fa8f21a1414b71633ef4285172154fa7ea6cb"
+    },
+    {
+      "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "sha256": "9e7a97a68f2375c66382affe813f7ef55b541039177c0f380fd79f145a659f00"
+    },
+    {
+      "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "sha256": "fa97a1335436cc4f8291f6b53fad22810598e3bf16751c122c0d72a6812db212"
+    },
+    {
+      "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "sha256": "8e6ff06396458bf23d93660a6350dc1b5268389c89a0a21187a7e9a1ed538ddf"
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "sha256": "64dcdfbfb860be3329ef39ef0b0a051fd6948fd85d94c8693d37719654e1edca"
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "sha256": "d888859d1ec38ab2b5ef2bfa3fb9df283302c12d1be4454d62118a4ba1cb0058"
+    },
+    {
+      "file": "bisection_zero_shot/bin_new_test.py",
+      "sha256": "aa9358dce9e9937b5be3d8b7855e85abee05d169ce59494b69bec0ae7cea5071"
+    },
+    {
+      "file": "bisection_zero_shot/bin_test.py",
+      "sha256": "1ab92384686f9b0470615214976b8a649e4c596f0c0acfff6fb68d25667204ad"
+    },
+    {
+      "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "sha256": "41f4091f436ba43c30274e0cdba807748613e48a7687bc75a90fbda3b9989b48"
+    },
+    {
+      "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "sha256": "d38b7829184bf1855d59a55d4409a0a9a54bc18b554dd7688e957e710b776a6a"
+    },
+    {
+      "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "sha256": "80e19b39c2ae328cf01b89aa4d1dbd1fa1edc53ea76ef1f7e420d00fcc0ae28e"
+    },
+    {
+      "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "sha256": "4653cfa61da0a6b6ef0acc941b336f89b0f171e2b1a1280874818f3d2490a2c3"
+    },
+    {
+      "file": "pilot_context_20261016/analyze_pilot.py",
+      "sha256": "7b6b1fb86991ce4514fba449dec86d09df3434ea8540a2f3161b8f276bc5f0ec"
+    },
+    {
+      "file": "pilot_context_20261016/download_model.py",
+      "sha256": "5e03d24d2af8c1d2c656049fbf0e6694b7313f86777ad64b4f6f3b63dad213a7"
+    },
+    {
+      "file": "pilot_context_20261016/prepare_pilot.py",
+      "sha256": "15413914ff61beff2ba037d62965cbcace92568aa0ce602dce09a22e1cc144aa"
+    },
+    {
+      "file": "pilot_context_20261016/reference/frozen_prompt.py",
+      "sha256": "b94cbdf8684412cd86b0411b9a9cabf1ae24197ec36cbb066cd39e0c2f5cb256"
+    },
+    {
+      "file": "pilot_context_20261016/reference_thinking_stopped/frozen_prompt.py",
+      "sha256": "d88c3614ea09c7040778d7834c568dee8cbb830b93d4b7cd2da5b2722e73b902"
+    },
+    {
+      "file": "pilot_context_20261016/run_pilot.py",
+      "sha256": "ca0eab14478fe7740e3375f6d272c4e80b0ee42264c4302d498a1600be6d583d"
+    },
+    {
+      "file": "pilot_context_20261016/test_analyze_pilot.py",
+      "sha256": "9da216f6d61b5cfc0cd83ce2c1b0ef2a5d52e3cbcdc34b5904e3e7a10cf61578"
+    },
+    {
+      "file": "pilot_context_20261016/test_runner.py",
+      "sha256": "8272fcb17c12b948097c09dbda7232d873879fb1862b0d313e2b65534d0a22bf"
+    },
+    {
+      "file": "pilot_context_20261016/verify_historical.py",
+      "sha256": "d6022f5d087c5c6fbd5f65c4e66cfc871598b5f4bcc4c7b23dcae1eba06200d2"
+    },
+    {
+      "file": "pilot_context_20261016/wait_and_run.py",
+      "sha256": "8c61dd56d3ca0557ba168956e40f229a1ca9afdb33c4e717c729fac66f0c890e"
+    },
+    {
+      "file": "random_classify/random_classify.py",
+      "sha256": "ab78c43e6a3549ffd9067e0371bc2a11034bf2cfb0efd84899e96be646de1d41"
+    },
+    {
+      "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "sha256": "95acc18241d67cab0f054368b1a98a1e0759b8279902d14f1c2d628823c21602"
+    },
+    {
+      "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "sha256": "9d67d2271a447cb42d4eacb458bc1e6ef2148695346c4ed7d5b5179c840855a1"
+    },
+    {
+      "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "sha256": "09e2f7255bd04aae9780f191d820230228ce0e64425813d876b1e47faac7a3da"
+    },
+    {
+      "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "sha256": "2e4e98fa5e8e618780b31c85e4966460cedd4a90402ad6272506de81b92dfbd6"
+    },
+    {
+      "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "sha256": "9f8e44dd266171ed579228d33805cf692d3e1a238a8840638bcea0b7d51389ee"
+    },
+    {
+      "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "sha256": "e7e9ada444ed59323d1be4a24d8c8376d3d183a67e8b320fe089e6abfc20fb5a"
+    },
+    {
+      "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+      "sha256": "b8fd8db16e42d6ec39bcd71714d61b680404bcfeec6e419d12d47f6c8a97bdcf"
+    },
+    {
+      "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+      "sha256": "08082389469d813fb5ea362e2b1bd64355f8c378849f820ade8a8696f03650b7"
+    },
+    {
+      "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "sha256": "dc09e9c1e31c0effe0751108784135c612938b2f315d2adba1a2abe2e57d1131"
+    },
+    {
+      "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "sha256": "1b38f8750495927d9584b967a42a5e1754bb19e26de1059b1e0fe6334cbacd32"
+    },
+    {
+      "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "sha256": "4f4bed2fd3d2088a796522831d066a945484413c41190774a1492e38fb4b5973"
+    },
+    {
+      "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "sha256": "513c2266f1dd28c596030bf20db2f3f8229c790d1d3776512d1404604d2cb719"
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "sha256": "9a7666cfa7c4b9b1c6d7a403693cc69e5221083b67e13f4dd5ceb2eb5198b851"
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "sha256": "74900d5e387406df5f943ee0f87b621f9a69a46cfa04aa0cf50680a918880eda"
+    },
+    {
+      "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "sha256": "5f451468fb028e02772f1d3ebc33a8c93f57bacef037a1fe1c833a60dbc37417"
+    },
+    {
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "sha256": "38bb8eda5a8e0753abe9430f97042dd793dc323932298e770322f5c737f0fde7"
+    },
+    {
+      "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "sha256": "db0c42ca05f06952c5d1916a6bcfd758e72fe57abd246debe19b395213bcfc5f"
+    },
+    {
+      "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+      "sha256": "40e2463af5f27b0790b3f335bd1cbb0f83131f4c18e65314519dd0187d8faf83"
+    },
+    {
+      "file": "revision_runtime.py",
+      "sha256": "a7cf667d8a3073f26f2d0be5f1cb2a7a52392413fd95036f403c8dc2615d3003"
+    },
+    {
+      "file": "pilot_context_20261016/run_pilot_revised.py",
+      "sha256": "b87e2862002563e49bd0b7d200f59d4aede41045ac12986945045df06412b6f8"
+    },
+    {
+      "file": "official_generation.py",
+      "sha256": "baca3908106d518a96c0416bea51c9d3d3bda16edc10ee0bf1ab16b3f2582e59"
+    },
+    {
+      "file": "official_generation_profiles.json",
+      "sha256": "09cd67660a908b5f72aee552cc34fc1ad314ef59ebdc5290c8fcedfa07f192ba"
+    }
+  ],
+  "scope_exclusions": {
+    "source": "Direct user clarification with screenshots, 2026-10-16",
+    "excluded_directories": [
+      "basic_zero_shot_CoT_output_reason",
+      "battle"
+    ],
+    "directory_scope": "Entire directories including scripts, result runs, and all nested files",
+    "previously_excluded_temporary_files": [
+      "ICL_Ob_qwen-8b.py",
+      "ICL_Ob_qwen-8b_new.py",
+      "ICL_Ob_qwen-8b_v0.py",
+      "data_process.py",
+      "download_model.py",
+      "original_COT.py",
+      "test1.py",
+      "test3.py"
+    ],
+    "newly_excluded_existing_python_files": [
+      "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+      "battle/gpt_battle.py",
+      "battle/test.py"
+    ],
+    "paper_risk_basis": false,
+    "rerun_basis": false,
+    "source_action": "Metadata only. Existing code edits retained; no source expansion or data edits.",
+    "attribution_rule": "Human clarification overrides heuristic paper-source matching.",
+    "user_deprioritized_issues": {
+      "R30": {
+        "issue_id": "R30",
+        "source": "Direct user clarification, 2026-10-16",
+        "classification": "low_priority_nonblocking_preprocessing_note",
+        "paper_experiment_code_defect_basis": false,
+        "standalone_rerun_basis": false,
+        "requires_historical_followup": false,
+        "action": "Retain as preprocessing context only. Do not continue tracing the old dataset version chain.",
+        "evidence_boundary": "Original audit observations remain archived; no historical lineage is fabricated or claimed reconstructed.",
+        "changes": "Metadata only; no source code, preprocessing execution, dataset or historical predictions changed."
+      }
+    }
+  }
+}

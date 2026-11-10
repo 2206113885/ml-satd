@@ -1,0 +1,910 @@
+{
+  "source_directory": "/Users/yizho/Desktop/satd_data",
+  "revised_directory": "/Users/yizho/Desktop/satd_experiments_revised_20261016",
+  "copied_experiment_scripts": 124,
+  "modified_experiment_scripts": 50,
+  "unchanged_experiment_scripts": 74,
+  "original_source_changes": [],
+  "changed_file_syntax_checks": "50 passed via ast.parse only",
+  "old_replaced_code_preserved_as_comments": true,
+  "experiments_run": false,
+  "models_loaded": false,
+  "function_or_unit_tests_run": false,
+  "tokenizer_measurements_run": false,
+  "input_reference": {
+    "path": "revision_batch_01/few_shot_10_reference.txt",
+    "sha256": "fd6a34dd1d12086e43730aeb22a7767e1a29a79c2541cff967131acd6a252e52",
+    "labels": 23,
+    "examples_per_label": 10,
+    "matches_original_active_CodeLlama_prompt_head": true,
+    "policy": "Budget covers full assembled prompt: examples + target comment + supplied code context + chat template. Reserve MAX_NEW_TOKENS and64 extra tokens from finite model context; never silently truncate."
+  },
+  "changes": [
+    {
+      "file": "basic_few_shot/CodeLlama-7b_few_shot.py",
+      "issues": [
+        "R01"
+      ],
+      "original_sha256": "e96db1bfefdbffa9ad4695578330c0f1b89bea12f86b6af8915eaaed7f65d8f0",
+      "revised_sha256": "79bbd73fca25e205edb14d5e3a0b30949eb73317e489f84d7c142c20d58d7f0e",
+      "markers": {
+        "R01": [
+          715,
+          736,
+          739,
+          832
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "basic_few_shot/Llama-3.1-8B_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "fd5ca7ccb871f50955ebcdda59e353200ce303dff7d4fd0e4aea0f6b3196c6eb",
+      "revised_sha256": "bc28f332877b7cb337803d8d064db03e5bbbdd6cc6184937803bf7ce2c5729ca",
+      "markers": {
+        "R03": [
+          712,
+          716
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "basic_few_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "9e9d485a31bb0020d71ee24400758257f5d33af3f3fde976b1766c9ccfe94e32",
+      "revised_sha256": "da59e080cf1234e039690d7327e92809fd87b2673cb7d3bc43323a5a1686eceb",
+      "markers": {
+        "R03": [
+          350,
+          354
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "basic_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "1e277d5d947bcb36f1331fed51f633707d3f38ecfec0369edcb7c5957d38bf23",
+      "revised_sha256": "16c3d32ea447f65c8a715dabaa299b9144af11eb7b863cbdb21a5565b39386a3",
+      "markers": {
+        "R03": [
+          129,
+          133
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "basic_zero_shot_CoT/Llama-3.1-8B-CoT-new.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "eab9c752fa2ac68ec04c09680bce20253a7584b0c0ec67222c72e2ff9d87a93a",
+      "revised_sha256": "2ff12b7ab78ed6ecc63759021afa3b47544de5a621493dc62146e084dd03fd33",
+      "markers": {
+        "R03": [
+          140,
+          144
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "basic_zero_shot_reason/Llama-3.1-8B_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "4bc830cc99cce094ff593165599021f35916f72585c4345ba7d67ea3296d1e4f",
+      "revised_sha256": "16cd37710b001e6936a3323f9b8d556bc0fef349a2ef6bb6cc65641357203bd5",
+      "markers": {
+        "R03": [
+          160,
+          164
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_CoT/CodeLlama-7b_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "ce1beeaf8f7df2471fbe39dbfe922befac21f4c598aa4ef6add84f19c7bf0761",
+      "revised_sha256": "d219c02bb6401fe3ba1936649a9f19d0f5b24255a9f1ee78515a92c07f1dea20",
+      "markers": {
+        "R03": [
+          331,
+          335
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_CoT/Llama-3.1-8B_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "b1069720cfd242bb1d6e599e356203ed88c3fc31421250e53112a782554b34db",
+      "revised_sha256": "c8aa9ae1d48aa31cf5147ebbea085af3daf6dc392038a0e4928199c009de5f5f",
+      "markers": {
+        "R03": [
+          405,
+          409
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_CoT/Qwen2.5-Coder-7B_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "34c45663aadb395e4a83c06cd3d64afcad1a074d5071050d36d22e4598b0204d",
+      "revised_sha256": "9d5a7c44678dc1020acc0e86b337dd7aa21828c67702305bb15445c9d5101263",
+      "markers": {
+        "R03": [
+          358,
+          362
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_CoT/codegemma-1.1-7b_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "e2386c56b8609b048b823ed693ef9e14a93b21817251a23cc471d23f28b15a86",
+      "revised_sha256": "1a17e68beb24dd83596aaf829bbb591f1cceb27c5c68a55fd21cfff24296eb98",
+      "markers": {
+        "R03": [
+          360,
+          364
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_CoT/gemma-2-9b_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "7fc4b3bc47a58d6a53280e07b7963df837950df15eca37d456aad25d8254cc00",
+      "revised_sha256": "85595060fa8c8d6ac6daa43c383117837b8b409d4da89a0768c33c20c77c96d3",
+      "markers": {
+        "R03": [
+          408,
+          412
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_CoT/gemma-3-12b_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "4b4d49f0213bacee5ad0af9202d165d00601c7dc985798a31e1d83328d2987ea",
+      "revised_sha256": "6f3dc64063999f9149bd392ef9bcbf5bc83b41eef0915d7ef7cbe093c889f452",
+      "markers": {
+        "R03": [
+          408,
+          412
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_CoT/gpt-oss-20b_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "07faeab8f0fd7ae04d254fc2afd6155311bc1e9a3aca62a8c14f8cb552c2b077",
+      "revised_sha256": "0108d53f3796a0cc9b1da14b880d0622d0bf4e948bef2fc707ad54189cc1742f",
+      "markers": {
+        "R03": [
+          528,
+          532
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_few_shot/CodeLlama-7b_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "a87b71db198013cdb102f922e8efd734b40f87809146e6b3ff192dce17997a9e",
+      "revised_sha256": "25f60385567ef19ca7f603a871cdffd600bd205e3b71bbaeb655b5057c59e2ba",
+      "markers": {
+        "R03": [
+          560,
+          564
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_few_shot/Llama-3.1-8B_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "f0bdf87b9cf5e1257aac90e3b7faa2902211383d5060dfbbccbfea7848360ac5",
+      "revised_sha256": "f9eedc7f4279a5393df48d74dd279c2e36b6341d1ffb4b4ce22a72ff6cb0c31b",
+      "markers": {
+        "R03": [
+          563,
+          567
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "dc0907a3330896f05944572a70034fde7f5fe0c37b3570749507601b115cff86",
+      "revised_sha256": "46a838f41393d974d5381ff735bc7c99e01751185bb349c90b40ea4a4edb825c",
+      "markers": {
+        "R03": [
+          563,
+          567
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-14B_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "1e7b4839ecd9e5b6d9b62b8b4489021841b459f10c373054dcc368d9d1165382",
+      "revised_sha256": "39fece9d12fc3e328f48431eb88bb9916f0d80ea61435973a85075b0b67ea3ea",
+      "markers": {
+        "R03": [
+          565,
+          569
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_few_shot/Qwen3-8B_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "adfebbda4f123b1fea1fc71a1bce3ecbe636fc50d38789f85ae8a296aea6231a",
+      "revised_sha256": "c899bdb9a38101b0bfcc286b7fc5bea6d629f1f7acef11ddbd3608396d00fc11",
+      "markers": {
+        "R03": [
+          684,
+          688
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_few_shot/codegemma-1.1-7b_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "2e1efd698c524783ad17b9cf22a90326f5c3cb685e2fa418f10d7591de5ddb77",
+      "revised_sha256": "855dce35319d2987857661df3e2a77bdd80b86cee294f30ae5bed0596a651fa1",
+      "markers": {
+        "R03": [
+          566,
+          570
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_few_shot/gemma-2-9b_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "647b1d0aa715bd585f17bb5ff842e3766189acf7e6334f571ea0760d40f23cbf",
+      "revised_sha256": "0f4f785e9607c2be6920a7361f76ae03e9a283e1770e2c1ab46ac247d55ea2d0",
+      "markers": {
+        "R03": [
+          566,
+          570
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_few_shot/gemma-3-12b_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "9d78b79b80f05899f7d43927419166d653aed8bb903ea4ec1c8ae85d44efdac8",
+      "revised_sha256": "ea8b33cf287629afea9cf8b88c86fea9071d0d42cfa754416fb0406b87fbcc6b",
+      "markers": {
+        "R03": [
+          567,
+          571
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_few_shot/gpt-oss-20b_few_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "a91bb0825f05bbd45a209265cfa80f7eb513ae30acc3e1cb0fd244a526380191",
+      "revised_sha256": "161326cea4699333df33a75aeefb49aac4def75f5e730416a153799e906e37de",
+      "markers": {
+        "R03": [
+          453,
+          457
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/CodeLlama-7b_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "066b8b181f5c8553128a75dd2af978636b26e1671639aa3a8c4967544f1bc059",
+      "revised_sha256": "c6dea267a9f823f2f0aa285fefb168f7bf97c3f893ee9d41cfc7ff12eeb298af",
+      "markers": {
+        "R03": [
+          143,
+          147
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "aa20673b500ed572659a033279e99ade51e97b882b0027b19a67c3e8be318cf4",
+      "revised_sha256": "6b78002ce7b1e1360677b109df7e4906916e79e623db8c634795d337a7fb50b7",
+      "markers": {
+        "R03": [
+          169,
+          173
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "925b6529728593271ff5168d08d6d043bd5cd63fc0b13f54b21fe00bb46e6864",
+      "revised_sha256": "323cb3ddd22baa66f07aad08e6aa8cfe192d86cfeb1998a9b90113d6556c6668",
+      "markers": {
+        "R03": [
+          170,
+          174
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-14B_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "b52084abf925f48b73c71fbd43af1c8397abd7508da586c9108b5c59bdd188b9",
+      "revised_sha256": "8f82f9bd5ee46849640a574c1b061b15af9c325f67583bf54638c17356d3ab32",
+      "markers": {
+        "R03": [
+          170,
+          174
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/Qwen3-8B_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "89df7c89801e017d8d8fead414197b68e03114b1e6d0b9db4382b2cbc018e4ee",
+      "revised_sha256": "f16c8ef5c8da5bf62f98fc244ac351c2873d0f7c955bc812cc4a90e3a0544846",
+      "markers": {
+        "R03": [
+          170,
+          174
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/bin_new_test.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "a6f32fe3191784192ffbdc06c6b08e2b46aabd3140cd456a601f05a4225d29b4",
+      "revised_sha256": "2acbc89a9fc5d4df96f97af50494ab4660487c8cfb5be7a1e8fc3d19104fa558",
+      "markers": {
+        "R03": [
+          170,
+          174
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "f6dce5888ad47506b2fb4775890982e06953293ddaf581de3684f1a196aa28b4",
+      "revised_sha256": "85b67cf5c74e3a78a89dfa42dc54c67a6fc85816bac27436b838f7b6abaef8a0",
+      "markers": {
+        "R03": [
+          171,
+          175
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/gemma-2-9b_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "3feb7a5fea1ce6960e56940e946d7b77181c5e6574c5aeace35fe8b81bfd30a1",
+      "revised_sha256": "1bccc082def9f367e38cda22a43d6f71196d4a07a601b9361964914347db665a",
+      "markers": {
+        "R03": [
+          171,
+          175
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/gemma-3-12b_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "fa261d7ad3ef8a2977f57f65b63d5dc59ee967c4da3a5bcd8a43b328bf3e27c2",
+      "revised_sha256": "b4ee0e9e0a05b263c91764189a9b4459e486852c99289cf7c985a70967ac5dde",
+      "markers": {
+        "R03": [
+          171,
+          175
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "bisection_zero_shot/gpt-oss-20b_zero_shot.py",
+      "issues": [
+        "R03"
+      ],
+      "original_sha256": "217af126132cdb1892ba11f937d5c55200d04b62a1ba435f85f0c747791c8f08",
+      "revised_sha256": "c773136e6681eca5ddd01896e66deb4ede52be340117b729e8625aaf5f4f428f",
+      "markers": {
+        "R03": [
+          169,
+          173
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "382890188198c402cbf5f8bc30976a2b8a10b739dd216cbfab484ec4e3e18a1e",
+      "revised_sha256": "2b89dad2be149a093bfc4f691284bea6559960e35dc5a83ab5978a92063335f7",
+      "markers": {
+        "R04": [
+          379,
+          382,
+          406,
+          409
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "0508fb7db887ccd3d089283691beba152368eac580ff58d2e149754896d88d0e",
+      "revised_sha256": "5cd80b7bc9806e7d01b094ec45707e818f68eb0ca96246828883ad377f6a3973",
+      "markers": {
+        "R04": [
+          365,
+          368,
+          392,
+          395
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "0394d8bad9b5d0ff7ab9de44fb71bcb0581acfe7c58a8fff59bb925de1b52686",
+      "revised_sha256": "759cb3da0ba6e921709f2e870e176f9cb67fd96b6c5f5576ba1a10b7012ae003",
+      "markers": {
+        "R04": [
+          379,
+          382,
+          406,
+          409
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "4f6af01e5adb4b784f647af49e62164f6faa68a9d616c798c5b4db44a620055f",
+      "revised_sha256": "c1fd74cbd19d56fc66b18c7bdcde93bcc70c595eba633730446f71f81a41e723",
+      "markers": {
+        "R04": [
+          357,
+          360,
+          384,
+          387
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "2953f4e1068b961842d6ecb1759f3ba145661e6efd9583f525b53f6ca584fd45",
+      "revised_sha256": "99f0038d81c214a2107bcb6a47d66c7587ca101632e1e496e69f38d5d811a76f",
+      "markers": {
+        "R04": [
+          379,
+          382,
+          406,
+          409
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "99802f1ff5c052297b61d41522efc59cfba874b1884be66e23cc65266d6f20c4",
+      "revised_sha256": "433cc7e9dd6870e74e0f719f6ed83075cec9ec8cf4ba12fadf44546c7abacab1",
+      "markers": {
+        "R04": [
+          367,
+          370,
+          394,
+          397
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "13b458c0ed161737e5127a70ace369497a42d0a90cae9b1ff25844375f05db32",
+      "revised_sha256": "3b5fadbd73d5669cdc3f91449196c71227f690cd35b75b3453540de2a7384a43",
+      "markers": {
+        "R04": [
+          355,
+          358,
+          382,
+          385
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "41336f0938b06682e8b0d691f5611a77b45e45cd85550074e0f4216f1d9a6601",
+      "revised_sha256": "c99b2cca9e1b8c541abec867402b5077602f76cd1f854236d5d76b81c5b10ade",
+      "markers": {
+        "R04": [
+          355,
+          358,
+          382,
+          385
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "02eee5e877a1c7cffb8dd082f909daf2fb42c773de9d1683013968a875f6b451",
+      "revised_sha256": "d115efef76d1a235243e327c40cd4022c136a293d22e8fd9ea89144f579597df",
+      "markers": {
+        "R04": [
+          302,
+          305,
+          326,
+          329
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "2a50eec31603589fffc92d20a59879ee81dbdb3123c9a7704cba374dd7e662ff",
+      "revised_sha256": "a0e372c7e1a01b8c9f70d9f6682c20be59c491eeb55970b483c706cac60f8017",
+      "markers": {
+        "R04": [
+          287,
+          290,
+          314,
+          317
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "270dd7b00d06543e64f2895d4f21e3001d263f54c8982759fb8c2052752d5bd3",
+      "revised_sha256": "d0099a8db7c8575b60e3f970b46bf7c5f2e75b2ce7f94a4d91400c34d2a7407f",
+      "markers": {
+        "R04": [
+          273,
+          276,
+          300,
+          303
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "0cf4a9cef75125c0e55fa440853c8751ce26a68e579ca2acbc0c8072abe110a8",
+      "revised_sha256": "491c7f6750c54ef6e9ec91025cce54ae11785e6a9a0c2f3241d71f8ff7b719c9",
+      "markers": {
+        "R04": [
+          287,
+          290,
+          314,
+          317
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "168dae55a00abe2dc71dfafecb751fccc5a8f80f538e7cdd6ef65131ceae09d3",
+      "revised_sha256": "17faae1ae15678f9164ec5bc59718f59930972ba2268c174b46e2dbfab9d7543",
+      "markers": {
+        "R04": [
+          265,
+          268,
+          292,
+          295
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "d2be46906aca93e8b815ff93e353ac636b95fdab36a8b1a64a367a8cdf9d8df7",
+      "revised_sha256": "f7880b34063902ca0c936a53e40f79eb78bbdbcf36bc23e2a6c82fa7a88da1d1",
+      "markers": {
+        "R04": [
+          287,
+          290,
+          314,
+          317
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "05dbb3e7a116081efa2d495ea09cc13876a5ed0842f0ccb63d65ec9ea79957bf",
+      "revised_sha256": "7c84f9c0909bfbc6eec53fe0d388df0ce2e41f6e03bf857ec1555d4f0059c6c8",
+      "markers": {
+        "R04": [
+          275,
+          278,
+          302,
+          305
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "issues": [
+        "R02",
+        "R04"
+      ],
+      "original_sha256": "94bc6a75f4d5b70a11dec74c0ad09959c3350f18912c7d107a3bee3905bb02ec",
+      "revised_sha256": "a0d5765a318bb35678d124d35e0beb50d87b7284f653f6c0d5c198daf06ef42f",
+      "markers": {
+        "R02": [
+          283,
+          285,
+          302,
+          304,
+          309,
+          313,
+          407
+        ],
+        "R04": [
+          237,
+          240
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "6ddb1e2d1c981aa7dae8a932635e4e4c29a65dc52d49c5b5f02f19fbbbceaa70",
+      "revised_sha256": "7c903fd9ed9c058aa9f98391bd9133c40bd557c1b379fe5ddaab012be7b0f6a8",
+      "markers": {
+        "R04": [
+          276,
+          279,
+          303,
+          306
+        ]
+      },
+      "ast_parse": "passed"
+    },
+    {
+      "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+      "issues": [
+        "R04"
+      ],
+      "original_sha256": "2a424643e44d39860c66f1f2b86735e9c6978eed5050a69fc3cd1c707b98f6b4",
+      "revised_sha256": "7526b447bbb5b97207efbeb430106b19453df5e8a8833801699ada780cc1c4f9",
+      "markers": {
+        "R04": [
+          210,
+          213,
+          234,
+          237
+        ]
+      },
+      "ast_parse": "passed"
+    }
+  ],
+  "unchanged_files": [
+    "ICL_Ob_qwen-8b.py",
+    "ICL_Ob_qwen-8b_new.py",
+    "ICL_Ob_qwen-8b_v0.py",
+    "basic_few_shot/Qwen2.5-Coder-7B_few_shot_re.py",
+    "basic_few_shot/Qwen3-14B_few_shot_re.py",
+    "basic_few_shot/Qwen3-8B_few_shot_re.py",
+    "basic_few_shot/codegemma-1.1-7b_few_shot_re.py",
+    "basic_few_shot/gemma-2-9b_few_shot_re.py",
+    "basic_few_shot/gemma-3-12b_few_shot_re.py",
+    "basic_few_shot/gpt-oss-20b_few_shot.py",
+    "basic_few_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "basic_few_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "basic_few_shot_CoT/Qwen3-14B-CoT-new.py",
+    "basic_few_shot_CoT/Qwen3-8B-CoT-new.py",
+    "basic_few_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "basic_few_shot_CoT/gemma-2-9b-CoT-new.py",
+    "basic_few_shot_CoT/gemma-3-12b-CoT-new.py",
+    "basic_few_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "basic_few_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "basic_few_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "basic_few_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "basic_few_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "basic_zero_shot/CodeLlama-7b_zero_shot.py",
+    "basic_zero_shot/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "basic_zero_shot/Qwen3-14B_zero_shot_re.py",
+    "basic_zero_shot/Qwen3-8B_zero_shot_re.py",
+    "basic_zero_shot/codegemma-1.1-7b_zero_shot_re.py",
+    "basic_zero_shot/gemma-2-9b_zero_shot_re.py",
+    "basic_zero_shot/gemma-3-12b_zero_shot_re.py",
+    "basic_zero_shot/gpt-oss-20b_zero_shot.py",
+    "basic_zero_shot_CoT/CodeLlama-7b-CoT-new.py",
+    "basic_zero_shot_CoT/Qwen2.5-Coder-7B-CoT-new.py",
+    "basic_zero_shot_CoT/Qwen3-14B-CoT-new.py",
+    "basic_zero_shot_CoT/Qwen3-14B_zero_shot_CoT.py",
+    "basic_zero_shot_CoT/Qwen3-8B-CoT-new.py",
+    "basic_zero_shot_CoT/Qwen3-8B_zero_shot_CoT.py",
+    "basic_zero_shot_CoT/codegemma-1.1-7b-CoT-new.py",
+    "basic_zero_shot_CoT/gemma-2-9b-CoT-new.py",
+    "basic_zero_shot_CoT/gemma-3-12b-CoT-new.py",
+    "basic_zero_shot_CoT/gpt-oss-20b-CoT-new.py",
+    "basic_zero_shot_CoT_output_reason/gemma-2-9b-CoT-new.py",
+    "basic_zero_shot_CoT_reason/Qwen2.5-Coder-7B-CoT.py",
+    "basic_zero_shot_CoT_reason/Qwen3-14B-CoT.py",
+    "basic_zero_shot_CoT_reason/Qwen3-8B-CoT.py",
+    "basic_zero_shot_CoT_reason/gpt-oss-20b-CoT.py",
+    "basic_zero_shot_reason/CodeLlama-7b_zero_shot.py",
+    "basic_zero_shot_reason/Qwen2.5-Coder-7B_zero_shot_re.py",
+    "basic_zero_shot_reason/Qwen3-14B_zero_shot.py",
+    "basic_zero_shot_reason/Qwen3-8B_zero_shot.py",
+    "basic_zero_shot_reason/codegemma-1.1-7b_zero_shot_re.py",
+    "basic_zero_shot_reason/gemma-2-9b_zero_shot_re.py",
+    "basic_zero_shot_reason/gemma-3-12b_zero_shot_re.py",
+    "basic_zero_shot_reason/gpt-oss-20b_zero_shot.py",
+    "battle/gpt_battle.py",
+    "battle/test.py",
+    "bisection_CoT/Qwen3-14B_few_shot.py",
+    "bisection_CoT/Qwen3-8B_few_shot.py",
+    "bisection_zero_shot/bin_test.py",
+    "data_process.py",
+    "download_model.py",
+    "original_COT.py",
+    "pilot_context_20261016/analyze_pilot.py",
+    "pilot_context_20261016/download_model.py",
+    "pilot_context_20261016/prepare_pilot.py",
+    "pilot_context_20261016/reference/frozen_prompt.py",
+    "pilot_context_20261016/reference_thinking_stopped/frozen_prompt.py",
+    "pilot_context_20261016/run_pilot.py",
+    "pilot_context_20261016/test_analyze_pilot.py",
+    "pilot_context_20261016/test_runner.py",
+    "pilot_context_20261016/verify_historical.py",
+    "pilot_context_20261016/wait_and_run.py",
+    "random_classify/random_classify.py",
+    "test1.py",
+    "test3.py"
+  ],
+  "pre_existing_unmodified_syntax_errors": [
+    {
+      "file": "ICL_Ob_qwen-8b.py",
+      "line": 517,
+      "status": "pre-existing unchanged legacy syntax error"
+    }
+  ],
+  "requested_issue_file_counts": {
+    "R01": 1,
+    "R02": 1,
+    "R03": 31,
+    "R04": 18
+  },
+  "remaining_scope": "Only R01-R04 addressed; existing paths, prompts/shot counts, sampling, fallback, repeated BOS and other audit items remain for later batches."
+}

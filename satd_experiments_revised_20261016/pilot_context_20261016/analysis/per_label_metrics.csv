@@ -1,0 +1,70 @@
+﻿arm,label,support,predicted,true_positive,precision,recall,f1
+comment_only,MLKnow,6,3,1,0.3333333333333333,0.16666666666666666,0.2222222222222222
+comment_only,MLInter,2,6,0,0.0,0.0,0.0
+comment_only,MCC,4,14,1,0.07142857142857142,0.25,0.11111111111111112
+comment_only,DMC,0,5,0,0.0,0.0,0.0
+comment_only,DFEC,0,0,0,0.0,0.0,0.0
+comment_only,Weight Conf,5,9,4,0.4444444444444444,0.8,0.5714285714285714
+comment_only,Layer Conf,6,0,0,0.0,0.0,0.0
+comment_only,HP Conf,6,3,1,0.3333333333333333,0.16666666666666666,0.2222222222222222
+comment_only,MLDepend,6,4,2,0.5,0.3333333333333333,0.4
+comment_only,GC,1,5,0,0.0,0.0,0.0
+comment_only,CDT,7,0,0,0.0,0.0,0.0
+comment_only,ML,1,1,1,1.0,1.0,1.0
+comment_only,UMC,6,17,4,0.23529411764705882,0.6666666666666666,0.3478260869565218
+comment_only,Data Conf,6,0,0,0.0,0.0,0.0
+comment_only,PODT,6,0,0,0.0,0.0,0.0
+comment_only,DS Conf,6,14,3,0.21428571428571427,0.5,0.3
+comment_only,Abs,7,1,0,0.0,0.0,0.0
+comment_only,BE,1,0,0,0.0,0.0,0.0
+comment_only,MCM,6,10,1,0.1,0.16666666666666666,0.125
+comment_only,MCR,6,2,1,0.5,0.16666666666666666,0.25
+comment_only,PQ,3,1,1,1.0,0.3333333333333333,0.5
+comment_only,MLRelia,3,2,0,0.0,0.0,0.0
+comment_only,Proto,6,3,1,0.3333333333333333,0.16666666666666666,0.2222222222222222
+window,MLKnow,6,1,0,0.0,0.0,0.0
+window,MLInter,2,3,0,0.0,0.0,0.0
+window,MCC,4,6,1,0.16666666666666666,0.25,0.2
+window,DMC,0,3,0,0.0,0.0,0.0
+window,DFEC,0,0,0,0.0,0.0,0.0
+window,Weight Conf,5,7,4,0.5714285714285714,0.8,0.6666666666666666
+window,Layer Conf,6,0,0,0.0,0.0,0.0
+window,HP Conf,6,1,1,1.0,0.16666666666666666,0.2857142857142857
+window,MLDepend,6,5,2,0.4,0.3333333333333333,0.3636363636363636
+window,GC,1,1,0,0.0,0.0,0.0
+window,CDT,7,2,0,0.0,0.0,0.0
+window,ML,1,1,1,1.0,1.0,1.0
+window,UMC,6,34,5,0.14705882352941177,0.8333333333333334,0.25
+window,Data Conf,6,1,0,0.0,0.0,0.0
+window,PODT,6,0,0,0.0,0.0,0.0
+window,DS Conf,6,5,0,0.0,0.0,0.0
+window,Abs,7,4,0,0.0,0.0,0.0
+window,BE,1,0,0,0.0,0.0,0.0
+window,MCM,6,15,2,0.13333333333333333,0.3333333333333333,0.19047619047619044
+window,MCR,6,1,1,1.0,0.16666666666666666,0.2857142857142857
+window,PQ,3,0,0,0.0,0.0,0.0
+window,MLRelia,3,0,0,0.0,0.0,0.0
+window,Proto,6,10,0,0.0,0.0,0.0
+function,MLKnow,6,1,0,0.0,0.0,0.0
+function,MLInter,2,1,0,0.0,0.0,0.0
+function,MCC,4,8,1,0.125,0.25,0.16666666666666666
+function,DMC,0,5,0,0.0,0.0,0.0
+function,DFEC,0,0,0,0.0,0.0,0.0
+function,Weight Conf,5,6,3,0.5,0.6,0.5454545454545454
+function,Layer Conf,6,0,0,0.0,0.0,0.0
+function,HP Conf,6,1,1,1.0,0.16666666666666666,0.2857142857142857
+function,MLDepend,6,5,2,0.4,0.3333333333333333,0.3636363636363636
+function,GC,1,0,0,0.0,0.0,0.0
+function,CDT,7,0,0,0.0,0.0,0.0
+function,ML,1,0,0,0.0,0.0,0.0
+function,UMC,6,40,5,0.125,0.8333333333333334,0.21739130434782608
+function,Data Conf,6,1,0,0.0,0.0,0.0
+function,PODT,6,0,0,0.0,0.0,0.0
+function,DS Conf,6,4,0,0.0,0.0,0.0
+function,Abs,7,3,1,0.3333333333333333,0.14285714285714285,0.2
+function,BE,1,0,0,0.0,0.0,0.0
+function,MCM,6,11,1,0.09090909090909091,0.16666666666666666,0.11764705882352942
+function,MCR,6,0,0,0.0,0.0,0.0
+function,PQ,3,0,0,0.0,0.0,0.0
+function,MLRelia,3,0,0,0.0,0.0,0.0
+function,Proto,6,14,2,0.14285714285714285,0.3333333333333333,0.2

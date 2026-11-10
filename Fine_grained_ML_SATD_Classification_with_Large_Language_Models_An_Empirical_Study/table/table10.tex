@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Results of layered hybrid setting}
+  \label{tab:layered-hybrid}
+  \setlength{\tabcolsep}{6pt}
+  \renewcommand{\arraystretch}{1.15}
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{l*{9}{c}}
+    \toprule
+    \multirow{2}{*}{Type} &
+      \multicolumn{3}{c}{Qwen3-14B} &
+      \multicolumn{3}{c}{gemma-2-9b} &
+      \multicolumn{3}{c}{gpt-oss-20b} \\
+    \cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+    & precision & recall & f1
+    & precision & recall & f1
+    & precision & recall & f1 \\
+    \midrule
+    AWR & \textbf{0.643} & 0.422 & 0.509 & 0.338 & \textbf{0.797} & 0.474 & 0.529 & 0.578 & \textbf{0.552} \\
+    RDB & 0.062 & \textbf{0.625} & 0.112 & 0.103 & 0.375 & 0.162 & \textbf{0.167} & 0.500 & \textbf{0.250} \\
+    DCE & 0.182 & \textbf{1.000} & 0.308 & \textbf{0.500} & \textbf{1.000} & \textbf{0.667} & 0.167 & \textbf{1.000} & 0.286 \\
+    CFO & 0.187 & \textbf{0.452} & 0.264 & \textbf{0.245} & 0.387 & \textbf{0.300} & 0.184 & \textbf{0.452} & 0.262 \\
+    CDD & 0.509 & \textbf{0.358} & \textbf{0.420} & 0.632 & 0.296 & 0.403 & \textbf{0.719} & 0.284 & 0.407 \\
+    DTD & 0.718 & 0.204 & 0.318 & \textbf{0.773} & 0.248 & 0.376 & 0.656 & \textbf{0.431} & \textbf{0.520} \\
+    MDL & 0.212 & \textbf{0.275} & 0.239 & 0.191 & 0.225 & 0.207 & \textbf{0.312} & 0.250 & \textbf{0.278} \\
+    PRF & 0.250 & 0.333 & 0.286 & \textbf{0.385} & \textbf{0.556} & \textbf{0.455} & 0.060 & 0.333 & 0.102 \\
+    SCL & 0.250 & \textbf{0.286} & \textbf{0.267} & 0.222 & 0.190 & 0.205 & \textbf{0.286} & 0.095 & 0.143 \\
+    weighted avg & 0.517 & 0.318 & 0.350 & 0.519 & 0.366 & 0.364 & \textbf{0.530} & \textbf{0.392} & \textbf{0.420} \\
+    \bottomrule
+  \end{tabular}%
+  }
+\end{table}

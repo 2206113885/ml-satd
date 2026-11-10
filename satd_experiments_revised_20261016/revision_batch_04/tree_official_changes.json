@@ -1,0 +1,1250 @@
+{
+  "issue": "R45 OFFICIAL PROFILE",
+  "scope": [
+    "tree_zero_shot",
+    "tree_few_shot"
+  ],
+  "execution": "Static AST/source/diff/hash only; no experiment, module, function, tokenizer, model, or tests executed.",
+  "files": [
+    {
+      "file": "tree_few_shot/CodeLlama-7b_few_shot.py",
+      "before_sha256": "4be43dd70b358b55ad649e334e32d886c3511d4db1ea3d4c8a336a033bdac433",
+      "after_sha256": "95acc18241d67cab0f054368b1a98a1e0759b8279902d14f1c2d628823c21602",
+      "changes": [
+        {
+          "old_range": [
+            56,
+            56
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            57,
+            57
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            58,
+            58
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            507,
+            534
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            765,
+            765
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample"
+      ],
+      "r07_builder_retired": false,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        546,
+        555
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 7,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_few_shot/Llama-3.1-8B_few_shot.py",
+      "before_sha256": "56a89e4b5c1a90be657b1a2d0132f6cf9c92fe80a80d22a2254ecf6aa8f8b194",
+      "after_sha256": "9d67d2271a447cb42d4eacb458bc1e6ef2148695346c4ed7d5b5179c840855a1",
+      "changes": [
+        {
+          "old_range": [
+            2,
+            2
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            472,
+            486
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            510,
+            544
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            784,
+            784
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        553,
+        562
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 20,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_few_shot/Qwen2.5-Coder-7B_few_shot.py",
+      "before_sha256": "f32e45319684790a919bedcb08c2cd6940545d7ae41229831e74ce52b0276438",
+      "after_sha256": "09e2f7255bd04aae9780f191d820230228ce0e64425813d876b1e47faac7a3da",
+      "changes": [
+        {
+          "old_range": [
+            20,
+            20
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            65,
+            65
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            66,
+            66
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            67,
+            67
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            68,
+            68
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            496,
+            509
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            533,
+            568
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            808,
+            808
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        589,
+        598
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 23,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_few_shot/Qwen3-14B_few_shot.py",
+      "before_sha256": "4cb3edfd04d8d5fc033f0dadc703d1f4fd8b8b796345764accef6d9b5db610e4",
+      "after_sha256": "2e4e98fa5e8e618780b31c85e4966460cedd4a90402ad6272506de81b92dfbd6",
+      "changes": [
+        {
+          "old_range": [
+            20,
+            20
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            65,
+            65
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            66,
+            66
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            67,
+            67
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            68,
+            68
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            474,
+            487
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            511,
+            546
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            786,
+            786
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        567,
+        576
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 23,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_few_shot/Qwen3-8B_few_shot.py",
+      "before_sha256": "203a4792c368eb4fdb8b2f27c74379312469083ea72726d37fb67bdab3abcf9e",
+      "after_sha256": "9f8e44dd266171ed579228d33805cf692d3e1a238a8840638bcea0b7d51389ee",
+      "changes": [
+        {
+          "old_range": [
+            20,
+            20
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            65,
+            65
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            66,
+            66
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            67,
+            67
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            68,
+            68
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            496,
+            509
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            533,
+            568
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            808,
+            808
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        589,
+        598
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 23,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_few_shot/codegemma-1.1-7b_few_shot.py",
+      "before_sha256": "a8c817fc1b8b13f521b381331628d44560f98d27460a57dea25f64f5b8c8ab3d",
+      "after_sha256": "e7e9ada444ed59323d1be4a24d8c8376d3d183a67e8b320fe089e6abfc20fb5a",
+      "changes": [
+        {
+          "old_range": [
+            2,
+            2
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            474,
+            487
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            511,
+            546
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            786,
+            786
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        555,
+        564
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 19,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_few_shot/gemma-2-9b_few_shot.py",
+      "before_sha256": "505e0a400e5679a86f1a61fdd17fb4c9bc1e5507b398a634bd3e110dfcdb2aec",
+      "after_sha256": "b8fd8db16e42d6ec39bcd71714d61b680404bcfeec6e419d12d47f6c8a97bdcf",
+      "changes": [
+        {
+          "old_range": [
+            2,
+            2
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            468,
+            481
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            505,
+            540
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            780,
+            780
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        549,
+        558
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 19,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_few_shot/gemma-3-12b_few_shot.py",
+      "before_sha256": "a155cf8cf430114e4c17ded428a369414a8564ec15ec9b4f7ded8e9b70b81b2a",
+      "after_sha256": "08082389469d813fb5ea362e2b1bd64355f8c378849f820ade8a8696f03650b7",
+      "changes": [
+        {
+          "old_range": [
+            2,
+            2
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            462,
+            475
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            499,
+            534
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            774,
+            774
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        543,
+        552
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 19,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_few_shot/gpt-oss-20b_few_shot.py",
+      "before_sha256": "4c6b96fd89c43c66810cf278cb47703694ba961e179da7aa183c28cb27c141b5",
+      "after_sha256": "dc09e9c1e31c0effe0751108784135c612938b2f315d2adba1a2abe2e57d1131",
+      "changes": [
+        {
+          "old_range": [
+            54,
+            54
+          ],
+          "description": "Remove environment-driven GPT effort override; metadata agrees with the shared native medium policy."
+        },
+        {
+          "old_range": [
+            55,
+            56
+          ],
+          "description": "Retire validation of the removed per-script/environment effort setting."
+        },
+        {
+          "old_range": [
+            415,
+            435
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            676,
+            676
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [],
+      "r07_builder_retired": false,
+      "gpt_native_effort": "medium",
+      "active_wrapper_range": [
+        444,
+        451
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 9,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_zero_shot/CodeLlama-7b_zero_shot.py",
+      "before_sha256": "c32bead4f8e045353c27364322ba8fab1a4da3d6ae68528250e9cfed26455156",
+      "after_sha256": "1b38f8750495927d9584b967a42a5e1754bb19e26de1059b1e0fe6334cbacd32",
+      "changes": [
+        {
+          "old_range": [
+            56,
+            56
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            57,
+            57
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            58,
+            58
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            415,
+            442
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            673,
+            673
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample"
+      ],
+      "r07_builder_retired": false,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        454,
+        463
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 7,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_zero_shot/Llama-3.1-8B_zero_shot.py",
+      "before_sha256": "3ed764823599b8ec21599e579758a33a0b1f02bc52a4ed7b51ada09c718fecfd",
+      "after_sha256": "4f4bed2fd3d2088a796522831d066a945484413c41190774a1492e38fb4b5973",
+      "changes": [
+        {
+          "old_range": [
+            2,
+            2
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            380,
+            394
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            418,
+            452
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            692,
+            692
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        461,
+        470
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 20,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_zero_shot/Qwen2.5-Coder-7B_zero_shot.py",
+      "before_sha256": "6de0da1979df866af397306551a5cde33f238567eb871d3f58a4e3e563a3fa5c",
+      "after_sha256": "513c2266f1dd28c596030bf20db2f3f8229c790d1d3776512d1404604d2cb719",
+      "changes": [
+        {
+          "old_range": [
+            20,
+            20
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            65,
+            65
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            66,
+            66
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            67,
+            67
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            68,
+            68
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            404,
+            417
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            441,
+            476
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            716,
+            716
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        497,
+        506
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 23,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-14B_zero_shot.py",
+      "before_sha256": "a1d37d9455d353feca85a0a254b236c0c387987be4bd3bd68058464cbc8a9bc3",
+      "after_sha256": "9a7666cfa7c4b9b1c6d7a403693cc69e5221083b67e13f4dd5ceb2eb5198b851",
+      "changes": [
+        {
+          "old_range": [
+            20,
+            20
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            65,
+            65
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            66,
+            66
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            67,
+            67
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            68,
+            68
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            382,
+            395
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            419,
+            454
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            694,
+            694
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        475,
+        484
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 23,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_zero_shot/Qwen3-8B_zero_shot.py",
+      "before_sha256": "1438f1e41465336f162280c633a54cba189731c623c70d07863c26e1322d03a7",
+      "after_sha256": "74900d5e387406df5f943ee0f87b621f9a69a46cfa04aa0cf50680a918880eda",
+      "changes": [
+        {
+          "old_range": [
+            20,
+            20
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            65,
+            65
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            66,
+            66
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            67,
+            67
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            68,
+            68
+          ],
+          "description": "Retire the per-script sampling knob; retain the original assignment as a comment."
+        },
+        {
+          "old_range": [
+            404,
+            417
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            441,
+            476
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            716,
+            716
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        497,
+        506
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 23,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_zero_shot/codegemma-1.1-7b_zero_shot.py",
+      "before_sha256": "f81b4d1180a8d7297e746c6ad38ad7802609f62c4770bd5d9ba21848c7696761",
+      "after_sha256": "5f451468fb028e02772f1d3ebc33a8c93f57bacef037a1fe1c833a60dbc37417",
+      "changes": [
+        {
+          "old_range": [
+            2,
+            2
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            382,
+            395
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            419,
+            454
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            694,
+            694
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        463,
+        472
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 19,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_zero_shot/gemma-2-9b_zero_shot.py",
+      "before_sha256": "afe2a5003314477cd6428d00a8f862d38b378561968fc1c745b6c8be65070fe8",
+      "after_sha256": "38bb8eda5a8e0753abe9430f97042dd793dc323932298e770322f5c737f0fde7",
+      "changes": [
+        {
+          "old_range": [
+            313,
+            359
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            594,
+            594
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [],
+      "r07_builder_retired": false,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        362,
+        371
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 4,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_zero_shot/gemma-3-12b_zero_shot.py",
+      "before_sha256": "eacbd1aeec987ac74650d59397448613658b030171afb80e1457178c9ddd6086",
+      "after_sha256": "db0c42ca05f06952c5d1916a6bcfd758e72fe57abd246debe19b395213bcfc5f",
+      "changes": [
+        {
+          "old_range": [
+            2,
+            2
+          ],
+          "description": "Retire the import used solely by the superseded local R07 config builder."
+        },
+        {
+          "old_range": [
+            383,
+            396
+          ],
+          "description": "Retire all local R07 loaded/effective/override configuration construction; original MAX_NEW_TOKENS remains active."
+        },
+        {
+          "old_range": [
+            420,
+            455
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            695,
+            695
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [
+        "do_sample",
+        "loaded_generation_config",
+        "generation_call_overrides",
+        "effective_generation_config",
+        "unused_generation_kwargs",
+        "generation_config_source",
+        "generation_profile_policy"
+      ],
+      "r07_builder_retired": true,
+      "gpt_native_effort": null,
+      "active_wrapper_range": [
+        464,
+        473
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 19,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    },
+    {
+      "file": "tree_zero_shot/gpt-oss-20b_zero_shot.py",
+      "before_sha256": "4c827f19fdb234936f123fdc60168cd85ce064f7a0d436d2477e6f3445627886",
+      "after_sha256": "40e2463af5f27b0790b3f335bd1cbb0f83131f4c18e65314519dd0187d8faf83",
+      "changes": [
+        {
+          "old_range": [
+            54,
+            54
+          ],
+          "description": "Remove environment-driven GPT effort override; metadata agrees with the shared native medium policy."
+        },
+        {
+          "old_range": [
+            55,
+            56
+          ],
+          "description": "Retire validation of the removed per-script/environment effort setting."
+        },
+        {
+          "old_range": [
+            323,
+            343
+          ],
+          "description": "Route all generation through official_profile=True with only the original stage max_new_tokens; remove sampler/config/effort overrides."
+        },
+        {
+          "old_range": [
+            584,
+            584
+          ],
+          "description": "Remove obsolete loaded/effective/override sampler settings and replace them with the shared official policy and actual runtime audit location."
+        }
+      ],
+      "settings_keys_retired": [],
+      "r07_builder_retired": false,
+      "gpt_native_effort": "medium",
+      "active_wrapper_range": [
+        352,
+        359
+      ],
+      "static_checks": {
+        "ast_parse": true,
+        "audited_generate_calls": 1,
+        "official_profile_true": true,
+        "generation_kwargs_only_original_cap": true,
+        "reasoning_effort_call_override": false,
+        "obsolete_r07_active_references": false,
+        "replaced_executable_lines": 9,
+        "old_code_comment_omissions": []
+      },
+      "historical_boundary": "Prospective sampler unification only; no inference or historical result replacement."
+    }
+  ],
+  "summary": {
+    "files": 18,
+    "ast_parse_passed": 18,
+    "official_profile_calls": 18,
+    "retired_r07_builders": 13,
+    "gpt_medium_files": 2,
+    "replaced_executable_lines": 309,
+    "old_code_comment_omissions": 0,
+    "experiments_or_tests_executed": 0
+  }
+}

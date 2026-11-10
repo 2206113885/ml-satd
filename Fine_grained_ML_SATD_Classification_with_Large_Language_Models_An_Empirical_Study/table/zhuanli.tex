@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+  \centering
+  \caption{Prompt settings for fine-grained ML-SATD classification}
+  \label{tab:prompt-settings}
+  \setlength{\tabcolsep}{6pt}
+  \renewcommand{\arraystretch}{1.15}
+  \resizebox{\textwidth}{!}{%
+  \begin{tabular}{llllll}
+    \toprule
+    \textbf{Setting} & \textbf{Base Prompt} & \textbf{Examples} & \textbf{Reasoning Rule} & \textbf{Best Model} & \textbf{Weighted F1} \\
+    \midrule
+    Basic direct prompting              & Vanilla & 0   & No  & Qwen3-14B   & 0.341 \\
+    Basic candidate-screening prompting & Binary  & 0   & No  & gpt-oss-20b & 0.351 \\
+    Few-shot-enhanced prompting         & Vanilla & $2$ & No  & gpt-oss-20b & 0.369 \\
+    Reasoning-enhanced prompting        & Vanilla & 0   & Yes & Qwen3-14B   & 0.363 \\
+    \rowcolor{gray!15}
+    Combined prompting method           & Vanilla & $3$ & Yes & Qwen3-8B    & \textbf{0.381} \\
+    \bottomrule
+  \end{tabular}%
+  }
+\end{table}

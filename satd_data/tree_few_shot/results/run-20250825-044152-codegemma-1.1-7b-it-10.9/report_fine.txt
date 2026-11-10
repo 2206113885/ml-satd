@@ -1,0 +1,29 @@
+                                   precision    recall  f1-score   support
+
+       Machine Learning Knowledge      0.706     0.194     0.304        62
+           Model Interpretability      0.000     0.000     0.000         2
+         Model Code Comprehension      0.047     0.875     0.090         8
+             Duplicate Model Code      0.000     0.000     0.000         1
+Duplicate Feature Extraction Code      0.000     0.000     0.000         1
+             Weight Configuration      0.045     0.500     0.082         6
+              Layer Configuration      0.000     0.000     0.000         9
+    Hyper-parameter Configuration      0.054     0.312     0.092        16
+                  Code Dependency      0.667     0.190     0.296        21
+                        Glue Code      0.000     0.000     0.000         2
+                 Custom Data Type      0.000     0.000     0.000        22
+               Multiple Languages      0.000     0.000     0.000         2
+           Unnecessary Model Code      0.308     0.118     0.170        34
+    Data Processing Configuration      0.250     0.023     0.042        88
+              Plain Old Data Type      0.000     0.000     0.000         9
+       Data Storage Configuration      0.000     0.000     0.000        40
+                      Abstraction      0.000     0.000     0.000         8
+                 Boundary Erosion      0.000     0.000     0.000         2
+         Model Code Modifiability      0.000     0.000     0.000        12
+           Model Code Reusability      0.000     0.000     0.000        18
+               Prediction Quality      0.133     0.500     0.211         4
+     Machine Learning Reliability      0.000     0.000     0.000         5
+                        Prototype      0.571     0.190     0.286        21
+
+                         accuracy                          0.109       393
+                        macro avg      0.121     0.126     0.068       393
+                     weighted avg      0.265     0.109     0.112       393

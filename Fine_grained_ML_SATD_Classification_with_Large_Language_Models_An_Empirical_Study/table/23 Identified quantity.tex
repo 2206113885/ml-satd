@@ -1,0 +1,63 @@
+% \usepackage{tabularx}
+
+\begin{table}[ht!]
+\centering
+\small
+\caption{Model-generated examples of the 23 Identified ML SATD Types.}
+\label{tab:ml_satd_types}
+\begin{tabularx}{\textwidth}{
+    >{\centering\arraybackslash}p{0.8cm}
+    >{\centering\arraybackslash}p{2.8cm}
+    X 
+}
+\hline
+\textbf{Dim. Name} & \textbf{Type} & \textbf{Example} \\
+\hline
+\multirow{4}{*}{AWR} & Machine Learning Knowledge & TODO: Confirm whether layer-norm before attention actually boosts convergence for small-batch training on this dataset \\
+\cline{2-3}
+ & Model Interpretability & TODO: Generate SHAP summary plot so users can see feature impact \\
+\hline
+\multirow{2}{*}{RDB} & Model Code Comprehension & TODO: break up monolithic function train\_eval\_predict() into clearer, single-purpose helpers \\
+\hline
+\multirow{4}{*}{DCE} & Duplicate Model Code & TODO: remove copy-pasted ConvBlock definition—reuse common\_layers.ConvBlock instead \\
+\cline{2-3}
+ & Duplicate Feature Extraction Code & XXX: text\_features\_v1 and text\_features\_v2 are copy-pasted—create one configurable pipeline \\
+\hline
+\multirow{6}{*}{CFO} & Weight Configuration & FIXME: pretrained checkpoint loads fp16 weights—add auto-cast to ensure dtype consistency \\
+\cline{2-3}
+ & Layer Configuration & TODO: swap BatchNorm for LayerNorm when depth $> 24$ \\ 
+\cline{2-3}
+ & Hyper-parameter Configuration & TODO: make learning\_rate schedule (cosine vs. linear) selectable via CLI flag \\
+\hline
+\multirow{10}{*}{CDD} & Machine Learning Dependency & TODO: bump scikit-learn to $\geq 1.6$ once conda forge wheels for arm64 become available \\  
+\cline{2-3}
+ & Glue Code & FIXME: adapter.py only exists to map old Predictor API to new one—rewrite consumers instead \\
+\cline{2-3}
+ & Custom Data Type & TODO: replace custom SparseTensorDict with standard torch.sparse\_coo\_tensor before exporting \\
+\cline{2-3}
+ & Multiple Languages & TODO: port custom attention kernel from CUDA C++ to Metal for macOS deployment \\
+\cline{2-3}
+ & Unnecessary Model Code & TODO: delete legacy compute\_grad\_stats(); superseded by torch.autograd.profiler \\
+\hline
+\multirow{6}{*}{DTD} & Data Processing Configuration & TODO: add configurable pipeline step to down-sample majority class before batching \\
+\cline{2-3}
+ & Plain Old Data Type & TODO: replace raw list of logits with a NamedTuple so callers know the order \\
+\cline{2-3}
+ & Data Storage Configuration & TODO: migrate checkpoint format from .pth to safetensors for safer serialization \\
+\hline
+\multirow{8}{*}{MDL} & Abstraction & TODO: extract common scoring logic into BaseMetric so each model wrapper isn’t re-implementing it \\
+\cline{2-3}
+ & Boundary Erosion & TODO: migrate training-time logging out of Trainer class; should live in metrics.logger \\
+\cline{2-3}
+ & Model Code Modifiability & TODO: move hyper-parameter defaults into config file so changing them doesn’t require code edits \\
+\cline{2-3}
+ & Model Code Reusability & TODO: abstract make\_encoder() so VisionTransformer and ResNet builders share the same backbone factory \\
+\hline
+\multirow{4}{*}{PRF} & Prediction Quality & TODO: rerun validation after enabling mixed-precision; confirm accuracy isn’t degraded \\
+\cline{2-3}
+ & Machine Learning Reliability & TODO: add sanity-check to reject examples with $> 20\%$ missing features before prediction \\
+\hline
+\multirow{2}{*}{SCL} & Prototype & TODO: replace the single-threaded demo server with a production-ready Gunicorn setup \\
+\hline
+\end{tabularx}
+\end{table}
